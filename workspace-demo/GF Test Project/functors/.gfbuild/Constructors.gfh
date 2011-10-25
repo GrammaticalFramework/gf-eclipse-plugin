@@ -1,0 +1,908 @@
+incomplete resource Constructors = open Grammar in {
+  flags
+    coding = "latin1" ;
+  oper Art : Type ;
+  oper ComplV2 : V2 -> NP -> VP ;
+  oper ComplV2A : V2A -> NP -> AP -> VP ;
+  oper ComplV3 : V3 -> NP -> NP -> VP ;
+  oper DetArtCard : Art -> Card -> Det ;
+  oper DetArtOrd : Quant -> Num -> Ord -> Det ;
+  oper DetArtPl : Art -> CN -> NP ;
+  oper DetArtSg : Art -> CN -> NP ;
+  oper DetPl : Quant -> Num -> Ord -> Det ;
+  oper DetSg : Quant -> Ord -> Det ;
+  param ImpForm = IFSg | IFPl | IFPol ;
+  oper ListAP : Type ;
+  oper ListAdv : Type ;
+  oper ListNP : Type ;
+  oper ListS : Type ;
+  oper PlQuant : Quant -> QuantPl ;
+  param Punct = PFullStop | PExclMark | PQuestMark ;
+  oper QuantPl : Type ;
+  oper QuantSg : Type ;
+  oper SgQuant : Quant -> QuantSg ;
+  oper TUseCl : Tense -> Ant -> Pol -> Cl -> S ;
+  oper TUseQCl : Tense -> Ant -> Pol -> QCl -> QS ;
+  oper TUseRCl : Tense -> Ant -> Pol -> RCl -> RS ;
+  oper Unit : Type ;
+  oper aPl_Det : Det ;
+  oper aSg_Det : Det ;
+  oper a_Art : Art ;
+  oper a_Det : Det ;
+  oper a_Quant : Quant ;
+  oper comparAP : A -> AP ;
+  oper digit : pattern Str ;
+  oper emptyText : Text ;
+  oper exclMarkPunct : Punct ;
+  oper fullStopPunct : Punct ;
+  oper genericCl : VP -> Cl ;
+  oper he_NP : NP ;
+  oper i_NP : NP ;
+  oper idigit : pattern Str ;
+  oper it_NP : NP ;
+  oper lets_Utt : VP -> Utt ;
+  oper mkAP = overload {
+                mkAP : A -> AP
+                     = 0 ;
+                mkAP : A -> NP -> AP
+                     = 0 ;
+                mkAP : A2 -> NP -> AP
+                     = 0 ;
+                mkAP : A2 -> AP
+                     = 0 ;
+                mkAP : AP -> S -> AP
+                     = 0 ;
+                mkAP : AP -> QS -> AP
+                     = 0 ;
+                mkAP : AP -> VP -> AP
+                     = 0 ;
+                mkAP : AP -> SC -> AP
+                     = 0 ;
+                mkAP : AdA -> A -> AP
+                     = 0 ;
+                mkAP : AdA -> AP -> AP
+                     = 0 ;
+                mkAP : Conj -> AP -> AP -> AP
+                     = 0 ;
+                mkAP : Conj -> ListAP -> AP
+                     = 0 ;
+                mkAP : Ord -> AP
+                     = 0 ;
+                mkAP : CAdv -> AP -> NP -> AP
+                     = 0 ;
+              } ;
+  oper mkAdN : CAdv -> AdN ;
+  oper mkAdv = overload {
+                 mkAdv : A -> Adv
+                       = 0 ;
+                 mkAdv : Prep -> NP -> Adv
+                       = 0 ;
+                 mkAdv : Subj -> S -> Adv
+                       = 0 ;
+                 mkAdv : CAdv -> A -> NP -> Adv
+                       = 0 ;
+                 mkAdv : CAdv -> A -> S -> Adv
+                       = 0 ;
+                 mkAdv : AdA -> Adv -> Adv
+                       = 0 ;
+                 mkAdv : Conj -> Adv -> Adv -> Adv
+                       = 0 ;
+                 mkAdv : Conj -> ListAdv -> Adv
+                       = 0 ;
+               } ;
+  oper mkCN = overload {
+                mkCN : N -> CN
+                     = 0 ;
+                mkCN : N2 -> NP -> CN
+                     = 0 ;
+                mkCN : N3 -> NP -> NP -> CN
+                     = 0 ;
+                mkCN : N2 -> CN
+                     = 0 ;
+                mkCN : N3 -> CN
+                     = 0 ;
+                mkCN : A -> N -> CN
+                     = 0 ;
+                mkCN : A -> CN -> CN
+                     = 0 ;
+                mkCN : AP -> N -> CN
+                     = 0 ;
+                mkCN : AP -> CN -> CN
+                     = 0 ;
+                mkCN : CN -> AP -> CN
+                     = 0 ;
+                mkCN : N -> AP -> CN
+                     = 0 ;
+                mkCN : N -> RS -> CN
+                     = 0 ;
+                mkCN : CN -> RS -> CN
+                     = 0 ;
+                mkCN : N -> Adv -> CN
+                     = 0 ;
+                mkCN : CN -> Adv -> CN
+                     = 0 ;
+                mkCN : CN -> S -> CN
+                     = 0 ;
+                mkCN : CN -> QS -> CN
+                     = 0 ;
+                mkCN : CN -> VP -> CN
+                     = 0 ;
+                mkCN : CN -> SC -> CN
+                     = 0 ;
+                mkCN : N -> NP -> CN
+                     = 0 ;
+                mkCN : CN -> NP -> CN
+                     = 0 ;
+              } ;
+  oper mkCard = overload {
+                  mkCard : Str -> Card
+                         = 0 ;
+                  mkCard : Numeral -> Card
+                         = 0 ;
+                  mkCard : Digits -> Card
+                         = 0 ;
+                  mkCard : AdN -> Card -> Card
+                         = 0 ;
+                } ;
+  oper mkCl = overload {
+                mkCl : NP -> V -> Cl
+                     = 0 ;
+                mkCl : NP -> V2 -> NP -> Cl
+                     = 0 ;
+                mkCl : NP -> V3 -> NP -> NP -> Cl
+                     = 0 ;
+                mkCl : NP -> VV -> VP -> Cl
+                     = 0 ;
+                mkCl : NP -> VS -> S -> Cl
+                     = 0 ;
+                mkCl : NP -> VQ -> QS -> Cl
+                     = 0 ;
+                mkCl : NP -> VA -> A -> Cl
+                     = 0 ;
+                mkCl : NP -> VA -> AP -> Cl
+                     = 0 ;
+                mkCl : NP -> V2A -> NP -> A -> Cl
+                     = 0 ;
+                mkCl : NP -> V2A -> NP -> AP -> Cl
+                     = 0 ;
+                mkCl : NP -> V2S -> NP -> S -> Cl
+                     = 0 ;
+                mkCl : NP -> V2Q -> NP -> QS -> Cl
+                     = 0 ;
+                mkCl : NP -> V2V -> NP -> VP -> Cl
+                     = 0 ;
+                mkCl : NP -> A -> Cl
+                     = 0 ;
+                mkCl : NP -> A -> NP -> Cl
+                     = 0 ;
+                mkCl : NP -> A2 -> NP -> Cl
+                     = 0 ;
+                mkCl : NP -> AP -> Cl
+                     = 0 ;
+                mkCl : NP -> NP -> Cl
+                     = 0 ;
+                mkCl : NP -> N -> Cl
+                     = 0 ;
+                mkCl : NP -> CN -> Cl
+                     = 0 ;
+                mkCl : NP -> Adv -> Cl
+                     = 0 ;
+                mkCl : NP -> VP -> Cl
+                     = 0 ;
+                mkCl : N -> Cl
+                     = 0 ;
+                mkCl : CN -> Cl
+                     = 0 ;
+                mkCl : NP -> Cl
+                     = 0 ;
+                mkCl : NP -> RS -> Cl
+                     = 0 ;
+                mkCl : Adv -> S -> Cl
+                     = 0 ;
+                mkCl : V -> Cl
+                     = 0 ;
+                mkCl : VP -> Cl
+                     = 0 ;
+                mkCl : SC -> VP -> Cl
+                     = 0 ;
+              } ;
+  oper mkClSlash = overload {
+                     mkClSlash : NP -> VPSlash -> ClSlash
+                               = 0 ;
+                     mkClSlash : NP -> V2 -> ClSlash
+                               = 0 ;
+                     mkClSlash : NP -> VV -> V2 -> ClSlash
+                               = 0 ;
+                     mkClSlash : Cl -> Prep -> ClSlash
+                               = 0 ;
+                     mkClSlash : ClSlash -> Adv -> ClSlash
+                               = 0 ;
+                     mkClSlash : NP -> VS -> SSlash -> ClSlash
+                               = 0 ;
+                   } ;
+  oper mkComp = overload {
+                  mkComp : AP -> Comp
+                         = 0 ;
+                  mkComp : NP -> Comp
+                         = 0 ;
+                  mkComp : Adv -> Comp
+                         = 0 ;
+                } ;
+  oper mkDet = overload {
+                 mkDet : Quant -> Det
+                       = 0 ;
+                 mkDet : Quant -> Card -> Det
+                       = 0 ;
+                 mkDet : Quant -> Ord -> Det
+                       = 0 ;
+                 mkDet : Quant -> Num -> Ord -> Det
+                       = 0 ;
+                 mkDet : Quant -> Num -> Det
+                       = 0 ;
+                 mkDet : Card -> Det
+                       = 0 ;
+                 mkDet : Digits -> Det
+                       = 0 ;
+                 mkDet : Numeral -> Det
+                       = 0 ;
+                 mkDet : Pron -> Det
+                       = 0 ;
+                 mkDet : Pron -> Num -> Det
+                       = 0 ;
+               } ;
+  oper mkDigits = overload {
+                    mkDigits : Str -> Digits
+                             = 0 ;
+                    mkDigits : Dig -> Digits
+                             = 0 ;
+                    mkDigits : Dig -> Digits -> Digits
+                             = 0 ;
+                  } ;
+  oper mkIAdv = overload {
+                  mkIAdv : Prep -> IP -> IAdv
+                         = 0 ;
+                  mkIAdv : IAdv -> Adv -> IAdv
+                         = 0 ;
+                } ;
+  oper mkIComp = overload {
+                   mkIComp : IAdv -> IComp
+                           = 0 ;
+                   mkIComp : IP -> IComp
+                           = 0 ;
+                 } ;
+  oper mkIDet = overload {
+                  mkIDet : IQuant -> Num -> IDet
+                         = 0 ;
+                  mkIDet : IQuant -> IDet
+                         = 0 ;
+                } ;
+  oper mkIP = overload {
+                mkIP : IDet -> CN -> IP
+                     = 0 ;
+                mkIP : IDet -> N -> IP
+                     = 0 ;
+                mkIP : IDet -> IP
+                     = 0 ;
+                mkIP : IQuant -> CN -> IP
+                     = 0 ;
+                mkIP : IQuant -> Num -> CN -> IP
+                     = 0 ;
+                mkIP : IQuant -> N -> IP
+                     = 0 ;
+                mkIP : IP -> Adv -> IP
+                     = 0 ;
+              } ;
+  oper mkImp = overload {
+                 mkImp : VP -> Imp
+                       = 0 ;
+                 mkImp : V -> Imp
+                       = 0 ;
+                 mkImp : V2 -> NP -> Imp
+                       = 0 ;
+               } ;
+  oper mkListAP = overload {
+                    mkListAP : AP -> AP -> ListAP
+                             = 0 ;
+                    mkListAP : AP -> ListAP -> ListAP
+                             = 0 ;
+                  } ;
+  oper mkListAdv = overload {
+                     mkListAdv : Adv -> Adv -> ListAdv
+                               = 0 ;
+                     mkListAdv : Adv -> ListAdv -> ListAdv
+                               = 0 ;
+                   } ;
+  oper mkListNP = overload {
+                    mkListNP : NP -> NP -> ListNP
+                             = 0 ;
+                    mkListNP : NP -> ListNP -> ListNP
+                             = 0 ;
+                  } ;
+  oper mkListRS = overload {
+                    mkListRS : RS -> RS -> ListRS
+                             = 0 ;
+                    mkListRS : RS -> ListRS -> ListRS
+                             = 0 ;
+                  } ;
+  oper mkListS = overload {
+                   mkListS : S -> S -> ListS
+                           = 0 ;
+                   mkListS : S -> ListS -> ListS
+                           = 0 ;
+                 } ;
+  oper mkNP = overload {
+                mkNP : Quant -> N -> NP
+                     = 0 ;
+                mkNP : Quant -> CN -> NP
+                     = 0 ;
+                mkNP : Quant -> Num -> CN -> NP
+                     = 0 ;
+                mkNP : Quant -> Num -> Ord -> CN -> NP
+                     = 0 ;
+                mkNP : Quant -> Num -> N -> NP
+                     = 0 ;
+                mkNP : Det -> CN -> NP
+                     = 0 ;
+                mkNP : Det -> N -> NP
+                     = 0 ;
+                mkNP : Numeral -> CN -> NP
+                     = 0 ;
+                mkNP : Numeral -> N -> NP
+                     = 0 ;
+                mkNP : Digits -> CN -> NP
+                     = 0 ;
+                mkNP : Digits -> N -> NP
+                     = 0 ;
+                mkNP : Digit -> CN -> NP
+                     = 0 ;
+                mkNP : Digit -> N -> NP
+                     = 0 ;
+                mkNP : Card -> CN -> NP
+                     = 0 ;
+                mkNP : Card -> N -> NP
+                     = 0 ;
+                mkNP : Pron -> CN -> NP
+                     = 0 ;
+                mkNP : Pron -> N -> NP
+                     = 0 ;
+                mkNP : PN -> NP
+                     = 0 ;
+                mkNP : Pron -> NP
+                     = 0 ;
+                mkNP : Quant -> NP
+                     = 0 ;
+                mkNP : Quant -> Num -> NP
+                     = 0 ;
+                mkNP : Det -> NP
+                     = 0 ;
+                mkNP : CN -> NP
+                     = 0 ;
+                mkNP : N -> NP
+                     = 0 ;
+                mkNP : Predet -> NP -> NP
+                     = 0 ;
+                mkNP : NP -> V2 -> NP
+                     = 0 ;
+                mkNP : NP -> Adv -> NP
+                     = 0 ;
+                mkNP : NP -> RS -> NP
+                     = 0 ;
+                mkNP : Conj -> NP -> NP -> NP
+                     = 0 ;
+                mkNP : Conj -> ListNP -> NP
+                     = 0 ;
+                mkNP : QuantSg -> CN -> NP
+                     = 0 ;
+                mkNP : QuantPl -> CN -> NP
+                     = 0 ;
+              } ;
+  oper mkNum = overload {
+                 mkNum : Str -> Num
+                       = 0 ;
+                 mkNum : Numeral -> Num
+                       = 0 ;
+                 mkNum : Digits -> Num
+                       = 0 ;
+                 mkNum : Digit -> Num
+                       = 0 ;
+                 mkNum : Card -> Num
+                       = 0 ;
+                 mkNum : AdN -> Card -> Num
+                       = 0 ;
+               } ;
+  oper mkNumeral = overload {
+                     mkNumeral : Unit -> Numeral
+                               = 0 ;
+                     mkNumeral : Sub100 -> Numeral
+                               = 0 ;
+                     mkNumeral : Sub1000 -> Numeral
+                               = 0 ;
+                     mkNumeral : Sub1000 -> Sub1000 -> Numeral
+                               = 0 ;
+                     mkNumeral : Str -> Numeral
+                               = 0 ;
+                   } ;
+  oper mkOrd = overload {
+                 mkOrd : Numeral -> Ord
+                       = 0 ;
+                 mkOrd : Digits -> Ord
+                       = 0 ;
+                 mkOrd : Digit -> Ord
+                       = 0 ;
+                 mkOrd : A -> Ord
+                       = 0 ;
+               } ;
+  oper mkPConj : Conj -> PConj ;
+  oper mkPhr = overload {
+                 mkPhr : PConj -> Utt -> Voc -> Phr
+                       = 0 ;
+                 mkPhr : Utt -> Voc -> Phr
+                       = 0 ;
+                 mkPhr : PConj -> Utt -> Phr
+                       = 0 ;
+                 mkPhr : Utt -> Phr
+                       = 0 ;
+                 mkPhr : S -> Phr
+                       = 0 ;
+                 mkPhr : Cl -> Phr
+                       = 0 ;
+                 mkPhr : QS -> Phr
+                       = 0 ;
+                 mkPhr : Imp -> Phr
+                       = 0 ;
+               } ;
+  oper mkQCl = overload {
+                 mkQCl : Cl -> QCl
+                       = 0 ;
+                 mkQCl : IP -> VP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> V -> QCl
+                       = 0 ;
+                 mkQCl : IP -> V2 -> NP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> V3 -> NP -> NP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> VV -> VP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> VS -> S -> QCl
+                       = 0 ;
+                 mkQCl : IP -> VQ -> QS -> QCl
+                       = 0 ;
+                 mkQCl : IP -> VA -> A -> QCl
+                       = 0 ;
+                 mkQCl : IP -> VA -> AP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> V2A -> NP -> A -> QCl
+                       = 0 ;
+                 mkQCl : IP -> V2A -> NP -> AP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> V2S -> NP -> S -> QCl
+                       = 0 ;
+                 mkQCl : IP -> V2Q -> NP -> QS -> QCl
+                       = 0 ;
+                 mkQCl : IP -> V2V -> NP -> VP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> A -> QCl
+                       = 0 ;
+                 mkQCl : IP -> A -> NP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> A2 -> NP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> AP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> NP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> N -> QCl
+                       = 0 ;
+                 mkQCl : IP -> CN -> QCl
+                       = 0 ;
+                 mkQCl : IP -> Adv -> QCl
+                       = 0 ;
+                 mkQCl : IP -> NP -> V2 -> QCl
+                       = 0 ;
+                 mkQCl : IP -> ClSlash -> QCl
+                       = 0 ;
+                 mkQCl : IAdv -> Cl -> QCl
+                       = 0 ;
+                 mkQCl : Prep -> IP -> Cl -> QCl
+                       = 0 ;
+                 mkQCl : IAdv -> NP -> QCl
+                       = 0 ;
+                 mkQCl : IComp -> NP -> QCl
+                       = 0 ;
+                 mkQCl : IP -> QCl
+                       = 0 ;
+               } ;
+  oper mkQS = overload {
+                mkQS : QCl -> QS
+                     = 0 ;
+                mkQS : Tense -> QCl -> QS
+                     = 0 ;
+                mkQS : Ant -> QCl -> QS
+                     = 0 ;
+                mkQS : Pol -> QCl -> QS
+                     = 0 ;
+                mkQS : Tense -> Ant -> QCl -> QS
+                     = 0 ;
+                mkQS : Tense -> Pol -> QCl -> QS
+                     = 0 ;
+                mkQS : Ant -> Pol -> QCl -> QS
+                     = 0 ;
+                mkQS : Tense -> Ant -> Pol -> QCl -> QS
+                     = 0 ;
+                mkQS : Cl -> QS
+                     = 0 ;
+              } ;
+  oper mkQuant = overload {
+                   mkQuant : Pron -> Quant
+                           = 0 ;
+                 } ;
+  oper mkQuantPl : Quant -> QuantPl ;
+  oper mkQuantSg : Quant -> QuantSg ;
+  oper mkRCl = overload {
+                 mkRCl : RP -> VP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> V -> RCl
+                       = 0 ;
+                 mkRCl : RP -> V2 -> NP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> V3 -> NP -> NP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> VV -> VP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> VS -> S -> RCl
+                       = 0 ;
+                 mkRCl : RP -> VQ -> QS -> RCl
+                       = 0 ;
+                 mkRCl : RP -> VA -> A -> RCl
+                       = 0 ;
+                 mkRCl : RP -> VA -> AP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> V2A -> NP -> A -> RCl
+                       = 0 ;
+                 mkRCl : RP -> V2A -> NP -> AP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> V2S -> NP -> S -> RCl
+                       = 0 ;
+                 mkRCl : RP -> V2Q -> NP -> QS -> RCl
+                       = 0 ;
+                 mkRCl : RP -> V2V -> NP -> VP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> A -> RCl
+                       = 0 ;
+                 mkRCl : RP -> A -> NP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> A2 -> NP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> AP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> NP -> RCl
+                       = 0 ;
+                 mkRCl : RP -> N -> RCl
+                       = 0 ;
+                 mkRCl : RP -> CN -> RCl
+                       = 0 ;
+                 mkRCl : RP -> Adv -> RCl
+                       = 0 ;
+                 mkRCl : RP -> NP -> V2 -> RCl
+                       = 0 ;
+                 mkRCl : RP -> ClSlash -> RCl
+                       = 0 ;
+                 mkRCl : Cl -> RCl
+                       = 0 ;
+               } ;
+  oper mkRP : Prep -> NP -> RP -> RP ;
+  oper mkRS = overload {
+                mkRS : RCl -> RS
+                     = 0 ;
+                mkRS : Tense -> RCl -> RS
+                     = 0 ;
+                mkRS : Ant -> RCl -> RS
+                     = 0 ;
+                mkRS : Pol -> RCl -> RS
+                     = 0 ;
+                mkRS : Tense -> Ant -> RCl -> RS
+                     = 0 ;
+                mkRS : Tense -> Pol -> RCl -> RS
+                     = 0 ;
+                mkRS : Ant -> Pol -> RCl -> RS
+                     = 0 ;
+                mkRS : Tense -> Ant -> Pol -> RCl -> RS
+                     = 0 ;
+                mkRS : Temp -> Pol -> RCl -> RS
+                     = 0 ;
+                mkRS : Conj -> RS -> RS -> RS
+                     = 0 ;
+                mkRS : Conj -> ListRS -> RS
+                     = 0 ;
+              } ;
+  oper mkS = overload {
+               mkS : Cl -> S
+                   = 0 ;
+               mkS : Tense -> Cl -> S
+                   = 0 ;
+               mkS : Ant -> Cl -> S
+                   = 0 ;
+               mkS : Pol -> Cl -> S
+                   = 0 ;
+               mkS : Tense -> Ant -> Cl -> S
+                   = 0 ;
+               mkS : Tense -> Pol -> Cl -> S
+                   = 0 ;
+               mkS : Ant -> Pol -> Cl -> S
+                   = 0 ;
+               mkS : Tense -> Ant -> Pol -> Cl -> S
+                   = 0 ;
+               mkS : Temp -> Pol -> Cl -> S
+                   = 0 ;
+               mkS : Conj -> S -> S -> S
+                   = 0 ;
+               mkS : Conj -> ListS -> S
+                   = 0 ;
+               mkS : Adv -> S -> S
+                   = 0 ;
+             } ;
+  oper mkSC = overload {
+                mkSC : S -> SC
+                     = 0 ;
+                mkSC : QS -> SC
+                     = 0 ;
+                mkSC : VP -> SC
+                     = 0 ;
+              } ;
+  oper mkSSlash = overload {
+                    mkSSlash : Temp -> Pol -> ClSlash -> SSlash
+                             = 0 ;
+                  } ;
+  oper mkSub100 = overload {
+                    mkSub100 : Unit -> Sub100
+                             = 0 ;
+                    mkSub100 : Unit -> Unit -> Sub100
+                             = 0 ;
+                  } ;
+  oper mkSub1000 = overload {
+                     mkSub1000 : Sub100 -> Sub1000
+                               = 0 ;
+                     mkSub1000 : Unit -> Sub1000
+                               = 0 ;
+                     mkSub1000 : Unit -> Sub100 -> Sub1000
+                               = 0 ;
+                   } ;
+  oper mkTemp : Tense -> Ant -> Temp ;
+  oper mkText = overload {
+                  mkText : Phr -> Punct -> Text -> Text
+                         = 0 ;
+                  mkText : Phr -> Text -> Text
+                         = 0 ;
+                  mkText : Phr -> Punct -> Text
+                         = 0 ;
+                  mkText : Phr -> Text
+                         = 0 ;
+                  mkText : Utt -> Text
+                         = 0 ;
+                  mkText : S -> Text
+                         = 0 ;
+                  mkText : Cl -> Text
+                         = 0 ;
+                  mkText : QS -> Text
+                         = 0 ;
+                  mkText : Pol -> Imp -> Text
+                         = 0 ;
+                  mkText : Imp -> Text
+                         = 0 ;
+                  mkText : Text -> Text -> Text
+                         = 0 ;
+                } ;
+  oper mkUtt = overload {
+                 mkUtt : S -> Utt
+                       = 0 ;
+                 mkUtt : Cl -> Utt
+                       = 0 ;
+                 mkUtt : QS -> Utt
+                       = 0 ;
+                 mkUtt : QCl -> Utt
+                       = 0 ;
+                 mkUtt : ImpForm -> Pol -> Imp -> Utt
+                       = 0 ;
+                 mkUtt : ImpForm -> Imp -> Utt
+                       = 0 ;
+                 mkUtt : Pol -> Imp -> Utt
+                       = 0 ;
+                 mkUtt : Imp -> Utt
+                       = 0 ;
+                 mkUtt : IP -> Utt
+                       = 0 ;
+                 mkUtt : IAdv -> Utt
+                       = 0 ;
+                 mkUtt : NP -> Utt
+                       = 0 ;
+                 mkUtt : Adv -> Utt
+                       = 0 ;
+                 mkUtt : VP -> Utt
+                       = 0 ;
+                 mkUtt : CN -> Utt
+                       = 0 ;
+                 mkUtt : AP -> Utt
+                       = 0 ;
+                 mkUtt : Card -> Utt
+                       = 0 ;
+               } ;
+  oper mkUttImp : ImpForm -> Pol -> Imp -> Utt ;
+  oper mkVP = overload {
+                mkVP : V -> VP
+                     = 0 ;
+                mkVP : V2 -> NP -> VP
+                     = 0 ;
+                mkVP : V3 -> NP -> NP -> VP
+                     = 0 ;
+                mkVP : VV -> VP -> VP
+                     = 0 ;
+                mkVP : VS -> S -> VP
+                     = 0 ;
+                mkVP : VQ -> QS -> VP
+                     = 0 ;
+                mkVP : VA -> AP -> VP
+                     = 0 ;
+                mkVP : V2A -> NP -> AP -> VP
+                     = 0 ;
+                mkVP : V2S -> NP -> S -> VP
+                     = 0 ;
+                mkVP : V2Q -> NP -> QS -> VP
+                     = 0 ;
+                mkVP : V2V -> NP -> VP -> VP
+                     = 0 ;
+                mkVP : A -> VP
+                     = 0 ;
+                mkVP : A -> NP -> VP
+                     = 0 ;
+                mkVP : A2 -> NP -> VP
+                     = 0 ;
+                mkVP : AP -> VP
+                     = 0 ;
+                mkVP : N -> VP
+                     = 0 ;
+                mkVP : CN -> VP
+                     = 0 ;
+                mkVP : NP -> VP
+                     = 0 ;
+                mkVP : Adv -> VP
+                     = 0 ;
+                mkVP : VP -> Adv -> VP
+                     = 0 ;
+                mkVP : AdV -> VP -> VP
+                     = 0 ;
+                mkVP : VPSlash -> NP -> VP
+                     = 0 ;
+                mkVP : VPSlash -> VP
+                     = 0 ;
+                mkVP : Comp -> VP
+                     = 0 ;
+              } ;
+  oper mkVPSlash = overload {
+                     mkVPSlash : V2 -> VPSlash
+                               = 0 ;
+                     mkVPSlash : V3 -> NP -> VPSlash
+                               = 0 ;
+                     mkVPSlash : V2A -> AP -> VPSlash
+                               = 0 ;
+                     mkVPSlash : V2Q -> QS -> VPSlash
+                               = 0 ;
+                     mkVPSlash : V2S -> S -> VPSlash
+                               = 0 ;
+                     mkVPSlash : V2V -> VP -> VPSlash
+                               = 0 ;
+                     mkVPSlash : VV -> VPSlash -> VPSlash
+                               = 0 ;
+                     mkVPSlash : V2V -> NP -> VPSlash -> VPSlash
+                               = 0 ;
+                   } ;
+  oper mkVoc : NP -> Voc ;
+  oper n0_Dig : Dig ;
+  oper n1000_Digits : Digits ;
+  oper n1000_Numeral : Numeral ;
+  oper n100_Digits : Digits ;
+  oper n100_Numeral : Numeral ;
+  oper n10_Digits : Digits ;
+  oper n10_Numeral : Numeral ;
+  oper n1_Dig : Dig ;
+  oper n1_Digits : Digits ;
+  oper n1_Numeral : Numeral ;
+  oper n1_Unit : Unit ;
+  oper n20_Digits : Digits ;
+  oper n20_Numeral : Numeral ;
+  oper n2_Dig : Dig ;
+  oper n2_Digits : Digits ;
+  oper n2_Numeral : Numeral ;
+  oper n2_Unit : Unit ;
+  oper n3_Dig : Dig ;
+  oper n3_Digits : Digits ;
+  oper n3_Numeral : Numeral ;
+  oper n3_Unit : Unit ;
+  oper n4_Dig : Dig ;
+  oper n4_Digits : Digits ;
+  oper n4_Numeral : Numeral ;
+  oper n4_Unit : Unit ;
+  oper n5_Dig : Dig ;
+  oper n5_Digits : Digits ;
+  oper n5_Numeral : Numeral ;
+  oper n5_Unit : Unit ;
+  oper n6_Dig : Dig ;
+  oper n6_Digits : Digits ;
+  oper n6_Numeral : Numeral ;
+  oper n6_Unit : Unit ;
+  oper n7_Dig : Dig ;
+  oper n7_Digits : Digits ;
+  oper n7_Numeral : Numeral ;
+  oper n7_Unit : Unit ;
+  oper n8_Dig : Dig ;
+  oper n8_Digits : Digits ;
+  oper n8_Numeral : Numeral ;
+  oper n8_Unit : Unit ;
+  oper n9_Dig : Dig ;
+  oper n9_Digits : Digits ;
+  oper n9_Numeral : Numeral ;
+  oper n9_Unit : Unit ;
+  oper negativePol : Pol ;
+  oper noPConj : PConj ;
+  oper noVoc : Voc ;
+  oper passiveVP = overload {
+                     passiveVP : V2 -> VP
+                               = 0 ;
+                     passiveVP : V2 -> NP -> VP
+                               = 0 ;
+                   } ;
+  oper plNum : Num ;
+  oper pluralImpForm : ImpForm ;
+  oper pluralNum : Num ;
+  oper politeImpForm : ImpForm ;
+  oper positivePol : Pol ;
+  oper presentTense : Tense ;
+  oper progressiveVP : VP -> VP ;
+  oper questMarkPunct : Punct ;
+  oper reflAP : A2 -> AP ;
+  oper reflexiveVP = overload {
+                       reflexiveVP : V2 -> VP
+                                   = 0 ;
+                       reflexiveVP : VPSlash -> VP
+                                   = 0 ;
+                     } ;
+  oper sgNum : Num ;
+  oper she_NP : NP ;
+  oper simultaneousAnt : Ant ;
+  oper singularImpForm : ImpForm ;
+  oper singularNum : Num ;
+  oper str2card : Str -> Card ;
+  oper str2digits : Str -> Digits ;
+  oper str2numeral : Str -> Numeral ;
+  oper str2ord : Str -> Ord ;
+  oper tenfoldSub100 : Unit -> Sub100 ;
+  oper that_Det : Det ;
+  oper that_NP : NP ;
+  oper that_QuantSg : QuantSg ;
+  oper thePl_Det : Det ;
+  oper theSg_Det : Det ;
+  oper the_Art : Art ;
+  oper the_Det : Det ;
+  oper the_Quant : Quant ;
+  oper these_Det : Det ;
+  oper these_NP : NP ;
+  oper these_QuantPl : QuantPl ;
+  oper they_NP : NP ;
+  oper this_Det : Det ;
+  oper this_NP : NP ;
+  oper this_QuantSg : QuantSg ;
+  oper those_Det : Det ;
+  oper those_NP : NP ;
+  oper those_QuantPl : QuantPl ;
+  oper thousandfoldNumeral : Sub1000 -> Numeral ;
+  oper we_NP : NP ;
+  oper what_IP : IP ;
+  oper whichPl_IDet : IDet ;
+  oper whichSg_IDet : IDet ;
+  oper which_IDet : IDet ;
+  oper which_RP : RP ;
+  oper who_IP : IP ;
+  oper youPl_NP : NP ;
+  oper youPol_NP : NP ;
+  oper you_NP : NP ;
+}

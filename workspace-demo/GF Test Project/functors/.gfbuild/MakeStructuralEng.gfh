@@ -1,0 +1,11 @@
+resource MakeStructuralEng = open (CatEng = CatEng),(ParadigmsEng = ParadigmsEng),(ResEng = ResEng),(MorphoEng = MorphoEng),(Prelude = Prelude) in {
+  flags
+    coding = "latin1" ;
+  oper mkIDet : Str -> ParamX.Number -> {s : Str; lock_IDet : {};
+                                         n : ParamX.Number} ;
+  oper mkIQuant : Str -> Str -> {s : ParamX.Number => Str;
+                                 lock_IQuant : {}} ;
+  oper mkNP : Str -> ParamX.Number -> {s : ResEng.NPCase => Str;
+                                       a : ResEng.Agr; lock_NP : {}} ;
+  oper mkSubj : Str -> {s : Str; lock_Subj : {}} ;
+}

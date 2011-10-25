@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="31" version="2.0">
+<workbenchAdvisor/>
+<window height="893" width="1182" x="661" y="56">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout>
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="132" y="30"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="48" y="30"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="68" y="30"/>
+<coolItem id="org.grammaticalframework.eclipse.GF" itemType="typeToolBarContribution" x="40" y="30"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.pde.ui.manifestEditor" itemType="typePlaceholder" x="40" y="30"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page aggregateWorkingSetId="Aggregate for window 1314645064060" focus="true" label="Workspace - GF">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="2"/>
+<part id="1"/>
+<part id="3"/>
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="org.grammaticalframework.eclipse.GF" name="ResEng.gf" partName="ResEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/ResEng.gf" title="ResEng.gf" tooltip="GF Test Project/hello/ResEng.gf" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GF Test Project/hello/ResEng.gf"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="76" selectionTopPixel="0"/>
+</editor>
+<editor id="org.grammaticalframework.eclipse.GF" name="HelloAbs.gf" partName="HelloAbs.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloAbs.gf" title="HelloAbs.gf" tooltip="GF Test Project/hello/HelloAbs.gf" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GF Test Project/hello/HelloAbs.gf"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="86" selectionTopPixel="0"/>
+</editor>
+<editor id="org.grammaticalframework.eclipse.GF" name="AbsCat.gf" partName="AbsCat.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/AbsCat.gf" title="AbsCat.gf" tooltip="GF Test Project/hello/AbsCat.gf" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GF Test Project/hello/AbsCat.gf"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="43" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.grammaticalframework.eclipse.GF" name="HelloEng.gf" partName="HelloEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf" title="HelloEng.gf" tooltip="GF Test Project/hello/HelloEng.gf" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GF Test Project/hello/HelloEng.gf"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="135" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" currentWorkingSetName="Aggregate for window 1314645064060" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="org.eclipse.ui.views.ProgressView" partName="Progress">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.ProblemView" partName="Problems">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="245" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
+<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
+<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1314645064060">
+<customFilters userDefinedPatternsEnabled="true">&#x0A;<userDefinedPatterns>&#x0A;<child pattern="*.gfo"/>
+</userDefinedPatterns>
+<xmlDefinedFilters>&#x0A;<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+</xmlDefinedFilters>
+</customFilters>
+</viewState>
+</view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+</views>
+<perspectives activePart="org.grammaticalframework.eclipse.GF" activePerspective="org.grammaticalframework.eclipse.ui.gfperspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.grammaticalframework.eclipse.ui.perspectives.GFPerspectiveFactory" id="org.grammaticalframework.eclipse.ui.gfperspective" label="GF"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<new_wizard_action id="org.grammaticalframework.eclipse.ui.wizards.GFNewProjectWizard"/>
+<new_wizard_action id="org.grammaticalframework.eclipse.ui.wizards.GFNewFileWizard"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ProgressView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="topLeft">
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="891" ratioRight="297" relationship="2" relative="topLeft">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="297" ratioRight="891" relationship="2" relative="topLeft"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1173175" ratio="0.68193716" ratioLeft="521" ratioRight="243" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="bottomLeft" ratio="0.5" ratioLeft="386" ratioRight="386" relationship="4" relative="topLeft">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.ui.JavaElementCreationActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
+<show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
+<show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
+<show_view_action id="org.eclipse.jdt.ui.SourceView"/>
+<show_view_action id="org.eclipse.jdt.ui.JavadocView"/>
+<show_view_action id="org.eclipse.search.ui.views.SearchView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="org.eclipse.ui.views.ResourceNavigator"/>
+<show_view_action id="org.eclipse.ui.views.TaskList"/>
+<show_view_action id="org.eclipse.ui.views.ProgressView"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="org.eclipse.ui.texteditor.TemplatesView"/>
+<show_view_action id="org.eclipse.pde.runtime.LogView"/>
+<show_view_action id="org.eclipse.ant.ui.views.AntView"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewPackageCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewClassCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewInterfaceCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewEnumCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewAnnotationCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSourceFolderCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewSnippetFileCreationWizard"/>
+<new_wizard_action id="org.eclipse.jdt.ui.wizards.NewJavaWorkingSetWizard"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.eclipse.jdt.junit.wizards.NewTestCaseCreationWizard"/>
+<new_wizard_action id="org.eclipse.xtext.xtend2.ui.wizards.NewXtend2ClassWizard"/>
+<perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
+<view id="org.eclipse.jdt.ui.JavadocView"/>
+<view id="org.eclipse.jdt.ui.SourceView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<fastViewBars/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="left">&#x0A;<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.74956065" ratioLeft="853" ratioRight="285" relationship="2" relative="left">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.24956064" ratioLeft="284" ratioRight="854" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.74915254" ratioLeft="442" ratioRight="148" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="right" ratio="0.7494145" ratioLeft="640" ratioRight="214" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
+<page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/HelloAbs.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/AbsCat.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/HelloEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/FoodsI.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/Foods.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/FoodsEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/LexFoods.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/FoodsEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/HelloEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/AbsCat.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/HelloEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/AbsCat.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/.gfbuild/ResEng.gfh"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/ResEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/HelloAbs.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/AbsCat.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/hello/HelloEng.gf"/>
+</editors>
+<item historyLabel="HelloAbs.gf" index="0">
+<position info="not_deleted" x="130" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="1">
+<position info="not_deleted" x="21" y="28"/>
+</item>
+<item historyLabel="HelloEng.gf" index="2">
+<position info="not_deleted" x="199" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="1">
+<position info="not_deleted" x="21" y="28"/>
+</item>
+<item historyLabel="HelloAbs.gf" index="0">
+<position/>
+</item>
+<item historyLabel="HelloEng.gf" index="2">
+<position info="not_deleted" x="193" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="1">
+<position info="not_deleted" x="21" y="28"/>
+</item>
+<item historyLabel="HelloAbs.gf" index="0">
+<position info="not_deleted" x="86" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="2">
+<position info="not_deleted" x="193" y="0"/>
+</item>
+<item historyLabel="FoodsI.gf" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="FoodsI.gf" index="3">
+<position info="not_deleted" x="299" y="0"/>
+</item>
+<item historyLabel="FoodsI.gf" index="3">
+<position info="not_deleted" x="625" y="0"/>
+</item>
+<item historyLabel="FoodsI.gf" index="3">
+<position info="not_deleted" x="192" y="0"/>
+</item>
+<item historyLabel="FoodsI.gf" index="3">
+<position info="not_deleted" x="527" y="0"/>
+</item>
+<item historyLabel="Foods.gf" index="4">
+<position info="not_deleted" x="68" y="0"/>
+</item>
+<item historyLabel="FoodsEng.gf" index="5">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="LexFoods.gf" index="6">
+<position info="not_deleted" x="110" y="0"/>
+</item>
+<item historyLabel="FoodsEng.gf" index="5">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="LexFoods.gf" index="6">
+<position info="not_deleted" x="106" y="0"/>
+</item>
+<item historyLabel="FoodsEng.gf" index="5">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="Foods.gf" index="4">
+<position info="not_deleted" x="68" y="0"/>
+</item>
+<item historyLabel="FoodsEng.gf" index="5">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="FoodsI.gf" index="3">
+<position info="not_deleted" x="527" y="0"/>
+</item>
+<item historyLabel="FoodsEng.gf" index="7">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="FoodsI.gf" index="3">
+<position info="not_deleted" x="236" y="0"/>
+</item>
+<item historyLabel="FoodsI.gf" index="3">
+<position info="not_deleted" x="575" y="0"/>
+</item>
+<item historyLabel="FoodsI.gf" index="3">
+<position info="not_deleted" x="406" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="8">
+<position info="not_deleted" x="193" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="9">
+<position info="not_deleted" x="21" y="26"/>
+</item>
+<item historyLabel="HelloEng.gf" index="8">
+<position info="not_deleted" x="195" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="9">
+<position info="not_deleted" x="40" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="8">
+<position info="not_deleted" x="194" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="9">
+<position info="not_deleted" x="40" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="8">
+<position info="not_deleted" x="194" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="9">
+<position info="not_deleted" x="40" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="10">
+<position info="not_deleted" x="193" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="11">
+<position info="not_deleted" x="43" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="10">
+<position info="not_deleted" x="193" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="10">
+<position info="not_deleted" x="267" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="10">
+<position info="not_deleted" x="85" y="5"/>
+</item>
+<item historyLabel="HelloEng.gf" index="10">
+<position info="not_deleted" x="463" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="10">
+<position info="not_deleted" x="588" y="4"/>
+</item>
+<item historyLabel="HelloEng.gf" index="10">
+<position info="not_deleted" x="522" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="10">
+<position info="not_deleted" x="202" y="0"/>
+</item>
+<item historyLabel="ResEng.gfh" index="12">
+<position info="not_deleted" x="83" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="13">
+<position info="not_deleted" x="76" y="0"/>
+</item>
+<item historyLabel="HelloAbs.gf" index="14">
+<position info="not_deleted" x="86" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="15">
+<position info="not_deleted" x="43" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="13">
+<position info="not_deleted" x="76" y="0"/>
+</item>
+<item active="true" historyLabel="HelloEng.gf" index="16">
+<position info="not_deleted" x="205" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ResEng.gfh" tooltip="GF Test Project/hello/.gfbuild/ResEng.gfh">
+<persistable path="/GF Test Project/hello/.gfbuild/ResEng.gfh"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="LexFoods.gf" tooltip="GF Test Project/functors/LexFoods.gf">
+<persistable path="/GF Test Project/functors/LexFoods.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="FoodsEng.gf" tooltip="GF Test Project/functors/FoodsEng.gf">
+<persistable path="/GF Test Project/functors/FoodsEng.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="Foods.gf" tooltip="GF Test Project/functors/Foods.gf">
+<persistable path="/GF Test Project/functors/Foods.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="FoodsI.gf" tooltip="GF Test Project/functors/FoodsI.gf">
+<persistable path="/GF Test Project/functors/FoodsI.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="HelloEng.gf" tooltip="GF Test Project/hello/HelloEng.gf">
+<persistable path="/GF Test Project/hello/HelloEng.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="AbsCat.gf" tooltip="GF Test Project/hello/AbsCat.gf">
+<persistable path="/GF Test Project/hello/AbsCat.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="HelloAbs.gf" tooltip="GF Test Project/hello/HelloAbs.gf">
+<persistable path="/GF Test Project/hello/HelloAbs.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ResEng.gf" tooltip="GF Test Project/hello/ResEng.gf">
+<persistable path="/GF Test Project/hello/ResEng.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="HelloEng.gf" tooltip="test2/HelloEng.gf">
+<persistable path="/test2/HelloEng.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="FoodsMlt.gf" tooltip="GF Test Project/functors/FoodsMlt.gf">
+<persistable path="/GF Test Project/functors/FoodsMlt.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ParadigmsEng.gfh" tooltip="GF Test Project/functors/.gfbuild/ParadigmsEng.gfh">
+<persistable path="/GF Test Project/functors/.gfbuild/ParadigmsEng.gfh"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="LexFoodsEng.gf" tooltip="GF Test Project/functors/LexFoodsEng.gf">
+<persistable path="/GF Test Project/functors/LexFoodsEng.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="LexFoodsGer.gf" tooltip="GF Test Project/functors/LexFoodsGer.gf">
+<persistable path="/GF Test Project/functors/LexFoodsGer.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="FoodsGer.gf" tooltip="GF Test Project/functors/FoodsGer.gf">
+<persistable path="/GF Test Project/functors/FoodsGer.gf"/>
+</file>
+</mruList>
+</workbench>

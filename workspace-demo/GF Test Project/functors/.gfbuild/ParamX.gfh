@@ -1,0 +1,17 @@
+resource ParamX = open (Prelude = Prelude) in {
+  flags
+    coding = "latin1" ;
+  param Anteriority = Simul ;
+  param DTail = T1 | T2 | T3 ;
+  param Degree = Posit | Compar | Superl ;
+  param ImpForm = ImpF ParamX.Number Prelude.Bool ;
+  param Number = Sg | Pl ;
+  param Person = P1 | P2 | P3 ;
+  param Polarity = Pos | Neg ;
+  param QForm = QDir | QIndir ;
+  param Tense = Pres ;
+  oper conjNumber : ParamX.Number -> ParamX.Number -> ParamX.Number ;
+  oper conjPerson : ParamX.Person -> ParamX.Person -> ParamX.Person ;
+  oper numImp : ParamX.ImpForm -> ParamX.Number ;
+  oper polCases : {s : Str} -> {s : Str} -> {s : ParamX.Polarity => Str} ;
+}

@@ -1,0 +1,172 @@
+package org.grammaticalframework.eclipse.naming;
+
+import java.util.Collections;
+
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.ENamedElement;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.xtext.naming.IQualifiedNameConverter;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.naming.IQualifiedNameProvider;
+import org.eclipse.xtext.util.IResourceScopeCache;
+import org.eclipse.xtext.util.PolymorphicDispatcher;
+import org.eclipse.xtext.util.SimpleAttributeResolver;
+import org.eclipse.xtext.util.Strings;
+import org.eclipse.xtext.util.Tuples;
+import org.grammaticalframework.eclipse.gF.*;
+
+import com.google.common.base.Function;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+
+//import org.grammaticalframework.eclipse.gF.Grammar;
+
+/**
+ * Custom name provider for GF
+ * 
+ * These are the types which we would want to export through the GlobalScopeProvider (and therefore the types
+ * that types that should have a valid qualified name):
+ * 
+ * - Def, CatDef, FunDef, DataDef, DataConst, ParDef, ParConst (Qualified by
+ * module name)
+ * - ModType (just the simple name)
+ * 
+ * Everything else we DO NOT want to export, and thus should not provide a
+ * qualified name for itself.
+ * 
+ * @author John J. Camilleri
+ */
+
+/*
+ * This is based on the SimpleNamingProvider implementation
+ * 
+public class GFQualifiedNameProvider extends
+		IQualifiedNameProvider.AbstractImpl {
+
+	@Inject
+	private IQualifiedNameConverter qualifiedNameConverter;
+
+	public QualifiedName getFullyQualifiedName(EObject obj) {
+
+		String name = SimpleAttributeResolver.NAME_RESOLVER.apply(obj);
+		if (name == null)
+			return null;
+		return qualifiedNameConverter.toQualifiedName(name);
+	}
+}
+*/
+
+/**
+ * Based on the DefaultDeclarativeQualifiedNameProvider implementation
+ * 
+ * @author John J. Camilleri
+ *
+ */
+//public class GFQualifiedNameProvider extends DefaultDeclarativeQualifiedNameProvider {
+public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl {
+	
+	private PolymorphicDispatcher<QualifiedName> qualifiedName = new PolymorphicDispatcher<QualifiedName>("qualifiedName",1,1,Collections.singletonList(this), PolymorphicDispatcher.NullErrorHandler.<QualifiedName>get())
+	{
+		@Override
+		protected QualifiedName handleNoSuchMethod(Object... params) { 
+			return null;
+		}
+	};
+	
+	@Inject
+	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
+	
+	protected IQualifiedNameConverter getConverter() {
+		return converter;
+	}
+	
+	@Inject
+	private IResourceScopeCache cache = IResourceScopeCache.NullImpl.INSTANCE;
+	
+	private Function<EObject, String> nameResolver = SimpleAttributeResolver.newResolver(String.class, "name");
+
+	/**
+	 * Don't qualify modules, just return their simple name
+	 * 
+	 */
+	String qualifiedName(ModType ele) {
+		return ele.getName();
+	}
+	
+	/**
+	 * Qualify top level defs with their parent module name
+	 * 
+	 */
+	private String qualifyWithModuleName(EObject ele) {
+		return qualifyWithModuleName(ele, nameResolver.apply(ele));
+	}
+	private String qualifyWithModuleName(EObject ele, String name) {
+		//Climb tree until we find ModDef, then grab the module name
+		EObject temp = ele;
+		//temp.eClass().getName().equals("ModDef")
+		// TODO this condition is probably wrong
+		while (temp.getClass() != ModDef.class && temp.eContainer() != null) {
+			temp = temp.eContainer();
+		}
+		String qualifiedName = (temp.getClass() == ModDef.class)
+			? ((ModDef)temp).getType().getName() + "." + name
+			: null;
+		return qualifiedName;
+	}
+	
+	// Def - "name" is either Name or ListName
+	String qualifiedName(Def ele) {
+		if (ele.getName().eClass().getInstanceClass()==Name.class) {
+			return qualifyWithModuleName(ele, ((Name)ele.getName()).getName());
+		}
+		if (ele.getName().eClass().getInstanceClass()==ListName.class) {
+			// TODO If size = 1 then first, If size > 1 then return as separate qualified names?
+			String name = ((ListName)ele.getName()).getName().get(0).getName(); 
+			return qualifyWithModuleName(ele, name);
+		}
+		return null;
+	};
+	String qualifiedName(CatDef ele) {
+		return qualifyWithModuleName(ele);
+	};
+	// FunDef - "name" is ListIdent
+	String qualifiedName(FunDef ele) {
+		// TODO If size = 1 then first, If size > 1 then return as separate qualified names?
+		String name = ((ListIdent)ele.getName()).getName().get(0); 
+		return qualifyWithModuleName(ele, name);
+	};
+	String qualifiedName(DataDef ele) {
+		return qualifyWithModuleName(ele);
+	};
+	String qualifiedName(DataConstr ele) {
+		return qualifyWithModuleName(ele);
+	};
+	String qualifiedName(ParDef ele) {
+		return qualifyWithModuleName(ele);
+	};
+	String qualifiedName(ParConstr ele) {
+		return qualifyWithModuleName(ele);
+	};
+	
+	/**
+	 * Our primary dispatching function
+	 */
+	public QualifiedName getFullyQualifiedName(final EObject eObj) {
+		return cache.get(Tuples.pair(eObj, "fqn"), eObj.eResource(), new Provider<QualifiedName>(){
+
+			public QualifiedName get() {
+				// See if our methods up above will name it...
+				Object qualifiedNameFromDispatcher = qualifiedName.invoke(eObj);
+				if (qualifiedNameFromDispatcher!=null) {
+					System.out.println("I just qualified: " + eObj.eClass().getName() + " -> " + qualifiedNameFromDispatcher);	
+					return converter.toQualifiedName((String) qualifiedNameFromDispatcher);
+				} else {
+					// ...anything else shouldn't get a qualified name
+					return null;
+				}
+			}
+		});
+	}	
+	
+}

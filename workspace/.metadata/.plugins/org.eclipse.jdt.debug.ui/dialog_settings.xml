@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="EXPRESSION_INPUT_DIALOG">
+		<item value="474" key="DIALOG_WIDTH"/>
+		<item value="308" key="DIALOG_Y_ORIGIN"/>
+		<item value="352" key="DIALOG_HEIGHT"/>
+		<item value="731" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
+		<item value="500" key="SashWeightDetails"/>
+		<item value="500" key="SashWeightTree"/>
+		<item value="178" key="HEIGHT"/>
+		<item value="598" key="WIDTH"/>
+	</section>
+	<section name="conditionHistory">
+		<item value="6" key="conditionHistoryEntryCount"/>
+		<item value="from instanceof Ident" key="conditionHistoryEntry_0"/>
+		<item value="id.getS().equals(&quot;Alias&quot;)" key="conditionHistoryEntry_1"/>
+		<item value="from instanceof org.grammaticalframework.eclipse.gF.Ident" key="conditionHistoryEntry_2"/>
+		<item value="from instanceof org.grammaticalframework.eclipse.gF.Def" key="conditionHistoryEntry_3"/>
+		<item value="context instanceof org.grammaticalframework.eclipse.gF.PrintDef" key="conditionHistoryEntry_4"/>
+		<item value="context instanceof PrintDef" key="conditionHistoryEntry_5"/>
+	</section>
+</section>

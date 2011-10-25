@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="org.grammaticalframework.eclipse.launch.launchConfigurationType1"
+            icon="icons/gf-source.png"
+            id="org.grammaticalframework.eclipse.launch.ui.launchConfigurationTypeImage1">
+      </launchConfigurationTypeImage>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="org.grammaticalframework.eclipse.launch.ui.AbstractLaunchConfigurationTabGroup1"
+            id="org.grammaticalframework.eclipse.launch.ui.launchConfigurationTabGroup1"
+            type="org.grammaticalframework.eclipse.launch.launchConfigurationType1">
+      </launchConfigurationTabGroup>
+   </extension>
+
+</plugin>

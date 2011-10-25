@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.grammaticalframework.feature"
+      label="GF Eclipse Plugin"
+      version="1.0.0.qualifier"
+      provider-name="MOLTO Project">
+
+   <description url="http://www.grammaticalframework.org/">
+      Eclipse integration for developing grammars using the Grammatical
+Framework (GF).
+   </description>
+
+   <copyright url="http://www.grammaticalframework.org/">
+      The research leading to these results has received funding from
+the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)
+under grant agreement no FP7-ICT-247914.
+Copyright MOLTO Project, 2011.
+   </copyright>
+
+   <license url="http://www.grammaticalframework.org/LICENSE">
+      The research leading to these results has received funding from
+the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)
+under grant agreement no FP7-ICT-247914.
+Copyright MOLTO Project, 2011.
+
+      Grammatical Framework is a software package consisting of several different
+components. In summary:
+
+  - the GF compiler in the folder src/compiler and the PGF Web service in src/server
+are under the GNU GENERAL PUBLIC LICENSE. 
+
+  - the GF runtime in src/runtime is under dual GNU LESSER GENERAL PUBLIC LICENSE
+and BSD LICENSE
+
+  - the resource grammar library in lib/src is under GNU LESSER GENERAL PUBLIC LICENSE.
+However the user have the right to choose any license for any application grammar
+derived from the resource grammar by using the grammar API.
+
+  - the resource grammar library also includes large coverage lexicons for some languages.
+Since these lexicons are derived from external sources they might be under different licenses.
+Look at the source file for every lexicon for details.
+
+Please refer to http://www.grammaticalframework.org/LICENSE for full details.
+   </license>
+
+   <plugin
+         id="org.grammaticalframework.eclipse"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.grammaticalframework.eclipse.tests"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.grammaticalframework.eclipse.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

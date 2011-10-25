@@ -1,0 +1,286 @@
+resource CombinatorsEng = open (CatEng = CatEng),(StructuralEng = StructuralEng),(ConstructorsEng = ConstructorsEng),(CatEng = CatEng),(StructuralEng = StructuralEng),(ConstructorsEng = ConstructorsEng),(CatEng = CatEng),(StructuralEng = StructuralEng),(ConstructorsEng = ConstructorsEng) in {
+  flags
+    coding = "latin1" ;
+  oper app = overload {
+               app : (n : {s : ParamX.Number => ResEng.Case => Str;
+                           g : ResEng.Gender; lock_N : {}}) -> {s : ResEng.NPCase => Str;
+                                                                a : ResEng.Agr; lock_NP : {}}
+                   = 0 ;
+               app : (n : {s : ParamX.Number => ResEng.Case => Str; c2 : Str;
+                           g : ResEng.Gender;
+                           lock_N2 : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                   lock_NP : {}}) -> {s : ResEng.NPCase => Str;
+                                                                      a : ResEng.Agr; lock_NP : {}}
+                   = 0 ;
+               app : (n : {s : ParamX.Number => ResEng.Case => Str; c2 : Str;
+                           c3 : Str; g : ResEng.Gender;
+                           lock_N3 : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                   lock_NP : {}}) -> (y : {s : ResEng.NPCase => Str;
+                                                                           a : ResEng.Agr;
+                                                                           lock_NP : {}}) -> {s : ResEng.NPCase => Str;
+                                                                                              a : ResEng.Agr;
+                                                                                              lock_NP : {}}
+                   = 0 ;
+               app : (n : {s : ParamX.Number => ResEng.Case => Str; c2 : Str;
+                           g : ResEng.Gender;
+                           lock_N2 : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                   lock_NP : {}}) -> (y : {s : ResEng.NPCase => Str;
+                                                                           a : ResEng.Agr;
+                                                                           lock_NP : {}}) -> {s : ResEng.NPCase => Str;
+                                                                                              a : ResEng.Agr;
+                                                                                              lock_NP : {}}
+                   = 0 ;
+               app : (f : {s : ParamX.Number => ResEng.Case => Str; c2 : Str;
+                           g : ResEng.Gender;
+                           lock_N2 : {}}) -> (n : {s : ParamX.Number => ResEng.Case => Str;
+                                                   g : ResEng.Gender;
+                                                   lock_N : {}}) -> {s : ParamX.Number => ResEng.Case => Str;
+                                                                     g : ResEng.Gender;
+                                                                     lock_CN : {}}
+                   = 0 ;
+               app : {s : ParamX.Number => ResEng.Case => Str; c2 : Str;
+                      g : ResEng.Gender; lock_N2 : {}} -> {s : ResEng.NPCase => Str;
+                                                           a : ResEng.Agr;
+                                                           lock_NP : {}} -> {s : ParamX.Number => ResEng.Case => Str;
+                                                                             g : ResEng.Gender;
+                                                                             lock_CN : {}}
+                   = 0 ;
+               app : {s : ParamX.Number => ResEng.Case => Str; c2 : Str; c3 : Str;
+                      g : ResEng.Gender; lock_N3 : {}} -> {s : ResEng.NPCase => Str;
+                                                           a : ResEng.Agr;
+                                                           lock_NP : {}} -> {s : ResEng.NPCase => Str;
+                                                                             a : ResEng.Agr;
+                                                                             lock_NP : {}} -> {s : ParamX.Number => ResEng.Case => Str;
+                                                                                               g : ResEng.Gender;
+                                                                                               lock_CN : {}}
+                   = 0 ;
+               app : (n : {s : ParamX.Number => ResEng.Case => Str; c2 : Str;
+                           g : ResEng.Gender;
+                           lock_N2 : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                   lock_NP : {}}) -> (y : {s : ResEng.NPCase => Str;
+                                                                           a : ResEng.Agr;
+                                                                           lock_NP : {}}) -> {s : ParamX.Number => ResEng.Case => Str;
+                                                                                              g : ResEng.Gender;
+                                                                                              lock_CN : {}}
+                   = 0 ;
+             } ;
+  oper coord = overload {
+                 coord : {lock_Conj : {}; n : ParamX.Number; s1 : Str;
+                          s2 : Str} -> {s : Str; lock_Adv : {}} -> {s : Str;
+                                                                    lock_Adv : {}} -> {s : Str;
+                                                                                       lock_Adv : {}}
+                       = 0 ;
+                 coord : {lock_Conj : {}; n : ParamX.Number; s1 : Str;
+                          s2 : Str} -> {s : ResEng.Agr => Str; isPre : Prelude.Bool;
+                                        lock_AP : {}} -> {s : ResEng.Agr => Str;
+                                                          isPre : Prelude.Bool;
+                                                          lock_AP : {}} -> {s : ResEng.Agr => Str;
+                                                                            isPre : Prelude.Bool;
+                                                                            lock_AP : {}}
+                       = 0 ;
+                 coord : {lock_Conj : {}; n : ParamX.Number; s1 : Str;
+                          s2 : Str} -> {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                        lock_NP : {}} -> {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                          lock_NP : {}} -> {s : ResEng.NPCase => Str;
+                                                                            a : ResEng.Agr;
+                                                                            lock_NP : {}}
+                       = 0 ;
+                 coord : {lock_Conj : {}; n : ParamX.Number; s1 : Str;
+                          s2 : Str} -> {s : Str; lock_S : {}} -> {s : Str;
+                                                                  lock_S : {}} -> {s : Str;
+                                                                                   lock_S : {}}
+                       = 0 ;
+                 coord : {lock_Conj : {}; n : ParamX.Number; s1 : Str;
+                          s2 : Str} -> {lock_ListAdv : {}; s1 : Str; s2 : Str} -> {s : Str;
+                                                                                   lock_Adv : {}}
+                       = 0 ;
+                 coord : {lock_Conj : {}; n : ParamX.Number; s1 : Str;
+                          s2 : Str} -> {isPre : Prelude.Bool; lock_ListAP : {};
+                                        s1 : ResEng.Agr => Str;
+                                        s2 : ResEng.Agr => Str} -> {s : ResEng.Agr => Str;
+                                                                    isPre : Prelude.Bool;
+                                                                    lock_AP : {}}
+                       = 0 ;
+                 coord : {lock_Conj : {}; n : ParamX.Number; s1 : Str;
+                          s2 : Str} -> {a : ResEng.Agr; lock_ListNP : {};
+                                        s1 : ResEng.NPCase => Str;
+                                        s2 : ResEng.NPCase => Str} -> {s : ResEng.NPCase => Str;
+                                                                       a : ResEng.Agr; lock_NP : {}}
+                       = 0 ;
+                 coord : {lock_Conj : {}; n : ParamX.Number; s1 : Str;
+                          s2 : Str} -> {lock_ListS : {}; s1 : Str; s2 : Str} -> {s : Str;
+                                                                                 lock_S : {}}
+                       = 0 ;
+               } ;
+  oper mod = overload {
+               mod : {s : ResEng.AForm => Str;
+                      lock_A : {}} -> {s : ParamX.Number => ResEng.Case => Str;
+                                       g : ResEng.Gender;
+                                       lock_N : {}} -> {s : ParamX.Number => ResEng.Case => Str;
+                                                        g : ResEng.Gender; lock_CN : {}}
+                   = 0 ;
+               mod : {s : ResEng.Agr => Str; isPre : Prelude.Bool;
+                      lock_AP : {}} -> {s : ParamX.Number => ResEng.Case => Str;
+                                        g : ResEng.Gender;
+                                        lock_CN : {}} -> {s : ParamX.Number => ResEng.Case => Str;
+                                                          g : ResEng.Gender; lock_CN : {}}
+                   = 0 ;
+               mod : {s : Str; lock_AdA : {}} -> {s : ResEng.AForm => Str;
+                                                  lock_A : {}} -> {s : ResEng.Agr => Str;
+                                                                   isPre : Prelude.Bool;
+                                                                   lock_AP : {}}
+                   = 0 ;
+               mod : {s : Str; hasNum : Prelude.Bool; lock_Det : {};
+                      n : ParamX.Number;
+                      sp : ResEng.NPCase => Str} -> {s : ParamX.Number => ResEng.Case => Str;
+                                                     g : ResEng.Gender;
+                                                     lock_N : {}} -> {s : ResEng.NPCase => Str;
+                                                                      a : ResEng.Agr; lock_NP : {}}
+                   = 0 ;
+               mod : {s : Str; hasNum : Prelude.Bool; lock_Det : {};
+                      n : ParamX.Number;
+                      sp : ResEng.NPCase => Str} -> {s : ParamX.Number => ResEng.Case => Str;
+                                                     g : ResEng.Gender;
+                                                     lock_CN : {}} -> {s : ResEng.NPCase => Str;
+                                                                       a : ResEng.Agr; lock_NP : {}}
+                   = 0 ;
+               mod : {s : Prelude.Bool => ParamX.Number => Str; lock_Quant : {};
+                      sp : Prelude.Bool => ParamX.Number => ResEng.NPCase => Str} -> {s : ParamX.Number => ResEng.Case => Str;
+                                                                                      g : ResEng.Gender;
+                                                                                      lock_N : {}} -> {s : ResEng.NPCase => Str;
+                                                                                                       a : ResEng.Agr;
+                                                                                                       lock_NP : {}}
+                   = 0 ;
+               mod : {s : Prelude.Bool => ParamX.Number => Str; lock_Quant : {};
+                      sp : Prelude.Bool => ParamX.Number => ResEng.NPCase => Str} -> {s : ParamX.Number => ResEng.Case => Str;
+                                                                                      g : ResEng.Gender;
+                                                                                      lock_CN : {}} -> {s : ResEng.NPCase => Str;
+                                                                                                        a : ResEng.Agr;
+                                                                                                        lock_NP : {}}
+                   = 0 ;
+               mod : (p : {s : Str;
+                           lock_Predet : {}}) -> (n : {s : ParamX.Number => ResEng.Case => Str;
+                                                       g : ResEng.Gender;
+                                                       lock_N : {}}) -> {s : ResEng.NPCase => Str;
+                                                                         a : ResEng.Agr;
+                                                                         lock_NP : {}}
+                   = 0 ;
+               mod : {s : ResEng.CardOrd => ResEng.Case => Str; lock_Numeral : {};
+                      n : ParamX.Number} -> {s : ParamX.Number => ResEng.Case => Str;
+                                             g : ResEng.Gender;
+                                             lock_N : {}} -> {s : ResEng.NPCase => Str;
+                                                              a : ResEng.Agr; lock_NP : {}}
+                   = 0 ;
+             } ;
+  oper neg = overload {
+               neg : {s : ResEng.CPolarity => ParamX.ImpForm => Str;
+                      lock_Imp : {}} -> {s : Str; lock_Utt : {}}
+                   = 0 ;
+               neg : {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                      lock_Cl : {}} -> {s : Str; lock_S : {}}
+                   = 0 ;
+               neg : {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ParamX.QForm => Str;
+                      lock_QCl : {}} -> {s : ParamX.QForm => Str; lock_QS : {}}
+                   = 0 ;
+               neg : {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Agr => Str;
+                      c : ResEng.NPCase; lock_RCl : {}} -> {s : ResEng.Agr => Str;
+                                                            c : ResEng.NPCase; lock_RS : {}}
+                   = 0 ;
+             } ;
+  oper pred = overload {
+                pred : (v : {s : ResEng.VForm => Str; isRefl : Prelude.Bool;
+                             lock_V : {}}) -> (np : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                     lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                        lock_Cl : {}}
+                     = 0 ;
+                pred : (v : {s : ResEng.VForm => Str; c2 : Str;
+                             isRefl : Prelude.Bool;
+                             lock_V2 : {}}) -> (np : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                      lock_NP : {}}) -> (ob : {s : ResEng.NPCase => Str;
+                                                                               a : ResEng.Agr;
+                                                                               lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                                                  lock_Cl : {}}
+                     = 0 ;
+                pred : (v : {s : ResEng.VForm => Str; c2 : Str; c3 : Str;
+                             isRefl : Prelude.Bool;
+                             lock_V3 : {}}) -> (np : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                      lock_NP : {}}) -> (ob : {s : ResEng.NPCase => Str;
+                                                                               a : ResEng.Agr;
+                                                                               lock_NP : {}}) -> (ob2 : {s : ResEng.NPCase => Str;
+                                                                                                         a : ResEng.Agr;
+                                                                                                         lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                                                                            lock_Cl : {}}
+                     = 0 ;
+                pred : (v : {s : ResEng.VForm => Str; isRefl : Prelude.Bool;
+                             lock_V : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                    lock_NP : {}}) -> (y : {s : ResEng.NPCase => Str;
+                                                                            a : ResEng.Agr;
+                                                                            lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                                               lock_Cl : {}}
+                     = 0 ;
+                pred : (a : {s : ResEng.AForm => Str;
+                             lock_A : {}}) -> (np : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                     lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                        lock_Cl : {}}
+                     = 0 ;
+                pred : (a : {s : ResEng.AForm => Str; c2 : Str;
+                             lock_A2 : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                     lock_NP : {}}) -> (y : {s : ResEng.NPCase => Str;
+                                                                             a : ResEng.Agr;
+                                                                             lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                                                lock_Cl : {}}
+                     = 0 ;
+                pred : (a : {s : ResEng.AForm => Str;
+                             lock_A : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                    lock_NP : {}}) -> (y : {s : ResEng.NPCase => Str;
+                                                                            a : ResEng.Agr;
+                                                                            lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                                               lock_Cl : {}}
+                     = 0 ;
+                pred : (n : {s : ParamX.Number => ResEng.Case => Str;
+                             g : ResEng.Gender; lock_N : {}}) -> (x : {s : ResEng.NPCase => Str;
+                                                                       a : ResEng.Agr;
+                                                                       lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                                          lock_Cl : {}}
+                     = 0 ;
+                pred : (n : {s : ParamX.Number => ResEng.Case => Str;
+                             g : ResEng.Gender;
+                             lock_CN : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                     lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                        lock_Cl : {}}
+                     = 0 ;
+                pred : (n : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                             lock_NP : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                     lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                        lock_Cl : {}}
+                     = 0 ;
+                pred : (n : {s : ParamX.Number => ResEng.Case => Str; c2 : Str;
+                             g : ResEng.Gender;
+                             lock_N2 : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                     lock_NP : {}}) -> (y : {s : ResEng.NPCase => Str;
+                                                                             a : ResEng.Agr;
+                                                                             lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                                                lock_Cl : {}}
+                     = 0 ;
+                pred : (n : {s : ParamX.Number => ResEng.Case => Str;
+                             g : ResEng.Gender; lock_N : {}}) -> (x : {s : ResEng.NPCase => Str;
+                                                                       a : ResEng.Agr;
+                                                                       lock_NP : {}}) -> (y : {s : ResEng.NPCase => Str;
+                                                                                               a : ResEng.Agr;
+                                                                                               lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                                                                  lock_Cl : {}}
+                     = 0 ;
+                pred : (a : {s : Str;
+                             lock_Adv : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                      lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                         lock_Cl : {}}
+                     = 0 ;
+                pred : (p : {s : Str;
+                             lock_Prep : {}}) -> (x : {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                                                       lock_NP : {}}) -> (y : {s : ResEng.NPCase => Str;
+                                                                               a : ResEng.Agr;
+                                                                               lock_NP : {}}) -> {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                                                                                                  lock_Cl : {}}
+                     = 0 ;
+              } ;
+}

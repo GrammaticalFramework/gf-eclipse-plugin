@@ -1,0 +1,47 @@
+#Mon Oct 10 16:03:20 CEST 2011
+content_assist_proposals_foreground=60,60,60
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+content_assist_proposals_background=255,255,255
+spelling_ignore_digits=true
+useQuickDiffPrefPage=true
+lastRecentlyUsedFilters=org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter,
+spelling_ignore_upper=true
+closeBraces=false
+content_assist_number_of_computers=13
+CustomFiltersActionGroup.org.eclipse.jdt.ui.PackageExplorer.TAG_DUMMY_TO_TEST_EXISTENCE=storedViewPreferences
+useAnnotationsPrefPage=true
+spelling_ignore_single_letters=true
+org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter=true
+spelling_ignore_urls=true
+org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter=true
+org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter=true
+spelling_locale_initialized=true
+org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter=true
+fontPropagated=true
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter=true
+closeBrackets=false
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*=true
+spelling_locale=en_GB
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Monospace|9.0|0|GTK|1|;
+spelling_ignore_non_letters=true
+tabWidthPropagated=true
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.google.common.base.Function"><rhs name\="org.eclipse.emf.mwe2.language.scoping.QualifiedNameProvider"/></lhs><lhs name\="org.eclipse.xtext.naming.IQualifiedNameProvider"><rhs name\="org.eclipse.emf.mwe2.language.scoping.QualifiedNameProvider"/></lhs><lhs name\="javax.swing.ButtonGroup"><rhs name\="javax.swing.ButtonGroup"/></lhs><lhs name\="org.eclipse.swt.widgets.Composite"><rhs name\="org.eclipse.swt.widgets.Group"/></lhs><lhs name\="org.eclipse.swt.widgets.Scrollable"><rhs name\="org.eclipse.swt.widgets.Group"/></lhs><lhs name\="org.eclipse.swt.widgets.Control"><rhs name\="org.eclipse.swt.widgets.Group"/></lhs><lhs name\="org.eclipse.swt.graphics.Drawable"><rhs name\="org.eclipse.swt.widgets.Group"/><rhs name\="org.eclipse.swt.graphics.Image"/></lhs><lhs name\="org.eclipse.swt.widgets.Widget"><rhs name\="org.eclipse.swt.widgets.Group"/></lhs><lhs name\="org.eclipse.swt.widgets.Group"><rhs name\="org.eclipse.swt.widgets.Group"/></lhs><lhs name\="java.lang.CharSequence"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.AbstractStringBuilder"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.lang.StringBuilder"/></lhs><lhs name\="java.text.DateFormat"><rhs name\="java.text.SimpleDateFormat"/></lhs><lhs name\="java.text.Format"><rhs name\="java.text.SimpleDateFormat"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.text.SimpleDateFormat"/></lhs><lhs name\="java.text.SimpleDateFormat"><rhs name\="java.text.SimpleDateFormat"/></lhs><lhs name\="org.eclipse.swt.graphics.Resource"><rhs name\="org.eclipse.swt.graphics.Image"/></lhs></history>
+LexicalSortingAction.isChecked=true
+spelling_ignore_java_strings=true
+org.eclipse.jdt.internal.ui.navigator.layout=2
+spelling_ignore_mixed=true
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.pde.ui.ExternalPluginLibrariesFilter1=true
+content_assist_favorite_static_members=
+proposalOrderMigrated=true
+spelling_ignore_ampersand_in_properties=true
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+spelling_user_dictionary_encoding=
+closeStrings=false
+spelling_ignore_sentence=true
+org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter=true

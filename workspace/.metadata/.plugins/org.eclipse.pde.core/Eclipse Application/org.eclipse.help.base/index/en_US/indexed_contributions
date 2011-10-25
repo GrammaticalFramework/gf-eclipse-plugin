@@ -1,0 +1,25 @@
+#This is a generated file; do not edit.
+#Mon Sep 26 14:26:45 CEST 2011
+org.eclipse.emf.cheatsheets=org.eclipse.emf.cheatsheets\n2.5.0.v20100521-1846
+org.eclipse.emf.doc=org.eclipse.emf.doc\n2.6.0.v20110606-0949
+org.eclipse.help.base=org.eclipse.help.base\n3.6.0.v201106131736
+org.eclipse.team.svn=org.eclipse.team.svn\n0.7.9.I20110318-1700
+org.eclipse.epp.mpc.ui=org.eclipse.epp.mpc.ui\n1.1.0.I20110525-0742
+org.eclipse.xpand.doc=org.eclipse.xpand.doc\n1.0.1.v201108020519
+org.eclipse.jdt=org.eclipse.jdt\n3.7.0.v201106131736
+org.eclipse.jdt.doc.user=org.eclipse.jdt.doc.user\n3.7.0.v20110601-0800
+org.eclipse.emf.compare.doc=org.eclipse.emf.compare.doc\n1.2.0.v20110607-2028
+org.eclipse.emf.mwe.doc=org.eclipse.emf.mwe.doc\n1.1.1.v201108020506
+org.eclipse.jdt.doc.isv=org.eclipse.jdt.doc.isv\n3.7.0.v20110531-1242
+org.eclipse.ui.cheatsheets=org.eclipse.ui.cheatsheets\n3.4.100.v20110425
+org.eclipse.xtext.doc=org.eclipse.xtext.doc\n2.0.1.v201108020636
+org.eclipse.ui.intro=org.eclipse.ui.intro\n3.4.100.v20110425
+org.eclipse.help=org.eclipse.help\n3.5.100.v20110426
+org.eclipse.platform.doc.isv=org.eclipse.platform.doc.isv\n3.7.0.v20110602-0800
+org.eclipse.epp.mpc.help.ui=org.eclipse.epp.mpc.help.ui\n1.1.0.I20110525-0742
+org.eclipse.pde.doc.user=org.eclipse.pde.doc.user\n3.7.0.v20110601-0800
+org.eclipse.platform=org.eclipse.platform\n3.7.0.v201106131736
+org.eclipse.team.svn.help=org.eclipse.team.svn.help\n0.7.9.I20110715-1700
+org.eclipse.pde=org.eclipse.pde\n3.6.100.v201106131736
+org.eclipse.platform.doc.user=org.eclipse.platform.doc.user\n3.7.0.v20110601-0800
+org.eclipse.ui.intro.universal=org.eclipse.ui.intro.universal\n3.2.500.v20110510

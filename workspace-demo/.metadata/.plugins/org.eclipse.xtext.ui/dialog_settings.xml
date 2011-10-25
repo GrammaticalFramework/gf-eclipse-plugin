@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="xtext.quickoutline">
+		<item value="true" key="org.eclipse.xtext.ui.editor.outline.quickoutline.QuickOutlinePopupDIALOG_USE_PERSISTED_LOCATION"/>
+		<item value="190" key="org.eclipse.xtext.ui.editor.outline.quickoutline.QuickOutlinePopupDIALOG_WIDTH"/>
+		<item value="true" key="org.eclipse.xtext.ui.editor.outline.quickoutline.QuickOutlinePopupDIALOG_USE_PERSISTED_SIZE"/>
+		<item value="319" key="org.eclipse.xtext.ui.editor.outline.quickoutline.QuickOutlinePopupDIALOG_HEIGHT"/>
+		<item value="449" key="org.eclipse.xtext.ui.editor.outline.quickoutline.QuickOutlinePopupDIALOG_Y_ORIGIN"/>
+		<item value="1594" key="org.eclipse.xtext.ui.editor.outline.quickoutline.QuickOutlinePopupDIALOG_X_ORIGIN"/>
+	</section>
+</section>

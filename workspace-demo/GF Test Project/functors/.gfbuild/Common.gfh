@@ -1,0 +1,21 @@
+abstract Common = {
+  flags
+    coding = "latin1" ;
+  cat AdA ;
+  cat AdN ;
+  cat AdV ;
+  cat Adv ;
+  cat Ant ;
+  cat CAdv ;
+  cat IAdv ;
+  cat Interj ;
+  cat PConj ;
+  cat Phr ;
+  cat Pol ;
+  cat SC ;
+  cat Temp ;
+  cat Tense ;
+  cat Text ;
+  cat Utt ;
+  cat Voc ;
+}

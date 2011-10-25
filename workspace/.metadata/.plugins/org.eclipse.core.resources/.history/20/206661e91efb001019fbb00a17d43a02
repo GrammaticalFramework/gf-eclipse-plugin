@@ -1,0 +1,25 @@
+package org.grammaticalframework.eclipse.scoping;
+
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.EcoreUtil2;
+import org.grammaticalframework.eclipse.builder.GFBuilder;
+
+/**
+ * For resolving GF library modules and their exported definitions
+ * 
+ * @author John J. Camilleri
+ *
+ */
+public class GFLibraryAgent {
+	
+	/**
+	 * 
+	 * @param moduleName
+	 * @return
+	 */
+	public boolean moduleExists(Resource from, String moduleName) {
+		URI uri = URI.createURI( GFBuilder.BUILD_FOLDER + java.io.File.separator + moduleName + ".gfh" );
+		return EcoreUtil2.isValidUri(from, uri);
+	}
+}

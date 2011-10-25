@@ -1,0 +1,18 @@
+instance LexFoodsEng of LexFoods = open (SyntaxEng = SyntaxEng),(ParadigmsEng = ParadigmsEng) in {
+  flags
+    coding = "utf8" ;
+  oper boring_A : {s : ResEng.AForm => Str; lock_A : {}} ;
+  oper cheese_N : {s : ParamX.Number => ResEng.Case => Str;
+                   g : ResEng.Gender; lock_N : {}} ;
+  oper delicious_A : {s : ResEng.AForm => Str; lock_A : {}} ;
+  oper expensive_A : {s : ResEng.AForm => Str; lock_A : {}} ;
+  oper fish_N : {s : ParamX.Number => ResEng.Case => Str;
+                 g : ResEng.Gender; lock_N : {}} ;
+  oper fresh_A : {s : ResEng.AForm => Str; lock_A : {}} ;
+  oper italian_A : {s : ResEng.AForm => Str; lock_A : {}} ;
+  oper pizza_N : {s : ParamX.Number => ResEng.Case => Str;
+                  g : ResEng.Gender; lock_N : {}} ;
+  oper warm_A : {s : ResEng.AForm => Str; lock_A : {}} ;
+  oper wine_N : {s : ParamX.Number => ResEng.Case => Str;
+                 g : ResEng.Gender; lock_N : {}} ;
+}

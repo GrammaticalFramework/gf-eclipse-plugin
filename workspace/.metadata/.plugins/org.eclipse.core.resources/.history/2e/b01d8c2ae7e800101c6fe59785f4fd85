@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="GFLaunchConfigurationDelegate"
+            delegateName="GF Batch Compiler"
+            id="org.grammaticalframework.eclipse.launch.GFLaunchConfigurationType"
+            modes="run"
+            name="Grammatical Framework">
+      </launchConfigurationType>
+   </extension>
+
+</plugin>

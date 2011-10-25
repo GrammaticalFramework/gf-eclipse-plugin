@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.grammaticalframework.eclipse.GFLaunchConfigurationType">
+<stringAttribute key="org.grammaticalframework.eclipse.launch.config.FILENAMES" value="HelloEng.gf"/>
+<stringAttribute key="org.grammaticalframework.eclipse.launch.config.OPTIONS" value="--force-recomp"/>
+<stringAttribute key="org.grammaticalframework.eclipse.launch.config.WORKING_DIR" value="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello"/>
+</launchConfiguration>

@@ -1,0 +1,9 @@
+package org.grammaticalframework.eclipse.ui.natures;
+
+public class ToggleNatureAction {
+
+	public ToggleNatureAction() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

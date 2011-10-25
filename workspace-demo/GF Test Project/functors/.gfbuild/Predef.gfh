@@ -1,0 +1,27 @@
+resource Predef = {
+  flags
+    coding = "latin1" ;
+  oper Error : Type ;
+  oper Int : Type ;
+  oper Ints : Predef.Int -> Type ;
+  param PBool = PTrue | PFalse ;
+  oper dp : Predef.Int -> Str -> Str ;
+  oper drop : Predef.Int -> Str -> Str ;
+  oper eqInt : Predef.Int -> Predef.Int -> Predef.PBool ;
+  oper eqStr : Str -> Str -> Predef.PBool ;
+  oper error : Str -> Predef.Error ;
+  oper isUpper : Str -> Predef.PBool ;
+  oper length : Str -> Predef.Int ;
+  oper lessInt : Predef.Int -> Predef.Int -> Predef.PBool ;
+  oper mapStr : (L : Type) -> (Str -> Str) -> L -> L ;
+  oper occur : Str -> Str -> Predef.PBool ;
+  oper occurs : Str -> Str -> Predef.PBool ;
+  oper plus : Predef.Int -> Predef.Int -> Predef.Int ;
+  oper read : (P : Type) -> Str -> P ;
+  oper show : (P : Type) -> P -> Str ;
+  oper take : Predef.Int -> Str -> Str ;
+  oper tk : Predef.Int -> Str -> Str ;
+  oper toLower : Str -> Str ;
+  oper toStr : (L : Type) -> L -> Str ;
+  oper toUpper : Str -> Str ;
+}

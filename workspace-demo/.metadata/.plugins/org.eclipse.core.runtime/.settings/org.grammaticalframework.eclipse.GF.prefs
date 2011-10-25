@@ -1,0 +1,4 @@
+#Thu Oct 20 13:23:39 CEST 2011
+ui.outline.linkWithEditor=true
+eclipse.preferences.version=1
+org.grammaticalframework.eclipse.GF.syntaxColorer.tokenStyles.compiler\ pragma.color=82,143,201

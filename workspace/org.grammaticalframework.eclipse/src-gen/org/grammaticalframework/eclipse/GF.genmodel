@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.grammaticalframework.eclipse/src-gen"
+    editDirectory="/org.grammaticalframework.eclipse.edit/src" editorDirectory="/org.grammaticalframework.eclipse.editor/src"
+    modelPluginID="org.grammaticalframework.eclipse" forceOverwrite="true" modelName="GF"
+    updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.grammaticalframework.eclipse.edit"
+    editorPluginID="org.grammaticalframework.eclipse.editor">
+  <genPackages prefix="GF" basePackage="org.grammaticalframework.eclipse" disposableProviderFactory="true"
+      ecorePackage="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#/">
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModDef/incomplete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModDef/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModDef/body"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModType/abstract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModType/resource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModType/interface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModType/concrete"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModType/abstractName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModType/instance"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModBody">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModBody/extends"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModBody/opens"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModBody/judgements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModBody/functor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModBody/functorInstantiation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModBody/instantiations"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Open">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Open/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Open/alias"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Included">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Included/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Included/inclusive"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Included/includes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Included/exclusive"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Included/excludes"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Def">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Def/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Def/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Def/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Def/patterns"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Def/overload"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Def/overloads"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/cat"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/definitions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/fun"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/def"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/param"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/oper"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/lincat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/lindef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/lin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/printname"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef/flags"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//CatDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//CatDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//CatDef/context"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//CatDef/size"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//FunDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//FunDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//FunDef/type"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DataDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DataDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DataDef/constructors"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DataConstr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DataConstr/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DataConstr/module"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ParDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ParDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ParDef/constructors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ParDef/id2"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ParConstr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ParConstr/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ParConstr/constructors"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//PrintDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//PrintDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//PrintDef/printname"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//FlagDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//FlagDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//FlagDef/value"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Name">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Name/name"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//LocDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//LocDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//LocDef/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//LocDef/value"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListLocDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListLocDef/localDefinitions"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/sort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/string"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/integer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/double"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/meta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/emptyString"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/data"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/listCat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/category"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/list"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/tokenList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/record"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/defList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/tuple"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/tupleList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/v"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/identity"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp5">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp5/v"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp5/label"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp4">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp4/caseList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp4/args"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp4/argType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp4/expList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp4/caseOf"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp4/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp4/inner"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp4/v"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp3">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp3/v"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp3/e"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp2/v"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp2/e"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp1/v"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp1/e"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp/bindList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp/v"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp/e"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp/defList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp/type"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListExp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListExp/expressions"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exps">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exps/expressions"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt2"/>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt1/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt1/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt1/label"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt/p"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//PattAss">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//PattAss/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//PattAss/value"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Label">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Label/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Label/index"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListPattAss">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListPattAss/assignments"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListPatt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListPatt/patterns"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Bind">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Bind/name"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListBind">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListBind/bindings"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TupleComp"/>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//PattTupleComp"/>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListTupleComp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListTupleComp/l"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListPattTupleComp">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListPattTupleComp/l"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Case">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Case/pattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Case/e"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListCase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListCase/cases"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DDecl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DDecl/bindList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DDecl/e"/>
+    </genClasses>
+    <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident/s"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,47 @@
+abstract Numeral = Cat [Numeral,Digits] ** {
+  flags
+    coding = "latin1" ;
+  data D_0 : Numeral.Dig ;
+  data D_1 : Numeral.Dig ;
+  data D_2 : Numeral.Dig ;
+  data D_3 : Numeral.Dig ;
+  data D_4 : Numeral.Dig ;
+  data D_5 : Numeral.Dig ;
+  data D_6 : Numeral.Dig ;
+  data D_7 : Numeral.Dig ;
+  data D_8 : Numeral.Dig ;
+  data D_9 : Numeral.Dig ;
+  cat Dig ;
+  cat Digit ;
+  -- ind Digits = Cat ;
+  data IDig : Numeral.Dig -> Cat.Digits ;
+  data IIDig : Numeral.Dig -> Cat.Digits -> Cat.Digits ;
+  -- ind Numeral = Cat ;
+  cat Sub10 ;
+  cat Sub100 ;
+  cat Sub1000 ;
+  cat Sub1000000 ;
+  data n2 : Numeral.Digit ;
+  data n3 : Numeral.Digit ;
+  data n4 : Numeral.Digit ;
+  data n5 : Numeral.Digit ;
+  data n6 : Numeral.Digit ;
+  data n7 : Numeral.Digit ;
+  data n8 : Numeral.Digit ;
+  data n9 : Numeral.Digit ;
+  data num : Numeral.Sub1000000 -> Cat.Numeral ;
+  data pot0 : Numeral.Digit -> Numeral.Sub10 ;
+  data pot01 : Numeral.Sub10 ;
+  data pot0as1 : Numeral.Sub10 -> Numeral.Sub100 ;
+  data pot1 : Numeral.Digit -> Numeral.Sub100 ;
+  data pot110 : Numeral.Sub100 ;
+  data pot111 : Numeral.Sub100 ;
+  data pot1as2 : Numeral.Sub100 -> Numeral.Sub1000 ;
+  data pot1plus : Numeral.Digit -> Numeral.Sub10 -> Numeral.Sub100 ;
+  data pot1to19 : Numeral.Digit -> Numeral.Sub100 ;
+  data pot2 : Numeral.Sub10 -> Numeral.Sub1000 ;
+  data pot2as3 : Numeral.Sub1000 -> Numeral.Sub1000000 ;
+  data pot2plus : Numeral.Sub10 -> Numeral.Sub100 -> Numeral.Sub1000 ;
+  data pot3 : Numeral.Sub1000 -> Numeral.Sub1000000 ;
+  data pot3plus : Numeral.Sub1000 -> Numeral.Sub1000 -> Numeral.Sub1000000 ;
+}

@@ -1,0 +1,171 @@
+package org.grammaticalframework.eclipse.ui.projects;
+
+import java.net.URI;
+
+import org.eclipse.core.resources.ICommand;
+import org.eclipse.core.resources.IContainer;
+import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IProjectDescription;
+import org.eclipse.core.resources.IWorkspace;
+import org.eclipse.core.resources.IWorkspaceDescription;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.Assert;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IProgressMonitor;
+
+import org.grammaticalframework.eclipse.ui.natures.GFProjectNature;
+import org.grammaticalframework.eclipse.builder.GFBuilder;
+
+/**
+ * Based on: http://cvalcarcel.wordpress.com/2009/07/26/writing-an-eclipse-plug-in-part-4-create-a-custom-project-in-eclipse-new-project-wizard-the-behavior/
+ * @author John J. Camilleri
+ *
+ */
+public class GFProjectSupport {
+	
+    /**
+     * For this marvelous project we need to: - create the default Eclipse
+     * project - add the custom project nature - create the folder structure
+     * 
+     * @param projectName
+     * @param location
+     * @param natureId
+     * @return
+     */
+    public static IProject createProject(String projectName, URI location) {
+        Assert.isNotNull(projectName);
+        Assert.isTrue(projectName.trim().length() > 0);
+
+        IProject project = createBaseProject(projectName, location);
+        try {
+        	addNature(project);
+        	addBuilder(project);
+            turnOnAutoBuild();
+//            String[] paths = { "parent/child1-1/child2", "parent/child1-2/child2/child3" }; //$NON-NLS-1$ //$NON-NLS-2$
+            String[] paths = { GFBuilder.BUILD_FOLDER };
+            addToProjectStructure(project, paths);
+
+            // Maybe this is rude?
+            turnOnAutoBuild();
+        } catch (CoreException e) {
+            e.printStackTrace();
+            project = null;
+        }
+
+        return project;
+    }
+
+	/**
+     * Just do the basics: create a basic project.
+     * 
+     * @param location
+     * @param projectName
+     */
+    private static IProject createBaseProject(String projectName, URI location) {
+        // it is acceptable to use the ResourcesPlugin class
+        IProject newProject = ResourcesPlugin.getWorkspace().getRoot().getProject(projectName);
+
+        if (!newProject.exists()) {
+            URI projectLocation = location;
+            IProjectDescription desc = newProject.getWorkspace().newProjectDescription(newProject.getName());
+            if (location != null && ResourcesPlugin.getWorkspace().getRoot().getLocationURI().equals(location)) {
+                projectLocation = null;
+            }
+
+            desc.setLocationURI(projectLocation);
+            try {
+                newProject.create(desc, null);
+                if (!newProject.isOpen()) {
+                    newProject.open(null);
+                }
+            } catch (CoreException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return newProject;
+    }
+
+    private static void createFolder(IFolder folder) throws CoreException {
+        IContainer parent = folder.getParent();
+        if (parent instanceof IFolder) {
+            createFolder((IFolder) parent);
+        }
+        if (!folder.exists()) {
+            folder.create(false, true, null);
+        }
+    }
+
+    /**
+     * Create a folder structure with a parent root, overlay, and a few child
+     * folders.
+     * 
+     * @param newProject
+     * @param paths
+     * @throws CoreException
+     */
+    private static void addToProjectStructure(IProject newProject, String[] paths) throws CoreException {
+        for (String path : paths) {
+            IFolder etcFolders = newProject.getFolder(path);
+            createFolder(etcFolders);
+        }
+    }
+    
+    private static void addNature(IProject project) throws CoreException {
+    	
+//		// Refer: http://www.eclipse.org/forums/index.php/m/547428/
+//		IProjectDescription description = currentProject.getDescription();
+//		description.setNatureIds(new String[] { XtextProjectHelper.NATURE_ID });
+//		currentProject.setDescription(description, null);
+//		// or...
+//		IResource resource = editor.getResource();
+//		toggleNature.toggleNature(resource.getProject());	
+    	
+    	if (!project.hasNature(GFProjectNature.NATURE_ID)) {
+    		IProjectDescription description = project.getDescription();
+    		String[] prevNatures = description.getNatureIds();
+    		String[] newNatures = new String[prevNatures.length + 1];
+    		System.arraycopy(prevNatures, 0, newNatures, 0, prevNatures.length);
+    		newNatures[prevNatures.length] = GFProjectNature.NATURE_ID;
+    		description.setNatureIds(newNatures);
+    		
+    		IProgressMonitor monitor = null;
+    		project.setDescription(description, monitor);
+    	}
+    }
+
+    /**
+     * Refer: http://wiki.eclipse.org/FAQ_How_do_I_add_a_builder_to_a_given_project%3F 
+     * 
+     * @param project
+     * @throws CoreException
+     */
+    private static void addBuilder(IProject project) throws CoreException {
+    	 IProjectDescription desc = project.getDescription();
+         ICommand[] commands = desc.getBuildSpec();
+         for (int i = 0; i < commands.length; ++i)
+            if (commands[i].getBuilderName().equals(GFBuilder.BUILDER_ID))
+               return;
+         //add builder to project
+         ICommand command = desc.newCommand();
+         command.setBuilderName(GFBuilder.BUILDER_ID);
+         ICommand[] nc = new ICommand[commands.length + 1];
+         // Add it before other builders.
+         System.arraycopy(commands, 0, nc, 1, commands.length);
+         nc[0] = command;
+         desc.setBuildSpec(nc);
+         project.setDescription(desc, null);
+    }
+    
+    private static void turnOnAutoBuild() throws CoreException {
+	   IWorkspace workspace = ResourcesPlugin.getWorkspace();
+	   IWorkspaceDescription description = workspace.getDescription();
+	   if (!description.isAutoBuilding()) {
+	      description.setAutoBuilding(true);
+	      workspace.setDescription(description);
+	   }
+   }
+
+    
+}

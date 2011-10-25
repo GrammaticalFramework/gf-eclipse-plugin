@@ -1,0 +1,77 @@
+package org.grammaticalframework.eclipse.scoping;
+
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.EcoreUtil2;
+import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.IScopeProvider;
+import org.grammaticalframework.eclipse.builder.GFBuilder;
+
+import com.google.common.base.Predicate;
+import com.google.inject.Inject;
+
+/**
+ * For resolving GF library modules and their exported definitions
+ * 
+ * @author John J. Camilleri
+ *
+ */
+public class GFLibraryAgent {
+	
+	private String getHeaderPath(Resource context, String moduleName) {
+		StringBuilder sb = new StringBuilder();
+		URI uri = context.getURI();
+		if (uri.lastSegment().endsWith(".gfh")) {
+			// Go a level up
+			uri = uri.trimSegments(1);
+			sb.append(".." + java.io.File.separator);
+			sb.append(".." + java.io.File.separator);
+		}
+		sb.append(GFBuilder.BUILD_FOLDER
+				+ java.io.File.separator
+				+ uri.lastSegment()
+				+ java.io.File.separator
+				+ moduleName + ".gfh");
+		return sb.toString();
+	}
+	
+	/**
+	 * Check if a module exists
+	 * 
+	 * @param context
+	 * @param moduleName
+	 * @return
+	 */
+	public URI getModuleURI(Resource context, String moduleName) {
+		URI uri = URI.createURI( getHeaderPath(context, moduleName) ); // Create it as relative
+		if (EcoreUtil2.isValidUri(context, uri)) {
+			return uri.resolve(context.getURI()); // return it as absolute
+		} else {
+			return null;
+		}
+	}
+	
+	
+	public Resource getModuleResource(Resource context, String moduleName) {
+		URI uri = getModuleURI(context, moduleName);
+		try {
+			return EcoreUtil2.getResource(context, uri.toString() );
+		} catch (NullPointerException e) {
+			return null;
+		}
+	}
+	
+	/**
+	 * Check if a module exists
+	 * 
+	 * @param context
+	 * @param moduleName
+	 * @return
+	 */
+	public boolean moduleExists(Resource context, String moduleName) {
+		return (getModuleURI(context, moduleName) != null);
+	}
+	
+}

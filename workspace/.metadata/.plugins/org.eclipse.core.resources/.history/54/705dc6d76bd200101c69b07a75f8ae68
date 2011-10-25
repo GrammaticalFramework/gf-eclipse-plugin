@@ -1,0 +1,380 @@
+grammar org.grammaticalframework.eclipse.GF with org.eclipse.xtext.common.Terminals
+
+generate gF "http://www.grammaticalframework.org/eclipse/GF"
+
+//Model:
+//	greetings+=Greeting*;
+//	
+//Greeting:
+//	'Hello' name=ID '!';
+
+Grammar :
+	elements += ListModDef*
+;
+
+ListModDef :
+	(ModDef ListModDef)?
+;
+
+ModDef :
+	ModDef ';'
+	| ComplMod ModType '=' ModBody
+;
+
+ModType :
+	'abstract' Ident
+	| 'resource' Ident
+	| 'interface' Ident
+	| 'concrete' Ident 'of' Ident
+	| 'instance' Ident 'of' Ident
+;
+
+ModBody :
+	Extend Opens '{' ListTopDef '}'
+	| ListIncluded
+	| Included 'with' ListOpen
+	| Included 'with' ListOpen '**' Opens '{' ListTopDef '}'
+	| ListIncluded '**' Included 'with' ListOpen
+	| ListIncluded '**' Included 'with' ListOpen
+	'**' Opens '{' ListTopDef '}'
+;
+
+ListTopDef :
+	(TopDef ListTopDef)?
+;
+
+Extend :
+	(ListIncluded '**')?
+;
+
+ListOpen :
+	(Open | Open ',' ListOpen)?
+;
+
+Opens :
+	('open' ListOpen 'in')?
+;
+
+Open :
+	Ident
+	| '(' Ident ')'
+	| '(' Ident '=' Ident ')'
+;
+
+ComplMod :
+	('incomplete')?
+;
+
+ListIncluded :
+	(Included | Included ',' ListIncluded)?
+;
+
+Included :
+	Ident
+	| Ident '[' ListIdent ']'
+	| Ident '-' '[' ListIdent ']'
+;
+
+Def :
+	ListName ':' Exp
+	| ListName '=' Exp
+	| Name ListPatt '=' Exp
+	| ListName ':' Exp '=' Exp
+;
+
+TopDef :
+	'cat' ListCatDef
+	| 'fun' ListFunDef
+	| 'data' ListFunDef
+	| 'def' ListDef
+	| 'data' ListDataDef
+	| 'param' ListParDef
+	| 'oper' ListDef
+	| 'lincat' ListPrintDef
+	| 'lindef' ListDef
+	| 'lin' ListDef
+	| 'printname' 'cat' ListPrintDef
+	| 'printname' 'fun' ListPrintDef
+	| 'flags' ListFlagDef
+;
+
+CatDef :
+	Ident ListDDecl
+	| '[' Ident ListDDecl ']'
+	| '[' Ident ListDDecl ']' '{' Integer '}'
+;
+
+FunDef :
+	ListIdent ':' Exp
+;
+
+DataDef :
+	Ident '=' ListDataConstr
+;
+
+DataConstr :
+	Ident
+	| Ident '.' Ident
+;
+
+ListDataConstr :
+	(DataConstr | DataConstr '|' ListDataConstr)?
+;
+
+ParDef :
+	Ident '=' ListParConstr
+	| Ident '=' '(' 'in' Ident ')'
+	| Ident
+;
+
+ParConstr :
+	Ident ListDDecl
+;
+
+PrintDef :
+	ListName '=' Exp
+;
+
+FlagDef :
+	Ident '=' Ident
+;
+
+ListDef :
+	Def ';'
+	| Def ';' ListDef
+;
+
+ListCatDef :
+	CatDef ';'
+	| CatDef ';' ListCatDef
+;
+
+ListFunDef :
+	FunDef ';'
+	| FunDef ';' ListFunDef
+;
+
+ListDataDef :
+	DataDef ';'
+	| DataDef ';' ListDataDef
+;
+
+ListParDef :
+	ParDef ';'
+	| ParDef ';' ListParDef
+;
+
+ListPrintDef :
+	PrintDef ';'
+	| PrintDef ';' ListPrintDef
+;
+
+ListFlagDef :
+	FlagDef ';'
+	| FlagDef ';' ListFlagDef
+;
+
+ListParConstr :
+	(ParConstr | ParConstr '|' ListParConstr)?
+;
+
+ListIdent :
+	Ident
+	| Ident ',' ListIdent
+;
+
+Name :
+	Ident
+	| '[' Ident ']'
+;
+
+ListName :
+	Name
+	| Name ',' ListName
+;
+
+LocDef :
+	ListIdent ':' Exp
+	| ListIdent '=' Exp
+	| ListIdent ':' Exp '=' Exp
+;
+
+ListLocDef :
+	(LocDef | LocDef ';' ListLocDef)?
+;
+
+Exp6 :
+	Ident
+	| Sort
+	| String
+	| Integer
+	| Double
+	| '?' Integer
+	| '?'
+	| '[' ']'
+	| 'data'
+	| '[' Ident Exps ']'
+	| '[' String ']'
+	| '{' ListLocDef '}'
+	| '<' ListTupleComp '>'
+	| '<' Exp ':' Exp '>'
+	| '(' Exp ')'
+;
+
+Exp5 :
+	Exp5 '.' Label
+	| Exp6
+;
+
+Exp4 :
+	Exp4 Exp5
+	| 'table' '{' ListCase '}'
+	| 'table' Exp6 '{' ListCase '}'
+	| 'table' Exp6 '[' ListExp ']'
+	| 'case' Exp 'of' '{' ListCase '}'
+	| 'variants' '{' ListExp '}'
+	| 'pre' '{' ListCase '}'
+	| 'lincat' Ident
+	| 'lin' Ident Exp6
+	| Exp5
+;
+
+Exp3 :
+	Exp3 '!' Exp4
+	| Exp3 '*' Exp4
+	| Exp3 '**' Exp4
+	| '#' Patt2
+	| Exp4
+;
+
+Exp2 :
+	Exp3
+;
+
+Exp1 :
+	Exp2 '+' Exp1
+	| Exp2
+;
+
+Exp :
+	Exp1 '++' Exp
+	| '\\' ListBind '->' Exp
+	| '\\' '\\' ListBind '=>' Exp
+	| Decl '->' Exp
+	| Exp3 '=>' Exp
+	| 'let' '{' ListLocDef '}' 'in' Exp
+	| 'let' ListLocDef 'in' Exp
+	| Exp3 'where' '{' ListLocDef '}'
+	| Exp0 '|' Exp1
+	| Exp1
+;
+
+ListExp :
+	(Exp | Exp ';' ListExp)?
+;
+
+Exps :
+	(Exp6 Exps)?
+;
+
+Patt2 :
+	'_'
+	| Ident
+	| Ident '.' Ident
+	| Integer
+	| Double
+	| String
+	| '{' ListPattAss '}'
+	| '<' ListPattTupleComp '>'
+	| '#' Ident
+	| '?'
+	| '(' Patt ')'
+;
+
+Patt1 :
+	Ident ListPatt
+	| Ident '.' Ident ListPatt
+	| Patt2 '*'
+	| Ident '@' Patt2
+	| '-' Patt2
+	| Patt2
+;
+
+Patt :
+	Patt '|' Patt1
+	| Patt '+' Patt1
+	| Patt1
+;
+
+PattAss :
+	ListIdent '=' Patt
+;
+
+Label :
+	Ident
+	| '$' Integer
+;
+
+Sort :
+	'Type'
+	| 'PType'
+	| 'Str'
+	| 'Strs'
+;
+
+ListPattAss :
+	(PattAss | PattAss ';' ListPattAss)?
+;
+
+ListPatt :
+	Patt2
+	| Patt2 ListPatt
+;
+
+Bind :
+	Ident
+	| '_'
+;
+
+ListBind :
+	(Bind | Bind ',' ListBind)?
+;
+
+Decl :
+	'(' ListBind ':' Exp ')'
+	| Exp4
+;
+
+TupleComp :
+	Exp
+;
+
+PattTupleComp :
+	Patt
+;
+
+ListTupleComp :
+	(TupleComp | TupleComp ',' ListTupleComp)?
+;
+
+ListPattTupleComp :
+	(PattTupleComp | PattTupleComp ',' ListPattTupleComp)?
+;
+
+Case :
+	Patt '=>' Exp
+;
+
+ListCase :
+	Case
+	| Case ';' ListCase
+;
+
+DDecl :
+	'(' ListBind ':' Exp ')'
+	| Exp6
+;
+
+ListDDecl :
+	(DDecl ListDDecl)?
+;

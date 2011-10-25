@@ -1,0 +1,14 @@
+interface LexFoods = open Syntax in {
+  flags
+    coding = "latin1" ;
+  oper boring_A : A ;
+  oper cheese_N : N ;
+  oper delicious_A : A ;
+  oper expensive_A : A ;
+  oper fish_N : N ;
+  oper fresh_A : A ;
+  oper italian_A : A ;
+  oper pizza_N : N ;
+  oper warm_A : A ;
+  oper wine_N : N ;
+}

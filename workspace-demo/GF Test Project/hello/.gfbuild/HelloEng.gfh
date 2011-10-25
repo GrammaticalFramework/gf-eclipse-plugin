@@ -1,0 +1,16 @@
+concrete HelloEng of HelloAbs = open (ResEng = ResEng) in {
+  flags
+    coding = "utf8" ;
+  lincat Farewell = {s : Str} ;
+  lincat Greeting = {s : Str} ;
+  lincat Recipient = {s : ResEng.Gender => Str} ;
+  oper mega = overload {
+                mega : (s : Str) -> {s : ResEng.Gender => Str; lock_Recipient : {}}
+                     = 0 ;
+                mega : (s : Str) -> (r : Str) -> {s : ResEng.Gender => Str;
+                                                  lock_Recipient : {}}
+                     = 0 ;
+              } ;
+  oper superate : Str -> {s : ResEng.Gender => Str;
+                          lock_Recipient : {}} ;
+}

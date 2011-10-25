@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gF"
+    nsURI="http://www.grammaticalframework.org/eclipse/GF" nsPrefix="gF">
+  <eClassifiers xsi:type="ecore:EClass" name="ModDef">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="incomplete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModType"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ModBody"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abstract" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interface" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="concrete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractName" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModBody">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extends" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Included"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opens" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Open"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="judgements" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TopDef"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="functor" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Included"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="functorInstantiation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instantiations" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Open"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Open">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="alias" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Included">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inclusive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="exclusive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="excludes" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Def">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Name"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definition" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patterns" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListPatt"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="overload" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="overloads" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Def"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TopDef">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definitions" upperBound="-1"
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fun" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="def" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="param" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="oper" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lincat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lindef" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="printname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="flags" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CatDef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="context" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DDecl"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FunDef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataDef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constructors" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DataConstr"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataConstr">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="module" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParDef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constructors" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ParConstr"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="id2" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ParConstr">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="constructors" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DDecl"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PrintDef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Name"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="printname" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FlagDef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Name">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LocDef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListLocDef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="localDefinitions" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//LocDef"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exp6" eSuperTypes="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DDecl">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="integer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="double" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="meta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="emptyString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="listCat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="category" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="list" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exps"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokenList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="record" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defList" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListLocDef"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tuple" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tupleList" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListTupleComp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exp5">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Label"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exp4">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="caseList" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListCase"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp5"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="argType" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expList" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListExp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="caseOf" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inner" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp5"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exp3">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp4"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exp2">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp3"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp2"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exp1">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp2"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp1"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exp" eSuperTypes="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TupleComp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindList" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListBind"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="defList" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListLocDef"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListExp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exps">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Patt2" eSuperTypes="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt1"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Patt1">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Patt" eSuperTypes="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt2 platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//PattTupleComp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="p" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt1"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PattAss">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Label">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="index" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListPattAss" eSuperTypes="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt2">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assignments" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//PattAss"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListPatt">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patterns" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt2"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bind">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListBind">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindings" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Bind"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TupleComp"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PattTupleComp"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ListTupleComp">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//TupleComp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListPattTupleComp" eSuperTypes="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt2">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="l" upperBound="-1" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//PattTupleComp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Case">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Patt"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListCase">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cases" upperBound="-1"
+        eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Case"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DDecl">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindList" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//ListBind"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ident">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="s" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

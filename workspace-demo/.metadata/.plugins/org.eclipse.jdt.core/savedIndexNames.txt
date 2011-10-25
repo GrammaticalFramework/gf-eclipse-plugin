@@ -1,0 +1,1 @@
+INDEX VERSION 1.126+/home/john/repositories/gf-eclipse-plugin/workspace-demo/.metadata/.plugins/org.eclipse.jdt.core
