@@ -1,8 +1,11 @@
-concrete HelloEng of HelloAbs = open (ResEng = ResEng) in {
+concrete HelloEng of HelloAbs = ResEng ** {
   flags
     coding = "utf8" ;
   lincat Farewell = {s : Str} ;
+  -- ind Fem = canonical ResEng ;
+  -- ind Gender = canonical ResEng ;
   lincat Greeting = {s : Str} ;
+  -- ind Masc = canonical ResEng ;
   lincat Recipient = {s : ResEng.Gender => Str} ;
   oper mega = overload {
                 mega : (s : Str) -> {s : ResEng.Gender => Str; lock_Recipient : {}}

@@ -1,8 +1,10 @@
 package org.grammaticalframework.eclipse.builder;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Map;
@@ -246,11 +248,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 //			while ((err_str = processError.readLine()) != null) {
 //				System.out.println(err_str);
 //			}
-//			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
-//			String out_str;
-//			while ((out_str = processOutput.readLine()) != null) {
-//				System.out.println(out_str);
-//			}
+			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
+			String out_str;
+			while ((out_str = processOutput.readLine()) != null) {
+				System.out.println(out_str);
+			}
 			
 			// Tidy up
 			processInput.close();

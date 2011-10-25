@@ -2,19 +2,19 @@ concrete HelloEng of HelloAbs = ResEng ** {
 --concrete HelloEng of HelloAbs = open (Alias = ResEng) in {
 	
 	flags
-		coding = "utf8" ;  
+		coding = utf8 ;
  
 	lincat
 		Greeting, Farewell = {s : Str} ;
 		Recipient = {s : Gender => Str} ;
 
 	lin
- 		Hello recip = {s = "hello" ++ recip.s ! Alias.Masc} ;
-		Goodbye recip = {s = "goodbye" ++ recip.s ! Alias.Fem} ;
+ 		Hello recip = {s = "hello" ++ recip.s ! Masc} ;
+		Goodbye recip = {s = "goodbye" ++ recip.s ! Fem} ;
 		
 		World = {s = \\_ => "world"} ;
 		Parent = { s = table {
-			Alias.Masc => "dad" ; Alias.Fem => "mum"
+			Masc => "dad" ; Fem => "mum"
 		} } ;
 		Friends = mega "friends" "loved ones" ;
 

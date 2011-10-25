@@ -83,14 +83,14 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 
 		// Get local definitions
 		boolean ignoreModuleName = true;
-		scope = addURIToScope(resource, scope, moduleDef.getType().getName().getS(), filter, ignoreCase, ignoreModuleName);
+		scope = addModuleDefinitionsToScope(moduleDef.getType().getName().getS(), resource, scope, filter, ignoreCase, ignoreModuleName);
 
 		// Is this a concrete/instance of an abstract/interface module?
 		if (moduleDef.getType().isConcrete() || moduleDef.getType().isInstance()) {
 			String moduleName = moduleDef.getType().getAbstractName().getS();
 			try {
 				ignoreModuleName = true;
-				scope = addModuleToScope(scope, resource, moduleName, type, filter, ignoreCase, ignoreModuleName);
+				scope = addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
 
 //				// Recursively get the global scope of the ABSTRACT and use that as the base
 //				Resource parentResource = libAgent.getModuleResource(resource, moduleName);
@@ -134,7 +134,7 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				};
 			}
 
-			scope = addModuleToScope(scope, resource, moduleName, type, filter, ignoreCase, ignoreModuleName);
+			scope = addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
 //
 //			// "Recursively" get the global scope of the ABSTRACT and use that as the base
 //			Resource parentResource = libAgent.getModuleResource(resource, moduleName);
@@ -155,20 +155,20 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			String abstractModuleName = o.getName().getS();
 			if (o.getAlias()!=null) {
 				// Add everything with the alias'd qualified names
-				scope = addURIToScope(resource, scope, abstractModuleName, filter, ignoreCase, false, o.getAlias().getS());
+				scope = addModuleDefinitionsToScope(abstractModuleName, resource, scope, filter, ignoreCase, false, o.getAlias().getS());
 			} else {
 				// Add everything without qualified names
-				scope = addURIToScope(resource, scope, abstractModuleName, filter, ignoreCase, true);
+				scope = addModuleDefinitionsToScope(abstractModuleName, resource, scope, filter, ignoreCase, true);
 			}
 			// ALWAYS include a version with the "true" qualified names
-			scope = addURIToScope(resource, scope, abstractModuleName, filter, ignoreCase, false);
+			scope = addModuleDefinitionsToScope(abstractModuleName, resource, scope, filter, ignoreCase, false);
 		}
 		
 		// Handle interface instantiations (behave as inheritance)
 		EList<Open> modInstantiations = moduleDef.getBody().getInstantiations();
 		for (Open o : modInstantiations) {
 			String moduleName = o.getAlias().getS();
-			scope = addModuleToScope(scope, resource, moduleName, type, filter, ignoreCase, ignoreModuleName);
+			scope = addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
 		}
 		
 		// Phew
@@ -181,28 +181,39 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	
 	
 	
-	private IScope addModuleToScope(IScope scope, Resource resource, String moduleName, EClass type, Predicate<IEObjectDescription> filter, boolean ignoreCase, boolean ignoreModuleName) {
+	private IScope addModuleToScope(String moduleName, IScope scope, Resource resource, EClass type, Predicate<IEObjectDescription> filter, boolean ignoreCase, boolean ignoreModuleName) {
 		// Get the global scope of the INSTANCE and add that to our current scope
 		Resource parentResource = libAgent.getModuleResource(resource, moduleName);
 		IScope parentScope = getScope(parentResource, ignoreCase, type, filter);
 		ignoreModuleName = true;
 		if (scope.equals(IScope.NULLSCOPE)) {
-			scope = addURIToScope(resource, parentScope, moduleName, filter, ignoreCase, ignoreModuleName, null);
+			scope = addModuleDefinitionsToScope(moduleName, resource, parentScope, filter, ignoreCase, ignoreModuleName, null);
 		} else {
 			// We need to preserve what's already there
 			// TODO This might create an un-nice tree, but it works for now. Ideally preserve proper linked list structure.
 			//scope = new SimpleScope(parentScope, scope.getAllElements(), ignoreCase);
 			scope = new SimpleScope(scope, parentScope.getAllElements(), ignoreCase);
-			scope = addURIToScope(resource, scope, moduleName, filter, ignoreCase, ignoreModuleName);
+			scope = addModuleDefinitionsToScope(moduleName, resource, scope, filter, ignoreCase, ignoreModuleName);
 		}
 		return scope;
 	} 
 
-	private IScope addURIToScope(Resource resource, IScope parent, String moduleName, Predicate<IEObjectDescription> filter,
+	/**
+	 * Add the defitions in a named module to the given scope
+	 * @param moduleName The name of the module whos definitions we want to add
+	 * @param resource The context from where we are referencing the named module
+	 * @param parent The scope to which definitions should be appended
+	 * @param filter
+	 * @param ignoreCase
+	 * @param ignoreModuleName
+	 * 
+	 * @return
+	 */
+	private IScope addModuleDefinitionsToScope(String moduleName, Resource resource, IScope parent, Predicate<IEObjectDescription> filter,
 			boolean ignoreCase, boolean ignoreModuleName) {
-		return addURIToScope(resource, parent, moduleName, filter, ignoreCase, ignoreModuleName);
+		return addModuleDefinitionsToScope(moduleName, resource, parent, filter, ignoreCase, ignoreModuleName, null);
 	}
-	private IScope addURIToScope(Resource resource, IScope parent, String moduleName, Predicate<IEObjectDescription> filter,
+	private IScope addModuleDefinitionsToScope(String moduleName, Resource resource, IScope parent, Predicate<IEObjectDescription> filter,
 			boolean ignoreCase, boolean ignoreModuleName, String moduleAlias) {
 
 		try {
