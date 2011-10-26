@@ -57,7 +57,7 @@
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScopeProvider"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScope"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.builder.GFBuilder"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.builder.GFBuilder"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,6 @@
+abstract AbsCat = {
+  flags
+    coding = "latin1" ;
+  cat Greeting ;
+  cat Recipient ;
+}

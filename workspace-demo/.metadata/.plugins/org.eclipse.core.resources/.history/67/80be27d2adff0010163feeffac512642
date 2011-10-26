@@ -1,0 +1,13 @@
+abstract HelloAbs = AbsCat [Greeting,Recipient] ** {
+  flags
+    startcat = "Greeting" ;
+    coding = "latin1" ;
+  cat Farewell ;
+  data Friends : AbsCat.Recipient ;
+  data Goodbye : AbsCat.Recipient -> HelloAbs.Farewell ;
+  -- ind Greeting = AbsCat ;
+  data Hello : AbsCat.Recipient -> AbsCat.Greeting ;
+  data Parent : AbsCat.Recipient ;
+  -- ind Recipient = AbsCat ;
+  data World : AbsCat.Recipient ;
+}

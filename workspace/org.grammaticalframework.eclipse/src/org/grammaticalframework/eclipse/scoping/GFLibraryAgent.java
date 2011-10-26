@@ -22,7 +22,7 @@ public class GFLibraryAgent {
 	 */
 	private String getLocalSourcePath(Resource context, String moduleName) {
 		URI uri = context.getURI();
-		return uri.trimSegments(1) + moduleName + ".gf";
+		return uri.trimSegments(1) + java.io.File.separator + moduleName + ".gf";
 	}
 	
 	/**
@@ -47,9 +47,11 @@ public class GFLibraryAgent {
 					+ java.io.File.separator
 					+ moduleName + ".gfh");
 		} else {
-			sb.append(GFBuilder.BUILD_FOLDER
-					+ java.io.File.separator
-					+ moduleName + ".gfh");
+			// If we're already "inside" the gfbuild folder then only act relative to it..
+			if (!context.getURI().trimSegments(1).lastSegment().equals(GFBuilder.BUILD_FOLDER)) {
+				sb.append(GFBuilder.BUILD_FOLDER + java.io.File.separator);
+			}
+			sb.append(moduleName + ".gfh");
 		}
 		return sb.toString();
 	}
@@ -62,8 +64,10 @@ public class GFLibraryAgent {
 	 * @return
 	 */
 	public URI getModuleURI(Resource context, String moduleName) {
+		URI uri;
+		
 		// First try a local file
-		URI uri = URI.createURI( getLocalSourcePath(context, moduleName) );
+		uri = URI.createURI( getLocalSourcePath(context, moduleName) );
 		if (!EcoreUtil2.isValidUri(context, uri)) {
 			// Else try a compiled file
 			uri = URI.createURI( getHeaderPath(context, moduleName) );
