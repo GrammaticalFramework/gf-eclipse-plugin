@@ -117,7 +117,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (13 items)"/>
+<category IMemento.internal.id="Warnings (12 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="63" org.eclipse.ui.ide.markerType="282" org.eclipse.ui.ide.pathField="320" org.eclipse.ui.ide.resourceField="93" org.eclipse.ui.ide.severityAndDescriptionField="594"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -134,7 +134,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -375,19 +375,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFLibraryAgent.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/validation/GFJavaValidator.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFScopeProvider.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/org.grammaticalframework.eclipse.ui/plugin.xml_gen"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.pde.ui.manifestEditor" path="/org.grammaticalframework.eclipse.ui/plugin.xml"/>
 </editors>
-<item historyLabel="GFGlobalScopeProvider.java" index="0">
-<position info="not_deleted" x="7892" y="0"/>
-</item>
-<item historyLabel="GFGlobalScopeProvider.java" index="0">
-<position info="not_deleted" x="9429" y="0"/>
-</item>
-<item historyLabel="GFGlobalScopeProvider.java" index="0">
-<position info="not_deleted" x="9565" y="0"/>
-</item>
-<item historyLabel="GFGlobalScopeProvider.java" index="0">
-<position info="not_deleted" x="7852" y="0"/>
-</item>
 <item historyLabel="GFGlobalScopeProvider.java" index="0">
 <position info="not_deleted" x="7892" y="0"/>
 </item>
@@ -517,8 +507,18 @@
 <item historyLabel="GFScopeProvider.java" index="9">
 <position info="not_deleted" x="1634" y="0"/>
 </item>
-<item active="true" historyLabel="GFJavaValidator.java" index="8">
+<item historyLabel="GFJavaValidator.java" index="8">
 <position info="not_deleted" x="6273" y="0"/>
+</item>
+<item historyLabel="plugin.xml_gen" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="GFJavaValidator.java" index="8">
+<position info="not_deleted" x="9414" y="0"/>
+</item>
+<item historyLabel="org.grammaticalframework.eclipse.ui" index="11"/>
+<item active="true" historyLabel="GFJavaValidator.java" index="8">
+<position info="not_deleted" x="9414" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -539,6 +539,9 @@
 <mruList>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.pde.ui.manifestEditor" name="plugin.xml" tooltip="org.grammaticalframework.eclipse.ui/plugin.xml">
 <persistable path="/org.grammaticalframework.eclipse.ui/plugin.xml"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="plugin.xml_gen" tooltip="org.grammaticalframework.eclipse.ui/plugin.xml_gen">
+<persistable path="/org.grammaticalframework.eclipse.ui/plugin.xml_gen"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFScope.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFScope.java">
 <persistable path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFScope.java"/>
@@ -578,9 +581,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="plugin.xml_gen" tooltip="org.grammaticalframework.eclipse/plugin.xml_gen">
 <persistable path="/org.grammaticalframework.eclipse/plugin.xml_gen"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.pde.ui.manifestEditor" name="plugin.xml" tooltip="org.grammaticalframework.eclipse/plugin.xml">
-<persistable path="/org.grammaticalframework.eclipse/plugin.xml"/>
 </file>
 </mruList>
 </workbench>

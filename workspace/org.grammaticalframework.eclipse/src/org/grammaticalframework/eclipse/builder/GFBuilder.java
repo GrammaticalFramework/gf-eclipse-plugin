@@ -251,7 +251,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			String out_str;
 			while ((out_str = processOutput.readLine()) != null) {
-				log(out_str);
+//				log(out_str);
 			}
 			
 			// Tidy up

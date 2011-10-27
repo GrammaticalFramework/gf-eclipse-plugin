@@ -71,7 +71,7 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		
 		// Start from nothing
 		IScope scope = IScope.NULLSCOPE;
-		
+	
 		// (try) get module definition
 		ModDef moduleDef;
 		try {
@@ -172,19 +172,24 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	}	
 	private IScope addModuleToScope(String moduleName, IScope scope, Resource resource, EClass type, Predicate<IEObjectDescription> filter,
 			boolean ignoreCase, boolean ignoreModuleName, String moduleAlias) {
-		// Get the global scope of the INSTANCE and add that to our current scope
-		Resource namedModuleResource = libAgent.getModuleResource(resource, moduleName);
-		IScope namedModuleScope = getScope(namedModuleResource, ignoreCase, type, filter);
-		ignoreModuleName = true;
+		
+		// Add the stuff defined IN the named module
 		if (scope.equals(IScope.NULLSCOPE)) {
-			scope = addModuleDefinitionsToScope(moduleName, resource, namedModuleScope, filter, ignoreCase, ignoreModuleName, moduleAlias);
+			scope = addModuleDefinitionsToScope(moduleName, resource, scope, filter, ignoreCase, ignoreModuleName, moduleAlias);
 		} else {
 			// We need to preserve what's already there
 			// TODO This might create an un-nice tree, but it works for now. Ideally preserve proper linked list structure.
 			//scope = new SimpleScope(parentScope, scope.getAllElements(), ignoreCase);
-			scope = new SimpleScope(scope, namedModuleScope.getAllElements(), ignoreCase);
+			scope = new SimpleScope(scope, scope.getAllElements(), ignoreCase);
 			scope = addModuleDefinitionsToScope(moduleName, resource, scope, filter, ignoreCase, ignoreModuleName, moduleAlias);
 		}
+
+		// Recurse into the named module's parents and get their defs
+		Resource namedModuleResource = libAgent.getModuleResource(resource, moduleName);
+		IScope namedModuleScope = getScope(namedModuleResource, ignoreCase, type, filter);
+		scope = new SimpleScope(scope, namedModuleScope.getAllElements(), ignoreCase);
+	
+		// Return it hux
 		return scope;
 	} 
 
@@ -206,8 +211,8 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 
 		try {
 			URI uri = libAgent.getModuleURI(resource, moduleName);
-//			if (uri == null)
-//				return parent;
+			if (uri == null)
+				return parent;
 		
 			// Get resource descriptions
 			final LinkedHashSet<URI> uriAsCollection = new LinkedHashSet<URI>(1);

@@ -247,13 +247,14 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	 * Warn when functor instantiations don't fully instantiate their functor
 	 * @param open
 	 */
+/*
 	@Check
 	public void checkFunctorInstantiations(ModBody modBody) {
 		if (modBody.isFunctorInstantiation()) {
 			// Get list of what the functor itself OPENs
 			Ident functorName = modBody.getFunctor().getName();
 			ArrayList<String> functorOpens = new ArrayList<String>();
-			URI uri = URI.createURI( functorName.getS() + ".gf" );
+			URI uri = libAgent.getModuleURI(modBody.eResource(), functorName.getS() );
 			if (!libAgent.moduleExists(modBody.eResource(), functorName.getS())) {
 				// This should have already been checked
 //				String msg = String.format("Cannot find module \"%1$s\"", functorName.getS());
@@ -289,5 +290,5 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 			}
 		}
 	}
-
+*/
 }

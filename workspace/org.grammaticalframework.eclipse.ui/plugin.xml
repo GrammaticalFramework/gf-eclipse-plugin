@@ -365,9 +365,8 @@
      <viewerContentBinding
            viewerId="org.eclipse.ui.navigator.ProjectExplorer">
         <includes>
-           <contentExtension
-                 pattern="org.grammaticalframework.eclipse.ui.filter.hideGFO">
-           </contentExtension></includes>
+           <contentExtension pattern="filter.hideGFO"></contentExtension>
+        </includes>
      </viewerContentBinding>
   </extension>
   <extension
