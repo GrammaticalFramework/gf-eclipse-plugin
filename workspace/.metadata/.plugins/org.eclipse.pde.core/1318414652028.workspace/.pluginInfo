@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="616" class="org.grammaticalframework.eclipse.ui.internal.GFActivator" localization="OSGI-INF/l10n/bundle" name="org.grammaticalframework.eclipse.ui" project="org.grammaticalframework.eclipse.ui" provider="MOLTO Project"/>
+	<bundle bundleID="617" localization="OSGI-INF/l10n/bundle" name="org.grammaticalframework.eclipse.tests" project="org.grammaticalframework.eclipse.tests" provider="MOLTO Project"/>
+	<bundle bundleID="618" localization="OSGI-INF/l10n/bundle" name="org.grammaticalframework.eclipse" project="org.grammaticalframework.eclipse" provider="MOLTO Project"/>
+</map>

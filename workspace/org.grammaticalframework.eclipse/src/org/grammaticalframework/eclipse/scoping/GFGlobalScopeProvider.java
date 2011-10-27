@@ -11,7 +11,6 @@ import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
-import org.eclipse.xtext.scoping.IScopeProvider;
 import org.eclipse.xtext.scoping.impl.*;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.Included;
@@ -81,9 +80,7 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			return scope;
 		}
 
-		// Get local definitions
 		boolean ignoreModuleName = true;
-//		scope = addModuleDefinitionsToScope(moduleDef.getType().getName().getS(), resource, scope, filter, ignoreCase, ignoreModuleName);
 
 		// Is this a concrete/instance of an abstract/interface module?
 		if (moduleDef.getType().isConcrete() || moduleDef.getType().isInstance()) {
@@ -91,14 +88,6 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			try {
 				ignoreModuleName = true;
 				scope = addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
-
-//				// Recursively get the global scope of the ABSTRACT and use that as the base
-//				Resource parentResource = libAgent.getModuleResource(resource, moduleName);
-//				IScope abstractScope = getScope(parentResource, ignoreCase, type, filter);
-//				
-//				// At this point we know scope is NULL, so just stick in parent
-//				scope = addURIToScope(resource, abstractScope, moduleName, filter, ignoreCase, ignoreModuleName);
-				
 			} catch (NullPointerException _) {
 //				System.out.println("#1 Error loading " + moduleName);
 			}
@@ -135,18 +124,6 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			}
 
 			scope = addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
-//
-//			// "Recursively" get the global scope of the ABSTRACT and use that as the base
-//			Resource parentResource = libAgent.getModuleResource(resource, moduleName);
-//			IScope parentScope = getScope(parentResource, ignoreCase, type, filter);
-//
-//			// Add the current scope of the parent
-//			if (scope.equals(IScope.NULLSCOPE)) {
-//				scope = addURIToScope(resource, parentScope, moduleName, filter, ignoreCase, ignoreModuleName);
-//			} else {
-//				scope = new SimpleScope(scope, parentScope.getAllElements(), ignoreCase);
-//				scope = addURIToScope(resource, scope, moduleName, filter, ignoreCase, ignoreModuleName);
-//			}
 		}
 		
 		// Handle opening
@@ -155,15 +132,12 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			String abstractModuleName = o.getName().getS();
 			if (o.getAlias()!=null) {
 				// Add everything with the alias'd qualified names
-//				scope = addModuleDefinitionsToScope(abstractModuleName, resource, scope, filter, ignoreCase, false, o.getAlias().getS());
 				scope = addModuleToScope(abstractModuleName, scope, resource, type, filter, ignoreCase, false, o.getAlias().getS());
 			} else {
 				// Add everything without qualified names
-//				scope = addModuleDefinitionsToScope(abstractModuleName, resource, scope, filter, ignoreCase, true);
 				scope = addModuleToScope(abstractModuleName, scope, resource, type, filter, ignoreCase, true);
 			}
 			// ALWAYS include a version with the "true" qualified names
-//			scope = addModuleDefinitionsToScope(abstractModuleName, resource, scope, filter, ignoreCase, false);
 			scope = addModuleToScope(abstractModuleName, scope, resource, type, filter, ignoreCase, false);
 		}
 		
@@ -179,13 +153,23 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	}
 	
 	
-	
-	
+	/**
+	 * Add a named module recursively to the given scope.
+	 * 
+	 * @param moduleName The name of the module whos definitions we want to add
+	 * @param resource The context from where we are referencing the named module
+	 * @param parent The scope to which definitions should be appended
+	 * @param filter
+	 * @param ignoreCase
+	 * @param ignoreModuleName
+	 * @param moduleAlias
+	 * 
+	 * @return new scope
+	 */
 	private IScope addModuleToScope(String moduleName, IScope scope, Resource resource, EClass type, Predicate<IEObjectDescription> filter,
 			boolean ignoreCase, boolean ignoreModuleName) {
 		return addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName, null);
 	}	
-	
 	private IScope addModuleToScope(String moduleName, IScope scope, Resource resource, EClass type, Predicate<IEObjectDescription> filter,
 			boolean ignoreCase, boolean ignoreModuleName, String moduleAlias) {
 		// Get the global scope of the INSTANCE and add that to our current scope
@@ -205,7 +189,8 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	} 
 
 	/**
-	 * Add the defitions in a named module to the given scope
+	 * Add the defitions in a named module to the given scope.
+	 * 
 	 * @param moduleName The name of the module whos definitions we want to add
 	 * @param resource The context from where we are referencing the named module
 	 * @param parent The scope to which definitions should be appended
@@ -214,12 +199,8 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @param ignoreModuleName
 	 * @param moduleAlias
 	 * 
-	 * @return
+	 * @return new scope
 	 */
-//	private IScope addModuleDefinitionsToScope(String moduleName, Resource resource, IScope parent, Predicate<IEObjectDescription> filter,
-//			boolean ignoreCase, boolean ignoreModuleName) {
-//		return addModuleDefinitionsToScope(moduleName, resource, parent, filter, ignoreCase, ignoreModuleName, null);
-//	}
 	private IScope addModuleDefinitionsToScope(String moduleName, Resource resource, IScope parent, Predicate<IEObjectDescription> filter,
 			boolean ignoreCase, boolean ignoreModuleName, String moduleAlias) {
 
