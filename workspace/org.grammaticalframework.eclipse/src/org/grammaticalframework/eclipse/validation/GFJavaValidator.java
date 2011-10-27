@@ -247,7 +247,6 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	 * Warn when functor instantiations don't fully instantiate their functor
 	 * @param open
 	 */
-/*
 	@Check
 	public void checkFunctorInstantiations(ModBody modBody) {
 		if (modBody.isFunctorInstantiation()) {
@@ -290,5 +289,5 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 			}
 		}
 	}
-*/
+
 }

@@ -53,11 +53,11 @@
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFPreferences"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.net.MalformedURLException"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScopeProvider"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScope"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.builder.GFBuilder"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

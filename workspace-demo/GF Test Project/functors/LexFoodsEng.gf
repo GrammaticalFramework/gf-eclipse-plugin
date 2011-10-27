@@ -1,7 +1,7 @@
 -- Lexicon Instance
 --# -path=.:/home/john/.cabal/share/gf-3.2.9/lib/present
 instance LexFoodsEng of LexFoods =
-	open SyntaxEng, ParadisEng in {
+	open SyntaxEng, ParadigmsEng in {
 
 	flags
 		coding = utf8 ;

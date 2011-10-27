@@ -7,6 +7,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
@@ -65,6 +66,8 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		demandResourceDescriptions.initialize(result, importUris, resource);
 		return demandResourceDescriptions;
 	}
+	
+	private ArrayList<String> stack = null;
 
 	@Override
 	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
@@ -79,6 +82,12 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		} catch (Exception _) {
 			return scope;
 		}
+		
+		// TESTING
+		if (stack == null)
+			stack = new ArrayList<String>();
+//		stack.add(moduleDef.getType().getName().getS());
+
 
 		boolean ignoreModuleName = true;
 
@@ -148,6 +157,9 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			scope = addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
 		}
 		
+		// TESTING
+		stack.clear();
+		
 		// Phew
 		return scope;
 	}
@@ -172,6 +184,14 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	}	
 	private IScope addModuleToScope(String moduleName, IScope scope, Resource resource, EClass type, Predicate<IEObjectDescription> filter,
 			boolean ignoreCase, boolean ignoreModuleName, String moduleAlias) {
+		
+		// TESTING
+		// If scope already contains this module name, get out of here!
+		if (stack.contains(moduleName)) {
+			return scope;
+		} else {
+			stack.add(moduleName);
+		}
 		
 		// Add the stuff defined IN the named module
 		if (scope.equals(IScope.NULLSCOPE)) {

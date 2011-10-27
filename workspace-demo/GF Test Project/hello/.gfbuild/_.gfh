@@ -1,4 +1,0 @@
-resource _ = {
-  flags
-    coding = "latin1" ;
-}
