@@ -3,11 +3,12 @@ package org.grammaticalframework.eclipse.scoping;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashSet;
+import java.util.Stack;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
@@ -37,6 +38,11 @@ import com.google.inject.Provider;
  */
 
 public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
+	
+	public GFGlobalScopeProvider() {
+		super();
+		stack = new Stack<String>();
+	}
 
 	@Inject
 	private Provider<LoadOnDemandResourceDescriptions> loadOnDemandDescriptions;
@@ -67,13 +73,15 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		return demandResourceDescriptions;
 	}
 	
-	private ArrayList<String> stack = null;
+	public Stack<String> stack = null;
+//	private int depth = 0;
 
 	@Override
 	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
 		
 		// Start from nothing
 		IScope scope = IScope.NULLSCOPE;
+		boolean ignoreModuleName;
 	
 		// (try) get module definition
 		ModDef moduleDef;
@@ -82,21 +90,27 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		} catch (Exception _) {
 			return scope;
 		}
+		String moduleName = moduleDef.getType().getName().getS();
 		
-		// TESTING
-		if (stack == null)
-			stack = new ArrayList<String>();
-//		stack.add(moduleDef.getType().getName().getS());
-
-
-		boolean ignoreModuleName = true;
+		// Avoid recursing into the same module more than once
+		if (stack == null || (stack.size() > 0 && stack.get(0).equals(moduleName)))
+			stack = new Stack<String>();
+		if (stack.contains(moduleName)) {
+			return scope;
+		} else {
+			stack.push(moduleName);
+//			depth++;
+//			for (int i = 0; i < depth; i++)
+//				System.out.print("  ");
+//			System.out.println(moduleName);
+		}
 
 		// Is this a concrete/instance of an abstract/interface module?
 		if (moduleDef.getType().isConcrete() || moduleDef.getType().isInstance()) {
-			String moduleName = moduleDef.getType().getAbstractName().getS();
+			String abstractModuleName = moduleDef.getType().getAbstractName().getS();
 			try {
 				ignoreModuleName = true;
-				scope = addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
+				scope = addModuleToScope(abstractModuleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
 			} catch (NullPointerException _) {
 //				System.out.println("#1 Error loading " + moduleName);
 			}
@@ -105,7 +119,7 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		// Handle inheritance
 		EList<Included> modExtends = moduleDef.getBody().getExtends(); 
 		for (final Included i : modExtends) {
-			String moduleName = i.getName().getS();
+			String extendsModuleName = i.getName().getS();
 			ignoreModuleName = true;
 
 			// Create filters for selective inheritance
@@ -132,7 +146,7 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				};
 			}
 
-			scope = addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
+			scope = addModuleToScope(extendsModuleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
 		}
 		
 		// Handle opening
@@ -153,12 +167,12 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		// Handle interface instantiations (behave as inheritance)
 		EList<Open> modInstantiations = moduleDef.getBody().getInstantiations();
 		for (Open o : modInstantiations) {
-			String moduleName = o.getAlias().getS();
-			scope = addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
+			String instantiationModuleName = o.getAlias().getS();
+			ignoreModuleName = true;
+			scope = addModuleToScope(instantiationModuleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
 		}
 		
-		// TESTING
-		stack.clear();
+//		depth--;
 		
 		// Phew
 		return scope;
@@ -185,29 +199,24 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	private IScope addModuleToScope(String moduleName, IScope scope, Resource resource, EClass type, Predicate<IEObjectDescription> filter,
 			boolean ignoreCase, boolean ignoreModuleName, String moduleAlias) {
 		
-		// TESTING
-		// If scope already contains this module name, get out of here!
-		if (stack.contains(moduleName)) {
-			return scope;
-		} else {
-			stack.add(moduleName);
-		}
-		
 		// Add the stuff defined IN the named module
-		if (scope.equals(IScope.NULLSCOPE)) {
-			scope = addModuleDefinitionsToScope(moduleName, resource, scope, filter, ignoreCase, ignoreModuleName, moduleAlias);
-		} else {
-			// We need to preserve what's already there
-			// TODO This might create an un-nice tree, but it works for now. Ideally preserve proper linked list structure.
-			//scope = new SimpleScope(parentScope, scope.getAllElements(), ignoreCase);
-			scope = new SimpleScope(scope, scope.getAllElements(), ignoreCase);
-			scope = addModuleDefinitionsToScope(moduleName, resource, scope, filter, ignoreCase, ignoreModuleName, moduleAlias);
-		}
+		scope = addModuleDefinitionsToScope(moduleName, resource, scope, filter, ignoreCase, ignoreModuleName, moduleAlias);
+//		if (scope.equals(IScope.NULLSCOPE)) {
+//			scope = addModuleDefinitionsToScope(moduleName, resource, scope, filter, ignoreCase, ignoreModuleName, moduleAlias);
+//		} else {
+//			// We need to preserve what's already there
+//			// TODO This might create an un-nice tree, but it works for now. Ideally preserve proper linked list structure.
+//			scope = new SimpleScope(scope, scope.getAllElements(), ignoreCase);
+//			scope = addModuleDefinitionsToScope(moduleName, resource, scope, filter, ignoreCase, ignoreModuleName, moduleAlias);
+//		}
 
+		
 		// Recurse into the named module's parents and get their defs
 		Resource namedModuleResource = libAgent.getModuleResource(resource, moduleName);
 		IScope namedModuleScope = getScope(namedModuleResource, ignoreCase, type, filter);
-		scope = new SimpleScope(scope, namedModuleScope.getAllElements(), ignoreCase);
+		if (!namedModuleScope.equals(IScope.NULLSCOPE)) {
+			scope = new SimpleScope(scope, namedModuleScope.getAllElements(), ignoreCase);
+		}
 	
 		// Return it hux
 		return scope;

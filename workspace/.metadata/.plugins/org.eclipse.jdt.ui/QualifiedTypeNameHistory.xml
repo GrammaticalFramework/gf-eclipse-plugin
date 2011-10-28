@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.eclipse.emf.ecore.EStructuralFeature"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.ui.IImageHelper"/>
 <fullyQualifiedTypeName name="com.google.inject.Inject"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode"/>
@@ -17,7 +16,6 @@
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.labeling.GFImages"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.GFException"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.outline.impl.EObjectNode"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFGlobalScopeProvider"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceDescription"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.impl.OpenImpl"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.builder.GFBuilder"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFGlobalScopeProvider"/>
 </qualifiedTypeNameHistroy>

@@ -1,3 +1,4 @@
-#Wed Oct 26 13:06:46 CEST 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="o.getAlias()"/>\n<expression enabled\="true" text\="context.getURI().trimSegments(1).lastSegment()"/>\n</watchExpressions>\n
+#Fri Oct 28 12:28:19 CEST 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="((org.grammaticalframework.eclipse.gF.Exp6)context).getName()"/>\n<expression enabled\="true" text\="stack"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
+org.eclipse.debug.core.USE_STEP_FILTERS=false

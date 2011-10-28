@@ -10,3 +10,5 @@
 1319555019361	Rename method 'addNamedModuleToScope'
 1319625970272	Rename local variable 'parentResource'
 1319625983801	Rename local variable 'parentScope'
+1319785267607	Rename local variable 'moduleName'
+1319785294160	Rename local variable 'moduleName'

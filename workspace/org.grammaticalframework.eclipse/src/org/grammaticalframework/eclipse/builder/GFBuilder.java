@@ -41,10 +41,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	public static final String BUILD_FOLDER = ".gfbuild"; //$NON-NLS-1$
 
 	public static final Boolean USE_INDIVIDUAL_FOLDERS = false;
+
+	private static final Boolean SHOW_COMPILER_OUTPUT = false;
 	
 	private String gfPath;
-
-	private String defaultGFPath = "/home/john/.cabal/bin/gf"; // TODO hardcoded just for testing!
 
 	private boolean showDebug = false;
 
@@ -59,9 +59,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		// Get some prefs
 		IPreferencesService prefs = Platform.getPreferencesService();
 		showDebug = prefs.getBoolean(GFPreferences.QUALIFIER, GFPreferences.SHOW_DEBUG, true, null);
-		gfPath = prefs.getString(GFPreferences.QUALIFIER, GFPreferences.GF_BIN_PATH, defaultGFPath, null);
+		gfPath = prefs.getString(GFPreferences.QUALIFIER, GFPreferences.GF_BIN_PATH, (String)null, null);
 		if (gfPath == null || gfPath.trim().isEmpty()) {
-			log("Error during build: GF path not specified.");
+//			log("Error during build: GF path not specified.");
+			System.out.println("Error during build: GF path not specified.");
 			return null;
 		}
 		
@@ -243,15 +244,17 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			processInput.newLine();
 			processInput.flush();
 			
-//			BufferedReader processError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
-//			String err_str;
-//			while ((err_str = processError.readLine()) != null) {
-//				log(err_str);
-//			}
-			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
-			String out_str;
-			while ((out_str = processOutput.readLine()) != null) {
-//				log(out_str);
+			if (SHOW_COMPILER_OUTPUT) {
+//				BufferedReader processError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+//				String err_str;
+//				while ((err_str = processError.readLine()) != null) {
+//					log(err_str);
+//				}
+				BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
+				String out_str;
+				while ((out_str = processOutput.readLine()) != null) {
+					log(out_str);
+				}
 			}
 			
 			// Tidy up

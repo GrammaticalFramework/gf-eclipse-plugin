@@ -1,0 +1,25 @@
+package org.grammaticalframework.eclipse.validation;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.naming.IQualifiedNameConverter;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.resource.IResourceDescription;
+import org.eclipse.xtext.resource.IResourceDescriptions;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.IScopeProvider;
+import org.eclipse.xtext.validation.Check;
+import org.grammaticalframework.eclipse.gF.*;
+import org.grammaticalframework.eclipse.scoping.GFGlobalScopeProvider;
+import org.grammaticalframework.eclipse.scoping.GFLibraryAgent;
+
+import com.google.inject.Inject;
+ 
+
+public class GFJavaValidator extends AbstractGFJavaValidator {
+}
