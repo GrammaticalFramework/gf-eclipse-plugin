@@ -2,33 +2,138 @@
 <?metadataRepository version='1.1.0'?>
 <repository name='file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1319714852401'/>
+    <property name='p2.timestamp' value='1320061772044'/>
     <property name='p2.compressed' value='false'/>
   </properties>
   <units size='6'>
-    <unit id='org.grammaticalframework.feature.category.gf_dev' version='1.0.0.2--cR-QvE77355537G597G'>
-      <properties size='3'>
-        <property name='org.eclipse.equinox.p2.name' value='GF Development Tools'/>
-        <property name='org.eclipse.equinox.p2.description' value='Tools for aiding grammar development under the Grammatical Framework.'/>
-        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+    <unit id='org.grammaticalframework.feature.feature.jar' version='1.0.0.201110311249'>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='GF Eclipse Plugin'/>
+        <property name='org.eclipse.equinox.p2.description' value='Eclipse integration for developing grammars using the Grammatical&#xA;Framework (GF).'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.grammaticalframework.org/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MOLTO Project'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.feature.feature.jar' version='1.0.0.201110311249'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.grammaticalframework.feature' version='1.0.0.201110311249'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.grammaticalframework.feature' version='1.0.0.201110311249'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://www.grammaticalframework.org/LICENSE' url='http://www.grammaticalframework.org/LICENSE'>
+          The research leading to these results has received funding from&#xA;the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)&#xA;under grant agreement no FP7-ICT-247914.&#xA;Copyright MOLTO Project, 2011.&#xA;&#xA;      Grammatical Framework is a software package consisting of several different&#xA;components. In summary:&#xA;&#xA;  - the GF compiler in the folder src/compiler and the PGF Web service in src/server&#xA;are under the GNU GENERAL PUBLIC LICENSE. &#xA;&#xA;  - the GF runtime in src/runtime is under dual GNU LESSER GENERAL PUBLIC LICENSE&#xA;and BSD LICENSE&#xA;&#xA;  - the resource grammar library in lib/src is under GNU LESSER GENERAL PUBLIC LICENSE.&#xA;However the user have the right to choose any license for any application grammar&#xA;derived from the resource grammar by using the grammar API.&#xA;&#xA;  - the resource grammar library also includes large coverage lexicons for some languages.&#xA;Since these lexicons are derived from external sources they might be under different licenses.&#xA;Look at the source file for every lexicon for details.&#xA;&#xA;Please refer to http://www.grammaticalframework.org/LICENSE for full details.
+        </license>
+      </licenses>
+      <copyright uri='http://www.grammaticalframework.org/' url='http://www.grammaticalframework.org/'>
+        The research leading to these results has received funding from&#xA;the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)&#xA;under grant agreement no FP7-ICT-247914.&#xA;Copyright MOLTO Project, 2011.
+      </copyright>
+    </unit>
+    <unit id='org.grammaticalframework.eclipse.ui' version='1.0.0.201110311249'>
+      <update id='org.grammaticalframework.eclipse.ui' range='[0.0.0,1.0.0.201110311249)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='org.grammaticalframework.eclipse.ui'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MOLTO Project'/>
+      </properties>
+      <provides size='15'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse.ui' version='1.0.0.201110311249'/>
+        <provided namespace='osgi.bundle' name='org.grammaticalframework.eclipse.ui' version='1.0.0.201110311249'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.contentassist' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.contentassist.antlr' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.contentassist.antlr.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.editor.syntaxcoloring' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.internal' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.labeling' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.launch' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.outline' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.perspectives' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.quickfix' version='0.0.0'/>
+        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.wizards' version='0.0.0'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='15'>
+        <required namespace='osgi.bundle' name='org.grammaticalframework.eclipse' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.5.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.shared' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.builder' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.codetemplates.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='3.5.100'/>
+        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='3.7.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.antlr.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.ui.navigator' range='0.0.0'/>
+        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.grammaticalframework.eclipse.ui' version='1.0.0.201110311249'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.grammaticalframework.eclipse.ui; singleton:=true&#xA;Bundle-Version: 1.0.0.201110311249
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.grammaticalframework.feature.feature.group' version='1.0.0.201110311249' singleton='false'>
+      <update id='org.grammaticalframework.feature.feature.group' range='[0.0.0,1.0.0.201110311249)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='GF Eclipse Plugin'/>
+        <property name='org.eclipse.equinox.p2.description' value='Eclipse integration for developing grammars using the Grammatical&#xA;Framework (GF).'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://www.grammaticalframework.org/'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MOLTO Project'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
       </properties>
       <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.feature.category.gf_dev' version='1.0.0.2--cR-QvE77355537G597G'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.feature.feature.group' version='1.0.0.201110311249'/>
       </provides>
-      <requires size='1'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.feature.feature.group' range='[1.0.0.201110271327,1.0.0.201110271327]'/>
+      <requires size='4'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse' range='[1.0.0.201110311249,1.0.0.201110311249]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse.tests' range='[1.0.0.201110311249,1.0.0.201110311249]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse.ui' range='[1.0.0.201110311249,1.0.0.201110311249]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.feature.feature.jar' range='[1.0.0.201110311249,1.0.0.201110311249]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
       </requires>
       <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://www.grammaticalframework.org/LICENSE' url='http://www.grammaticalframework.org/LICENSE'>
+          The research leading to these results has received funding from&#xA;the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)&#xA;under grant agreement no FP7-ICT-247914.&#xA;Copyright MOLTO Project, 2011.&#xA;&#xA;      Grammatical Framework is a software package consisting of several different&#xA;components. In summary:&#xA;&#xA;  - the GF compiler in the folder src/compiler and the PGF Web service in src/server&#xA;are under the GNU GENERAL PUBLIC LICENSE. &#xA;&#xA;  - the GF runtime in src/runtime is under dual GNU LESSER GENERAL PUBLIC LICENSE&#xA;and BSD LICENSE&#xA;&#xA;  - the resource grammar library in lib/src is under GNU LESSER GENERAL PUBLIC LICENSE.&#xA;However the user have the right to choose any license for any application grammar&#xA;derived from the resource grammar by using the grammar API.&#xA;&#xA;  - the resource grammar library also includes large coverage lexicons for some languages.&#xA;Since these lexicons are derived from external sources they might be under different licenses.&#xA;Look at the source file for every lexicon for details.&#xA;&#xA;Please refer to http://www.grammaticalframework.org/LICENSE for full details.
+        </license>
+      </licenses>
+      <copyright uri='http://www.grammaticalframework.org/' url='http://www.grammaticalframework.org/'>
+        The research leading to these results has received funding from&#xA;the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)&#xA;under grant agreement no FP7-ICT-247914.&#xA;Copyright MOLTO Project, 2011.
+      </copyright>
     </unit>
-    <unit id='org.grammaticalframework.eclipse' version='1.0.0.201110271327'>
-      <update id='org.grammaticalframework.eclipse' range='[0.0.0,1.0.0.201110271327)' severity='0'/>
+    <unit id='org.grammaticalframework.eclipse' version='1.0.0.201110311249'>
+      <update id='org.grammaticalframework.eclipse' range='[0.0.0,1.0.0.201110311249)' severity='0'/>
       <properties size='2'>
         <property name='org.eclipse.equinox.p2.name' value='org.grammaticalframework.eclipse'/>
         <property name='org.eclipse.equinox.p2.provider' value='MOLTO Project'/>
       </properties>
       <provides size='14'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse' version='1.0.0.201110271327'/>
-        <provided namespace='osgi.bundle' name='org.grammaticalframework.eclipse' version='1.0.0.201110271327'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse' version='1.0.0.201110311249'/>
+        <provided namespace='osgi.bundle' name='org.grammaticalframework.eclipse' version='1.0.0.201110311249'/>
         <provided namespace='java.package' name='org.grammaticalframework.eclipse' version='0.0.0'/>
         <provided namespace='java.package' name='org.grammaticalframework.eclipse.builder' version='0.0.0'/>
         <provided namespace='java.package' name='org.grammaticalframework.eclipse.gF' version='0.0.0'/>
@@ -63,113 +168,40 @@
         <required namespace='java.package' name='org.eclipse.xtext.xtend2.lib' range='0.0.0'/>
       </requires>
       <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.grammaticalframework.eclipse' version='1.0.0.201110271327'/>
+        <artifact classifier='osgi.bundle' id='org.grammaticalframework.eclipse' version='1.0.0.201110311249'/>
       </artifacts>
       <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
       <touchpointData size='1'>
         <instructions size='1'>
           <instruction key='manifest'>
-            Bundle-SymbolicName: org.grammaticalframework.eclipse; singleton:=true&#xA;Bundle-Version: 1.0.0.201110271327
+            Bundle-SymbolicName: org.grammaticalframework.eclipse; singleton:=true&#xA;Bundle-Version: 1.0.0.201110311249
           </instruction>
         </instructions>
       </touchpointData>
     </unit>
-    <unit id='org.grammaticalframework.eclipse.ui' version='1.0.0.201110271327'>
-      <update id='org.grammaticalframework.eclipse.ui' range='[0.0.0,1.0.0.201110271327)' severity='0'/>
-      <properties size='2'>
-        <property name='org.eclipse.equinox.p2.name' value='org.grammaticalframework.eclipse.ui'/>
-        <property name='org.eclipse.equinox.p2.provider' value='MOLTO Project'/>
+    <unit id='org.grammaticalframework.feature.category.gf_dev' version='1.0.0.2--cR-QvE77355539557AK'>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='GF Development Tools'/>
+        <property name='org.eclipse.equinox.p2.description' value='Tools for aiding grammar development under the Grammatical Framework.'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
       </properties>
-      <provides size='15'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse.ui' version='1.0.0.201110271327'/>
-        <provided namespace='osgi.bundle' name='org.grammaticalframework.eclipse.ui' version='1.0.0.201110271327'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.contentassist' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.contentassist.antlr' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.contentassist.antlr.internal' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.editor.syntaxcoloring' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.internal' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.labeling' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.launch' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.outline' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.perspectives' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.quickfix' version='0.0.0'/>
-        <provided namespace='java.package' name='org.grammaticalframework.eclipse.ui.wizards' version='0.0.0'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.feature.category.gf_dev' version='1.0.0.2--cR-QvE77355539557AK'/>
       </provides>
-      <requires size='15'>
-        <required namespace='osgi.bundle' name='org.grammaticalframework.eclipse' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.ide' range='3.5.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.shared' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.xtext.builder' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.xtext.common.types.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.xtext.ui.codetemplates.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.compare' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.console' range='3.5.100'/>
-        <required namespace='osgi.bundle' name='org.eclipse.debug.ui' range='3.7.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.editors' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.antlr.runtime' range='0.0.0'/>
-        <required namespace='osgi.bundle' name='org.eclipse.ui.navigator' range='0.0.0'/>
-        <required namespace='java.package' name='org.apache.log4j' range='0.0.0'/>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.feature.feature.group' range='[1.0.0.201110311249,1.0.0.201110311249]'/>
       </requires>
-      <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.grammaticalframework.eclipse.ui' version='1.0.0.201110271327'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='manifest'>
-            Bundle-SymbolicName: org.grammaticalframework.eclipse.ui; singleton:=true&#xA;Bundle-Version: 1.0.0.201110271327
-          </instruction>
-        </instructions>
-      </touchpointData>
+      <touchpoint id='null' version='0.0.0'/>
     </unit>
-    <unit id='org.grammaticalframework.feature.feature.jar' version='1.0.0.201110271327'>
-      <properties size='4'>
-        <property name='org.eclipse.equinox.p2.name' value='GF Eclipse Plugin'/>
-        <property name='org.eclipse.equinox.p2.description' value='Eclipse integration for developing grammars using the Grammatical&#xA;Framework (GF).'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='http://www.grammaticalframework.org/'/>
-        <property name='org.eclipse.equinox.p2.provider' value='MOLTO Project'/>
-      </properties>
-      <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.feature.feature.jar' version='1.0.0.201110271327'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='org.grammaticalframework.feature' version='1.0.0.201110271327'/>
-      </provides>
-      <filter>
-        (org.eclipse.update.install.features=true)
-      </filter>
-      <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='org.grammaticalframework.feature' version='1.0.0.201110271327'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='zipped'>
-            true
-          </instruction>
-        </instructions>
-      </touchpointData>
-      <licenses size='1'>
-        <license uri='http://www.grammaticalframework.org/LICENSE' url='http://www.grammaticalframework.org/LICENSE'>
-          The research leading to these results has received funding from&#xA;the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)&#xA;under grant agreement no FP7-ICT-247914.&#xA;Copyright MOLTO Project, 2011.&#xA;&#xA;      Grammatical Framework is a software package consisting of several different&#xA;components. In summary:&#xA;&#xA;  - the GF compiler in the folder src/compiler and the PGF Web service in src/server&#xA;are under the GNU GENERAL PUBLIC LICENSE. &#xA;&#xA;  - the GF runtime in src/runtime is under dual GNU LESSER GENERAL PUBLIC LICENSE&#xA;and BSD LICENSE&#xA;&#xA;  - the resource grammar library in lib/src is under GNU LESSER GENERAL PUBLIC LICENSE.&#xA;However the user have the right to choose any license for any application grammar&#xA;derived from the resource grammar by using the grammar API.&#xA;&#xA;  - the resource grammar library also includes large coverage lexicons for some languages.&#xA;Since these lexicons are derived from external sources they might be under different licenses.&#xA;Look at the source file for every lexicon for details.&#xA;&#xA;Please refer to http://www.grammaticalframework.org/LICENSE for full details.
-        </license>
-      </licenses>
-      <copyright uri='http://www.grammaticalframework.org/' url='http://www.grammaticalframework.org/'>
-        The research leading to these results has received funding from&#xA;the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)&#xA;under grant agreement no FP7-ICT-247914.&#xA;Copyright MOLTO Project, 2011.
-      </copyright>
-    </unit>
-    <unit id='org.grammaticalframework.eclipse.tests' version='1.0.0.201110271327'>
-      <update id='org.grammaticalframework.eclipse.tests' range='[0.0.0,1.0.0.201110271327)' severity='0'/>
+    <unit id='org.grammaticalframework.eclipse.tests' version='1.0.0.201110311249'>
+      <update id='org.grammaticalframework.eclipse.tests' range='[0.0.0,1.0.0.201110311249)' severity='0'/>
       <properties size='2'>
         <property name='org.eclipse.equinox.p2.name' value='org.grammaticalframework.eclipse.tests'/>
         <property name='org.eclipse.equinox.p2.provider' value='MOLTO Project'/>
       </properties>
       <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse.tests' version='1.0.0.201110271327'/>
-        <provided namespace='osgi.bundle' name='org.grammaticalframework.eclipse.tests' version='1.0.0.201110271327'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse.tests' version='1.0.0.201110311249'/>
+        <provided namespace='osgi.bundle' name='org.grammaticalframework.eclipse.tests' version='1.0.0.201110311249'/>
         <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
       </provides>
       <requires size='10'>
@@ -185,48 +217,16 @@
         <required namespace='java.package' name='org.apache.commons.logging' range='0.0.0'/>
       </requires>
       <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.grammaticalframework.eclipse.tests' version='1.0.0.201110271327'/>
+        <artifact classifier='osgi.bundle' id='org.grammaticalframework.eclipse.tests' version='1.0.0.201110311249'/>
       </artifacts>
       <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
       <touchpointData size='1'>
         <instructions size='1'>
           <instruction key='manifest'>
-            Bundle-SymbolicName: org.grammaticalframework.eclipse.tests; singleton:=true&#xA;Bundle-Version: 1.0.0.201110271327
+            Bundle-SymbolicName: org.grammaticalframework.eclipse.tests; singleton:=true&#xA;Bundle-Version: 1.0.0.201110311249
           </instruction>
         </instructions>
       </touchpointData>
-    </unit>
-    <unit id='org.grammaticalframework.feature.feature.group' version='1.0.0.201110271327' singleton='false'>
-      <update id='org.grammaticalframework.feature.feature.group' range='[0.0.0,1.0.0.201110271327)' severity='0'/>
-      <properties size='5'>
-        <property name='org.eclipse.equinox.p2.name' value='GF Eclipse Plugin'/>
-        <property name='org.eclipse.equinox.p2.description' value='Eclipse integration for developing grammars using the Grammatical&#xA;Framework (GF).'/>
-        <property name='org.eclipse.equinox.p2.description.url' value='http://www.grammaticalframework.org/'/>
-        <property name='org.eclipse.equinox.p2.provider' value='MOLTO Project'/>
-        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.feature.feature.group' version='1.0.0.201110271327'/>
-      </provides>
-      <requires size='4'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse' range='[1.0.0.201110271327,1.0.0.201110271327]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse.tests' range='[1.0.0.201110271327,1.0.0.201110271327]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.eclipse.ui' range='[1.0.0.201110271327,1.0.0.201110271327]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.grammaticalframework.feature.feature.jar' range='[1.0.0.201110271327,1.0.0.201110271327]'>
-          <filter>
-            (org.eclipse.update.install.features=true)
-          </filter>
-        </required>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-      <licenses size='1'>
-        <license uri='http://www.grammaticalframework.org/LICENSE' url='http://www.grammaticalframework.org/LICENSE'>
-          The research leading to these results has received funding from&#xA;the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)&#xA;under grant agreement no FP7-ICT-247914.&#xA;Copyright MOLTO Project, 2011.&#xA;&#xA;      Grammatical Framework is a software package consisting of several different&#xA;components. In summary:&#xA;&#xA;  - the GF compiler in the folder src/compiler and the PGF Web service in src/server&#xA;are under the GNU GENERAL PUBLIC LICENSE. &#xA;&#xA;  - the GF runtime in src/runtime is under dual GNU LESSER GENERAL PUBLIC LICENSE&#xA;and BSD LICENSE&#xA;&#xA;  - the resource grammar library in lib/src is under GNU LESSER GENERAL PUBLIC LICENSE.&#xA;However the user have the right to choose any license for any application grammar&#xA;derived from the resource grammar by using the grammar API.&#xA;&#xA;  - the resource grammar library also includes large coverage lexicons for some languages.&#xA;Since these lexicons are derived from external sources they might be under different licenses.&#xA;Look at the source file for every lexicon for details.&#xA;&#xA;Please refer to http://www.grammaticalframework.org/LICENSE for full details.
-        </license>
-      </licenses>
-      <copyright uri='http://www.grammaticalframework.org/' url='http://www.grammaticalframework.org/'>
-        The research leading to these results has received funding from&#xA;the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)&#xA;under grant agreement no FP7-ICT-247914.&#xA;Copyright MOLTO Project, 2011.
-      </copyright>
     </unit>
   </units>
 </repository>

@@ -129,10 +129,6 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 			String msg = String.format("Function definitions don't belong in a concrete module");
 			error(msg, GFPackage.Literals.TOP_DEF__DEF);
 		}
-		if (topdef.isLindef() && (modtype.isConcrete() || modtype.isResource())) {
-			String msg = String.format("Linearization default definitions don't belong in a concrete module");
-			warning(msg, GFPackage.Literals.TOP_DEF__LINDEF);
-		}
 		
 		// Shouldn't be in abstract
 		if (topdef.isParam() && modtype.isAbstract()) {
@@ -142,6 +138,10 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 		if (topdef.isLincat() && modtype.isAbstract()) {
 			String msg = String.format("Linearization type definitions don't belong in an abstract module");
 			error(msg, GFPackage.Literals.TOP_DEF__LINCAT);
+		}
+		if (topdef.isLindef() && modtype.isAbstract()) {
+			String msg = String.format("Linearization default definitions don't belong in an abstract module");
+			error(msg, GFPackage.Literals.TOP_DEF__LINDEF);
 		}
 		if (topdef.isLin() && modtype.isAbstract()) {
 			String msg = String.format("Linearization definitions don't belong in an abstract module");
