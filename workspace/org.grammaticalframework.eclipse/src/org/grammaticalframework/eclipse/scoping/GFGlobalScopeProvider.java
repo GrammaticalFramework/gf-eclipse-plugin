@@ -85,12 +85,13 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	
 		// (try) get module definition
 		ModDef moduleDef;
+		String moduleName;
 		try {
 			moduleDef = (ModDef)resource.getContents().get(0);
+			moduleName = moduleDef.getType().getName().getS();
 		} catch (Exception _) {
 			return scope;
 		}
-		String moduleName = moduleDef.getType().getName().getS();
 		
 		// Avoid recursing into the same module more than once
 		if (stack == null || (stack.size() > 0 && stack.get(0).equals(moduleName)))

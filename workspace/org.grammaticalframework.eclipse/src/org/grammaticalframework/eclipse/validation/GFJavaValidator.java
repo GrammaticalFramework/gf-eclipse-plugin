@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
@@ -105,8 +106,24 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 
 	/**
 	 * It is a compiler error to have a category declaration in a concrete module, and so on.
+	 * Ref: http://www.grammaticalframework.org/doc/gf-reference.html
+	 * 
 	 * @param topdef
 	 */
+	private EAttribute getStructuralFeature(TopDef topdef) {
+		if (topdef.isCat()) return GFPackage.Literals.TOP_DEF__CAT;
+		if (topdef.isFun()) return GFPackage.Literals.TOP_DEF__FUN;
+		if (topdef.isData()) return GFPackage.Literals.TOP_DEF__DATA;
+		if (topdef.isDef()) return GFPackage.Literals.TOP_DEF__DEF;
+		if (topdef.isParam()) return GFPackage.Literals.TOP_DEF__PARAM;
+		if (topdef.isOper()) return GFPackage.Literals.TOP_DEF__OPER;
+		if (topdef.isLincat()) return GFPackage.Literals.TOP_DEF__LINCAT;
+		if (topdef.isLindef()) return GFPackage.Literals.TOP_DEF__LINDEF;
+		if (topdef.isLin()) return GFPackage.Literals.TOP_DEF__LIN;
+		if (topdef.isPrintname()) return GFPackage.Literals.TOP_DEF__PRINTNAME;
+		if (topdef.isFlags()) return GFPackage.Literals.TOP_DEF__FLAGS;
+		return null;
+	}
 	@Check
 	public void checkDefsAreInCorrectModuleTypes(TopDef topdef) {
 		// Ascend to module
@@ -115,43 +132,30 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 			temp = temp.eContainer();
 		}
 		ModType modtype = ((ModDef)temp).getType();
+		
+		// Flags are always ok
+		if (topdef.isFlags()) return;
 
-		// Shouldn't be in concrete/resource
-		if (topdef.isCat() && (modtype.isConcrete() || modtype.isResource())) {
-			String msg = String.format("Category declarations don't belong in a concrete module");
-			error(msg, GFPackage.Literals.TOP_DEF__CAT);
+		// Abstract can contain [cat, fun, def, data]
+		if (modtype.isAbstract() && !(topdef.isCat() || topdef.isFun() || topdef.isDef() || topdef.isData())) {
+			String msg = String.format("Judgement type doesn't belong in an abstract module");
+			error(msg, getStructuralFeature(topdef));
 		}
-		if (topdef.isFun() && (modtype.isConcrete() || modtype.isResource())) {
-			String msg = String.format("Function declarations don't belong in a concrete module");
-			error(msg, GFPackage.Literals.TOP_DEF__FUN);
+	
+		// Concrete can contain [param, oper, lincat, lin, lindef, printname]
+		if (modtype.isConcrete() && !(topdef.isParam() || topdef.isOper() || topdef.isLincat() || topdef.isLin() || topdef.isLindef() || topdef.isPrintname())) {
+			String msg = String.format("Judgement type doesn't belong in a concrete module");
+			error(msg, getStructuralFeature(topdef));
 		}
-		if (topdef.isDef() && (modtype.isConcrete() || modtype.isResource())) {
-			String msg = String.format("Function definitions don't belong in a concrete module");
-			error(msg, GFPackage.Literals.TOP_DEF__DEF);
-		}
-		if (topdef.isLindef() && (modtype.isConcrete() || modtype.isResource())) {
-			String msg = String.format("Linearization default definitions don't belong in a concrete module");
-			warning(msg, GFPackage.Literals.TOP_DEF__LINDEF);
+	
+		// Resource can contain [param, oper]
+		if (modtype.isResource() && !(topdef.isParam() || topdef.isOper())) {
+			String msg = String.format("Judgement type doesn't belong in a resource module");
+			error(msg, getStructuralFeature(topdef));
 		}
 		
-		// Shouldn't be in abstract
-		if (topdef.isParam() && modtype.isAbstract()) {
-			String msg = String.format("Parameter type definitions don't belong in an abstract module");
-			error(msg, GFPackage.Literals.TOP_DEF__LINCAT);
-		}
-		if (topdef.isLincat() && modtype.isAbstract()) {
-			String msg = String.format("Linearization type definitions don't belong in an abstract module");
-			error(msg, GFPackage.Literals.TOP_DEF__LINCAT);
-		}
-		if (topdef.isLin() && modtype.isAbstract()) {
-			String msg = String.format("Linearization definitions don't belong in an abstract module");
-			error(msg, GFPackage.Literals.TOP_DEF__LIN);
-		}
-		if (topdef.isPrintname() && modtype.isAbstract()) {
-			String msg = String.format("Printname definitions don't belong in an abstract module");
-			error(msg, GFPackage.Literals.TOP_DEF__LIN);
-		}
-
+		// interface, instance, functor, functor instantiation
+		
 	}
 	
 	/**

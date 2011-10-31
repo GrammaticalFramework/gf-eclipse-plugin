@@ -139,9 +139,9 @@ public class GFNewFileWizard extends Wizard implements INewWizard {
 		sb.append(page.getModuleType());
 		sb.append(" ");
 		sb.append(page.getModuleName());
-		if (!page.getModConcreteOf().isEmpty()) {
+		if (!page.getModOf().isEmpty()) {
 			sb.append(" of ");
-			sb.append(page.getModConcreteOf());
+			sb.append(page.getModOf());
 		}
 		sb.append(" = ");
 		if (!page.getModuleExtends().isEmpty()) {

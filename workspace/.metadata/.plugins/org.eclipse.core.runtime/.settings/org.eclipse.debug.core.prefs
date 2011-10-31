@@ -1,4 +1,4 @@
-#Fri Oct 28 12:28:19 CEST 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="((org.grammaticalframework.eclipse.gF.Exp6)context).getName()"/>\n<expression enabled\="true" text\="stack"/>\n</watchExpressions>\n
+#Mon Oct 31 15:41:35 CET 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="root.members()[0].members()"/>\n<expression enabled\="true" text\="modTypeComboDropDown.getText().substring(0, 7)"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=false

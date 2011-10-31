@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.eclipse.xtext.ui.IImageHelper"/>
-<fullyQualifiedTypeName name="com.google.inject.Inject"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.outline.impl.AbstractOutlineNode"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.outline.IOutlineNode"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.ModBody"/>
-<fullyQualifiedTypeName name="org.eclipse.jface.resource.ImageDescriptor"/>
-<fullyQualifiedTypeName name="org.eclipse.jdt.internal.ui.JavaPluginImages"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.ModDef"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.outline.impl.EStructuralFeatureNode"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.Open"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.Ident"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.FlagDef"/>
@@ -19,13 +10,9 @@
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceDescription"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.impl.OpenImpl"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.GFPackage"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.GFPackage.Literals"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.Assignment"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.RuleCall"/>
-<fullyQualifiedTypeName name="org.eclipse.swt.graphics.Image"/>
 <fullyQualifiedTypeName name="org.eclipse.core.runtime.Platform"/>
 <fullyQualifiedTypeName name="org.eclipse.core.runtime.preferences.IPreferencesService"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.launch.GFLaunchConfigurationDelegate"/>
@@ -40,10 +27,8 @@
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IResourceDelta"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IFile"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IResource"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IFolder"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IWorkspace"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IWorkspaceDescription"/>
 <fullyQualifiedTypeName name="java.util.concurrent.Callable"/>
@@ -60,4 +45,19 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFGlobalScopeProvider"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.EAttribute"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.GFPackage"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.GFPackage.Literals"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Combo"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.events.SelectionListener"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.fieldassist.ContentProposalAdapter"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.fieldassist.TextContentAdapter"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.fieldassist.SimpleContentProposalProvider"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.fieldassist.ControlDecoration"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.fieldassist.FieldDecorationRegistry"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.graphics.Image"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.eclipse.core.resources.IFile"/>
+<fullyQualifiedTypeName name="org.eclipse.core.resources.IFolder"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.bindings.keys.KeyStroke"/>
 </qualifiedTypeNameHistroy>
