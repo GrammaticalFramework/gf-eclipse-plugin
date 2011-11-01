@@ -1,0 +1,14 @@
+package org.grammaticalframework.eclipse.ui.editor.preferences;
+
+import org.eclipse.xtext.ui.editor.preferences.IPreferenceStoreAccess;
+import org.eclipse.xtext.ui.editor.preferences.IPreferenceStoreInitializer;
+
+public class GFPreferenceInitializer implements IPreferenceStoreInitializer {
+
+	@Override
+	public void initialize(IPreferenceStoreAccess access) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
