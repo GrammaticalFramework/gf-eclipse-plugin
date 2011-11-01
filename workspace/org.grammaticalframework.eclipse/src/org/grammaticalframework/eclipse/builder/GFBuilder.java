@@ -17,8 +17,6 @@ import org.eclipse.core.resources.IResourceDeltaVisitor;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.core.runtime.Platform;
-import org.eclipse.core.runtime.preferences.IPreferencesService;
 import org.grammaticalframework.eclipse.GFPreferences;
 
 /**
@@ -57,9 +55,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws CoreException {
 		
 		// Get some prefs
-		IPreferencesService prefs = Platform.getPreferencesService();
-		showDebug = prefs.getBoolean(GFPreferences.QUALIFIER, GFPreferences.SHOW_DEBUG, true, null);
-		gfPath = prefs.getString(GFPreferences.QUALIFIER, GFPreferences.GF_BIN_PATH, (String)null, null);
+		showDebug = GFPreferences.getBoolean(GFPreferences.SHOW_DEBUG, true);
+		gfPath = GFPreferences.getString(GFPreferences.GF_BIN_PATH);
 		if (gfPath == null || gfPath.trim().isEmpty()) {
 //			log("Error during build: GF path not specified.");
 			System.out.println("Error during build: GF path not specified.");
@@ -126,8 +123,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	
 	@Override
 	protected void clean(final IProgressMonitor monitor) throws CoreException {
-		IPreferencesService prefs = Platform.getPreferencesService();
-		showDebug = prefs.getBoolean(GFPreferences.QUALIFIER, GFPreferences.SHOW_DEBUG, true, null);
+		showDebug = GFPreferences.getBoolean(GFPreferences.SHOW_DEBUG, true);
 
 		log("Clean " + getProject().getName());
 		

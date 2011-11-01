@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="-32" key="DIALOG_Y_ORIGIN"/>
-		<item value="97" key="DIALOG_X_ORIGIN"/>
+		<item value="203" key="DIALOG_Y_ORIGIN"/>
+		<item value="-57" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="InstallationDialogSettings">
 		<item value="959" key="DIALOG_WIDTH"/>

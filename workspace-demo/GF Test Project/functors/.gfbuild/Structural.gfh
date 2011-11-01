@@ -99,6 +99,8 @@ abstract Structural = Cat ** {
   data for_Prep : Cat.Prep ;
   data from_Prep : Cat.Prep ;
   data have_V2 : Cat.V2 ;
+  data have_V3 : Cat.V3 ;
+  data have_not_V3 : Cat.V3 ;
   data he_Pron : Cat.Pron ;
   data here7from_Adv : Common.Adv ;
   data here7to_Adv : Common.Adv ;

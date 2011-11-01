@@ -4,6 +4,7 @@
 package org.grammaticalframework.eclipse.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.grammaticalframework.eclipse.GFPreferences;
 import org.grammaticalframework.eclipse.ui.perspectives.GFPerspectiveFactory;
 
 /**
@@ -11,7 +12,7 @@ import org.grammaticalframework.eclipse.ui.perspectives.GFPerspectiveFactory;
  */
 public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUiModule {
 
-	// Cons
+	// Constructor
 	public GFUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
 		
@@ -21,7 +22,6 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	public Class<? extends org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage> bindLanguageRootPreferencePage() {
 		return org.grammaticalframework.eclipse.ui.editor.preferences.GFLanguageRootPreferencePage.class;
 	}
-	
 	
 	@Override
 	public Class<? extends org.eclipse.xtext.ui.editor.outline.IOutlineTreeProvider> bindIOutlineTreeProvider() {

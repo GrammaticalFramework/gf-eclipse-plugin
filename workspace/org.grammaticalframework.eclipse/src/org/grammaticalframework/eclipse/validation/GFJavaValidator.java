@@ -162,22 +162,23 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	 * Warn about lineariation rules not having any corresponding abstract declarations
 	 * @param name
 	 */
-	@Check
-	public void checkLinearisationsHaveAbstractEquivalents(Name name) {
-		if (name.eContainer().eContainer() instanceof TopDef) {
-			TopDef topDef = (TopDef) name.eContainer().eContainer();
-			IScope scope = getScopeProvider().getScope(name, GFPackage.Literals.NAME__NAME);
-			boolean found = (scope.getSingleElement(getConverter().toQualifiedName(name.getName().getS())) != null); 
-			if (topDef.isLincat() && !found) {
-				String msg = String.format("No declaration \"cat %1$s\" found for \"lincat %1$s\"",	name.getName().getS());
-				warning(msg, GFPackage.Literals.NAME__NAME);
-			}
-			else if (topDef.isLin() && !found) {
-				String msg = String.format("No declaration \"fun %1$s\" found for \"lin %1$s\"", name.getName().getS());
-				warning(msg, GFPackage.Literals.NAME__NAME);
-			}
-		}
-	}
+	// TODO I disabled this because it was acting strangely
+//	@Check
+//	public void checkLinearisationsHaveAbstractEquivalents(Name name) {
+//		if (name.eContainer().eContainer() instanceof TopDef) {
+//			TopDef topDef = (TopDef) name.eContainer().eContainer();
+//			IScope scope = getScopeProvider().getScope(name, GFPackage.Literals.NAME__NAME);
+//			boolean found = (scope.getSingleElement(getConverter().toQualifiedName(name.getName().getS())) != null); 
+//			if (topDef.isLincat() && !found) {
+//				String msg = String.format("No declaration \"cat %1$s\" found for \"lincat %1$s\"",	name.getName().getS());
+//				warning(msg, GFPackage.Literals.NAME__NAME);
+//			}
+//			else if (topDef.isLin() && !found) {
+//				String msg = String.format("No declaration \"fun %1$s\" found for \"lin %1$s\"", name.getName().getS());
+//				warning(msg, GFPackage.Literals.NAME__NAME);
+//			}
+//		}
+//	}
 	
 	/**
 	 * Warn about lineariation rules not having any corresponding abstract declarations

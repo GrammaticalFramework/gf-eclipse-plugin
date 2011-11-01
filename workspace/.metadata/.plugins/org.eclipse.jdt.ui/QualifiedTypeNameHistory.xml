@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.Open"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.Ident"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.FlagDef"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.CatDef"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.labeling.GFImages"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.GFException"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.outline.impl.EObjectNode"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceDescription"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
@@ -60,4 +54,10 @@
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IFile"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IFolder"/>
 <fullyQualifiedTypeName name="org.eclipse.jface.bindings.keys.KeyStroke"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.preferences.IPreferenceStoreInitializer"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.editor.preferences.GFPreferenceInitializer"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.Preferences"/>
+<fullyQualifiedTypeName name="org.eclipse.core.runtime.preferences.DefaultScope"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.internal.GFActivator"/>
 </qualifiedTypeNameHistroy>

@@ -170,6 +170,8 @@ interface Syntax = Cat,Structural ** {
   oper fullStopPunct : Punct ;
   oper genericCl : VP -> Cl ;
   -- ind have_V2 = Structural ;
+  -- ind have_V3 = Structural ;
+  -- ind have_not_V3 = Structural ;
   oper he_NP : NP ;
   -- ind he_Pron = Structural ;
   -- ind here7from_Adv = Structural ;

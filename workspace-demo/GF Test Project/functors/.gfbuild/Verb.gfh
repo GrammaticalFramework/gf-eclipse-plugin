@@ -1,6 +1,6 @@
 abstract Verb = Cat ** {
   flags
-    coding = "latin1" ;
+    coding = "utf8" ;
   -- ind A = Cat ;
   -- ind A2 = Cat ;
   -- ind AP = Cat ;

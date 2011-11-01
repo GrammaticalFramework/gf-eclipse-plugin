@@ -2,9 +2,9 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="305" key="DIALOG_WIDTH"/>
-		<item value="218" key="DIALOG_Y_ORIGIN"/>
+		<item value="198" key="DIALOG_Y_ORIGIN"/>
 		<item value="430" key="DIALOG_HEIGHT"/>
-		<item value="1504" key="DIALOG_X_ORIGIN"/>
+		<item value="1562" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
@@ -13,16 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="System.out" key="selection"/>
+		<item value="Default" key="selection"/>
 		<list key="findhistory">
+			<item value="default"/>
+			<item value="scope"/>
+			<item value="preference"/>
+			<item value="preferenc"/>
 			<item value="system.out"/>
 			<item value="//&#x09;&#x09;&#x09;BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));"/>
 			<item value="//&#x09;&#x09;&#x09;if (uri == null)"/>
 			<item value="open"/>
-			<item value="marker"/>
-			<item value="arraylist"/>
-			<item value="//&#x09;&#x09;Label l = new Label(comp, SWT.NULL);"/>
-			<item value="unique"/>
 		</list>
 		<list key="replacehistory">
 			<item value="SWT.FILL, SWT.TOP, true, false"/>

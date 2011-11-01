@@ -397,5 +397,11 @@
         </action>
      </objectContribution>
   </extension>
+  <extension
+        point="org.eclipse.core.runtime.preferences">
+     <initializer
+           class="org.grammaticalframework.eclipse.ui.editor.preferences.GFPreferenceInitializer">
+     </initializer>
+  </extension>
 
 </plugin>

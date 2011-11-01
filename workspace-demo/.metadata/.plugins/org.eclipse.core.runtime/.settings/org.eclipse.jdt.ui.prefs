@@ -1,4 +1,4 @@
-#Wed Oct 12 13:36:28 CEST 2011
+#Mon Oct 31 16:51:31 CET 2011
 content_assist_proposals_foreground=60,60,60
 spelling_locale=en_GB
 CustomFiltersActionGroup.org.eclipse.jdt.ui.PackageExplorer.userDefinedPatternsEnabled=true
@@ -21,6 +21,7 @@ content_assist_proposals_background=255,255,255
 org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter=true
 org.eclipse.jdt.ui.formatterprofiles.version=12
 org.eclipse.jdt.internal.ui.navigator.layout=1
+content_assist_number_of_computers=13
 org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter=true
 useQuickDiffPrefPage=true
 CustomFiltersActionGroup.org.eclipse.jdt.ui.PackageExplorer.TAG_DUMMY_TO_TEST_EXISTENCE=storedViewPreferences
