@@ -7,6 +7,7 @@ import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 import org.eclipse.ui.console.IConsoleConstants;
+import org.eclipse.ui.console.MessageConsoleStream;
 import org.grammaticalframework.eclipse.launch.GFLaunchConfigurationDelegate;
 
 /**
@@ -42,8 +43,10 @@ public class GFPerspectiveFactory implements IPerspectiveFactory {
 		createConsole();
 	}
 	
-	public static void createConsole() {
+	public static MessageConsoleStream createConsole() {
+		MessageConsoleStream mcs = GFConsole.getStream();
 		GFLaunchConfigurationDelegate.setConsole(new PrintStream( GFConsole.getStream() ));
+		return mcs;
 	}
 	
 }

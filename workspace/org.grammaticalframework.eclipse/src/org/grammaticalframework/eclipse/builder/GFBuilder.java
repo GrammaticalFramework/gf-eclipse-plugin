@@ -19,6 +19,8 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.grammaticalframework.eclipse.GFPreferences;
 
+import org.apache.log4j.Logger;
+
 /**
  * Custom GF builder, yeah!
  * Some refs..
@@ -40,26 +42,16 @@ public class GFBuilder extends IncrementalProjectBuilder {
 
 	public static final Boolean USE_INDIVIDUAL_FOLDERS = false;
 
-	private static final Boolean SHOW_COMPILER_OUTPUT = false;
-	
 	private String gfPath;
 
-	private boolean showDebug = false;
-
-	private void log(String msg) {
-		if (showDebug)
-			System.out.println(msg);
-	}
-
+	private static final Logger log = Logger.getLogger(GFBuilder.class);
+	
 	@Override
 	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws CoreException {
-		
 		// Get some prefs
-		showDebug = GFPreferences.getBoolean(GFPreferences.SHOW_DEBUG, true);
 		gfPath = GFPreferences.getString(GFPreferences.GF_BIN_PATH);
 		if (gfPath == null || gfPath.trim().isEmpty()) {
-//			log("Error during build: GF path not specified.");
-			System.out.println("Error during build: GF path not specified.");
+			log.error("Error during build: GF path not specified.");
 			return null;
 		}
 		
@@ -77,7 +69,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	}
 
 	private void incrementalBuild(IResourceDelta delta, IProgressMonitor monitor) {
-		log("Incremental build on " + delta);
+		log.info("Incremental build on " + delta.getResource().getName());
 		try {
 			delta.accept(new IResourceDeltaVisitor() {
 				public boolean visit(IResourceDelta delta) {
@@ -89,9 +81,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 								cleanFile((IFile) resource);
 							}
 							if (buildFile((IFile) resource)) {
-								log("  + " + delta.getResource().getRawLocation());
+								log.info("  + " + delta.getResource().getRawLocation());
 							} else {
-								log("  > Failed: " + delta.getResource().getRawLocation());
+								log.warn("  > Failed: " + delta.getResource().getRawLocation());
 							}
 						}
 						
@@ -106,14 +98,14 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	}
 
 	private void fullBuild(IProgressMonitor monitor) throws CoreException {
-		log("Full build on " + getProject().getName());
+		log.info("Full build on " + getProject().getName());
 		recursiveDispatcher(getProject().members(), new CallableOnResource() {
 			public void call(IResource resource) {
 				if (shouldBuild(resource)) {
 					if (buildFile((IFile) resource)) {
-						log("  + " + resource.getName());
+						log.info("  + " + resource.getName());
 					} else {
-						log("  > Failed: " + resource.getName());
+						log.warn("  > Failed: " + resource.getName());
 					}
 				}
 			}
@@ -123,9 +115,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	
 	@Override
 	protected void clean(final IProgressMonitor monitor) throws CoreException {
-		showDebug = GFPreferences.getBoolean(GFPreferences.SHOW_DEBUG, true);
-
-		log("Clean " + getProject().getName());
+		log.info("Clean " + getProject().getName());
 		
 		// TODO Delete markers with getProject().deleteMarkers()
 		recursiveDispatcher(getProject().members(), new CallableOnResource() {
@@ -133,9 +123,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				if (resource.getType() == IResource.FILE && resource.getFileExtension().equals("gfh")) {
 					try {
 						resource.delete(true, monitor);
-						log("  - " + resource.getName());
+						log.info("  - " + resource.getName());
 					} catch (CoreException e) {
-						log("  > Failed: " + resource.getName());
+						log.warn("  > Failed: " + resource.getName());
 						e.printStackTrace();
 					}
 				}
@@ -171,7 +161,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @return
 	 */
 	private boolean shouldBuild(IResource resource) {
-		return resource.getType() == IResource.FILE && resource.getFileExtension().equals("gf");
+		try {
+			return resource.getType() == IResource.FILE && resource.getFileExtension().equals("gf");
+		} catch (NullPointerException _) {
+			return false;
+		}
 	}
 	
 	private String getBuildDirectory(IFile file) {
@@ -228,7 +222,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			// Piece together our GF process
 			ProcessBuilder b = new ProcessBuilder(command);
 			b.directory(buildDirFile);
-//			b.redirectErrorStream(true);
+			b.redirectErrorStream(true);
 			Process process = b.start();
 			
 			// Feed it our commands, then quit
@@ -240,17 +234,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			processInput.newLine();
 			processInput.flush();
 			
-			if (SHOW_COMPILER_OUTPUT) {
-//				BufferedReader processError = new BufferedReader(new InputStreamReader(process.getErrorStream()));
-//				String err_str;
-//				while ((err_str = processError.readLine()) != null) {
-//					log(err_str);
-//				}
-				BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
-				String out_str;
-				while ((out_str = processOutput.readLine()) != null) {
-					log(out_str);
-				}
+			// Consume & log all output
+			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
+			String out_str;
+			while ((out_str = processOutput.readLine()) != null) {
+				log.debug(out_str);
 			}
 			
 			// Tidy up
@@ -275,7 +263,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @return
 	 */
 	private void cleanFile(IFile file) {
-		log("  Cleaning build directory for " + file.getName());
+		log.info("  Cleaning build directory for " + file.getName());
 		
 		String buildDir = getBuildDirectory(file);
 		// Check the build directory and try to create it
@@ -285,9 +273,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			for (File f : files) {
 				try {
 					f.delete();
-					log("  - " + f.getName());
+					log.info("  - " + f.getName());
 				} catch (Exception _) {
-					log("  > Failed: " + f.getName());
+					log.warn("  > Failed: " + f.getName());
 				}
 			}
 		}

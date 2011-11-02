@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workingSetManager>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1316603444583_2" label="Custom GF Providers" name="Custom GF Providers">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/GFPreferences.java" type="1"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/builder" type="2"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/formatting" type="2"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/launch" type="2"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/naming" type="2"/>

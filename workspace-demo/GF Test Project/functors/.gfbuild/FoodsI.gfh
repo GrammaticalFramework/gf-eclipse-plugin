@@ -1,8 +1,0 @@
-incomplete concrete FoodsI of Foods = open Syntax,LexFoods in {
-  flags
-    coding = "latin1" ;
-  lincat Item = NP ;
-  lincat Kind = CN ;
-  lincat Phrase = Cl ;
-  lincat Quality = AP ;
-}

@@ -1,4 +1,4 @@
-#Tue Nov 01 17:27:39 CET 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="prefs.getString(QUALIFIER, prefKey, defaultValue, null)"/>\n<expression enabled\="true" text\="prefs.getString(&quot;org.grammaticalframework.eclipse.ui&quot;, &quot;runtimePath&quot;, defaultValue, null)"/>\n<expression enabled\="true" text\="store.getDefaultString(GFPreferences.GF_BIN_PATH)"/>\n<expression enabled\="true" text\="getPreferenceStore().getDefaultString(getPreferenceName())"/>\n<expression enabled\="true" text\="getPreferenceName()"/>\n</watchExpressions>\n
+#Wed Nov 02 16:33:27 CET 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="log.getLevel()"/>\n<expression enabled\="true" text\="ResourcesPlugin.getWorkspace().getRoot().getRawLocation()"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=false

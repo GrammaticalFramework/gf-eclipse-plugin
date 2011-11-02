@@ -61,7 +61,6 @@ INDEX VERSION 1.126+/home/john/repositories/gf-eclipse-plugin/workspace/.metadat
 2251789.index
 2640142392.index
 38694978.index
-2675114257.index
 1559460274.index
 601045817.index
 1935107357.index

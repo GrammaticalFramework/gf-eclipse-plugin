@@ -1,0 +1,21 @@
+
+[2011-11-02 17:32:07] INFO  Incremental build on GF Test Project
+[2011-11-02 17:32:07] DEBUG                               
+[2011-11-02 17:32:07] DEBUG          *  *  *              
+[2011-11-02 17:32:07] DEBUG       *           *           
+[2011-11-02 17:32:07] DEBUG     *               *         
+[2011-11-02 17:32:07] DEBUG    *                          
+[2011-11-02 17:32:07] DEBUG    *                          
+[2011-11-02 17:32:07] DEBUG    *        * * * * * *       
+[2011-11-02 17:32:07] DEBUG    *        *         *       
+[2011-11-02 17:32:07] DEBUG     *       * * * *  *        
+[2011-11-02 17:32:07] DEBUG       *     *      *          
+[2011-11-02 17:32:07] DEBUG          *  *  *              
+[2011-11-02 17:32:07] DEBUG                               
+[2011-11-02 17:32:07] DEBUG This is GF version 3.3-darcs. 
+[2011-11-02 17:32:07] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-02 17:32:07] DEBUG License: see help -license.   
+[2011-11-02 17:32:07] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-02 17:32:07] DEBUG 
+[2011-11-02 17:32:07] DEBUG gf: This GFO file was compiled with different version of GF. Failed reading at byte position 153
+[2011-11-02 17:32:07] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf

@@ -3,6 +3,16 @@
  */
 package org.grammaticalframework.eclipse.ui;
 
+import java.io.IOException;
+
+import org.apache.log4j.Layout;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+import org.apache.log4j.RollingFileAppender;
+import org.apache.log4j.WriterAppender;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.ui.console.MessageConsoleStream;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.grammaticalframework.eclipse.GFPreferences;
 import org.grammaticalframework.eclipse.ui.perspectives.GFPerspectiveFactory;
@@ -12,11 +22,27 @@ import org.grammaticalframework.eclipse.ui.perspectives.GFPerspectiveFactory;
  */
 public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUiModule {
 
-	// Constructor
+	private static final String LOG_FILE_NAME = "gfep.log";
+	
+	public static final Logger log = Logger.getLogger("org.grammaticalframework.eclipse");
+
 	public GFUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
 		
-		GFPerspectiveFactory.createConsole();
+		// Create GF console and direct logs into it
+		MessageConsoleStream mcs = GFPerspectiveFactory.createConsole();
+		Layout layout = new PatternLayout("[%d{yyyy-MM-dd HH:mm:ss}] %-5p %m%n");
+		log.addAppender(new WriterAppender(layout, mcs));
+		try {
+			String logFileFull = ResourcesPlugin.getWorkspace().getRoot().getRawLocation().toOSString() + java.io.File.separator + LOG_FILE_NAME;
+			RollingFileAppender logfile = new RollingFileAppender(layout, logFileFull);
+			log.addAppender(logfile);
+		} catch (IOException e) {
+			log.warn(e.getMessage());
+		}
+		
+		if (GFPreferences.getBoolean(GFPreferences.SHOW_DEBUG, true))
+			log.setLevel(Level.DEBUG);
 	}
 	
 	public Class<? extends org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage> bindLanguageRootPreferencePage() {

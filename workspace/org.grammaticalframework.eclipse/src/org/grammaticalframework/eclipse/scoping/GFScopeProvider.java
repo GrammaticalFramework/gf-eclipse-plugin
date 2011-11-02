@@ -36,6 +36,7 @@ import com.google.inject.Provider;
  * @author John J. Camilleri
  * 
  */
+@SuppressWarnings("unused")
 public class GFScopeProvider extends SimpleLocalScopeProvider {
 	
 	@Inject

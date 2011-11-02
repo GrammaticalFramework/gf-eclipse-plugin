@@ -275,8 +275,8 @@ org.eclipse.xtext.xtend2.ui.source,2.0.1.v201108020636,file:/home/john/eclipse/p
 org.eclipse.xtext.xtext.ui.graph.source,2.0.1.v201108020636,file:/home/john/eclipse/plugins/org.eclipse.xtext.xtext.ui.graph.source_2.0.1.v201108020636.jar,-1,false
 org.eclipse.xtext.xtext.ui.source,2.0.1.v201108020636,file:/home/john/eclipse/plugins/org.eclipse.xtext.xtext.ui.source_2.0.1.v201108020636.jar,-1,false
 org.hamcrest.core.source,1.1.0.v20090501071000,file:/home/john/eclipse/plugins/org.hamcrest.core.source_1.1.0.v20090501071000.jar,-1,false
-org.junit.source,3.8.2.v3_8_2_v20100427-1100,file:/home/john/eclipse/plugins/org.junit.source_3.8.2.v3_8_2_v20100427-1100.jar,-1,false
 org.junit.source,4.8.2.v4_8_2_v20110321-1705,file:/home/john/eclipse/plugins/org.junit.source_4.8.2.v4_8_2_v20110321-1705.jar,-1,false
+org.junit.source,3.8.2.v3_8_2_v20100427-1100,file:/home/john/eclipse/plugins/org.junit.source_3.8.2.v3_8_2_v20100427-1100.jar,-1,false
 org.mortbay.jetty.server.source,6.1.23.v201012071420,file:/home/john/eclipse/plugins/org.mortbay.jetty.server.source_6.1.23.v201012071420.jar,-1,false
 org.mortbay.jetty.util.source,6.1.23.v201012071420,file:/home/john/eclipse/plugins/org.mortbay.jetty.util.source_6.1.23.v201012071420.jar,-1,false
 org.objectweb.asm.source,3.3.1.v201105211655,file:/home/john/eclipse/plugins/org.objectweb.asm.source_3.3.1.v201105211655.jar,-1,false

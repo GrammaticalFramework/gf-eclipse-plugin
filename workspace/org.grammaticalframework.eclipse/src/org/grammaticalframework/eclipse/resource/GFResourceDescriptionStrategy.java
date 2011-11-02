@@ -20,7 +20,7 @@ import com.google.inject.Inject;
 public class GFResourceDescriptionStrategy extends
 		DefaultResourceDescriptionStrategy {
 	
-	private final static Logger LOG = Logger.getLogger(DefaultResourceDescriptionStrategy.class);
+	private final static Logger log = Logger.getLogger(GFResourceDescriptionStrategy.class);
 
 	@Inject
 	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
@@ -125,7 +125,7 @@ public class GFResourceDescriptionStrategy extends
 //				}
 //			}			
 		} catch (Exception exc) {
-			LOG.error(exc.getMessage());
+			log.error(exc.getMessage());
 		}
 		return true;
 	}	

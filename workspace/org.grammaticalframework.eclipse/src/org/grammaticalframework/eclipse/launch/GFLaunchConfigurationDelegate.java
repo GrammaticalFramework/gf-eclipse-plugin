@@ -9,16 +9,20 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.debug.core.ILaunch;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.model.LaunchConfigurationDelegate;
+import org.eclipse.xtext.generator.grammarAccess.GrammarAccessFragment;
 import org.grammaticalframework.eclipse.GFPreferences;
 
 
 public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
-	
+
+	private static final Logger log = Logger.getLogger(GFLaunchConfigurationDelegate.class);
+
 	public static void setConsole(PrintStream ps) {
 		System.setOut(ps);
 		System.setErr(ps);
@@ -36,11 +40,11 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		String options = configuration.getAttribute(IGFLaunchConfigConstants.OPTIONS, (String)null);
 		String files = configuration.getAttribute(IGFLaunchConfigConstants.FILENAMES, (String)null);
 		if (gfPath == null || gfPath.trim().isEmpty()) {
-			System.out.println("Cannot start launch: GF path not specified.");
+			log.error("Cannot start launch: GF path not specified.");
 			return;
 		}
 		if (files == null || files.trim().isEmpty()) {
-			System.out.println("Cannot start launch: No filenames specified.");
+			log.error("Cannot start launch: No filenames specified.");
 			return;
 		}
 		ArrayList<String> command = new ArrayList<String>();
@@ -50,17 +54,13 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		command.addAll( Arrays.asList(files.split("\\s")) );
 		
 		try {
-		    SimpleDateFormat df = new SimpleDateFormat();
 			StringBuilder sb = new StringBuilder();
-	    	sb.append("[");
-	    	sb.append(df.format(new Date()));
-	    	sb.append("] Running:");
+	    	sb.append("Running:");
 		    for (String s : command) {
 		    	sb.append(" ");
 		    	sb.append(s);
 		    }
-		    sb.append("\n");
-		    System.out.println(sb);
+		    log.info(sb.toString());
 		    		
 			ProcessBuilder b = new ProcessBuilder(command);
 			b.directory(new File(wdir));
@@ -70,18 +70,17 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			String ls_str;
 			while ((ls_str = processOutput.readLine()) != null) {
-				System.out.println(ls_str);
+				log.debug(ls_str);
 			}
 			
 			processOutput.close();
 			process.waitFor();
 			
 		} catch (IOException e) {
-			System.out.println("Error: " + e.getMessage());
+			log.error("Error: " + e.getMessage());
 		} catch (InterruptedException e) {
-			System.out.println("Interrupted: " + e.getMessage());
+			log.error("Interrupted: " + e.getMessage());
 		} finally {
-			System.out.println("-----");
 			monitor.done();
 		}
 		

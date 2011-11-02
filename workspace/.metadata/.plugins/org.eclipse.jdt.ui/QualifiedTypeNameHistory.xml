@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.outline.impl.EObjectNode"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceDescription"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.impl.OpenImpl"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.Assignment"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.RuleCall"/>
-<fullyQualifiedTypeName name="org.eclipse.core.runtime.Platform"/>
-<fullyQualifiedTypeName name="org.eclipse.core.runtime.preferences.IPreferencesService"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.launch.GFLaunchConfigurationDelegate"/>
-<fullyQualifiedTypeName name="java.io.OutputStream"/>
-<fullyQualifiedTypeName name="org.eclipse.emf.common.util.EList"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFLibraryAgent"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.ResourcesPlugin"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IResourceDeltaVisitor"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.ICommand"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
@@ -27,7 +14,6 @@
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IWorkspaceDescription"/>
 <fullyQualifiedTypeName name="java.util.concurrent.Callable"/>
 <fullyQualifiedTypeName name="org.eclipse.jface.preference.BooleanFieldEditor"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFPreferences"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.net.MalformedURLException"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
@@ -60,4 +46,18 @@
 <fullyQualifiedTypeName name="org.eclipse.core.runtime.Preferences"/>
 <fullyQualifiedTypeName name="org.eclipse.core.runtime.preferences.DefaultScope"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.internal.GFActivator"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.generator.grammarAccess.GrammarAccessFragment"/>
+<fullyQualifiedTypeName name="org.apache.log4j.ConsoleAppender"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.console.MessageConsoleStream"/>
+<fullyQualifiedTypeName name="org.apache.log4j.WriterAppender"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Layout"/>
+<fullyQualifiedTypeName name="org.apache.log4j.PatternLayout"/>
+<fullyQualifiedTypeName name="org.apache.log4j.FileAppender"/>
+<fullyQualifiedTypeName name="org.apache.log4j.RollingFileAppender"/>
+<fullyQualifiedTypeName name="org.eclipse.core.resources.ResourcesPlugin"/>
+<fullyQualifiedTypeName name="org.eclipse.jface.util.IPropertyChangeListener"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.GFUiModule"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFPreferences"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Level"/>
 </qualifiedTypeNameHistroy>

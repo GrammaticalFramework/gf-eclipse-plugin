@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.Stack;
 
+import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -39,6 +40,8 @@ import com.google.inject.Provider;
 
 public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	
+	private static final Logger log = Logger.getLogger(GFGlobalScopeProvider.class);
+
 	public GFGlobalScopeProvider() {
 		super();
 		stack = new Stack<String>();
@@ -74,7 +77,8 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	}
 	
 	public Stack<String> stack = null;
-//	private int depth = 0;
+	@SuppressWarnings("unused")
+	private int depth = 0;
 
 	@Override
 	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
@@ -100,10 +104,11 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			return scope;
 		} else {
 			stack.push(moduleName);
-//			depth++;
+			depth++;
+//			StringBuilder sb = new StringBuilder();
 //			for (int i = 0; i < depth; i++)
-//				System.out.print("  ");
-//			System.out.println(moduleName);
+//				sb.append("  ");
+//			log.debug(sb.append(moduleName));
 		}
 
 		// Is this a concrete/instance of an abstract/interface module?
@@ -113,7 +118,7 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				ignoreModuleName = true;
 				scope = addModuleToScope(abstractModuleName, scope, resource, type, filter, ignoreCase, ignoreModuleName);
 			} catch (NullPointerException _) {
-//				System.out.println("#1 Error loading " + moduleName);
+				log.debug("Error loading " + moduleName);
 			}
 		}
 
@@ -258,7 +263,7 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			
 		} catch (NullPointerException e) {
 			// Most likely the moduleName does not exist
-			System.out.println(String.format("#3 Error loading %s from %s", moduleName, resource.getURI().toString()));
+			log.debug(String.format("Error loading %s from %s", moduleName, resource.getURI().toString()));
 		} catch (IllegalStateException e) {
 			// This was a problem before I registered .gfh as a file extension... hopefully not anymore
 			e.printStackTrace();
