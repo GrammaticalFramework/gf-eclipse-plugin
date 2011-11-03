@@ -224,3 +224,48 @@ org.eclipse.core.internal.resources.ResourceException: Marker id 190378 not foun
 	at org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor.processIssues(MarkerIssueProcessor.java:43)
 	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:67)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2011-11-03 15:46:30.013 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.eclipse.core.resources 4 376 2011-11-03 15:47:11.874
+!MESSAGE Marker id 190501 not found.
+
+!ENTRY org.apache.log4j 4 0 2011-11-03 15:47:11.883
+!MESSAGE org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor  - Could not create marker.
+
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:121)
+	at org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor.processIssues(MarkerIssueProcessor.java:43)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Marker id 190515 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:57)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:237)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:223)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.setMarkerAttributes(MarkerCreator.java:39)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.createMarker(MarkerCreator.java:23)
+	at org.eclipse.xtext.ui.editor.validation.AddMarkersOperation.execute(AddMarkersOperation.java:89)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	... 3 more
+Root exception:
+org.eclipse.core.internal.resources.ResourceException: Marker id 190515 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:57)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:237)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:223)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.setMarkerAttributes(MarkerCreator.java:39)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.createMarker(MarkerCreator.java:23)
+	at org.eclipse.xtext.ui.editor.validation.AddMarkersOperation.execute(AddMarkersOperation.java:89)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor.processIssues(MarkerIssueProcessor.java:43)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

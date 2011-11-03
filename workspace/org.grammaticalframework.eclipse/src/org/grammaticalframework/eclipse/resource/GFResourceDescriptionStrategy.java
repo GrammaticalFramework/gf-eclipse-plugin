@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.resource;
 
 import org.apache.log4j.Logger;
@@ -10,28 +19,43 @@ import org.eclipse.xtext.resource.impl.DefaultResourceDescriptionStrategy;
 import org.eclipse.xtext.util.IAcceptor;
 import com.google.inject.Inject;
 
+// TODO: Auto-generated Javadoc
 /**
  * Custom resource description strategy, which hanldes:
- * - Creating multiple resources when definitions use ListName/ListIdent
- * 
- * @author John J. Camilleri
+ * - Creating multiple resources when definitions use ListName/ListIdent.
  *
+ * @author John J. Camilleri
  */
 public class GFResourceDescriptionStrategy extends
 		DefaultResourceDescriptionStrategy {
 	
+	/**
+	 * The Constant log.
+	 */
 	private final static Logger log = Logger.getLogger(GFResourceDescriptionStrategy.class);
 
+	/**
+	 * The converter.
+	 */
 	@Inject
 	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
 	
+	/**
+	 * Gets the converter.
+	 *
+	 * @return the converter
+	 */
 	protected IQualifiedNameConverter getConverter() {
 		return converter;
 	}
 	
 	
 	/**
-	 * For reflectively handling easy cases, rather than having lots of stupid if statements
+	 * For reflectively handling easy cases, rather than having lots of stupid if statements.
+	 *
+	 * @param eObj the e obj
+	 * @param acceptor the acceptor
+	 * @return true, if successful
 	 */
 /*
 	private PolymorphicDispatcher<Boolean> handleTLD = new PolymorphicDispatcher<Boolean>("handleTLD",2,2,Collections.singletonList(this), PolymorphicDispatcher.NullErrorHandler.<Boolean>get())

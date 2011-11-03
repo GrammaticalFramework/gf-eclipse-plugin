@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.ui.natures;
 
 import java.util.Iterator;
@@ -12,12 +21,15 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
 
+// TODO: Auto-generated Javadoc
 /**
- * This code copied from the Eclipse extension wizard "Project Builder and Nature"
- *
+ * This code copied from the Eclipse extension wizard "Project Builder and Nature".
  */
 public class ToggleNatureAction implements IObjectActionDelegate {
 
+	/**
+	 * The selection.
+	 */
 	private ISelection selection;
 
 	/*
@@ -25,10 +37,11 @@ public class ToggleNatureAction implements IObjectActionDelegate {
 	 * 
 	 * @see org.eclipse.ui.IActionDelegate#run(org.eclipse.jface.action.IAction)
 	 */
+	@SuppressWarnings("rawtypes")
 	public void run(IAction action) {
 		if (selection instanceof IStructuredSelection) {
-			for (Iterator it = ((IStructuredSelection) selection).iterator(); it
-					.hasNext();) {
+			Iterator it = ((IStructuredSelection) selection).iterator();
+			while (it.hasNext()) {
 				Object element = it.next();
 				IProject project = null;
 				if (element instanceof IProject) {
@@ -64,10 +77,9 @@ public class ToggleNatureAction implements IObjectActionDelegate {
 	}
 
 	/**
-	 * Toggles sample nature on a project
-	 * 
-	 * @param project
-	 *            to have sample nature added or removed
+	 * Toggles sample nature on a project.
+	 *
+	 * @param project to have sample nature added or removed
 	 */
 	private void toggleNature(IProject project) {
 		try {

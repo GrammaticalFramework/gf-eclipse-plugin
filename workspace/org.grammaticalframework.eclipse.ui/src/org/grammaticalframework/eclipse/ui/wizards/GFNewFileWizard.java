@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.ui.wizards;
 
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -15,6 +24,7 @@ import java.io.*;
 import org.eclipse.ui.*;
 import org.eclipse.ui.ide.IDE;
 
+// TODO: Auto-generated Javadoc
 /**
  * This is a sample new wizard. Its role is to create a new file 
  * resource in the provided container. If the container resource
@@ -28,7 +38,14 @@ import org.eclipse.ui.ide.IDE;
 
 public class GFNewFileWizard extends Wizard implements INewWizard {
 	
+	/**
+	 * The page.
+	 */
 	private GFNewFileWizardPage page;
+	
+	/**
+	 * The selection.
+	 */
 	private ISelection selection;
 
 	/**
@@ -52,6 +69,8 @@ public class GFNewFileWizard extends Wizard implements INewWizard {
 	 * This method is called when 'Finish' button is pressed in
 	 * the wizard. We will create an operation and run it
 	 * using wizard as execution context.
+	 *
+	 * @return true, if successful
 	 */
 	public boolean performFinish() {
 		final String containerName = page.getContainerName();
@@ -84,6 +103,12 @@ public class GFNewFileWizard extends Wizard implements INewWizard {
 	 * The worker method. It will find the container, create the
 	 * file if missing or just replace its contents, and open
 	 * the editor on the newly created file.
+	 *
+	 * @param containerName the container name
+	 * @param fileName the file name
+	 * @param fileContents the file contents
+	 * @param monitor the monitor
+	 * @throws CoreException the core exception
 	 */
 
 	private void doFinish(
@@ -128,6 +153,8 @@ public class GFNewFileWizard extends Wizard implements INewWizard {
 	
 	/**
 	 * We will initialize file contents with a sample text.
+	 *
+	 * @return the string
 	 */
 	
 	private String generateFileContents() {
@@ -166,6 +193,12 @@ public class GFNewFileWizard extends Wizard implements INewWizard {
 		return sb.toString();
 	}
 
+	/**
+	 * Throw core exception.
+	 *
+	 * @param message the message
+	 * @throws CoreException the core exception
+	 */
 	private void throwCoreException(String message) throws CoreException {
 		IStatus status =
 			new Status(IStatus.ERROR, "org.grammaticalframework.eclipse.ui", IStatus.OK, message, null);
@@ -175,6 +208,9 @@ public class GFNewFileWizard extends Wizard implements INewWizard {
 	/**
 	 * We will accept the selection in the workbench to see if
 	 * we can initialize from it.
+	 *
+	 * @param workbench the workbench
+	 * @param selection the selection
 	 * @see IWorkbenchWizard#init(IWorkbench, IStructuredSelection)
 	 */
 	public void init(IWorkbench workbench, IStructuredSelection selection) {

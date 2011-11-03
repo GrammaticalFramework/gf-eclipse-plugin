@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.ui.projects;
 
 import java.net.URI;
@@ -17,6 +26,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.grammaticalframework.eclipse.ui.natures.GFProjectNature;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
  * Based on: http://cvalcarcel.wordpress.com/2009/07/26/writing-an-eclipse-plug-in-part-4-create-a-custom-project-in-eclipse-new-project-wizard-the-behavior/
  * @author John J. Camilleri
@@ -26,12 +36,11 @@ public class GFProjectSupport {
 	
     /**
      * For this marvelous project we need to: - create the default Eclipse
-     * project - add the custom project nature - create the folder structure
-     * 
-     * @param projectName
-     * @param location
-     * @param natureId
-     * @return
+     * project - add the custom project nature - create the folder structure.
+     *
+     * @param projectName the project name
+     * @param location the location
+     * @return the i project
      */
     public static IProject createProject(String projectName, URI location) {
         Assert.isNotNull(projectName);
@@ -57,11 +66,12 @@ public class GFProjectSupport {
     }
 
 	/**
-     * Just do the basics: create a basic project.
-     * 
-     * @param location
-     * @param projectName
-     */
+	 * Just do the basics: create a basic project.
+	 *
+	 * @param projectName the project name
+	 * @param location the location
+	 * @return the i project
+	 */
     private static IProject createBaseProject(String projectName, URI location) {
         // it is acceptable to use the ResourcesPlugin class
         IProject newProject = ResourcesPlugin.getWorkspace().getRoot().getProject(projectName);
@@ -87,6 +97,12 @@ public class GFProjectSupport {
         return newProject;
     }
 
+    /**
+     * Creates the folder.
+     *
+     * @param folder the folder
+     * @throws CoreException the core exception
+     */
     private static void createFolder(IFolder folder) throws CoreException {
         IContainer parent = folder.getParent();
         if (parent instanceof IFolder) {
@@ -100,10 +116,10 @@ public class GFProjectSupport {
     /**
      * Create a folder structure with a parent root, overlay, and a few child
      * folders.
-     * 
-     * @param newProject
-     * @param paths
-     * @throws CoreException
+     *
+     * @param newProject the new project
+     * @param paths the paths
+     * @throws CoreException the core exception
      */
     private static void addToProjectStructure(IProject newProject, String[] paths) throws CoreException {
         for (String path : paths) {
@@ -112,6 +128,12 @@ public class GFProjectSupport {
         }
     }
     
+    /**
+     * Adds the nature.
+     *
+     * @param project the project
+     * @throws CoreException the core exception
+     */
     private static void addNature(IProject project) throws CoreException {
     	
 //		// Refer: http://www.eclipse.org/forums/index.php/m/547428/
@@ -136,10 +158,10 @@ public class GFProjectSupport {
     }
 
     /**
-     * Refer: http://wiki.eclipse.org/FAQ_How_do_I_add_a_builder_to_a_given_project%3F 
-     * 
-     * @param project
-     * @throws CoreException
+     * Refer: http://wiki.eclipse.org/FAQ_How_do_I_add_a_builder_to_a_given_project%3F
+     *
+     * @param project the project
+     * @throws CoreException the core exception
      */
     private static void addBuilder(IProject project) throws CoreException {
     	 IProjectDescription desc = project.getDescription();
@@ -160,7 +182,8 @@ public class GFProjectSupport {
     
     /**
      * Ref: http://www.eclipse.org/articles/Article-Builders/builders.html
-     * @throws CoreException
+     *
+     * @throws CoreException the core exception
      */
     private static void turnOnAutoBuild() throws CoreException {
 	   IWorkspace workspace = ResourcesPlugin.getWorkspace();

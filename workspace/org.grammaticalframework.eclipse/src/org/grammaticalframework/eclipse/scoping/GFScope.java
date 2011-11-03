@@ -1,5 +1,11 @@
 /**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
  * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
  */
 package org.grammaticalframework.eclipse.scoping;
 
@@ -15,15 +21,23 @@ import com.google.common.base.Predicate;
 import com.google.common.collect.Iterables;
 import com.google.inject.Inject;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author John J. Camilleri
+ * The Class GFScope.
  *
+ * @author John J. Camilleri
  */
 public class GFScope extends AbstractScope {
 
+	/**
+	 * The converter.
+	 */
 	@Inject
 	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
 	
+	/**
+	 * The descriptions.
+	 */
 	private final Iterable<IEObjectDescription> descriptions;
 	
 /*
@@ -47,7 +61,16 @@ public class GFScope extends AbstractScope {
 //			throw new IllegalArgumentException("descriptions may not be null");
 //		this.descriptions = descriptions;
 //	}
-	public GFScope(IScope parent, Iterable<IEObjectDescription> descriptions, Predicate<IEObjectDescription> filter, boolean ignoreCase, boolean ignoreModuleName) {
+	/**
+ * Instantiates a new gF scope.
+ *
+ * @param parent the parent
+ * @param descriptions the descriptions
+ * @param filter the filter
+ * @param ignoreCase the ignore case
+ * @param ignoreModuleName the ignore module name
+ */
+public GFScope(IScope parent, Iterable<IEObjectDescription> descriptions, Predicate<IEObjectDescription> filter, boolean ignoreCase, boolean ignoreModuleName) {
 		super(parent, ignoreCase);
 		if (descriptions == null) {
 			throw new IllegalArgumentException("descriptions may not be null");
@@ -70,6 +93,15 @@ public class GFScope extends AbstractScope {
 	}
 	
 	// Overwrite qualified module names with an alias
+	/**
+	 * Instantiates a new gF scope.
+	 *
+	 * @param parent the parent
+	 * @param descriptions the descriptions
+	 * @param filter the filter
+	 * @param ignoreCase the ignore case
+	 * @param moduleAlias the module alias
+	 */
 	public GFScope(IScope parent, Iterable<IEObjectDescription> descriptions, Predicate<IEObjectDescription> filter, boolean ignoreCase, final String moduleAlias) {
 		super(parent, ignoreCase);
 		if (descriptions == null) {
@@ -90,6 +122,9 @@ public class GFScope extends AbstractScope {
 		});
 	}
 	
+	/* (non-Javadoc)
+	 * @see org.eclipse.xtext.scoping.impl.AbstractScope#getAllLocalElements()
+	 */
 	@Override
 	protected Iterable<IEObjectDescription> getAllLocalElements() {
 		return descriptions;

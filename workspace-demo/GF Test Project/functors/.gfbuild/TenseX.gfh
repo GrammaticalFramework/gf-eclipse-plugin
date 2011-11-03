@@ -1,0 +1,21 @@
+concrete TenseX of Tense = CommonX ** open (ParamX = ParamX) in {
+  flags
+    coding = "latin1" ;
+  -- ind AdA = CommonX ;
+  -- ind AdN = CommonX ;
+  -- ind AdV = CommonX ;
+  -- ind Adv = CommonX ;
+  -- ind Ant = CommonX ;
+  -- ind CAdv = CommonX ;
+  -- ind IAdv = CommonX ;
+  -- ind Interj = CommonX ;
+  -- ind PConj = CommonX ;
+  -- ind Phr = CommonX ;
+  -- ind Pol = CommonX ;
+  -- ind SC = CommonX ;
+  -- ind Temp = CommonX ;
+  -- ind Tense = CommonX ;
+  -- ind Text = CommonX ;
+  -- ind Utt = CommonX ;
+  -- ind Voc = CommonX ;
+}

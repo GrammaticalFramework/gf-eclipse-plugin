@@ -1,0 +1,21 @@
+concrete CommonX of Common = open (ParamX = ParamX) in {
+  flags
+    coding = "latin1" ;
+  lincat AdA = {s : Str} ;
+  lincat AdN = {s : Str} ;
+  lincat AdV = {s : Str} ;
+  lincat Adv = {s : Str} ;
+  lincat Ant = {s : Str; a : ParamX.Anteriority} ;
+  lincat CAdv = {s : Str; p : Str} ;
+  lincat IAdv = {s : Str} ;
+  lincat Interj = {s : Str} ;
+  lincat PConj = {s : Str} ;
+  lincat Phr = {s : Str} ;
+  lincat Pol = {s : Str; p : ParamX.Polarity} ;
+  lincat SC = {s : Str} ;
+  lincat Temp = {s : Str; a : ParamX.Anteriority; t : ParamX.Tense} ;
+  lincat Tense = {s : Str; t : ParamX.Tense} ;
+  lincat Text = {s : Str} ;
+  lincat Utt = {s : Str} ;
+  lincat Voc = {s : Str} ;
+}

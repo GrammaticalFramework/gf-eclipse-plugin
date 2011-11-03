@@ -1,0 +1,26 @@
+instance LexFoodsGer of LexFoods = open (SyntaxGer = SyntaxGer),(ParadigmsGer = ParadigmsGer) in {
+  flags
+    coding = "utf8" ;
+  oper boring_A : {s : ParamX.Degree => ResGer.AForm => Str;
+                   lock_A : {}} ;
+  oper cheese_N : {s : ParamX.Number => ResGer.Case => Str;
+                   g : ResGer.Gender; lock_N : {}} ;
+  oper delicious_A : {s : ParamX.Degree => ResGer.AForm => Str;
+                      lock_A : {}} ;
+  oper expensive_A : {s : ParamX.Degree => ResGer.AForm => Str;
+                      lock_A : {}} ;
+  oper fish_N : {s : ParamX.Number => ResGer.Case => Str;
+                 g : ResGer.Gender; lock_N : {}} ;
+  oper fresh_A : {s : ParamX.Degree => ResGer.AForm => Str;
+                  lock_A : {}} ;
+  oper italian_A : {s : ParamX.Degree => ResGer.AForm => Str;
+                    lock_A : {}} ;
+  oper pizza_N : {s : ParamX.Number => ResGer.Case => Str;
+                  g : ResGer.Gender; lock_N : {}} ;
+  oper testy_A : {s : ParamX.Degree => ResGer.AForm => Str;
+                  lock_A : {}} ;
+  oper warm_A : {s : ParamX.Degree => ResGer.AForm => Str;
+                 lock_A : {}} ;
+  oper wine_N : {s : ParamX.Number => ResGer.Case => Str;
+                 g : ResGer.Gender; lock_N : {}} ;
+}

@@ -1,8 +1,20 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 
 package org.grammaticalframework.eclipse.ui.quickfix;
 
 import org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider;
 
+/**
+ * The Class GFQuickfixProvider.
+ */
 public class GFQuickfixProvider extends DefaultQuickfixProvider {
 
 //	@Fix(MyJavaValidator.INVALID_NAME)

@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.builder;
 
 import java.io.BufferedReader;
@@ -21,6 +30,7 @@ import org.grammaticalframework.eclipse.GFPreferences;
 
 import org.apache.log4j.Logger;
 
+// TODO: Auto-generated Javadoc
 /**
  * Custom GF builder, yeah!
  * Some refs..
@@ -36,16 +46,35 @@ import org.apache.log4j.Logger;
  */
 public class GFBuilder extends IncrementalProjectBuilder {
 
+	/**
+	 * The Constant BUILDER_ID.
+	 */
 	public static final String BUILDER_ID = "org.grammaticalframework.eclipse.ui.build.GFBuilderID"; //$NON-NLS-1$
 
+	/**
+	 * The Constant BUILD_FOLDER.
+	 */
 	public static final String BUILD_FOLDER = ".gfbuild"; //$NON-NLS-1$
 
+	/**
+	 * The Constant USE_INDIVIDUAL_FOLDERS.
+	 */
 	public static final Boolean USE_INDIVIDUAL_FOLDERS = false;
 
+	/**
+	 * The GF paths.
+	 */
 	private String gfPath;
+	private String gfLibPath;
 
+	/**
+	 * The Constant log.
+	 */
 	private static final Logger log = Logger.getLogger(GFBuilder.class);
 	
+	/* (non-Javadoc)
+	 * @see org.eclipse.core.resources.IncrementalProjectBuilder#build(int, java.util.Map, org.eclipse.core.runtime.IProgressMonitor)
+	 */
 	@Override
 	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws CoreException {
 		// Get some prefs
@@ -54,6 +83,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			log.error("Error during build: GF path not specified.");
 			return null;
 		}
+		gfLibPath = GFPreferences.getString(GFPreferences.GF_LIB_PATH);
 		
 		if (kind == IncrementalProjectBuilder.FULL_BUILD) {
 			fullBuild(monitor);
@@ -68,6 +98,12 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		return null;
 	}
 
+	/**
+	 * Incremental build.
+	 *
+	 * @param delta the delta
+	 * @param monitor the monitor
+	 */
 	private void incrementalBuild(IResourceDelta delta, IProgressMonitor monitor) {
 		log.info("Incremental build on " + delta.getResource().getName());
 		try {
@@ -97,6 +133,12 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 	}
 
+	/**
+	 * Full build.
+	 *
+	 * @param monitor the monitor
+	 * @throws CoreException the core exception
+	 */
 	private void fullBuild(IProgressMonitor monitor) throws CoreException {
 		log.info("Full build on " + getProject().getName());
 		recursiveDispatcher(getProject().members(), new CallableOnResource() {
@@ -113,6 +155,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		getProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 	
+	/* (non-Javadoc)
+	 * @see org.eclipse.core.resources.IncrementalProjectBuilder#clean(org.eclipse.core.runtime.IProgressMonitor)
+	 */
 	@Override
 	protected void clean(final IProgressMonitor monitor) throws CoreException {
 		log.info("Clean " + getProject().getName());
@@ -135,12 +180,24 @@ public class GFBuilder extends IncrementalProjectBuilder {
   
 	
 	/**
-	 * For recursively applying a function to an IResource 
-	 *
+	 * For recursively applying a function to an IResource.
 	 */
 	interface CallableOnResource {
+		
+		/**
+		 * Call.
+		 *
+		 * @param resource the resource
+		 */
 		public void call(IResource resource);
 	}
+	
+	/**
+	 * Recursive dispatcher.
+	 *
+	 * @param res the res
+	 * @param func the func
+	 */
 	private void recursiveDispatcher(IResource[] res, CallableOnResource func) {
 		try {
 			for (IResource r : res) {
@@ -156,9 +213,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	}
 	
 	/**
-	 * Determine if a resource should be built, based on its properties
-	 * @param resource
-	 * @return
+	 * Determine if a resource should be built, based on its properties.
+	 *
+	 * @param resource the resource
+	 * @return true, if successful
 	 */
 	private boolean shouldBuild(IResource resource) {
 		try {
@@ -168,6 +226,12 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 	}
 	
+	/**
+	 * Gets the builds the directory.
+	 *
+	 * @param file the file
+	 * @return the builds the directory
+	 */
 	private String getBuildDirectory(IFile file) {
 		String filename = file.getName();
 		if (USE_INDIVIDUAL_FOLDERS) {
@@ -190,7 +254,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * capture all the GF headers in the build subfolder.
 	 * 
 	 * TODO Share a single process for the whole build cycle to save on overheads
-	 * @param file
+	 *
+	 * @param file the file
+	 * @return true, if successful
 	 */
 	private boolean buildFile(IFile file) {
 		/* 
@@ -206,6 +272,12 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		ArrayList<String> command = new ArrayList<String>();
 		command.add(gfPath);
 		command.add("--retain");
+		
+		// Use library path in command (if supplied)
+		if (gfLibPath != null && !gfLibPath.isEmpty()) {
+			command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath));
+		}
+		
 		if (USE_INDIVIDUAL_FOLDERS) {
 			command.add(String.format("..%1$s..%1$s%2$s", java.io.File.separator, filename));
 		} else {
@@ -257,10 +329,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	}
 	
 	/**
-	 * Clean all the files in the build directory for a given file
-	 * 
-	 * @param file
-	 * @return
+	 * Clean all the files in the build directory for a given file.
+	 *
+	 * @param file the file
 	 */
 	private void cleanFile(IFile file) {
 		log.info("  Cleaning build directory for " + file.getName());

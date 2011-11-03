@@ -19,3 +19,791 @@
 [2011-11-02 17:32:07] DEBUG 
 [2011-11-02 17:32:07] DEBUG gf: This GFO file was compiled with different version of GF. Failed reading at byte position 153
 [2011-11-02 17:32:07] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 15:47:12] INFO  Incremental build on GF Test Project
+[2011-11-03 15:47:12] DEBUG                               
+[2011-11-03 15:47:12] DEBUG          *  *  *              
+[2011-11-03 15:47:12] DEBUG       *           *           
+[2011-11-03 15:47:12] DEBUG     *               *         
+[2011-11-03 15:47:12] DEBUG    *                          
+[2011-11-03 15:47:12] DEBUG    *                          
+[2011-11-03 15:47:12] DEBUG    *        * * * * * *       
+[2011-11-03 15:47:12] DEBUG    *        *         *       
+[2011-11-03 15:47:12] DEBUG     *       * * * *  *        
+[2011-11-03 15:47:12] DEBUG       *     *      *          
+[2011-11-03 15:47:12] DEBUG          *  *  *              
+[2011-11-03 15:47:12] DEBUG                               
+[2011-11-03 15:47:12] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 15:47:12] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 15:47:12] DEBUG License: see help -license.   
+[2011-11-03 15:47:12] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 15:47:12] DEBUG 
+[2011-11-03 15:47:12] DEBUG File Syntax.gf does not exist.
+[2011-11-03 15:47:12] DEBUG searched in: ../
+[2011-11-03 15:47:12] DEBUG              /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors
+[2011-11-03 15:47:12] DEBUG              /home/john/.cabal/share/gf-3.3
+[2011-11-03 15:47:12] DEBUG              /home/john/.cabal/share/gf-3.3/lib
+[2011-11-03 15:47:12] DEBUG              /home/john/.cabal/share/gf-3.2.9/lib/present
+[2011-11-03 15:47:12] DEBUG              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2011-11-03 15:47:12] DEBUG > 0 msec
+[2011-11-03 15:47:12] DEBUG > See you.
+[2011-11-03 15:47:12] DEBUG 0 msec
+[2011-11-03 15:47:12] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 15:49:03] INFO  Incremental build on GF Test Project
+[2011-11-03 15:49:03] DEBUG                               
+[2011-11-03 15:49:03] DEBUG          *  *  *              
+[2011-11-03 15:49:03] DEBUG       *           *           
+[2011-11-03 15:49:03] DEBUG     *               *         
+[2011-11-03 15:49:03] DEBUG    *                          
+[2011-11-03 15:49:03] DEBUG    *                          
+[2011-11-03 15:49:03] DEBUG    *        * * * * * *       
+[2011-11-03 15:49:03] DEBUG    *        *         *       
+[2011-11-03 15:49:03] DEBUG     *       * * * *  *        
+[2011-11-03 15:49:03] DEBUG       *     *      *          
+[2011-11-03 15:49:03] DEBUG          *  *  *              
+[2011-11-03 15:49:03] DEBUG                               
+[2011-11-03 15:49:03] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 15:49:03] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 15:49:03] DEBUG License: see help -license.   
+[2011-11-03 15:49:03] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 15:49:03] DEBUG 
+[2011-11-03 15:49:03] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gfo
+[2011-11-03 15:49:03] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gfo
+[2011-11-03 15:49:03] DEBUG > wrote LexFoodsEng.gfh
+[2011-11-03 15:49:03] DEBUG wrote SyntaxEng.gfh
+[2011-11-03 15:49:03] DEBUG wrote CombinatorsEng.gfh
+[2011-11-03 15:49:03] DEBUG wrote ConstructorsEng.gfh
+[2011-11-03 15:49:03] DEBUG wrote GrammarEng.gfh
+[2011-11-03 15:49:03] DEBUG wrote TenseX.gfh
+[2011-11-03 15:49:03] DEBUG wrote IdiomEng.gfh
+[2011-11-03 15:49:03] DEBUG wrote StructuralEng.gfh
+[2011-11-03 15:49:03] DEBUG wrote ConstructX.gfh
+[2011-11-03 15:49:03] DEBUG wrote MakeStructuralEng.gfh
+[2011-11-03 15:49:03] DEBUG wrote ParadigmsEng.gfh
+[2011-11-03 15:49:03] DEBUG wrote TextX.gfh
+[2011-11-03 15:49:03] DEBUG wrote PhraseEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote ConjunctionEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote Coordination.gfh
+[2011-11-03 15:49:04] DEBUG wrote RelativeEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote QuestionEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote SentenceEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote NumeralEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote AdverbEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote AdjectiveEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote VerbEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote NounEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote MorphoEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote CatEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote ResEng.gfh
+[2011-11-03 15:49:04] DEBUG wrote CommonX.gfh
+[2011-11-03 15:49:04] DEBUG wrote ParamX.gfh
+[2011-11-03 15:49:04] DEBUG wrote Prelude.gfh
+[2011-11-03 15:49:04] DEBUG wrote Predef.gfh
+[2011-11-03 15:49:04] DEBUG wrote LexFoods.gfh
+[2011-11-03 15:49:04] DEBUG wrote Syntax.gfh
+[2011-11-03 15:49:04] DEBUG wrote Combinators.gfh
+[2011-11-03 15:49:04] DEBUG wrote Constructors.gfh
+[2011-11-03 15:49:04] DEBUG wrote Grammar.gfh
+[2011-11-03 15:49:04] DEBUG wrote Transfer.gfh
+[2011-11-03 15:49:04] DEBUG wrote NumeralTransfer.gfh
+[2011-11-03 15:49:04] DEBUG wrote Tense.gfh
+[2011-11-03 15:49:04] DEBUG wrote Idiom.gfh
+[2011-11-03 15:49:04] DEBUG wrote Text.gfh
+[2011-11-03 15:49:04] DEBUG wrote Phrase.gfh
+[2011-11-03 15:49:04] DEBUG wrote Conjunction.gfh
+[2011-11-03 15:49:04] DEBUG wrote Relative.gfh
+[2011-11-03 15:49:04] DEBUG wrote Question.gfh
+[2011-11-03 15:49:04] DEBUG wrote Sentence.gfh
+[2011-11-03 15:49:04] DEBUG wrote Numeral.gfh
+[2011-11-03 15:49:04] DEBUG wrote Adverb.gfh
+[2011-11-03 15:49:04] DEBUG wrote Adjective.gfh
+[2011-11-03 15:49:04] DEBUG wrote Verb.gfh
+[2011-11-03 15:49:04] DEBUG wrote Noun.gfh
+[2011-11-03 15:49:04] DEBUG wrote Structural.gfh
+[2011-11-03 15:49:04] DEBUG wrote Cat.gfh
+[2011-11-03 15:49:04] DEBUG wrote Common.gfh
+[2011-11-03 15:49:04] DEBUG 88 msec
+[2011-11-03 15:49:04] DEBUG > See you.
+[2011-11-03 15:49:04] DEBUG 0 msec
+[2011-11-03 15:49:04] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 15:49:19] INFO  Incremental build on GF Test Project
+[2011-11-03 15:49:19] DEBUG                               
+[2011-11-03 15:49:19] DEBUG          *  *  *              
+[2011-11-03 15:49:19] DEBUG       *           *           
+[2011-11-03 15:49:19] DEBUG     *               *         
+[2011-11-03 15:49:19] DEBUG    *                          
+[2011-11-03 15:49:19] DEBUG    *                          
+[2011-11-03 15:49:19] DEBUG    *        * * * * * *       
+[2011-11-03 15:49:19] DEBUG    *        *         *       
+[2011-11-03 15:49:19] DEBUG     *       * * * *  *        
+[2011-11-03 15:49:19] DEBUG       *     *      *          
+[2011-11-03 15:49:19] DEBUG          *  *  *              
+[2011-11-03 15:49:19] DEBUG                               
+[2011-11-03 15:49:19] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 15:49:19] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 15:49:19] DEBUG License: see help -license.   
+[2011-11-03 15:49:19] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 15:49:19] DEBUG 
+[2011-11-03 15:49:19] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gfo
+[2011-11-03 15:49:20] DEBUG > wrote LexFoodsEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote SyntaxEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote CombinatorsEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote ConstructorsEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote GrammarEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote TenseX.gfh
+[2011-11-03 15:49:20] DEBUG wrote IdiomEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote StructuralEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote ConstructX.gfh
+[2011-11-03 15:49:20] DEBUG wrote MakeStructuralEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote ParadigmsEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote TextX.gfh
+[2011-11-03 15:49:20] DEBUG wrote PhraseEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote ConjunctionEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote Coordination.gfh
+[2011-11-03 15:49:20] DEBUG wrote RelativeEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote QuestionEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote SentenceEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote NumeralEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote AdverbEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote AdjectiveEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote VerbEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote NounEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote MorphoEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote CatEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote ResEng.gfh
+[2011-11-03 15:49:20] DEBUG wrote CommonX.gfh
+[2011-11-03 15:49:20] DEBUG wrote ParamX.gfh
+[2011-11-03 15:49:20] DEBUG wrote Prelude.gfh
+[2011-11-03 15:49:20] DEBUG wrote Predef.gfh
+[2011-11-03 15:49:20] DEBUG wrote LexFoods.gfh
+[2011-11-03 15:49:20] DEBUG wrote Syntax.gfh
+[2011-11-03 15:49:20] DEBUG wrote Combinators.gfh
+[2011-11-03 15:49:20] DEBUG wrote Constructors.gfh
+[2011-11-03 15:49:20] DEBUG wrote Grammar.gfh
+[2011-11-03 15:49:20] DEBUG wrote Transfer.gfh
+[2011-11-03 15:49:20] DEBUG wrote NumeralTransfer.gfh
+[2011-11-03 15:49:20] DEBUG wrote Tense.gfh
+[2011-11-03 15:49:20] DEBUG wrote Idiom.gfh
+[2011-11-03 15:49:20] DEBUG wrote Text.gfh
+[2011-11-03 15:49:20] DEBUG wrote Phrase.gfh
+[2011-11-03 15:49:20] DEBUG wrote Conjunction.gfh
+[2011-11-03 15:49:20] DEBUG wrote Relative.gfh
+[2011-11-03 15:49:20] DEBUG wrote Question.gfh
+[2011-11-03 15:49:20] DEBUG wrote Sentence.gfh
+[2011-11-03 15:49:20] DEBUG wrote Numeral.gfh
+[2011-11-03 15:49:20] DEBUG wrote Adverb.gfh
+[2011-11-03 15:49:20] DEBUG wrote Adjective.gfh
+[2011-11-03 15:49:20] DEBUG wrote Verb.gfh
+[2011-11-03 15:49:20] DEBUG wrote Noun.gfh
+[2011-11-03 15:49:20] DEBUG wrote Structural.gfh
+[2011-11-03 15:49:20] DEBUG wrote Cat.gfh
+[2011-11-03 15:49:20] DEBUG wrote Common.gfh
+[2011-11-03 15:49:20] DEBUG 84 msec
+[2011-11-03 15:49:20] DEBUG > See you.
+[2011-11-03 15:49:20] DEBUG 0 msec
+[2011-11-03 15:49:20] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 15:49:27] INFO  Incremental build on GF Test Project
+[2011-11-03 15:49:27] DEBUG                               
+[2011-11-03 15:49:27] DEBUG          *  *  *              
+[2011-11-03 15:49:27] DEBUG       *           *           
+[2011-11-03 15:49:27] DEBUG     *               *         
+[2011-11-03 15:49:27] DEBUG    *                          
+[2011-11-03 15:49:27] DEBUG    *                          
+[2011-11-03 15:49:27] DEBUG    *        * * * * * *       
+[2011-11-03 15:49:27] DEBUG    *        *         *       
+[2011-11-03 15:49:27] DEBUG     *       * * * *  *        
+[2011-11-03 15:49:27] DEBUG       *     *      *          
+[2011-11-03 15:49:27] DEBUG          *  *  *              
+[2011-11-03 15:49:27] DEBUG                               
+[2011-11-03 15:49:27] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 15:49:27] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 15:49:27] DEBUG License: see help -license.   
+[2011-11-03 15:49:27] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 15:49:27] DEBUG 
+[2011-11-03 15:49:27] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gfo
+[2011-11-03 15:49:27] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gfo
+[2011-11-03 15:49:27] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsEng.gfo
+[2011-11-03 15:49:27] DEBUG > wrote FoodsEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote LexFoodsEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote SyntaxEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote CombinatorsEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote ConstructorsEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote GrammarEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote TenseX.gfh
+[2011-11-03 15:49:27] DEBUG wrote IdiomEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote StructuralEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote ConstructX.gfh
+[2011-11-03 15:49:27] DEBUG wrote MakeStructuralEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote ParadigmsEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote TextX.gfh
+[2011-11-03 15:49:27] DEBUG wrote PhraseEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote ConjunctionEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote Coordination.gfh
+[2011-11-03 15:49:27] DEBUG wrote RelativeEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote QuestionEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote SentenceEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote NumeralEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote AdverbEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote AdjectiveEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote VerbEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote NounEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote MorphoEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote CatEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote ResEng.gfh
+[2011-11-03 15:49:27] DEBUG wrote CommonX.gfh
+[2011-11-03 15:49:27] DEBUG wrote ParamX.gfh
+[2011-11-03 15:49:27] DEBUG wrote Prelude.gfh
+[2011-11-03 15:49:27] DEBUG wrote Predef.gfh
+[2011-11-03 15:49:27] DEBUG wrote FoodsI.gfh
+[2011-11-03 15:49:27] DEBUG wrote LexFoods.gfh
+[2011-11-03 15:49:27] DEBUG wrote Syntax.gfh
+[2011-11-03 15:49:27] DEBUG wrote Combinators.gfh
+[2011-11-03 15:49:27] DEBUG wrote Constructors.gfh
+[2011-11-03 15:49:27] DEBUG wrote Grammar.gfh
+[2011-11-03 15:49:27] DEBUG wrote Transfer.gfh
+[2011-11-03 15:49:27] DEBUG wrote NumeralTransfer.gfh
+[2011-11-03 15:49:27] DEBUG wrote Tense.gfh
+[2011-11-03 15:49:27] DEBUG wrote Idiom.gfh
+[2011-11-03 15:49:27] DEBUG wrote Text.gfh
+[2011-11-03 15:49:27] DEBUG wrote Phrase.gfh
+[2011-11-03 15:49:27] DEBUG wrote Conjunction.gfh
+[2011-11-03 15:49:27] DEBUG wrote Relative.gfh
+[2011-11-03 15:49:27] DEBUG wrote Question.gfh
+[2011-11-03 15:49:27] DEBUG wrote Sentence.gfh
+[2011-11-03 15:49:27] DEBUG wrote Numeral.gfh
+[2011-11-03 15:49:27] DEBUG wrote Adverb.gfh
+[2011-11-03 15:49:27] DEBUG wrote Adjective.gfh
+[2011-11-03 15:49:27] DEBUG wrote Verb.gfh
+[2011-11-03 15:49:27] DEBUG wrote Noun.gfh
+[2011-11-03 15:49:27] DEBUG wrote Structural.gfh
+[2011-11-03 15:49:27] DEBUG wrote Cat.gfh
+[2011-11-03 15:49:27] DEBUG wrote Common.gfh
+[2011-11-03 15:49:27] DEBUG wrote Foods.gfh
+[2011-11-03 15:49:27] DEBUG 76 msec
+[2011-11-03 15:49:27] DEBUG > See you.
+[2011-11-03 15:49:27] DEBUG 0 msec
+[2011-11-03 15:49:27] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsEng.gf
+[2011-11-03 15:49:34] INFO  Incremental build on GF Test Project
+[2011-11-03 15:49:34] DEBUG                               
+[2011-11-03 15:49:34] DEBUG          *  *  *              
+[2011-11-03 15:49:34] DEBUG       *           *           
+[2011-11-03 15:49:34] DEBUG     *               *         
+[2011-11-03 15:49:34] DEBUG    *                          
+[2011-11-03 15:49:34] DEBUG    *                          
+[2011-11-03 15:49:34] DEBUG    *        * * * * * *       
+[2011-11-03 15:49:34] DEBUG    *        *         *       
+[2011-11-03 15:49:34] DEBUG     *       * * * *  *        
+[2011-11-03 15:49:34] DEBUG       *     *      *          
+[2011-11-03 15:49:34] DEBUG          *  *  *              
+[2011-11-03 15:49:34] DEBUG                               
+[2011-11-03 15:49:34] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 15:49:34] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 15:49:34] DEBUG License: see help -license.   
+[2011-11-03 15:49:34] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 15:49:34] DEBUG 
+[2011-11-03 15:49:34] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gfo
+[2011-11-03 15:49:34] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsGer.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsGer.gfo
+[2011-11-03 15:49:34] DEBUG > wrote FoodsGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote LexFoodsGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote SyntaxGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote CombinatorsGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote ConstructorsGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote GrammarGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote TenseGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote TenseX.gfh
+[2011-11-03 15:49:34] DEBUG wrote StructuralGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote IrregGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote IrregGerAbs.gfh
+[2011-11-03 15:49:34] DEBUG wrote ConstructX.gfh
+[2011-11-03 15:49:34] DEBUG wrote MakeStructuralGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote IdiomGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote ParadigmsGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote TextX.gfh
+[2011-11-03 15:49:34] DEBUG wrote PhraseGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote ConjunctionGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote Coordination.gfh
+[2011-11-03 15:49:34] DEBUG wrote RelativeGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote QuestionGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote SentenceGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote NumeralGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote MorphoGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote AdverbGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote AdjectiveGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote VerbGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote NounGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote CatGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote ResGer.gfh
+[2011-11-03 15:49:34] DEBUG wrote CommonX.gfh
+[2011-11-03 15:49:34] DEBUG wrote ParamX.gfh
+[2011-11-03 15:49:34] DEBUG wrote Prelude.gfh
+[2011-11-03 15:49:34] DEBUG wrote Predef.gfh
+[2011-11-03 15:49:34] DEBUG wrote FoodsI.gfh
+[2011-11-03 15:49:34] DEBUG wrote LexFoods.gfh
+[2011-11-03 15:49:34] DEBUG wrote Syntax.gfh
+[2011-11-03 15:49:34] DEBUG wrote Combinators.gfh
+[2011-11-03 15:49:34] DEBUG wrote Constructors.gfh
+[2011-11-03 15:49:34] DEBUG wrote Grammar.gfh
+[2011-11-03 15:49:34] DEBUG wrote Transfer.gfh
+[2011-11-03 15:49:34] DEBUG wrote NumeralTransfer.gfh
+[2011-11-03 15:49:34] DEBUG wrote Tense.gfh
+[2011-11-03 15:49:34] DEBUG wrote Idiom.gfh
+[2011-11-03 15:49:34] DEBUG wrote Text.gfh
+[2011-11-03 15:49:34] DEBUG wrote Phrase.gfh
+[2011-11-03 15:49:34] DEBUG wrote Conjunction.gfh
+[2011-11-03 15:49:34] DEBUG wrote Relative.gfh
+[2011-11-03 15:49:34] DEBUG wrote Question.gfh
+[2011-11-03 15:49:34] DEBUG wrote Sentence.gfh
+[2011-11-03 15:49:34] DEBUG wrote Numeral.gfh
+[2011-11-03 15:49:34] DEBUG wrote Adverb.gfh
+[2011-11-03 15:49:34] DEBUG wrote Adjective.gfh
+[2011-11-03 15:49:34] DEBUG wrote Verb.gfh
+[2011-11-03 15:49:34] DEBUG wrote Noun.gfh
+[2011-11-03 15:49:34] DEBUG wrote Structural.gfh
+[2011-11-03 15:49:34] DEBUG wrote Cat.gfh
+[2011-11-03 15:49:34] DEBUG wrote Common.gfh
+[2011-11-03 15:49:34] DEBUG wrote Foods.gfh
+[2011-11-03 15:49:34] DEBUG 92 msec
+[2011-11-03 15:49:34] DEBUG > See you.
+[2011-11-03 15:49:34] DEBUG 0 msec
+[2011-11-03 15:49:34] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsGer.gf
+[2011-11-03 15:50:18] INFO  Incremental build on GF Test Project
+[2011-11-03 15:50:18] DEBUG                               
+[2011-11-03 15:50:18] DEBUG          *  *  *              
+[2011-11-03 15:50:18] DEBUG       *           *           
+[2011-11-03 15:50:18] DEBUG     *               *         
+[2011-11-03 15:50:18] DEBUG    *                          
+[2011-11-03 15:50:18] DEBUG    *                          
+[2011-11-03 15:50:18] DEBUG    *        * * * * * *       
+[2011-11-03 15:50:18] DEBUG    *        *         *       
+[2011-11-03 15:50:18] DEBUG     *       * * * *  *        
+[2011-11-03 15:50:18] DEBUG       *     *      *          
+[2011-11-03 15:50:18] DEBUG          *  *  *              
+[2011-11-03 15:50:18] DEBUG                               
+[2011-11-03 15:50:18] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 15:50:18] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 15:50:18] DEBUG License: see help -license.   
+[2011-11-03 15:50:18] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 15:50:18] DEBUG 
+[2011-11-03 15:50:18] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsGer.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsGer.gfo
+[2011-11-03 15:50:18] DEBUG > wrote FoodsGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote LexFoodsGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote SyntaxGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote CombinatorsGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote ConstructorsGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote GrammarGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote TenseGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote TenseX.gfh
+[2011-11-03 15:50:18] DEBUG wrote StructuralGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote IrregGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote IrregGerAbs.gfh
+[2011-11-03 15:50:18] DEBUG wrote ConstructX.gfh
+[2011-11-03 15:50:18] DEBUG wrote MakeStructuralGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote IdiomGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote ParadigmsGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote TextX.gfh
+[2011-11-03 15:50:18] DEBUG wrote PhraseGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote ConjunctionGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote Coordination.gfh
+[2011-11-03 15:50:18] DEBUG wrote RelativeGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote QuestionGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote SentenceGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote NumeralGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote MorphoGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote AdverbGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote AdjectiveGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote VerbGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote NounGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote CatGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote ResGer.gfh
+[2011-11-03 15:50:18] DEBUG wrote CommonX.gfh
+[2011-11-03 15:50:18] DEBUG wrote ParamX.gfh
+[2011-11-03 15:50:18] DEBUG wrote Prelude.gfh
+[2011-11-03 15:50:18] DEBUG wrote Predef.gfh
+[2011-11-03 15:50:18] DEBUG wrote FoodsI.gfh
+[2011-11-03 15:50:18] DEBUG wrote LexFoods.gfh
+[2011-11-03 15:50:18] DEBUG wrote Syntax.gfh
+[2011-11-03 15:50:18] DEBUG wrote Combinators.gfh
+[2011-11-03 15:50:18] DEBUG wrote Constructors.gfh
+[2011-11-03 15:50:18] DEBUG wrote Grammar.gfh
+[2011-11-03 15:50:18] DEBUG wrote Transfer.gfh
+[2011-11-03 15:50:18] DEBUG wrote NumeralTransfer.gfh
+[2011-11-03 15:50:18] DEBUG wrote Tense.gfh
+[2011-11-03 15:50:18] DEBUG wrote Idiom.gfh
+[2011-11-03 15:50:18] DEBUG wrote Text.gfh
+[2011-11-03 15:50:18] DEBUG wrote Phrase.gfh
+[2011-11-03 15:50:18] DEBUG wrote Conjunction.gfh
+[2011-11-03 15:50:18] DEBUG wrote Relative.gfh
+[2011-11-03 15:50:18] DEBUG wrote Question.gfh
+[2011-11-03 15:50:18] DEBUG wrote Sentence.gfh
+[2011-11-03 15:50:18] DEBUG wrote Numeral.gfh
+[2011-11-03 15:50:18] DEBUG wrote Adverb.gfh
+[2011-11-03 15:50:18] DEBUG wrote Adjective.gfh
+[2011-11-03 15:50:18] DEBUG wrote Verb.gfh
+[2011-11-03 15:50:18] DEBUG wrote Noun.gfh
+[2011-11-03 15:50:18] DEBUG wrote Structural.gfh
+[2011-11-03 15:50:18] DEBUG wrote Cat.gfh
+[2011-11-03 15:50:18] DEBUG wrote Common.gfh
+[2011-11-03 15:50:18] DEBUG wrote Foods.gfh
+[2011-11-03 15:50:18] DEBUG 92 msec
+[2011-11-03 15:50:18] DEBUG > See you.
+[2011-11-03 15:50:18] DEBUG 0 msec
+[2011-11-03 15:50:18] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsGer.gf
+[2011-11-03 15:50:32] INFO  Incremental build on GF Test Project
+[2011-11-03 15:50:32] DEBUG                               
+[2011-11-03 15:50:32] DEBUG          *  *  *              
+[2011-11-03 15:50:32] DEBUG       *           *           
+[2011-11-03 15:50:32] DEBUG     *               *         
+[2011-11-03 15:50:32] DEBUG    *                          
+[2011-11-03 15:50:32] DEBUG    *                          
+[2011-11-03 15:50:32] DEBUG    *        * * * * * *       
+[2011-11-03 15:50:32] DEBUG    *        *         *       
+[2011-11-03 15:50:32] DEBUG     *       * * * *  *        
+[2011-11-03 15:50:32] DEBUG       *     *      *          
+[2011-11-03 15:50:32] DEBUG          *  *  *              
+[2011-11-03 15:50:32] DEBUG                               
+[2011-11-03 15:50:32] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 15:50:32] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 15:50:32] DEBUG License: see help -license.   
+[2011-11-03 15:50:32] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 15:50:32] DEBUG 
+[2011-11-03 15:50:32] DEBUG File Syntax.gf does not exist.
+[2011-11-03 15:50:32] DEBUG searched in: ../
+[2011-11-03 15:50:32] DEBUG              /home/john/.cabal/share/gf-3.3/lib
+[2011-11-03 15:50:32] DEBUG              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2011-11-03 15:50:32] DEBUG > 0 msec
+[2011-11-03 15:50:32] DEBUG > See you.
+[2011-11-03 15:50:32] DEBUG 0 msec
+[2011-11-03 15:50:32] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 15:50:42] INFO  Incremental build on GF Test Project
+[2011-11-03 15:50:42] DEBUG                               
+[2011-11-03 15:50:42] DEBUG          *  *  *              
+[2011-11-03 15:50:42] DEBUG       *           *           
+[2011-11-03 15:50:42] DEBUG     *               *         
+[2011-11-03 15:50:42] DEBUG    *                          
+[2011-11-03 15:50:42] DEBUG    *                          
+[2011-11-03 15:50:42] DEBUG    *        * * * * * *       
+[2011-11-03 15:50:42] DEBUG    *        *         *       
+[2011-11-03 15:50:42] DEBUG     *       * * * *  *        
+[2011-11-03 15:50:42] DEBUG       *     *      *          
+[2011-11-03 15:50:42] DEBUG          *  *  *              
+[2011-11-03 15:50:42] DEBUG                               
+[2011-11-03 15:50:42] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 15:50:42] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 15:50:42] DEBUG License: see help -license.   
+[2011-11-03 15:50:42] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 15:50:42] DEBUG 
+[2011-11-03 15:50:42] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gfo
+[2011-11-03 15:50:42] DEBUG > wrote LexFoodsGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote SyntaxGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote CombinatorsGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote ConstructorsGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote GrammarGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote TenseGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote TenseX.gfh
+[2011-11-03 15:50:42] DEBUG wrote StructuralGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote IrregGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote IrregGerAbs.gfh
+[2011-11-03 15:50:42] DEBUG wrote ConstructX.gfh
+[2011-11-03 15:50:42] DEBUG wrote MakeStructuralGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote IdiomGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote ParadigmsGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote TextX.gfh
+[2011-11-03 15:50:42] DEBUG wrote PhraseGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote ConjunctionGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote Coordination.gfh
+[2011-11-03 15:50:42] DEBUG wrote RelativeGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote QuestionGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote SentenceGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote NumeralGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote MorphoGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote AdverbGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote AdjectiveGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote VerbGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote NounGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote CatGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote ResGer.gfh
+[2011-11-03 15:50:42] DEBUG wrote CommonX.gfh
+[2011-11-03 15:50:42] DEBUG wrote ParamX.gfh
+[2011-11-03 15:50:42] DEBUG wrote Prelude.gfh
+[2011-11-03 15:50:42] DEBUG wrote Predef.gfh
+[2011-11-03 15:50:42] DEBUG wrote LexFoods.gfh
+[2011-11-03 15:50:42] DEBUG wrote Syntax.gfh
+[2011-11-03 15:50:42] DEBUG wrote Combinators.gfh
+[2011-11-03 15:50:42] DEBUG wrote Constructors.gfh
+[2011-11-03 15:50:42] DEBUG wrote Grammar.gfh
+[2011-11-03 15:50:42] DEBUG wrote Transfer.gfh
+[2011-11-03 15:50:42] DEBUG wrote NumeralTransfer.gfh
+[2011-11-03 15:50:42] DEBUG wrote Tense.gfh
+[2011-11-03 15:50:42] DEBUG wrote Idiom.gfh
+[2011-11-03 15:50:42] DEBUG wrote Text.gfh
+[2011-11-03 15:50:42] DEBUG wrote Phrase.gfh
+[2011-11-03 15:50:42] DEBUG wrote Conjunction.gfh
+[2011-11-03 15:50:42] DEBUG wrote Relative.gfh
+[2011-11-03 15:50:42] DEBUG wrote Question.gfh
+[2011-11-03 15:50:42] DEBUG wrote Sentence.gfh
+[2011-11-03 15:50:42] DEBUG wrote Numeral.gfh
+[2011-11-03 15:50:42] DEBUG wrote Adverb.gfh
+[2011-11-03 15:50:42] DEBUG wrote Adjective.gfh
+[2011-11-03 15:50:42] DEBUG wrote Verb.gfh
+[2011-11-03 15:50:42] DEBUG wrote Noun.gfh
+[2011-11-03 15:50:42] DEBUG wrote Structural.gfh
+[2011-11-03 15:50:42] DEBUG wrote Cat.gfh
+[2011-11-03 15:50:42] DEBUG wrote Common.gfh
+[2011-11-03 15:50:42] DEBUG 92 msec
+[2011-11-03 15:50:42] DEBUG > See you.
+[2011-11-03 15:50:42] DEBUG 0 msec
+[2011-11-03 15:50:42] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gf
+[2011-11-03 15:50:47] INFO  Incremental build on GF Test Project
+[2011-11-03 15:50:47] DEBUG                               
+[2011-11-03 15:50:47] DEBUG          *  *  *              
+[2011-11-03 15:50:47] DEBUG       *           *           
+[2011-11-03 15:50:47] DEBUG     *               *         
+[2011-11-03 15:50:47] DEBUG    *                          
+[2011-11-03 15:50:47] DEBUG    *                          
+[2011-11-03 15:50:47] DEBUG    *        * * * * * *       
+[2011-11-03 15:50:47] DEBUG    *        *         *       
+[2011-11-03 15:50:47] DEBUG     *       * * * *  *        
+[2011-11-03 15:50:47] DEBUG       *     *      *          
+[2011-11-03 15:50:47] DEBUG          *  *  *              
+[2011-11-03 15:50:47] DEBUG                               
+[2011-11-03 15:50:47] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 15:50:47] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 15:50:47] DEBUG License: see help -license.   
+[2011-11-03 15:50:47] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 15:50:47] DEBUG 
+[2011-11-03 15:50:47] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gfo
+[2011-11-03 15:50:47] DEBUG > wrote LexFoodsEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote SyntaxEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote CombinatorsEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote ConstructorsEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote GrammarEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote TenseX.gfh
+[2011-11-03 15:50:47] DEBUG wrote IdiomEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote StructuralEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote ConstructX.gfh
+[2011-11-03 15:50:47] DEBUG wrote MakeStructuralEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote ParadigmsEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote TextX.gfh
+[2011-11-03 15:50:47] DEBUG wrote PhraseEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote ConjunctionEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote Coordination.gfh
+[2011-11-03 15:50:47] DEBUG wrote RelativeEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote QuestionEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote SentenceEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote NumeralEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote AdverbEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote AdjectiveEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote VerbEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote NounEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote MorphoEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote CatEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote ResEng.gfh
+[2011-11-03 15:50:47] DEBUG wrote CommonX.gfh
+[2011-11-03 15:50:47] DEBUG wrote ParamX.gfh
+[2011-11-03 15:50:47] DEBUG wrote Prelude.gfh
+[2011-11-03 15:50:47] DEBUG wrote Predef.gfh
+[2011-11-03 15:50:47] DEBUG wrote LexFoods.gfh
+[2011-11-03 15:50:47] DEBUG wrote Syntax.gfh
+[2011-11-03 15:50:47] DEBUG wrote Combinators.gfh
+[2011-11-03 15:50:47] DEBUG wrote Constructors.gfh
+[2011-11-03 15:50:47] DEBUG wrote Grammar.gfh
+[2011-11-03 15:50:47] DEBUG wrote Transfer.gfh
+[2011-11-03 15:50:47] DEBUG wrote NumeralTransfer.gfh
+[2011-11-03 15:50:47] DEBUG wrote Tense.gfh
+[2011-11-03 15:50:47] DEBUG wrote Idiom.gfh
+[2011-11-03 15:50:47] DEBUG wrote Text.gfh
+[2011-11-03 15:50:47] DEBUG wrote Phrase.gfh
+[2011-11-03 15:50:47] DEBUG wrote Conjunction.gfh
+[2011-11-03 15:50:47] DEBUG wrote Relative.gfh
+[2011-11-03 15:50:47] DEBUG wrote Question.gfh
+[2011-11-03 15:50:47] DEBUG wrote Sentence.gfh
+[2011-11-03 15:50:47] DEBUG wrote Numeral.gfh
+[2011-11-03 15:50:47] DEBUG wrote Adverb.gfh
+[2011-11-03 15:50:47] DEBUG wrote Adjective.gfh
+[2011-11-03 15:50:47] DEBUG wrote Verb.gfh
+[2011-11-03 15:50:47] DEBUG wrote Noun.gfh
+[2011-11-03 15:50:47] DEBUG wrote Structural.gfh
+[2011-11-03 15:50:47] DEBUG wrote Cat.gfh
+[2011-11-03 15:50:47] DEBUG wrote Common.gfh
+[2011-11-03 15:50:47] DEBUG 84 msec
+[2011-11-03 15:50:47] DEBUG > See you.
+[2011-11-03 15:50:47] DEBUG 0 msec
+[2011-11-03 15:50:47] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:26:25] INFO  Incremental build on GF Test Project
+[2011-11-03 16:26:25] DEBUG                               
+[2011-11-03 16:26:25] DEBUG          *  *  *              
+[2011-11-03 16:26:25] DEBUG       *           *           
+[2011-11-03 16:26:25] DEBUG     *               *         
+[2011-11-03 16:26:25] DEBUG    *                          
+[2011-11-03 16:26:25] DEBUG    *                          
+[2011-11-03 16:26:25] DEBUG    *        * * * * * *       
+[2011-11-03 16:26:25] DEBUG    *        *         *       
+[2011-11-03 16:26:25] DEBUG     *       * * * *  *        
+[2011-11-03 16:26:25] DEBUG       *     *      *          
+[2011-11-03 16:26:25] DEBUG          *  *  *              
+[2011-11-03 16:26:25] DEBUG                               
+[2011-11-03 16:26:25] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 16:26:25] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 16:26:25] DEBUG License: see help -license.   
+[2011-11-03 16:26:25] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 16:26:25] DEBUG 
+[2011-11-03 16:26:25] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gfo
+[2011-11-03 16:26:25] DEBUG > wrote LexFoodsEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote SyntaxEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote CombinatorsEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote ConstructorsEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote GrammarEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote TenseX.gfh
+[2011-11-03 16:26:25] DEBUG wrote IdiomEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote StructuralEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote ConstructX.gfh
+[2011-11-03 16:26:25] DEBUG wrote MakeStructuralEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote ParadigmsEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote TextX.gfh
+[2011-11-03 16:26:25] DEBUG wrote PhraseEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote ConjunctionEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote Coordination.gfh
+[2011-11-03 16:26:25] DEBUG wrote RelativeEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote QuestionEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote SentenceEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote NumeralEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote AdverbEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote AdjectiveEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote VerbEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote NounEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote MorphoEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote CatEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote ResEng.gfh
+[2011-11-03 16:26:25] DEBUG wrote CommonX.gfh
+[2011-11-03 16:26:25] DEBUG wrote ParamX.gfh
+[2011-11-03 16:26:25] DEBUG wrote Prelude.gfh
+[2011-11-03 16:26:25] DEBUG wrote Predef.gfh
+[2011-11-03 16:26:25] DEBUG wrote LexFoods.gfh
+[2011-11-03 16:26:25] DEBUG wrote Syntax.gfh
+[2011-11-03 16:26:25] DEBUG wrote Combinators.gfh
+[2011-11-03 16:26:25] DEBUG wrote Constructors.gfh
+[2011-11-03 16:26:25] DEBUG wrote Grammar.gfh
+[2011-11-03 16:26:25] DEBUG wrote Transfer.gfh
+[2011-11-03 16:26:25] DEBUG wrote NumeralTransfer.gfh
+[2011-11-03 16:26:25] DEBUG wrote Tense.gfh
+[2011-11-03 16:26:25] DEBUG wrote Idiom.gfh
+[2011-11-03 16:26:25] DEBUG wrote Text.gfh
+[2011-11-03 16:26:25] DEBUG wrote Phrase.gfh
+[2011-11-03 16:26:25] DEBUG wrote Conjunction.gfh
+[2011-11-03 16:26:25] DEBUG wrote Relative.gfh
+[2011-11-03 16:26:25] DEBUG wrote Question.gfh
+[2011-11-03 16:26:25] DEBUG wrote Sentence.gfh
+[2011-11-03 16:26:25] DEBUG wrote Numeral.gfh
+[2011-11-03 16:26:25] DEBUG wrote Adverb.gfh
+[2011-11-03 16:26:25] DEBUG wrote Adjective.gfh
+[2011-11-03 16:26:25] DEBUG wrote Verb.gfh
+[2011-11-03 16:26:25] DEBUG wrote Noun.gfh
+[2011-11-03 16:26:25] DEBUG wrote Structural.gfh
+[2011-11-03 16:26:25] DEBUG wrote Cat.gfh
+[2011-11-03 16:26:25] DEBUG wrote Common.gfh
+[2011-11-03 16:26:25] DEBUG 88 msec
+[2011-11-03 16:26:25] DEBUG > See you.
+[2011-11-03 16:26:25] DEBUG 0 msec
+[2011-11-03 16:26:25] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:26:36] INFO  Incremental build on GF Test Project
+[2011-11-03 16:26:36] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:39:29] INFO  Incremental build on GF Test Project
+[2011-11-03 16:39:51] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:39:54] INFO  Incremental build on GF Test Project
+[2011-11-03 16:40:29] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:47:50] INFO  Incremental build on GF Test Project
+[2011-11-03 16:47:50] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:48:34] INFO  Incremental build on GF Test Project
+[2011-11-03 16:48:34] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:48:49] INFO  Incremental build on GF Test Project
+[2011-11-03 16:48:49] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:49:32] INFO  Incremental build on GF Test Project
+[2011-11-03 16:50:27] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:51:46] INFO  Incremental build on GF Test Project
+[2011-11-03 16:52:11] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:52:47] INFO  Incremental build on GF Test Project
+[2011-11-03 16:52:47] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:54:33] INFO  Incremental build on GF Test Project
+[2011-11-03 16:54:33] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:54:51] INFO  Incremental build on GF Test Project
+[2011-11-03 16:54:51] DEBUG                               
+[2011-11-03 16:54:51] DEBUG          *  *  *              
+[2011-11-03 16:54:51] DEBUG       *           *           
+[2011-11-03 16:54:51] DEBUG     *               *         
+[2011-11-03 16:54:51] DEBUG    *                          
+[2011-11-03 16:54:51] DEBUG    *                          
+[2011-11-03 16:54:51] DEBUG    *        * * * * * *       
+[2011-11-03 16:54:51] DEBUG    *        *         *       
+[2011-11-03 16:54:51] DEBUG     *       * * * *  *        
+[2011-11-03 16:54:51] DEBUG       *     *      *          
+[2011-11-03 16:54:51] DEBUG          *  *  *              
+[2011-11-03 16:54:51] DEBUG                               
+[2011-11-03 16:54:51] DEBUG This is GF version 3.3-darcs. 
+[2011-11-03 16:54:51] DEBUG Built on linux/i386 with ghc-7.0, flags: interrupt server
+[2011-11-03 16:54:51] DEBUG License: see help -license.   
+[2011-11-03 16:54:51] DEBUG Bug reports: http://code.google.com/p/grammatical-framework/issues/list
+[2011-11-03 16:54:51] DEBUG 
+[2011-11-03 16:54:51] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gfo
+[2011-11-03 16:54:51] DEBUG > wrote LexFoodsEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote SyntaxEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote CombinatorsEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote ConstructorsEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote GrammarEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote TenseX.gfh
+[2011-11-03 16:54:51] DEBUG wrote IdiomEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote StructuralEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote ConstructX.gfh
+[2011-11-03 16:54:51] DEBUG wrote MakeStructuralEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote ParadigmsEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote TextX.gfh
+[2011-11-03 16:54:51] DEBUG wrote PhraseEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote ConjunctionEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote Coordination.gfh
+[2011-11-03 16:54:51] DEBUG wrote RelativeEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote QuestionEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote SentenceEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote NumeralEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote AdverbEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote AdjectiveEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote VerbEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote NounEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote MorphoEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote CatEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote ResEng.gfh
+[2011-11-03 16:54:51] DEBUG wrote CommonX.gfh
+[2011-11-03 16:54:51] DEBUG wrote ParamX.gfh
+[2011-11-03 16:54:51] DEBUG wrote Prelude.gfh
+[2011-11-03 16:54:51] DEBUG wrote Predef.gfh
+[2011-11-03 16:54:51] DEBUG wrote LexFoods.gfh
+[2011-11-03 16:54:51] DEBUG wrote Syntax.gfh
+[2011-11-03 16:54:51] DEBUG wrote Combinators.gfh
+[2011-11-03 16:54:51] DEBUG wrote Constructors.gfh
+[2011-11-03 16:54:51] DEBUG wrote Grammar.gfh
+[2011-11-03 16:54:51] DEBUG wrote Transfer.gfh
+[2011-11-03 16:54:51] DEBUG wrote NumeralTransfer.gfh
+[2011-11-03 16:54:51] DEBUG wrote Tense.gfh
+[2011-11-03 16:54:51] DEBUG wrote Idiom.gfh
+[2011-11-03 16:54:51] DEBUG wrote Text.gfh
+[2011-11-03 16:54:51] DEBUG wrote Phrase.gfh
+[2011-11-03 16:54:51] DEBUG wrote Conjunction.gfh
+[2011-11-03 16:54:51] DEBUG wrote Relative.gfh
+[2011-11-03 16:54:51] DEBUG wrote Question.gfh
+[2011-11-03 16:54:51] DEBUG wrote Sentence.gfh
+[2011-11-03 16:54:51] DEBUG wrote Numeral.gfh
+[2011-11-03 16:54:51] DEBUG wrote Adverb.gfh
+[2011-11-03 16:54:51] DEBUG wrote Adjective.gfh
+[2011-11-03 16:54:51] DEBUG wrote Verb.gfh
+[2011-11-03 16:54:51] DEBUG wrote Noun.gfh
+[2011-11-03 16:54:51] DEBUG wrote Structural.gfh
+[2011-11-03 16:54:51] DEBUG wrote Cat.gfh
+[2011-11-03 16:54:51] DEBUG wrote Common.gfh
+[2011-11-03 16:54:51] DEBUG 84 msec
+[2011-11-03 16:54:51] DEBUG > See you.
+[2011-11-03 16:54:51] DEBUG 0 msec
+[2011-11-03 16:54:51] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:55:29] INFO  Incremental build on GF Test Project
+[2011-11-03 16:55:42] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:55:53] INFO  Incremental build on GF Test Project
+[2011-11-03 16:55:59] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf
+[2011-11-03 16:56:17] INFO  Incremental build on GF Test Project
+[2011-11-03 17:00:10] INFO  Incremental build on GF Test Project
+[2011-11-03 17:00:14] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf

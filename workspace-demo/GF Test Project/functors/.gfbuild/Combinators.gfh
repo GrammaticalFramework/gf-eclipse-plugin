@@ -1,0 +1,100 @@
+incomplete resource Combinators = open Cat,Structural,Constructors in {
+  flags
+    coding = "latin1" ;
+  oper app = overload {
+               app : N -> NP
+                   = 0 ;
+               app : N2 -> NP -> NP
+                   = 0 ;
+               app : N3 -> NP -> NP -> NP
+                   = 0 ;
+               app : N2 -> NP -> NP -> NP
+                   = 0 ;
+               app : N2 -> N -> CN
+                   = 0 ;
+               app : N2 -> NP -> CN
+                   = 0 ;
+               app : N3 -> NP -> NP -> CN
+                   = 0 ;
+               app : N2 -> NP -> NP -> CN
+                   = 0 ;
+             } ;
+  oper coord = overload {
+                 coord : Conj -> Adv -> Adv -> Adv
+                       = 0 ;
+                 coord : Conj -> AP -> AP -> AP
+                       = 0 ;
+                 coord : Conj -> NP -> NP -> NP
+                       = 0 ;
+                 coord : Conj -> S -> S -> S
+                       = 0 ;
+                 coord : Conj -> ListAdv -> Adv
+                       = 0 ;
+                 coord : Conj -> ListAP -> AP
+                       = 0 ;
+                 coord : Conj -> ListNP -> NP
+                       = 0 ;
+                 coord : Conj -> ListS -> S
+                       = 0 ;
+               } ;
+  oper mod = overload {
+               mod : A -> N -> CN
+                   = 0 ;
+               mod : AP -> CN -> CN
+                   = 0 ;
+               mod : AdA -> A -> AP
+                   = 0 ;
+               mod : Det -> N -> NP
+                   = 0 ;
+               mod : Det -> CN -> NP
+                   = 0 ;
+               mod : Quant -> N -> NP
+                   = 0 ;
+               mod : Quant -> CN -> NP
+                   = 0 ;
+               mod : Predet -> N -> NP
+                   = 0 ;
+               mod : Numeral -> N -> NP
+                   = 0 ;
+             } ;
+  oper neg = overload {
+               neg : Imp -> Utt
+                   = 0 ;
+               neg : Cl -> S
+                   = 0 ;
+               neg : QCl -> QS
+                   = 0 ;
+               neg : RCl -> RS
+                   = 0 ;
+             } ;
+  oper pred = overload {
+                pred : V -> NP -> Cl
+                     = 0 ;
+                pred : V2 -> NP -> NP -> Cl
+                     = 0 ;
+                pred : V3 -> NP -> NP -> NP -> Cl
+                     = 0 ;
+                pred : V -> NP -> NP -> Cl
+                     = 0 ;
+                pred : A -> NP -> Cl
+                     = 0 ;
+                pred : A2 -> NP -> NP -> Cl
+                     = 0 ;
+                pred : A -> NP -> NP -> Cl
+                     = 0 ;
+                pred : N -> NP -> Cl
+                     = 0 ;
+                pred : CN -> NP -> Cl
+                     = 0 ;
+                pred : NP -> NP -> Cl
+                     = 0 ;
+                pred : N2 -> NP -> NP -> Cl
+                     = 0 ;
+                pred : N -> NP -> NP -> Cl
+                     = 0 ;
+                pred : Adv -> NP -> Cl
+                     = 0 ;
+                pred : Prep -> NP -> NP -> Cl
+                     = 0 ;
+              } ;
+}

@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.validation;
 
 import java.util.ArrayList;
@@ -22,31 +31,60 @@ import org.grammaticalframework.eclipse.scoping.GFLibraryAgent;
 import com.google.inject.Inject;
  
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GFJavaValidator.
+ */
 public class GFJavaValidator extends AbstractGFJavaValidator {
 	
+	/**
+	 * The scope provider.
+	 */
 	@Inject
 	private IScopeProvider scopeProvider;
+	
+	/**
+	 * Gets the scope provider.
+	 *
+	 * @return the scope provider
+	 */
 	protected IScopeProvider getScopeProvider() {
 		return scopeProvider;
 	}
 
+	/**
+	 * The provider.
+	 */
 	@Inject
 	private GFGlobalScopeProvider provider;
 	
+	/**
+	 * The converter.
+	 */
 	@Inject
 	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
+	
+	/**
+	 * Gets the converter.
+	 *
+	 * @return the converter
+	 */
 	protected IQualifiedNameConverter getConverter() {
 		return converter;
 	}
 
+	/**
+	 * The lib agent.
+	 */
 	@Inject
 	private GFLibraryAgent libAgent;
 
 	// ==============================================
 
 	/**
-	 * It is a compiler error for a module's name not to match its filename
-	 * @param modtype
+	 * It is a compiler error for a module's name not to match its filename.
+	 *
+	 * @param modtype the modtype
 	 */
 	@Check
 	public void checkModuleNameMatchesFileName(ModType modtype) {
@@ -59,7 +97,8 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 
 	/**
 	 * Warn when referencing a module which does not exist.
-	 * @param modtype
+	 *
+	 * @param modtype the modtype
 	 */
 	@Check
 	public void checkAbstractModuleExists(ModType modtype) {
@@ -71,6 +110,12 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 			}
 		}
 	}
+	
+	/**
+	 * Check referenced module exists.
+	 *
+	 * @param open the open
+	 */
 	@Check
 	public void checkReferencedModuleExists(Open open) {
 		// Opens, Instantiations
@@ -79,6 +124,12 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 			warning(msg, GFPackage.Literals.OPEN__NAME);
 		}
 	}
+	
+	/**
+	 * Check referenced module exists.
+	 *
+	 * @param inc the inc
+	 */
 	@Check
 	public void checkReferencedModuleExists(Included inc) {
 		// Extends, Functor instantiation
@@ -90,7 +141,8 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 
 	/**
 	 * Some special flag checks.
-	 * @param flagdef
+	 *
+	 * @param flagdef the flagdef
 	 */
 	@Check
 	public void checkFlags(FlagDef flagdef) {
@@ -107,8 +159,9 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	/**
 	 * It is a compiler error to have a category declaration in a concrete module, and so on.
 	 * Ref: http://www.grammaticalframework.org/doc/gf-reference.html
-	 * 
-	 * @param topdef
+	 *
+	 * @param topdef the topdef
+	 * @return the structural feature
 	 */
 	private EAttribute getStructuralFeature(TopDef topdef) {
 		if (topdef.isCat()) return GFPackage.Literals.TOP_DEF__CAT;
@@ -124,6 +177,12 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 		if (topdef.isFlags()) return GFPackage.Literals.TOP_DEF__FLAGS;
 		return null;
 	}
+	
+	/**
+	 * Check defs are in correct module types.
+	 *
+	 * @param topdef the topdef
+	 */
 	@Check
 	public void checkDefsAreInCorrectModuleTypes(TopDef topdef) {
 		// Ascend to module
@@ -159,8 +218,9 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	}
 	
 	/**
-	 * Warn about lineariation rules not having any corresponding abstract declarations
-	 * @param name
+	 * Warn about lineariation rules not having any corresponding abstract declarations.
+	 *
+	 * @param name the name
 	 */
 	// TODO I disabled this because it was acting strangely
 //	@Check
@@ -216,7 +276,8 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	 * The lexer will treat ResEng.Gender as Ident.Label, rather than as single Ident. Thus cross-referencing is only
 	 * checked on the module name ResEng, but not on the member Gender.
 	 * This method exists to perform this exact checking as a post-process to the generated parser.
-	 * @param label
+	 *
+	 * @param label the label
 	 */
 	@Check
 	public void checkQualifiedNames(Label label) {
@@ -249,8 +310,9 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	
 	
 	/**
-	 * Warn when functor instantiations don't fully instantiate their functor
-	 * @param open
+	 * Warn when functor instantiations don't fully instantiate their functor.
+	 *
+	 * @param modBody the mod body
 	 */
 	@Check
 	public void checkFunctorInstantiations(ModBody modBody) {

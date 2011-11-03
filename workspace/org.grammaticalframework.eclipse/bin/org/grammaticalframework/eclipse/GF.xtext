@@ -1,20 +1,29 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
+ 
+/**
+ * GF grammar based on the GF Book (2011), Appendix C.6
+ * Some (hopefully syntactically-equivalent) modifications have been made to please the compiler.
+ */
 grammar org.grammaticalframework.eclipse.GF
-	hidden(WS, ML_COMMENT, SL_COMMENT, COMPILER_PRAGMA)
+
+hidden(WS, ML_COMMENT, SL_COMMENT, COMPILER_PRAGMA)
 	
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 	
 generate gF "http://www.grammaticalframework.org/eclipse/GF"
 
 /*
- * GF grammar based on the GF Book (2011), Appendix C.6
- * 
- * Some (hopefully syntactically-equivalent) modifications have been made to please ANTLR.
- * 
  * This grammar basically treats a single resource (file), which is why we start directly
  * from ModDef and exclude the rules ListModDef, Grammar.
- */
 
-/*
 Grammar :
 	ListModDef
 ;

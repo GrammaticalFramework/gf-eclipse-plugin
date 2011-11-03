@@ -6,6 +6,8 @@ com.jcraft.jsch,0.1.41.v201101211617,file:/home/john/eclipse/plugins/com.jcraft.
 de.itemis.xtext.antlr,2.0.0.v201108011202,file:/home/john/eclipse/plugins/de.itemis.xtext.antlr_2.0.0.v201108011202.jar,4,false
 javax.servlet,2.5.0.v201103041518,file:/home/john/eclipse/plugins/javax.servlet_2.5.0.v201103041518.jar,4,false
 javax.servlet.jsp,2.0.0.v201101211617,file:/home/john/eclipse/plugins/javax.servlet.jsp_2.0.0.v201101211617.jar,4,false
+net.sf.jautodoc,1.9.0,file:/home/john/eclipse/plugins/net.sf.jautodoc_1.9.0.jar,4,false
+net.sf.jautodoc.velocity,1.9.0,file:/home/john/eclipse/plugins/net.sf.jautodoc.velocity_1.9.0.jar,4,false
 org.antlr.generator,3.2.0.v201108011202,file:/home/john/eclipse/plugins/org.antlr.generator_3.2.0.v201108011202.jar,4,false
 org.antlr.runtime,3.2.0.v201101311130,file:/home/john/eclipse/plugins/org.antlr.runtime_3.2.0.v201101311130.jar,4,false
 org.aopalliance,1.0.0.v201105210816,file:/home/john/eclipse/plugins/org.aopalliance_1.0.0.v201105210816.jar,4,false

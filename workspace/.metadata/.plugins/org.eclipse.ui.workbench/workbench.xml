@@ -14,7 +14,7 @@
 <coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="96" y="30"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
 <coolItem id="org.eclipse.emf.mwe2.language.Mwe2" itemType="typePlaceholder" x="40" y="30"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="104" y="30"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
@@ -48,13 +48,14 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFBuilder.java" partName="GFBuilder.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/builder/GFBuilder.java" title="GFBuilder.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/builder/GFBuilder.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/builder/GFBuilder.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="719" selectionTopPixel="120"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="72" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFUiModule.java" partName="GFUiModule.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/GFUiModule.java" title="GFUiModule.java" tooltip="org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/GFUiModule.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/GFUiModule.java"/>
@@ -63,6 +64,10 @@
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFPreferenceInitializer.java" partName="GFPreferenceInitializer.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/editor/preferences/GFPreferenceInitializer.java" title="GFPreferenceInitializer.java" tooltip="org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/editor/preferences/GFPreferenceInitializer.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/editor/preferences/GFPreferenceInitializer.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="65" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="Constants.class" partName="Constants.class" title="Constants.class" tooltip="org.eclipse.xtext.Constants" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse.ui/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext(Constants.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="80" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -122,10 +127,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (19 items)"/>
-<category IMemento.internal.id="Warnings"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="63" org.eclipse.ui.ide.markerType="282" org.eclipse.ui.ide.pathField="320" org.eclipse.ui.ide.resourceField="93" org.eclipse.ui.ide.severityAndDescriptionField="594"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -141,7 +142,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -254,7 +255,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@83e57a" ratio="0.6066946" ratioLeft="580" ratioRight="376" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@83e57a" ratio="0.74790794" ratioLeft="715" ratioRight="241" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="Bookmarks"/>
@@ -315,48 +316,33 @@
 <view id="org.eclipse.debug.ui.ExpressionView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="Type Hierarchy"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@2f4aea" ratio="0.6238868" ratioLeft="1191" ratioRight="718" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@2f4aea" ratio="0.6238868" ratioLeft="1191" ratioRight="718" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@209d40" ratio="0.49947864" ratioLeft="479" ratioRight="480" relationship="4" relative="org.eclipse.ui.internal.ViewStack@2f4aea">
-<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@209d40" ratio="0.49947864" ratioLeft="479" ratioRight="480" relationship="4" relative="org.eclipse.ui.internal.ViewStack@2f4aea">&#x0A;<folder activePageID="org.eclipse.debug.ui.ExpressionView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.ExpressionView" label="Expressions"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="762" ratioRight="254" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="762" ratioRight="254" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7706806" ratioLeft="736" ratioRight="219" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7706806" ratioLeft="736" ratioRight="219" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
@@ -365,32 +351,22 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.24476987" ratioLeft="234" ratioRight="722" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="762" ratioRight="254" relationship="2" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="762" ratioRight="254" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@17ee13b" ratio="0.7538248" ratioLeft="542" ratioRight="177" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@17ee13b" ratio="0.7538248" ratioLeft="542" ratioRight="177" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.61917233" ratioLeft="1182" ratioRight="727" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.61917233" ratioLeft="1182" ratioRight="727" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1175d5" ratio="0.49959514" ratioLeft="617" ratioRight="618" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">
-<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1175d5" ratio="0.49959514" ratioLeft="617" ratioRight="618" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.BreakpointView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -409,31 +385,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/resource/GFResourceDescriptionStrategy.java"/>
 <editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.resource.impl(DefaultResourceDescriptionStrategy.class"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/editor/preferences/GFLanguageRootPreferencePage.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse.ui/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext(AbstractMetamodelDeclaration.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/editor/preferences/GFPreferenceInitializer.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse.ui/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext(Constants.class"/>
 </editors>
-<item historyLabel="GFLaunchConfigurationDelegate.java" index="3">
-<position/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position/>
-</item>
-<item historyLabel="GFUiModule.java" index="1">
-<position info="not_deleted" x="832" y="88"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="1725" y="0"/>
-</item>
-<item historyLabel="GFLaunchConfigurationDelegate.java" index="3">
-<position/>
-</item>
-<item historyLabel="GFGlobalScopeProvider.java" index="4">
-<position/>
-</item>
-<item historyLabel="GFGlobalScopeProvider.java" index="4">
-<position/>
-</item>
-<item historyLabel="GFResourceDescriptionStrategy.java" index="5">
-<position/>
-</item>
 <item historyLabel="GFResourceDescriptionStrategy.java" index="5">
 <position/>
 </item>
@@ -557,8 +512,32 @@
 <item historyLabel="GFPreferenceInitializer.java" index="2">
 <position info="not_deleted" x="65" y="0"/>
 </item>
-<item active="true" historyLabel="GFBuilder.java" index="0">
+<item historyLabel="GFBuilder.java" index="0">
 <position info="not_deleted" x="1625" y="0"/>
+</item>
+<item historyLabel="AbstractMetamodelDeclaration.class" index="8">
+<position info="not_deleted" x="4" y="0"/>
+</item>
+<item historyLabel="GFPreferenceInitializer.java" index="9">
+<position info="not_deleted" x="65" y="0"/>
+</item>
+<item historyLabel="GFBuilder.java" index="0">
+<position info="not_deleted" x="72" y="0"/>
+</item>
+<item historyLabel="AbstractMetamodelDeclaration.class" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="GFBuilder.java" index="0">
+<position info="not_deleted" x="72" y="0"/>
+</item>
+<item historyLabel="Constants.class" index="10">
+<position info="not_deleted" x="80" y="0"/>
+</item>
+<item historyLabel="GFPreferenceInitializer.java" index="9">
+<position info="not_deleted" x="65" y="0"/>
+</item>
+<item active="true" historyLabel="GFBuilder.java" index="0">
+<position info="not_deleted" x="72" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -577,6 +556,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Constants.class" tooltip="org.eclipse.xtext.Constants">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse.ui/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext(Constants.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="AbstractMetamodelDeclaration.class" tooltip="org.eclipse.xtext.AbstractMetamodelDeclaration">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse.ui/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext(AbstractMetamodelDeclaration.class"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFGlobalScopeProvider.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFGlobalScopeProvider.java">
 <persistable path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFGlobalScopeProvider.java"/>
 </file>
@@ -615,12 +600,6 @@
 </file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="FieldEditor.class" tooltip="org.eclipse.jface.preference.FieldEditor">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse.ui/\/home\/john\/eclipse\/plugins\/org.eclipse.jface_3.7.0.I20110522-1430.jar&lt;org.eclipse.jface.preference(FieldEditor.class"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="FieldEditorPreferencePage.class" tooltip="org.eclipse.jface.preference.FieldEditorPreferencePage">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse.ui/\/home\/john\/eclipse\/plugins\/org.eclipse.jface_3.7.0.I20110522-1430.jar&lt;org.eclipse.jface.preference(FieldEditorPreferencePage.class"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="IWorkbenchPreferencePage.class" tooltip="org.eclipse.ui.IWorkbenchPreferencePage">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse.ui/\/home\/john\/eclipse\/plugins\/org.eclipse.ui.workbench_3.7.0.I20110519-0100.jar&lt;org.eclipse.ui(IWorkbenchPreferencePage.class"/>
 </file>
 </mruList>
 </workbench>

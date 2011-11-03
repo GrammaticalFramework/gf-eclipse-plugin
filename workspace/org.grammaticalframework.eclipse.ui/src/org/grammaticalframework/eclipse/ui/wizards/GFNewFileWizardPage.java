@@ -1,10 +1,18 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.ui.wizards;
 
 import java.util.ArrayList;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -12,6 +20,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.bindings.keys.KeyStroke;
 import org.eclipse.jface.bindings.keys.ParseException;
+import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.fieldassist.ContentProposalAdapter;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.jface.fieldassist.FieldDecorationRegistry;
@@ -36,6 +45,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 
+// TODO: Auto-generated Javadoc
 /**
  * The "New" wizard page allows setting the container for the new file as well
  * as the file name. The page will only accept file name without the extension
@@ -44,22 +54,55 @@ import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 
 public class GFNewFileWizardPage extends WizardPage {
 	
+	/**
+	 * The Constant PAGE_NAME.
+	 */
 	private static final String PAGE_NAME = "GF Module";
+	
+	/**
+	 * The Constant PAGE_DESCRIPTION.
+	 */
 	private static final String PAGE_DESCRIPTION = "This wizard creates a new GF module source file (*.gf)"; //$NON-NLS-1$
 
+	/**
+	 * The container text.
+	 */
 	private Text containerText;
+	
+	/**
+	 * The mod name text.
+	 */
 	private Text modNameText;
+	
+	/**
+	 * The mod incomplete button.
+	 */
 	private Button modIncompleteButton;
+	
+	/**
+	 * The mod type combo drop down.
+	 */
 	private Combo modTypeComboDropDown;
+	
+	/**
+	 * The mod of text.
+	 */
 	private Text modOfText;
+	
+	/**
+	 * The mod instantiates text.
+	 */
 	private Text modExtendsText,modOpensText, modFunctorText, modInstantiatesText;
 
+	/**
+	 * The selection.
+	 */
 	private ISelection selection;
 
 	/**
 	 * Constructor for SampleNewWizardPage.
-	 * 
-	 * @param pageName
+	 *
+	 * @param selection the selection
 	 */
 	public GFNewFileWizardPage(ISelection selection) {
 		super(PAGE_NAME);
@@ -69,6 +112,9 @@ public class GFNewFileWizardPage extends WizardPage {
 	}
 
 	/**
+	 * Creates the control.
+	 *
+	 * @param parent the parent
 	 * @see IDialogPage#createControl(Composite)
 	 */
 	public void createControl(Composite parent) {
@@ -223,8 +269,9 @@ public class GFNewFileWizardPage extends WizardPage {
 	}
 	
 	/**
-	 * Recursively find all files in the workspace, in a flat list to be used as suggestions
-	 * @return
+	 * Recursively find all files in the workspace, in a flat list to be used as suggestions.
+	 *
+	 * @return the file list
 	 */
 	private ArrayList<String> getFileList() {
 		ArrayList<String> suggestions = new ArrayList<String>();
@@ -232,6 +279,13 @@ public class GFNewFileWizardPage extends WizardPage {
 		traverseFileList(root, suggestions);
 		return suggestions;
 	}
+	
+	/**
+	 * Traverse file list.
+	 *
+	 * @param resource the resource
+	 * @param suggestions the suggestions
+	 */
 	private void traverseFileList(IResource resource, ArrayList<String> suggestions) {
 		if (resource instanceof IFile) {
 			IFile file = (IFile)resource;
@@ -250,10 +304,20 @@ public class GFNewFileWizardPage extends WizardPage {
 	}
 	
 
+	/**
+	 * Gets the mod is incomplete.
+	 *
+	 * @return the mod is incomplete
+	 */
 	protected Boolean getModIsIncomplete() {
 		return modIncompleteButton.getSelection();
 	}
 	
+	/**
+	 * Gets the module type.
+	 *
+	 * @return the module type
+	 */
 	protected String getModuleType() {
 		if (modTypeComboDropDown.getText().endsWith("of"))
 			return modTypeComboDropDown.getText().substring(0, 8); // concrete & instance both 8 chars long
@@ -261,30 +325,65 @@ public class GFNewFileWizardPage extends WizardPage {
 			return modTypeComboDropDown.getText();
 	}
 	
+	/**
+	 * Gets the mod of.
+	 *
+	 * @return the mod of
+	 */
 	protected String getModOf() {
 		return modOfText.getText();
 	}
 
+	/**
+	 * Gets the module extends.
+	 *
+	 * @return the module extends
+	 */
 	protected String getModuleExtends() {
 		return modExtendsText.getText();
 	}
 	
+	/**
+	 * Gets the module functor.
+	 *
+	 * @return the module functor
+	 */
 	protected String getModuleFunctor() {
 		return modFunctorText.getText();
 	}
 	
+	/**
+	 * Gets the module instantiates.
+	 *
+	 * @return the module instantiates
+	 */
 	protected String getModuleInstantiates() {
 		return modInstantiatesText.getText();
 	}
 	
+	/**
+	 * Gets the module opens.
+	 *
+	 * @return the module opens
+	 */
 	protected String getModuleOpens() {
 		return modOpensText.getText();
 	}
 	
+	/**
+	 * Gets the module name.
+	 *
+	 * @return the module name
+	 */
 	protected String getModuleName() {
 		return modNameText.getText();
 	}
 
+	/**
+	 * Gets the container name.
+	 *
+	 * @return the container name
+	 */
 	protected String getContainerName() {
 		return containerText.getText();
 	}
@@ -328,6 +427,9 @@ public class GFNewFileWizardPage extends WizardPage {
 		}
 	}
 	
+	/**
+	 * Dialog changed.
+	 */
 	private void dialogChanged() {
 		IResource container = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getContainerName()));
 		
@@ -394,6 +496,11 @@ public class GFNewFileWizardPage extends WizardPage {
 		
 	}
 
+	/**
+	 * Update status.
+	 *
+	 * @param message the message
+	 */
 	private void updateStatus(String message) {
 		setErrorMessage(message);
 		setPageComplete(message == null);

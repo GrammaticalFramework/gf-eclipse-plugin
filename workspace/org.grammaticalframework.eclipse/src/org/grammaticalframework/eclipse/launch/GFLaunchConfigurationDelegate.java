@@ -1,11 +1,18 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.launch;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.util.Date;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -15,19 +22,33 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.debug.core.ILaunch;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.model.LaunchConfigurationDelegate;
-import org.eclipse.xtext.generator.grammarAccess.GrammarAccessFragment;
 import org.grammaticalframework.eclipse.GFPreferences;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GFLaunchConfigurationDelegate.
+ */
 public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 
+	/**
+	 * The Constant log.
+	 */
 	private static final Logger log = Logger.getLogger(GFLaunchConfigurationDelegate.class);
 
+	/**
+	 * Sets the console.
+	 *
+	 * @param ps the new console
+	 */
 	public static void setConsole(PrintStream ps) {
 		System.setOut(ps);
 		System.setErr(ps);
 	}
 	
+	/* (non-Javadoc)
+	 * @see org.eclipse.debug.core.model.ILaunchConfigurationDelegate#launch(org.eclipse.debug.core.ILaunchConfiguration, java.lang.String, org.eclipse.debug.core.ILaunch, org.eclipse.core.runtime.IProgressMonitor)
+	 */
 	public void launch(ILaunchConfiguration configuration, String mode,
 			ILaunch launch, IProgressMonitor monitor) throws CoreException {
 

@@ -1,0 +1,12 @@
+concrete FoodsEng of Foods = open (SyntaxEng = SyntaxEng),(ParadigmsEng = ParadigmsEng),(SyntaxEng = SyntaxEng),(LexFoodsEng = LexFoodsEng),(SyntaxEng = SyntaxEng),(LexFoodsEng = LexFoodsEng),(LexFoodsEng = LexFoodsEng) in {
+  flags
+    coding = "latin1" ;
+  lincat Item = {s : ResEng.NPCase => Str; a : ResEng.Agr;
+                 lock_NP : {}} ;
+  lincat Kind = {s : ParamX.Number => ResEng.Case => Str;
+                 g : ResEng.Gender; lock_CN : {}} ;
+  lincat Phrase = {s : ParamX.Tense => ParamX.Anteriority => ResEng.CPolarity => ResEng.Order => Str;
+                   lock_Cl : {}} ;
+  lincat Quality = {s : ResEng.Agr => Str; isPre : Prelude.Bool;
+                    lock_AP : {}} ;
+}

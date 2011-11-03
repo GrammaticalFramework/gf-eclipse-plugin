@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.scoping;
 
 import java.util.ArrayList;
@@ -24,6 +33,7 @@ import com.google.common.base.Predicate;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
+// TODO: Auto-generated Javadoc
 /**
  * Global scope provider is responsible for defining what is visible from
  * outside the current resource, for any given reference.
@@ -40,24 +50,46 @@ import com.google.inject.Provider;
 
 public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	
+	/**
+	 * The Constant log.
+	 */
 	private static final Logger log = Logger.getLogger(GFGlobalScopeProvider.class);
 
+	/**
+	 * Instantiates a new gF global scope provider.
+	 */
 	public GFGlobalScopeProvider() {
 		super();
 		stack = new Stack<String>();
 	}
 
+	/**
+	 * The load on demand descriptions.
+	 */
 	@Inject
 	private Provider<LoadOnDemandResourceDescriptions> loadOnDemandDescriptions;
 	
+	/**
+	 * Sets the load on demand descriptions.
+	 *
+	 * @param loadOnDemandDescriptions the new load on demand descriptions
+	 */
 	public void setLoadOnDemandDescriptions(Provider<LoadOnDemandResourceDescriptions> loadOnDemandDescriptions) {
 		this.loadOnDemandDescriptions = loadOnDemandDescriptions;
 	}
 
+	/**
+	 * Gets the load on demand descriptions.
+	 *
+	 * @return the load on demand descriptions
+	 */
 	public Provider<LoadOnDemandResourceDescriptions> getLoadOnDemandDescriptions() {
 		return loadOnDemandDescriptions;
 	}
 	
+	/**
+	 * The lib agent.
+	 */
 	@Inject
 	private GFLibraryAgent libAgent;
 
@@ -69,17 +101,34 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 //		this.cache = cache;
 //	}
 	
-	public IResourceDescriptions getResourceDescriptions(Resource resource, Collection<URI> importUris) {
+	/**
+ * Gets the resource descriptions.
+ *
+ * @param resource the resource
+ * @param importUris the import uris
+ * @return the resource descriptions
+ */
+public IResourceDescriptions getResourceDescriptions(Resource resource, Collection<URI> importUris) {
 		IResourceDescriptions result = getResourceDescriptions(resource);
 		LoadOnDemandResourceDescriptions demandResourceDescriptions = loadOnDemandDescriptions.get();
 		demandResourceDescriptions.initialize(result, importUris, resource);
 		return demandResourceDescriptions;
 	}
 	
+	/**
+	 * The stack.
+	 */
 	public Stack<String> stack = null;
+	
+	/**
+	 * The depth.
+	 */
 	@SuppressWarnings("unused")
 	private int depth = 0;
 
+	/* (non-Javadoc)
+	 * @see org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider#getScope(org.eclipse.emf.ecore.resource.Resource, boolean, org.eclipse.emf.ecore.EClass, com.google.common.base.Predicate)
+	 */
 	@Override
 	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
 		
@@ -187,21 +236,34 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	
 	/**
 	 * Add a named module recursively to the given scope.
-	 * 
+	 *
 	 * @param moduleName The name of the module whos definitions we want to add
+	 * @param scope the scope
 	 * @param resource The context from where we are referencing the named module
-	 * @param parent The scope to which definitions should be appended
-	 * @param filter
-	 * @param ignoreCase
-	 * @param ignoreModuleName
-	 * @param moduleAlias
-	 * 
+	 * @param type the type
+	 * @param filter the filter
+	 * @param ignoreCase the ignore case
+	 * @param ignoreModuleName the ignore module name
 	 * @return new scope
 	 */
 	private IScope addModuleToScope(String moduleName, IScope scope, Resource resource, EClass type, Predicate<IEObjectDescription> filter,
 			boolean ignoreCase, boolean ignoreModuleName) {
 		return addModuleToScope(moduleName, scope, resource, type, filter, ignoreCase, ignoreModuleName, null);
 	}	
+	
+	/**
+	 * Adds the module to scope.
+	 *
+	 * @param moduleName the module name
+	 * @param scope the scope
+	 * @param resource the resource
+	 * @param type the type
+	 * @param filter the filter
+	 * @param ignoreCase the ignore case
+	 * @param ignoreModuleName the ignore module name
+	 * @param moduleAlias the module alias
+	 * @return the i scope
+	 */
 	private IScope addModuleToScope(String moduleName, IScope scope, Resource resource, EClass type, Predicate<IEObjectDescription> filter,
 			boolean ignoreCase, boolean ignoreModuleName, String moduleAlias) {
 		
@@ -230,15 +292,14 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 
 	/**
 	 * Add the defitions in a named module to the given scope.
-	 * 
+	 *
 	 * @param moduleName The name of the module whos definitions we want to add
 	 * @param resource The context from where we are referencing the named module
 	 * @param parent The scope to which definitions should be appended
-	 * @param filter
-	 * @param ignoreCase
-	 * @param ignoreModuleName
-	 * @param moduleAlias
-	 * 
+	 * @param filter the filter
+	 * @param ignoreCase the ignore case
+	 * @param ignoreModuleName the ignore module name
+	 * @param moduleAlias the module alias
 	 * @return new scope
 	 */
 	private IScope addModuleDefinitionsToScope(String moduleName, Resource resource, IScope parent, Predicate<IEObjectDescription> filter,

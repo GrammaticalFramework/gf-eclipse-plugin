@@ -1,0 +1,26 @@
+abstract Tense = Common ** {
+  flags
+    coding = "latin1" ;
+  data ASimul : Common.Ant ;
+  -- ind AdA = Common ;
+  -- ind AdN = Common ;
+  -- ind AdV = Common ;
+  -- ind Adv = Common ;
+  -- ind Ant = Common ;
+  -- ind CAdv = Common ;
+  -- ind IAdv = Common ;
+  -- ind Interj = Common ;
+  -- ind PConj = Common ;
+  data PNeg : Common.Pol ;
+  data PPos : Common.Pol ;
+  -- ind Phr = Common ;
+  -- ind Pol = Common ;
+  -- ind SC = Common ;
+  data TPres : Common.Tense ;
+  data TTAnt : Common.Tense -> Common.Ant -> Common.Temp ;
+  -- ind Temp = Common ;
+  -- ind Tense = Common ;
+  -- ind Text = Common ;
+  -- ind Utt = Common ;
+  -- ind Voc = Common ;
+}

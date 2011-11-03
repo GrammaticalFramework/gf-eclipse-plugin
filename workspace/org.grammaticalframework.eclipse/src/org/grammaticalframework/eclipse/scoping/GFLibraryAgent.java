@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.scoping;
 
 import org.eclipse.emf.common.util.URI;
@@ -5,20 +14,20 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.EcoreUtil2;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 
+// TODO: Auto-generated Javadoc
 /**
- * For resolving GF library modules and their exported definitions
- * 
- * @author John J. Camilleri
+ * For resolving GF library modules and their exported definitions.
  *
+ * @author John J. Camilleri
  */
 public class GFLibraryAgent {
 	
 	/**
-	 * Put together path to local gf source file
-	 * 
-	 * @param context
-	 * @param moduleName
-	 * @return
+	 * Put together path to local gf source file.
+	 *
+	 * @param context the context
+	 * @param moduleName the module name
+	 * @return the local source path
 	 */
 	private String getLocalSourcePath(Resource context, String moduleName) {
 		URI uri = context.getURI();
@@ -26,11 +35,11 @@ public class GFLibraryAgent {
 	}
 	
 	/**
-	 * Put together path to compiled gfh header in the build folder
-	 * 
-	 * @param context
-	 * @param moduleName
-	 * @return
+	 * Put together path to compiled gfh header in the build folder.
+	 *
+	 * @param context the context
+	 * @param moduleName the module name
+	 * @return the header path
 	 */
 	private String getHeaderPath(Resource context, String moduleName) {
 		StringBuilder sb = new StringBuilder();
@@ -57,11 +66,11 @@ public class GFLibraryAgent {
 	}
 	
 	/**
-	 * Check if a module exists
-	 * 
-	 * @param context
-	 * @param moduleName
-	 * @return
+	 * Check if a module exists.
+	 *
+	 * @param context the context
+	 * @param moduleName the module name
+	 * @return the module uri
 	 */
 	public URI getModuleURI(Resource context, String moduleName) {
 		URI uri;
@@ -82,6 +91,13 @@ public class GFLibraryAgent {
 	}
 	
 	
+	/**
+	 * Gets the module resource.
+	 *
+	 * @param context the context
+	 * @param moduleName the module name
+	 * @return the module resource
+	 */
 	public Resource getModuleResource(Resource context, String moduleName) {
 		URI uri = getModuleURI(context, moduleName);
 		try {
@@ -92,11 +108,11 @@ public class GFLibraryAgent {
 	}
 	
 	/**
-	 * Check if a module exists
-	 * 
-	 * @param context
-	 * @param moduleName
-	 * @return
+	 * Check if a module exists.
+	 *
+	 * @param context the context
+	 * @param moduleName the module name
+	 * @return true, if successful
 	 */
 	public boolean moduleExists(Resource context, String moduleName) {
 		return (getModuleURI(context, moduleName) != null);

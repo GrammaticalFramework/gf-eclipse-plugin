@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.naming;
 
 import java.util.Collections;
@@ -17,6 +26,7 @@ import com.google.common.base.Function;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 
+// TODO: Auto-generated Javadoc
 /**
  * Qualified name provider for GF
  * This class is very stupid, it just prepends the module name.
@@ -27,22 +37,44 @@ import com.google.inject.Provider;
  */
 public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl {
 	
+	/**
+	 * The converter.
+	 */
 	@Inject
 	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
 	
+	/**
+	 * Gets the converter.
+	 *
+	 * @return the converter
+	 */
 	protected IQualifiedNameConverter getConverter() {
 		return converter;
 	}
 	
+	/**
+	 * The cache.
+	 */
 	@Inject
 	private IResourceScopeCache cache = IResourceScopeCache.NullImpl.INSTANCE;
 	
+	/**
+	 * The name resolver.
+	 */
 	private Function<EObject, String> nameResolver = SimpleAttributeResolver.newResolver(String.class, "name");
 
+	/**
+	 * Gets the resolver.
+	 *
+	 * @return the resolver
+	 */
 	protected Function<EObject, String> getResolver() {
 		return nameResolver;
 	}
 
+	/**
+	 * The qualified name.
+	 */
 	private PolymorphicDispatcher<QualifiedName> qualifiedName = new PolymorphicDispatcher<QualifiedName>("qualifiedName",1,1,Collections.singletonList(this), PolymorphicDispatcher.NullErrorHandler.<QualifiedName>get())
 	{
 		@Override
@@ -51,6 +83,9 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 		}
 	}; 
 	
+	/* (non-Javadoc)
+	 * @see org.eclipse.xtext.naming.IQualifiedNameProvider#getFullyQualifiedName(org.eclipse.emf.ecore.EObject)
+	 */
 	public QualifiedName getFullyQualifiedName(final EObject obj) {
 		return cache.get(Tuples.pair(obj, "fqn"), obj.eResource(), new Provider<QualifiedName>(){
 
@@ -74,6 +109,12 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 		});
 	}
 	
+	/**
+	 * Qualified name.
+	 *
+	 * @param id the id
+	 * @return the qualified name
+	 */
 	public QualifiedName qualifiedName(Ident id) {
 		if (!shouldBeExported(id))
 			return null;
@@ -87,6 +128,12 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 		return getConverter().toQualifiedName( qualifiedName );
 	}
 	
+	/**
+	 * Should be exported.
+	 *
+	 * @param id the id
+	 * @return true, if successful
+	 */
 	public static boolean shouldBeExported(Ident id) {
 		EObject parent = id.eContainer();
 		EObject grandParent = parent.eContainer();

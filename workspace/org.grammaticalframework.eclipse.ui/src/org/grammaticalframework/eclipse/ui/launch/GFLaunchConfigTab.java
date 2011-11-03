@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.ui.launch;
 
 import java.io.File;
@@ -21,6 +30,10 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.PlatformUI;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GFLaunchConfigTab.
+ */
 public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 
 	// Local/shared UI widgets
@@ -28,19 +41,51 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 //	public String getfGFPath() {
 //		return fGFPath.getText();
 //	}
+	/**
+	 * The working directory.
+	 */
 	private Text fWorkingDirectory;
+	
+	/**
+	 * Gets the f working directory.
+	 *
+	 * @return the f working directory
+	 */
 	public String getfWorkingDirectory() {
 		return fWorkingDirectory.getText();
 	}
+	
+	/**
+	 * The options.
+	 */
 	private Text fOptions;
+	
+	/**
+	 * Gets the f options.
+	 *
+	 * @return the f options
+	 */
 	public String getfOptions() {
 		return fOptions.getText();
 	}
+	
+	/**
+	 * The filenames.
+	 */
 	private Text fFilenames;
+	
+	/**
+	 * Gets the f arguments.
+	 *
+	 * @return the f arguments
+	 */
 	public String getfArguments() {
 		return fFilenames.getText();
 	}
 
+	/* (non-Javadoc)
+	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#createControl(org.eclipse.swt.widgets.Composite)
+	 */
 	public void createControl(Composite parent) {
 		Composite comp = new Composite(parent, SWT.NONE);
 		setControl(comp);
@@ -105,6 +150,9 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		l.setText("The names of the files to compile, separated by spaces ");
 	}
 
+	/**
+	 * Dialog changed.
+	 */
 	private void dialogChanged() {
 		setDirty(true);
 //		if (getfGFPath().length() == 0) {
@@ -120,14 +168,25 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		updateLaunchConfigurationDialog();
 	}
 
+	/**
+	 * Update status.
+	 *
+	 * @param message the message
+	 */
 	private void updateStatus(String message) {
 		setErrorMessage(message);
 	}
 
+	/* (non-Javadoc)
+	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#setDefaults(org.eclipse.debug.core.ILaunchConfigurationWorkingCopy)
+	 */
 	public void setDefaults(ILaunchConfigurationWorkingCopy configuration) {
 		configuration.setContainer(null);
 	}
 
+	/* (non-Javadoc)
+	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#initializeFrom(org.eclipse.debug.core.ILaunchConfiguration)
+	 */
 	public void initializeFrom(ILaunchConfiguration configuration) {
 
 //		String defaultGFPath;
@@ -163,6 +222,9 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 
 	}
 
+	/* (non-Javadoc)
+	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#performApply(org.eclipse.debug.core.ILaunchConfigurationWorkingCopy)
+	 */
 	public void performApply(ILaunchConfigurationWorkingCopy configuration) {
 //		configuration.setAttribute(IGFLaunchConfigConstants.GF_PATH, getfGFPath());
 		configuration.setAttribute(IGFLaunchConfigConstants.WORKING_DIR, getfWorkingDirectory());
@@ -171,6 +233,9 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		setDirty(false);
 	}
 
+	/* (non-Javadoc)
+	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#getName()
+	 */
 	public String getName() {
 		return "Main"; 
 	}

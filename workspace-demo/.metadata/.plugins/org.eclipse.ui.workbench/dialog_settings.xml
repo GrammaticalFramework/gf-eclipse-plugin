@@ -4,25 +4,25 @@
 		<item value="203" key="DIALOG_Y_ORIGIN"/>
 		<item value="-57" key="DIALOG_X_ORIGIN"/>
 	</section>
-	<section name="InstallationDialogSettings">
-		<item value="959" key="DIALOG_WIDTH"/>
-		<item value="0" key="DIALOG_Y_ORIGIN"/>
-		<item value="-234" key="DIALOG_X_ORIGIN"/>
-		<item value="576" key="DIALOG_HEIGHT"/>
-		<item value="1|Ubuntu|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-	</section>
 	<section name="NewWizardAction">
 		<item value="org.grammaticalframework.eclipse.ui.wizards.GFNewFileWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.grammaticalframework.eclipse.ui"/>
 		</list>
 	</section>
+	<section name="InstallationDialogSettings">
+		<item value="959" key="DIALOG_WIDTH"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="576" key="DIALOG_HEIGHT"/>
+		<item value="-234" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="ShowViewDialog">
 		<item value="312" key="DIALOG_WIDTH"/>
 		<item value="org.eclipse.jdt.ui.PackageExplorer" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
 		<item value="152" key="DIALOG_Y_ORIGIN"/>
-		<item value="430" key="DIALOG_HEIGHT"/>
 		<item value="504" key="DIALOG_X_ORIGIN"/>
+		<item value="430" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.jdt.ui.java"/>

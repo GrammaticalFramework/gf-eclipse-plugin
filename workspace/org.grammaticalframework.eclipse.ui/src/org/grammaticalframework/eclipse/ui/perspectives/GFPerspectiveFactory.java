@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.ui.perspectives;
 
 import java.io.PrintStream;
@@ -10,6 +19,7 @@ import org.eclipse.ui.console.IConsoleConstants;
 import org.eclipse.ui.console.MessageConsoleStream;
 import org.grammaticalframework.eclipse.launch.GFLaunchConfigurationDelegate;
 
+// TODO: Auto-generated Javadoc
 /**
  * Ref: http://www.eclipsepluginsite.com/perspectives.html
  * 
@@ -18,6 +28,9 @@ import org.grammaticalframework.eclipse.launch.GFLaunchConfigurationDelegate;
  */
 public class GFPerspectiveFactory implements IPerspectiveFactory {
 	
+	/* (non-Javadoc)
+	 * @see org.eclipse.ui.IPerspectiveFactory#createInitialLayout(org.eclipse.ui.IPageLayout)
+	 */
 	public void createInitialLayout(IPageLayout layout) {
 		// Get the editor area.
 		String editorArea = layout.getEditorArea();
@@ -43,6 +56,11 @@ public class GFPerspectiveFactory implements IPerspectiveFactory {
 		createConsole();
 	}
 	
+	/**
+	 * Creates a new GFPerspective object.
+	 *
+	 * @return the message console stream
+	 */
 	public static MessageConsoleStream createConsole() {
 		MessageConsoleStream mcs = GFConsole.getStream();
 		GFLaunchConfigurationDelegate.setConsole(new PrintStream( GFConsole.getStream() ));
