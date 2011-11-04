@@ -8,9 +8,7 @@ import static com.google.inject.Guice.createInjector;
 
 import org.apache.log4j.Logger;
 
-import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
-import org.grammaticalframework.eclipse.GFPreferences;
 import org.osgi.framework.BundleContext;
 
 import com.google.inject.Injector;

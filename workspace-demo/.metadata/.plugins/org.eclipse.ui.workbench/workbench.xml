@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="31" version="2.0">
+<workbench progressCount="32" version="2.0">
 <workbenchAdvisor/>
 <window height="893" width="1182" x="661" y="56">
 <fastViewData fastViewLocation="1024"/>
@@ -46,11 +46,11 @@
 </editor>
 <editor id="org.grammaticalframework.eclipse.GF" name="Foods.gf" partName="Foods.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf" title="Foods.gf" tooltip="GF Test Project/functors/Foods.gf" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GF Test Project/functors/Foods.gf"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="93" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="101" selectionTopPixel="0"/>
 </editor>
-<editor id="org.grammaticalframework.eclipse.GF" name="FoodsEng.gf" partName="FoodsEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsEng.gf" title="FoodsEng.gf" tooltip="GF Test Project/functors/FoodsEng.gf" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.grammaticalframework.eclipse.GF" name="FoodsEng.gf" partName="FoodsEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsEng.gf" title="FoodsEng.gf" tooltip="GF Test Project/functors/FoodsEng.gf" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GF Test Project/functors/FoodsEng.gf"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="67" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="236" selectionTopPixel="0"/>
 </editor>
 <editor id="org.grammaticalframework.eclipse.GF" name="FoodsGer.gf" partName="FoodsGer.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsGer.gf" title="FoodsGer.gf" tooltip="GF Test Project/functors/FoodsGer.gf" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GF Test Project/functors/FoodsGer.gf"/>
@@ -64,9 +64,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GF Test Project/functors/LexFoods.gf"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="128" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.grammaticalframework.eclipse.GF" name="LexFoodsEng.gf" partName="LexFoodsEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf" title="LexFoodsEng.gf" tooltip="GF Test Project/functors/LexFoodsEng.gf" workbook="DefaultEditorWorkbook">
+<editor id="org.grammaticalframework.eclipse.GF" name="LexFoodsEng.gf" partName="LexFoodsEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf" title="LexFoodsEng.gf" tooltip="GF Test Project/functors/LexFoodsEng.gf" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GF Test Project/functors/LexFoodsEng.gf"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="457" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="459" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -83,7 +83,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.grammaticalframework.eclipse.GF" activePerspective="org.grammaticalframework.eclipse.ui.gfperspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.grammaticalframework.eclipse.ui.gfperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.grammaticalframework.eclipse.ui.perspectives.GFPerspectiveFactory" id="org.grammaticalframework.eclipse.ui.gfperspective" label="GF"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -147,11 +147,7 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/LexFoods.gf"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/.gfbuild/Cat.gfh"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/LexFoodsEng.gf"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/.gfbuild/ParadigmsEng.gfh"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/LexFoods.gf"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/LexFoods.gf"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/LexFoodsEng.gf"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/.gfbuild/ParadigmsEng.gfh"/>
@@ -176,156 +172,162 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/FoodsI.gf"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/LexFoods.gf"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/LexFoodsGer.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/FoodsI.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/FoodsEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/.gfbuild/Syntax.gfh"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/Foods.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/FoodsGer.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/GF Test Project/functors/FoodsEng.gf"/>
 </editors>
-<item historyLabel="Cat.gfh" index="1">
-<position info="not_deleted" x="463" y="1"/>
+<item historyLabel="LexFoodsEng.gf" index="0">
+<position/>
 </item>
-<item historyLabel="LexFoods.gf" index="0">
-<position info="not_deleted" x="128" y="0"/>
+<item historyLabel="LexFoods.gf" index="1">
+<position info="not_deleted" x="127" y="0"/>
 </item>
 <item historyLabel="LexFoodsEng.gf" index="2">
-<position info="not_deleted" x="270" y="0"/>
+<position info="not_deleted" x="295" y="0"/>
 </item>
 <item historyLabel="ParadigmsEng.gfh" index="3">
-<position info="not_deleted" x="10322" y="3"/>
-</item>
-<item historyLabel="LexFoodsEng.gf" index="2">
-<position info="not_deleted" x="193" y="0"/>
-</item>
-<item historyLabel="LexFoodsEng.gf" index="2">
-<position info="not_deleted" x="229" y="0"/>
-</item>
-<item historyLabel="LexFoods.gf" index="4">
-<position info="not_deleted" x="127" y="0"/>
-</item>
-<item historyLabel="LexFoodsEng.gf" index="2">
-<position/>
-</item>
-<item historyLabel="LexFoods.gf" index="5">
-<position info="not_deleted" x="127" y="0"/>
-</item>
-<item historyLabel="LexFoodsEng.gf" index="6">
-<position info="not_deleted" x="295" y="0"/>
-</item>
-<item historyLabel="ParadigmsEng.gfh" index="7">
 <position info="not_deleted" x="6542" y="3"/>
 </item>
-<item historyLabel="LexFoodsEng.gf" index="6">
+<item historyLabel="LexFoodsEng.gf" index="2">
 <position info="not_deleted" x="295" y="0"/>
 </item>
-<item historyLabel="LexFoodsEng.gf" index="6">
+<item historyLabel="LexFoodsEng.gf" index="2">
 <position info="not_deleted" x="307" y="0"/>
 </item>
-<item historyLabel="LexFoods.gf" index="8">
+<item historyLabel="LexFoods.gf" index="4">
 <position info="not_deleted" x="128" y="0"/>
 </item>
-<item historyLabel="LexFoodsEng.gf" index="9">
+<item historyLabel="LexFoodsEng.gf" index="5">
 <position info="not_deleted" x="256" y="0"/>
 </item>
-<item historyLabel="LexFoods.gf" index="10">
+<item historyLabel="LexFoods.gf" index="6">
 <position info="not_deleted" x="128" y="0"/>
 </item>
-<item historyLabel="LexFoodsEng.gf" index="11">
+<item historyLabel="LexFoodsEng.gf" index="7">
 <position info="not_deleted" x="347" y="0"/>
 </item>
-<item historyLabel="ParadigmsEng.gfh" index="12">
+<item historyLabel="ParadigmsEng.gfh" index="8">
 <position/>
 </item>
-<item historyLabel="LexFoodsEng.gf" index="11">
+<item historyLabel="LexFoodsEng.gf" index="7">
 <position info="not_deleted" x="347" y="0"/>
 </item>
-<item historyLabel="Foods.gf" index="13">
+<item historyLabel="Foods.gf" index="9">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="FoodsEng.gf" index="14">
+<item historyLabel="FoodsEng.gf" index="10">
 <position info="not_deleted" x="260" y="0"/>
 </item>
-<item historyLabel="ParadigmsEng.gfh" index="12">
+<item historyLabel="ParadigmsEng.gfh" index="8">
 <position info="not_deleted" x="10322" y="3"/>
 </item>
-<item historyLabel="FoodsEng.gf" index="14">
+<item historyLabel="FoodsEng.gf" index="10">
 <position info="not_deleted" x="260" y="0"/>
 </item>
-<item historyLabel="Foods.gf" index="15">
+<item historyLabel="Foods.gf" index="11">
 <position info="not_deleted" x="64" y="0"/>
 </item>
-<item historyLabel="FoodsEng.gf" index="16">
+<item historyLabel="FoodsEng.gf" index="12">
 <position info="not_deleted" x="260" y="0"/>
 </item>
-<item historyLabel="FoodsGer.gf" index="17">
+<item historyLabel="FoodsGer.gf" index="13">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="FoodsI.gf" index="18">
+<item historyLabel="FoodsI.gf" index="14">
 <position info="not_deleted" x="241" y="0"/>
 </item>
-<item historyLabel="FoodsGer.gf" index="19">
+<item historyLabel="FoodsGer.gf" index="15">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="FoodsEng.gf" index="20">
+<item historyLabel="FoodsEng.gf" index="16">
 <position info="not_deleted" x="270" y="0"/>
 </item>
-<item historyLabel="LexFoods.gf" index="21">
+<item historyLabel="LexFoods.gf" index="17">
 <position info="not_deleted" x="128" y="0"/>
 </item>
-<item historyLabel="LexFoodsEng.gf" index="22">
+<item historyLabel="LexFoodsEng.gf" index="18">
 <position info="not_deleted" x="347" y="0"/>
 </item>
-<item historyLabel="Foods.gf" index="23">
+<item historyLabel="Foods.gf" index="19">
 <position info="not_deleted" x="93" y="0"/>
 </item>
-<item historyLabel="FoodsEng.gf" index="24">
+<item historyLabel="FoodsEng.gf" index="20">
 <position info="not_deleted" x="265" y="0"/>
 </item>
-<item historyLabel="FoodsGer.gf" index="25">
+<item historyLabel="FoodsGer.gf" index="21">
 <position info="not_deleted" x="171" y="0"/>
 </item>
-<item historyLabel="FoodsI.gf" index="26">
+<item historyLabel="FoodsI.gf" index="22">
 <position info="not_deleted" x="797" y="0"/>
 </item>
-<item historyLabel="LexFoods.gf" index="27">
+<item historyLabel="LexFoods.gf" index="23">
 <position info="not_deleted" x="128" y="0"/>
 </item>
-<item historyLabel="LexFoodsEng.gf" index="22">
+<item historyLabel="LexFoodsEng.gf" index="18">
 <position info="not_deleted" x="177" y="0"/>
 </item>
-<item historyLabel="LexFoodsGer.gf" index="28">
+<item historyLabel="LexFoodsGer.gf" index="24">
 <position info="not_deleted" x="239" y="0"/>
 </item>
-<item historyLabel="Foods.gf" index="23">
+<item historyLabel="Foods.gf" index="19">
 <position info="not_deleted" x="93" y="0"/>
 </item>
-<item historyLabel="FoodsEng.gf" index="24">
+<item historyLabel="FoodsEng.gf" index="20">
 <position info="not_deleted" x="67" y="0"/>
 </item>
-<item historyLabel="FoodsGer.gf" index="25">
+<item historyLabel="FoodsGer.gf" index="21">
 <position info="not_deleted" x="67" y="0"/>
 </item>
-<item historyLabel="FoodsI.gf" index="26">
+<item historyLabel="FoodsI.gf" index="22">
 <position info="not_deleted" x="797" y="0"/>
 </item>
-<item historyLabel="FoodsEng.gf" index="24">
+<item historyLabel="FoodsEng.gf" index="20">
 <position info="not_deleted" x="67" y="0"/>
 </item>
-<item historyLabel="FoodsGer.gf" index="25">
+<item historyLabel="FoodsGer.gf" index="21">
 <position info="not_deleted" x="172" y="0"/>
 </item>
-<item historyLabel="LexFoods.gf" index="27">
+<item historyLabel="LexFoods.gf" index="23">
 <position info="not_deleted" x="128" y="0"/>
 </item>
-<item historyLabel="LexFoodsEng.gf" index="22">
+<item historyLabel="LexFoodsEng.gf" index="18">
 <position info="not_deleted" x="177" y="0"/>
 </item>
-<item historyLabel="LexFoodsGer.gf" index="28">
+<item historyLabel="LexFoodsGer.gf" index="24">
 <position info="not_deleted" x="239" y="0"/>
 </item>
-<item historyLabel="LexFoodsEng.gf" index="22">
+<item historyLabel="LexFoodsEng.gf" index="18">
 <position info="not_deleted" x="20" y="55"/>
 </item>
-<item historyLabel="LexFoodsGer.gf" index="28">
+<item historyLabel="LexFoodsGer.gf" index="24">
 <position info="not_deleted" x="75" y="0"/>
 </item>
-<item active="true" historyLabel="LexFoodsEng.gf" index="22">
+<item historyLabel="LexFoodsEng.gf" index="18">
 <position info="not_deleted" x="20" y="55"/>
+</item>
+<item historyLabel="FoodsI.gf" index="25">
+<position info="not_deleted" x="797" y="0"/>
+</item>
+<item historyLabel="FoodsEng.gf" index="26">
+<position info="not_deleted" x="236" y="0"/>
+</item>
+<item historyLabel="Syntax.gfh" index="27">
+<position info="not_deleted" x="7380" y="4"/>
+</item>
+<item historyLabel="FoodsEng.gf" index="26">
+<position info="not_deleted" x="236" y="0"/>
+</item>
+<item historyLabel="Foods.gf" index="28">
+<position info="not_deleted" x="93" y="0"/>
+</item>
+<item historyLabel="FoodsGer.gf" index="29">
+<position info="not_deleted" x="172" y="0"/>
+</item>
+<item active="true" historyLabel="FoodsEng.gf" index="30">
+<position info="not_deleted" x="236" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -344,14 +346,14 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="Syntax.gfh" tooltip="GF Test Project/functors/.gfbuild/Syntax.gfh">
+<persistable path="/GF Test Project/functors/.gfbuild/Syntax.gfh"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ParadigmsEng.gfh" tooltip="GF Test Project/functors/.gfbuild/ParadigmsEng.gfh">
 <persistable path="/GF Test Project/functors/.gfbuild/ParadigmsEng.gfh"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="Cat.gfh" tooltip="GF Test Project/functors/.gfbuild/Cat.gfh">
 <persistable path="/GF Test Project/functors/.gfbuild/Cat.gfh"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="Syntax.gfh" tooltip="GF Test Project/functors/.gfbuild/Syntax.gfh">
-<persistable path="/GF Test Project/functors/.gfbuild/Syntax.gfh"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ParadigmsGer.gfh" tooltip="GF Test Project/functors/.gfbuild/ParadigmsGer.gfh">
 <persistable path="/GF Test Project/functors/.gfbuild/ParadigmsGer.gfh"/>

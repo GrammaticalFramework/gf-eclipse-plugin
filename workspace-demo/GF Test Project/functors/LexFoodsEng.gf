@@ -17,4 +17,4 @@ instance LexFoodsEng of LexFoods =
 		expensive_A = mkA "expensive" ;
 		delicious_A = mkA "delicious" ;
 		boring_A = mkA "boring" ;
-}
+} ;

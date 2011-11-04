@@ -249,14 +249,6 @@
      </perspective>
   </extension>
   <extension
-        point="org.eclipse.ui.acceleratorConfigurations">
-     <acceleratorConfiguration
-           description="description"
-           id="org.grammaticalframework.eclipse.ui.acceleratorConfiguration1"
-           name="name">
-     </acceleratorConfiguration>
-  </extension>
-  <extension
         point="org.eclipse.ui.newWizards">
      <category
            id="org.grammaticalframework.eclipse.ui.category.wizards"

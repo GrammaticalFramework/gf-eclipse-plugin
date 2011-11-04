@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="TaskSearchPage">
+		<item value="true" key="includePublic"/>
+		<item value="true" key="includeTypes"/>
+		<item value="false" key="includePrivate"/>
+		<item value="false" key="outdatedHeader"/>
+		<item value="false" key="todoForGenerated"/>
+		<item value="false" key="searchMissingTags"/>
+		<item value="false" key="excludeGetterSetter"/>
+		<item value="true" key="includeProtected"/>
+		<item value="author,deprecated+" key="missingTagString"/>
+		<item value="true" key="missingReturnTag"/>
+		<item value="true" key="missingJavadoc"/>
+		<item value="true" key="missingThrowsTag"/>
+		<item value="false" key="missingHeader"/>
+		<item value="true" key="includeMethods"/>
+		<item value="false" key="includePackage"/>
+		<item value="false" key="getterSetterOnly"/>
+		<item value="true" key="includeFields"/>
+		<item value="false" key="missingPeriods"/>
+		<item value="true" key="missingParamTag"/>
+		<item value="false" key="generatedJavadoc"/>
+	</section>
+</section>

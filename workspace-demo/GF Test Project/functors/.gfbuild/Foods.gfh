@@ -11,6 +11,7 @@ abstract Foods = {
   data Is : Foods.Item -> Foods.Quality -> Foods.Phrase ;
   data Italian : Foods.Quality ;
   cat Item ;
+  cat Item2 ;
   cat Kind ;
   cat Phrase ;
   data Pizza : Foods.Kind ;

@@ -7,6 +7,7 @@ abstract Foods = {
 	cat
 		Phrase ;
 		Item ;
+		Item2 ;
 		Kind ;
 		Quality ;
 

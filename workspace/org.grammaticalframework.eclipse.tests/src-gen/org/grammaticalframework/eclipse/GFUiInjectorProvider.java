@@ -9,6 +9,7 @@ import com.google.inject.Injector;
 
 public class GFUiInjectorProvider implements IInjectorProvider {
 	
+	@SuppressWarnings("restriction")
 	public Injector getInjector() {
 		return org.grammaticalframework.eclipse.ui.internal.GFActivator.getInstance().getInjector("org.grammaticalframework.eclipse.GF");
 	}
