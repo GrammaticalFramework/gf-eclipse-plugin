@@ -11,7 +11,11 @@ package org.grammaticalframework.eclipse.ui.editor.preferences;
 
 import org.eclipse.jface.preference.ComboFieldEditor;
 import org.eclipse.jface.preference.StringFieldEditor;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage;
 import org.grammaticalframework.eclipse.GFPreferences;
@@ -25,7 +29,7 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 	/**
 	 * The Constant PAGE_DESCRIPTION.
 	 */
-	private static final String PAGE_DESCRIPTION = "Settings for GF development."; //$NON-NLS-1$
+	private static final String PAGE_DESCRIPTION = "Settings for the GF Eclipse Plugin."; //$NON-NLS-1$
 	
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage#createFieldEditors()
@@ -33,8 +37,17 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 	@Override
 	protected void createFieldEditors() {
 		Composite parent = getFieldEditorParent();
+		FontData fontData = parent.getFont().getFontData()[0];
+		Font fontItalic = new Font(parent.getDisplay(), new FontData(fontData.getName(), fontData.getHeight(), SWT.ITALIC));
+		
 		addField(new StringFieldEditor(GFPreferences.GF_BIN_PATH, "&Runtime path:", parent));
 		addField(new StringFieldEditor(GFPreferences.GF_LIB_PATH, "&Library path:", parent));
+		
+		new Label(parent, SWT.NULL); // skip cell
+		Label libPathNote = new Label(parent, SWT.NULL);
+		libPathNote.setFont(fontItalic);
+		libPathNote.setText("This is passed to GF using the --gf-lib-path flag ");
+
 		String[][] entryNamesAndValues = new String[][]{
 			// Refer: http://logging.apache.org/log4j/1.2/manual.html
 			{"All", "DEBUG"},

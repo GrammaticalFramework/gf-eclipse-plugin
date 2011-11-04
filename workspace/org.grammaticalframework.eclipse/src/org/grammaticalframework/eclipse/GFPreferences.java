@@ -10,11 +10,9 @@
 package org.grammaticalframework.eclipse;
 
 import org.eclipse.core.runtime.Platform;
-import org.eclipse.core.runtime.preferences.ConfigurationScope;
 import org.eclipse.core.runtime.preferences.IPreferencesService;
 import org.eclipse.core.runtime.preferences.IScopeContext;
 
-// TODO: Auto-generated Javadoc
 /**
  * Identifiers for plugin-wide preferences
  * Use like so:
@@ -33,22 +31,32 @@ public class GFPreferences {
 	/**
 	 * Qualifier for retrieving the plugin preferences
 	 */
-	public static final String QUALIFIER = "org.grammaticalframework.eclipse.GF";
+//	public static final String QUALIFIER = "org.grammaticalframework.eclipse.GF";
+	public static final String QUALIFIER = "org.grammaticalframework.eclipse.ui";
 	
 	/**
 	 * Preference to hold path of GF runtime
 	 */
-	public static final String GF_BIN_PATH = "runtimePath"; 
+	public static final String GF_BIN_PATH = "runtimePath";
+	public static String getRuntimePath() {
+		return getString(GF_BIN_PATH);
+	}
 	
 	/**
 	 * Preference to hold path of GF libraries
 	 */
 	public static final String GF_LIB_PATH = "libraryPath"; 
+	public static String getLibraryPath() {
+		return getString(GF_LIB_PATH);
+	}
 	
 	/**
 	 * Preference to specify debug level
 	 */
 	public static final String LOG_LEVEL = "logLevel";
+	public static String getLogLevel() {
+		return getString(LOG_LEVEL);
+	}
 	
 	/**
 	 * Gets a string preference with no default.

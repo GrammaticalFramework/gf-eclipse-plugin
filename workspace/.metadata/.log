@@ -1546,3 +1546,21 @@ org.eclipse.jface.text.BadLocationException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+!SESSION 2011-11-04 10:25:52.828 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2011-11-04 10:25:59.602
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2011-11-04 10:51:42.456 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2011-11-04 10:51:52.412
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

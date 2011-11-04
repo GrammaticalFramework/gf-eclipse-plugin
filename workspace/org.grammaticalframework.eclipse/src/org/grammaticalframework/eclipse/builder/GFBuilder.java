@@ -30,7 +30,6 @@ import org.grammaticalframework.eclipse.GFPreferences;
 
 import org.apache.log4j.Logger;
 
-// TODO: Auto-generated Javadoc
 /**
  * Custom GF builder, yeah!
  * Some refs..
@@ -78,12 +77,12 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	@Override
 	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws CoreException {
 		// Get some prefs
-		gfPath = GFPreferences.getString(GFPreferences.GF_BIN_PATH);
+		gfPath = GFPreferences.getRuntimePath();
 		if (gfPath == null || gfPath.trim().isEmpty()) {
 			log.error("Error during build: GF path not specified.");
 			return null;
 		}
-		gfLibPath = GFPreferences.getString(GFPreferences.GF_LIB_PATH);
+		gfLibPath = GFPreferences.getLibraryPath();
 		
 		if (kind == IncrementalProjectBuilder.FULL_BUILD) {
 			fullBuild(monitor);

@@ -61,7 +61,7 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 			log.warn(e.getMessage());
 		}
 		
-		log.setLevel( Level.toLevel( GFPreferences.getString(GFPreferences.LOG_LEVEL), Level.INFO ) );
+		log.setLevel( Level.toLevel( GFPreferences.getLogLevel(), Level.INFO ) );
 	}
 	
 	/**

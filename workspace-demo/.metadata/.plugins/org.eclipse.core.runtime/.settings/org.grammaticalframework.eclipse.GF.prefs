@@ -1,6 +1,0 @@
-#Wed Nov 02 09:42:35 CET 2011
-ui.outline.linkWithEditor=true
-runtimePath=/home/john/.cabal/bin/gf
-eclipse.preferences.version=1
-showDebugMessages=true
-org.grammaticalframework.eclipse.GF.syntaxColorer.tokenStyles.compiler\ pragma.color=82,143,201

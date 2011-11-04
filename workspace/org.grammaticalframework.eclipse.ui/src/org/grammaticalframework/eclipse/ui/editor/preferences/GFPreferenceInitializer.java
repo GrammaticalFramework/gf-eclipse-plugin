@@ -18,7 +18,6 @@ import org.grammaticalframework.eclipse.GFPreferences;
 import org.grammaticalframework.eclipse.ui.GFUiModule;
 import org.grammaticalframework.eclipse.ui.internal.GFActivator;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class GFPreferenceInitializer.
  */
@@ -30,9 +29,9 @@ public class GFPreferenceInitializer extends AbstractPreferenceInitializer {
 	@Override
 	public void initializeDefaultPreferences() {
 		
-		// Set defaults from environment variables
 		IPreferenceStore store = GFActivator.getInstance().getPreferenceStore();
 		
+		// Set defaults from environment variables
 		try {
 			store.setDefault(GFPreferences.GF_BIN_PATH, System.getenv("HOME") + "/.cabal/bin/gf");
 		} catch (SecurityException _) {	}

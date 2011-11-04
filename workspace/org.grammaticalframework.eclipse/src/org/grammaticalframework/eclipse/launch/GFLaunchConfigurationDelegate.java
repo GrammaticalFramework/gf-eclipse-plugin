@@ -56,7 +56,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		// http://code.google.com/p/goclipse/source/browse/trunk/goclipse-n/src/com/googlecode/goclipse/debug/LaunchConfigurationDelegate.java?r=64
 		
 //		String gfPath = prefs.getString(GFPreferences.QUALIFIER, GFPreferences.GF_BIN_PATH, (String)null, null);
-		String gfPath = GFPreferences.getString(GFPreferences.GF_BIN_PATH);
+		String gfPath = GFPreferences.getRuntimePath();
 		String wdir = configuration.getAttribute(IGFLaunchConfigConstants.WORKING_DIR, (String)null);
 		String options = configuration.getAttribute(IGFLaunchConfigConstants.OPTIONS, (String)null);
 		String files = configuration.getAttribute(IGFLaunchConfigConstants.FILENAMES, (String)null);
