@@ -1,2 +1,6 @@
 1320250709465	Rename field 'LOG'
 1320333308569	Rename local variable 'prefString'
+1320406037813	Copy compilation unit
+1320407930040	Rename local variable 'st'
+1320415046015	Rename local variable 'eobj'
+1320415053080	Rename local variable 'qn'

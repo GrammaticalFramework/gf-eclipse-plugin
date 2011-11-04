@@ -1,26 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFLibraryAgent"/>
-<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.Resource"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IResourceDeltaVisitor"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.ICommand"/>
-<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
-<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IResourceDelta"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IResource"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IWorkspace"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IWorkspaceDescription"/>
-<fullyQualifiedTypeName name="java.util.concurrent.Callable"/>
-<fullyQualifiedTypeName name="org.eclipse.jface.preference.BooleanFieldEditor"/>
-<fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="java.net.MalformedURLException"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScopeProvider"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScope"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
-<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.builder.GFBuilder"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
@@ -36,8 +15,6 @@
 <fullyQualifiedTypeName name="org.eclipse.jface.fieldassist.ControlDecoration"/>
 <fullyQualifiedTypeName name="org.eclipse.jface.fieldassist.FieldDecorationRegistry"/>
 <fullyQualifiedTypeName name="org.eclipse.swt.graphics.Image"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IFile"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IFolder"/>
 <fullyQualifiedTypeName name="org.eclipse.jface.bindings.keys.KeyStroke"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.ui.editor.preferences.IPreferenceStoreInitializer"/>
@@ -60,4 +37,27 @@
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.GFUiModule"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFPreferences"/>
 <fullyQualifiedTypeName name="org.apache.log4j.Level"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider.TagEntry"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="org.eclipse.core.resources.IFile"/>
+<fullyQualifiedTypeName name="org.eclipse.core.internal.resources.File"/>
+<fullyQualifiedTypeName name="java.net.URI"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.URIConverter.ReadableInputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.URIConverter"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.URIConverterImpl"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.common.util.URI"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.resource.IEObjectDescription"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedScope"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
 </qualifiedTypeNameHistroy>

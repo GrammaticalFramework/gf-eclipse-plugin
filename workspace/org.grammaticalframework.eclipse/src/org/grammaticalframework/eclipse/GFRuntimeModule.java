@@ -7,6 +7,7 @@ import org.grammaticalframework.eclipse.naming.GFQualifiedNameProvider;
 import org.grammaticalframework.eclipse.resource.GFResourceDescriptionStrategy;
 import org.grammaticalframework.eclipse.scoping.GFGlobalScopeProvider;
 import org.grammaticalframework.eclipse.scoping.GFScopeProvider;
+import org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider;
 
 /**
  * Use this class to register components to be used at runtime / without the
@@ -34,7 +35,8 @@ public class GFRuntimeModule extends
 	}
 	@Override
 	public Class<? extends org.eclipse.xtext.scoping.IGlobalScopeProvider> bindIGlobalScopeProvider() {
-		return GFGlobalScopeProvider.class;
+//		return GFGlobalScopeProvider.class;
+		return GFTagBasedGlobalScopeProvider.class;
 	}
 
 

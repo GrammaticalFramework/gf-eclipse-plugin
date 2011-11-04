@@ -35,6 +35,24 @@ public class GFLibraryAgent {
 	}
 	
 	/**
+	 * Put together path to compiled tags file in the build folder.
+	 *
+	 * @param context the context
+	 * @param moduleName the module name
+	 * @return the header path
+	 */
+	public URI getTagsFile(Resource context, String moduleName) {
+		StringBuilder sb = new StringBuilder();
+		sb.append(GFBuilder.BUILD_FOLDER
+				+ java.io.File.separator
+				+ context.getURI().lastSegment()
+				+ java.io.File.separator
+				+ "tags");
+		URI uri = URI.createURI(sb.toString());
+		return uri.resolve(context.getURI());
+	}
+	
+	/**
 	 * Put together path to compiled gfh header in the build folder.
 	 *
 	 * @param context the context

@@ -232,8 +232,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @return the builds the directory
 	 */
 	private String getBuildDirectory(IFile file) {
+		return getBuildDirectory(file, USE_INDIVIDUAL_FOLDERS);
+	}
+	private String getBuildDirectory(IFile file, boolean useIndividualFolders) {
 		String filename = file.getName();
-		if (USE_INDIVIDUAL_FOLDERS) {
+		if (useIndividualFolders) {
 			return file.getRawLocation().removeLastSegments(1).toOSString()
 					+ java.io.File.separator
 					+ BUILD_FOLDER
@@ -247,7 +250,74 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				+ java.io.File.separator;
 		}
 	}
+	
+	private boolean buildFile(IFile file) {
+//		return buildFileSS(file);
+		return buildFileTAGS(file);
+	}
+	
+	/**
+	 * For a single .gf file, compile it with the GF -tags flag which outputs
+	 * a single tags file.
+	 *
+	 * @param file the file
+	 * @return true, if successful
+	 */
+	private boolean buildFileTAGS(IFile file) {
+		/* 
+		 * Shell command: gf --tags HelloEng.gf
+		 */
+		String filename = file.getName();
+		String buildDir = getBuildDirectory(file, true);
+		
+		ArrayList<String> command = new ArrayList<String>();
+		command.add(gfPath);
+		command.add("--tags");
+		
+		// Use library path in command (if supplied)
+		if (gfLibPath != null && !gfLibPath.isEmpty()) {
+			command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath));
+		}
 
+		// We are using individual folders in this case
+		command.add(String.format("..%1$s..%1$s%2$s", java.io.File.separator, filename));
+		
+		try {
+			// Check the build directory and try to create it
+			File buildDirFile = new File(buildDir);
+			if (!buildDirFile.exists()) {
+				buildDirFile.mkdir();
+			}
+			
+			// Piece together our GF process
+			ProcessBuilder b = new ProcessBuilder(command);
+			b.directory(buildDirFile);
+			b.redirectErrorStream(true);
+			Process process = b.start();
+			
+			// Consume & log all output
+			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
+			String out_str;
+			while ((out_str = processOutput.readLine()) != null) {
+				log.debug(out_str);
+			}
+			
+			// Tidy up
+			processOutput.close();
+			process.waitFor();
+			int retVal = process.exitValue();
+			return (retVal == 0);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		return false;		
+	}
+	
+	
 	/**
 	 * For a single .gf file, compile it with GF and run "ss -strip -save" to
 	 * capture all the GF headers in the build subfolder.
@@ -257,7 +327,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param file the file
 	 * @return true, if successful
 	 */
-	private boolean buildFile(IFile file) {
+	@SuppressWarnings("unused")
+	private boolean buildFileSS(IFile file) {
 		/* 
 		 * We want to compile each source file in .gf with these commands:
 		 * i --retain HelloEng.gf
@@ -314,7 +385,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			
 			// Tidy up
 			processInput.close();
-//			processOutput.close();
+			processOutput.close();
 			process.waitFor();
 			return true;
 			

@@ -1,4 +1,4 @@
-#Fri Nov 04 10:17:02 CET 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions/>\n
+#Fri Nov 04 13:52:36 CET 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="uri.toFileString()"/>\n<expression enabled\="true" text\="uri.toString()"/>\n<expression enabled\="true" text\="uri.toPlatformString(false)"/>\n<expression enabled\="true" text\="new FileReader(new File(uri.toPlatformString(true)))"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=false

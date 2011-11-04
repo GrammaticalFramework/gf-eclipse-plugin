@@ -88,7 +88,7 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	}
 	
 	/**
-	 * The lib agent.
+	 * The library agent.
 	 */
 	@Inject
 	private GFLibraryAgent libAgent;

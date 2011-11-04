@@ -30,7 +30,7 @@ import com.google.inject.Inject;
 public class GFScope extends AbstractScope {
 
 	/**
-	 * The converter.
+	 * Qualified name converter
 	 */
 	@Inject
 	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
@@ -61,16 +61,17 @@ public class GFScope extends AbstractScope {
 //			throw new IllegalArgumentException("descriptions may not be null");
 //		this.descriptions = descriptions;
 //	}
+	
 	/**
- * Instantiates a new gF scope.
- *
- * @param parent the parent
- * @param descriptions the descriptions
- * @param filter the filter
- * @param ignoreCase the ignore case
- * @param ignoreModuleName the ignore module name
- */
-public GFScope(IScope parent, Iterable<IEObjectDescription> descriptions, Predicate<IEObjectDescription> filter, boolean ignoreCase, boolean ignoreModuleName) {
+	 * Instantiates a new gF scope.
+	 *
+	 * @param parent the parent
+	 * @param descriptions the descriptions
+	 * @param filter the filter
+	 * @param ignoreCase the ignore case
+	 * @param ignoreModuleName the ignore module name
+	 */
+	public GFScope(IScope parent, Iterable<IEObjectDescription> descriptions, Predicate<IEObjectDescription> filter, boolean ignoreCase, boolean ignoreModuleName) {
 		super(parent, ignoreCase);
 		if (descriptions == null) {
 			throw new IllegalArgumentException("descriptions may not be null");
@@ -92,9 +93,8 @@ public GFScope(IScope parent, Iterable<IEObjectDescription> descriptions, Predic
 			this.descriptions = descriptions;
 	}
 	
-	// Overwrite qualified module names with an alias
 	/**
-	 * Instantiates a new gF scope.
+	 * Instantiates a new gF scope; Overwrite qualified module names with an alias
 	 *
 	 * @param parent the parent
 	 * @param descriptions the descriptions
