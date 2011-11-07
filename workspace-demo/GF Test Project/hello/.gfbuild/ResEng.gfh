@@ -1,5 +1,0 @@
-resource ResEng = {
-  flags
-    coding = "latin1" ;
-  param Gender = Masc | Fem ;
-}

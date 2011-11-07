@@ -1,0 +1,21 @@
+package org.grammaticalframework.eclipse.scoping;
+
+public class TagEntry {
+	String ident, type, file, args;
+	TagEntry(String[] elements) {
+		switch (elements.length) {
+		case 4:
+			this.args = elements[3];
+		case 3:
+			this.file = elements[2];
+			this.type = elements[1];
+			this.ident = elements[0];
+		}
+	}
+	TagEntry(String ident, String type, String file, String args) {
+		this.ident = ident;
+		this.type = type;
+		this.file = file;
+		this.args = args;
+	}
+}

@@ -58,6 +58,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	/**
 	 * The Constant USE_INDIVIDUAL_FOLDERS.
 	 */
+	public static final Boolean TAG_BASED_SCOPING = true;
 	public static final Boolean USE_INDIVIDUAL_FOLDERS = false;
 
 	/**
@@ -112,9 +113,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					int kind = delta.getKind(); 
 					if (kind == IResourceDelta.ADDED || kind == IResourceDelta.CHANGED) {
 						if (shouldBuild(resource)) {
-							if (USE_INDIVIDUAL_FOLDERS) {
-								cleanFile((IFile) resource);
-							}
+							cleanFile((IFile) resource);
 							if (buildFile((IFile) resource)) {
 								log.info("  + " + delta.getResource().getRawLocation());
 							} else {
@@ -182,12 +181,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * For recursively applying a function to an IResource.
 	 */
 	interface CallableOnResource {
-		
-		/**
-		 * Call.
-		 *
-		 * @param resource the resource
-		 */
 		public void call(IResource resource);
 	}
 	
@@ -252,8 +245,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	}
 	
 	private boolean buildFile(IFile file) {
-//		return buildFileSS(file);
-		return buildFileTAGS(file);
+		if (TAG_BASED_SCOPING)
+			return buildFileTAGS(file);
+		else
+			return buildFileSS(file);
 	}
 	
 	/**
@@ -327,7 +322,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param file the file
 	 * @return true, if successful
 	 */
-	@SuppressWarnings("unused")
 	private boolean buildFileSS(IFile file) {
 		/* 
 		 * We want to compile each source file in .gf with these commands:
@@ -404,19 +398,20 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param file the file
 	 */
 	private void cleanFile(IFile file) {
-		log.info("  Cleaning build directory for " + file.getName());
-		
-		String buildDir = getBuildDirectory(file);
-		// Check the build directory and try to create it
-		File buildDirFile = new File(buildDir);
-		if (buildDirFile.exists()) {
-			File[] files = buildDirFile.listFiles();
-			for (File f : files) {
-				try {
-					f.delete();
-					log.info("  - " + f.getName());
-				} catch (Exception _) {
-					log.warn("  > Failed: " + f.getName());
+		if (TAG_BASED_SCOPING || USE_INDIVIDUAL_FOLDERS) {
+			log.info("  Cleaning build directory for " + file.getName());
+			String buildDir = getBuildDirectory(file, true);
+			// Check the build directory and delete all its contents
+			File buildDirFile = new File(buildDir);
+			if (buildDirFile.exists()) {
+				File[] files = buildDirFile.listFiles();
+				for (File f : files) {
+					try {
+						f.delete();
+						log.info("  - " + f.getName());
+					} catch (Exception _) {
+						log.warn("  > Failed: " + f.getName());
+					}
 				}
 			}
 		}

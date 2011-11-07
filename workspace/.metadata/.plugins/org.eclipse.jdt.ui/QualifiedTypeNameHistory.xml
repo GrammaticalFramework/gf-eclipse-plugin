@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.builder.GFBuilder"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFGlobalScopeProvider"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EAttribute"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.GFPackage"/>
@@ -41,7 +38,6 @@
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider.TagEntry"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IFile"/>
 <fullyQualifiedTypeName name="org.eclipse.core.internal.resources.File"/>
@@ -53,11 +49,15 @@
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.URIConverterImpl"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.common.util.URI"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.IEObjectDescription"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedScope"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFLibraryAgent"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceDescription"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedScope"/>
 </qualifiedTypeNameHistroy>

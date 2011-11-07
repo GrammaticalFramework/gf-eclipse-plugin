@@ -1,0 +1,74 @@
+package org.grammaticalframework.eclipse.scoping;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Map;
+
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.xtext.generator.grammarAccess.GrammarAccess;
+import org.eclipse.xtext.generator.grammarAccess.GrammarAccessUtil;
+import org.eclipse.xtext.naming.IQualifiedNameConverter;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.resource.EObjectDescription;
+import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.resource.IResourceDescriptions;
+import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.impl.AbstractScope;
+import org.eclipse.xtext.scoping.impl.LoadOnDemandResourceDescriptions;
+import org.grammaticalframework.eclipse.gF.GFFactory;
+import org.grammaticalframework.eclipse.gF.GFPackage;
+import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.impl.IdentImpl;
+import org.grammaticalframework.eclipse.services.GFGrammarAccess;
+
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+
+public class GFTagBasedScope extends AbstractScope {
+
+	/**
+	 * Qualified name converter
+	 */
+	@Inject
+	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
+
+	/**
+	 * The library agent.
+	 */
+	@Inject
+	private GFLibraryAgent libAgent;
+	
+
+	/**
+	 * The descriptions.
+	 */
+	private final ArrayList<IEObjectDescription> descriptions;
+	
+	protected GFTagBasedScope(IScope parent, boolean ignoreCase) {
+		super(parent, ignoreCase);
+		descriptions = new ArrayList<IEObjectDescription>();
+	}
+	
+	public void addTag(Resource context, TagEntry tag) {
+		QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.ident);
+		QualifiedName unQualifiedName = fullyQualifiedName.skipFirst(1);
+		
+		EObject eObject = libAgent.findEObjectInFile(context, tag.file, unQualifiedName.toString());
+		
+		Map<String, String> userData = tag.getProperties();
+		IEObjectDescription eObjectDescription = new EObjectDescription(unQualifiedName, eObject, userData);
+		descriptions.add(eObjectDescription);
+	}
+
+	@Override
+	protected Iterable<IEObjectDescription> getAllLocalElements() {
+		return descriptions;
+	}
+
+}

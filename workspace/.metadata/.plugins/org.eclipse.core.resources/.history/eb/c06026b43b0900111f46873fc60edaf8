@@ -1,0 +1,59 @@
+package org.grammaticalframework.eclipse.scoping;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.generator.grammarAccess.GrammarAccess;
+import org.eclipse.xtext.generator.grammarAccess.GrammarAccessUtil;
+import org.eclipse.xtext.naming.IQualifiedNameConverter;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.resource.EObjectDescription;
+import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.impl.AbstractScope;
+import org.grammaticalframework.eclipse.gF.GFFactory;
+import org.grammaticalframework.eclipse.gF.GFPackage;
+import org.grammaticalframework.eclipse.gF.impl.IdentImpl;
+import org.grammaticalframework.eclipse.services.GFGrammarAccess;
+
+import com.google.inject.Inject;
+
+public class GFTagBasedScope extends AbstractScope {
+
+	/**
+	 * Qualified name converter
+	 */
+	@Inject
+	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
+	
+	/**
+	 * The descriptions.
+	 */
+	private final ArrayList<IEObjectDescription> descriptions;
+	
+	protected GFTagBasedScope(IScope parent, boolean ignoreCase) {
+		super(parent, ignoreCase);
+		descriptions = new ArrayList<IEObjectDescription>();
+	}
+	
+	public void addTag(TagEntry tag) {
+		QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.ident);
+		QualifiedName unQualifiedName = fullyQualifiedName.skipFirst(1);
+		
+		//TODO: This eObject needs to actually point to something!!
+		// Maybe jsut for starters just point to the file? What about when we don't own the sources?
+		EObject eObject = GFFactory.eINSTANCE.createIdent();
+		eObject.eSet(GFPackage.Literals.IDENT__S, unQualifiedName);
+		
+		Map<String, String> userData = tag.getProperties();
+		IEObjectDescription e = new EObjectDescription(unQualifiedName, eObject, userData);
+		descriptions.add(e);
+	}
+
+	@Override
+	protected Iterable<IEObjectDescription> getAllLocalElements() {
+		return descriptions;
+	}
+
+}

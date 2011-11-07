@@ -1864,3 +1864,258 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+[2011-11-07 09:09:46] INFO  Full build on GF Test Project
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 09:09:46] INFO    + Foods.gf
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsEng.gf... checking module FoodsEng
+[2011-11-07 09:09:46] DEBUG    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-07 09:09:46] DEBUG 
+[2011-11-07 09:09:46] INFO    + FoodsEng.gf
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsGer.gf... checking module FoodsGer
+[2011-11-07 09:09:46] DEBUG    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-07 09:09:46] DEBUG 
+[2011-11-07 09:09:46] INFO    + FoodsGer.gf
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf... 
+[2011-11-07 09:09:46] INFO    + FoodsI.gf
+[2011-11-07 09:09:46] DEBUG File Syntax.gf does not exist.
+[2011-11-07 09:09:46] DEBUG searched in: ../../
+[2011-11-07 09:09:46] WARN    > Failed: LexFoods.gf
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 09:09:46] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf... 
+[2011-11-07 09:09:46] INFO    + LexFoodsEng.gf
+[2011-11-07 09:09:47] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 09:09:47] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gf... 
+[2011-11-07 09:09:47] INFO    + LexFoodsGer.gf
+[2011-11-07 09:09:47] INFO    + AbsCat.gf
+[2011-11-07 09:09:47] INFO    + HelloAbs.gf
+[2011-11-07 09:09:47] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... renaming module HelloEng
+[2011-11-07 09:09:47] DEBUG    /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf:12:
+[2011-11-07 09:09:47] DEBUG    Happened in the renaming of Hello
+[2011-11-07 09:09:47] DEBUG       atomic term Masc
+[2011-11-07 09:09:47] DEBUG       given Alias, ResEng, HelloEng
+[2011-11-07 09:09:47] DEBUG          constant not found: Masc
+[2011-11-07 09:09:47] WARN    > Failed: HelloEng.gf
+[2011-11-07 09:09:47] INFO    + ResEng.gf
+[2011-11-07 09:10:25] INFO  Incremental build on GF Test Project
+[2011-11-07 09:10:25] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 09:10:25] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 09:10:25] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf... 
+[2011-11-07 09:10:25] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf... 
+[2011-11-07 09:10:25] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsEng.gf... checking module FoodsEng
+[2011-11-07 09:10:25] DEBUG    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-07 09:10:25] DEBUG 
+[2011-11-07 09:10:25] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsEng.gf
+[2011-11-07 09:10:47] INFO  Incremental build on GF Test Project
+[2011-11-07 09:10:47] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... 
+[2011-11-07 09:10:47] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 13:26:52] INFO  Incremental build on GF Test Project
+[2011-11-07 13:26:52] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... 
+[2011-11-07 13:26:52] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 13:27:13] INFO  Incremental build on GF Test Project
+[2011-11-07 13:27:13] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... 
+[2011-11-07 13:27:13] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 13:31:45] INFO  Incremental build on GF Test Project
+[2011-11-07 13:31:45] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... renaming module HelloEng
+[2011-11-07 13:31:45] DEBUG    /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf:13:
+[2011-11-07 13:31:45] DEBUG    Happened in the renaming of Goodbye
+[2011-11-07 13:31:45] DEBUG       atomic term Fem
+[2011-11-07 13:31:45] DEBUG       given Alias, ResEng, HelloEng
+[2011-11-07 13:31:45] DEBUG          constant not found: Fem
+[2011-11-07 13:31:45] WARN    > Failed: /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 13:31:58] INFO  Incremental build on GF Test Project
+[2011-11-07 13:31:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... renaming module HelloEng
+[2011-11-07 13:31:58] DEBUG    /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf:16-18:
+[2011-11-07 13:31:58] DEBUG    Happened in the renaming of Parent
+[2011-11-07 13:31:58] DEBUG       atomic term Alias.Masc
+[2011-11-07 13:31:58] DEBUG       given ResEng, HelloEng
+[2011-11-07 13:31:58] DEBUG          Unknown IC "Alias"
+[2011-11-07 13:31:58] WARN    > Failed: /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 13:32:04] INFO  Incremental build on GF Test Project
+[2011-11-07 13:32:04] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... 
+[2011-11-07 13:32:04] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 16:53:58] INFO  Full build on GF Test Project
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 16:53:58] INFO    + Foods.gf
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsEng.gf... checking module FoodsEng
+[2011-11-07 16:53:58] DEBUG    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-07 16:53:58] DEBUG 
+[2011-11-07 16:53:58] INFO    + FoodsEng.gf
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsGer.gf... checking module FoodsGer
+[2011-11-07 16:53:58] DEBUG    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-07 16:53:58] DEBUG 
+[2011-11-07 16:53:58] INFO    + FoodsGer.gf
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf... 
+[2011-11-07 16:53:58] INFO    + FoodsI.gf
+[2011-11-07 16:53:58] DEBUG File Syntax.gf does not exist.
+[2011-11-07 16:53:58] DEBUG searched in: ../../
+[2011-11-07 16:53:58] WARN    > Failed: LexFoods.gf
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 16:53:58] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf... 
+[2011-11-07 16:53:59] INFO    + LexFoodsEng.gf
+[2011-11-07 16:53:59] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 16:53:59] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gf... 
+[2011-11-07 16:53:59] INFO    + LexFoodsGer.gf
+[2011-11-07 16:53:59] INFO    + AbsCat.gf
+[2011-11-07 16:53:59] INFO    + HelloAbs.gf
+[2011-11-07 16:53:59] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... 
+[2011-11-07 16:53:59] INFO    + HelloEng.gf
+[2011-11-07 16:53:59] INFO    + ResEng.gf
+[2011-11-07 16:54:05] ERROR Problem loading tags file for LexFoods
+[2011-11-07 16:54:05] ERROR Problem loading tags file for LexFoods
+[2011-11-07 16:54:05] ERROR Problem loading tags file for LexFoods
+[2011-11-07 16:54:05] ERROR Problem loading tags file for LexFoods
+[2011-11-07 16:54:05] ERROR Problem loading tags file for LexFoods
+[2011-11-07 16:54:05] ERROR Problem loading tags file for LexFoods
+[2011-11-07 16:54:05] ERROR Problem loading tags file for LexFoods
+[2011-11-07 16:54:05] ERROR Problem loading tags file for LexFoods
+[2011-11-07 16:54:05] ERROR Problem loading tags file for LexFoods
+[2011-11-07 16:54:05] ERROR Problem loading tags file for LexFoods
+[2011-11-07 16:55:04] INFO  Incremental build on GF Test Project
+[2011-11-07 16:55:04] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... renaming module HelloEng
+[2011-11-07 16:55:04] DEBUG    atomic term Recipient
+[2011-11-07 16:55:04] DEBUG    given ResEng, HelloEng
+[2011-11-07 16:55:04] DEBUG       constant not found: Recipient
+[2011-11-07 16:55:04] WARN    > Failed: /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 16:55:11] INFO  Incremental build on GF Test Project
+[2011-11-07 16:55:11] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... 
+[2011-11-07 16:55:11] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 17:01:59] INFO  Incremental build on GF Test Project
+[2011-11-07 17:01:59] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/ResEng.gf... 
+[2011-11-07 17:01:59] INFO    + /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/ResEng.gf
+[2011-11-07 17:02:05] INFO  Incremental build on GF Test Project
+[2011-11-07 17:02:05] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/ResEng.gf... 
+[2011-11-07 17:02:05] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... renaming module HelloEng
+[2011-11-07 17:02:05] DEBUG    /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf:12:
+[2011-11-07 17:02:05] DEBUG    Happened in the renaming of Hello
+[2011-11-07 17:02:05] DEBUG       atomic term Masc
+[2011-11-07 17:02:05] DEBUG       given ResEng, HelloEng
+[2011-11-07 17:02:05] DEBUG          constant not found: Masc
+[2011-11-07 17:02:05] WARN    > Failed: /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 17:09:50] INFO  Full build on GF Test Project
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 17:09:50] INFO    + Foods.gf
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsEng.gf... checking module FoodsEng
+[2011-11-07 17:09:50] DEBUG    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-07 17:09:50] DEBUG 
+[2011-11-07 17:09:50] INFO    + FoodsEng.gf
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsGer.gf... checking module FoodsGer
+[2011-11-07 17:09:50] DEBUG    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-07 17:09:50] DEBUG 
+[2011-11-07 17:09:50] INFO    + FoodsGer.gf
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/Foods.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/FoodsI.gf... 
+[2011-11-07 17:09:50] INFO    + FoodsI.gf
+[2011-11-07 17:09:50] DEBUG File Syntax.gf does not exist.
+[2011-11-07 17:09:50] DEBUG searched in: ../../
+[2011-11-07 17:09:50] WARN    > Failed: LexFoods.gf
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsEng.gf... 
+[2011-11-07 17:09:50] INFO    + LexFoodsEng.gf
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoods.gf... 
+[2011-11-07 17:09:50] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/functors/LexFoodsGer.gf... 
+[2011-11-07 17:09:51] INFO    + LexFoodsGer.gf
+[2011-11-07 17:09:51] INFO    + AbsCat.gf
+[2011-11-07 17:09:51] INFO    + HelloAbs.gf
+[2011-11-07 17:09:51] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/ResEng.gf... 
+[2011-11-07 17:09:51] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... renaming module HelloEng
+[2011-11-07 17:09:51] DEBUG    /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf:12:
+[2011-11-07 17:09:51] DEBUG    Happened in the renaming of Hello
+[2011-11-07 17:09:51] DEBUG       atomic term Masc
+[2011-11-07 17:09:51] DEBUG       given ResEng, HelloEng
+[2011-11-07 17:09:51] DEBUG          constant not found: Masc
+[2011-11-07 17:09:51] WARN    > Failed: HelloEng.gf
+[2011-11-07 17:09:51] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/ResEng.gf... 
+[2011-11-07 17:09:51] INFO    + ResEng.gf
+[2011-11-07 17:10:34] INFO  Incremental build on GF Test Project
+[2011-11-07 17:10:34] INFO    Cleaning build directory for HelloEng.gf
+[2011-11-07 17:10:34] INFO    - HelloEng.gfh
+[2011-11-07 17:10:34] INFO    - ResEng.gf
+[2011-11-07 17:10:34] INFO    - HelloAbs.gfh
+[2011-11-07 17:10:34] INFO    - HelloEng.gf
+[2011-11-07 17:10:34] INFO    - ResEng.gfh
+[2011-11-07 17:10:34] INFO    - AbsCat.gf
+[2011-11-07 17:10:34] INFO    - HelloAbs.gf
+[2011-11-07 17:10:34] INFO    - AbsCat.gfh
+[2011-11-07 17:10:34] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/ResEng.gf... 
+[2011-11-07 17:10:34] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... renaming module HelloEng
+[2011-11-07 17:10:34] DEBUG    /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf:12:
+[2011-11-07 17:10:34] DEBUG    Happened in the renaming of Hello
+[2011-11-07 17:10:34] DEBUG       atomic term Masc
+[2011-11-07 17:10:34] DEBUG       given ResEng, HelloEng
+[2011-11-07 17:10:34] DEBUG          constant not found: Masc
+[2011-11-07 17:10:34] WARN    > Failed: /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 17:13:49] INFO  Incremental build on GF Test Project
+[2011-11-07 17:14:18] INFO    Cleaning build directory for HelloEng.gf
+[2011-11-07 17:15:00] INFO  Incremental build on GF Test Project
+[2011-11-07 17:15:03] INFO    Cleaning build directory for HelloEng.gf
+[2011-11-07 17:15:10] INFO    - tags
+[2011-11-07 17:15:20] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/ResEng.gf... 
+[2011-11-07 17:15:20] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... renaming module HelloEng
+[2011-11-07 17:15:20] DEBUG    /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf:12:
+[2011-11-07 17:15:20] DEBUG    Happened in the renaming of Hello
+[2011-11-07 17:15:20] DEBUG       atomic term Masc
+[2011-11-07 17:15:20] DEBUG       given ResEng, HelloEng
+[2011-11-07 17:15:20] DEBUG          constant not found: Masc
+[2011-11-07 17:15:20] WARN    > Failed: /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] ERROR Problem loading tags file for HelloEng
+[2011-11-07 17:15:43] INFO  Incremental build on GF Test Project
+[2011-11-07 17:15:43] INFO    Cleaning build directory for HelloEng.gf
+[2011-11-07 17:15:43] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/ResEng.gf... 
+[2011-11-07 17:15:43] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf... renaming module HelloEng
+[2011-11-07 17:15:43] DEBUG    /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf:12:
+[2011-11-07 17:15:43] DEBUG    Happened in the renaming of Hello
+[2011-11-07 17:15:43] DEBUG       atomic term Masc
+[2011-11-07 17:15:43] DEBUG       given ResEng, HelloEng
+[2011-11-07 17:15:43] DEBUG          constant not found: Masc
+[2011-11-07 17:15:43] WARN    > Failed: /home/john/repositories/gf-eclipse-plugin/workspace-demo/GF Test Project/hello/HelloEng.gf

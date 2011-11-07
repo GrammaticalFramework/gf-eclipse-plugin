@@ -2,6 +2,6 @@
 resource ResEng = {
 
 	param
-		Gender = Masc | Fem ;
+		Gender = Masc2 | Fem ;
 
 } ;

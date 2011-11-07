@@ -1,0 +1,155 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
+package org.grammaticalframework.eclipse.scoping;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashSet;
+import java.util.Stack;
+
+import org.apache.log4j.Logger;
+import org.eclipse.core.resources.IFile;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.resource.IResourceDescription;
+import org.eclipse.xtext.resource.IResourceDescriptions;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.impl.*;
+import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Included;
+import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.Open;
+
+import com.google.common.base.Predicate;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+
+/**
+ * Global scope provider is responsible for defining what is visible from
+ * outside the current resource, for any given reference.
+ * 
+ * In our case, this means considering;
+ * - Anything exended/inherited in this resource (remember inheritance is transitive)
+ * - Anything opened in this resource
+ * - If this is a concrete module, anything in its abstract
+ * (where "this" means the resource in which the reference is defined)
+ * 
+ */
+
+public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
+	
+	/**
+	 * The logger
+	 */
+	private static final Logger log = Logger.getLogger(GFTagBasedGlobalScopeProvider.class);
+
+	/**
+	 * Instantiates a new gF global scope provider.
+	 */
+	public GFTagBasedGlobalScopeProvider() {
+		super();
+	}
+	
+	/**
+	 * The library agent.
+	 */
+	@Inject
+	private GFLibraryAgent libAgent;
+
+
+// TODO Implement caching for Global Scope Provider
+//	@Inject
+//	private IResourceScopeCache cache;
+//	
+//	public void setCache(IResourceScopeCache cache) {
+//		this.cache = cache;
+//	}
+	
+
+	/* (non-Javadoc)
+	 * @see org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider#getScope(org.eclipse.emf.ecore.resource.Resource, boolean, org.eclipse.emf.ecore.EClass, com.google.common.base.Predicate)
+	 */
+	@Override
+	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
+		
+		// Start from nothing
+		IScope scope = IScope.NULLSCOPE;
+	
+		// (try) get module definition
+		ModDef moduleDef;
+		String moduleName;
+		try {
+			moduleDef = (ModDef)resource.getContents().get(0);
+			moduleName = moduleDef.getType().getName().getS();
+		} catch (Exception _) {
+			return scope;
+		}
+		
+		// Find the right tags file & parse it
+		try {
+			URI uri = libAgent.getTagsFile(resource, moduleName);
+			IFile f = new File(
+			
+			File tagFile = new File( uri );
+			if (!tagFile.exists() && tagFile.length() < 0) {
+				throw new FileNotFoundException();
+			} else {
+				BufferedReader reader = new BufferedReader( new FileReader(tagFile) );
+				String line;
+				while ((line = reader.readLine()) != null) {
+					processLine(line);
+				}
+				reader.close();
+			}
+		} catch (FileNotFoundException e) {
+			log.warn("Couldn't find tags file for " + moduleName);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		// Phew
+		return scope;
+	}
+	
+	class TagEntry {
+		String ident, type, file, args;
+		TagEntry(String[] elements) {
+			switch (elements.length) {
+			case 4:
+				this.args = elements[3];
+			case 3:
+				this.file = elements[2];
+				this.type = elements[1];
+				this.ident = elements[0];
+			}
+		}
+		TagEntry(String ident, String type, String file, String args) {
+			this.ident = ident;
+			this.type = type;
+			this.file = file;
+			this.args = args;
+		}
+	}
+	
+	private TagEntry processLine(String line) {
+		String[] elements = line.split("\t");
+		TagEntry tag = new TagEntry(elements);
+		return tag;
+	}
+	
+
+}

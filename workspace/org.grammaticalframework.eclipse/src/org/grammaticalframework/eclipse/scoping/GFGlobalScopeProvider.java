@@ -74,18 +74,18 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 *
 	 * @param loadOnDemandDescriptions the new load on demand descriptions
 	 */
-	public void setLoadOnDemandDescriptions(Provider<LoadOnDemandResourceDescriptions> loadOnDemandDescriptions) {
-		this.loadOnDemandDescriptions = loadOnDemandDescriptions;
-	}
+//	public void setLoadOnDemandDescriptions(Provider<LoadOnDemandResourceDescriptions> loadOnDemandDescriptions) {
+//		this.loadOnDemandDescriptions = loadOnDemandDescriptions;
+//	}
 
 	/**
 	 * Gets the load on demand descriptions.
 	 *
 	 * @return the load on demand descriptions
 	 */
-	public Provider<LoadOnDemandResourceDescriptions> getLoadOnDemandDescriptions() {
-		return loadOnDemandDescriptions;
-	}
+//	public Provider<LoadOnDemandResourceDescriptions> getLoadOnDemandDescriptions() {
+//		return loadOnDemandDescriptions;
+//	}
 	
 	/**
 	 * The library agent.
@@ -102,13 +102,13 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 //	}
 	
 	/**
- * Gets the resource descriptions.
- *
- * @param resource the resource
- * @param importUris the import uris
- * @return the resource descriptions
- */
-public IResourceDescriptions getResourceDescriptions(Resource resource, Collection<URI> importUris) {
+	 * Gets the resource descriptions.
+	 *
+	 * @param resource the resource
+	 * @param importUris the import uris
+	 * @return the resource descriptions
+	 */
+	public IResourceDescriptions getResourceDescriptions(Resource resource, Collection<URI> importUris) {
 		IResourceDescriptions result = getResourceDescriptions(resource);
 		LoadOnDemandResourceDescriptions demandResourceDescriptions = loadOnDemandDescriptions.get();
 		demandResourceDescriptions.initialize(result, importUris, resource);

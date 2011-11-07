@@ -1,0 +1,50 @@
+package org.grammaticalframework.eclipse.scoping;
+
+import java.util.ArrayList;
+import java.util.Map;
+
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.naming.IQualifiedNameConverter;
+import org.eclipse.xtext.naming.QualifiedName;
+import org.eclipse.xtext.resource.EObjectDescription;
+import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.impl.AbstractScope;
+
+import com.google.inject.Inject;
+
+public class GFTagBasedScope extends AbstractScope {
+
+	/**
+	 * Qualified name converter
+	 */
+	@Inject
+	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
+	
+	/**
+	 * The descriptions.
+	 */
+	private final ArrayList<IEObjectDescription> descriptions;
+	
+	protected GFTagBasedScope(IScope parent, boolean ignoreCase) {
+		super(parent, ignoreCase);
+		descriptions = new ArrayList<IEObjectDescription>();
+	}
+	
+	public void addTag(TagEntry tag) {
+		QualifiedName qualifiedName = converter.toQualifiedName(tag.ident);
+		
+		//TODO: This eObject needs to actually point to something!!
+		EObject eObject = null;
+		
+		Map<String, String> userData = tag.getProperties();
+		IEObjectDescription e = new EObjectDescription(qualifiedName, eObject, userData);
+		descriptions.add(e);
+	}
+
+	@Override
+	protected Iterable<IEObjectDescription> getAllLocalElements() {
+		return descriptions;
+	}
+
+}

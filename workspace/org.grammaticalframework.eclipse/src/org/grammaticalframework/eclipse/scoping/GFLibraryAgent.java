@@ -9,10 +9,20 @@
  */
 package org.grammaticalframework.eclipse.scoping;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.EcoreUtil2;
+import org.eclipse.xtext.resource.IResourceDescriptions;
+import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
+import org.eclipse.xtext.scoping.impl.LoadOnDemandResourceDescriptions;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
+import org.grammaticalframework.eclipse.gF.GFFactory;
+import org.grammaticalframework.eclipse.gF.impl.IdentImpl;
+
+import com.google.inject.Inject;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -135,5 +145,34 @@ public class GFLibraryAgent {
 	public boolean moduleExists(Resource context, String moduleName) {
 		return (getModuleURI(context, moduleName) != null);
 	}
+	
+	
+//	@Inject
+//	private ResourceDescriptionsProvider provider = new ResourceDescriptionsProvider();
+//	
+//	/**
+//	 * Given a path to source file (from a tags file), load it and return
+//	 * return the EObject matching by ident
+//	 *
+//	 */
+//	public EObject findEObjectInFile(Resource context, String filePath, String ident) {
+////		EObject eObject = GFFactory.eINSTANCE.createIdent();
+////		eObject.eSet(GFPackage.Literals.IDENT__S, unQualifiedName.toString());
+//		
+//		IdentImpl eObject = (IdentImpl) GFFactory.eINSTANCE.createIdent();
+//		eObject.setS(ident);
+//		
+//
+//		IResourceDescriptions irds = provider.getResourceDescriptions(context);
+//		
+//
+//		
+//		URI uri = URI.createFileURI(filePath);
+//		uri = uri.appendFragment("//");
+//		eObject.eSetProxyURI(uri);
+//
+////		URI uri = EcoreUtil.getURI(eObject);
+//		return eObject;
+//	}
 	
 }

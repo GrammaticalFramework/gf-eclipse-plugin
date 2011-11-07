@@ -1,0 +1,26 @@
+package org.grammaticalframework.eclipse.scoping;
+
+import java.util.ArrayList;
+
+import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.impl.AbstractScope;
+
+public class GFTagBasedScope extends AbstractScope {
+
+	/**
+	 * The descriptions.
+	 */
+	private final Iterable<IEObjectDescription> descriptions;
+	
+	protected GFTagBasedScope(IScope parent, boolean ignoreCase) {
+		super(parent, ignoreCase);
+		descriptions = new ArrayList<IEObjectDescription>();
+	}
+
+	@Override
+	protected Iterable<IEObjectDescription> getAllLocalElements() {
+		return descriptions;
+	}
+
+}
