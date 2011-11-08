@@ -115,9 +115,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 						if (shouldBuild(resource)) {
 							cleanFile((IFile) resource);
 							if (buildFile((IFile) resource)) {
-								log.info("  + " + delta.getResource().getRawLocation());
+								log.info("+ " + delta.getResource().getRawLocation());
 							} else {
-								log.warn("  > Failed: " + delta.getResource().getRawLocation());
+								log.warn("> Failed: " + delta.getResource().getRawLocation());
 							}
 						}
 						
@@ -143,9 +143,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			public void call(IResource resource) {
 				if (shouldBuild(resource)) {
 					if (buildFile((IFile) resource)) {
-						log.info("  + " + resource.getName());
+						log.info("+ " + resource.getName());
 					} else {
-						log.warn("  > Failed: " + resource.getName());
+						log.warn("> Failed: " + resource.getName());
 					}
 				}
 			}
@@ -166,9 +166,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				if (resource.getType() == IResource.FILE && resource.getFileExtension().equals("gfh")) {
 					try {
 						resource.delete(true, monitor);
-						log.info("  - " + resource.getName());
+						log.info("- " + resource.getName());
 					} catch (CoreException e) {
-						log.warn("  > Failed: " + resource.getName());
+						log.warn("> Failed: " + resource.getName());
 						e.printStackTrace();
 					}
 				}
@@ -294,7 +294,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			String out_str;
 			while ((out_str = processOutput.readLine()) != null) {
-				log.debug(out_str);
+				log.debug("GF: " + out_str);
 			}
 			
 			// Tidy up
@@ -374,7 +374,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			String out_str;
 			while ((out_str = processOutput.readLine()) != null) {
-				log.debug(out_str);
+				log.debug("GF: " + out_str);
 			}
 			
 			// Tidy up
@@ -399,7 +399,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private void cleanFile(IFile file) {
 		if (TAG_BASED_SCOPING || USE_INDIVIDUAL_FOLDERS) {
-			log.info("  Cleaning build directory for " + file.getName());
+			log.info("Cleaning build directory for " + file.getName());
 			String buildDir = getBuildDirectory(file, true);
 			// Check the build directory and delete all its contents
 			File buildDirFile = new File(buildDir);
@@ -408,9 +408,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				for (File f : files) {
 					try {
 						f.delete();
-						log.info("  - " + f.getName());
+						log.info("- " + f.getName());
 					} catch (Exception _) {
-						log.warn("  > Failed: " + f.getName());
+						log.warn("> Failed: " + f.getName());
 					}
 				}
 			}

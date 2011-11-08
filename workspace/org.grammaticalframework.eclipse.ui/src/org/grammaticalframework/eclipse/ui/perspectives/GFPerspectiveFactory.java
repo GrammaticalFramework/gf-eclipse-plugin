@@ -9,18 +9,15 @@
  */
 package org.grammaticalframework.eclipse.ui.perspectives;
 
-import java.io.PrintStream;
-
 import org.eclipse.debug.ui.IDebugUIConstants;
 import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 import org.eclipse.ui.console.IConsoleConstants;
-import org.eclipse.ui.console.MessageConsoleStream;
-import org.grammaticalframework.eclipse.launch.GFLaunchConfigurationDelegate;
 
-// TODO: Auto-generated Javadoc
 /**
+ * Set up custom GF perspective
+ * 
  * Ref: http://www.eclipsepluginsite.com/perspectives.html
  * 
  * @author John J. Camilleri
@@ -28,6 +25,11 @@ import org.grammaticalframework.eclipse.launch.GFLaunchConfigurationDelegate;
  */
 public class GFPerspectiveFactory implements IPerspectiveFactory {
 	
+	/**
+	 * Create layout
+	 *
+	 * @return the message console stream
+	 */
 	/* (non-Javadoc)
 	 * @see org.eclipse.ui.IPerspectiveFactory#createInitialLayout(org.eclipse.ui.IPageLayout)
 	 */
@@ -45,26 +47,14 @@ public class GFPerspectiveFactory implements IPerspectiveFactory {
 		bottomLeft.addView(IPageLayout.ID_OUTLINE);
 		//bottomLeft.addView(IPageLayout.ID_PROP_SHEET);
 
-		// Bottom right: Console
+		// Bottom right: Console, Problems
 		// See also: http://wiki.eclipse.org/FAQ_How_do_I_write_to_the_console_from_a_plug-in%3F
-		layout.addView(IConsoleConstants.ID_CONSOLE_VIEW, IPageLayout.BOTTOM, 0.66f, editorArea);
+		IFolderLayout underEditor = layout.createFolder("underEditor", IPageLayout.BOTTOM, 0.66f, editorArea);
+		underEditor.addView(IConsoleConstants.ID_CONSOLE_VIEW);
+		underEditor.addView(IPageLayout.ID_PROBLEM_VIEW);
 		
 		// Add Run/debug buttons
 		layout.addActionSet(IDebugUIConstants.LAUNCH_ACTION_SET);
-		
-		// Create console
-		createConsole();
-	}
-	
-	/**
-	 * Creates a new GFPerspective object.
-	 *
-	 * @return the message console stream
-	 */
-	public static MessageConsoleStream createConsole() {
-		MessageConsoleStream mcs = GFConsole.getStream();
-		GFLaunchConfigurationDelegate.setConsole(new PrintStream( GFConsole.getStream() ));
-		return mcs;
 	}
 	
 }

@@ -12,7 +12,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -36,16 +35,6 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 	 */
 	private static final Logger log = Logger.getLogger(GFLaunchConfigurationDelegate.class);
 
-	/**
-	 * Sets the console.
-	 *
-	 * @param ps the new console
-	 */
-	public static void setConsole(PrintStream ps) {
-		System.setOut(ps);
-		System.setErr(ps);
-	}
-	
 	/* (non-Javadoc)
 	 * @see org.eclipse.debug.core.model.ILaunchConfigurationDelegate#launch(org.eclipse.debug.core.ILaunchConfiguration, java.lang.String, org.eclipse.debug.core.ILaunch, org.eclipse.core.runtime.IProgressMonitor)
 	 */
@@ -55,7 +44,6 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		// Look here for some hints:
 		// http://code.google.com/p/goclipse/source/browse/trunk/goclipse-n/src/com/googlecode/goclipse/debug/LaunchConfigurationDelegate.java?r=64
 		
-//		String gfPath = prefs.getString(GFPreferences.QUALIFIER, GFPreferences.GF_BIN_PATH, (String)null, null);
 		String gfPath = GFPreferences.getRuntimePath();
 		String wdir = configuration.getAttribute(IGFLaunchConfigConstants.WORKING_DIR, (String)null);
 		String options = configuration.getAttribute(IGFLaunchConfigConstants.OPTIONS, (String)null);

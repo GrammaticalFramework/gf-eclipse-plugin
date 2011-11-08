@@ -2460,3 +2460,88 @@ com.google.inject.CreationException: Guice creation errors:
 [2011-11-08 09:38:23] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gfo
 [2011-11-08 09:38:23] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gfo
 [2011-11-08 09:38:28] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:08] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:08] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:08] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:08] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:08] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:08] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:08] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:08] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:08] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:08] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:09] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:09] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:09] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:09] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:09] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:09] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:09] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:09] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:54:09] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:01] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:02] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:02] WARN  Problem loading tags file for HelloEng
+[2011-11-08 09:57:12] INFO  Full build on Functors
+[2011-11-08 09:57:12] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf... 
+[2011-11-08 09:57:12] DEBUG gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-08 09:57:12] WARN    > Failed: Foods.gf
+[2011-11-08 09:57:12] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf... 
+[2011-11-08 09:57:12] DEBUG gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-08 09:57:12] WARN    > Failed: FoodsEng.gf
+[2011-11-08 09:57:12] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf... 
+[2011-11-08 09:57:12] DEBUG gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-08 09:57:12] WARN    > Failed: FoodsGer.gf
+[2011-11-08 09:57:12] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf... 
+[2011-11-08 09:57:12] DEBUG gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-08 09:57:12] WARN    > Failed: FoodsI.gf
+[2011-11-08 09:57:12] DEBUG File Syntax.gf does not exist.
+[2011-11-08 09:57:12] DEBUG searched in: ../../
+[2011-11-08 09:57:12] WARN    > Failed: LexFoods.gf
+[2011-11-08 09:57:12] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf... 
+[2011-11-08 09:57:12] DEBUG gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-08 09:57:12] WARN    > Failed: LexFoodsEng.gf
+[2011-11-08 09:57:12] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf... 
+[2011-11-08 09:57:12] DEBUG gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-08 09:57:12] WARN    > Failed: LexFoodsGer.gf
+[2011-11-08 09:57:12] INFO  Full build on Hello
+[2011-11-08 09:57:12] INFO    + AbsCat.gf
+[2011-11-08 09:57:12] INFO    + HelloAbs.gf
+[2011-11-08 09:57:12] INFO    + HelloEng.gf
+[2011-11-08 09:57:13] INFO    + ResEng.gf
+[2011-11-08 09:57:13] INFO  Running: /home/john/.cabal/bin/gf --batch --force-recomp HelloEng.gf
+[2011-11-08 09:57:13] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gfo
+[2011-11-08 09:57:13] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gfo
+[2011-11-08 09:57:13] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gfo
+[2011-11-08 09:57:13] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf...   wrote file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gfo
+[2011-11-08 09:59:32] INFO  Incremental build on Hello
+[2011-11-08 09:59:32] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 09:59:32] INFO  - tags
+[2011-11-08 09:59:32] DEBUG - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 09:59:32] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-08 10:01:10] INFO  Incremental build on Hello
+[2011-11-08 10:01:10] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 10:01:10] INFO  - tags
+[2011-11-08 10:01:10] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 10:01:10] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-08 10:01:47] INFO  Incremental build on Hello
+[2011-11-08 10:01:47] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 10:01:47] INFO  - tags
+[2011-11-08 10:01:47] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:01:47] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;mcs&apos; in &apos;org.grammaticalframework.eclipse.ui.GFUiModule.GFUiModule(...)&apos; to &apos;consoleStream&apos;&#x0A;- Original project: &apos;org.grammaticalframework.eclipse.ui&apos;&#x0A;- Original element: &apos;org.grammaticalframework.eclipse.ui.GFUiModule.GFUiModule(AbstractUIPlugin).mcs&apos;&#x0A;- Renamed element: &apos;mcs&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;mcs&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;org.grammaticalframework.eclipse.ui{GFUiModule.java[GFUiModule~GFUiModule~QAbstractUIPlugin;@mcs!1456!1519!1477!1479!QMessageConsoleStream;!0!false" name="consoleStream" references="true" stamp="1320740361988" version="1.0"/>
+</session>

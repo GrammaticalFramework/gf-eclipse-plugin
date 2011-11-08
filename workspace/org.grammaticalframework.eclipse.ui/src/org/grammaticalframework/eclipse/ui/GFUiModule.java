@@ -21,7 +21,7 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.ui.console.MessageConsoleStream;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.grammaticalframework.eclipse.GFPreferences;
-import org.grammaticalframework.eclipse.ui.perspectives.GFPerspectiveFactory;
+import org.grammaticalframework.eclipse.ui.perspectives.GFConsole;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -35,7 +35,7 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	private static final String LOG_FILE_NAME = "gfep.log";
 	
 	/**
-	 * The Constant log.
+	 * The Apache log4j logger
 	 */
 	public static final Logger log = Logger.getLogger("org.grammaticalframework.eclipse");
 
@@ -48,11 +48,11 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 		super(plugin);
 		
 		// Create GF console
-		MessageConsoleStream mcs = GFPerspectiveFactory.createConsole();
+		MessageConsoleStream consoleStream = GFConsole.getStream();
 		
 		// Setup logging and direct to console
 		Layout layout = new PatternLayout("[%d{yyyy-MM-dd HH:mm:ss}] %-5p %m%n");
-		log.addAppender(new WriterAppender(layout, mcs));
+		log.addAppender(new WriterAppender(layout, consoleStream));
 		try {
 			String logFileFull = ResourcesPlugin.getWorkspace().getRoot().getRawLocation().toOSString() + java.io.File.separator + LOG_FILE_NAME;
 			RollingFileAppender logfile = new RollingFileAppender(layout, logFileFull);

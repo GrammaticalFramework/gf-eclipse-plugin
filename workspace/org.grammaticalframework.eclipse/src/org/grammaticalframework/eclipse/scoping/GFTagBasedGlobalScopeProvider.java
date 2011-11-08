@@ -116,8 +116,10 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			is.close();
 		} catch (FileNotFoundException e) {
 			log.warn("Couldn't find tags file for " + moduleName);
+			return scope;
 		} catch (IOException e) {
-			log.error("Problem loading tags file for " + moduleName);
+			log.warn("Problem loading tags file for " + moduleName);
+			return scope;
 		}
 		
 		// Load all descriptions from all mentioned files/URIs

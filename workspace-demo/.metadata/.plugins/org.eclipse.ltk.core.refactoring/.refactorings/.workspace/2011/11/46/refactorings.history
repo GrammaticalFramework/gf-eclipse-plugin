@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/GF Test Project/functors/_gfdepgraph.dot" element2="/GF Test Project/functors/dg.png" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1320739916807"/>&#x0A;<refactoring comment="Delete resource &apos;GF Test Project&apos;" deleteContents="true" description="Delete resource &apos;GF Test Project&apos;" element1="/GF Test Project" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1320739957510"/>
+</session>
