@@ -9,20 +9,10 @@
  */
 package org.grammaticalframework.eclipse.scoping;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.EcoreUtil2;
-import org.eclipse.xtext.resource.IResourceDescriptions;
-import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
-import org.eclipse.xtext.scoping.impl.LoadOnDemandResourceDescriptions;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
-import org.grammaticalframework.eclipse.gF.GFFactory;
-import org.grammaticalframework.eclipse.gF.impl.IdentImpl;
-
-import com.google.inject.Inject;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -71,25 +61,12 @@ public class GFLibraryAgent {
 	 */
 	private String getHeaderPath(Resource context, String moduleName) {
 		StringBuilder sb = new StringBuilder();
-		URI uri = context.getURI();
-		if (GFBuilder.USE_INDIVIDUAL_FOLDERS) {
-			if (uri.lastSegment().endsWith(".gfh")) {
-				uri = uri.trimSegments(1);
-				sb.append(".." + java.io.File.separator);
-				sb.append(".." + java.io.File.separator);
-			}
-			sb.append(GFBuilder.BUILD_FOLDER
-					+ java.io.File.separator
-					+ uri.lastSegment()
-					+ java.io.File.separator
-					+ moduleName + ".gfh");
-		} else {
-			// If we're already "inside" the gfbuild folder then only act relative to it..
-			if (!context.getURI().trimSegments(1).lastSegment().equals(GFBuilder.BUILD_FOLDER)) {
-				sb.append(GFBuilder.BUILD_FOLDER + java.io.File.separator);
-			}
-			sb.append(moduleName + ".gfh");
+		
+		// Are we "outside" the gfbuild folder?
+		if (!context.getURI().trimSegments(1).lastSegment().equals(GFBuilder.BUILD_FOLDER)) {
+			sb.append(GFBuilder.BUILD_FOLDER + java.io.File.separator);
 		}
+		sb.append(moduleName + ".gfh");
 		return sb.toString();
 	}
 	

@@ -12,10 +12,12 @@ package org.grammaticalframework.eclipse.builder;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Map;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -26,9 +28,15 @@ import org.eclipse.core.resources.IResourceDeltaVisitor;
 import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.OperationCanceledException;
 import org.grammaticalframework.eclipse.GFPreferences;
+import org.grammaticalframework.eclipse.scoping.GFLibraryAgent;
+import org.grammaticalframework.eclipse.scoping.TagEntry;
+import org.grammaticalframework.eclipse.scoping.TagFileHelper;
 
 import org.apache.log4j.Logger;
+
+import com.google.inject.Inject;
 
 /**
  * Custom GF builder, yeah!
@@ -56,10 +64,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	public static final String BUILD_FOLDER = ".gfbuild"; //$NON-NLS-1$
 
 	/**
-	 * The Constant USE_INDIVIDUAL_FOLDERS.
+	 * Use tag based scoping?
 	 */
 	public static final Boolean TAG_BASED_SCOPING = true;
-	public static final Boolean USE_INDIVIDUAL_FOLDERS = false;
 
 	/**
 	 * The GF paths.
@@ -72,11 +79,20 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private static final Logger log = Logger.getLogger(GFBuilder.class);
 	
+	/**
+	 * The main build method
+	 * 
+	 * After completing a build, this builder may return a list of projects for which it requires a resource delta the next time it is run.
+	 * This builder's project is implicitly included and need not be specified. The build mechanism will attempt to maintain and compute
+	 * deltas relative to the identified projects when asked the next time this builder is run. Builders must re-specify the list of interesting 
+	 * projects every time they are run as this is not carried forward beyond the next build. Projects mentioned in return value but which
+	 * do not exist will be ignored and no delta will be made available for them.
+	 */
 	/* (non-Javadoc)
 	 * @see org.eclipse.core.resources.IncrementalProjectBuilder#build(int, java.util.Map, org.eclipse.core.runtime.IProgressMonitor)
 	 */
 	@Override
-	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws CoreException {
+	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws OperationCanceledException, CoreException {
 		// Get some prefs
 		gfPath = GFPreferences.getRuntimePath();
 		if (gfPath == null || gfPath.trim().isEmpty()) {
@@ -85,16 +101,24 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 		gfLibPath = GFPreferences.getLibraryPath();
 		
-		if (kind == IncrementalProjectBuilder.FULL_BUILD) {
-			fullBuild(monitor);
-		} else {
-			IResourceDelta delta = getDelta(getProject());
-			if (delta == null) {
+		try {
+			// TODO Is doing a full build for every incremental change overkill?
+			// Possible solution: only rebuild files whos tags contain something from the file being rebuilt
+			if (TAG_BASED_SCOPING || kind == IncrementalProjectBuilder.FULL_BUILD) {
 				fullBuild(monitor);
 			} else {
-				incrementalBuild(delta, monitor);
+				IResourceDelta delta = getDelta(getProject());
+				if (delta == null) {
+					fullBuild(monitor);
+				} else {
+					incrementalBuild(delta, monitor);
+				}
 			}
+		} catch (OperationCanceledException e) {
+			log.info("Build cancelled");
+			throw e;
 		}
+		
 		return null;
 	}
 
@@ -104,31 +128,63 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param delta the delta
 	 * @param monitor the monitor
 	 */
-	private void incrementalBuild(IResourceDelta delta, IProgressMonitor monitor) {
+	private void incrementalBuild(IResourceDelta delta, final IProgressMonitor monitor) throws OperationCanceledException {
 		log.info("Incremental build on " + delta.getResource().getName());
 		try {
 			delta.accept(new IResourceDeltaVisitor() {
 				public boolean visit(IResourceDelta delta) {
+					
+					// Check for cancellation
+					if (monitor.isCanceled()) {
+						throw new OperationCanceledException();
+					}
+					
+					// Get ahold of resource, build if necessary
 					IResource resource = delta.getResource();
 					int kind = delta.getKind(); 
 					if (kind == IResourceDelta.ADDED || kind == IResourceDelta.CHANGED) {
 						if (shouldBuild(resource)) {
-							cleanFile((IFile) resource);
-							if (buildFile((IFile) resource)) {
+							IFile file = (IFile) resource;
+							cleanFile(file);
+							if (buildFile(file)) {
 								log.info("+ " + delta.getResource().getRawLocation());
 							} else {
 								log.warn("> Failed: " + delta.getResource().getRawLocation());
 							}
+							
+							//TODO Update every other TAGS file to reflect this new info
+//							propagateTagChanges(file);
 						}
 						
 					}
-					return true; // visit children too
+					
+					// Visit children too
+					return true;
 				}
 			});
+			
+			// Force project refresh
 			getProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);
+			
 		} catch (CoreException e) {
 			e.printStackTrace();
 		}
+	}
+
+	/**
+	 * The library agent.
+	 */
+	@Inject
+	private TagFileHelper tagHelper = new TagFileHelper();
+
+	private void propagateTagChanges(IFile sourceFile) {
+		
+		// TODO What's the filepath format of tags on Windows machines?
+		String sourceFilePath = sourceFile.getRawLocation().toOSString();
+		String tagFilePath = getBuildDirectory(sourceFile) + "tags";
+		
+		Collection<TagEntry> owntags = (Collection<TagEntry>) tagHelper.getOwnTags(sourceFilePath, tagFilePath);		
+		
 	}
 
 	/**
@@ -137,11 +193,19 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param monitor the monitor
 	 * @throws CoreException the core exception
 	 */
-	private void fullBuild(IProgressMonitor monitor) throws CoreException {
+	private void fullBuild(final IProgressMonitor monitor) throws OperationCanceledException, CoreException {
 		log.info("Full build on " + getProject().getName());
 		recursiveDispatcher(getProject().members(), new CallableOnResource() {
 			public void call(IResource resource) {
+
+				// Check for cancellation
+				if (monitor.isCanceled()) {
+					throw new OperationCanceledException();
+				}
+				
+				// Build if necessary
 				if (shouldBuild(resource)) {
+					cleanFile((IFile) resource);
 					if (buildFile((IFile) resource)) {
 						log.info("+ " + resource.getName());
 					} else {
@@ -150,6 +214,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				}
 			}
 		});
+		
+		// Force project refresh
 		getProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 	
@@ -163,6 +229,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		// TODO Delete markers with getProject().deleteMarkers()
 		recursiveDispatcher(getProject().members(), new CallableOnResource() {
 			public void call(IResource resource) {
+				// Check for cancellation
+				if (monitor.isCanceled()) {
+					throw new OperationCanceledException();
+				}
+				// Delete if necessary
 				if (resource.getType() == IResource.FILE && resource.getFileExtension().equals("gfh")) {
 					try {
 						resource.delete(true, monitor);
@@ -225,7 +296,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @return the builds the directory
 	 */
 	private String getBuildDirectory(IFile file) {
-		return getBuildDirectory(file, USE_INDIVIDUAL_FOLDERS);
+		return getBuildDirectory(file, TAG_BASED_SCOPING);
 	}
 	private String getBuildDirectory(IFile file, boolean useIndividualFolders) {
 		String filename = file.getName();
@@ -260,22 +331,26 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private boolean buildFileTAGS(IFile file) {
 		/* 
-		 * Shell command: gf --tags HelloEng.gf
+		 * First create a "scraped" copy of the file in .gfbuild/HellEng.gf/
+		 * Then compile it using:
+		 * 
+		 * Shell command: gf --tags --path=../ HelloEng.gf
 		 */
 		String filename = file.getName();
-		String buildDir = getBuildDirectory(file, true);
+		String buildDir = getBuildDirectory(file);
 		
 		ArrayList<String> command = new ArrayList<String>();
 		command.add(gfPath);
 		command.add("--tags");
+		command.add("--path=.."+java.io.File.separator+".."+java.io.File.separator);
 		
 		// Use library path in command (if supplied)
 		if (gfLibPath != null && !gfLibPath.isEmpty()) {
 			command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath));
 		}
 
-		// We are using individual folders in this case
-		command.add(String.format("..%1$s..%1$s%2$s", java.io.File.separator, filename));
+		// Compile the version in the build folder
+		command.add(filename);
 		
 		try {
 			// Check the build directory and try to create it
@@ -283,7 +358,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			if (!buildDirFile.exists()) {
 				buildDirFile.mkdir();
 			}
-			
+
+			// Create the scraped version
+			createScrapedFileCopy(".."+java.io.File.separator+".."+java.io.File.separator+filename, filename, buildDirFile);
+
 			// Piece together our GF process
 			ProcessBuilder b = new ProcessBuilder(command);
 			b.directory(buildDirFile);
@@ -308,8 +386,39 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
-		return false;		
+		return false;
+	}
+	
+	private boolean createScrapedFileCopy(String sourceFileName, String targetFileName, File workingDirectory) {
+		try {
+			// MAJOR TODO: use of absolute path!! Reliance on Sed!!one!
+			ProcessBuilder b = new ProcessBuilder("/bin/sed", "-n '1h;1!H;${;g;s/{.*}/{}/g;p;}'", sourceFileName);
+			b.directory(workingDirectory);
+			Process process = b.start();
+			
+			
+			// TODO THis isn't creating any output :(
+			
+			// Consume output and write to targetFile
+			File targetFile = new File(workingDirectory.getAbsolutePath() + java.io.File.separator + targetFileName);
+			BufferedWriter writer = new BufferedWriter(new FileWriter(targetFile));
+			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
+			String out_str;
+			while ((out_str = processOutput.readLine()) != null) {
+				writer.write(out_str);
+			}
+			
+			process.waitFor();
+			writer.close();
+			processOutput.close();
+			int retVal = process.exitValue();
+			return (retVal == 0);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return false;				
 	}
 	
 	
@@ -342,11 +451,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath));
 		}
 		
-		if (USE_INDIVIDUAL_FOLDERS) {
-			command.add(String.format("..%1$s..%1$s%2$s", java.io.File.separator, filename));
-		} else {
-			command.add(".." + java.io.File.separator + filename);
-		}
+		command.add(".." + java.io.File.separator + filename);
 		
 		try {
 			// Check the build directory and try to create it
@@ -398,9 +503,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param file the file
 	 */
 	private void cleanFile(IFile file) {
-		if (TAG_BASED_SCOPING || USE_INDIVIDUAL_FOLDERS) {
+		if (TAG_BASED_SCOPING) {
 			log.info("Cleaning build directory for " + file.getName());
-			String buildDir = getBuildDirectory(file, true);
+			String buildDir = getBuildDirectory(file);
 			// Check the build directory and delete all its contents
 			File buildDirFile = new File(buildDir);
 			if (buildDirFile.exists()) {

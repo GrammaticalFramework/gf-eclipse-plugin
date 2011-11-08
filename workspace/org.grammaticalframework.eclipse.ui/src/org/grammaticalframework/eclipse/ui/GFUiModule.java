@@ -51,7 +51,7 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 		MessageConsoleStream consoleStream = GFConsole.getStream();
 		
 		// Setup logging and direct to console
-		Layout layout = new PatternLayout("[%d{yyyy-MM-dd HH:mm:ss}] %-5p %m%n");
+		Layout layout = new PatternLayout("[%d{yyyy-MM-dd HH:mm:ss,SSS}] %-5p %m%n");
 		log.addAppender(new WriterAppender(layout, consoleStream));
 		try {
 			String logFileFull = ResourcesPlugin.getWorkspace().getRoot().getRawLocation().toOSString() + java.io.File.separator + LOG_FILE_NAME;

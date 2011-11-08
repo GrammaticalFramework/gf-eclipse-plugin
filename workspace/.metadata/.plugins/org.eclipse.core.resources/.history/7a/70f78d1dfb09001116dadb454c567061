@@ -1,0 +1,5 @@
+package org.grammaticalframework.eclipse.scoping;
+
+public class TagFileHelper {
+
+}

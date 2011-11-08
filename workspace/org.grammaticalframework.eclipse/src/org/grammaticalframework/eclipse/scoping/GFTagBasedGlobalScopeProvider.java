@@ -84,9 +84,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	@Override
 	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
 		
-		// Start a blank GFScope
-		GFTagBasedScope scope = new GFTagBasedScope(IScope.NULLSCOPE, ignoreCase);
-	
 		// (try) get module definition
 		ModDef moduleDef;
 		String moduleName;
@@ -94,7 +91,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			moduleDef = (ModDef)resource.getContents().get(0);
 			moduleName = moduleDef.getType().getName().getS();
 		} catch (Exception _) {
-			return scope;
+			return IScope.NULLSCOPE;
 		}
 		
 		ArrayList<TagEntry> tags = new ArrayList<TagEntry>(); 
@@ -116,10 +113,10 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			is.close();
 		} catch (FileNotFoundException e) {
 			log.warn("Couldn't find tags file for " + moduleName);
-			return scope;
+			return IScope.NULLSCOPE;
 		} catch (IOException e) {
 			log.warn("Problem loading tags file for " + moduleName);
-			return scope;
+			return IScope.NULLSCOPE;
 		}
 		
 		// Load all descriptions from all mentioned files/URIs
@@ -130,8 +127,11 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 //		}
 		
 		// Add everything from all the URIs mentioned in the tags file
+		IScope scope = IScope.NULLSCOPE;
 		for (IResourceDescription resDesc : resourceDescriptions.getAllResourceDescriptions()) {
-			scope = new GFTagBasedScope(scope, resDesc.getExportedObjects(), ignoreCase);
+			GFTagBasedScope newScope = new GFTagBasedScope(scope, resDesc, ignoreCase);
+			if (newScope.localElementCount() > 0)
+				scope = newScope;
 		}
 		
 		// Phew

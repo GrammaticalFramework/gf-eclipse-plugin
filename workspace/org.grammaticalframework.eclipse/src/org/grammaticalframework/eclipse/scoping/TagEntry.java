@@ -65,4 +65,14 @@ public class TagEntry {
 		userData.put("args", args);
 		return userData;
 	}
+
+	/**
+	 * Returns tag in tab-delimited format (suitable for writing back to a tags file)
+	 */
+	@Override
+	public String toString() {
+		return ident + "\t" + type + "\t" + file + ":" + lineNo + "\t" + args;
+	}
+	
+	
 }

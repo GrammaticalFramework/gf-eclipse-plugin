@@ -37,9 +37,15 @@
 	<section name="quick_assist_proposal_size">
 	</section>
 	<section name="SourceActionDialog.methods">
+		<item value="false" key="SkipNull"/>
+		<item value="10" key="LimitValue"/>
+		<item value="0" key="ToStringTemplateSelected"/>
+		<item value="0" key="StringStyle"/>
 		<item value="1" key="VisibilityModifier"/>
 		<item value="false" key="Comments"/>
+		<item value="false" key="LimitElements"/>
 		<item value="false" key="SynchronizedModifier"/>
+		<item value="true" key="IgnoreDefault"/>
 		<item value="false" key="FinalModifier"/>
 	</section>
 	<section name="ProblemSeveritiesConfigurationBlock">

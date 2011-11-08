@@ -2545,3 +2545,1066 @@ com.google.inject.CreationException: Guice creation errors:
 [2011-11-08 10:01:47] INFO  - tags
 [2011-11-08 10:01:47] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
 [2011-11-08 10:01:47] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-08 10:31:43,622] INFO  Incremental build on Hello
+[2011-11-08 10:31:49,070] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 10:52:38,711] INFO  Full build on Hello
+[2011-11-08 10:52:38,723] INFO  + AbsCat.gf
+[2011-11-08 10:52:38,735] INFO  + HelloAbs.gf
+[2011-11-08 10:52:38,750] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:52:38,751] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 10:52:38,752] INFO  + HelloEng.gf
+[2011-11-08 10:52:38,762] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:52:38,763] INFO  + ResEng.gf
+[2011-11-08 10:52:55,068] INFO  Full build on Hello
+[2011-11-08 10:52:55,084] INFO  + AbsCat.gf
+[2011-11-08 10:52:55,097] INFO  + HelloAbs.gf
+[2011-11-08 10:52:55,109] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:52:55,112] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 10:52:55,113] INFO  + HelloEng.gf
+[2011-11-08 10:52:55,130] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:52:55,131] INFO  + ResEng.gf
+[2011-11-08 10:53:23,976] INFO  Full build on Hello
+[2011-11-08 10:53:23,990] INFO  + AbsCat.gf
+[2011-11-08 10:53:24,003] INFO  + HelloAbs.gf
+[2011-11-08 10:53:24,017] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:53:24,020] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... renaming module HelloEng
+[2011-11-08 10:53:24,020] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:12:
+[2011-11-08 10:53:24,020] DEBUG GF:    Happened in the renaming of Hello
+[2011-11-08 10:53:24,020] DEBUG GF:       atomic term Masc
+[2011-11-08 10:53:24,020] DEBUG GF:       given ResEng, HelloEng
+[2011-11-08 10:53:24,021] DEBUG GF:          constant not found: Masc
+[2011-11-08 10:53:24,021] WARN  > Failed: HelloEng.gf
+[2011-11-08 10:53:24,042] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:53:24,044] INFO  + ResEng.gf
+[2011-11-08 10:53:34,760] INFO  Full build on Hello
+[2011-11-08 10:53:34,773] INFO  + AbsCat.gf
+[2011-11-08 10:53:34,788] INFO  + HelloAbs.gf
+[2011-11-08 10:53:34,804] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:53:34,807] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... renaming module HelloEng
+[2011-11-08 10:53:34,807] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:12:
+[2011-11-08 10:53:34,807] DEBUG GF:    Happened in the renaming of Hello
+[2011-11-08 10:53:34,808] DEBUG GF:       atomic term Masc
+[2011-11-08 10:53:34,808] DEBUG GF:       given ResEng, HelloEng
+[2011-11-08 10:53:34,808] DEBUG GF:          constant not found: Masc
+[2011-11-08 10:53:34,808] WARN  > Failed: HelloEng.gf
+[2011-11-08 10:53:34,824] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:53:34,825] INFO  + ResEng.gf
+[2011-11-08 10:57:25,645] INFO  Full build on Hello
+[2011-11-08 10:57:25,649] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 10:57:25,650] INFO  - tags
+[2011-11-08 10:57:25,664] INFO  + AbsCat.gf
+[2011-11-08 10:57:25,664] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 10:57:25,665] INFO  - tags
+[2011-11-08 10:57:25,672] INFO  + HelloAbs.gf
+[2011-11-08 10:57:25,673] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 10:57:25,673] INFO  - tags
+[2011-11-08 10:57:25,681] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:57:25,682] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 10:57:25,683] INFO  + HelloEng.gf
+[2011-11-08 10:57:25,683] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 10:57:25,684] INFO  - tags
+[2011-11-08 10:57:25,694] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:57:25,695] INFO  + ResEng.gf
+[2011-11-08 10:57:41,702] INFO  Full build on Hello
+[2011-11-08 10:57:41,703] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 10:57:41,704] INFO  - tags
+[2011-11-08 10:57:41,717] INFO  + AbsCat.gf
+[2011-11-08 10:57:41,718] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 10:57:41,718] INFO  - tags
+[2011-11-08 10:57:41,732] INFO  + HelloAbs.gf
+[2011-11-08 10:57:41,733] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 10:57:41,733] INFO  - tags
+[2011-11-08 10:57:41,747] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:57:41,749] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 10:57:41,751] INFO  + HelloEng.gf
+[2011-11-08 10:57:41,751] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 10:57:41,751] INFO  - tags
+[2011-11-08 10:57:41,764] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 10:57:41,766] INFO  + ResEng.gf
+[2011-11-08 11:01:39,301] INFO  Full build on Hello
+[2011-11-08 11:01:39,301] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:01:39,302] INFO  - tags
+[2011-11-08 11:01:39,316] INFO  + AbsCat.gf
+[2011-11-08 11:01:39,317] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:01:39,318] INFO  - tags
+[2011-11-08 11:01:39,334] INFO  + HelloAbs.gf
+[2011-11-08 11:01:39,335] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:01:39,336] INFO  - tags
+[2011-11-08 11:01:39,351] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:01:39,353] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... renaming module HelloEng
+[2011-11-08 11:01:39,354] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:12:
+[2011-11-08 11:01:39,355] DEBUG GF:    Happened in the renaming of Hello
+[2011-11-08 11:01:39,355] DEBUG GF:       atomic term Masc
+[2011-11-08 11:01:39,355] DEBUG GF:       given ResEng, HelloEng
+[2011-11-08 11:01:39,355] DEBUG GF:          constant not found: Masc
+[2011-11-08 11:01:39,355] WARN  > Failed: HelloEng.gf
+[2011-11-08 11:01:39,362] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:01:39,362] INFO  - tags
+[2011-11-08 11:01:39,371] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:01:39,372] INFO  + ResEng.gf
+[2011-11-08 11:03:32,157] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,158] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,160] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,161] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,162] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,163] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,164] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,166] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,167] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,168] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,169] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,170] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,171] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,172] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,174] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,175] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,176] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,179] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:32,181] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,119] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,123] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,125] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,127] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,129] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,131] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,132] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,133] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,134] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,136] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,137] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,138] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,139] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,140] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,142] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,143] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,145] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,148] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,150] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,766] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,771] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,771] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,774] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:03:40,932] INFO  Full build on Hello
+[2011-11-08 11:03:40,933] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:03:40,933] INFO  - tags
+[2011-11-08 11:03:40,948] INFO  + AbsCat.gf
+[2011-11-08 11:03:40,949] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:03:40,950] INFO  - tags
+[2011-11-08 11:03:40,964] INFO  + HelloAbs.gf
+[2011-11-08 11:03:40,965] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:03:40,980] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:03:40,983] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... renaming module HelloEng
+[2011-11-08 11:03:40,983] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:12:
+[2011-11-08 11:03:40,984] DEBUG GF:    Happened in the renaming of Hello
+[2011-11-08 11:03:40,984] DEBUG GF:       atomic term Masc
+[2011-11-08 11:03:40,984] DEBUG GF:       given ResEng, HelloEng
+[2011-11-08 11:03:40,984] DEBUG GF:          constant not found: Masc
+[2011-11-08 11:03:40,985] WARN  > Failed: HelloEng.gf
+[2011-11-08 11:03:40,986] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:03:40,986] INFO  - tags
+[2011-11-08 11:03:41,001] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:03:41,002] INFO  + ResEng.gf
+[2011-11-08 11:05:29,546] INFO  Full build on Hello
+[2011-11-08 11:05:29,547] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:05:29,548] INFO  - tags
+[2011-11-08 11:05:29,563] INFO  + AbsCat.gf
+[2011-11-08 11:05:29,564] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:05:29,564] INFO  - tags
+[2011-11-08 11:05:29,580] INFO  + HelloAbs.gf
+[2011-11-08 11:05:29,581] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:05:29,596] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:05:29,599] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 11:05:29,601] INFO  + HelloEng.gf
+[2011-11-08 11:05:29,601] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:05:29,602] INFO  - tags
+[2011-11-08 11:05:29,617] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:05:29,618] INFO  + ResEng.gf
+[2011-11-08 11:06:24,395] INFO  Full build on Hello
+[2011-11-08 11:06:24,395] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:06:24,396] INFO  - tags
+[2011-11-08 11:06:24,411] INFO  + AbsCat.gf
+[2011-11-08 11:06:24,412] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:06:24,412] INFO  - tags
+[2011-11-08 11:06:24,428] INFO  + HelloAbs.gf
+[2011-11-08 11:06:24,429] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:06:24,429] INFO  - tags
+[2011-11-08 11:06:24,445] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:06:24,448] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 11:06:24,449] INFO  + HelloEng.gf
+[2011-11-08 11:06:24,450] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:06:24,450] INFO  - tags
+[2011-11-08 11:06:24,465] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:06:24,466] INFO  + ResEng.gf
+[2011-11-08 11:07:58,354] INFO  Full build on Hello
+[2011-11-08 11:07:58,355] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:07:58,355] INFO  - tags
+[2011-11-08 11:07:58,370] INFO  + AbsCat.gf
+[2011-11-08 11:07:58,371] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:07:58,371] INFO  - tags
+[2011-11-08 11:07:58,387] INFO  + HelloAbs.gf
+[2011-11-08 11:07:58,388] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:07:58,388] INFO  - tags
+[2011-11-08 11:07:58,404] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:07:58,407] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... renaming module HelloEng
+[2011-11-08 11:07:58,408] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:12:
+[2011-11-08 11:07:58,408] DEBUG GF:    Happened in the renaming of Hello
+[2011-11-08 11:07:58,408] DEBUG GF:       atomic term Masc23
+[2011-11-08 11:07:58,408] DEBUG GF:       given ResEng, HelloEng
+[2011-11-08 11:07:58,409] DEBUG GF:          constant not found: Masc23
+[2011-11-08 11:07:58,409] WARN  > Failed: HelloEng.gf
+[2011-11-08 11:07:58,410] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:07:58,410] INFO  - tags
+[2011-11-08 11:07:58,425] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:07:58,427] INFO  + ResEng.gf
+[2011-11-08 11:08:23,509] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,511] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,513] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,513] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,515] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,517] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,518] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,520] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,522] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,524] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,525] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,527] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,528] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,529] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,530] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,531] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,532] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,534] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:23,535] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:25,857] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:25,859] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:25,862] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:25,865] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:08:26,020] INFO  Full build on Hello
+[2011-11-08 11:08:26,021] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:08:26,021] INFO  - tags
+[2011-11-08 11:08:26,035] INFO  + AbsCat.gf
+[2011-11-08 11:08:26,036] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:08:26,036] INFO  - tags
+[2011-11-08 11:08:26,048] INFO  + HelloAbs.gf
+[2011-11-08 11:08:26,048] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:08:26,064] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:08:26,067] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 11:08:26,068] INFO  + HelloEng.gf
+[2011-11-08 11:08:26,069] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:08:26,069] INFO  - tags
+[2011-11-08 11:08:26,082] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:08:26,083] INFO  + ResEng.gf
+[2011-11-08 11:09:22,834] INFO  Full build on Hello
+[2011-11-08 11:09:22,834] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:09:22,835] INFO  - tags
+[2011-11-08 11:09:22,850] INFO  + AbsCat.gf
+[2011-11-08 11:09:22,851] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:09:22,851] INFO  - tags
+[2011-11-08 11:09:22,867] INFO  + HelloAbs.gf
+[2011-11-08 11:09:22,868] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:09:22,868] INFO  - tags
+[2011-11-08 11:09:22,883] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:09:22,886] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... renaming module HelloEng
+[2011-11-08 11:09:22,886] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:13:
+[2011-11-08 11:09:22,887] DEBUG GF:    Happened in the renaming of Goodbye
+[2011-11-08 11:09:22,887] DEBUG GF:       atomic term Fem
+[2011-11-08 11:09:22,887] DEBUG GF:       given ResEng, HelloEng
+[2011-11-08 11:09:22,888] DEBUG GF:          constant not found: Fem
+[2011-11-08 11:09:22,888] WARN  > Failed: HelloEng.gf
+[2011-11-08 11:09:22,889] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:09:22,889] INFO  - tags
+[2011-11-08 11:09:22,905] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:09:22,905] INFO  + ResEng.gf
+[2011-11-08 11:09:25,687] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:09:25,687] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:09:25,691] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:09:25,696] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:09:25,805] INFO  Full build on Hello
+[2011-11-08 11:09:25,807] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:09:25,807] INFO  - tags
+[2011-11-08 11:09:25,822] INFO  + AbsCat.gf
+[2011-11-08 11:09:25,823] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:09:25,823] INFO  - tags
+[2011-11-08 11:09:25,839] INFO  + HelloAbs.gf
+[2011-11-08 11:09:25,840] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:09:25,856] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:09:25,859] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... renaming module HelloEng
+[2011-11-08 11:09:25,859] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:13:
+[2011-11-08 11:09:25,859] DEBUG GF:    Happened in the renaming of Goodbye
+[2011-11-08 11:09:25,860] DEBUG GF:       atomic term Fem
+[2011-11-08 11:09:25,860] DEBUG GF:       given ResEng, HelloEng
+[2011-11-08 11:09:25,860] DEBUG GF:          constant not found: Fem
+[2011-11-08 11:09:25,860] WARN  > Failed: HelloEng.gf
+[2011-11-08 11:09:25,861] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:09:25,862] INFO  - tags
+[2011-11-08 11:09:25,878] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:09:25,880] INFO  + ResEng.gf
+[2011-11-08 11:09:29,373] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:04,361] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:11,767] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,671] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,676] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,679] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,682] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,685] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,688] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,692] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,694] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,697] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,699] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,702] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,705] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,707] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,709] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,711] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,749] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:19,756] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:10:28,079] INFO  Full build on Hello
+[2011-11-08 11:10:34,135] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:10:34,136] INFO  - tags
+[2011-11-08 11:10:34,151] INFO  + AbsCat.gf
+[2011-11-08 11:10:34,152] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:10:34,152] INFO  - tags
+[2011-11-08 11:10:34,162] INFO  + HelloAbs.gf
+[2011-11-08 11:10:34,162] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:10:34,172] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:10:34,174] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 11:10:34,174] INFO  + HelloEng.gf
+[2011-11-08 11:10:34,175] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:10:34,175] INFO  - tags
+[2011-11-08 11:10:34,184] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:10:34,185] INFO  + ResEng.gf
+[2011-11-08 11:34:51,153] INFO  Full build on Hello
+[2011-11-08 11:34:51,160] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:34:51,161] INFO  - tags
+[2011-11-08 11:34:51,205] INFO  + AbsCat.gf
+[2011-11-08 11:34:51,205] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:34:51,205] INFO  - tags
+[2011-11-08 11:34:51,231] INFO  + HelloAbs.gf
+[2011-11-08 11:34:51,231] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:34:51,231] INFO  - tags
+[2011-11-08 11:34:51,284] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:34:51,286] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 11:34:51,292] INFO  + HelloEng.gf
+[2011-11-08 11:34:51,292] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:34:51,292] INFO  - tags
+[2011-11-08 11:34:51,323] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:34:51,324] INFO  + ResEng.gf
+[2011-11-08 11:36:19,346] INFO  Full build on Hello
+[2011-11-08 11:36:19,350] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:36:19,351] INFO  - tags
+[2011-11-08 11:36:19,364] INFO  + AbsCat.gf
+[2011-11-08 11:36:19,365] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:36:19,365] INFO  - tags
+[2011-11-08 11:36:19,375] INFO  + HelloAbs.gf
+[2011-11-08 11:36:19,375] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:36:19,376] INFO  - tags
+[2011-11-08 11:36:19,385] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:36:19,386] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 11:36:19,387] INFO  + HelloEng.gf
+[2011-11-08 11:36:19,387] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:36:19,387] INFO  - tags
+[2011-11-08 11:36:19,396] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:36:19,396] INFO  + ResEng.gf
+[2011-11-08 11:37:51,741] INFO  Full build on Hello
+[2011-11-08 11:37:51,766] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:37:51,766] INFO  - tags
+[2011-11-08 11:37:51,799] INFO  + AbsCat.gf
+[2011-11-08 11:37:51,799] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:37:51,799] INFO  - tags
+[2011-11-08 11:37:51,825] INFO  + HelloAbs.gf
+[2011-11-08 11:37:51,825] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:37:51,826] INFO  - tags
+[2011-11-08 11:37:51,844] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:37:51,847] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 11:37:51,848] INFO  + HelloEng.gf
+[2011-11-08 11:37:51,848] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:37:51,848] INFO  - tags
+[2011-11-08 11:37:51,861] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:37:51,862] INFO  + ResEng.gf
+[2011-11-08 11:39:57,012] INFO  Full build on Hello
+[2011-11-08 11:39:57,016] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:39:57,016] INFO  - tags
+[2011-11-08 11:39:57,029] INFO  + AbsCat.gf
+[2011-11-08 11:39:57,029] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:39:57,029] INFO  - tags
+[2011-11-08 11:39:57,040] INFO  + HelloAbs.gf
+[2011-11-08 11:39:57,040] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:39:57,041] INFO  - tags
+[2011-11-08 11:39:57,054] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:39:57,055] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 11:39:57,056] INFO  + HelloEng.gf
+[2011-11-08 11:39:57,058] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:39:57,058] INFO  - tags
+[2011-11-08 11:39:57,071] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:39:57,072] INFO  + ResEng.gf
+[2011-11-08 11:58:56,658] INFO  Full build on Hello
+[2011-11-08 11:58:56,660] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:58:56,661] INFO  - tags
+[2011-11-08 11:58:56,674] INFO  + AbsCat.gf
+[2011-11-08 11:58:56,675] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:58:56,675] INFO  - tags
+[2011-11-08 11:58:56,689] INFO  + HelloAbs.gf
+[2011-11-08 11:58:56,694] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:58:56,694] INFO  - tags
+[2011-11-08 11:58:56,706] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:58:56,709] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 11:58:56,710] INFO  + HelloEng.gf
+[2011-11-08 11:58:56,710] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:58:56,712] INFO  - tags
+[2011-11-08 11:58:56,726] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:58:56,727] INFO  + ResEng.gf
+[2011-11-08 11:59:03,654] INFO  Full build on Hello
+[2011-11-08 11:59:03,655] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:59:03,656] INFO  - tags
+[2011-11-08 11:59:03,668] INFO  + AbsCat.gf
+[2011-11-08 11:59:03,669] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:59:03,669] INFO  - tags
+[2011-11-08 11:59:03,682] INFO  + HelloAbs.gf
+[2011-11-08 11:59:03,683] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:59:03,683] INFO  - tags
+[2011-11-08 11:59:03,697] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:59:03,700] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... renaming module HelloEng
+[2011-11-08 11:59:03,701] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:13:
+[2011-11-08 11:59:03,701] DEBUG GF:    Happened in the renaming of Goodbye
+[2011-11-08 11:59:03,701] DEBUG GF:       atomic term Fem
+[2011-11-08 11:59:03,702] DEBUG GF:       given ResEng, HelloEng
+[2011-11-08 11:59:03,702] DEBUG GF:          constant not found: Fem
+[2011-11-08 11:59:03,702] WARN  > Failed: HelloEng.gf
+[2011-11-08 11:59:03,713] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:59:03,714] INFO  - tags
+[2011-11-08 11:59:03,727] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:59:03,728] INFO  + ResEng.gf
+[2011-11-08 11:59:10,349] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,351] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,352] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,354] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,355] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,356] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,357] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,358] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,359] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,360] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,362] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,363] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,364] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,365] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,366] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:10,370] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,445] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,446] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,447] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,449] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,451] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,452] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,453] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,454] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,456] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,457] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,458] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,459] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,461] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,462] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,463] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,464] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,465] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,467] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,470] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,472] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,474] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,476] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,478] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,480] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,482] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,485] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,487] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,491] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,494] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,496] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:11,498] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,012] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,014] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,015] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,016] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,017] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,019] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,020] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,021] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,022] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,023] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,024] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,026] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,027] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,028] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,029] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,031] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,032] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,035] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:13,037] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:20,855] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:20,856] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:20,857] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:20,858] WARN  Problem loading tags file for HelloEng
+[2011-11-08 11:59:20,997] INFO  Full build on Hello
+[2011-11-08 11:59:20,998] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 11:59:20,998] INFO  - tags
+[2011-11-08 11:59:21,013] INFO  + AbsCat.gf
+[2011-11-08 11:59:21,013] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 11:59:21,014] INFO  - tags
+[2011-11-08 11:59:21,028] INFO  + HelloAbs.gf
+[2011-11-08 11:59:21,029] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 11:59:21,044] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:59:21,046] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... renaming module HelloEng
+[2011-11-08 11:59:21,047] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:13:
+[2011-11-08 11:59:21,047] DEBUG GF:    Happened in the renaming of Goodbye
+[2011-11-08 11:59:21,047] DEBUG GF:       atomic term Fem
+[2011-11-08 11:59:21,048] DEBUG GF:       given ResEng, HelloEng
+[2011-11-08 11:59:21,048] DEBUG GF:          constant not found: Fem
+[2011-11-08 11:59:21,051] WARN  > Failed: HelloEng.gf
+[2011-11-08 11:59:21,052] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 11:59:21,052] INFO  - tags
+[2011-11-08 11:59:21,071] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 11:59:21,071] INFO  + ResEng.gf
+[2011-11-08 12:07:21,448] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,459] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,464] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,468] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,471] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,475] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,479] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,482] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,486] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,490] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,507] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,510] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,518] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,522] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,527] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,529] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,532] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,595] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:21,600] WARN  Problem loading tags file for HelloEng
+[2011-11-08 12:07:26,054] INFO  Full build on Hello
+[2011-11-08 12:07:26,056] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 12:07:26,057] INFO  - tags
+[2011-11-08 12:07:26,069] INFO  + AbsCat.gf
+[2011-11-08 12:07:26,070] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 12:07:26,070] INFO  - tags
+[2011-11-08 12:07:26,084] INFO  + HelloAbs.gf
+[2011-11-08 12:07:26,085] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 12:07:26,098] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 12:07:26,102] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 12:07:26,104] INFO  + HelloEng.gf
+[2011-11-08 12:07:26,104] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 12:07:26,105] INFO  - tags
+[2011-11-08 12:07:26,119] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 12:07:26,120] INFO  + ResEng.gf
+[2011-11-08 12:07:32,336] INFO  Full build on Hello
+[2011-11-08 12:07:32,337] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 12:07:32,337] INFO  - tags
+[2011-11-08 12:07:32,352] INFO  + AbsCat.gf
+[2011-11-08 12:07:32,353] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 12:07:32,354] INFO  - tags
+[2011-11-08 12:07:32,368] INFO  + HelloAbs.gf
+[2011-11-08 12:07:32,369] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 12:07:32,369] INFO  - tags
+[2011-11-08 12:07:32,383] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 12:07:32,386] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 12:07:32,388] INFO  + HelloEng.gf
+[2011-11-08 12:07:32,389] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 12:07:32,389] INFO  - tags
+[2011-11-08 12:07:32,403] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 12:07:32,404] INFO  + ResEng.gf
+[2011-11-08 14:25:18,724] INFO  Incremental build on Hello
+[2011-11-08 14:25:18,727] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 14:25:18,728] INFO  - tags
+[2011-11-08 14:25:18,740] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 14:25:18,742] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 14:25:18,743] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-08 14:36:06,375] INFO  Incremental build on Hello
+[2011-11-08 14:36:06,379] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 14:36:06,380] INFO  - tags
+[2011-11-08 14:36:06,397] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 14:36:06,397] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 14:36:06,397] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-08 14:43:31,550] INFO  Incremental build on Hello
+[2011-11-08 14:43:31,553] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 14:43:31,553] INFO  - tags
+[2011-11-08 14:43:31,598] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 14:43:31,600] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 14:43:31,601] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-08 14:44:20,127] INFO  Incremental build on Hello
+[2011-11-08 14:44:20,137] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 14:44:20,137] INFO  - tags
+[2011-11-08 14:44:20,167] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 14:44:20,172] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 14:44:20,180] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-08 14:48:02,209] INFO  Incremental build on Hello
+[2011-11-08 14:48:02,212] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 14:48:02,212] INFO  - tags
+[2011-11-08 14:48:02,268] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-08 14:48:02,271] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-08 14:48:02,287] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-08 16:35:08,420] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,437] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,442] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,446] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,450] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,457] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,461] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,467] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,503] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,506] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,509] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,512] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,523] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,526] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,529] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,533] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,538] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,626] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:35:08,645] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,000] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,024] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,029] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,035] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,039] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,043] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,050] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,054] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,084] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,099] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,102] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,106] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,110] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,114] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,117] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,121] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,125] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,247] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:01,256] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:43:15,900] INFO  Full build on Hello
+[2011-11-08 16:43:15,907] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 16:43:15,941] DEBUG GF: None of this files exist:
+[2011-11-08 16:43:15,943] DEBUG GF:   AbsCat.gf
+[2011-11-08 16:43:15,944] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/AbsCat.gf
+[2011-11-08 16:43:15,945] WARN  > Failed: AbsCat.gf
+[2011-11-08 16:43:15,948] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 16:43:15,966] DEBUG GF: None of this files exist:
+[2011-11-08 16:43:15,967] DEBUG GF:   HelloAbs.gf
+[2011-11-08 16:43:15,967] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/HelloAbs.gf
+[2011-11-08 16:43:15,968] WARN  > Failed: HelloAbs.gf
+[2011-11-08 16:43:15,969] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 16:43:15,988] DEBUG GF: None of this files exist:
+[2011-11-08 16:43:15,989] DEBUG GF:   HelloEng.gf
+[2011-11-08 16:43:15,990] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/HelloEng.gf
+[2011-11-08 16:43:15,990] WARN  > Failed: HelloEng.gf
+[2011-11-08 16:43:15,992] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 16:43:16,012] DEBUG GF: None of this files exist:
+[2011-11-08 16:43:16,013] DEBUG GF:   ResEng.gf
+[2011-11-08 16:43:16,013] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/ResEng.gf
+[2011-11-08 16:43:16,014] WARN  > Failed: ResEng.gf
+[2011-11-08 16:44:32,407] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,432] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,460] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,463] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,469] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,478] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,482] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,488] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,491] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,500] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,505] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,512] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,523] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,526] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,529] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,532] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,539] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,629] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:32,636] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:44:40,495] INFO  Full build on Hello
+[2011-11-08 16:44:40,994] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 16:44:41,033] DEBUG GF: None of this files exist:
+[2011-11-08 16:44:41,034] DEBUG GF:   AbsCat.gf
+[2011-11-08 16:44:41,035] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/AbsCat.gf
+[2011-11-08 16:44:41,036] WARN  > Failed: AbsCat.gf
+[2011-11-08 16:44:41,039] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 16:44:41,072] DEBUG GF: None of this files exist:
+[2011-11-08 16:44:41,075] DEBUG GF:   HelloAbs.gf
+[2011-11-08 16:44:41,076] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/HelloAbs.gf
+[2011-11-08 16:44:41,077] WARN  > Failed: HelloAbs.gf
+[2011-11-08 16:44:41,080] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 16:44:41,110] DEBUG GF: None of this files exist:
+[2011-11-08 16:44:41,112] DEBUG GF:   HelloEng.gf
+[2011-11-08 16:44:41,113] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/HelloEng.gf
+[2011-11-08 16:44:41,113] WARN  > Failed: HelloEng.gf
+[2011-11-08 16:44:41,114] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 16:44:41,132] DEBUG GF: None of this files exist:
+[2011-11-08 16:44:41,133] DEBUG GF:   ResEng.gf
+[2011-11-08 16:44:41,134] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/ResEng.gf
+[2011-11-08 16:44:41,134] WARN  > Failed: ResEng.gf
+[2011-11-08 16:46:08,074] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,087] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,110] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,118] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,124] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,128] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,132] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,135] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,139] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,143] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,147] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,151] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,155] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,169] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,174] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,184] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,197] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,279] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:08,286] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:46:24,658] INFO  Full build on Hello
+[2011-11-08 16:46:24,664] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 16:49:44,787] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf/AbsCat.gf... 
+[2011-11-08 16:49:44,788] DEBUG GF: gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf/AbsCat.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-08 16:49:44,790] WARN  > Failed: AbsCat.gf
+[2011-11-08 16:49:44,791] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 16:52:49,804] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,819] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,840] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,843] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,853] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,866] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,869] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,872] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,875] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,877] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,881] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,884] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,887] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,889] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,892] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,896] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,899] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,950] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,956] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:52:49,990] INFO  Full build on Hello
+[2011-11-08 16:52:50,004] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 16:52:50,004] INFO  - AbsCat.gf
+[2011-11-08 16:52:50,029] DEBUG GF: None of this files exist:
+[2011-11-08 16:52:50,029] DEBUG GF:   AbsCat.gf
+[2011-11-08 16:52:50,030] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/AbsCat.gf
+[2011-11-08 16:52:50,031] WARN  > Failed: AbsCat.gf
+[2011-11-08 16:52:50,032] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 16:52:50,045] DEBUG GF: None of this files exist:
+[2011-11-08 16:52:50,045] DEBUG GF:   HelloAbs.gf
+[2011-11-08 16:52:50,046] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/HelloAbs.gf
+[2011-11-08 16:52:50,046] WARN  > Failed: HelloAbs.gf
+[2011-11-08 16:52:50,046] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 16:52:50,068] DEBUG GF: None of this files exist:
+[2011-11-08 16:52:50,069] DEBUG GF:   HelloEng.gf
+[2011-11-08 16:52:50,069] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/HelloEng.gf
+[2011-11-08 16:52:50,069] WARN  > Failed: HelloEng.gf
+[2011-11-08 16:52:50,070] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 16:52:50,092] DEBUG GF: None of this files exist:
+[2011-11-08 16:52:50,092] DEBUG GF:   ResEng.gf
+[2011-11-08 16:52:50,092] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/ResEng.gf
+[2011-11-08 16:52:50,093] WARN  > Failed: ResEng.gf
+[2011-11-08 16:53:21,351] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,378] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,385] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,393] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,399] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,403] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,407] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,410] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,414] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,446] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,452] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,455] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,462] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,465] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,476] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,478] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,481] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,586] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:21,593] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,501] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,506] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,508] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,510] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,513] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,515] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,516] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,518] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,519] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,521] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,523] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,525] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,526] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,528] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,530] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,532] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,534] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,554] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,556] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,562] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,565] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,580] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:27,585] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:53:34,431] INFO  Full build on Hello
+[2011-11-08 16:53:34,433] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 16:58:20,588] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,620] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,624] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,631] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,639] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,646] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,656] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,661] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,667] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,677] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,681] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,695] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,702] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,709] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,713] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,714] INFO  Full build on Hello
+[2011-11-08 16:58:20,716] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,723] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 16:58:20,734] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,834] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:20,852] WARN  Problem loading tags file for HelloEng
+[2011-11-08 16:58:53,288] DEBUG GF: None of this files exist:
+[2011-11-08 16:58:53,288] DEBUG GF:   AbsCat.gf
+[2011-11-08 16:58:53,288] DEBUG GF:   "/home/john/.cabal/share/gf-3.3/lib"/AbsCat.gf
+[2011-11-08 16:58:53,289] WARN  > Failed: AbsCat.gf
+[2011-11-08 16:58:53,290] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 17:00:43,037] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,057] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,061] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,064] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,068] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,072] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,075] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,079] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,089] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,093] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,118] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,121] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,124] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,128] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,131] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,135] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,157] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,160] INFO  Full build on Hello
+[2011-11-08 17:00:43,177] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 17:00:43,242] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:00:43,252] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,438] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,450] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,454] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,466] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,469] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,472] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,474] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,477] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,481] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,484] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,488] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,491] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,502] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,508] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,511] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,518] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,520] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,542] INFO  Full build on Hello
+[2011-11-08 17:01:25,543] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 17:01:25,597] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf/AbsCat.gf:1:0: parse error
+[2011-11-08 17:01:25,598] WARN  > Failed: AbsCat.gf
+[2011-11-08 17:01:25,599] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 17:01:25,624] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,626] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf/HelloAbs.gf:1:0: parse error
+[2011-11-08 17:01:25,626] WARN  > Failed: HelloAbs.gf
+[2011-11-08 17:01:25,627] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 17:01:25,633] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:01:25,657] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf/HelloEng.gf:1:0: parse error
+[2011-11-08 17:01:25,657] WARN  > Failed: HelloEng.gf
+[2011-11-08 17:01:25,658] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 17:01:25,671] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf/ResEng.gf:1:0: parse error
+[2011-11-08 17:01:25,672] WARN  > Failed: ResEng.gf
+[2011-11-08 17:02:52,698] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,713] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,717] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,719] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,728] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,731] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,734] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,737] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,740] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,761] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,767] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,770] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,777] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,782] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,784] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,786] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,788] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,836] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:02:52,842] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,287] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,299] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,303] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,306] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,308] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,311] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,314] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,317] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,320] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,322] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,326] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,329] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,332] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,336] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,338] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,357] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,360] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,457] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:03:53,463] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,260] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,280] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,285] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,290] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,293] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,297] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,300] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,311] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,315] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,318] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,320] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,326] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,348] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,351] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,353] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,355] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,358] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,428] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:04:53,434] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,089] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,106] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,122] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,125] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,129] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,132] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,136] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,140] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,146] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,178] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,181] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,185] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,192] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,196] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,205] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,209] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,214] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,289] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:52,295] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,208] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,210] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,213] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,218] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,223] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,225] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,227] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,229] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,231] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,233] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,235] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,237] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,239] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,240] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,242] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,243] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,245] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,246] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,248] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,250] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,251] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,256] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,257] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,258] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,254] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,265] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:05:57,954] INFO  Full build on Functors
+[2011-11-08 17:05:57,956] INFO  Cleaning build directory for Foods.gf
+[2011-11-08 17:05:57,975] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf/Foods.gf:1:0: parse error
+[2011-11-08 17:05:57,975] WARN  > Failed: Foods.gf
+[2011-11-08 17:05:57,976] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-08 17:05:57,991] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf/FoodsEng.gf:1:0: parse error
+[2011-11-08 17:05:57,992] WARN  > Failed: FoodsEng.gf
+[2011-11-08 17:05:57,993] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-08 17:05:58,008] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf/FoodsGer.gf:1:0: parse error
+[2011-11-08 17:05:58,008] WARN  > Failed: FoodsGer.gf
+[2011-11-08 17:05:58,009] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-08 17:05:58,027] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf/FoodsI.gf:1:0: parse error
+[2011-11-08 17:05:58,028] WARN  > Failed: FoodsI.gf
+[2011-11-08 17:05:58,029] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-08 17:05:58,051] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf/LexFoods.gf:1:0: parse error
+[2011-11-08 17:05:58,054] WARN  > Failed: LexFoods.gf
+[2011-11-08 17:05:58,055] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-08 17:05:58,089] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf/LexFoodsEng.gf:1:0: parse error
+[2011-11-08 17:05:58,092] WARN  > Failed: LexFoodsEng.gf
+[2011-11-08 17:05:58,093] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-08 17:05:58,115] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf/LexFoodsGer.gf:1:0: parse error
+[2011-11-08 17:05:58,116] WARN  > Failed: LexFoodsGer.gf
+[2011-11-08 17:05:58,122] INFO  Full build on Hello
+[2011-11-08 17:05:58,122] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 17:05:58,137] WARN  > Failed: AbsCat.gf
+[2011-11-08 17:05:58,138] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 17:05:58,159] WARN  > Failed: HelloAbs.gf
+[2011-11-08 17:05:58,160] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 17:05:58,176] WARN  > Failed: HelloEng.gf
+[2011-11-08 17:05:58,177] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 17:05:58,194] WARN  > Failed: ResEng.gf
+[2011-11-08 17:05:58,195] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-08 17:05:58,195] INFO  - AbsCat.gf
+[2011-11-08 17:05:58,218] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf/AbsCat.gf:1:0: parse error
+[2011-11-08 17:05:58,218] WARN  > Failed: AbsCat.gf
+[2011-11-08 17:05:58,219] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-08 17:05:58,220] INFO  - HelloAbs.gf
+[2011-11-08 17:05:58,238] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf/HelloAbs.gf:1:0: parse error
+[2011-11-08 17:05:58,239] WARN  > Failed: HelloAbs.gf
+[2011-11-08 17:05:58,240] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-08 17:05:58,240] INFO  - HelloEng.gf
+[2011-11-08 17:05:58,254] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf/HelloEng.gf:1:0: parse error
+[2011-11-08 17:05:58,254] WARN  > Failed: HelloEng.gf
+[2011-11-08 17:05:58,255] INFO  Cleaning build directory for ResEng.gf
+[2011-11-08 17:05:58,255] INFO  - ResEng.gf
+[2011-11-08 17:05:58,270] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf/ResEng.gf:1:0: parse error
+[2011-11-08 17:05:58,271] WARN  > Failed: ResEng.gf
+[2011-11-08 17:08:12,024] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,081] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,095] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,099] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,108] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,126] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,129] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,133] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,152] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,159] INFO  Full build on Functors
+[2011-11-08 17:08:12,161] INFO  Cleaning build directory for Foods.gf
+[2011-11-08 17:08:12,162] INFO  - Foods.gf
+[2011-11-08 17:08:12,169] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,172] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,175] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,186] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,188] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,195] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,198] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,202] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,329] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:08:12,340] WARN  Problem loading tags file for HelloEng
+[2011-11-08 17:09:24,786] DEBUG GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf/Foods.gf:1:0: parse error
+[2011-11-08 17:09:24,787] WARN  > Failed: Foods.gf
+[2011-11-08 17:09:24,789] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-08 17:09:24,790] INFO  - FoodsEng.gf

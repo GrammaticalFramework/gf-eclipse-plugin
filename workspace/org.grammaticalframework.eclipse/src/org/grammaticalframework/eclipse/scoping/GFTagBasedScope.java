@@ -9,6 +9,7 @@ import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.EObjectDescription;
 import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.AbstractScope;
 
@@ -30,7 +31,12 @@ public class GFTagBasedScope extends AbstractScope {
 	
 
 	/**
-	 * The descriptions.
+	 * The name of the module thsi scope represents
+	 */
+	private final String moduleName;
+	
+	/**
+	 * The object descriptions.
 	 */
 	private final ArrayList<IEObjectDescription> descriptions;
 	
@@ -40,10 +46,10 @@ public class GFTagBasedScope extends AbstractScope {
 	 * @param parent
 	 * @param ignoreCase
 	 */
-	protected GFTagBasedScope(IScope parent, boolean ignoreCase) {
-		super(parent, ignoreCase);
-		this.descriptions = new ArrayList<IEObjectDescription>();
-	}
+//	protected GFTagBasedScope(IScope parent, boolean ignoreCase) {
+//		super(parent, ignoreCase);
+//		this.descriptions = new ArrayList<IEObjectDescription>();
+//	}
 	
 	/**
 	 * Constructs a new scope with the given descriptions
@@ -51,18 +57,21 @@ public class GFTagBasedScope extends AbstractScope {
 	 * @param parent
 	 * @param ignoreCase
 	 */
-	protected GFTagBasedScope(IScope parent, Iterable<IEObjectDescription> descriptions, boolean ignoreCase) {
+	protected GFTagBasedScope(IScope parent, IResourceDescription resourceDescription, boolean ignoreCase) {
 		super(parent, ignoreCase);
-		if (descriptions == null) {
-			throw new IllegalArgumentException("Descriptions may not be null");
-		}
-		this.descriptions = new ArrayList<IEObjectDescription>();
-		for (IEObjectDescription desc : descriptions) {
+//		if (descriptions == null) {
+//			throw new IllegalArgumentException("Descriptions may not be null");
+//		}
+		
+		moduleName = resourceDescription.getURI().lastSegment().substring(0, resourceDescription.getURI().lastSegment().lastIndexOf('.'));
+		
+		descriptions = new ArrayList<IEObjectDescription>();
+		for (IEObjectDescription desc : resourceDescription.getExportedObjects()) {
 //			this.descriptions.add(desc);
 			
 			// Strip off qualified bit of name
 			QualifiedName newName = desc.getQualifiedName().skipFirst(1);
-			this.descriptions.add(EObjectDescription.create(newName, desc.getEObjectOrProxy()));
+			descriptions.add(EObjectDescription.create(newName, desc.getEObjectOrProxy()));
 		}
 	}
 	
@@ -76,10 +85,14 @@ public class GFTagBasedScope extends AbstractScope {
 //		IEObjectDescription eObjectDescription = new EObjectDescription(unQualifiedName, eObject, userData);
 //		descriptions.add(eObjectDescription);
 //	}
-
+	
 	@Override
 	protected Iterable<IEObjectDescription> getAllLocalElements() {
 		return descriptions;
+	}
+
+	protected int localElementCount() {
+		return descriptions.size();
 	}
 
 }
