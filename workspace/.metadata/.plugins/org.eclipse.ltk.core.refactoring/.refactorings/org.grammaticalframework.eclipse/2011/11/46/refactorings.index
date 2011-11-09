@@ -2,3 +2,6 @@
 1320671538314	Rename local variable 'e'
 1320767721585	Rename local variable 'filename'
 1320767731666	Rename local variable 'buildDir'
+1320832316396	Rename local variable 'b'
+1320832321854	Rename local variable 'process'
+1320832325947	Rename local variable 'proctags'

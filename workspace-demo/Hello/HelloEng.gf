@@ -28,5 +28,5 @@ concrete HelloEng of HelloAbs = ResEng ** {
 				
 			mega : Str -> Str -> Recipient = \s,r ->
 				lin Recipient { s = \\_ => "mega" ++ s ++ "and" ++ "mega" ++ r }
-		};
+		} ;
 }

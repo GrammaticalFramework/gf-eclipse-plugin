@@ -283,7 +283,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private boolean shouldBuild(IResource resource) {
 		try {
-			return resource.getType() == IResource.FILE && resource.getFileExtension().equals("gf");
+			return resource.getType() == IResource.FILE && resource.getFileExtension().equals("gf") && !resource.getFullPath().toOSString().contains(BUILD_FOLDER);
 		} catch (NullPointerException _) {
 			return false;
 		}
@@ -295,6 +295,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param file the file
 	 * @return the builds the directory
 	 */
+	public static String getBuildSubfolderName(String sourceFileName) {
+		return sourceFileName.substring(0, sourceFileName.lastIndexOf('.'));
+	}
 	private String getBuildDirectory(IFile file) {
 		return getBuildDirectory(file, TAG_BASED_SCOPING);
 	}
@@ -305,7 +308,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					+ java.io.File.separator
 					+ BUILD_FOLDER
 					+ java.io.File.separator
-					+ filename
+					+ getBuildSubfolderName(filename)
 					+ java.io.File.separator;
 		} else {
 			return file.getRawLocation().removeLastSegments(1).toOSString()
@@ -330,28 +333,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @return true, if successful
 	 */
 	private boolean buildFileTAGS(IFile file) {
-		/* 
-		 * First create a "scraped" copy of the file in .gfbuild/HellEng.gf/
-		 * Then compile it using:
-		 * 
-		 * Shell command: gf --tags --path=../ HelloEng.gf
-		 */
+
 		String filename = file.getName();
 		String buildDir = getBuildDirectory(file);
-		
-		ArrayList<String> command = new ArrayList<String>();
-		command.add(gfPath);
-		command.add("--tags");
-		command.add("--path=.."+java.io.File.separator+".."+java.io.File.separator);
-		
-		// Use library path in command (if supplied)
-		if (gfLibPath != null && !gfLibPath.isEmpty()) {
-			command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath));
-		}
 
-		// Compile the version in the build folder
-		command.add(filename);
-		
 		try {
 			// Check the build directory and try to create it
 			File buildDirFile = new File(buildDir);
@@ -362,14 +347,31 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			// Create the scraped version
 			createScrapedFileCopy(".."+java.io.File.separator+".."+java.io.File.separator+filename, filename, buildDirFile);
 
-			// Piece together our GF process
-			ProcessBuilder b = new ProcessBuilder(command);
-			b.directory(buildDirFile);
-			b.redirectErrorStream(true);
-			Process process = b.start();
+			// TODO TEMP: Run --batch first to make it happy
+			ProcessBuilder pbBatch = new ProcessBuilder(gfPath, "--batch", "--path=.."+java.io.File.separator+".."+java.io.File.separator, filename);
+			pbBatch.directory(buildDirFile);
+			pbBatch.redirectErrorStream(true);
+			Process procBatch = pbBatch.start();
+			procBatch.waitFor();
+			
+			// Compile to get tags with: gf --tags --path=../../ HelloEng.gf
+			ArrayList<String> command = new ArrayList<String>();
+			command.add(gfPath);
+			command.add("--tags");
+			command.add("--path=.."+java.io.File.separator+".."+java.io.File.separator);
+			if (gfLibPath != null && !gfLibPath.isEmpty()) {
+				command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath)); // Use library path in command (if supplied)
+			}
+			command.add(filename); // Compile the version in the BUILD folder
+
+			// Execute command
+			ProcessBuilder pbTags = new ProcessBuilder(command);
+			pbTags.directory(buildDirFile);
+			pbTags.redirectErrorStream(true);
+			Process procTags = pbTags.start();
 			
 			// Consume & log all output
-			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
+			BufferedReader processOutput = new BufferedReader(new InputStreamReader(procTags.getInputStream()));
 			String out_str;
 			while ((out_str = processOutput.readLine()) != null) {
 				log.debug("GF: " + out_str);
@@ -377,8 +379,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			
 			// Tidy up
 			processOutput.close();
-			process.waitFor();
-			int retVal = process.exitValue();
+			procTags.waitFor();
+			int retVal = procTags.exitValue();
 			return (retVal == 0);
 			
 		} catch (IOException e) {
@@ -389,15 +391,22 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		return false;
 	}
 	
+	/**
+	 * Create a copy of a source file with only the module header intact, and the body "scraped out".
+	 * The reasons for this is to be able to get a valid tags file even when there are syntax/type/ref errors
+	 * in the current source file.
+	 * 
+	 * @param sourceFileName
+	 * @param targetFileName
+	 * @param workingDirectory
+	 * @return
+	 */
 	private boolean createScrapedFileCopy(String sourceFileName, String targetFileName, File workingDirectory) {
 		try {
-			// MAJOR TODO: use of absolute path!! Reliance on Sed!!one!
-			ProcessBuilder b = new ProcessBuilder("/bin/sed", "-n '1h;1!H;${;g;s/{.*}/{}/g;p;}'", sourceFileName);
+			// MAJOR TODO: use of absolute path!! Reliance on sed!!one!
+			ProcessBuilder b = new ProcessBuilder("/bin/sed", "-n", "1h;1!H;${;g;s/{.*/{}/g;p;}", sourceFileName);
 			b.directory(workingDirectory);
 			Process process = b.start();
-			
-			
-			// TODO THis isn't creating any output :(
 			
 			// Consume output and write to targetFile
 			File targetFile = new File(workingDirectory.getAbsolutePath() + java.io.File.separator + targetFileName);
@@ -405,7 +414,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
 			String out_str;
 			while ((out_str = processOutput.readLine()) != null) {
-				writer.write(out_str);
+				writer.write(out_str + "\n");
 			}
 			
 			process.waitFor();
@@ -414,9 +423,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			int retVal = process.exitValue();
 			return (retVal == 0);
 		} catch (IOException e) {
-			e.printStackTrace();
+			log.error("Couldn't create scraped version of " + sourceFileName);
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			log.error("Scraping of " + sourceFileName + " interrupted");
 		}
 		return false;				
 	}

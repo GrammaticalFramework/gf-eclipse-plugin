@@ -1,4 +1,4 @@
-#Tue Nov 08 14:52:40 CET 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="uri.toFileString()"/>\n<expression enabled\="true" text\="uri.toString()"/>\n<expression enabled\="true" text\="uri.toPlatformString(false)"/>\n<expression enabled\="true" text\="new FileReader(new File(uri.toPlatformString(true)))"/>\n<expression enabled\="true" text\="resourceDescription.getURI().lastSegment()"/>\n<expression enabled\="true" text\="file.getRawLocation()"/>\n<expression enabled\="true" text\="tag.file.equals(sourceFilePath)"/>\n</watchExpressions>\n
+#Wed Nov 09 09:50:37 CET 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="resource."/>\n<expression enabled\="true" text\="resource.getParent()"/>\n<expression enabled\="true" text\="resource.getParent().getParent()"/>\n<expression enabled\="true" text\="resource.getFullPath()"/>\n<expression enabled\="true" text\="resource.getFullPath().toOSString().contains(BUILD_FOLDER)"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=false

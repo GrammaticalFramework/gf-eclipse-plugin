@@ -7125,3 +7125,3649 @@ Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositor
 !ENTRY org.apache.log4j 2 0 2011-11-08 17:09:24.789
 !MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: Foods.gf
 
+!SESSION 2011-11-09 09:22:19.971 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.459
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.487
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.491
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.493
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.496
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.499
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.503
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.505
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.507
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.509
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.512
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.514
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.516
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.519
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.521
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.524
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.527
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.599
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:22:29.606
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+!SESSION 2011-11-09 09:23:41.286 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.910
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.919
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.925
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.929
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.932
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.936
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.968
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.984
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.988
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.991
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:46.995
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:47.009
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:47.012
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:47.014
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:47.018
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:47.032
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:47.037
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:47.179
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:47.187
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:23:56.534
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: Foods.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:24:15.269
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: Foods.gf
+
+!SESSION 2011-11-09 09:26:48.023 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.667
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.677
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.692
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.695
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.698
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.702
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.723
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.727
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.730
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.734
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.738
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.745
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.748
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.752
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.756
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.774
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.778
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.894
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:26:53.915
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+!SESSION 2011-11-09 09:28:59.606 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.072
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.086
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.091
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.094
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.097
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.100
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.103
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.106
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.130
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.133
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.136
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.139
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.141
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.144
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.146
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.148
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.150
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.192
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.198
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.402
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: Foods.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.429
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: FoodsEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.458
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: FoodsGer.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.486
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: FoodsI.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.513
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: LexFoods.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.541
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: LexFoodsEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.569
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: LexFoodsGer.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.597
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.621
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.646
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.672
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.709
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.728
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.752
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:29:05.777
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+!SESSION 2011-11-09 09:30:33.142 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.923
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.930
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.933
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.936
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.939
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.942
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.945
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.948
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.951
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.954
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.957
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.960
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.962
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.964
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.967
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.977
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:38.979
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:39.018
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:30:39.024
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+!SESSION 2011-11-09 09:32:23.132 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.350
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.358
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.362
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.368
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.371
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.375
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.378
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.382
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.385
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.401
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.412
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.421
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.427
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.431
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.436
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.438
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.440
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.536
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:32:28.541
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+!SESSION 2011-11-09 09:34:29.502 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.490
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.502
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.506
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.509
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.511
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.514
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.517
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.520
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.523
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.526
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.529
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.531
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.533
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.536
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.541
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.544
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.557
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.642
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:35.659
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.330
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.333
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.335
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.338
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.355
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.357
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.360
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.361
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.365
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.367
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.368
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.370
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.371
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.373
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.374
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.376
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.378
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.380
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.381
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.382
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.383
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.384
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.386
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.387
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.396
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.398
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.398
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.400
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.400
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:41.402
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.029
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: Foods.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.050
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: FoodsEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.073
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: FoodsGer.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.096
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: FoodsI.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.120
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: LexFoods.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.143
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: LexFoodsEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.166
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: LexFoodsGer.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.191
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: Foods.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.217
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: FoodsEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.234
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: FoodsGer.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.247
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: FoodsI.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.264
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: LexFoods.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.279
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: LexFoodsEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.294
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: LexFoodsGer.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.325
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.348
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.363
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.375
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.388
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.404
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.417
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:34:42.432
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+!SESSION 2011-11-09 09:36:04.143 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.164
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.174
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.182
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.186
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.194
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.204
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.212
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.215
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.217
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.219
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.221
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.224
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.227
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.229
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.231
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.233
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.235
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.283
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:10.295
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.530
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.533
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.536
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.539
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.541
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.545
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.547
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.549
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.551
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.553
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.554
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.556
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.558
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.560
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.561
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.563
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.564
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.566
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.567
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.569
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.570
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.572
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.573
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.575
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.576
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.578
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.580
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.582
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.584
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.586
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.589
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.591
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.594
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.599
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.599
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.602
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.603
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.606
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:13.607
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:14.418
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:14.443
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:14.468
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:14.497
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:14.528
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:14.556
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:14.584
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:36:14.619
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+!SESSION 2011-11-09 09:37:02.129 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.573
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.596
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.600
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.603
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.606
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.613
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.618
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.629
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.632
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.666
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.672
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.677
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.680
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.682
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.688
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.692
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.695
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.794
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:07.821
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.745
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.747
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.754
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.757
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.760
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.761
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.763
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.765
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.767
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.769
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.771
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.772
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.774
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.776
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.777
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.779
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.781
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.783
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.784
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.786
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.787
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.788
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.790
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.791
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.793
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.794
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.795
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.796
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.798
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.799
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.800
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.801
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.803
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.806
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.807
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.807
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.809
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.810
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:37:10.811
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+!SESSION 2011-11-09 09:40:38.346 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.321
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.336
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.340
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.344
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.347
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.350
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.353
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.356
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.360
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.391
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.396
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.399
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.403
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.406
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.411
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.426
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.433
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.538
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:40:44.562
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+!SESSION 2011-11-09 09:43:10.818 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.057
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.064
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.068
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.071
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.074
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.077
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.080
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.083
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.085
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.088
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.092
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.095
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.110
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.112
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.125
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.147
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.149
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.207
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.218
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.269
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.287
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.313
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.335
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.353
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.372
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.405
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:16.441
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+!SESSION 2011-11-09 09:43:27.809 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.329
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.337
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.371
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.375
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.378
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.384
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.389
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.396
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.399
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.403
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.407
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.410
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.413
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.416
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.420
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.423
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.426
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.511
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:33.523
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.209
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.211
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.214
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.216
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.220
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.222
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.224
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.226
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.227
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.229
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.231
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.233
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.235
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.236
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.238
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.240
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.242
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.243
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.245
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.247
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.248
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.249
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.251
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.252
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.253
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.255
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.256
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.257
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.258
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.260
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.261
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.263
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.264
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.267
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.267
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.268
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.269
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.269
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:43:37.271
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+!SESSION 2011-11-09 09:45:46.327 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:51.911
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:51.941
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:51.946
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:51.949
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:51.953
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:51.975
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:51.995
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.006
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.009
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.011
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.014
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.016
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.019
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.021
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.024
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.033
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.036
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.104
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:45:52.117
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:47:21.020
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:47:29.130
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:47:29.152
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:47:29.169
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+!SESSION 2011-11-09 09:48:13.048 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.299
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.317
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.321
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.324
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.326
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.329
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.332
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.335
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.337
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.340
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.343
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.346
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.349
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.371
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.375
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.377
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.380
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.441
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:18.452
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.378
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.380
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.384
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.387
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.390
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.393
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.395
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.397
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.399
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.401
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.403
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.405
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.407
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.409
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.411
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.412
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.414
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.416
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.417
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.419
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.420
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.422
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.424
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.425
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.427
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.429
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.431
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.436
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.438
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.442
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.444
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.444
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.445
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.446
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:30.446
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:31.003
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:31.065
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:31.102
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:48:31.126
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+!SESSION 2011-11-09 09:49:32.729 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:37.976
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:37.984
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:37.988
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:37.992
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:37.996
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:37.999
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.002
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.017
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.020
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.023
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.027
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.030
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.033
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.037
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.039
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.042
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.052
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.126
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:38.131
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.613
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.619
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.621
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.624
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.626
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.628
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.630
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.632
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.634
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.635
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.646
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.648
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.650
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.651
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.653
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.654
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.656
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.657
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.659
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.660
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.662
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.663
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.664
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.665
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.667
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.668
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.669
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.670
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.671
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.673
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.674
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.675
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.679
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.680
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.680
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.682
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.682
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:40.683
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.eclipse.core.resources 4 376 2011-11-09 09:49:40.692
+!MESSAGE Marker id 190846 not found.
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:41.466
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:41.493
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:41.521
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:49:41.548
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+!SESSION 2011-11-09 09:52:47.289 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.592
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.601
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.605
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.612
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.615
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.618
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.620
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.623
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.626
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.629
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.650
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.656
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.660
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.662
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.665
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.668
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.670
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.763
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:52.769
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.411
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.413
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.416
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.420
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.423
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.425
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.426
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.429
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.430
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.432
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.434
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.435
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.437
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.438
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.440
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.441
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.443
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.445
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.446
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.448
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.449
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.451
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.452
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.453
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.455
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.456
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.457
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.459
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.460
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.462
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.463
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.465
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.467
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.468
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.468
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.470
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.470
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:55.470
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.eclipse.core.resources 4 376 2011-11-09 09:52:55.477
+!MESSAGE Marker id 190853 not found.
+
+!ENTRY org.eclipse.core.resources 4 376 2011-11-09 09:52:55.477
+!MESSAGE Marker id 190854 not found.
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:56.118
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:56.145
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:56.172
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 09:52:56.200
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+!SESSION 2011-11-09 10:40:05.044 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.294
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.302
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.306
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.330
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.333
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.336
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.339
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.342
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.345
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.348
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.352
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.355
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.357
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.363
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.365
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.367
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.369
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.424
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:10.430
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.735
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.739
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.741
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.745
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.747
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.749
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.751
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.754
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.756
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.759
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.762
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.764
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.765
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.767
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.769
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.771
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.772
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.774
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.776
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.777
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.779
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.780
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.782
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.783
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.785
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.787
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.789
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.790
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.792
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.793
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.794
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.796
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.797
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.799
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.802
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.804
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.804
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.807
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.807
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:12.809
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-09 10:40:12.822
+!MESSAGE org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor  - Could not create marker.
+
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:121)
+	at org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor.processIssues(MarkerIssueProcessor.java:43)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Marker id 190865 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:57)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:237)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.setMarkerAttributes(MarkerCreator.java:35)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.createMarker(MarkerCreator.java:23)
+	at org.eclipse.xtext.ui.editor.validation.AddMarkersOperation.execute(AddMarkersOperation.java:89)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	... 3 more
+Root exception:
+org.eclipse.core.internal.resources.ResourceException: Marker id 190865 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:57)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:237)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.setMarkerAttributes(MarkerCreator.java:35)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.createMarker(MarkerCreator.java:23)
+	at org.eclipse.xtext.ui.editor.validation.AddMarkersOperation.execute(AddMarkersOperation.java:89)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor.processIssues(MarkerIssueProcessor.java:43)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:13.586
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: AbsCat.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:13.615
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloAbs.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:13.638
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:40:13.664
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: ResEng.gf
+
+!SESSION 2011-11-09 10:53:56.091 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.690
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.708
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.719
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.749
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.753
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.756
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.759
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.767
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.775
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.778
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.781
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.783
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.785
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.789
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.792
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.795
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.798
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.887
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:01.894
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.954
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.957
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.960
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.963
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.965
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.967
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.969
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.971
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.973
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.975
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.977
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.978
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.980
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.981
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.983
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.985
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.986
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.988
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.989
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.990
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.992
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.993
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.994
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.996
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.997
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:04.998
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.000
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.002
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.003
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.005
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.006
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.008
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.010
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.011
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.012
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.013
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.014
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:54:05.014
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 10:56:00.287
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+!SESSION 2011-11-09 11:01:02.559 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.928
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.941
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.945
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.948
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.951
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.954
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.956
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.959
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.962
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.971
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.973
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.975
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.977
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.980
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.985
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.988
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:07.990
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:08.039
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:08.049
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.087
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.091
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.093
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.095
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.098
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.100
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.102
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.105
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.107
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.109
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.111
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.113
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.116
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.117
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.119
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.121
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.123
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.125
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.126
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.128
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.130
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.131
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.132
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.133
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.135
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.136
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.139
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.143
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.143
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.144
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.146
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.146
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:01:20.146
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:02:36.824
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - > Failed: HelloEng.gf
+
+!SESSION 2011-11-09 11:03:42.432 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.886
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.909
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.915
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.917
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.920
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.923
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.926
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.929
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.931
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.933
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.935
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.945
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.950
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.952
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.954
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.956
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:47.958
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:48.024
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:48.031
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.424
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.427
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.429
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.432
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.434
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.437
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.439
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.441
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.443
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.445
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.447
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.448
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.450
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.451
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.453
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.455
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.456
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.458
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.459
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.461
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.463
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.466
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.468
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.470
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.471
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.472
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.473
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.474
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.476
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.477
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.478
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.479
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.481
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.482
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.488
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.488
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.488
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.490
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.490
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-09 11:03:52.491
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Problem loading tags file for HelloEng
+

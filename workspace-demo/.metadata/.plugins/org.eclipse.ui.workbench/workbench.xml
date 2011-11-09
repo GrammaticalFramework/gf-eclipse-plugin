@@ -37,11 +37,11 @@
 </editorArea>
 <editor activePart="true" focus="true" id="org.grammaticalframework.eclipse.GF" name="HelloEng.gf" partName="HelloEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf" title="HelloEng.gf" tooltip="Hello/HelloEng.gf" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Hello/HelloEng.gf"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="322" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="263" selectionTopPixel="93"/>
 </editor>
 <editor id="org.grammaticalframework.eclipse.GF" name="ResEng.gf" partName="ResEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf" title="ResEng.gf" tooltip="Hello/ResEng.gf" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Hello/ResEng.gf"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="96" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="90" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -137,6 +137,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/ResEng.gf"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/ResEng.gf"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/ResEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/ResEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/ResEng.gf"/>
 </editors>
 <item historyLabel="LexFoods.gf" index="0">
 <position info="not_deleted" x="0" y="0"/>
@@ -213,8 +215,29 @@
 <item historyLabel="ResEng.gf" index="7">
 <position info="not_deleted" x="96" y="0"/>
 </item>
-<item active="true" historyLabel="HelloEng.gf" index="4">
+<item historyLabel="HelloEng.gf" index="4">
 <position info="not_deleted" x="322" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="4">
+<position info="not_deleted" x="513" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="4">
+<position info="not_deleted" x="468" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="8">
+<position info="not_deleted" x="91" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="4">
+<position info="not_deleted" x="266" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="4">
+<position info="not_deleted" x="361" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="9">
+<position info="not_deleted" x="90" y="0"/>
+</item>
+<item active="true" historyLabel="HelloEng.gf" index="4">
+<position info="not_deleted" x="361" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

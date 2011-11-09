@@ -1,0 +1,12 @@
+AbsCat.Greeting	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf:3	
+AbsCat.Recipient	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf:3	
+HelloAbs.Farewell	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:5	
+HelloAbs.Friends	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:11	Recipient
+HelloAbs.Goodbye	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:10	Recipient -> Farewell
+HelloAbs.Hello	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:8	Recipient -> Greeting
+HelloAbs.Parent	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:11	Recipient
+HelloAbs.World	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:11	Recipient
+HelloEng.Farewell	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf	
+ResEng.Fem	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:4	Gender
+ResEng.Gender	param	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:4	
+ResEng.Masc	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:4	Gender

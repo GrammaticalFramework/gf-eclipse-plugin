@@ -42,13 +42,12 @@ public class GFLibraryAgent {
 	 * @return the header path
 	 */
 	public URI getTagsFile(Resource context, String moduleName) {
-		StringBuilder sb = new StringBuilder();
-		sb.append(GFBuilder.BUILD_FOLDER
+		String sb = GFBuilder.BUILD_FOLDER
 				+ java.io.File.separator
-				+ context.getURI().lastSegment()
+				+ GFBuilder.getBuildSubfolderName(context.getURI().lastSegment())
 				+ java.io.File.separator
-				+ "tags");
-		URI uri = URI.createURI(sb.toString());
+				+ "tags";
+		URI uri = URI.createURI(sb);
 		return uri.resolve(context.getURI());
 	}
 	
