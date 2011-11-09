@@ -17,7 +17,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Map;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -30,13 +29,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.OperationCanceledException;
 import org.grammaticalframework.eclipse.GFPreferences;
-import org.grammaticalframework.eclipse.scoping.GFLibraryAgent;
-import org.grammaticalframework.eclipse.scoping.TagEntry;
-import org.grammaticalframework.eclipse.scoping.TagFileHelper;
-
 import org.apache.log4j.Logger;
-
-import com.google.inject.Inject;
 
 /**
  * Custom GF builder, yeah!
@@ -171,21 +164,20 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 	}
 
-	/**
-	 * The library agent.
-	 */
-	@Inject
-	private TagFileHelper tagHelper = new TagFileHelper();
-
-	private void propagateTagChanges(IFile sourceFile) {
-		
-		// TODO What's the filepath format of tags on Windows machines?
-		String sourceFilePath = sourceFile.getRawLocation().toOSString();
-		String tagFilePath = getBuildDirectory(sourceFile) + "tags";
-		
-		Collection<TagEntry> owntags = (Collection<TagEntry>) tagHelper.getOwnTags(sourceFilePath, tagFilePath);		
-		
-	}
+//	/**
+//	 * The library agent.
+//	 */
+//	@Inject
+//	private TagFileHelper tagHelper = new TagFileHelper();
+//
+//	private void propagateTagChanges(IFile sourceFile) {
+//		
+//		// TODO What's the filepath format of tags on Windows machines?
+//		String sourceFilePath = sourceFile.getRawLocation().toOSString();
+//		String tagFilePath = getBuildDirectory(sourceFile) + "tags";
+//		
+//		Collection<TagEntry> owntags = (Collection<TagEntry>) tagHelper.getOwnTags(sourceFilePath, tagFilePath);
+//	}
 
 	/**
 	 * Full build.
@@ -295,27 +287,28 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param file the file
 	 * @return the builds the directory
 	 */
-	public static String getBuildSubfolderName(String sourceFileName) {
-		return sourceFileName.substring(0, sourceFileName.lastIndexOf('.'));
+	public static String getBuildSubfolder(String sourceFileName) {
+		return getBuildSubfolder(sourceFileName, TAG_BASED_SCOPING);
+	}
+	public static String getBuildSubfolder(String sourceFileName, boolean useIndividualFolders) {
+		if (useIndividualFolders) {
+			return BUILD_FOLDER
+					+ java.io.File.separator
+					+ sourceFileName.substring(0, sourceFileName.lastIndexOf('.'))
+					+ java.io.File.separator;
+		} else {
+			return BUILD_FOLDER
+				+ java.io.File.separator;
+		}
 	}
 	private String getBuildDirectory(IFile file) {
 		return getBuildDirectory(file, TAG_BASED_SCOPING);
 	}
 	private String getBuildDirectory(IFile file, boolean useIndividualFolders) {
 		String filename = file.getName();
-		if (useIndividualFolders) {
-			return file.getRawLocation().removeLastSegments(1).toOSString()
-					+ java.io.File.separator
-					+ BUILD_FOLDER
-					+ java.io.File.separator
-					+ getBuildSubfolderName(filename)
-					+ java.io.File.separator;
-		} else {
-			return file.getRawLocation().removeLastSegments(1).toOSString()
+		return file.getRawLocation().removeLastSegments(1).toOSString()
 				+ java.io.File.separator
-				+ BUILD_FOLDER
-				+ java.io.File.separator;
-		}
+				+ getBuildSubfolder(filename, useIndividualFolders);
 	}
 	
 	private boolean buildFile(IFile file) {

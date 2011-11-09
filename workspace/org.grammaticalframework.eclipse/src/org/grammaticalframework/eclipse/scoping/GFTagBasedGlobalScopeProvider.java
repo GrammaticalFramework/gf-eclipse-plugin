@@ -16,18 +16,24 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl;
+import org.eclipse.xtext.EcoreUtil2;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.*;
+import org.eclipse.xtext.util.IResourceScopeCache;
+import org.grammaticalframework.eclipse.builder.GFBuilder;
 import org.grammaticalframework.eclipse.gF.ModDef;
 import com.google.common.base.Predicate;
 import com.google.inject.Inject;
@@ -59,30 +65,108 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		super();
 	}
 	
-	/**
-	 * The library agent.
-	 */
 	@Inject
 	private GFLibraryAgent libAgent;
 	
 	@Inject
 	private ExtensibleURIConverterImpl uriConverter; 
 	
+	@Inject
+	private IResourceScopeCache cache;
 	
-// TODO Implement caching for Global Scope Provider
-//	@Inject
-//	private IResourceScopeCache cache;
-//	
-//	public void setCache(IResourceScopeCache cache) {
-//		this.cache = cache;
-//	}
-	
+	public void setCache(IResourceScopeCache cache) {
+		this.cache = cache;
+	}
 
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider#getScope(org.eclipse.emf.ecore.resource.Resource, boolean, org.eclipse.emf.ecore.EClass, com.google.common.base.Predicate)
 	 */
 	@Override
 	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
+		
+		/* ----- Method 1: Just use the URIs ----- */
+		
+		// Load all descriptions from all mentioned files/URIs
+		Set<URI> uniqueImportURIs = getImportedURIs(resource);
+		IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uniqueImportURIs);
+
+		// Add everything from all the URIs mentioned in the tags file
+		IScope scope = null;
+		for (IResourceDescription resDesc : resourceDescriptions.getAllResourceDescriptions()) {
+			GFTagBasedScope newScope = new GFTagBasedScope(scope, resDesc, ignoreCase);
+			if (newScope.localElementCount() > 0)
+				scope = newScope;
+		}
+		
+		/* ----- Method 2: Use the tags themselves ----- */
+		
+		GFTagBasedScope gfScope = null;
+		Map<URI, Collection<TagEntry>> uriTagMap = getURITagMap(resource);
+		for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
+			String moduleName = entry.getKey().lastSegment().substring(0, entry.getKey().lastSegment().lastIndexOf('.'));
+			gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
+			for (TagEntry tag : entry.getValue()) {
+				gfScope.addTag(resource, tag);
+			}
+		}
+		
+		return gfScope;
+	}
+	
+	/**
+	 * Get the import URIs for a source file, possibly from cache
+	 * @param resource
+	 * @return
+	 */
+	private Set<URI> getImportedURIs(final Resource resource) {
+		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Set<URI>>(){
+			public Set<URI> get() {
+				return parseTagsFile(resource).keySet();
+			}
+		});
+	}
+	
+	/**
+	 * Get list of all tags as a one-dimensional list, possibly from cache
+	 * @param resource
+	 * @return
+	 */
+	@SuppressWarnings("unused")
+	private Collection<TagEntry> getTags(final Resource resource) {
+		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Collection<TagEntry>>(){
+			public Collection<TagEntry> get() {
+				Collection<Collection<TagEntry>> tags2D = parseTagsFile(resource).values(); 
+				Collection<TagEntry> tags1D = new ArrayList<TagEntry>(); 
+				for (Collection<TagEntry> tagsItem : tags2D) {
+					tags1D.addAll(tagsItem);
+				}
+				return tags1D;
+			}
+		});
+	}
+	
+	/**
+	 * Get list of all tags grouped by URI, possibly from cache
+	 * @param resource
+	 * @return
+	 */
+	private Hashtable<URI, Collection<TagEntry>> getURITagMap(final Resource resource) {
+//		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Hashtable<URI, Collection<TagEntry>>>(){
+//			public Hashtable<URI, Collection<TagEntry>> get() {
+				return parseTagsFile(resource); 
+//			}
+//		});
+	}
+	
+	/**
+	 * For a given resource, find its tags file and get a list of the all the files mentioned
+	 * there, and return them as a list of unique URIs
+	 * 
+	 * @param resource
+	 * @return
+	 */
+	private Hashtable<URI, Collection<TagEntry>> parseTagsFile(final Resource resource) {
+		final Hashtable<URI, Collection<TagEntry>> uriTagMap = new Hashtable<URI, Collection<TagEntry>>(10);
 		
 		// (try) get module definition
 		ModDef moduleDef;
@@ -91,63 +175,51 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			moduleDef = (ModDef)resource.getContents().get(0);
 			moduleName = moduleDef.getType().getName().getS();
 		} catch (Exception _) {
-			return IScope.NULLSCOPE;
+			return uriTagMap;
 		}
-		
-		ArrayList<TagEntry> tags = new ArrayList<TagEntry>(); 
-		HashSet<URI> importURIs = new HashSet<URI>(); 
 		
 		// Find the corresponding tags file & parse it
 		try {
-			URI uri = libAgent.getTagsFile(resource, moduleName);
-			InputStream is = uriConverter.createInputStream(uri);
+			URI tagFileURI = libAgent.getTagsFile(resource, moduleName);
+			InputStream is = uriConverter.createInputStream(tagFileURI);
 			BufferedReader reader = new BufferedReader( new InputStreamReader(is) );
 			String line;
 			// Add everything into our arrays
 			while ((line = reader.readLine()) != null) {
 				TagEntry tag = new TagEntry(line);
-				tags.add( tag );
-				importURIs.add( URI.createFileURI(tag.file) );
+				if (!tag.file.contains(GFBuilder.getBuildSubfolder(resource.getURI().lastSegment()))) { // ignore references to self, ie local scope
+					URI importURI = URI.createFileURI(tag.file);
+					if (!uriTagMap.containsKey(importURI)) {
+						uriTagMap.put(importURI, new ArrayList<TagEntry>());
+					}
+					uriTagMap.get(importURI).add(tag);
+				}
 			}
+			// Clean up
 			reader.close();
 			is.close();
+
+			// Remove anything invalid
+			Iterator<URI> uriIter = uriTagMap.keySet().iterator();
+			while(uriIter.hasNext()) {
+				if (!EcoreUtil2.isValidUri(resource, uriIter.next()))
+					uriIter.remove();
+			}
 		} catch (FileNotFoundException e) {
 			log.warn("Couldn't find tags file for " + moduleName);
-			return IScope.NULLSCOPE;
 		} catch (IOException e) {
 			log.warn("Problem loading tags file for " + moduleName);
-			return IScope.NULLSCOPE;
 		}
-		
-		// Load all descriptions from all mentioned files/URIs
-		IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, importURIs);
-		
-//		for (TagEntry tag : tags) {
-//			scope.addTag(resource, tag);
-//		}
-		
-		// Add everything from all the URIs mentioned in the tags file
-		IScope scope = IScope.NULLSCOPE;
-		for (IResourceDescription resDesc : resourceDescriptions.getAllResourceDescriptions()) {
-			GFTagBasedScope newScope = new GFTagBasedScope(scope, resDesc, ignoreCase);
-			if (newScope.localElementCount() > 0)
-				scope = newScope;
-		}
-		
-		// Phew
-		return scope;
+		// Could be empty!
+		return uriTagMap;
 	}
 	
 	
-	/**
-	 * The load on demand descriptions.
-	 */
 	@Inject
 	private Provider<LoadOnDemandResourceDescriptions> loadOnDemandDescriptions;
 	
-	
 	/**
-	 * Gets the resource descriptions.
+	 * Gets the descriptions of resources listed in importUris
 	 *
 	 * @param resource the resource
 	 * @param importUris the import uris

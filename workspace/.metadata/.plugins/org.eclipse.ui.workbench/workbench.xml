@@ -49,48 +49,33 @@
 <part id="1"/>
 <part id="3"/>
 <part id="2"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFBuilder.java" partName="GFBuilder.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/builder/GFBuilder.java" title="GFBuilder.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/builder/GFBuilder.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFBuilder.java" partName="GFBuilder.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/builder/GFBuilder.java" title="GFBuilder.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/builder/GFBuilder.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/builder/GFBuilder.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11961" selectionTopPixel="4894"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="368" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFTagBasedGlobalScopeProvider.java" partName="GFTagBasedGlobalScopeProvider.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFTagBasedGlobalScopeProvider.java" title="GFTagBasedGlobalScopeProvider.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFTagBasedGlobalScopeProvider.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFTagBasedGlobalScopeProvider.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4344" selectionTopPixel="1485"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3873" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFLibraryAgent.java" partName="GFLibraryAgent.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFLibraryAgent.java" title="GFLibraryAgent.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFLibraryAgent.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFLibraryAgent.java" partName="GFLibraryAgent.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFLibraryAgent.java" title="GFLibraryAgent.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFLibraryAgent.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFLibraryAgent.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1425" selectionTopPixel="132"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="813" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFTagBasedScope.java" partName="GFTagBasedScope.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFTagBasedScope.java" title="GFTagBasedScope.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFTagBasedScope.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFTagBasedScope.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="101" selectionOffset="777" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TagEntry.java" partName="TagEntry.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/TagEntry.java" title="TagEntry.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/TagEntry.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/TagEntry.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1721" selectionTopPixel="388"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFGlobalScopeProvider.java" partName="GFGlobalScopeProvider.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFGlobalScopeProvider.java" title="GFGlobalScopeProvider.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFGlobalScopeProvider.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFGlobalScopeProvider.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="11105" selectionTopPixel="2925"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TagFileHelper.java" partName="TagFileHelper.java" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/TagFileHelper.java" title="TagFileHelper.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/TagFileHelper.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/TagFileHelper.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1930" selectionTopPixel="660"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2851" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
+<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy">
+<viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" input="=org.grammaticalframework.eclipse/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;java.util(Hashtable.class[Hashtable" link_editors="0" mv_vertical_scroll="0" orientation="3" qualified_names="0" ratio="350" selection="=org.grammaticalframework.eclipse/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;java.util(Hashtable.class[Hashtable" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="2" workingSetName="Aggregate for window 1309246846927"/>
+</view>
 <view id="org.eclipse.ui.views.ProgressView" partName="Progress">
 <viewState/>
-</view>
-<view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Type Hierarchy">
-<viewState hidefields="false" hidelocaltypes="false" hidenonpublic="false" hidestatic="false" input="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.core.resources_3.7.100.v20110510-0712.jar&lt;org.eclipse.core.resources(IFile.class[IFile" link_editors="0" mv_vertical_scroll="0" orientation="3" qualified_names="0" ratio="350" selection="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.core.resources_3.7.100.v20110510-0712.jar&lt;org.eclipse.core.resources(IFile.class[IFile" showinherited="false" sortbydefiningtype="false" vertical_scroll="0" view="1" workingSetName="Aggregate for window 1309246846927"/>
 </view>
 <view id="org.eclipse.ui.views.BookmarkView" partName="Bookmarks">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.descriptionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.bookmarksGenerator" partName="Bookmarks">
@@ -143,6 +128,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Warnings (26 items)"/>
 <category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
@@ -275,7 +261,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@83e57a" ratio="0.58472806" ratioLeft="559" ratioRight="397" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@83e57a" ratio="0.73849374" ratioLeft="706" ratioRight="250" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="Bookmarks"/>
@@ -393,7 +379,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@17ee13b" ratio="0.6161335" ratioLeft="443" ratioRight="276" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@17ee13b" ratio="0.45757997" ratioLeft="329" ratioRight="390" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -423,156 +409,163 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/builder/GFBuilder.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFTagBasedGlobalScopeProvider.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFLibraryAgent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFTagBasedScope.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.linking.impl(DefaultLinkingService.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;java.util(Hashtable.class"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.scoping.impl(AbstractScope.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/TagFileHelper.java"/>
 </editors>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12478" y="0"/>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3721" y="0"/>
+</item>
+<item historyLabel="GFTagBasedScope.java" index="3">
+<position/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3721" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3774" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3430" y="0"/>
+</item>
+<item historyLabel="DefaultLinkingService.class" index="4">
+<position info="not_deleted" x="2181" y="0"/>
 </item>
 <item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11737" y="0"/>
+<position info="not_deleted" x="9936" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3462" y="0"/>
+</item>
+<item historyLabel="GFTagBasedScope.java" index="3">
+<position info="not_deleted" x="1969" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3462" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3131" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3430" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3464" y="0"/>
+</item>
+<item historyLabel="DefaultLinkingService.class" index="4">
+<position info="not_deleted" x="2195" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="5075" y="129"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3878" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="5522" y="0"/>
+</item>
+<item historyLabel="Hashtable.class" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="5522" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="5173" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3430" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3464" y="0"/>
+</item>
+<item historyLabel="DefaultLinkingService.class" index="4">
+<position info="not_deleted" x="2195" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="5075" y="129"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="5282" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="5555" y="13"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="5299" y="15"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3430" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3464" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3533" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3885" y="0"/>
+</item>
+<item historyLabel="GFLibraryAgent.java" index="2">
+<position info="not_deleted" x="3980" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3430" y="0"/>
+</item>
+<item historyLabel="GFLibraryAgent.java" index="2">
+<position info="not_deleted" x="3966" y="0"/>
+</item>
+<item historyLabel="DefaultLinkingService.class" index="4">
+<position info="not_deleted" x="2195" y="0"/>
+</item>
+<item historyLabel="GFLibraryAgent.java" index="2">
+<position info="not_deleted" x="3425" y="98"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3430" y="0"/>
+</item>
+<item historyLabel="GFLibraryAgent.java" index="2">
+<position info="not_deleted" x="4043" y="0"/>
+</item>
+<item historyLabel="GFLibraryAgent.java" index="2">
+<position info="not_deleted" x="4084" y="0"/>
+</item>
+<item historyLabel="GFLibraryAgent.java" index="2">
+<position info="not_deleted" x="4043" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3879" y="0"/>
+</item>
+<item historyLabel="GFTagBasedGlobalScopeProvider.java" index="1">
+<position info="not_deleted" x="3873" y="0"/>
 </item>
 <item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11737" y="0"/>
+<position info="not_deleted" x="368" y="0"/>
 </item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11843" y="0"/>
+<item historyLabel="GFTagBasedScope.java" index="3">
+<position info="not_deleted" x="1969" y="0"/>
 </item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11877" y="0"/>
+<item historyLabel="GFTagBasedScope.java" index="3">
+<position info="not_deleted" x="2719" y="19"/>
 </item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12120" y="0"/>
+<item historyLabel="AbstractScope.class" index="6">
+<position info="not_deleted" x="5756" y="19"/>
 </item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12195" y="0"/>
+<item historyLabel="GFTagBasedScope.java" index="3">
+<position info="not_deleted" x="2851" y="0"/>
 </item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12317" y="0"/>
+<item historyLabel="GFLibraryAgent.java" index="2">
+<position info="not_deleted" x="4043" y="0"/>
 </item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12477" y="0"/>
+<item historyLabel="TagFileHelper.java" index="7">
+<position info="not_deleted" x="510" y="0"/>
 </item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12411" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12433" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12452" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11737" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12191" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12120" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10090" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="8908" y="17"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="9206" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10058" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10106" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10161" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10184" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10209" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10338" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10389" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10505" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10594" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10637" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10735" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10888" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10754" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11573" y="21"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11746" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10058" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11737" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11843" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11877" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12011" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12120" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12195" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12317" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12411" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12433" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12452" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12478" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="12515" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10735" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10888" y="0"/>
-</item>
-<item historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="10754" y="0"/>
-</item>
-<item active="true" historyLabel="GFBuilder.java" index="0">
-<position info="not_deleted" x="11573" y="21"/>
+<item active="true" historyLabel="GFLibraryAgent.java" index="2">
+<position info="not_deleted" x="4043" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -581,10 +574,12 @@
 <actionBarAdvisor/>
 <trimLayout>
 <trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@d3e131"/>
+<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
 </trimArea>
 <trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@b5f36e"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@2f4aea"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@1175d5"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@209d40"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -593,11 +588,44 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@83e57a"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@17ee13b"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="AbstractScope.class" tooltip="org.eclipse.xtext.scoping.impl.AbstractScope">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.scoping.impl(AbstractScope.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Hashtable.class" tooltip="java.util.Hashtable">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;java.util(Hashtable.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DefaultLinkingService.class" tooltip="org.eclipse.xtext.linking.impl.DefaultLinkingService">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.linking.impl(DefaultLinkingService.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ResourceDescriptionsProvider.class" tooltip="org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.resource.impl(ResourceDescriptionsProvider.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="AbstractGlobalScopeProvider.class" tooltip="org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.scoping.impl(AbstractGlobalScopeProvider.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Provider.class" tooltip="com.google.inject.Provider">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/com.google.inject_2.0.0.v201105231817.jar&lt;com.google.inject(Provider.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="LoadOnDemandResourceDescriptions.class" tooltip="org.eclipse.xtext.scoping.impl.LoadOnDemandResourceDescriptions">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.scoping.impl(LoadOnDemandResourceDescriptions.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="BasicEObjectImpl.class" tooltip="org.eclipse.emf.ecore.impl.BasicEObjectImpl">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.emf.ecore_2.7.0.v20110605-0747.jar&lt;org.eclipse.emf.ecore.impl(BasicEObjectImpl.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFScopeProvider.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFScopeProvider.java">
+<persistable path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFScopeProvider.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ImportUriGlobalScopeProvider.class" tooltip="org.eclipse.xtext.scoping.impl.ImportUriGlobalScopeProvider">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.scoping.impl(ImportUriGlobalScopeProvider.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="StringBuilder.class" tooltip="java.lang.StringBuilder">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;java.lang(StringBuilder.class"/>
+</file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="File.class" tooltip="org.eclipse.core.internal.resources.File">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.core.resources_3.7.100.v20110510-0712.jar&lt;org.eclipse.core.internal.resources(File.class"/>
 </file>
@@ -609,39 +637,6 @@
 </file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="EReferenceImpl.class" tooltip="org.eclipse.emf.ecore.impl.EReferenceImpl">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.emf.ecore_2.7.0.v20110605-0747.jar&lt;org.eclipse.emf.ecore.impl(EReferenceImpl.class"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="SelectableBasedScope.class" tooltip="org.eclipse.xtext.scoping.impl.SelectableBasedScope">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.scoping.impl(SelectableBasedScope.class"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="SimpleLocalScopeProvider.class" tooltip="org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.scoping.impl(SimpleLocalScopeProvider.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFLaunchConfigurationDelegate.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/launch/GFLaunchConfigurationDelegate.java">
-<persistable path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/launch/GFLaunchConfigurationDelegate.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFPerspectiveFactory.java" tooltip="org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/perspectives/GFPerspectiveFactory.java">
-<persistable path="/org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/perspectives/GFPerspectiveFactory.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFUiModule.java" tooltip="org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/GFUiModule.java">
-<persistable path="/org.grammaticalframework.eclipse.ui/src/org/grammaticalframework/eclipse/ui/GFUiModule.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFScopeProvider.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFScopeProvider.java">
-<persistable path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFScopeProvider.java"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="AbstractGlobalScopeProvider.class" tooltip="org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.scoping.impl(AbstractGlobalScopeProvider.class"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GFGlobalScopeProvider.java" tooltip="org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFGlobalScopeProvider.java">
-<persistable path="/org.grammaticalframework.eclipse/src/org/grammaticalframework/eclipse/scoping/GFGlobalScopeProvider.java"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ResourceDescriptionsProvider.class" tooltip="org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.resource.impl(ResourceDescriptionsProvider.class"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DefaultLinkingService.class" tooltip="org.eclipse.xtext.linking.impl.DefaultLinkingService">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.linking.impl(DefaultLinkingService.class"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="EObjectDescription.class" tooltip="org.eclipse.xtext.resource.EObjectDescription">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=org.grammaticalframework.eclipse/\/home\/john\/eclipse\/plugins\/org.eclipse.xtext_2.0.1.v201108020636.jar&lt;org.eclipse.xtext.resource(EObjectDescription.class"/>
 </file>
 </mruList>
 </workbench>

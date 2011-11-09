@@ -7,6 +7,5 @@ HelloAbs.Hello	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hell
 HelloAbs.Parent	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:11	Recipient
 HelloAbs.World	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:11	Recipient
 HelloEng.Farewell	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf	
-ResEng.Fem	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:4	Gender
-ResEng.Gender	param	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:4	
-ResEng.Masc	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:4	Gender
+ResEng.Fem	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:4	GenderX
+ResEng.GenderX	param	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:4	

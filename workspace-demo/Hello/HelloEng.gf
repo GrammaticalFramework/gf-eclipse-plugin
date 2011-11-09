@@ -9,7 +9,7 @@ concrete HelloEng of HelloAbs = ResEng ** {
 		Recipient = {s : Gender => Str} ;
 
 	lin
- 		Hello recip = {s = "hello" ++ recip.s ! Masc } ;
+ 		Hello recip = {s = "hello" ++ recip.s ! Masc } ; 
 		Goodbye recip = {s = "goodbye" ++ recip.s ! Fem } ;
 		
 		World = {s = \\_ => "world"} ;
@@ -29,4 +29,4 @@ concrete HelloEng of HelloAbs = ResEng ** {
 			mega : Str -> Str -> Recipient = \s,r ->
 				lin Recipient { s = \\_ => "mega" ++ s ++ "and" ++ "mega" ++ r }
 		} ;
-}
+} 

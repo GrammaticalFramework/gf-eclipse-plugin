@@ -31,7 +31,7 @@ public class GFTagBasedScope extends AbstractScope {
 	
 
 	/**
-	 * The name of the module thsi scope represents
+	 * The name of the module this scope represents
 	 */
 	private final String moduleName;
 	
@@ -46,10 +46,11 @@ public class GFTagBasedScope extends AbstractScope {
 	 * @param parent
 	 * @param ignoreCase
 	 */
-//	protected GFTagBasedScope(IScope parent, boolean ignoreCase) {
-//		super(parent, ignoreCase);
-//		this.descriptions = new ArrayList<IEObjectDescription>();
-//	}
+	protected GFTagBasedScope(IScope parent, String moduleName, boolean ignoreCase) {
+		super(parent==null ? IScope.NULLSCOPE : parent, ignoreCase);
+		this.moduleName = moduleName;
+		descriptions = new ArrayList<IEObjectDescription>();
+	}
 	
 	/**
 	 * Constructs a new scope with the given descriptions
@@ -58,13 +59,8 @@ public class GFTagBasedScope extends AbstractScope {
 	 * @param ignoreCase
 	 */
 	protected GFTagBasedScope(IScope parent, IResourceDescription resourceDescription, boolean ignoreCase) {
-		super(parent, ignoreCase);
-//		if (descriptions == null) {
-//			throw new IllegalArgumentException("Descriptions may not be null");
-//		}
-		
+		super(parent==null ? IScope.NULLSCOPE : parent, ignoreCase);
 		moduleName = resourceDescription.getURI().lastSegment().substring(0, resourceDescription.getURI().lastSegment().lastIndexOf('.'));
-		
 		descriptions = new ArrayList<IEObjectDescription>();
 		for (IEObjectDescription desc : resourceDescription.getExportedObjects()) {
 //			this.descriptions.add(desc);
@@ -75,16 +71,16 @@ public class GFTagBasedScope extends AbstractScope {
 		}
 	}
 	
-//	public void addTag(Resource context, TagEntry tag) {
-//		QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.ident);
-//		QualifiedName unQualifiedName = fullyQualifiedName.skipFirst(1);
-//		
-//		EObject eObject = libAgent.findEObjectInFile(context, tag.file, unQualifiedName.toString());
-//		
-//		Map<String, String> userData = tag.getProperties();
-//		IEObjectDescription eObjectDescription = new EObjectDescription(unQualifiedName, eObject, userData);
-//		descriptions.add(eObjectDescription);
-//	}
+	public void addTag(Resource context, TagEntry tag) {
+		QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.ident);
+		QualifiedName unQualifiedName = fullyQualifiedName.skipFirst(1);
+		
+		EObject eObject = libAgent.findEObjectInFile(context, tag.file, unQualifiedName.toString());
+		
+		Map<String, String> userData = tag.getProperties();
+		IEObjectDescription eObjectDescription = new EObjectDescription(unQualifiedName, eObject, userData);
+		descriptions.add(eObjectDescription);
+	}
 	
 	@Override
 	protected Iterable<IEObjectDescription> getAllLocalElements() {
@@ -93,6 +89,10 @@ public class GFTagBasedScope extends AbstractScope {
 
 	protected int localElementCount() {
 		return descriptions.size();
+	}
+
+	protected String getModuleName() {
+		return moduleName;
 	}
 
 }

@@ -14,31 +14,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Collection;
-
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.xtext.naming.QualifiedName;
-import org.eclipse.xtext.resource.EObjectDescription;
-import org.eclipse.xtext.resource.IEObjectDescription;
-import org.eclipse.xtext.scoping.IScope;
-
-import com.google.common.base.Function;
-import com.google.common.base.Predicate;
-import com.google.common.collect.Iterables;
-import com.google.inject.Inject;
 
 public class TagFileHelper {
 	
-	/**
-	 * The library agent.
-	 */
-	@Inject
-	private GFLibraryAgent libAgent = new GFLibraryAgent();
+//	/**
+//	 * The library agent.
+//	 */
+//	@Inject
+//	private GFLibraryAgent libAgent = new GFLibraryAgent();
 	
 	/**
 	 * For a given file, read and parse its tag file

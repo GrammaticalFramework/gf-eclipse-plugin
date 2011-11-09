@@ -5,3 +5,6 @@
 1320832316396	Rename local variable 'b'
 1320832321854	Rename local variable 'process'
 1320832325947	Rename local variable 'proctags'
+1320849907625	Rename method 'getImportedUris'
+1320850327782	Rename local variable 'uniqueImportURIs'
+1320852543182	Encapsulate field 'moduleName'
