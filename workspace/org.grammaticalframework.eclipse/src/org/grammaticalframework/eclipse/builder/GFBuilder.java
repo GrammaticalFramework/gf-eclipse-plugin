@@ -14,6 +14,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
@@ -186,11 +187,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				
 				// Build if necessary
 				if (shouldBuild(resource)) {
-//					cleanFile((IFile) resource);
+					cleanFile((IFile) resource);
 					if (buildFile((IFile) resource)) {
-						log.info("+ " + resource.getName());
+						log.info("+ " + resource.getRawLocation());
 					} else {
-						log.warn("✕ " + resource.getName());
+						log.warn("✕ " + resource.getRawLocation());
 					}
 				}
 			}
@@ -207,7 +208,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	protected void clean(final IProgressMonitor monitor) throws CoreException {
 		log.info("Clean " + getProject().getName());
 		
-		getProject().deleteMarkers(IMarker.MARKER, true, IResource.DEPTH_INFINITE);
+		getProject().deleteMarkers(null, true, IResource.DEPTH_INFINITE);
 		
 		recursiveDispatcher(getProject().members(), new CallableOnResource() {
 			public void call(IResource resource) {
@@ -228,8 +229,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				else if (TAG_BASED_SCOPING) {
 					try {
 						IContainer parent = resource.getParent();
-//						IContainer grandparent = parent.getParent();
-//						delete = grandparent.getName().equals(BUILD_FOLDER);
 						delete = parent.getName().equals(BUILD_FOLDER);
 					} catch (NullPointerException _) {
 						// file has no grand/parent
@@ -242,10 +241,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				try {
 					if (delete) {
 						resource.delete(true, monitor);
-						log.info("- " + resource.getName());
+						log.info("- " + resource.getRawLocation());
 					}
 				} catch (CoreException e) {
-					log.warn("✕ " + resource.getName());
+					log.warn("✕ " + resource.getRawLocation());
 				}
 				
 			}
@@ -260,19 +259,13 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private void cleanFile(IFile file) {
 		if (TAG_BASED_SCOPING) {
-			log.info("Cleaning build directory for " + file.getName());
-			String buildDir = getBuildDirectory(file);
-			// Check the build directory and delete all its contents
-			File buildDirFile = new File(buildDir);
-			if (buildDirFile.exists()) {
-				File[] files = buildDirFile.listFiles();
-				for (File f : files) {
-					try {
-						f.delete();
-						log.info("- " + f.getName());
-					} catch (Exception _) {
-						log.warn("✕ " + f.getName());
-					}
+			File tagsFile = new File( getTagsFile(file) );
+			if (tagsFile.exists()) {
+				try {
+					tagsFile.delete();
+					log.info("- " + tagsFile.getAbsolutePath());
+				} catch (Exception _) {
+					log.warn("✕ " + tagsFile.getAbsolutePath());
 				}
 			}
 		}
@@ -354,6 +347,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				+ sourceFileName.substring(0, sourceFileName.lastIndexOf('.'))
 				+ ".tags";
 	}
+	public static String getTagsFile(IFile file) {
+		return file.getRawLocation().removeLastSegments(1).toOSString()
+				+ java.io.File.separator
+				+ getTagsFile(file.getName());
+	}
 	
 	/**
 	 * Call the respective build method depending on the type of build
@@ -362,8 +360,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private boolean buildFile(IFile file) {
 		try {
-			// TODO: Delete all markers or just problems)
-			file.deleteMarkers(IMarker.PROBLEM, true, IResource.DEPTH_ONE);
+			// TODO: Delete all markers or just problems?
+			file.deleteMarkers(null, true, IResource.DEPTH_ZERO);
 		} catch(CoreException _) {
 			log.warn("Error trying to delete markers for " + file.getName());
 		}
@@ -427,46 +425,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			
 			// If compile failed, parse error messages and add markers
 			if (procTags.waitFor() != 0) {
-				BufferedReader processError = new BufferedReader(new InputStreamReader(procTags.getErrorStream()));
-				String err_str;
-				
-				try {
-					// Read first line, parse for syntax error
-					err_str = processError.readLine();
-					if (err_str.matches(".+([a-zA-Z0-9]+\\.gf):([0-9]+):([0-9]+):(.+)")) {
-						// Don't worry about syntax errors, xtext will mark them for us
-						return false;
-					}
-					
-					// Assume error is of the form:
-					/*
-						renaming module HelloEng
-						   /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
-						   Happened in the renaming of Recipient
-						      atomic term GenderXXX
-						      given ResEng, HelloEng
-						         constant not found: GenderXXX
-         			 */
-					IMarker marker = file.createMarker(IMarker.PROBLEM);
-					marker.setAttribute(IMarker.USER_EDITABLE, false);
-					err_str = processError.readLine();
-					
-					Pattern pattern = Pattern.compile("([a-zA-Z0-9]+\\.gf):([0-9]+):$");
-					Matcher matcher = pattern.matcher(err_str);
-					if (matcher.find()) {
-						marker.setAttribute(IMarker.LINE_NUMBER, Integer.parseInt(matcher.group(2)));
-						marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
-					}
-					
-					// Set message to last line
-					while ((err_str = processError.readLine()) != null) {
-						marker.setAttribute(IMarker.MESSAGE, err_str.trim());
-					}
-					
-				} catch (CoreException e) {
-					log.warn("Error creating marker on "+filename);
-					e.printStackTrace();
-				}				
+				parseGFErrorStream(file, procTags.getErrorStream());
 				return false;
 			}
 			
@@ -488,6 +447,66 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			e.printStackTrace();
 		}
 		return false;
+	}
+	
+	/**
+	 * Separate method for parsing the GF error stream and adding markers as necessary
+	 * 
+	 * @param file
+	 * @param errStream
+	 */
+	private void parseGFErrorStream(IFile file, InputStream errStream) {
+		BufferedReader processError = new BufferedReader(new InputStreamReader(errStream));
+		String err_str;
+		
+		try {
+			/*
+			 * Read first line, parse for syntax error form:
+			 * 
+			  	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:37: parse error
+			 */
+			err_str = processError.readLine();
+			log.debug("GF: " + err_str);
+			if (err_str.matches(".+([a-zA-Z0-9]+\\.gf):([0-9]+):([0-9]+):(.+)")) {
+				// Don't worry about syntax errors, xtext will mark them for us
+				return;
+			}
+			
+			/*
+			 * Assume error is of the form:
+			 * 
+				renaming module HelloEng
+				   /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+				   Happened in the renaming of Recipient
+				      atomic term GenderXXX
+				      given ResEng, HelloEng
+				         constant not found: GenderXXX
+ 			 */
+			IMarker marker = file.createMarker(IMarker.PROBLEM);
+			marker.setAttribute(IMarker.USER_EDITABLE, false);
+			err_str = processError.readLine();
+			log.debug("GF: " + err_str);
+			
+			Pattern pattern = Pattern.compile("([a-zA-Z0-9]+\\.gf):([0-9]+):$");
+			Matcher matcher = pattern.matcher(err_str);
+			if (matcher.find()) {
+				marker.setAttribute(IMarker.LINE_NUMBER, Integer.parseInt(matcher.group(2)));
+				marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
+			}
+			
+			// Set message to last line
+			while ((err_str = processError.readLine()) != null) {
+				log.debug("GF: " + err_str);
+				marker.setAttribute(IMarker.MESSAGE, err_str.trim());
+			}
+			
+		} catch (CoreException e) {
+			log.warn("Error creating marker on " + file.getName());
+			e.printStackTrace();
+		} catch (IOException e) {
+			log.warn("Error parsing error stream for " + file.getName());
+			e.printStackTrace();
+		}		
 	}
 	
 	/**

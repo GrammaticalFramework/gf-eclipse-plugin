@@ -26,7 +26,7 @@ public class TagEntry {
 	 * Record fields
 	 */
 	public String ident, type, file, args;
-	public Integer lineNo;
+	private Integer lineFrom, lineTo;
 	
 	/**
 	 * Instantiates a new tag entry.
@@ -41,11 +41,21 @@ public class TagEntry {
 		case 3:
 			int ix = elements[2].lastIndexOf(':');
 			this.file = ix > 0 ? elements[2].substring(0, ix) : elements[2];
+			
+			// Line could be single (9) or range (9-18)
+			String lineStr = elements[2].substring(ix+1);
+			int rangeIx = lineStr.indexOf('-');
 			try {
-				this.lineNo = Integer.valueOf(elements[2].substring(ix+1));
+				if (rangeIx > 0) {
+					this.lineFrom = Integer.valueOf(lineStr.substring(0, rangeIx));
+					this.lineTo = Integer.valueOf(lineStr.substring(rangeIx+1));
+				} else {
+					this.lineFrom = this.lineTo = Integer.valueOf(lineStr);
+				}
 			} catch (NumberFormatException e) {
-				this.lineNo = null;
+				this.lineFrom = this.lineTo = null;
 			}
+			
 			this.type = elements[1];
 			this.ident = elements[0];
 		}
@@ -61,9 +71,19 @@ public class TagEntry {
 		userData.put("ident", ident);
 		userData.put("type", type);
 		userData.put("file", file);
-		userData.put("lineNo", lineNo != null ? lineNo.toString() : "");
+		userData.put("lineNo", lineFrom != null ? lineFrom.toString() : ""); // TODO Iclude range?
 		userData.put("args", args);
 		return userData;
+	}
+	
+	public Integer getLineNumber() {
+		return lineFrom;
+	}
+	public Integer getLineFrom() {
+		return lineFrom;
+	}
+	public Integer getLineTo() {
+		return lineTo;
 	}
 
 	/**
@@ -71,7 +91,15 @@ public class TagEntry {
 	 */
 	@Override
 	public String toString() {
-		return ident + "\t" + type + "\t" + file + ":" + lineNo + "\t" + args;
+		StringBuilder sb = new StringBuilder(ident + "\t" + type + "\t" + file);
+		if (lineFrom != null) {
+			sb.append(":" + lineFrom);
+			if (lineTo != null) {
+				sb.append("-" + lineTo);
+			}
+		}
+		sb.append("\t" + args);
+		return sb.toString();
 	}
 	
 	

@@ -10,7 +10,6 @@
 package org.grammaticalframework.eclipse.scoping;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -18,7 +17,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
@@ -27,6 +25,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl;
 import org.eclipse.xtext.EcoreUtil2;
+import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
@@ -85,30 +84,34 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
 		
 		/* ----- Method 1: Just use the URIs ----- */
-//		// Load all descriptions from all mentioned files/URIs
-//		Set<URI> uniqueImportURIs = getImportedURIs(resource);
-//		IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uniqueImportURIs);
-//
-//		// Add everything from all the URIs mentioned in the tags file
-//		IScope scope = null;
-//		for (IResourceDescription resDesc : resourceDescriptions.getAllResourceDescriptions()) {
-//			GFTagBasedScope newScope = new GFTagBasedScope(scope, resDesc, ignoreCase);
-//			if (newScope.localElementCount() > 0)
-//				scope = newScope;
-//		}
-//		return scope;
+		// Load all descriptions from all mentioned files/URIs
+		Set<URI> uniqueImportURIs = getImportedURIs(resource);
+		IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uniqueImportURIs);
+
+		// Add everything from all the URIs mentioned in the tags file
+		IScope scope = IScope.NULLSCOPE;
+		for (IResourceDescription resDesc : resourceDescriptions.getAllResourceDescriptions()) {
+			GFTagBasedScope newScope = new GFTagBasedScope(scope, resDesc, ignoreCase);
+			if (newScope.localElementCount() > 0)
+				scope = newScope;
+		}
+		
+		IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
+		scope.getElements(converter.toQualifiedName("mkN"));
+		
+		return scope;
 
 		/* ----- Method 2: Use the tags themselves ----- */
-		GFTagBasedScope gfScope = null;
-		Map<URI, Collection<TagEntry>> uriTagMap = getURITagMap(resource);
-		for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
-			String moduleName = entry.getKey().lastSegment().substring(0, entry.getKey().lastSegment().lastIndexOf('.'));
-			gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
-			for (TagEntry tag : entry.getValue()) {
-				gfScope.addTag(resource, tag);
-			}
-		}
-		return gfScope;
+//		GFTagBasedScope gfScope = null;
+//		Map<URI, Collection<TagEntry>> uriTagMap = getURITagMap(resource);
+//		for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
+//			String moduleName = entry.getKey().lastSegment().substring(0, entry.getKey().lastSegment().lastIndexOf('.'));
+//			gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
+//			for (TagEntry tag : entry.getValue()) {
+//				gfScope.addTag(resource, tag);
+//			}
+//		}
+//		return gfScope;
 //		return IScope.NULLSCOPE;
 	}
 	
@@ -118,11 +121,11 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @return
 	 */
 	private Set<URI> getImportedURIs(final Resource resource) {
-		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Set<URI>>(){
-			public Set<URI> get() {
+//		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Set<URI>>(){
+//			public Set<URI> get() {
 				return parseTagsFile(resource).keySet();
-			}
-		});
+//			}
+//		});
 	}
 	
 	/**
@@ -130,7 +133,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @param resource
 	 * @return
 	 */
-	@SuppressWarnings("unused")
 	private Collection<TagEntry> getTags(final Resource resource) {
 		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Collection<TagEntry>>(){
 			public Collection<TagEntry> get() {
@@ -150,11 +152,11 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @return
 	 */
 	private Hashtable<URI, Collection<TagEntry>> getURITagMap(final Resource resource) {
-//		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Hashtable<URI, Collection<TagEntry>>>(){
-//			public Hashtable<URI, Collection<TagEntry>> get() {
+		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Hashtable<URI, Collection<TagEntry>>>(){
+			public Hashtable<URI, Collection<TagEntry>> get() {
 				return parseTagsFile(resource); 
-//			}
-//		});
+			}
+		});
 	}
 	
 	/**
@@ -204,12 +206,11 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				if (!EcoreUtil2.isValidUri(resource, uriIter.next()))
 					uriIter.remove();
 			}
-		} catch (FileNotFoundException e) {
-			log.warn("Couldn't find tags file for " + moduleName);
 		} catch (IOException e) {
-			log.warn("Problem loading tags file for " + moduleName);
+			log.warn("Couldn't find tags file for " + moduleName);
 		}
-		// Could be empty!
+		
+		// Could be empty..
 		return uriTagMap;
 	}
 	

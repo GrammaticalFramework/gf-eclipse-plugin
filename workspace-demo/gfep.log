@@ -8458,3 +8458,907 @@ com.google.inject.CreationException: Guice creation errors:
 [2011-11-10 14:16:59,007] INFO  + HelloAbs.gf
 [2011-11-10 14:16:59,040] INFO  + HelloEng.gf
 [2011-11-10 14:16:59,071] INFO  + ResEng.gf
+[2011-11-10 14:40:12,264] INFO  Full build on Hello
+[2011-11-10 14:40:12,284] INFO  + AbsCat.gf
+[2011-11-10 14:40:12,307] INFO  + HelloAbs.gf
+[2011-11-10 14:40:12,338] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:40:12,340] INFO  + HelloEng.gf
+[2011-11-10 14:40:12,371] INFO  + ResEng.gf
+[2011-11-10 14:40:55,279] INFO  Full build on Hello
+[2011-11-10 14:40:55,307] INFO  + AbsCat.gf
+[2011-11-10 14:40:55,336] INFO  + HelloAbs.gf
+[2011-11-10 14:40:55,368] INFO  + HelloEng.gf
+[2011-11-10 14:40:55,396] INFO  + ResEng.gf
+[2011-11-10 14:41:17,168] INFO  Full build on Hello
+[2011-11-10 14:41:17,188] INFO  + AbsCat.gf
+[2011-11-10 14:41:17,205] INFO  + HelloAbs.gf
+[2011-11-10 14:41:17,244] WARN  ✕ HelloEng.gf
+[2011-11-10 14:41:17,287] INFO  + ResEng.gf
+[2011-11-10 14:41:22,603] INFO  Full build on Hello
+[2011-11-10 14:41:22,622] INFO  + AbsCat.gf
+[2011-11-10 14:41:22,642] INFO  + HelloAbs.gf
+[2011-11-10 14:41:22,681] WARN  ✕ HelloEng.gf
+[2011-11-10 14:41:22,708] INFO  + ResEng.gf
+[2011-11-10 14:47:08,715] INFO  Full build on Hello
+[2011-11-10 14:47:08,717] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 14:47:08,717] INFO  - AbsCat.tags
+[2011-11-10 14:47:08,743] INFO  + AbsCat.gf
+[2011-11-10 14:47:08,743] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 14:47:08,743] INFO  - HelloAbs.tags
+[2011-11-10 14:47:08,768] INFO  + HelloAbs.gf
+[2011-11-10 14:47:08,769] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 14:47:08,769] INFO  - HelloEng.tags
+[2011-11-10 14:47:08,790] WARN  ✕ HelloEng.gf
+[2011-11-10 14:47:08,795] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 14:47:08,795] INFO  - ResEng.tags
+[2011-11-10 14:47:08,810] INFO  + ResEng.gf
+[2011-11-10 14:51:52,077] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:51:58,037] INFO  Full build on Hello
+[2011-11-10 14:51:58,037] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 14:51:58,037] INFO  - AbsCat.tags
+[2011-11-10 14:51:58,053] INFO  + AbsCat.gf
+[2011-11-10 14:51:58,053] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 14:51:58,053] INFO  - HelloAbs.tags
+[2011-11-10 14:51:58,069] INFO  + HelloAbs.gf
+[2011-11-10 14:51:58,069] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 14:51:58,090] WARN  ✕ HelloEng.gf
+[2011-11-10 14:51:58,090] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 14:51:58,091] INFO  - ResEng.tags
+[2011-11-10 14:51:58,106] INFO  + ResEng.gf
+[2011-11-10 14:52:20,742] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:54:35,640] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:55:42,390] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:57:08,494] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,469] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,501] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,506] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,513] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,521] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,524] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,526] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,529] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,540] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,546] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,548] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,551] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,553] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,558] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,573] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,581] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,589] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,670] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:41,678] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,428] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,433] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,436] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,438] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,441] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,443] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,444] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,446] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,448] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,450] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,451] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,453] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,454] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,456] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,458] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,459] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,461] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,465] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:46,468] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,686] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,689] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,690] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,692] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,693] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,694] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,695] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,696] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,698] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,699] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,700] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,701] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,702] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,703] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,705] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,706] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,707] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,710] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:47,712] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:48,494] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:48,497] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:48,507] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:48,514] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:58:48,635] INFO  Full build on Functors
+[2011-11-10 14:58:48,636] INFO  c Foods.tags
+[2011-11-10 14:58:48,666] INFO  b Foods.gf
+[2011-11-10 14:58:48,667] INFO  c FoodsEng.tags
+[2011-11-10 14:58:48,898] INFO  b FoodsEng.gf
+[2011-11-10 14:58:48,899] INFO  c FoodsGer.tags
+[2011-11-10 14:58:49,218] INFO  b FoodsGer.gf
+[2011-11-10 14:58:49,219] INFO  c FoodsI.tags
+[2011-11-10 14:58:49,321] INFO  b FoodsI.gf
+[2011-11-10 14:58:49,322] INFO  c LexFoods.tags
+[2011-11-10 14:58:49,434] INFO  b LexFoods.gf
+[2011-11-10 14:58:49,435] INFO  c LexFoodsEng.tags
+[2011-11-10 14:58:49,670] INFO  b LexFoodsEng.gf
+[2011-11-10 14:58:49,671] INFO  c LexFoodsGer.tags
+[2011-11-10 14:58:49,985] INFO  b LexFoodsGer.gf
+[2011-11-10 14:58:49,989] INFO  Full build on Hello
+[2011-11-10 14:58:49,989] INFO  c AbsCat.tags
+[2011-11-10 14:58:50,017] INFO  b AbsCat.gf
+[2011-11-10 14:58:50,018] INFO  c HelloAbs.tags
+[2011-11-10 14:58:50,047] INFO  b HelloAbs.gf
+[2011-11-10 14:58:50,089] WARN  ✕ HelloEng.gf
+[2011-11-10 14:58:50,091] INFO  c ResEng.tags
+[2011-11-10 14:58:50,120] INFO  b ResEng.gf
+[2011-11-10 14:59:21,255] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:59:25,898] INFO  Full build on Hello
+[2011-11-10 14:59:25,899] INFO  c AbsCat.tags
+[2011-11-10 14:59:25,920] INFO  b AbsCat.gf
+[2011-11-10 14:59:25,920] INFO  c HelloAbs.tags
+[2011-11-10 14:59:25,948] INFO  b HelloAbs.gf
+[2011-11-10 14:59:25,989] INFO  b HelloEng.gf
+[2011-11-10 14:59:25,990] INFO  c ResEng.tags
+[2011-11-10 14:59:26,021] INFO  b ResEng.gf
+[2011-11-10 14:59:35,522] INFO  Full build on Hello
+[2011-11-10 14:59:35,523] INFO  c AbsCat.tags
+[2011-11-10 14:59:35,547] INFO  b AbsCat.gf
+[2011-11-10 14:59:35,547] INFO  c HelloAbs.tags
+[2011-11-10 14:59:35,571] INFO  b HelloAbs.gf
+[2011-11-10 14:59:35,572] INFO  c HelloEng.tags
+[2011-11-10 14:59:35,606] INFO  b HelloEng.gf
+[2011-11-10 14:59:35,606] INFO  c ResEng.tags
+[2011-11-10 14:59:35,630] INFO  b ResEng.gf
+[2011-11-10 15:00:49,757] INFO  Clean Functors
+[2011-11-10 15:00:49,768] INFO  - Foods.tags
+[2011-11-10 15:00:49,769] INFO  - FoodsEng.tags
+[2011-11-10 15:00:49,770] INFO  - FoodsGer.tags
+[2011-11-10 15:00:49,771] INFO  - FoodsI.tags
+[2011-11-10 15:00:49,771] INFO  - LexFoods.tags
+[2011-11-10 15:00:49,772] INFO  - LexFoodsEng.tags
+[2011-11-10 15:00:49,773] INFO  - LexFoodsGer.tags
+[2011-11-10 15:00:49,774] INFO  - Foods.gfo
+[2011-11-10 15:00:49,774] INFO  - FoodsEng.gfo
+[2011-11-10 15:00:49,775] INFO  - FoodsGer.gfo
+[2011-11-10 15:00:49,775] INFO  - FoodsI.gfo
+[2011-11-10 15:00:49,775] INFO  - LexFoods.gfo
+[2011-11-10 15:00:49,776] INFO  - LexFoodsEng.gfo
+[2011-11-10 15:00:49,776] INFO  - LexFoodsGer.gfo
+[2011-11-10 15:00:49,777] INFO  Clean Hello
+[2011-11-10 15:00:49,777] INFO  - AbsCat.tags
+[2011-11-10 15:00:49,778] INFO  - HelloAbs.tags
+[2011-11-10 15:00:49,778] INFO  - HelloEng.tags
+[2011-11-10 15:00:49,778] INFO  - ResEng.tags
+[2011-11-10 15:00:49,779] INFO  - AbsCat.gfo
+[2011-11-10 15:00:49,779] INFO  - HelloAbs.gfo
+[2011-11-10 15:00:49,779] INFO  - HelloEng.gfo
+[2011-11-10 15:00:49,780] INFO  - ResEng.gfo
+[2011-11-10 15:00:49,905] INFO  Full build on Functors
+[2011-11-10 15:00:49,930] INFO  + Foods.gf
+[2011-11-10 15:00:50,166] INFO  + FoodsEng.gf
+[2011-11-10 15:00:50,493] INFO  + FoodsGer.gf
+[2011-11-10 15:00:50,591] INFO  + FoodsI.gf
+[2011-11-10 15:00:50,695] INFO  + LexFoods.gf
+[2011-11-10 15:00:50,933] INFO  + LexFoodsEng.gf
+[2011-11-10 15:00:51,246] INFO  + LexFoodsGer.gf
+[2011-11-10 15:00:51,255] INFO  Full build on Hello
+[2011-11-10 15:00:51,281] INFO  + AbsCat.gf
+[2011-11-10 15:00:51,311] INFO  + HelloAbs.gf
+[2011-11-10 15:00:51,338] INFO  + HelloEng.gf
+[2011-11-10 15:00:51,366] INFO  + ResEng.gf
+[2011-11-10 15:01:00,113] INFO  Full build on Hello
+[2011-11-10 15:01:00,113] INFO  - AbsCat.tags
+[2011-11-10 15:01:00,137] INFO  + AbsCat.gf
+[2011-11-10 15:01:00,138] INFO  - HelloAbs.tags
+[2011-11-10 15:01:00,168] INFO  + HelloAbs.gf
+[2011-11-10 15:01:00,168] INFO  - HelloEng.tags
+[2011-11-10 15:01:00,212] WARN  ✕ HelloEng.gf
+[2011-11-10 15:01:00,224] INFO  - ResEng.tags
+[2011-11-10 15:01:00,253] INFO  + ResEng.gf
+[2011-11-10 15:01:07,855] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,859] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,861] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,863] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,865] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,867] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,869] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,871] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,872] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,873] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,875] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,876] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,877] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,879] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,880] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,882] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,883] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,887] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:07,890] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,463] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,464] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,466] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,467] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,468] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,469] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,470] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,472] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,473] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,474] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,475] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,476] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,478] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,479] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,480] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,482] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,483] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,486] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:09,488] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:14,701] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:14,703] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:14,704] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:14,706] WARN  Problem loading tags file for HelloEng
+[2011-11-10 15:01:14,820] INFO  Full build on Hello
+[2011-11-10 15:01:14,821] INFO  - AbsCat.tags
+[2011-11-10 15:01:14,836] INFO  + AbsCat.gf
+[2011-11-10 15:01:14,837] INFO  - HelloAbs.tags
+[2011-11-10 15:01:14,853] INFO  + HelloAbs.gf
+[2011-11-10 15:01:14,885] WARN  ✕ HelloEng.gf
+[2011-11-10 15:01:14,886] INFO  - ResEng.tags
+[2011-11-10 15:01:14,915] INFO  + ResEng.gf
+[2011-11-10 15:01:21,125] INFO  Full build on Hello
+[2011-11-10 15:01:21,125] INFO  - AbsCat.tags
+[2011-11-10 15:01:21,144] INFO  + AbsCat.gf
+[2011-11-10 15:01:21,144] INFO  - HelloAbs.tags
+[2011-11-10 15:01:21,160] INFO  + HelloAbs.gf
+[2011-11-10 15:01:21,183] INFO  + HelloEng.gf
+[2011-11-10 15:01:21,183] INFO  - ResEng.tags
+[2011-11-10 15:01:21,205] INFO  + ResEng.gf
+[2011-11-10 15:01:28,041] INFO  Full build on Hello
+[2011-11-10 15:01:28,041] INFO  - AbsCat.tags
+[2011-11-10 15:01:28,068] INFO  + AbsCat.gf
+[2011-11-10 15:01:28,069] INFO  - HelloAbs.tags
+[2011-11-10 15:01:28,093] INFO  + HelloAbs.gf
+[2011-11-10 15:01:28,093] INFO  - HelloEng.tags
+[2011-11-10 15:01:28,112] INFO  + HelloEng.gf
+[2011-11-10 15:01:28,113] INFO  - ResEng.tags
+[2011-11-10 15:01:28,134] INFO  + ResEng.gf
+[2011-11-10 15:03:30,598] INFO  Full build on Hello
+[2011-11-10 15:03:30,600] INFO  - AbsCat.tags
+[2011-11-10 15:03:30,620] INFO  + AbsCat.gf
+[2011-11-10 15:03:30,620] INFO  - HelloAbs.tags
+[2011-11-10 15:03:30,644] INFO  + HelloAbs.gf
+[2011-11-10 15:03:30,645] INFO  - HelloEng.tags
+[2011-11-10 15:03:30,667] INFO  + HelloEng.gf
+[2011-11-10 15:03:30,667] INFO  - ResEng.tags
+[2011-11-10 15:03:30,684] INFO  + ResEng.gf
+[2011-11-10 15:03:36,689] INFO  Full build on Hello
+[2011-11-10 15:03:36,689] INFO  - AbsCat.tags
+[2011-11-10 15:03:36,716] INFO  + AbsCat.gf
+[2011-11-10 15:03:36,717] INFO  - HelloAbs.tags
+[2011-11-10 15:03:36,732] INFO  + HelloAbs.gf
+[2011-11-10 15:03:36,732] INFO  - HelloEng.tags
+[2011-11-10 15:03:36,757] WARN  ✕ HelloEng.gf
+[2011-11-10 15:03:36,763] INFO  - ResEng.tags
+[2011-11-10 15:03:36,787] INFO  + ResEng.gf
+[2011-11-10 15:05:00,420] WARN  Couldn't find tags file for HelloEng
+[2011-11-10 15:05:07,820] INFO  Full build on Hello
+[2011-11-10 15:05:07,821] INFO  - AbsCat.tags
+[2011-11-10 15:05:07,842] INFO  + AbsCat.gf
+[2011-11-10 15:05:07,843] INFO  - HelloAbs.tags
+[2011-11-10 15:05:07,873] INFO  + HelloAbs.gf
+[2011-11-10 15:05:07,907] INFO  + HelloEng.gf
+[2011-11-10 15:05:07,907] INFO  - ResEng.tags
+[2011-11-10 15:05:07,929] INFO  + ResEng.gf
+[2011-11-10 15:05:10,976] INFO  Full build on Hello
+[2011-11-10 15:05:10,977] INFO  - AbsCat.tags
+[2011-11-10 15:05:10,997] INFO  + AbsCat.gf
+[2011-11-10 15:05:10,998] INFO  - HelloAbs.tags
+[2011-11-10 15:05:11,020] INFO  + HelloAbs.gf
+[2011-11-10 15:05:11,020] INFO  - HelloEng.tags
+[2011-11-10 15:05:11,041] INFO  + HelloEng.gf
+[2011-11-10 15:05:11,041] INFO  - ResEng.tags
+[2011-11-10 15:05:11,061] INFO  + ResEng.gf
+[2011-11-10 15:05:15,613] INFO  Full build on Hello
+[2011-11-10 15:05:15,613] INFO  - AbsCat.tags
+[2011-11-10 15:05:15,639] INFO  + AbsCat.gf
+[2011-11-10 15:05:15,640] INFO  - HelloAbs.tags
+[2011-11-10 15:05:15,670] INFO  + HelloAbs.gf
+[2011-11-10 15:05:15,671] INFO  - HelloEng.tags
+[2011-11-10 15:05:15,708] INFO  + HelloEng.gf
+[2011-11-10 15:05:15,709] INFO  - ResEng.tags
+[2011-11-10 15:05:15,734] INFO  + ResEng.gf
+[2011-11-10 15:05:30,182] INFO  Full build on Functors
+[2011-11-10 15:05:30,183] INFO  - Foods.tags
+[2011-11-10 15:05:30,215] INFO  + Foods.gf
+[2011-11-10 15:05:30,215] INFO  - FoodsEng.tags
+[2011-11-10 15:05:30,448] INFO  + FoodsEng.gf
+[2011-11-10 15:05:30,449] INFO  - FoodsGer.tags
+[2011-11-10 15:05:30,763] INFO  + FoodsGer.gf
+[2011-11-10 15:05:30,764] INFO  - FoodsI.tags
+[2011-11-10 15:05:30,879] INFO  + FoodsI.gf
+[2011-11-10 15:05:30,880] INFO  - LexFoods.tags
+[2011-11-10 15:05:30,990] INFO  + LexFoods.gf
+[2011-11-10 15:05:30,991] INFO  - LexFoodsEng.tags
+[2011-11-10 15:05:31,229] INFO  + LexFoodsEng.gf
+[2011-11-10 15:05:31,230] INFO  - LexFoodsGer.tags
+[2011-11-10 15:05:31,555] INFO  + LexFoodsGer.gf
+[2011-11-10 15:05:37,647] INFO  Full build on Functors
+[2011-11-10 15:05:37,648] INFO  - Foods.tags
+[2011-11-10 15:05:37,665] INFO  + Foods.gf
+[2011-11-10 15:05:37,665] INFO  - FoodsEng.tags
+[2011-11-10 15:05:37,908] INFO  + FoodsEng.gf
+[2011-11-10 15:05:37,909] INFO  - FoodsGer.tags
+[2011-11-10 15:05:38,221] INFO  + FoodsGer.gf
+[2011-11-10 15:05:38,222] INFO  - FoodsI.tags
+[2011-11-10 15:05:38,331] INFO  + FoodsI.gf
+[2011-11-10 15:05:38,331] INFO  - LexFoods.tags
+[2011-11-10 15:05:38,438] INFO  + LexFoods.gf
+[2011-11-10 15:05:38,439] INFO  - LexFoodsEng.tags
+[2011-11-10 15:05:38,677] INFO  + LexFoodsEng.gf
+[2011-11-10 15:05:38,677] INFO  - LexFoodsGer.tags
+[2011-11-10 15:05:38,995] INFO  + LexFoodsGer.gf
+[2011-11-10 15:08:30,054] INFO  Full build on Functors
+[2011-11-10 15:08:30,055] INFO  - Foods.tags
+[2011-11-10 15:08:30,087] INFO  + Foods.gf
+[2011-11-10 15:08:30,088] INFO  - FoodsEng.tags
+[2011-11-10 15:08:30,336] INFO  + FoodsEng.gf
+[2011-11-10 15:08:30,336] INFO  - FoodsGer.tags
+[2011-11-10 15:08:30,669] INFO  + FoodsGer.gf
+[2011-11-10 15:08:30,669] INFO  - FoodsI.tags
+[2011-11-10 15:08:30,770] INFO  + FoodsI.gf
+[2011-11-10 15:08:30,770] INFO  - LexFoods.tags
+[2011-11-10 15:08:30,868] INFO  + LexFoods.gf
+[2011-11-10 15:08:30,869] INFO  - LexFoodsEng.tags
+[2011-11-10 15:08:31,102] INFO  + LexFoodsEng.gf
+[2011-11-10 15:08:31,102] INFO  - LexFoodsGer.tags
+[2011-11-10 15:08:31,420] INFO  + LexFoodsGer.gf
+[2011-11-10 15:29:40,818] INFO  Full build on Functors
+[2011-11-10 15:29:40,821] INFO  - Foods.tags
+[2011-11-10 15:29:40,840] INFO  + Foods.gf
+[2011-11-10 15:29:40,841] INFO  - FoodsEng.tags
+[2011-11-10 15:29:41,077] INFO  + FoodsEng.gf
+[2011-11-10 15:29:41,078] INFO  - FoodsGer.tags
+[2011-11-10 15:29:41,401] INFO  + FoodsGer.gf
+[2011-11-10 15:29:41,401] INFO  - FoodsI.tags
+[2011-11-10 15:29:41,492] INFO  + FoodsI.gf
+[2011-11-10 15:29:41,493] INFO  - LexFoods.tags
+[2011-11-10 15:29:41,586] INFO  + LexFoods.gf
+[2011-11-10 15:29:41,587] INFO  - LexFoodsEng.tags
+[2011-11-10 15:29:41,816] INFO  + LexFoodsEng.gf
+[2011-11-10 15:29:41,816] INFO  - LexFoodsGer.tags
+[2011-11-10 15:29:42,127] INFO  + LexFoodsGer.gf
+[2011-11-10 15:29:42,133] INFO  Full build on Hello
+[2011-11-10 15:29:42,133] INFO  - AbsCat.tags
+[2011-11-10 15:29:42,149] INFO  + AbsCat.gf
+[2011-11-10 15:29:42,150] INFO  - HelloAbs.tags
+[2011-11-10 15:29:42,167] INFO  + HelloAbs.gf
+[2011-11-10 15:29:42,167] INFO  - HelloEng.tags
+[2011-11-10 15:29:42,189] INFO  + HelloEng.gf
+[2011-11-10 15:29:42,189] INFO  - ResEng.tags
+[2011-11-10 15:29:42,206] INFO  + ResEng.gf
+[2011-11-10 15:32:10,363] INFO  Full build on Functors
+[2011-11-10 15:32:10,364] INFO  - Foods.tags
+[2011-11-10 15:32:10,381] INFO  + file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 15:32:10,382] INFO  - FoodsEng.tags
+[2011-11-10 15:32:10,622] INFO  + file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 15:32:10,623] INFO  - FoodsGer.tags
+[2011-11-10 15:32:10,936] INFO  + file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 15:32:10,936] INFO  - FoodsI.tags
+[2011-11-10 15:32:11,029] INFO  + file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 15:32:11,030] INFO  - LexFoods.tags
+[2011-11-10 15:32:11,123] INFO  + file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 15:32:11,123] INFO  - LexFoodsEng.tags
+[2011-11-10 15:32:11,355] INFO  + file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 15:32:11,356] INFO  - LexFoodsGer.tags
+[2011-11-10 15:32:11,669] INFO  + file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 15:33:15,072] INFO  Full build on Functors
+[2011-11-10 15:33:15,074] INFO  - Foods.tags
+[2011-11-10 15:33:15,094] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 15:33:15,095] INFO  - FoodsEng.tags
+[2011-11-10 15:33:15,331] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 15:33:15,331] INFO  - FoodsGer.tags
+[2011-11-10 15:33:15,651] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 15:33:15,652] INFO  - FoodsI.tags
+[2011-11-10 15:33:15,745] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 15:33:15,745] INFO  - LexFoods.tags
+[2011-11-10 15:33:15,842] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 15:33:15,842] INFO  - LexFoodsEng.tags
+[2011-11-10 15:33:16,065] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 15:33:16,066] INFO  - LexFoodsGer.tags
+[2011-11-10 15:33:16,379] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 15:34:38,359] INFO  Clean Functors
+[2011-11-10 15:34:38,366] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 15:34:38,366] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 15:34:38,367] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 15:34:38,367] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 15:34:38,368] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 15:34:38,368] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 15:34:38,369] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 15:34:38,369] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gfo
+[2011-11-10 15:34:38,369] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gfo
+[2011-11-10 15:34:38,370] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gfo
+[2011-11-10 15:34:38,370] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gfo
+[2011-11-10 15:34:38,371] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gfo
+[2011-11-10 15:34:38,371] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gfo
+[2011-11-10 15:34:38,371] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gfo
+[2011-11-10 15:34:38,372] INFO  Clean Hello
+[2011-11-10 15:34:38,372] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 15:34:38,373] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 15:34:38,373] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 15:34:38,374] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 15:34:38,374] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gfo
+[2011-11-10 15:34:38,374] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gfo
+[2011-11-10 15:34:38,375] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gfo
+[2011-11-10 15:34:38,375] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gfo
+[2011-11-10 15:34:38,491] INFO  Full build on Functors
+[2011-11-10 15:34:38,516] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 15:34:38,768] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 15:34:39,101] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 15:34:39,195] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 15:34:39,291] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 15:34:39,522] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 15:34:39,835] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 15:34:39,840] INFO  Full build on Hello
+[2011-11-10 15:34:39,857] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 15:34:39,876] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 15:34:39,898] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 15:34:39,917] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 15:46:48,186] INFO  Full build on Functors
+[2011-11-10 15:46:48,190] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 15:46:48,212] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 15:46:48,213] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 15:46:48,480] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 15:46:48,481] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 15:46:48,943] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 15:46:48,944] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 15:46:49,057] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 15:46:49,057] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 15:46:49,151] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 15:46:49,151] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 15:46:49,387] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 15:46:49,388] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 15:46:49,808] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 15:48:13,574] INFO  Full build on Functors
+[2011-11-10 15:48:13,577] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 15:48:13,609] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 15:48:13,610] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 15:48:13,882] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 15:48:13,882] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 15:48:14,312] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 15:48:14,312] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 15:48:14,425] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 15:48:14,426] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 15:48:14,527] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 15:48:14,527] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 15:48:14,776] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 15:48:14,776] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 15:48:15,197] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 15:50:43,923] INFO  Full build on Hello
+[2011-11-10 15:50:43,927] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 15:50:43,949] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 15:50:43,949] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 15:50:43,969] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 15:50:43,969] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 15:50:43,992] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 15:50:43,994] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 15:50:44,012] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 15:50:53,131] INFO  Full build on Hello
+[2011-11-10 15:50:53,132] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 15:50:53,163] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 15:50:53,164] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 15:50:53,195] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 15:50:53,196] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 15:51:26,532] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 15:51:26,543] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 15:51:26,572] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 15:59:11,494] WARN  Couldn't find tags file for HelloEng
+[2011-11-10 15:59:16,554] WARN  Couldn't find tags file for HelloEng
+[2011-11-10 15:59:17,409] INFO  Full build on Hello
+[2011-11-10 15:59:17,410] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 15:59:17,435] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 15:59:17,436] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 15:59:17,466] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 15:59:17,499] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 15:59:17,500] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 15:59:17,517] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:01:04,705] WARN  Couldn't find tags file for HelloEng
+[2011-11-10 16:01:31,521] WARN  Couldn't find tags file for HelloEng
+[2011-11-10 16:01:32,145] INFO  Full build on Hello
+[2011-11-10 16:01:32,147] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:01:32,166] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:01:32,166] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:01:32,183] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:01:32,204] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:01:32,204] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:01:32,220] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:01:41,753] INFO  Full build on Hello
+[2011-11-10 16:01:41,753] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:01:41,770] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:01:41,771] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:01:41,793] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:01:41,794] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 16:01:41,831] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:01:41,831] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:01:41,857] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:02:04,667] INFO  Full build on Hello
+[2011-11-10 16:02:04,668] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:02:04,697] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:02:04,697] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:02:04,726] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:02:04,727] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 16:02:04,766] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:02:04,768] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:02:04,798] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:10:59,240] WARN  Couldn't find tags file for HelloEng
+[2011-11-10 16:11:06,789] INFO  Full build on Hello
+[2011-11-10 16:11:06,790] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:11:06,814] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:11:06,815] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:11:06,834] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:11:06,863] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:11:06,865] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:11:06,895] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:11:17,215] WARN  Couldn't find tags file for HelloEng
+[2011-11-10 16:11:18,588] INFO  Full build on Hello
+[2011-11-10 16:11:18,589] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:11:18,618] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:11:18,618] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:11:18,651] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:11:18,683] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:11:18,684] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:11:18,702] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:12:16,106] WARN  Couldn't find tags file for HelloEng
+[2011-11-10 16:12:19,160] WARN  Couldn't find tags file for HelloEng
+[2011-11-10 16:12:20,579] WARN  Couldn't find tags file for HelloEng
+[2011-11-10 16:12:29,112] INFO  Full build on Hello
+[2011-11-10 16:12:29,114] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:12:29,147] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:12:29,148] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:12:29,176] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:12:29,210] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:12:29,211] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:12:29,230] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:12:40,619] INFO  Full build on Hello
+[2011-11-10 16:12:40,619] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:12:40,644] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:12:40,644] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:12:40,672] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:12:40,708] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:12:40,708] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:12:40,732] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:12:44,668] INFO  Full build on Hello
+[2011-11-10 16:12:44,670] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:12:44,693] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:12:44,694] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:12:44,717] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:12:44,718] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 16:12:44,751] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:12:44,752] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:12:44,781] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:12:53,652] INFO  Full build on Functors
+[2011-11-10 16:12:53,653] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:12:53,669] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:12:53,669] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 16:12:53,931] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:12:53,931] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:12:54,352] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:12:54,352] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:12:54,459] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:12:54,459] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:12:54,566] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:12:54,567] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 16:12:54,814] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:12:54,815] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:12:55,241] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:13:04,013] INFO  Full build on Hello
+[2011-11-10 16:13:04,014] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:13:04,042] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:13:04,042] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:13:04,086] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:13:04,086] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 16:13:04,117] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:13:04,119] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:13:04,148] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:15:48,851] INFO  Full build on Hello
+[2011-11-10 16:15:48,852] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:15:48,884] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:15:48,884] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:15:48,912] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:15:48,951] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:15:48,952] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:15:48,982] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:25:16,107] INFO  Full build on Functors
+[2011-11-10 16:25:16,111] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:25:16,140] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:25:16,141] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 16:25:16,307] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:25:16,318] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:25:16,748] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:25:16,748] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:25:16,850] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:25:16,851] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:25:16,960] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:25:16,961] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 16:25:17,118] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:25:17,119] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:25:17,543] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:25:17,552] INFO  Full build on Hello
+[2011-11-10 16:25:17,552] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:25:17,580] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:25:17,581] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:25:17,619] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:25:17,619] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 16:25:17,656] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:25:17,656] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:25:17,676] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:25:43,110] WARN  Couldn't find tags file for LexFoodsEng
+[2011-11-10 16:25:43,240] INFO  Full build on Functors
+[2011-11-10 16:25:43,240] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:25:43,261] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:25:43,413] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:25:43,414] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:25:43,847] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:25:43,847] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:25:43,946] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:25:43,947] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:25:44,042] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:25:44,194] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:25:44,195] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:25:44,624] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:26:10,651] WARN  Couldn't find tags file for LexFoodsEng
+[2011-11-10 16:26:10,783] INFO  Full build on Functors
+[2011-11-10 16:26:10,784] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:26:10,806] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:26:10,956] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf... 
+[2011-11-10 16:26:10,959] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:26:10,960] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:26:11,394] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:26:11,394] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:26:11,489] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:26:11,490] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:26:11,587] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:26:11,740] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf... 
+[2011-11-10 16:26:11,742] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:26:11,743] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:26:12,175] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:27:13,997] WARN  Couldn't find tags file for LexFoodsEng
+[2011-11-10 16:27:17,431] WARN  Couldn't find tags file for LexFoodsEng
+[2011-11-10 16:27:18,011] INFO  Full build on Functors
+[2011-11-10 16:27:18,012] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:27:18,035] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:27:18,189] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf... 
+[2011-11-10 16:27:18,190] DEBUG GF: checking module LexFoodsEng
+[2011-11-10 16:27:18,190] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-10 16:27:18,191] DEBUG GF:    Happened in operation wine_N
+[2011-11-10 16:27:18,191] DEBUG GF:       No definition given to the operation
+[2011-11-10 16:27:18,191] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:27:18,192] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:27:18,625] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:27:18,626] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:27:18,734] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:27:18,734] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:27:18,843] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:27:19,016] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf... 
+[2011-11-10 16:27:19,017] DEBUG GF: checking module LexFoodsEng
+[2011-11-10 16:27:19,018] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-10 16:27:19,018] DEBUG GF:    Happened in operation wine_N
+[2011-11-10 16:27:19,018] DEBUG GF:       No definition given to the operation
+[2011-11-10 16:27:19,018] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:27:19,019] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:27:19,450] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:27:46,397] WARN  Couldn't find tags file for LexFoodsEng
+[2011-11-10 16:28:21,683] WARN  Couldn't find tags file for LexFoodsEng
+[2011-11-10 16:28:23,073] WARN  Couldn't find tags file for LexFoodsEng
+[2011-11-10 16:28:23,711] INFO  Full build on Functors
+[2011-11-10 16:28:23,711] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:28:23,733] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:28:23,927] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf... 
+[2011-11-10 16:28:23,928] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf... checking module FoodsEng
+[2011-11-10 16:28:23,929] DEBUG GF:    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-10 16:28:23,929] DEBUG GF: 
+[2011-11-10 16:28:24,007] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:28:24,008] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:28:24,444] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:28:24,444] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:28:24,555] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:28:24,556] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:28:24,665] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:28:24,929] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:28:24,930] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:28:25,353] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:28:38,363] INFO  Clean Functors
+[2011-11-10 16:28:38,372] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:28:38,373] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 16:28:38,374] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:28:38,375] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:28:38,375] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:28:38,375] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 16:28:38,376] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:28:38,377] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gfo
+[2011-11-10 16:28:38,377] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gfo
+[2011-11-10 16:28:38,377] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gfo
+[2011-11-10 16:28:38,378] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gfo
+[2011-11-10 16:28:38,378] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gfo
+[2011-11-10 16:28:38,379] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gfo
+[2011-11-10 16:28:38,379] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gfo
+[2011-11-10 16:28:38,379] INFO  Clean Hello
+[2011-11-10 16:28:38,380] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:28:38,380] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:28:38,381] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 16:28:38,381] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:28:38,382] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gfo
+[2011-11-10 16:28:38,382] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gfo
+[2011-11-10 16:28:38,383] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gfo
+[2011-11-10 16:28:38,383] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gfo
+[2011-11-10 16:28:38,491] INFO  Full build on Functors
+[2011-11-10 16:28:38,519] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:28:38,787] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:28:39,253] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:28:39,352] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:28:39,457] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:28:39,719] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:28:40,134] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:28:40,137] INFO  Full build on Hello
+[2011-11-10 16:28:40,167] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:28:40,200] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:28:40,235] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:28:40,264] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:29:31,207] INFO  Full build on Functors
+[2011-11-10 16:29:31,211] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:29:31,245] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:29:31,246] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 16:29:31,521] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:29:31,521] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:29:31,954] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:29:31,955] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:29:32,066] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:29:32,067] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:29:32,181] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:29:32,182] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 16:29:32,451] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:29:32,452] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:29:32,887] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:29:38,010] INFO  Clean Functors
+[2011-11-10 16:29:38,015] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:29:38,015] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 16:29:38,016] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:29:38,016] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:29:38,016] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:29:38,017] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 16:29:38,017] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:29:38,018] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gfo
+[2011-11-10 16:29:38,018] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gfo
+[2011-11-10 16:29:38,019] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gfo
+[2011-11-10 16:29:38,019] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gfo
+[2011-11-10 16:29:38,019] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gfo
+[2011-11-10 16:29:38,020] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gfo
+[2011-11-10 16:29:38,020] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gfo
+[2011-11-10 16:29:38,020] INFO  Clean Hello
+[2011-11-10 16:29:38,021] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:29:38,021] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:29:38,022] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 16:29:38,022] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:29:38,023] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gfo
+[2011-11-10 16:29:38,023] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gfo
+[2011-11-10 16:29:38,023] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gfo
+[2011-11-10 16:29:38,024] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gfo
+[2011-11-10 16:29:38,181] INFO  Full build on Functors
+[2011-11-10 16:29:38,216] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:29:38,493] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:29:38,961] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:29:39,065] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:29:39,171] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:29:39,416] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:29:39,838] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:29:39,840] INFO  Full build on Hello
+[2011-11-10 16:29:39,874] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:29:39,910] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:29:39,954] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:29:39,988] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:30:28,432] INFO  Full build on Functors
+[2011-11-10 16:30:28,436] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:30:28,471] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:30:28,472] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 16:30:28,753] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:30:28,753] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:30:29,187] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:30:29,188] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:30:29,306] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:30:29,307] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:30:29,422] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:30:29,422] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 16:30:29,692] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:30:29,693] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:30:30,148] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:30:35,096] INFO  Clean Functors
+[2011-11-10 16:30:35,102] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:30:35,102] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 16:30:35,103] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:30:35,103] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:30:35,104] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:30:35,104] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 16:30:35,105] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:30:35,105] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gfo
+[2011-11-10 16:30:35,105] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gfo
+[2011-11-10 16:30:35,106] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gfo
+[2011-11-10 16:30:35,106] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gfo
+[2011-11-10 16:30:35,107] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gfo
+[2011-11-10 16:30:35,107] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gfo
+[2011-11-10 16:30:35,107] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gfo
+[2011-11-10 16:30:35,108] INFO  Clean Hello
+[2011-11-10 16:30:35,108] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.tags
+[2011-11-10 16:30:35,109] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.tags
+[2011-11-10 16:30:35,109] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.tags
+[2011-11-10 16:30:35,110] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
+[2011-11-10 16:30:35,110] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gfo
+[2011-11-10 16:30:35,110] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gfo
+[2011-11-10 16:30:35,111] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gfo
+[2011-11-10 16:30:35,111] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gfo
+[2011-11-10 16:30:35,245] INFO  Full build on Functors
+[2011-11-10 16:30:35,281] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:30:35,565] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:30:36,024] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:30:36,141] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:30:36,253] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:30:36,491] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:30:36,922] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:30:36,924] INFO  Full build on Hello
+[2011-11-10 16:30:36,959] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-10 16:30:36,996] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-10 16:30:37,035] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-10 16:30:37,070] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-10 16:30:41,677] INFO  Full build on Functors
+[2011-11-10 16:30:41,677] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:30:41,701] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:30:41,702] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 16:30:41,878] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf... 
+[2011-11-10 16:30:41,879] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf... checking module FoodsEng
+[2011-11-10 16:30:41,879] DEBUG GF:    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-10 16:30:41,879] DEBUG GF: 
+[2011-11-10 16:30:41,972] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:30:41,972] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:30:42,402] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:30:42,403] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:30:42,516] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:30:42,516] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:30:42,628] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:30:42,628] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 16:30:42,889] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:30:42,890] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:30:43,319] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:31:23,080] INFO  Full build on Functors
+[2011-11-10 16:31:23,084] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:31:23,116] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:31:23,117] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 16:31:23,394] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:31:23,394] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:31:23,828] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:31:23,828] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:31:23,942] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:31:23,942] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:31:24,057] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:31:24,057] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 16:31:24,301] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:31:24,302] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:31:24,730] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-10 16:31:33,892] INFO  Full build on Functors
+[2011-11-10 16:31:33,893] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.tags
+[2011-11-10 16:31:33,918] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-10 16:31:33,918] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.tags
+[2011-11-10 16:31:34,093] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf... 
+[2011-11-10 16:31:34,095] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf... checking module FoodsEng
+[2011-11-10 16:31:34,095] DEBUG GF:    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-10 16:31:34,095] DEBUG GF: 
+[2011-11-10 16:31:34,190] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-10 16:31:34,190] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.tags
+[2011-11-10 16:31:34,617] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-10 16:31:34,617] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.tags
+[2011-11-10 16:31:34,718] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-10 16:31:34,719] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.tags
+[2011-11-10 16:31:34,825] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-10 16:31:34,825] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.tags
+[2011-11-10 16:31:35,087] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-10 16:31:35,088] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.tags
+[2011-11-10 16:31:35,514] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf

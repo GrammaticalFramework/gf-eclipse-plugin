@@ -116,28 +116,23 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	 *
 	 * @param open the open
 	 */
-	@Check
-	public void checkReferencedModuleExists(Open open) {
-		// Opens, Instantiations
-		if (!libAgent.moduleExists(open.eResource(), open.getName().getS())) {
-			String msg = String.format("Module \"%s\" not found", open.getName().getS());
-			warning(msg, GFPackage.Literals.OPEN__NAME);
-		}
-	}
-	
-	/**
-	 * Check referenced module exists.
-	 *
-	 * @param inc the inc
-	 */
-	@Check
-	public void checkReferencedModuleExists(Included inc) {
-		// Extends, Functor instantiation
-		if (!libAgent.moduleExists(inc.eResource(), inc.getName().getS())) {
-			String msg = String.format("Module \"%s\" not found", inc.getName().getS());
-			warning(msg, GFPackage.Literals.INCLUDED__NAME);
-		}
-	}
+// TODO These checks need to respect PATH directives in order to be useful!
+//	@Check
+//	public void checkReferencedModuleExists(Open open) {
+//		// Opens, Instantiations
+//		if (!libAgent.moduleExists(open.eResource(), open.getName().getS())) {
+//			String msg = String.format("Module \"%s\" not found", open.getName().getS());
+//			warning(msg, GFPackage.Literals.OPEN__NAME);
+//		}
+//	}
+//	@Check
+//	public void checkReferencedModuleExists(Included inc) {
+//		// Extends, Functor instantiation
+//		if (!libAgent.moduleExists(inc.eResource(), inc.getName().getS())) {
+//			String msg = String.format("Module \"%s\" not found", inc.getName().getS());
+//			warning(msg, GFPackage.Literals.INCLUDED__NAME);
+//		}
+//	}
 
 	/**
 	 * Some special flag checks.

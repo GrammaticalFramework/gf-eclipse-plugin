@@ -6,20 +6,20 @@
 		<item value="Aggregate for window 1314645064060" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
 		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
 	</section>
-	<section name="CleanDialogSettings">
-		<item value="486" key="DIALOG_WIDTH"/>
-		<item value="false" key="BUILD_NOW"/>
-		<item value="true" key="BUILD_ALL"/>
-		<item value="255" key="DIALOG_Y_ORIGIN"/>
-		<item value="461" key="DIALOG_HEIGHT"/>
-		<item value="725" key="DIALOG_X_ORIGIN"/>
-		<item value="false" key="TOGGLE_SELECTED"/>
-	</section>
 	<section name="NewWizardAction">
 		<item value="org.grammaticalframework.eclipse.ui.wizards.GFNewProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.grammaticalframework.eclipse.ui.category.wizards"/>
 		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item value="486" key="DIALOG_WIDTH"/>
+		<item value="false" key="BUILD_NOW"/>
+		<item value="255" key="DIALOG_Y_ORIGIN"/>
+		<item value="true" key="BUILD_ALL"/>
+		<item value="725" key="DIALOG_X_ORIGIN"/>
+		<item value="461" key="DIALOG_HEIGHT"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
 	</section>
 </section>
