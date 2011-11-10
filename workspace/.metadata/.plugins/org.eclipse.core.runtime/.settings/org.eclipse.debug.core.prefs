@@ -1,4 +1,4 @@
-#Wed Nov 09 12:35:43 CET 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="resource.getURI()"/>\n<expression enabled\="true" text\="tag.file"/>\n<expression enabled\="true" text\="moduleName"/>\n<expression enabled\="true" text\="tagFileURI"/>\n<expression enabled\="true" text\="GFBuilder.getBuildSubfolder(moduleName)"/>\n<expression enabled\="true" text\="GFBuilder.getBuildSubfolder(resource.getURI().lastSegment())"/>\n<expression enabled\="true" text\="tag.file.contains(GFBuilder.getBuildSubfolder(resource.getURI().lastSegment()))"/>\n</watchExpressions>\n
+#Thu Nov 10 09:37:14 CET 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="parent.getName()"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=false

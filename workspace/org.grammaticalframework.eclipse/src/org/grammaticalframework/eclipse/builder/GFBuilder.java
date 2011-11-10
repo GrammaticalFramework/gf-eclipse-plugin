@@ -18,6 +18,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Map;
+
+import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -218,23 +220,44 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	protected void clean(final IProgressMonitor monitor) throws CoreException {
 		log.info("Clean " + getProject().getName());
 		
-		// TODO Delete markers with getProject().deleteMarkers()
+//		getProject().deleteMarkers();
 		recursiveDispatcher(getProject().members(), new CallableOnResource() {
 			public void call(IResource resource) {
 				// Check for cancellation
 				if (monitor.isCanceled()) {
 					throw new OperationCanceledException();
 				}
-				// Delete if necessary
-				if (resource.getType() == IResource.FILE && resource.getFileExtension().equals("gfh")) {
+				// Get some details
+				boolean isFile = (resource.getType() == IResource.FILE);
+				String extension;
+				if ((extension = resource.getFileExtension()) == null) extension = "";
+				
+				// Decide if we want to delete it
+				boolean delete = false;
+				if (isFile && extension.equals("gfo")) {
+					delete = true;
+				}
+				else if (TAG_BASED_SCOPING) {
 					try {
+						IContainer grandparent = resource.getParent().getParent();
+						delete = grandparent.getName().equals(BUILD_FOLDER);
+					} catch (NullPointerException _) {
+						// file has no grandparent
+					}
+				} else {
+					delete = (isFile && extension.equals("gfh"));
+				}
+				
+				// Do the deed
+				try {
+					if (delete) {
 						resource.delete(true, monitor);
 						log.info("- " + resource.getName());
-					} catch (CoreException e) {
-						log.warn("> Failed: " + resource.getName());
-						e.printStackTrace();
 					}
+				} catch (CoreException e) {
+					log.warn("> Failed: " + resource.getName());
 				}
+				
 			}
 		});
 	}

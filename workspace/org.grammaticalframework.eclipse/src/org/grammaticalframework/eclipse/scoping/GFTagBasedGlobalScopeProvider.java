@@ -85,21 +85,20 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
 		
 		/* ----- Method 1: Just use the URIs ----- */
-		
-		// Load all descriptions from all mentioned files/URIs
-		Set<URI> uniqueImportURIs = getImportedURIs(resource);
-		IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uniqueImportURIs);
+//		// Load all descriptions from all mentioned files/URIs
+//		Set<URI> uniqueImportURIs = getImportedURIs(resource);
+//		IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uniqueImportURIs);
+//
+//		// Add everything from all the URIs mentioned in the tags file
+//		IScope scope = null;
+//		for (IResourceDescription resDesc : resourceDescriptions.getAllResourceDescriptions()) {
+//			GFTagBasedScope newScope = new GFTagBasedScope(scope, resDesc, ignoreCase);
+//			if (newScope.localElementCount() > 0)
+//				scope = newScope;
+//		}
+//		return scope;
 
-		// Add everything from all the URIs mentioned in the tags file
-		IScope scope = null;
-		for (IResourceDescription resDesc : resourceDescriptions.getAllResourceDescriptions()) {
-			GFTagBasedScope newScope = new GFTagBasedScope(scope, resDesc, ignoreCase);
-			if (newScope.localElementCount() > 0)
-				scope = newScope;
-		}
-		
 		/* ----- Method 2: Use the tags themselves ----- */
-		
 		GFTagBasedScope gfScope = null;
 		Map<URI, Collection<TagEntry>> uriTagMap = getURITagMap(resource);
 		for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
@@ -109,7 +108,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				gfScope.addTag(resource, tag);
 			}
 		}
-		
 		return gfScope;
 	}
 	

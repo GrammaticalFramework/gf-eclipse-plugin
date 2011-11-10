@@ -6,7 +6,7 @@ concrete HelloEng of HelloAbs = ResEng ** {
  
 	lincat
 		Greeting, Farewell = {s : Str} ;
-		Recipient = {s : Gender => Str} ;
+		Recipient = {s : Param => Str} ; 
 
 	lin
  		Hello recip = {s = "hello" ++ recip.s ! Masc } ; 
@@ -29,4 +29,4 @@ concrete HelloEng of HelloAbs = ResEng ** {
 			mega : Str -> Str -> Recipient = \s,r ->
 				lin Recipient { s = \\_ => "mega" ++ s ++ "and" ++ "mega" ++ r }
 		} ;
-} 
+} ;

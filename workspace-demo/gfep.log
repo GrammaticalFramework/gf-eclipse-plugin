@@ -6688,3 +6688,1177 @@ com.google.inject.CreationException: Guice creation errors:
 [2011-11-09 16:26:16,343] INFO  - ResEng.gf
 [2011-11-09 16:26:16,384] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
 [2011-11-09 16:26:16,385] INFO  + ResEng.gf
+[2011-11-09 16:40:26,990] INFO  Full build on Hello
+[2011-11-09 16:40:26,993] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-09 16:40:26,993] INFO  - AbsCat.gfo
+[2011-11-09 16:40:26,994] INFO  - tags
+[2011-11-09 16:40:26,994] INFO  - AbsCat.gf
+[2011-11-09 16:40:27,028] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-09 16:40:27,030] INFO  + AbsCat.gf
+[2011-11-09 16:40:27,030] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-09 16:40:27,031] INFO  - tags
+[2011-11-09 16:40:27,031] INFO  - HelloAbs.gfo
+[2011-11-09 16:40:27,032] INFO  - HelloAbs.gf
+[2011-11-09 16:40:27,072] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-09 16:40:27,073] INFO  + HelloAbs.gf
+[2011-11-09 16:40:27,074] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-09 16:40:27,074] INFO  - tags
+[2011-11-09 16:40:27,075] INFO  - HelloEng.gf
+[2011-11-09 16:40:27,075] INFO  - HelloEng.gfo
+[2011-11-09 16:40:27,113] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-09 16:40:27,114] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-09 16:40:27,114] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-09 16:40:27,114] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-09 16:40:27,115] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-09 16:40:27,115] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-09 16:40:27,115] DEBUG GF:    Warning: no linearization of World
+[2011-11-09 16:40:27,116] DEBUG GF: 
+[2011-11-09 16:40:27,116] INFO  + HelloEng.gf
+[2011-11-09 16:40:27,116] INFO  Cleaning build directory for ResEng.gf
+[2011-11-09 16:40:27,117] INFO  - tags
+[2011-11-09 16:40:27,117] INFO  - ResEng.gfo
+[2011-11-09 16:40:27,117] INFO  - ResEng.gf
+[2011-11-09 16:40:27,161] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-09 16:40:27,162] INFO  + ResEng.gf
+[2011-11-09 16:40:34,484] INFO  Full build on Hello
+[2011-11-09 16:40:34,485] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-09 16:40:34,485] INFO  - AbsCat.gfo
+[2011-11-09 16:40:34,486] INFO  - tags
+[2011-11-09 16:40:34,486] INFO  - AbsCat.gf
+[2011-11-09 16:40:34,525] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-09 16:40:34,526] INFO  + AbsCat.gf
+[2011-11-09 16:40:34,527] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-09 16:40:34,527] INFO  - tags
+[2011-11-09 16:40:34,527] INFO  - HelloAbs.gfo
+[2011-11-09 16:40:34,528] INFO  - HelloAbs.gf
+[2011-11-09 16:40:34,567] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-09 16:40:34,568] INFO  + HelloAbs.gf
+[2011-11-09 16:40:34,568] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-09 16:40:34,568] INFO  - tags
+[2011-11-09 16:40:34,569] INFO  - HelloEng.gf
+[2011-11-09 16:40:34,569] INFO  - HelloEng.gfo
+[2011-11-09 16:40:34,614] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-09 16:40:34,614] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-09 16:40:34,614] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-09 16:40:34,615] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-09 16:40:34,615] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-09 16:40:34,615] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-09 16:40:34,615] DEBUG GF:    Warning: no linearization of World
+[2011-11-09 16:40:34,615] DEBUG GF: 
+[2011-11-09 16:40:34,616] INFO  + HelloEng.gf
+[2011-11-09 16:40:34,616] INFO  Cleaning build directory for ResEng.gf
+[2011-11-09 16:40:34,616] INFO  - tags
+[2011-11-09 16:40:34,617] INFO  - ResEng.gfo
+[2011-11-09 16:40:34,617] INFO  - ResEng.gf
+[2011-11-09 16:40:34,653] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-09 16:40:34,654] INFO  + ResEng.gf
+[2011-11-09 16:40:45,853] INFO  Full build on Hello
+[2011-11-09 16:40:45,854] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-09 16:40:45,855] INFO  - AbsCat.gfo
+[2011-11-09 16:40:45,855] INFO  - tags
+[2011-11-09 16:40:45,855] INFO  - AbsCat.gf
+[2011-11-09 16:40:45,894] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-09 16:40:45,895] INFO  + AbsCat.gf
+[2011-11-09 16:40:45,896] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-09 16:40:45,896] INFO  - tags
+[2011-11-09 16:40:45,896] INFO  - HelloAbs.gfo
+[2011-11-09 16:40:45,897] INFO  - HelloAbs.gf
+[2011-11-09 16:40:45,937] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-09 16:40:45,938] INFO  + HelloAbs.gf
+[2011-11-09 16:40:45,938] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-09 16:40:45,939] INFO  - tags
+[2011-11-09 16:40:45,939] INFO  - HelloEng.gf
+[2011-11-09 16:40:45,939] INFO  - HelloEng.gfo
+[2011-11-09 16:40:45,987] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf... 
+[2011-11-09 16:40:45,988] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-09 16:40:45,988] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-09 16:40:45,988] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-09 16:40:45,989] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-09 16:40:45,989] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-09 16:40:45,989] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-09 16:40:45,989] DEBUG GF:    Warning: no linearization of World
+[2011-11-09 16:40:45,990] DEBUG GF: 
+[2011-11-09 16:40:45,990] INFO  + HelloEng.gf
+[2011-11-09 16:40:45,990] INFO  Cleaning build directory for ResEng.gf
+[2011-11-09 16:40:45,991] INFO  - tags
+[2011-11-09 16:40:45,991] INFO  - ResEng.gfo
+[2011-11-09 16:40:45,991] INFO  - ResEng.gf
+[2011-11-09 16:40:46,030] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-09 16:40:46,031] INFO  + ResEng.gf
+[2011-11-09 16:40:50,338] INFO  Full build on Hello
+[2011-11-09 16:40:50,339] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-09 16:40:50,340] INFO  - AbsCat.gfo
+[2011-11-09 16:40:50,340] INFO  - tags
+[2011-11-09 16:40:50,340] INFO  - AbsCat.gf
+[2011-11-09 16:40:50,380] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-09 16:40:50,381] INFO  + AbsCat.gf
+[2011-11-09 16:40:50,382] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-09 16:40:50,383] INFO  - tags
+[2011-11-09 16:40:50,383] INFO  - HelloAbs.gfo
+[2011-11-09 16:40:50,383] INFO  - HelloAbs.gf
+[2011-11-09 16:40:50,427] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-09 16:40:50,428] INFO  + HelloAbs.gf
+[2011-11-09 16:40:50,428] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-09 16:40:50,429] INFO  - tags
+[2011-11-09 16:40:50,429] INFO  - HelloEng.gf
+[2011-11-09 16:40:50,429] INFO  - HelloEng.gfo
+[2011-11-09 16:40:50,465] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf... renaming module HelloAbs
+[2011-11-09 16:40:50,466] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:8:
+[2011-11-09 16:40:50,466] DEBUG GF:    Happened in the renaming of Hello
+[2011-11-09 16:40:50,466] DEBUG GF:       atomic term Greeting
+[2011-11-09 16:40:50,466] DEBUG GF:       given AbsCat, HelloAbs
+[2011-11-09 16:40:50,466] DEBUG GF:          constant not found: Greeting
+[2011-11-09 16:40:50,466] WARN  > Failed: HelloEng.gf
+[2011-11-09 16:40:50,466] INFO  Cleaning build directory for ResEng.gf
+[2011-11-09 16:40:50,467] INFO  - tags
+[2011-11-09 16:40:50,467] INFO  - ResEng.gfo
+[2011-11-09 16:40:50,467] INFO  - ResEng.gf
+[2011-11-09 16:40:50,489] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-09 16:40:50,489] INFO  + ResEng.gf
+[2011-11-09 16:40:56,892] INFO  Full build on Hello
+[2011-11-09 16:40:56,892] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-09 16:40:56,892] INFO  - AbsCat.gfo
+[2011-11-09 16:40:56,893] INFO  - tags
+[2011-11-09 16:40:56,893] INFO  - AbsCat.gf
+[2011-11-09 16:40:56,925] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-09 16:40:56,926] INFO  + AbsCat.gf
+[2011-11-09 16:40:56,926] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-09 16:40:56,926] INFO  - tags
+[2011-11-09 16:40:56,927] INFO  - HelloAbs.gfo
+[2011-11-09 16:40:56,927] INFO  - HelloAbs.gf
+[2011-11-09 16:40:56,961] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-09 16:40:56,962] INFO  + HelloAbs.gf
+[2011-11-09 16:40:56,962] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-09 16:40:56,963] INFO  - HelloEng.gf
+[2011-11-09 16:40:57,012] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf... renaming module HelloAbs
+[2011-11-09 16:40:57,012] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:8:
+[2011-11-09 16:40:57,013] DEBUG GF:    Happened in the renaming of Hello
+[2011-11-09 16:40:57,013] DEBUG GF:       atomic term Greeting
+[2011-11-09 16:40:57,013] DEBUG GF:       given AbsCat, HelloAbs
+[2011-11-09 16:40:57,013] DEBUG GF:          constant not found: Greeting
+[2011-11-09 16:40:57,013] WARN  > Failed: HelloEng.gf
+[2011-11-09 16:40:57,014] INFO  Cleaning build directory for ResEng.gf
+[2011-11-09 16:40:57,015] INFO  - tags
+[2011-11-09 16:40:57,015] INFO  - ResEng.gfo
+[2011-11-09 16:40:57,015] INFO  - ResEng.gf
+[2011-11-09 16:40:57,055] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-09 16:40:57,056] INFO  + ResEng.gf
+[2011-11-09 16:41:04,020] INFO  Full build on Hello
+[2011-11-09 16:41:04,021] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-09 16:41:04,021] INFO  - AbsCat.gfo
+[2011-11-09 16:41:04,021] INFO  - tags
+[2011-11-09 16:41:04,021] INFO  - AbsCat.gf
+[2011-11-09 16:41:04,059] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-09 16:41:04,059] INFO  + AbsCat.gf
+[2011-11-09 16:41:04,060] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-09 16:41:04,060] INFO  - tags
+[2011-11-09 16:41:04,060] INFO  - HelloAbs.gfo
+[2011-11-09 16:41:04,061] INFO  - HelloAbs.gf
+[2011-11-09 16:41:04,103] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-09 16:41:04,104] INFO  + HelloAbs.gf
+[2011-11-09 16:41:04,104] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-09 16:41:04,105] INFO  - HelloEng.gf
+[2011-11-09 16:41:04,151] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-09 16:41:04,151] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-09 16:41:04,151] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-09 16:41:04,151] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-09 16:41:04,152] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-09 16:41:04,152] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-09 16:41:04,152] DEBUG GF:    Warning: no linearization of World
+[2011-11-09 16:41:04,152] DEBUG GF: 
+[2011-11-09 16:41:04,152] INFO  + HelloEng.gf
+[2011-11-09 16:41:04,152] INFO  Cleaning build directory for ResEng.gf
+[2011-11-09 16:41:04,153] INFO  - tags
+[2011-11-09 16:41:04,153] INFO  - ResEng.gfo
+[2011-11-09 16:41:04,153] INFO  - ResEng.gf
+[2011-11-09 16:41:04,177] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-09 16:41:04,178] INFO  + ResEng.gf
+[2011-11-09 16:41:07,827] INFO  Full build on Hello
+[2011-11-09 16:41:07,828] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-09 16:41:07,828] INFO  - AbsCat.gfo
+[2011-11-09 16:41:07,828] INFO  - tags
+[2011-11-09 16:41:07,828] INFO  - AbsCat.gf
+[2011-11-09 16:41:07,867] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-09 16:41:07,868] INFO  + AbsCat.gf
+[2011-11-09 16:41:07,868] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-09 16:41:07,869] INFO  - tags
+[2011-11-09 16:41:07,869] INFO  - HelloAbs.gfo
+[2011-11-09 16:41:07,869] INFO  - HelloAbs.gf
+[2011-11-09 16:41:07,910] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-09 16:41:07,911] INFO  + HelloAbs.gf
+[2011-11-09 16:41:07,911] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-09 16:41:07,912] INFO  - tags
+[2011-11-09 16:41:07,912] INFO  - HelloEng.gf
+[2011-11-09 16:41:07,912] INFO  - HelloEng.gfo
+[2011-11-09 16:41:07,954] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf... 
+[2011-11-09 16:41:07,954] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-09 16:41:07,955] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-09 16:41:07,955] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-09 16:41:07,955] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-09 16:41:07,955] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-09 16:41:07,955] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-09 16:41:07,955] DEBUG GF:    Warning: no linearization of World
+[2011-11-09 16:41:07,956] DEBUG GF: 
+[2011-11-09 16:41:07,956] INFO  + HelloEng.gf
+[2011-11-09 16:41:07,956] INFO  Cleaning build directory for ResEng.gf
+[2011-11-09 16:41:07,956] INFO  - tags
+[2011-11-09 16:41:07,957] INFO  - ResEng.gfo
+[2011-11-09 16:41:07,957] INFO  - ResEng.gf
+[2011-11-09 16:41:07,998] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-09 16:41:07,999] INFO  + ResEng.gf
+[2011-11-09 16:42:32,150] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:32,161] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:41,072] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:41,083] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:41,086] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:41,089] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:41,623] INFO  Full build on Functors
+[2011-11-09 16:42:41,625] INFO  Cleaning build directory for Foods.gf
+[2011-11-09 16:42:41,625] INFO  - tags
+[2011-11-09 16:42:41,625] INFO  - Foods.gf
+[2011-11-09 16:42:41,626] INFO  - Foods.gfo
+[2011-11-09 16:42:41,662] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods/Foods.gf... 
+[2011-11-09 16:42:41,663] INFO  + Foods.gf
+[2011-11-09 16:42:41,663] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-09 16:42:41,664] INFO  - FoodsEng.gf
+[2011-11-09 16:42:41,703] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:41,704] DEBUG GF: searched in: ./
+[2011-11-09 16:42:41,705] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:41,705] WARN  > Failed: FoodsEng.gf
+[2011-11-09 16:42:41,706] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-09 16:42:41,707] INFO  - FoodsGer.gf
+[2011-11-09 16:42:41,747] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:41,748] DEBUG GF: searched in: ./
+[2011-11-09 16:42:41,748] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:41,749] WARN  > Failed: FoodsGer.gf
+[2011-11-09 16:42:41,750] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-09 16:42:41,751] INFO  - FoodsI.gf
+[2011-11-09 16:42:41,790] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:41,791] DEBUG GF: searched in: ./
+[2011-11-09 16:42:41,791] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:41,792] WARN  > Failed: FoodsI.gf
+[2011-11-09 16:42:41,793] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-09 16:42:41,794] INFO  - LexFoods.gf
+[2011-11-09 16:42:41,835] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:41,835] DEBUG GF: searched in: ./
+[2011-11-09 16:42:41,835] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:41,836] WARN  > Failed: LexFoods.gf
+[2011-11-09 16:42:41,837] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-09 16:42:41,837] INFO  - LexFoodsEng.gf
+[2011-11-09 16:42:41,878] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:41,879] DEBUG GF: searched in: ./
+[2011-11-09 16:42:41,879] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:41,879] WARN  > Failed: LexFoodsEng.gf
+[2011-11-09 16:42:41,880] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-09 16:42:41,881] INFO  - LexFoodsGer.gf
+[2011-11-09 16:42:41,921] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:41,922] DEBUG GF: searched in: ./
+[2011-11-09 16:42:41,922] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:41,923] WARN  > Failed: LexFoodsGer.gf
+[2011-11-09 16:42:45,530] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:45,531] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:49,539] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:49,540] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:52,698] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:52,702] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:42:52,806] INFO  Full build on Functors
+[2011-11-09 16:42:52,806] INFO  Cleaning build directory for Foods.gf
+[2011-11-09 16:42:52,807] INFO  - tags
+[2011-11-09 16:42:52,807] INFO  - Foods.gf
+[2011-11-09 16:42:52,807] INFO  - Foods.gfo
+[2011-11-09 16:42:52,848] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods/Foods.gf... 
+[2011-11-09 16:42:52,849] INFO  + Foods.gf
+[2011-11-09 16:42:52,849] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-09 16:42:52,850] INFO  - FoodsEng.gf
+[2011-11-09 16:42:52,883] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:52,883] DEBUG GF: searched in: ./
+[2011-11-09 16:42:52,883] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:52,884] WARN  > Failed: FoodsEng.gf
+[2011-11-09 16:42:52,885] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-09 16:42:52,885] INFO  - FoodsGer.gf
+[2011-11-09 16:42:52,932] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:52,932] DEBUG GF: searched in: ./
+[2011-11-09 16:42:52,933] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:52,933] WARN  > Failed: FoodsGer.gf
+[2011-11-09 16:42:52,933] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-09 16:42:52,934] INFO  - FoodsI.gf
+[2011-11-09 16:42:52,959] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:52,959] DEBUG GF: searched in: ./
+[2011-11-09 16:42:52,959] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:52,960] WARN  > Failed: FoodsI.gf
+[2011-11-09 16:42:52,961] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-09 16:42:52,961] INFO  - LexFoods.gf
+[2011-11-09 16:42:52,999] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:52,999] DEBUG GF: searched in: ./
+[2011-11-09 16:42:53,000] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:53,002] WARN  > Failed: LexFoods.gf
+[2011-11-09 16:42:53,003] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-09 16:42:53,004] INFO  - LexFoodsEng.gf
+[2011-11-09 16:42:53,045] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:53,046] DEBUG GF: searched in: ./
+[2011-11-09 16:42:53,046] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:53,046] WARN  > Failed: LexFoodsEng.gf
+[2011-11-09 16:42:53,048] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-09 16:42:53,048] INFO  - LexFoodsGer.gf
+[2011-11-09 16:42:53,085] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:42:53,085] DEBUG GF: searched in: ./
+[2011-11-09 16:42:53,085] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:42:53,085] WARN  > Failed: LexFoodsGer.gf
+[2011-11-09 16:44:21,395] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:44:21,409] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:44:28,760] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:44:28,762] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:44:31,001] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:44:31,009] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:44:31,116] INFO  Full build on Functors
+[2011-11-09 16:44:31,117] INFO  Cleaning build directory for Foods.gf
+[2011-11-09 16:44:31,118] INFO  - tags
+[2011-11-09 16:44:31,118] INFO  - Foods.gf
+[2011-11-09 16:44:31,118] INFO  - Foods.gfo
+[2011-11-09 16:44:31,150] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods/Foods.gf... 
+[2011-11-09 16:44:31,151] INFO  + Foods.gf
+[2011-11-09 16:44:31,151] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-09 16:44:31,151] INFO  - FoodsEng.gf
+[2011-11-09 16:44:31,189] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:31,189] DEBUG GF: searched in: ./
+[2011-11-09 16:44:31,190] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:31,190] WARN  > Failed: FoodsEng.gf
+[2011-11-09 16:44:31,191] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-09 16:44:31,191] INFO  - FoodsGer.gf
+[2011-11-09 16:44:31,235] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:31,235] DEBUG GF: searched in: ./
+[2011-11-09 16:44:31,235] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:31,236] WARN  > Failed: FoodsGer.gf
+[2011-11-09 16:44:31,238] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-09 16:44:31,238] INFO  - FoodsI.gf
+[2011-11-09 16:44:31,278] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:31,278] DEBUG GF: searched in: ./
+[2011-11-09 16:44:31,279] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:31,279] WARN  > Failed: FoodsI.gf
+[2011-11-09 16:44:31,280] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-09 16:44:31,280] INFO  - LexFoods.gf
+[2011-11-09 16:44:31,318] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:31,319] DEBUG GF: searched in: ./
+[2011-11-09 16:44:31,319] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:31,319] WARN  > Failed: LexFoods.gf
+[2011-11-09 16:44:31,320] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-09 16:44:31,321] INFO  - LexFoodsEng.gf
+[2011-11-09 16:44:31,362] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:31,362] DEBUG GF: searched in: ./
+[2011-11-09 16:44:31,362] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:31,362] WARN  > Failed: LexFoodsEng.gf
+[2011-11-09 16:44:31,365] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-09 16:44:31,365] INFO  - LexFoodsGer.gf
+[2011-11-09 16:44:31,405] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:31,406] DEBUG GF: searched in: ./
+[2011-11-09 16:44:31,406] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:31,406] WARN  > Failed: LexFoodsGer.gf
+[2011-11-09 16:44:41,943] INFO  Clean Functors
+[2011-11-09 16:44:41,945] INFO  Clean Hello
+[2011-11-09 16:44:42,066] INFO  Full build on Functors
+[2011-11-09 16:44:42,066] INFO  Cleaning build directory for Foods.gf
+[2011-11-09 16:44:42,067] INFO  - tags
+[2011-11-09 16:44:42,067] INFO  - Foods.gf
+[2011-11-09 16:44:42,067] INFO  - Foods.gfo
+[2011-11-09 16:44:42,091] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods/Foods.gf... 
+[2011-11-09 16:44:42,091] INFO  + Foods.gf
+[2011-11-09 16:44:42,092] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-09 16:44:42,092] INFO  - FoodsEng.gf
+[2011-11-09 16:44:42,127] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:42,127] DEBUG GF: searched in: ./
+[2011-11-09 16:44:42,127] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:42,127] WARN  > Failed: FoodsEng.gf
+[2011-11-09 16:44:42,128] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-09 16:44:42,128] INFO  - FoodsGer.gf
+[2011-11-09 16:44:42,152] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:42,152] DEBUG GF: searched in: ./
+[2011-11-09 16:44:42,152] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:42,152] WARN  > Failed: FoodsGer.gf
+[2011-11-09 16:44:42,153] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-09 16:44:42,153] INFO  - FoodsI.gf
+[2011-11-09 16:44:42,182] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:42,182] DEBUG GF: searched in: ./
+[2011-11-09 16:44:42,182] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:42,182] WARN  > Failed: FoodsI.gf
+[2011-11-09 16:44:42,183] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-09 16:44:42,183] INFO  - LexFoods.gf
+[2011-11-09 16:44:42,228] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:42,228] DEBUG GF: searched in: ./
+[2011-11-09 16:44:42,228] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:42,228] WARN  > Failed: LexFoods.gf
+[2011-11-09 16:44:42,229] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-09 16:44:42,229] INFO  - LexFoodsEng.gf
+[2011-11-09 16:44:42,269] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:42,270] DEBUG GF: searched in: ./
+[2011-11-09 16:44:42,270] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:42,270] WARN  > Failed: LexFoodsEng.gf
+[2011-11-09 16:44:42,271] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-09 16:44:42,271] INFO  - LexFoodsGer.gf
+[2011-11-09 16:44:42,304] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:44:42,305] DEBUG GF: searched in: ./
+[2011-11-09 16:44:42,305] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:44:42,305] WARN  > Failed: LexFoodsGer.gf
+[2011-11-09 16:44:42,308] INFO  Full build on Hello
+[2011-11-09 16:44:42,308] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-09 16:44:42,309] INFO  - AbsCat.gfo
+[2011-11-09 16:44:42,309] INFO  - tags
+[2011-11-09 16:44:42,309] INFO  - AbsCat.gf
+[2011-11-09 16:44:42,331] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-09 16:44:42,331] INFO  + AbsCat.gf
+[2011-11-09 16:44:42,331] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-09 16:44:42,332] INFO  - tags
+[2011-11-09 16:44:42,332] INFO  - HelloAbs.gfo
+[2011-11-09 16:44:42,332] INFO  - HelloAbs.gf
+[2011-11-09 16:44:42,355] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-09 16:44:42,356] INFO  + HelloAbs.gf
+[2011-11-09 16:44:42,356] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-09 16:44:42,356] INFO  - tags
+[2011-11-09 16:44:42,357] INFO  - HelloEng.gf
+[2011-11-09 16:44:42,357] INFO  - HelloEng.gfo
+[2011-11-09 16:44:42,384] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-09 16:44:42,384] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-09 16:44:42,384] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-09 16:44:42,384] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-09 16:44:42,384] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-09 16:44:42,384] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-09 16:44:42,385] DEBUG GF:    Warning: no linearization of World
+[2011-11-09 16:44:42,385] DEBUG GF: 
+[2011-11-09 16:44:42,385] INFO  + HelloEng.gf
+[2011-11-09 16:44:42,385] INFO  Cleaning build directory for ResEng.gf
+[2011-11-09 16:44:42,385] INFO  - tags
+[2011-11-09 16:44:42,385] INFO  - ResEng.gfo
+[2011-11-09 16:44:42,385] INFO  - ResEng.gf
+[2011-11-09 16:44:42,408] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-09 16:44:42,409] INFO  + ResEng.gf
+[2011-11-09 16:47:41,781] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:47:41,791] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:47:59,106] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:47:59,116] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:48:05,031] INFO  Clean Functors
+[2011-11-09 16:48:05,034] INFO  Clean Hello
+[2011-11-09 16:48:05,165] INFO  Full build on Functors
+[2011-11-09 16:48:05,165] INFO  Cleaning build directory for Foods.gf
+[2011-11-09 16:48:05,166] INFO  - tags
+[2011-11-09 16:48:05,166] INFO  - Foods.gf
+[2011-11-09 16:48:05,166] INFO  - Foods.gfo
+[2011-11-09 16:48:05,197] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods/Foods.gf... 
+[2011-11-09 16:48:05,198] INFO  + Foods.gf
+[2011-11-09 16:48:05,198] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-09 16:48:05,198] INFO  - FoodsEng.gf
+[2011-11-09 16:48:05,229] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:05,229] DEBUG GF: searched in: ./
+[2011-11-09 16:48:05,229] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:05,230] WARN  > Failed: FoodsEng.gf
+[2011-11-09 16:48:05,230] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-09 16:48:05,231] INFO  - FoodsGer.gf
+[2011-11-09 16:48:05,254] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:05,254] DEBUG GF: searched in: ./
+[2011-11-09 16:48:05,254] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:05,254] WARN  > Failed: FoodsGer.gf
+[2011-11-09 16:48:05,255] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-09 16:48:05,255] INFO  - FoodsI.gf
+[2011-11-09 16:48:05,275] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:05,275] DEBUG GF: searched in: ./
+[2011-11-09 16:48:05,275] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:05,276] WARN  > Failed: FoodsI.gf
+[2011-11-09 16:48:05,276] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-09 16:48:05,276] INFO  - LexFoods.gf
+[2011-11-09 16:48:05,301] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:05,301] DEBUG GF: searched in: ./
+[2011-11-09 16:48:05,301] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:05,302] WARN  > Failed: LexFoods.gf
+[2011-11-09 16:48:05,302] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-09 16:48:05,302] INFO  - LexFoodsEng.gf
+[2011-11-09 16:48:05,328] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:05,333] DEBUG GF: searched in: ./
+[2011-11-09 16:48:05,334] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:05,339] WARN  > Failed: LexFoodsEng.gf
+[2011-11-09 16:48:05,340] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-09 16:48:05,340] INFO  - LexFoodsGer.gf
+[2011-11-09 16:48:05,365] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:05,365] DEBUG GF: searched in: ./
+[2011-11-09 16:48:05,365] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:05,365] WARN  > Failed: LexFoodsGer.gf
+[2011-11-09 16:48:05,370] INFO  Full build on Hello
+[2011-11-09 16:48:05,371] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-09 16:48:05,371] INFO  - AbsCat.gfo
+[2011-11-09 16:48:05,371] INFO  - tags
+[2011-11-09 16:48:05,371] INFO  - AbsCat.gf
+[2011-11-09 16:48:05,395] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-09 16:48:05,395] INFO  + AbsCat.gf
+[2011-11-09 16:48:05,395] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-09 16:48:05,396] INFO  - tags
+[2011-11-09 16:48:05,396] INFO  - HelloAbs.gfo
+[2011-11-09 16:48:05,396] INFO  - HelloAbs.gf
+[2011-11-09 16:48:05,416] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-09 16:48:05,417] INFO  + HelloAbs.gf
+[2011-11-09 16:48:05,417] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-09 16:48:05,417] INFO  - tags
+[2011-11-09 16:48:05,418] INFO  - HelloEng.gf
+[2011-11-09 16:48:05,418] INFO  - HelloEng.gfo
+[2011-11-09 16:48:05,441] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-09 16:48:05,441] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-09 16:48:05,441] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-09 16:48:05,441] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-09 16:48:05,441] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-09 16:48:05,441] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-09 16:48:05,441] DEBUG GF:    Warning: no linearization of World
+[2011-11-09 16:48:05,441] DEBUG GF: 
+[2011-11-09 16:48:05,442] INFO  + HelloEng.gf
+[2011-11-09 16:48:05,442] INFO  Cleaning build directory for ResEng.gf
+[2011-11-09 16:48:05,442] INFO  - tags
+[2011-11-09 16:48:05,442] INFO  - ResEng.gfo
+[2011-11-09 16:48:05,442] INFO  - ResEng.gf
+[2011-11-09 16:48:05,462] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-09 16:48:05,462] INFO  + ResEng.gf
+[2011-11-09 16:48:42,482] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:48:42,504] WARN  Problem loading tags file for FoodsEng
+[2011-11-09 16:48:54,802] INFO  Clean Functors
+[2011-11-09 16:48:54,920] INFO  Full build on Functors
+[2011-11-09 16:48:54,921] INFO  Cleaning build directory for Foods.gf
+[2011-11-09 16:48:54,921] INFO  - tags
+[2011-11-09 16:48:54,921] INFO  - Foods.gf
+[2011-11-09 16:48:54,921] INFO  - Foods.gfo
+[2011-11-09 16:48:54,947] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods/Foods.gf... 
+[2011-11-09 16:48:54,947] INFO  + Foods.gf
+[2011-11-09 16:48:54,947] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-09 16:48:54,948] INFO  - FoodsEng.gf
+[2011-11-09 16:48:54,981] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:54,981] DEBUG GF: searched in: ./
+[2011-11-09 16:48:54,982] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:54,982] WARN  > Failed: FoodsEng.gf
+[2011-11-09 16:48:54,983] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-09 16:48:54,983] INFO  - FoodsGer.gf
+[2011-11-09 16:48:55,021] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:55,021] DEBUG GF: searched in: ./
+[2011-11-09 16:48:55,021] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:55,022] WARN  > Failed: FoodsGer.gf
+[2011-11-09 16:48:55,022] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-09 16:48:55,022] INFO  - FoodsI.gf
+[2011-11-09 16:48:55,051] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:55,052] DEBUG GF: searched in: ./
+[2011-11-09 16:48:55,052] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:55,052] WARN  > Failed: FoodsI.gf
+[2011-11-09 16:48:55,053] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-09 16:48:55,054] INFO  - LexFoods.gf
+[2011-11-09 16:48:55,091] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:55,092] DEBUG GF: searched in: ./
+[2011-11-09 16:48:55,092] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:55,092] WARN  > Failed: LexFoods.gf
+[2011-11-09 16:48:55,093] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-09 16:48:55,094] INFO  - LexFoodsEng.gf
+[2011-11-09 16:48:55,133] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:55,134] DEBUG GF: searched in: ./
+[2011-11-09 16:48:55,136] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:55,136] WARN  > Failed: LexFoodsEng.gf
+[2011-11-09 16:48:55,137] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-09 16:48:55,137] INFO  - LexFoodsGer.gf
+[2011-11-09 16:48:55,177] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-09 16:48:55,178] DEBUG GF: searched in: ./
+[2011-11-09 16:48:55,178] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-09 16:48:55,178] WARN  > Failed: LexFoodsGer.gf
+[2011-11-10 09:18:32,553] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:18:32,682] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:19:05,742] INFO  Clean Functors
+[2011-11-10 09:19:35,685] INFO  Full build on Functors
+[2011-11-10 09:19:35,704] INFO  Cleaning build directory for Foods.gf
+[2011-11-10 09:19:35,704] INFO  - tags
+[2011-11-10 09:19:35,704] INFO  - Foods.gf
+[2011-11-10 09:19:35,704] INFO  - Foods.gfo
+[2011-11-10 09:19:35,745] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods/Foods.gf... 
+[2011-11-10 09:19:35,746] INFO  + Foods.gf
+[2011-11-10 09:19:35,746] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-10 09:19:35,746] INFO  - FoodsEng.gf
+[2011-11-10 09:19:35,782] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 09:19:35,782] DEBUG GF: searched in: ./
+[2011-11-10 09:19:35,782] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 09:19:35,782] WARN  > Failed: FoodsEng.gf
+[2011-11-10 09:19:35,783] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-10 09:19:35,784] INFO  - FoodsGer.gf
+[2011-11-10 09:19:35,846] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 09:19:35,846] DEBUG GF: searched in: ./
+[2011-11-10 09:19:35,846] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 09:19:35,846] WARN  > Failed: FoodsGer.gf
+[2011-11-10 09:19:35,847] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-10 09:19:35,847] INFO  - FoodsI.gf
+[2011-11-10 09:19:35,872] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 09:19:35,872] DEBUG GF: searched in: ./
+[2011-11-10 09:19:35,872] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 09:19:35,872] WARN  > Failed: FoodsI.gf
+[2011-11-10 09:19:35,873] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-10 09:19:35,873] INFO  - LexFoods.gf
+[2011-11-10 09:19:35,910] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 09:19:35,911] DEBUG GF: searched in: ./
+[2011-11-10 09:19:35,911] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 09:19:35,911] WARN  > Failed: LexFoods.gf
+[2011-11-10 09:19:35,912] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-10 09:19:35,912] INFO  - LexFoodsEng.gf
+[2011-11-10 09:19:35,950] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 09:19:35,950] DEBUG GF: searched in: ./
+[2011-11-10 09:19:35,950] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 09:19:35,950] WARN  > Failed: LexFoodsEng.gf
+[2011-11-10 09:19:35,951] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-10 09:19:35,952] INFO  - LexFoodsGer.gf
+[2011-11-10 09:19:35,977] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 09:19:35,977] DEBUG GF: searched in: ./
+[2011-11-10 09:19:35,977] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 09:19:35,977] WARN  > Failed: LexFoodsGer.gf
+[2011-11-10 09:33:42,665] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:33:42,680] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:33:59,133] INFO  Clean Hello
+[2011-11-10 09:33:59,259] INFO  Full build on Hello
+[2011-11-10 09:33:59,261] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 09:33:59,261] INFO  - AbsCat.gfo
+[2011-11-10 09:33:59,261] INFO  - tags
+[2011-11-10 09:33:59,261] INFO  - AbsCat.gf
+[2011-11-10 09:33:59,294] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 09:33:59,295] INFO  + AbsCat.gf
+[2011-11-10 09:33:59,295] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 09:33:59,295] INFO  - tags
+[2011-11-10 09:33:59,295] INFO  - HelloAbs.gfo
+[2011-11-10 09:33:59,296] INFO  - HelloAbs.gf
+[2011-11-10 09:33:59,318] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 09:33:59,319] INFO  + HelloAbs.gf
+[2011-11-10 09:33:59,319] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 09:33:59,319] INFO  - tags
+[2011-11-10 09:33:59,320] INFO  - HelloEng.gf
+[2011-11-10 09:33:59,320] INFO  - HelloEng.gfo
+[2011-11-10 09:33:59,364] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 09:33:59,364] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 09:33:59,364] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 09:33:59,364] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 09:33:59,365] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 09:33:59,365] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 09:33:59,365] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 09:33:59,365] DEBUG GF: 
+[2011-11-10 09:33:59,365] INFO  + HelloEng.gf
+[2011-11-10 09:33:59,365] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 09:33:59,366] INFO  - tags
+[2011-11-10 09:33:59,366] INFO  - ResEng.gfo
+[2011-11-10 09:33:59,366] INFO  - ResEng.gf
+[2011-11-10 09:33:59,391] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 09:33:59,391] INFO  + ResEng.gf
+[2011-11-10 09:34:48,122] INFO  Clean Hello
+[2011-11-10 09:35:16,545] INFO  Full build on Hello
+[2011-11-10 09:35:16,546] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 09:35:16,546] INFO  - AbsCat.gfo
+[2011-11-10 09:35:16,546] INFO  - tags
+[2011-11-10 09:35:16,546] INFO  - AbsCat.gf
+[2011-11-10 09:35:16,570] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 09:35:16,571] INFO  + AbsCat.gf
+[2011-11-10 09:35:16,571] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 09:35:16,571] INFO  - tags
+[2011-11-10 09:35:16,572] INFO  - HelloAbs.gfo
+[2011-11-10 09:35:16,572] INFO  - HelloAbs.gf
+[2011-11-10 09:35:16,602] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 09:35:16,603] INFO  + HelloAbs.gf
+[2011-11-10 09:35:16,604] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 09:35:16,604] INFO  - tags
+[2011-11-10 09:35:16,605] INFO  - HelloEng.gf
+[2011-11-10 09:35:16,605] INFO  - HelloEng.gfo
+[2011-11-10 09:35:16,651] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 09:35:16,651] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 09:35:16,652] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 09:35:16,652] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 09:35:16,653] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 09:35:16,653] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 09:35:16,653] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 09:35:16,653] DEBUG GF: 
+[2011-11-10 09:35:16,653] INFO  + HelloEng.gf
+[2011-11-10 09:35:16,654] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 09:35:16,654] INFO  - tags
+[2011-11-10 09:35:16,654] INFO  - ResEng.gfo
+[2011-11-10 09:35:16,654] INFO  - ResEng.gf
+[2011-11-10 09:35:16,679] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 09:35:16,679] INFO  + ResEng.gf
+[2011-11-10 09:35:24,198] INFO  Clean Hello
+[2011-11-10 09:37:56,312] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:37:56,337] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:38:26,365] INFO  Clean Hello
+[2011-11-10 09:38:44,889] INFO  - AbsCat.gf
+[2011-11-10 09:38:44,890] INFO  - AbsCat.gfo
+[2011-11-10 09:38:44,891] INFO  - tags
+[2011-11-10 09:38:44,892] INFO  - HelloAbs.gf
+[2011-11-10 09:38:44,893] INFO  - HelloAbs.gfo
+[2011-11-10 09:38:44,893] INFO  - tags
+[2011-11-10 09:38:44,894] INFO  - HelloEng.gf
+[2011-11-10 09:38:44,895] INFO  - HelloEng.gfo
+[2011-11-10 09:38:44,896] INFO  - tags
+[2011-11-10 09:38:44,897] INFO  - ResEng.gf
+[2011-11-10 09:38:44,898] INFO  - ResEng.gfo
+[2011-11-10 09:38:44,898] INFO  - tags
+[2011-11-10 09:54:59,537] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:54:59,549] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:55:08,154] INFO  Clean Functors
+[2011-11-10 09:55:08,160] INFO  - Foods.gf
+[2011-11-10 09:55:08,161] INFO  - Foods.gfo
+[2011-11-10 09:56:01,602] INFO  Clean Functors
+[2011-11-10 09:56:12,681] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:56:12,691] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:56:20,467] INFO  Clean Hello
+[2011-11-10 09:58:14,418] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:58:14,436] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 09:58:21,992] INFO  Clean Hello
+[2011-11-10 09:58:26,195] INFO  - AbsCat.gfo
+[2011-11-10 09:58:26,196] INFO  - HelloAbs.gfo
+[2011-11-10 09:58:26,197] INFO  - ResEng.gfo
+[2011-11-10 09:58:38,857] INFO  Clean Functors
+[2011-11-10 09:58:38,859] INFO  Clean Hello
+[2011-11-10 10:00:52,612] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:00:52,636] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:00:58,383] INFO  Clean Functors
+[2011-11-10 10:00:58,396] INFO  - tags
+[2011-11-10 10:00:58,397] INFO  - FoodsEng.gf
+[2011-11-10 10:00:58,397] INFO  - FoodsGer.gf
+[2011-11-10 10:00:58,398] INFO  - FoodsI.gf
+[2011-11-10 10:00:58,399] INFO  - LexFoods.gf
+[2011-11-10 10:00:58,399] INFO  - LexFoodsEng.gf
+[2011-11-10 10:00:58,400] INFO  - LexFoodsGer.gf
+[2011-11-10 10:00:58,400] INFO  Clean Hello
+[2011-11-10 10:02:40,855] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:02:40,864] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:34:24,065] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:34:24,076] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:35:07,870] WARN  Problem loading tags file for HelloAbs
+[2011-11-10 10:35:07,871] WARN  Problem loading tags file for HelloAbs
+[2011-11-10 10:35:21,173] WARN  Problem loading tags file for HelloAbs
+[2011-11-10 10:35:21,189] WARN  Problem loading tags file for HelloAbs
+[2011-11-10 10:35:27,626] WARN  Problem loading tags file for HelloAbs
+[2011-11-10 10:35:27,630] WARN  Problem loading tags file for HelloAbs
+[2011-11-10 10:35:32,240] INFO  Full build on Functors
+[2011-11-10 10:35:32,243] INFO  Cleaning build directory for Foods.gf
+[2011-11-10 10:35:32,287] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods/Foods.gf... 
+[2011-11-10 10:35:32,288] INFO  + Foods.gf
+[2011-11-10 10:35:32,288] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-10 10:35:32,331] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:35:32,332] DEBUG GF: searched in: ./
+[2011-11-10 10:35:32,332] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:35:32,332] WARN  > Failed: FoodsEng.gf
+[2011-11-10 10:35:32,334] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-10 10:35:32,380] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:35:32,381] DEBUG GF: searched in: ./
+[2011-11-10 10:35:32,382] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:35:32,382] WARN  > Failed: FoodsGer.gf
+[2011-11-10 10:35:32,383] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-10 10:35:32,430] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:35:32,430] DEBUG GF: searched in: ./
+[2011-11-10 10:35:32,431] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:35:32,431] WARN  > Failed: FoodsI.gf
+[2011-11-10 10:35:32,433] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-10 10:35:32,476] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:35:32,476] DEBUG GF: searched in: ./
+[2011-11-10 10:35:32,476] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:35:32,477] WARN  > Failed: LexFoods.gf
+[2011-11-10 10:35:32,478] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-10 10:35:32,521] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:35:32,521] DEBUG GF: searched in: ./
+[2011-11-10 10:35:32,521] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:35:32,522] WARN  > Failed: LexFoodsEng.gf
+[2011-11-10 10:35:32,523] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-10 10:35:32,567] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:35:32,568] DEBUG GF: searched in: ./
+[2011-11-10 10:35:32,568] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:35:32,568] WARN  > Failed: LexFoodsGer.gf
+[2011-11-10 10:35:32,578] INFO  Full build on Hello
+[2011-11-10 10:35:32,578] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 10:35:32,611] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 10:35:32,611] INFO  + AbsCat.gf
+[2011-11-10 10:35:32,612] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 10:35:32,655] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 10:35:32,656] INFO  + HelloAbs.gf
+[2011-11-10 10:35:32,656] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 10:35:32,704] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 10:35:32,705] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 10:35:32,705] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 10:35:32,705] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 10:35:32,706] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 10:35:32,706] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 10:35:32,706] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 10:35:32,707] DEBUG GF: 
+[2011-11-10 10:35:32,707] INFO  + HelloEng.gf
+[2011-11-10 10:35:32,707] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 10:35:32,746] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 10:35:32,747] INFO  + ResEng.gf
+[2011-11-10 10:38:04,455] INFO  Full build on Functors
+[2011-11-10 10:38:04,467] INFO  Cleaning build directory for Foods.gf
+[2011-11-10 10:38:04,467] INFO  - tags
+[2011-11-10 10:38:04,467] INFO  - Foods.gf
+[2011-11-10 10:38:04,468] INFO  - Foods.gfo
+[2011-11-10 10:38:04,525] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods/Foods.gf... 
+[2011-11-10 10:38:04,525] INFO  + Foods.gf
+[2011-11-10 10:38:04,525] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-10 10:38:04,526] INFO  - FoodsEng.gf
+[2011-11-10 10:38:04,611] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:38:04,611] DEBUG GF: searched in: ./
+[2011-11-10 10:38:04,611] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:38:04,612] WARN  > Failed: FoodsEng.gf
+[2011-11-10 10:38:04,620] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-10 10:38:04,620] INFO  - FoodsGer.gf
+[2011-11-10 10:38:04,673] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:38:04,675] DEBUG GF: searched in: ./
+[2011-11-10 10:38:04,675] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:38:04,675] WARN  > Failed: FoodsGer.gf
+[2011-11-10 10:38:04,676] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-10 10:38:04,676] INFO  - FoodsI.gf
+[2011-11-10 10:38:04,711] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:38:04,712] DEBUG GF: searched in: ./
+[2011-11-10 10:38:04,712] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:38:04,712] WARN  > Failed: FoodsI.gf
+[2011-11-10 10:38:04,713] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-10 10:38:04,713] INFO  - LexFoods.gf
+[2011-11-10 10:38:04,743] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:38:04,743] DEBUG GF: searched in: ./
+[2011-11-10 10:38:04,743] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:38:04,744] WARN  > Failed: LexFoods.gf
+[2011-11-10 10:38:04,744] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-10 10:38:04,745] INFO  - LexFoodsEng.gf
+[2011-11-10 10:38:04,776] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:38:04,776] DEBUG GF: searched in: ./
+[2011-11-10 10:38:04,776] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:38:04,776] WARN  > Failed: LexFoodsEng.gf
+[2011-11-10 10:38:04,777] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-10 10:38:04,777] INFO  - LexFoodsGer.gf
+[2011-11-10 10:38:04,807] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:38:04,807] DEBUG GF: searched in: ./
+[2011-11-10 10:38:04,807] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:38:04,807] WARN  > Failed: LexFoodsGer.gf
+[2011-11-10 10:38:04,812] INFO  Full build on Hello
+[2011-11-10 10:38:04,812] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 10:38:04,812] INFO  - AbsCat.gfo
+[2011-11-10 10:38:04,813] INFO  - tags
+[2011-11-10 10:38:04,813] INFO  - AbsCat.gf
+[2011-11-10 10:38:04,842] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 10:38:04,842] INFO  + AbsCat.gf
+[2011-11-10 10:38:04,843] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 10:38:04,843] INFO  - tags
+[2011-11-10 10:38:04,843] INFO  - HelloAbs.gfo
+[2011-11-10 10:38:04,843] INFO  - HelloAbs.gf
+[2011-11-10 10:38:04,877] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 10:38:04,879] INFO  + HelloAbs.gf
+[2011-11-10 10:38:04,879] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 10:38:04,879] INFO  - tags
+[2011-11-10 10:38:04,879] INFO  - HelloEng.gf
+[2011-11-10 10:38:04,880] INFO  - HelloEng.gfo
+[2011-11-10 10:38:04,916] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 10:38:04,916] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 10:38:04,916] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 10:38:04,917] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 10:38:04,917] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 10:38:04,917] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 10:38:04,917] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 10:38:04,917] DEBUG GF: 
+[2011-11-10 10:38:04,918] INFO  + HelloEng.gf
+[2011-11-10 10:38:04,918] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 10:38:04,918] INFO  - tags
+[2011-11-10 10:38:04,918] INFO  - ResEng.gfo
+[2011-11-10 10:38:04,918] INFO  - ResEng.gf
+[2011-11-10 10:38:04,946] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 10:38:04,947] INFO  + ResEng.gf
+[2011-11-10 10:38:35,868] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:39:11,324] INFO  Full build on Hello
+[2011-11-10 10:39:11,325] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 10:39:11,325] INFO  - AbsCat.gfo
+[2011-11-10 10:39:11,326] INFO  - tags
+[2011-11-10 10:39:11,326] INFO  - AbsCat.gf
+[2011-11-10 10:39:11,355] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 10:39:11,355] INFO  + AbsCat.gf
+[2011-11-10 10:39:11,355] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 10:39:11,356] INFO  - tags
+[2011-11-10 10:39:11,356] INFO  - HelloAbs.gfo
+[2011-11-10 10:39:11,356] INFO  - HelloAbs.gf
+[2011-11-10 10:39:11,387] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 10:39:11,387] INFO  + HelloAbs.gf
+[2011-11-10 10:39:11,388] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 10:39:11,388] INFO  - tags
+[2011-11-10 10:39:11,388] INFO  - HelloEng.gf
+[2011-11-10 10:39:11,389] INFO  - HelloEng.gfo
+[2011-11-10 10:39:11,426] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 10:39:11,427] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 10:39:11,427] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 10:39:11,427] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 10:39:11,427] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 10:39:11,427] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 10:39:11,427] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 10:39:11,429] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 10:39:11,429] DEBUG GF: 
+[2011-11-10 10:39:11,429] INFO  + HelloEng.gf
+[2011-11-10 10:39:11,430] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 10:39:11,430] INFO  - tags
+[2011-11-10 10:39:11,430] INFO  - ResEng.gfo
+[2011-11-10 10:39:11,431] INFO  - ResEng.gf
+[2011-11-10 10:39:11,468] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 10:39:11,469] INFO  + ResEng.gf
+[2011-11-10 10:39:18,658] INFO  Full build on Hello
+[2011-11-10 10:39:18,659] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 10:39:18,659] INFO  - AbsCat.gfo
+[2011-11-10 10:39:18,660] INFO  - tags
+[2011-11-10 10:39:18,660] INFO  - AbsCat.gf
+[2011-11-10 10:39:18,699] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 10:39:18,700] INFO  + AbsCat.gf
+[2011-11-10 10:39:18,700] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 10:39:18,700] INFO  - tags
+[2011-11-10 10:39:18,701] INFO  - HelloAbs.gfo
+[2011-11-10 10:39:18,701] INFO  - HelloAbs.gf
+[2011-11-10 10:39:18,730] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 10:39:18,731] INFO  + HelloAbs.gf
+[2011-11-10 10:39:18,731] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 10:39:18,732] INFO  - tags
+[2011-11-10 10:39:18,732] INFO  - HelloEng.gf
+[2011-11-10 10:39:18,732] INFO  - HelloEng.gfo
+[2011-11-10 10:39:18,778] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 10:39:18,778] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 10:39:18,778] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 10:39:18,778] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 10:39:18,778] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 10:39:18,779] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 10:39:18,779] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 10:39:18,779] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 10:39:18,779] DEBUG GF: 
+[2011-11-10 10:39:18,780] INFO  + HelloEng.gf
+[2011-11-10 10:39:18,780] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 10:39:18,780] INFO  - tags
+[2011-11-10 10:39:18,780] INFO  - ResEng.gfo
+[2011-11-10 10:39:18,780] INFO  - ResEng.gf
+[2011-11-10 10:39:18,808] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 10:39:18,808] INFO  + ResEng.gf
+[2011-11-10 10:39:33,761] INFO  Full build on Hello
+[2011-11-10 10:39:33,761] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 10:39:33,761] INFO  - AbsCat.gfo
+[2011-11-10 10:39:33,761] INFO  - tags
+[2011-11-10 10:39:33,762] INFO  - AbsCat.gf
+[2011-11-10 10:39:33,790] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 10:39:33,790] INFO  + AbsCat.gf
+[2011-11-10 10:39:33,790] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 10:39:33,791] INFO  - tags
+[2011-11-10 10:39:33,791] INFO  - HelloAbs.gfo
+[2011-11-10 10:39:33,791] INFO  - HelloAbs.gf
+[2011-11-10 10:39:33,819] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 10:39:33,820] INFO  + HelloAbs.gf
+[2011-11-10 10:39:33,820] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 10:39:33,820] INFO  - tags
+[2011-11-10 10:39:33,821] INFO  - HelloEng.gf
+[2011-11-10 10:39:33,821] INFO  - HelloEng.gfo
+[2011-11-10 10:39:33,853] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 10:39:33,853] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 10:39:33,853] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 10:39:33,853] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 10:39:33,853] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 10:39:33,853] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 10:39:33,854] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 10:39:33,854] DEBUG GF: 
+[2011-11-10 10:39:33,854] INFO  + HelloEng.gf
+[2011-11-10 10:39:33,854] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 10:39:33,854] INFO  - tags
+[2011-11-10 10:39:33,854] INFO  - ResEng.gfo
+[2011-11-10 10:39:33,854] INFO  - ResEng.gf
+[2011-11-10 10:39:33,881] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 10:39:33,882] INFO  + ResEng.gf
+[2011-11-10 10:39:38,102] INFO  Full build on Hello
+[2011-11-10 10:39:38,102] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 10:39:38,102] INFO  - AbsCat.gfo
+[2011-11-10 10:39:38,103] INFO  - tags
+[2011-11-10 10:39:38,103] INFO  - AbsCat.gf
+[2011-11-10 10:39:38,136] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 10:39:38,136] INFO  + AbsCat.gf
+[2011-11-10 10:39:38,137] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 10:39:38,137] INFO  - tags
+[2011-11-10 10:39:38,137] INFO  - HelloAbs.gfo
+[2011-11-10 10:39:38,138] INFO  - HelloAbs.gf
+[2011-11-10 10:39:38,180] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 10:39:38,180] INFO  + HelloAbs.gf
+[2011-11-10 10:39:38,180] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 10:39:38,181] INFO  - tags
+[2011-11-10 10:39:38,181] INFO  - HelloEng.gf
+[2011-11-10 10:39:38,181] INFO  - HelloEng.gfo
+[2011-11-10 10:39:38,213] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 10:39:38,213] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 10:39:38,213] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 10:39:38,213] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 10:39:38,214] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 10:39:38,214] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 10:39:38,214] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 10:39:38,214] DEBUG GF: 
+[2011-11-10 10:39:38,214] INFO  + HelloEng.gf
+[2011-11-10 10:39:38,214] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 10:39:38,214] INFO  - tags
+[2011-11-10 10:39:38,214] INFO  - ResEng.gfo
+[2011-11-10 10:39:38,215] INFO  - ResEng.gf
+[2011-11-10 10:39:38,240] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 10:39:38,241] INFO  + ResEng.gf
+[2011-11-10 10:40:41,883] INFO  Full build on Hello
+[2011-11-10 10:40:41,890] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 10:40:41,891] INFO  - AbsCat.gfo
+[2011-11-10 10:40:41,891] INFO  - tags
+[2011-11-10 10:40:41,892] INFO  - AbsCat.gf
+[2011-11-10 10:40:41,927] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 10:40:41,928] INFO  + AbsCat.gf
+[2011-11-10 10:40:41,928] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 10:40:41,928] INFO  - tags
+[2011-11-10 10:40:41,928] INFO  - HelloAbs.gfo
+[2011-11-10 10:40:41,928] INFO  - HelloAbs.gf
+[2011-11-10 10:40:41,955] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 10:40:41,956] INFO  + HelloAbs.gf
+[2011-11-10 10:40:41,956] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 10:40:41,956] INFO  - tags
+[2011-11-10 10:40:41,956] INFO  - HelloEng.gf
+[2011-11-10 10:40:41,956] INFO  - HelloEng.gfo
+[2011-11-10 10:40:41,985] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 10:40:41,985] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 10:40:41,985] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 10:40:41,986] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 10:40:41,986] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 10:40:41,986] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 10:40:41,986] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 10:40:41,986] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 10:40:41,986] DEBUG GF: 
+[2011-11-10 10:40:41,987] INFO  + HelloEng.gf
+[2011-11-10 10:40:41,987] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 10:40:41,987] INFO  - tags
+[2011-11-10 10:40:41,987] INFO  - ResEng.gfo
+[2011-11-10 10:40:41,987] INFO  - ResEng.gf
+[2011-11-10 10:40:42,020] INFO  + ResEng.gf
+[2011-11-10 10:40:48,130] INFO  Full build on Hello
+[2011-11-10 10:40:48,131] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 10:40:48,131] INFO  - AbsCat.gfo
+[2011-11-10 10:40:48,131] INFO  - tags
+[2011-11-10 10:40:48,132] INFO  - AbsCat.gf
+[2011-11-10 10:40:48,161] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 10:40:48,162] INFO  + AbsCat.gf
+[2011-11-10 10:40:48,162] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 10:40:48,162] INFO  - tags
+[2011-11-10 10:40:48,163] INFO  - HelloAbs.gfo
+[2011-11-10 10:40:48,163] INFO  - HelloAbs.gf
+[2011-11-10 10:40:48,188] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 10:40:48,189] INFO  + HelloAbs.gf
+[2011-11-10 10:40:48,189] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 10:40:48,189] INFO  - tags
+[2011-11-10 10:40:48,189] INFO  - HelloEng.gf
+[2011-11-10 10:40:48,189] INFO  - HelloEng.gfo
+[2011-11-10 10:40:48,215] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 10:40:48,215] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 10:40:48,215] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 10:40:48,216] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 10:40:48,216] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 10:40:48,216] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 10:40:48,216] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 10:40:48,216] DEBUG GF: 
+[2011-11-10 10:40:48,216] INFO  + HelloEng.gf
+[2011-11-10 10:40:48,216] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 10:40:48,216] INFO  - tags
+[2011-11-10 10:40:48,216] INFO  - ResEng.gfo
+[2011-11-10 10:40:48,217] INFO  - ResEng.gf
+[2011-11-10 10:40:48,241] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 10:40:48,242] INFO  + ResEng.gf
+[2011-11-10 10:40:54,776] INFO  Full build on Hello
+[2011-11-10 10:40:54,777] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 10:40:54,778] INFO  - AbsCat.gfo
+[2011-11-10 10:40:54,778] INFO  - tags
+[2011-11-10 10:40:54,778] INFO  - AbsCat.gf
+[2011-11-10 10:40:54,815] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 10:40:54,815] INFO  + AbsCat.gf
+[2011-11-10 10:40:54,815] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 10:40:54,816] INFO  - tags
+[2011-11-10 10:40:54,818] INFO  - HelloAbs.gfo
+[2011-11-10 10:40:54,818] INFO  - HelloAbs.gf
+[2011-11-10 10:40:54,851] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 10:40:54,852] INFO  + HelloAbs.gf
+[2011-11-10 10:40:54,852] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 10:40:54,853] INFO  - tags
+[2011-11-10 10:40:54,853] INFO  - HelloEng.gf
+[2011-11-10 10:40:54,853] INFO  - HelloEng.gfo
+[2011-11-10 10:40:54,886] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 10:40:54,886] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 10:40:54,886] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 10:40:54,886] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 10:40:54,886] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 10:40:54,886] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 10:40:54,887] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 10:40:54,887] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 10:40:54,887] DEBUG GF: 
+[2011-11-10 10:40:54,887] INFO  + HelloEng.gf
+[2011-11-10 10:40:54,887] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 10:40:54,887] INFO  - tags
+[2011-11-10 10:40:54,888] INFO  - ResEng.gfo
+[2011-11-10 10:40:54,888] INFO  - ResEng.gf
+[2011-11-10 10:40:54,916] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 10:40:54,916] INFO  + ResEng.gf
+[2011-11-10 10:41:02,683] INFO  Full build on Hello
+[2011-11-10 10:41:02,684] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 10:41:02,684] INFO  - AbsCat.gfo
+[2011-11-10 10:41:02,685] INFO  - tags
+[2011-11-10 10:41:02,685] INFO  - AbsCat.gf
+[2011-11-10 10:41:02,718] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat/AbsCat.gf... 
+[2011-11-10 10:41:02,718] INFO  + AbsCat.gf
+[2011-11-10 10:41:02,718] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 10:41:02,719] INFO  - tags
+[2011-11-10 10:41:02,719] INFO  - HelloAbs.gfo
+[2011-11-10 10:41:02,719] INFO  - HelloAbs.gf
+[2011-11-10 10:41:02,753] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs/HelloAbs.gf... 
+[2011-11-10 10:41:02,754] INFO  + HelloAbs.gf
+[2011-11-10 10:41:02,754] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 10:41:02,755] INFO  - tags
+[2011-11-10 10:41:02,755] INFO  - HelloEng.gf
+[2011-11-10 10:41:02,755] INFO  - HelloEng.gfo
+[2011-11-10 10:41:02,804] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng/HelloEng.gf... checking module HelloEng
+[2011-11-10 10:41:02,805] DEBUG GF:    Warning: no linearization type for Farewell, inserting default {s : Str}
+[2011-11-10 10:41:02,805] DEBUG GF:    Warning: no linearization of Friends
+[2011-11-10 10:41:02,805] DEBUG GF:    Warning: no linearization of Goodbye
+[2011-11-10 10:41:02,806] DEBUG GF:    Warning: no linearization of Hello
+[2011-11-10 10:41:02,806] DEBUG GF:    Warning: no linearization of Parent
+[2011-11-10 10:41:02,807] DEBUG GF:    Warning: no linearization of World
+[2011-11-10 10:41:02,807] DEBUG GF: 
+[2011-11-10 10:41:02,807] INFO  + HelloEng.gf
+[2011-11-10 10:41:02,807] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 10:41:02,807] INFO  - tags
+[2011-11-10 10:41:02,807] INFO  - ResEng.gfo
+[2011-11-10 10:41:02,807] INFO  - ResEng.gf
+[2011-11-10 10:41:02,837] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng/ResEng.gf... 
+[2011-11-10 10:41:02,838] INFO  + ResEng.gf
+[2011-11-10 10:41:14,609] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:41:39,331] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:41:54,923] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:41:54,927] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:41:54,930] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 10:41:55,813] INFO  Full build on Functors
+[2011-11-10 10:41:55,816] INFO  Cleaning build directory for Foods.gf
+[2011-11-10 10:41:55,816] INFO  - tags
+[2011-11-10 10:41:55,816] INFO  - Foods.gf
+[2011-11-10 10:41:55,817] INFO  - Foods.gfo
+[2011-11-10 10:41:55,848] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods/Foods.gf... 
+[2011-11-10 10:41:55,849] INFO  + Foods.gf
+[2011-11-10 10:41:55,849] INFO  Cleaning build directory for FoodsEng.gf
+[2011-11-10 10:41:55,849] INFO  - FoodsEng.gf
+[2011-11-10 10:41:55,877] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:41:55,877] DEBUG GF: searched in: ./
+[2011-11-10 10:41:55,878] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:41:55,878] WARN  > Failed: FoodsEng.gf
+[2011-11-10 10:41:55,879] INFO  Cleaning build directory for FoodsGer.gf
+[2011-11-10 10:41:55,879] INFO  - FoodsGer.gf
+[2011-11-10 10:41:55,908] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:41:55,908] DEBUG GF: searched in: ./
+[2011-11-10 10:41:55,908] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:41:55,909] WARN  > Failed: FoodsGer.gf
+[2011-11-10 10:41:55,909] INFO  Cleaning build directory for FoodsI.gf
+[2011-11-10 10:41:55,909] INFO  - FoodsI.gf
+[2011-11-10 10:41:55,937] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:41:55,937] DEBUG GF: searched in: ./
+[2011-11-10 10:41:55,937] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:41:55,937] WARN  > Failed: FoodsI.gf
+[2011-11-10 10:41:55,938] INFO  Cleaning build directory for LexFoods.gf
+[2011-11-10 10:41:55,938] INFO  - LexFoods.gf
+[2011-11-10 10:41:55,968] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:41:55,969] DEBUG GF: searched in: ./
+[2011-11-10 10:41:55,969] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:41:55,970] WARN  > Failed: LexFoods.gf
+[2011-11-10 10:41:55,970] INFO  Cleaning build directory for LexFoodsEng.gf
+[2011-11-10 10:41:55,971] INFO  - LexFoodsEng.gf
+[2011-11-10 10:41:56,000] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:41:56,001] DEBUG GF: searched in: ./
+[2011-11-10 10:41:56,001] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:41:56,001] WARN  > Failed: LexFoodsEng.gf
+[2011-11-10 10:41:56,001] INFO  Cleaning build directory for LexFoodsGer.gf
+[2011-11-10 10:41:56,002] INFO  - LexFoodsGer.gf
+[2011-11-10 10:41:56,039] DEBUG GF: File Syntax.gf does not exist.
+[2011-11-10 10:41:56,039] DEBUG GF: searched in: ./
+[2011-11-10 10:41:56,039] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-10 10:41:56,040] WARN  > Failed: LexFoodsGer.gf

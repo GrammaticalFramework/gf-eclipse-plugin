@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.eclipse.core.runtime.Preferences"/>
 <fullyQualifiedTypeName name="org.eclipse.core.runtime.preferences.DefaultScope"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.internal.GFActivator"/>
 <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider"/>
 <fullyQualifiedTypeName name="com.google.inject.Inject"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScope"/>
+<fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
 </qualifiedTypeNameHistroy>
