@@ -7862,3 +7862,599 @@ com.google.inject.CreationException: Guice creation errors:
 [2011-11-10 10:41:56,039] DEBUG GF: searched in: ./
 [2011-11-10 10:41:56,039] DEBUG GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
 [2011-11-10 10:41:56,040] WARN  > Failed: LexFoodsGer.gf
+[2011-11-10 11:12:55,324] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 11:13:15,573] INFO  Clean Hello
+[2011-11-10 11:13:15,594] INFO  - AbsCat.gfo
+[2011-11-10 11:13:15,595] INFO  - HelloAbs.gfo
+[2011-11-10 11:13:15,596] INFO  - HelloEng.gfo
+[2011-11-10 11:13:15,596] INFO  - ResEng.gfo
+[2011-11-10 11:13:15,597] INFO  - AbsCat.gfo
+[2011-11-10 11:13:15,597] INFO  - HelloAbs.gfo
+[2011-11-10 11:13:15,597] INFO  - ResEng.gfo
+[2011-11-10 11:13:15,723] INFO  Full build on Hello
+[2011-11-10 11:13:15,728] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 11:13:15,729] INFO  - tags
+[2011-11-10 11:13:15,729] INFO  - AbsCat.gf
+[2011-11-10 11:13:42,457] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:14:32,879] WARN  Problem loading tags file for FoodsEng
+[2011-11-10 11:14:38,158] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:14:43,309] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:14:46,656] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:14:46,665] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:14:46,774] INFO  Full build on Hello
+[2011-11-10 11:14:46,780] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 11:15:51,181] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf... 
+[2011-11-10 11:15:53,685] DEBUG GF: gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-10 11:16:13,461] WARN  tags file for AbsCat.gf missing!
+[2011-11-10 11:16:16,083] INFO  + AbsCat.gf
+[2011-11-10 11:16:16,083] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 11:16:19,646] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf... 
+[2011-11-10 11:16:19,647] DEBUG GF: gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-10 11:16:19,648] WARN  tags file for HelloAbs.gf missing!
+[2011-11-10 11:16:19,648] INFO  + HelloAbs.gf
+[2011-11-10 11:16:19,648] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 11:16:19,656] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf... 
+[2011-11-10 11:16:19,657] DEBUG GF: gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-10 11:16:19,658] WARN  tags file for HelloEng.gf missing!
+[2011-11-10 11:16:19,659] INFO  + HelloEng.gf
+[2011-11-10 11:16:19,659] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 11:16:19,667] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 11:16:19,667] DEBUG GF: gf: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gfo: getFileStatus: does not exist (No such file or directory)
+[2011-11-10 11:16:19,668] WARN  tags file for ResEng.gf missing!
+[2011-11-10 11:16:19,669] INFO  + ResEng.gf
+[2011-11-10 11:17:26,184] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:17:33,496] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:17:35,973] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:17:35,982] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:17:36,097] INFO  Full build on Hello
+[2011-11-10 11:17:36,099] INFO  Cleaning build directory for AbsCat.gf
+[2011-11-10 11:19:35,001] INFO  + AbsCat.gf
+[2011-11-10 11:19:35,001] INFO  Cleaning build directory for HelloAbs.gf
+[2011-11-10 11:19:35,002] INFO  - AbsCat.gf.tags
+[2011-11-10 11:19:38,722] INFO  + HelloAbs.gf
+[2011-11-10 11:19:38,723] INFO  Cleaning build directory for HelloEng.gf
+[2011-11-10 11:19:38,723] INFO  - HelloAbs.gf.tags
+[2011-11-10 11:19:38,746] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... checking module HelloEng
+[2011-11-10 11:19:38,746] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:16-18:
+[2011-11-10 11:19:38,747] DEBUG GF:    Happened in linearization of Parent
+[2011-11-10 11:19:38,747] DEBUG GF:       no applicable case for Const1
+[2011-11-10 11:19:38,747] DEBUG GF: OCCURRED IN
+[2011-11-10 11:19:38,747] DEBUG GF: trying patterns Masc, Fem
+[2011-11-10 11:19:38,747] WARN  tags file for HelloEng.gf missing!
+[2011-11-10 11:19:38,748] INFO  + HelloEng.gf
+[2011-11-10 11:19:38,748] INFO  Cleaning build directory for ResEng.gf
+[2011-11-10 11:19:38,769] INFO  + ResEng.gf
+[2011-11-10 11:24:03,237] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:24:11,016] INFO  Clean Hello
+[2011-11-10 11:24:11,031] INFO  - ResEng.gf.tags
+[2011-11-10 11:24:11,032] INFO  - AbsCat.gfo
+[2011-11-10 11:24:11,033] INFO  - HelloAbs.gfo
+[2011-11-10 11:24:11,034] INFO  - ResEng.gfo
+[2011-11-10 11:24:11,165] INFO  Full build on Hello
+[2011-11-10 11:24:11,202] INFO  + AbsCat.gf
+[2011-11-10 11:24:11,234] INFO  + HelloAbs.gf
+[2011-11-10 11:24:11,273] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... checking module HelloEng
+[2011-11-10 11:24:11,274] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:16-18:
+[2011-11-10 11:24:11,274] DEBUG GF:    Happened in linearization of Parent
+[2011-11-10 11:24:11,274] DEBUG GF:       no applicable case for Const1
+[2011-11-10 11:24:11,274] DEBUG GF: OCCURRED IN
+[2011-11-10 11:24:11,275] DEBUG GF: trying patterns Masc, Fem
+[2011-11-10 11:24:11,275] WARN  tags file for HelloEng.gf missing!
+[2011-11-10 11:24:11,276] INFO  + HelloEng.gf
+[2011-11-10 11:24:11,307] INFO  + ResEng.gf
+[2011-11-10 11:29:02,760] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:29:12,914] INFO  Clean Hello
+[2011-11-10 11:29:12,928] INFO  - AbsCat.tags
+[2011-11-10 11:29:12,929] INFO  - HelloAbs.tags
+[2011-11-10 11:29:12,929] INFO  - ResEng.tags
+[2011-11-10 11:29:12,930] INFO  - AbsCat.gfo
+[2011-11-10 11:29:12,930] INFO  - HelloAbs.gfo
+[2011-11-10 11:29:12,930] INFO  - ResEng.gfo
+[2011-11-10 11:29:13,065] INFO  Full build on Hello
+[2011-11-10 11:29:13,101] INFO  + AbsCat.gf
+[2011-11-10 11:29:13,133] INFO  + HelloAbs.gf
+[2011-11-10 11:29:13,172] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... checking module HelloEng
+[2011-11-10 11:29:13,172] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:16-18:
+[2011-11-10 11:29:13,174] DEBUG GF:    Happened in linearization of Parent
+[2011-11-10 11:29:13,175] DEBUG GF:       no applicable case for Const1
+[2011-11-10 11:29:13,175] DEBUG GF: OCCURRED IN
+[2011-11-10 11:29:13,175] DEBUG GF: trying patterns Masc, Fem
+[2011-11-10 11:29:13,175] WARN  ✕ HelloEng.gf
+[2011-11-10 11:29:13,207] INFO  + ResEng.gf
+[2011-11-10 11:31:35,933] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:50:08,526] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:50:14,344] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:50:17,315] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:50:17,323] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:50:17,433] INFO  Full build on Functors
+[2011-11-10 11:50:17,456] INFO  + Foods.gf
+[2011-11-10 11:50:17,709] INFO  + FoodsEng.gf
+[2011-11-10 11:50:18,043] INFO  + FoodsGer.gf
+[2011-11-10 11:50:18,139] INFO  + FoodsI.gf
+[2011-11-10 11:50:18,156] ERROR GF: File Syntax.gf does not exist.
+[2011-11-10 11:50:18,157] ERROR GF: searched in: ./
+[2011-11-10 11:50:18,157] WARN  ✕ LexFoods.gf
+[2011-11-10 11:50:18,386] INFO  + LexFoodsEng.gf
+[2011-11-10 11:50:18,696] INFO  + LexFoodsGer.gf
+[2011-11-10 11:50:18,703] INFO  Full build on Hello
+[2011-11-10 11:50:18,722] INFO  + AbsCat.gf
+[2011-11-10 11:50:18,743] INFO  + HelloAbs.gf
+[2011-11-10 11:50:18,767] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 11:50:18,768] ERROR GF: checking module HelloEng
+[2011-11-10 11:50:18,768] ERROR GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:16-18:
+[2011-11-10 11:50:18,769] ERROR GF:    Happened in linearization of Parent
+[2011-11-10 11:50:18,769] ERROR GF:       no applicable case for Const1
+[2011-11-10 11:50:18,769] ERROR GF: OCCURRED IN
+[2011-11-10 11:50:18,770] ERROR GF: trying patterns Masc, Fem
+[2011-11-10 11:50:18,770] WARN  ✕ HelloEng.gf
+[2011-11-10 11:50:18,789] INFO  + ResEng.gf
+[2011-11-10 11:51:12,234] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:51:20,381] INFO  Full build on Hello
+[2011-11-10 11:51:20,416] INFO  + AbsCat.gf
+[2011-11-10 11:51:20,434] INFO  + HelloAbs.gf
+[2011-11-10 11:51:20,454] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 11:51:20,456] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 11:51:20,456] ERROR GF: renaming module HelloEng
+[2011-11-10 11:51:20,457] ERROR GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+[2011-11-10 11:51:20,457] ERROR GF:    Happened in the renaming of Recipient
+[2011-11-10 11:51:20,458] ERROR GF:       atomic term Param
+[2011-11-10 11:51:20,458] ERROR GF:       given ResEng, HelloEng
+[2011-11-10 11:51:20,458] ERROR GF:          constant not found: Param
+[2011-11-10 11:51:20,459] WARN  ✕ HelloEng.gf
+[2011-11-10 11:51:20,477] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 11:51:20,477] INFO  + ResEng.gf
+[2011-11-10 11:51:30,035] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:51:30,039] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:51:32,659] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:51:36,864] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:51:39,830] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:51:39,836] WARN  Problem loading tags file for HelloEng
+[2011-11-10 11:51:39,933] INFO  Full build on Hello
+[2011-11-10 11:51:39,954] INFO  + AbsCat.gf
+[2011-11-10 11:51:39,975] INFO  + HelloAbs.gf
+[2011-11-10 11:51:40,004] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 11:51:40,006] INFO  + HelloEng.gf
+[2011-11-10 11:51:40,026] INFO  + ResEng.gf
+[2011-11-10 11:53:26,458] WARN  Problem loading tags file for LexFoods
+[2011-11-10 11:53:43,771] WARN  Problem loading tags file for LexFoods
+[2011-11-10 11:53:43,773] WARN  Problem loading tags file for LexFoods
+[2011-11-10 11:53:43,776] WARN  Problem loading tags file for LexFoods
+[2011-11-10 11:53:44,292] INFO  Full build on Functors
+[2011-11-10 11:53:44,320] INFO  + Foods.gf
+[2011-11-10 11:53:44,573] INFO  + FoodsEng.gf
+[2011-11-10 11:53:44,907] INFO  + FoodsGer.gf
+[2011-11-10 11:53:45,001] INFO  + FoodsI.gf
+[2011-11-10 11:53:45,034] ERROR GF: File Syntax.gf does not exist.
+[2011-11-10 11:53:45,034] ERROR GF: searched in: ./
+[2011-11-10 11:53:45,035] WARN  ✕ LexFoods.gf
+[2011-11-10 11:53:45,273] INFO  + LexFoodsEng.gf
+[2011-11-10 11:53:45,580] INFO  + LexFoodsGer.gf
+[2011-11-10 11:53:59,966] WARN  Problem loading tags file for LexFoods
+[2011-11-10 11:54:04,130] WARN  Problem loading tags file for LexFoods
+[2011-11-10 11:54:04,137] WARN  Problem loading tags file for LexFoods
+[2011-11-10 11:54:04,251] INFO  Full build on Functors
+[2011-11-10 11:54:04,274] INFO  + Foods.gf
+[2011-11-10 11:54:04,388] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf... 
+[2011-11-10 11:54:04,388] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf... 
+[2011-11-10 11:54:04,424] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf... 
+[2011-11-10 11:54:04,425] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf... checking module FoodsEng
+[2011-11-10 11:54:04,426] DEBUG GF:    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-10 11:54:04,426] DEBUG GF: 
+[2011-11-10 11:54:04,518] INFO  + FoodsEng.gf
+[2011-11-10 11:54:04,684] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf... 
+[2011-11-10 11:54:04,685] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf... 
+[2011-11-10 11:54:04,759] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf... 
+[2011-11-10 11:54:04,760] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf... checking module FoodsGer
+[2011-11-10 11:54:04,760] DEBUG GF:    Warning: no linearization type for Item2, inserting default {s : Str}
+[2011-11-10 11:54:04,760] DEBUG GF: 
+[2011-11-10 11:54:04,859] INFO  + FoodsGer.gf
+[2011-11-10 11:54:04,923] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf... 
+[2011-11-10 11:54:04,924] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf... 
+[2011-11-10 11:54:04,959] INFO  + FoodsI.gf
+[2011-11-10 11:54:05,038] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf... 
+[2011-11-10 11:54:05,071] INFO  + LexFoods.gf
+[2011-11-10 11:54:05,308] INFO  + LexFoodsEng.gf
+[2011-11-10 11:54:05,635] INFO  + LexFoodsGer.gf
+[2011-11-10 11:54:43,475] INFO  Clean Functors
+[2011-11-10 11:54:43,487] INFO  - Foods.tags
+[2011-11-10 11:54:43,487] INFO  - FoodsEng.tags
+[2011-11-10 11:54:43,488] INFO  - FoodsGer.tags
+[2011-11-10 11:54:43,489] INFO  - FoodsI.tags
+[2011-11-10 11:54:43,490] INFO  - LexFoods.tags
+[2011-11-10 11:54:43,491] INFO  - LexFoodsEng.tags
+[2011-11-10 11:54:43,492] INFO  - LexFoodsGer.tags
+[2011-11-10 11:54:43,493] INFO  - Foods.gfo
+[2011-11-10 11:54:43,493] INFO  - FoodsEng.gfo
+[2011-11-10 11:54:43,494] INFO  - FoodsGer.gfo
+[2011-11-10 11:54:43,499] INFO  - FoodsI.gfo
+[2011-11-10 11:54:43,500] INFO  - LexFoods.gfo
+[2011-11-10 11:54:43,500] INFO  - LexFoodsEng.gfo
+[2011-11-10 11:54:43,501] INFO  - LexFoodsGer.gfo
+[2011-11-10 11:54:43,501] INFO  Clean Hello
+[2011-11-10 11:54:43,502] INFO  - AbsCat.tags
+[2011-11-10 11:54:43,503] INFO  - HelloAbs.tags
+[2011-11-10 11:54:43,503] INFO  - HelloEng.tags
+[2011-11-10 11:54:43,504] INFO  - ResEng.tags
+[2011-11-10 11:54:43,505] INFO  - AbsCat.gfo
+[2011-11-10 11:54:43,506] INFO  - HelloAbs.gfo
+[2011-11-10 11:54:43,506] INFO  - HelloEng.gfo
+[2011-11-10 11:54:43,507] INFO  - ResEng.gfo
+[2011-11-10 11:54:43,624] INFO  Full build on Functors
+[2011-11-10 11:54:43,647] INFO  + Foods.gf
+[2011-11-10 11:54:43,887] INFO  + FoodsEng.gf
+[2011-11-10 11:54:44,218] INFO  + FoodsGer.gf
+[2011-11-10 11:54:44,315] INFO  + FoodsI.gf
+[2011-11-10 11:54:44,412] INFO  + LexFoods.gf
+[2011-11-10 11:54:44,643] INFO  + LexFoodsEng.gf
+[2011-11-10 11:54:44,959] INFO  + LexFoodsGer.gf
+[2011-11-10 11:54:44,961] INFO  Full build on Hello
+[2011-11-10 11:54:44,982] INFO  + AbsCat.gf
+[2011-11-10 11:54:45,004] INFO  + HelloAbs.gf
+[2011-11-10 11:54:45,029] INFO  + HelloEng.gf
+[2011-11-10 11:54:45,061] INFO  + ResEng.gf
+[2011-11-10 13:31:55,126] INFO  Full build on Hello
+[2011-11-10 13:31:55,159] INFO  + AbsCat.gf
+[2011-11-10 13:31:55,177] INFO  + HelloAbs.gf
+[2011-11-10 13:31:55,197] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 13:31:55,199] WARN  ✕ HelloEng.gf
+[2011-11-10 13:31:55,222] INFO  + ResEng.gf
+[2011-11-10 13:32:13,921] INFO  Full build on Hello
+[2011-11-10 13:32:13,946] INFO  + AbsCat.gf
+[2011-11-10 13:32:13,966] INFO  + HelloAbs.gf
+[2011-11-10 13:32:13,987] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 13:32:13,988] WARN  ✕ HelloEng.gf
+[2011-11-10 13:32:14,006] INFO  + ResEng.gf
+[2011-11-10 13:33:19,084] INFO  Full build on Hello
+[2011-11-10 13:33:19,125] INFO  + AbsCat.gf
+[2011-11-10 13:33:19,158] INFO  + HelloAbs.gf
+[2011-11-10 13:33:19,187] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 13:33:19,189] WARN  ✕ HelloEng.gf
+[2011-11-10 13:33:19,210] INFO  + ResEng.gf
+[2011-11-10 13:43:09,435] INFO  Full build on Hello
+[2011-11-10 13:43:09,466] INFO  + AbsCat.gf
+[2011-11-10 13:43:09,485] INFO  + HelloAbs.gf
+[2011-11-10 13:43:09,506] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 13:43:46,712] INFO  Full build on Hello
+[2011-11-10 13:43:46,786] INFO  + AbsCat.gf
+[2011-11-10 13:43:46,865] INFO  + HelloAbs.gf
+[2011-11-10 13:43:46,930] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 13:44:14,823] WARN  ✕ HelloEng.gf
+[2011-11-10 13:44:14,854] INFO  + ResEng.gf
+[2011-11-10 13:44:15,860] INFO  Full build on Hello
+[2011-11-10 13:44:15,895] INFO  + AbsCat.gf
+[2011-11-10 13:44:15,916] INFO  + HelloAbs.gf
+[2011-11-10 13:44:15,937] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 13:44:21,335] WARN  ✕ HelloEng.gf
+[2011-11-10 13:44:21,363] INFO  + ResEng.gf
+[2011-11-10 13:44:36,387] INFO  Full build on Hello
+[2011-11-10 13:44:36,417] INFO  + AbsCat.gf
+[2011-11-10 13:44:36,442] INFO  + HelloAbs.gf
+[2011-11-10 13:44:36,470] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 13:45:35,092] INFO  Full build on Hello
+[2011-11-10 13:45:35,132] INFO  + AbsCat.gf
+[2011-11-10 13:45:35,215] INFO  + HelloAbs.gf
+[2011-11-10 13:45:35,289] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 13:46:29,798] WARN  ✕ HelloEng.gf
+[2011-11-10 13:46:29,834] INFO  + ResEng.gf
+[2011-11-10 14:08:01,865] INFO  Clean Functors
+[2011-11-10 14:08:01,877] INFO  - Foods.tags
+[2011-11-10 14:08:01,878] INFO  - FoodsEng.tags
+[2011-11-10 14:08:01,878] INFO  - FoodsGer.tags
+[2011-11-10 14:08:01,878] INFO  - FoodsI.tags
+[2011-11-10 14:08:01,879] INFO  - LexFoods.tags
+[2011-11-10 14:08:01,879] INFO  - LexFoodsEng.tags
+[2011-11-10 14:08:01,880] INFO  - LexFoodsGer.tags
+[2011-11-10 14:08:01,880] INFO  - Foods.gfo
+[2011-11-10 14:08:01,881] INFO  - FoodsEng.gfo
+[2011-11-10 14:08:01,881] INFO  - FoodsGer.gfo
+[2011-11-10 14:08:01,881] INFO  - FoodsI.gfo
+[2011-11-10 14:08:01,882] INFO  - LexFoods.gfo
+[2011-11-10 14:08:01,882] INFO  - LexFoodsEng.gfo
+[2011-11-10 14:08:01,882] INFO  - LexFoodsGer.gfo
+[2011-11-10 14:08:01,883] INFO  Clean Hello
+[2011-11-10 14:08:01,884] INFO  - AbsCat.tags
+[2011-11-10 14:08:01,884] INFO  - HelloAbs.tags
+[2011-11-10 14:08:01,884] INFO  - HelloEng.tags
+[2011-11-10 14:08:01,885] INFO  - ResEng.tags
+[2011-11-10 14:08:01,885] INFO  - AbsCat.gfo
+[2011-11-10 14:08:01,886] INFO  - HelloAbs.gfo
+[2011-11-10 14:08:01,886] INFO  - HelloEng.gfo
+[2011-11-10 14:08:01,886] INFO  - ResEng.gfo
+[2011-11-10 14:08:02,004] INFO  Full build on Functors
+[2011-11-10 14:08:02,028] INFO  + Foods.gf
+[2011-11-10 14:08:02,265] INFO  + FoodsEng.gf
+[2011-11-10 14:08:02,593] INFO  + FoodsGer.gf
+[2011-11-10 14:08:02,689] INFO  + FoodsI.gf
+[2011-11-10 14:08:02,790] INFO  + LexFoods.gf
+[2011-11-10 14:08:03,024] INFO  + LexFoodsEng.gf
+[2011-11-10 14:08:03,346] INFO  + LexFoodsGer.gf
+[2011-11-10 14:08:03,352] INFO  Full build on Hello
+[2011-11-10 14:08:03,374] INFO  + AbsCat.gf
+[2011-11-10 14:08:03,395] INFO  + HelloAbs.gf
+[2011-11-10 14:08:03,421] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:08:44,557] WARN  ✕ HelloEng.gf
+[2011-11-10 14:08:44,583] INFO  + ResEng.gf
+[2011-11-10 14:09:17,850] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,852] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,855] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,857] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,859] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,861] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,863] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,866] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,868] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,870] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,871] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,873] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,875] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,876] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,878] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,880] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,882] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,887] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:17,890] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,920] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,922] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,924] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,925] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,926] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,928] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,929] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,930] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,932] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,933] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,935] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,936] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,937] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,938] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,939] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,942] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,943] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,944] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,946] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,949] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,952] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,963] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,965] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,964] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,967] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,969] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:18,972] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:19,112] INFO  Full build on Hello
+[2011-11-10 14:09:19,145] INFO  + AbsCat.gf
+[2011-11-10 14:09:19,179] INFO  + HelloAbs.gf
+[2011-11-10 14:09:19,218] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:09:19,221] WARN  ✕ HelloEng.gf
+[2011-11-10 14:09:19,253] INFO  + ResEng.gf
+[2011-11-10 14:09:21,953] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,268] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,270] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,271] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,272] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,273] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,275] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,277] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,278] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,279] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,280] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,282] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,283] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,284] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,285] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,288] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,289] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,290] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,291] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,294] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,297] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,299] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,299] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,301] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,303] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,329] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:09:33,440] INFO  Full build on Hello
+[2011-11-10 14:09:33,464] INFO  + AbsCat.gf
+[2011-11-10 14:09:33,487] INFO  + HelloAbs.gf
+[2011-11-10 14:09:33,510] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:09:33,512] INFO  + HelloEng.gf
+[2011-11-10 14:09:33,531] INFO  + ResEng.gf
+[2011-11-10 14:09:39,486] INFO  Full build on Hello
+[2011-11-10 14:09:39,508] INFO  + AbsCat.gf
+[2011-11-10 14:09:39,526] INFO  + HelloAbs.gf
+[2011-11-10 14:09:39,547] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:09:39,548] INFO  + HelloEng.gf
+[2011-11-10 14:09:39,569] INFO  + ResEng.gf
+[2011-11-10 14:10:04,486] INFO  Full build on Hello
+[2011-11-10 14:10:04,516] INFO  + AbsCat.gf
+[2011-11-10 14:10:04,541] INFO  + HelloAbs.gf
+[2011-11-10 14:10:04,565] INFO  + HelloEng.gf
+[2011-11-10 14:10:04,586] INFO  + ResEng.gf
+[2011-11-10 14:10:11,693] INFO  Full build on Hello
+[2011-11-10 14:10:11,712] INFO  + AbsCat.gf
+[2011-11-10 14:10:11,731] INFO  + HelloAbs.gf
+[2011-11-10 14:10:11,754] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:10:11,755] INFO  + HelloEng.gf
+[2011-11-10 14:10:11,776] INFO  + ResEng.gf
+[2011-11-10 14:11:02,647] INFO  Full build on Hello
+[2011-11-10 14:11:02,670] INFO  + AbsCat.gf
+[2011-11-10 14:11:02,695] INFO  + HelloAbs.gf
+[2011-11-10 14:11:02,717] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:11:02,718] INFO  + HelloEng.gf
+[2011-11-10 14:11:02,733] INFO  + ResEng.gf
+[2011-11-10 14:11:20,584] INFO  Clean Functors
+[2011-11-10 14:11:20,593] INFO  - Foods.tags
+[2011-11-10 14:11:20,594] INFO  - FoodsEng.tags
+[2011-11-10 14:11:20,595] INFO  - FoodsGer.tags
+[2011-11-10 14:11:20,595] INFO  - FoodsI.tags
+[2011-11-10 14:11:20,596] INFO  - LexFoods.tags
+[2011-11-10 14:11:20,597] INFO  - LexFoodsEng.tags
+[2011-11-10 14:11:20,598] INFO  - LexFoodsGer.tags
+[2011-11-10 14:11:20,599] INFO  - Foods.gfo
+[2011-11-10 14:11:20,600] INFO  - FoodsEng.gfo
+[2011-11-10 14:11:20,600] INFO  - FoodsGer.gfo
+[2011-11-10 14:11:20,601] INFO  - FoodsI.gfo
+[2011-11-10 14:11:20,602] INFO  - LexFoods.gfo
+[2011-11-10 14:11:20,603] INFO  - LexFoodsEng.gfo
+[2011-11-10 14:11:20,603] INFO  - LexFoodsGer.gfo
+[2011-11-10 14:11:20,604] INFO  Clean Hello
+[2011-11-10 14:11:20,605] INFO  - AbsCat.tags
+[2011-11-10 14:11:20,605] INFO  - HelloAbs.tags
+[2011-11-10 14:11:20,606] INFO  - HelloEng.tags
+[2011-11-10 14:11:20,606] INFO  - ResEng.tags
+[2011-11-10 14:11:20,607] INFO  - AbsCat.gfo
+[2011-11-10 14:11:20,608] INFO  - HelloAbs.gfo
+[2011-11-10 14:11:20,608] INFO  - HelloEng.gfo
+[2011-11-10 14:11:20,609] INFO  - ResEng.gfo
+[2011-11-10 14:12:18,499] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,525] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,530] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,534] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,550] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,557] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,559] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,573] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,575] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,577] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,579] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,582] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,584] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,586] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,589] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,610] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,613] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,671] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:18,682] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:12:23,899] INFO  Clean Functors
+[2011-11-10 14:12:23,901] INFO  Clean Hello
+[2011-11-10 14:12:34,179] INFO  Full build on Functors
+[2011-11-10 14:12:34,211] INFO  + Foods.gf
+[2011-11-10 14:12:34,469] INFO  + FoodsEng.gf
+[2011-11-10 14:12:34,804] INFO  + FoodsGer.gf
+[2011-11-10 14:12:34,896] INFO  + FoodsI.gf
+[2011-11-10 14:12:35,004] INFO  + LexFoods.gf
+[2011-11-10 14:12:35,234] INFO  + LexFoodsEng.gf
+[2011-11-10 14:12:35,541] INFO  + LexFoodsGer.gf
+[2011-11-10 14:12:35,545] INFO  Full build on Hello
+[2011-11-10 14:12:35,562] INFO  + AbsCat.gf
+[2011-11-10 14:12:35,582] INFO  + HelloAbs.gf
+[2011-11-10 14:12:35,608] INFO  + HelloEng.gf
+[2011-11-10 14:12:35,633] INFO  + ResEng.gf
+[2011-11-10 14:12:46,197] INFO  Full build on Hello
+[2011-11-10 14:12:46,228] INFO  + AbsCat.gf
+[2011-11-10 14:12:46,246] INFO  + HelloAbs.gf
+[2011-11-10 14:12:46,275] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:12:46,276] WARN  ✕ HelloEng.gf
+[2011-11-10 14:12:46,295] INFO  + ResEng.gf
+[2011-11-10 14:12:56,741] INFO  Full build on Hello
+[2011-11-10 14:12:56,769] INFO  + AbsCat.gf
+[2011-11-10 14:12:56,801] INFO  + HelloAbs.gf
+[2011-11-10 14:12:56,826] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:12:56,828] WARN  ✕ HelloEng.gf
+[2011-11-10 14:12:56,847] INFO  + ResEng.gf
+[2011-11-10 14:13:32,076] INFO  Full build on Hello
+[2011-11-10 14:13:32,095] INFO  + AbsCat.gf
+[2011-11-10 14:13:32,113] INFO  + HelloAbs.gf
+[2011-11-10 14:13:32,133] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:13:32,134] WARN  ✕ HelloEng.gf
+[2011-11-10 14:13:32,152] INFO  + ResEng.gf
+[2011-11-10 14:13:45,405] INFO  Full build on Hello
+[2011-11-10 14:13:45,423] INFO  + AbsCat.gf
+[2011-11-10 14:13:45,439] INFO  + HelloAbs.gf
+[2011-11-10 14:13:45,462] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 14:13:45,464] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:13:45,465] INFO  + HelloEng.gf
+[2011-11-10 14:13:45,485] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 14:13:45,486] INFO  + ResEng.gf
+[2011-11-10 14:13:53,985] INFO  Full build on Hello
+[2011-11-10 14:13:54,009] INFO  + AbsCat.gf
+[2011-11-10 14:13:54,027] INFO  + HelloAbs.gf
+[2011-11-10 14:13:54,053] INFO  + HelloEng.gf
+[2011-11-10 14:13:54,075] INFO  + ResEng.gf
+[2011-11-10 14:14:36,596] INFO  Full build on Hello
+[2011-11-10 14:14:36,629] INFO  + AbsCat.gf
+[2011-11-10 14:14:36,658] INFO  + HelloAbs.gf
+[2011-11-10 14:14:36,694] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:14:36,696] INFO  + HelloEng.gf
+[2011-11-10 14:14:36,724] INFO  + ResEng.gf
+[2011-11-10 14:14:48,100] INFO  Full build on Hello
+[2011-11-10 14:14:48,125] INFO  + AbsCat.gf
+[2011-11-10 14:14:48,143] INFO  + HelloAbs.gf
+[2011-11-10 14:14:48,167] INFO  + HelloEng.gf
+[2011-11-10 14:14:48,184] INFO  + ResEng.gf
+[2011-11-10 14:15:57,995] INFO  Full build on Hello
+[2011-11-10 14:15:58,027] INFO  + AbsCat.gf
+[2011-11-10 14:15:58,058] INFO  + HelloAbs.gf
+[2011-11-10 14:15:58,093] INFO  + HelloEng.gf
+[2011-11-10 14:15:58,122] INFO  + ResEng.gf
+[2011-11-10 14:16:03,354] INFO  Full build on Hello
+[2011-11-10 14:16:03,378] INFO  + AbsCat.gf
+[2011-11-10 14:16:03,396] INFO  + HelloAbs.gf
+[2011-11-10 14:16:03,417] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:16:03,422] WARN  ✕ HelloEng.gf
+[2011-11-10 14:16:03,445] INFO  + ResEng.gf
+[2011-11-10 14:16:10,335] INFO  Full build on Hello
+[2011-11-10 14:16:10,363] INFO  + AbsCat.gf
+[2011-11-10 14:16:10,397] INFO  + HelloAbs.gf
+[2011-11-10 14:16:10,432] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:16:10,434] WARN  ✕ HelloEng.gf
+[2011-11-10 14:16:10,466] INFO  + ResEng.gf
+[2011-11-10 14:16:38,881] INFO  Clean Functors
+[2011-11-10 14:16:38,890] INFO  - Foods.tags
+[2011-11-10 14:16:38,891] INFO  - FoodsEng.tags
+[2011-11-10 14:16:38,891] INFO  - FoodsGer.tags
+[2011-11-10 14:16:38,892] INFO  - FoodsI.tags
+[2011-11-10 14:16:38,892] INFO  - LexFoods.tags
+[2011-11-10 14:16:38,893] INFO  - LexFoodsEng.tags
+[2011-11-10 14:16:38,893] INFO  - LexFoodsGer.tags
+[2011-11-10 14:16:38,894] INFO  - Foods.gfo
+[2011-11-10 14:16:38,895] INFO  - FoodsEng.gfo
+[2011-11-10 14:16:38,895] INFO  - FoodsGer.gfo
+[2011-11-10 14:16:38,896] INFO  - FoodsI.gfo
+[2011-11-10 14:16:38,896] INFO  - LexFoods.gfo
+[2011-11-10 14:16:38,897] INFO  - LexFoodsEng.gfo
+[2011-11-10 14:16:38,900] INFO  - LexFoodsGer.gfo
+[2011-11-10 14:16:38,900] INFO  Clean Hello
+[2011-11-10 14:16:38,909] INFO  - AbsCat.tags
+[2011-11-10 14:16:38,910] INFO  - HelloAbs.tags
+[2011-11-10 14:16:38,910] INFO  - HelloEng.tags
+[2011-11-10 14:16:38,910] INFO  - ResEng.tags
+[2011-11-10 14:16:38,911] INFO  - AbsCat.gfo
+[2011-11-10 14:16:38,911] INFO  - HelloAbs.gfo
+[2011-11-10 14:16:38,912] INFO  - HelloEng.gfo
+[2011-11-10 14:16:38,912] INFO  - ResEng.gfo
+[2011-11-10 14:16:39,030] INFO  Full build on Functors
+[2011-11-10 14:16:39,053] INFO  + Foods.gf
+[2011-11-10 14:16:39,295] INFO  + FoodsEng.gf
+[2011-11-10 14:16:39,632] INFO  + FoodsGer.gf
+[2011-11-10 14:16:39,727] INFO  + FoodsI.gf
+[2011-11-10 14:16:39,824] INFO  + LexFoods.gf
+[2011-11-10 14:16:40,062] INFO  + LexFoodsEng.gf
+[2011-11-10 14:16:40,380] INFO  + LexFoodsGer.gf
+[2011-11-10 14:16:40,383] INFO  Full build on Hello
+[2011-11-10 14:16:40,400] INFO  + AbsCat.gf
+[2011-11-10 14:16:40,419] INFO  + HelloAbs.gf
+[2011-11-10 14:16:40,449] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:16:40,451] WARN  ✕ HelloEng.gf
+[2011-11-10 14:16:40,483] INFO  + ResEng.gf
+[2011-11-10 14:16:45,622] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:16:48,750] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:16:48,756] WARN  Problem loading tags file for HelloEng
+[2011-11-10 14:16:48,856] INFO  Full build on Hello
+[2011-11-10 14:16:48,873] INFO  + AbsCat.gf
+[2011-11-10 14:16:48,891] INFO  + HelloAbs.gf
+[2011-11-10 14:16:48,911] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:16:48,912] WARN  ✕ HelloEng.gf
+[2011-11-10 14:16:48,933] INFO  + ResEng.gf
+[2011-11-10 14:16:54,243] INFO  Full build on Hello
+[2011-11-10 14:16:54,268] INFO  + AbsCat.gf
+[2011-11-10 14:16:54,298] INFO  + HelloAbs.gf
+[2011-11-10 14:16:54,335] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 14:16:54,337] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-10 14:16:54,339] INFO  + HelloEng.gf
+[2011-11-10 14:16:54,371] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf... 
+[2011-11-10 14:16:54,372] INFO  + ResEng.gf
+[2011-11-10 14:16:58,939] INFO  Full build on Hello
+[2011-11-10 14:16:58,976] INFO  + AbsCat.gf
+[2011-11-10 14:16:59,007] INFO  + HelloAbs.gf
+[2011-11-10 14:16:59,040] INFO  + HelloEng.gf
+[2011-11-10 14:16:59,071] INFO  + ResEng.gf

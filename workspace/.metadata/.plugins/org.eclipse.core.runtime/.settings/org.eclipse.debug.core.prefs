@@ -1,4 +1,4 @@
-#Thu Nov 10 09:37:14 CET 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="parent.getName()"/>\n</watchExpressions>\n
+#Thu Nov 10 13:50:29 CET 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="parent.getName()"/>\n<expression enabled\="true" text\="Integer.parseInt(matcher.group(2))"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=false

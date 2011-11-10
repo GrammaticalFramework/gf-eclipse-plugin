@@ -1,2 +1,0 @@
--- Abstract Syntax
-abstract Foods = {}

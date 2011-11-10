@@ -109,6 +109,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			}
 		}
 		return gfScope;
+//		return IScope.NULLSCOPE;
 	}
 	
 	/**

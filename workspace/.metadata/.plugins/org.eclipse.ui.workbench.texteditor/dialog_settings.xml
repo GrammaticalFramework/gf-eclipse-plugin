@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="309" key="DIALOG_WIDTH"/>
+		<item value="311" key="DIALOG_WIDTH"/>
 		<item value="198" key="DIALOG_Y_ORIGIN"/>
-		<item value="432" key="DIALOG_HEIGHT"/>
 		<item value="1562" key="DIALOG_X_ORIGIN"/>
+		<item value="433" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="cleanFile" key="selection"/>
+		<item value="waitFor" key="selection"/>
 		<list key="findhistory">
+			<item value="waitFor"/>
+			<item value="close"/>
 			<item value="cleanFile"/>
+			<item value="fail"/>
 			<item value="prefer"/>
 			<item value="default"/>
 			<item value="scope"/>
 			<item value="preference"/>
-			<item value="preferenc"/>
-			<item value="system.out"/>
-			<item value="//&#x09;&#x09;&#x09;BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));"/>
 		</list>
 		<list key="replacehistory">
 			<item value="SWT.FILL, SWT.TOP, true, false"/>

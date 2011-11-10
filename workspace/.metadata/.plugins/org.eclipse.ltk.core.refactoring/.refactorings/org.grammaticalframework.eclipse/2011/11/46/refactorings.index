@@ -8,3 +8,4 @@
 1320849907625	Rename method 'getImportedUris'
 1320850327782	Rename local variable 'uniqueImportURIs'
 1320852543182	Encapsulate field 'moduleName'
+1320919570735	Rename local variable 'pbBatch'

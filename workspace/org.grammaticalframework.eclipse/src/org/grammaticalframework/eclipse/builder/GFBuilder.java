@@ -18,10 +18,13 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IResourceDelta;
@@ -144,11 +147,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 							if (buildFile(file)) {
 								log.info("+ " + delta.getResource().getRawLocation());
 							} else {
-								log.warn("> Failed: " + delta.getResource().getRawLocation());
+								log.warn("✕ " + delta.getResource().getRawLocation());
 							}
 							
-							//TODO Update every other TAGS file to reflect this new info
-//							propagateTagChanges(file);
 						}
 						
 					}
@@ -166,20 +167,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 	}
 
-//	/**
-//	 * The library agent.
-//	 */
-//	@Inject
-//	private TagFileHelper tagHelper = new TagFileHelper();
-//
-//	private void propagateTagChanges(IFile sourceFile) {
-//		
-//		// TODO What's the filepath format of tags on Windows machines?
-//		String sourceFilePath = sourceFile.getRawLocation().toOSString();
-//		String tagFilePath = getBuildDirectory(sourceFile) + "tags";
-//		
-//		Collection<TagEntry> owntags = (Collection<TagEntry>) tagHelper.getOwnTags(sourceFilePath, tagFilePath);
-//	}
 
 	/**
 	 * Full build.
@@ -199,11 +186,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				
 				// Build if necessary
 				if (shouldBuild(resource)) {
-					cleanFile((IFile) resource);
+//					cleanFile((IFile) resource);
 					if (buildFile((IFile) resource)) {
 						log.info("+ " + resource.getName());
 					} else {
-						log.warn("> Failed: " + resource.getName());
+						log.warn("✕ " + resource.getName());
 					}
 				}
 			}
@@ -220,7 +207,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	protected void clean(final IProgressMonitor monitor) throws CoreException {
 		log.info("Clean " + getProject().getName());
 		
-//		getProject().deleteMarkers();
+		getProject().deleteMarkers(IMarker.MARKER, true, IResource.DEPTH_INFINITE);
+		
 		recursiveDispatcher(getProject().members(), new CallableOnResource() {
 			public void call(IResource resource) {
 				// Check for cancellation
@@ -239,10 +227,12 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				}
 				else if (TAG_BASED_SCOPING) {
 					try {
-						IContainer grandparent = resource.getParent().getParent();
-						delete = grandparent.getName().equals(BUILD_FOLDER);
+						IContainer parent = resource.getParent();
+//						IContainer grandparent = parent.getParent();
+//						delete = grandparent.getName().equals(BUILD_FOLDER);
+						delete = parent.getName().equals(BUILD_FOLDER);
 					} catch (NullPointerException _) {
-						// file has no grandparent
+						// file has no grand/parent
 					}
 				} else {
 					delete = (isFile && extension.equals("gfh"));
@@ -255,13 +245,38 @@ public class GFBuilder extends IncrementalProjectBuilder {
 						log.info("- " + resource.getName());
 					}
 				} catch (CoreException e) {
-					log.warn("> Failed: " + resource.getName());
+					log.warn("✕ " + resource.getName());
 				}
 				
 			}
 		});
 	}
   
+	
+	/**
+	 * Clean all the files in the build directory for a given file.
+	 *
+	 * @param file the file
+	 */
+	private void cleanFile(IFile file) {
+		if (TAG_BASED_SCOPING) {
+			log.info("Cleaning build directory for " + file.getName());
+			String buildDir = getBuildDirectory(file);
+			// Check the build directory and delete all its contents
+			File buildDirFile = new File(buildDir);
+			if (buildDirFile.exists()) {
+				File[] files = buildDirFile.listFiles();
+				for (File f : files) {
+					try {
+						f.delete();
+						log.info("- " + f.getName());
+					} catch (Exception _) {
+						log.warn("✕ " + f.getName());
+					}
+				}
+			}
+		}
+	}
 	
 	/**
 	 * For recursively applying a function to an IResource.
@@ -311,7 +326,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @return the builds the directory
 	 */
 	public static String getBuildSubfolder(String sourceFileName) {
-		return getBuildSubfolder(sourceFileName, TAG_BASED_SCOPING);
+		return getBuildSubfolder(sourceFileName, false);
 	}
 	public static String getBuildSubfolder(String sourceFileName, boolean useIndividualFolders) {
 		if (useIndividualFolders) {
@@ -325,7 +340,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 	}
 	private String getBuildDirectory(IFile file) {
-		return getBuildDirectory(file, TAG_BASED_SCOPING);
+		return getBuildDirectory(file, false);
 	}
 	private String getBuildDirectory(IFile file, boolean useIndividualFolders) {
 		String filename = file.getName();
@@ -333,8 +348,25 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				+ java.io.File.separator
 				+ getBuildSubfolder(filename, useIndividualFolders);
 	}
+	public static String getTagsFile(String sourceFileName) {
+		return BUILD_FOLDER
+				+ java.io.File.separator
+				+ sourceFileName.substring(0, sourceFileName.lastIndexOf('.'))
+				+ ".tags";
+	}
 	
+	/**
+	 * Call the respective build method depending on the type of build
+	 * @param file
+	 * @return
+	 */
 	private boolean buildFile(IFile file) {
+		try {
+			// TODO: Delete all markers or just problems)
+			file.deleteMarkers(IMarker.PROBLEM, true, IResource.DEPTH_ONE);
+		} catch(CoreException _) {
+			log.warn("Error trying to delete markers for " + file.getName());
+		}
 		if (TAG_BASED_SCOPING)
 			return buildFileTAGS(file);
 		else
@@ -351,39 +383,39 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	private boolean buildFileTAGS(IFile file) {
 
 		String filename = file.getName();
+		String workingDir = file.getRawLocation().removeLastSegments(1).toOSString() + java.io.File.separator;
 		String buildDir = getBuildDirectory(file);
 
 		try {
 			// Check the build directory and try to create it
+			File workingDirFile = new File(workingDir);
 			File buildDirFile = new File(buildDir);
 			if (!buildDirFile.exists()) {
 				buildDirFile.mkdir();
 			}
 
 			// Create the scraped version
-			createScrapedFileCopy(".."+java.io.File.separator+".."+java.io.File.separator+filename, filename, buildDirFile);
+//			createScrapedFileCopy(".."+java.io.File.separator+".."+java.io.File.separator+filename, filename, buildDirFile);
 
 			// TODO TEMP: Run --batch first to make it happy
-			ProcessBuilder pbBatch = new ProcessBuilder(gfPath, "--batch", "--path=.."+java.io.File.separator+".."+java.io.File.separator, filename);
-			pbBatch.directory(buildDirFile);
-			pbBatch.redirectErrorStream(true);
+			ProcessBuilder pbBatch = new ProcessBuilder(gfPath, "--batch", filename);
+			pbBatch.directory(workingDirFile);
 			Process procBatch = pbBatch.start();
 			procBatch.waitFor();
 			
-			// Compile to get tags with: gf --tags --path=../../ HelloEng.gf
+			// Compile to get tags with: gf --tags HelloEng.gf
 			ArrayList<String> command = new ArrayList<String>();
 			command.add(gfPath);
 			command.add("--tags");
-			command.add("--path=.."+java.io.File.separator+".."+java.io.File.separator);
 			if (gfLibPath != null && !gfLibPath.isEmpty()) {
 				command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath)); // Use library path in command (if supplied)
 			}
-			command.add(filename); // Compile the version in the BUILD folder
+			command.add(filename);
 
 			// Execute command
 			ProcessBuilder pbTags = new ProcessBuilder(command);
-			pbTags.directory(buildDirFile);
-			pbTags.redirectErrorStream(true);
+			pbTags.directory(workingDirFile);
+			pbTags.redirectErrorStream(false);
 			Process procTags = pbTags.start();
 			
 			// Consume & log all output
@@ -393,12 +425,63 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				log.debug("GF: " + out_str);
 			}
 			
-			// Tidy up
-			processOutput.close();
-			procTags.waitFor();
-			int retVal = procTags.exitValue();
-			return (retVal == 0);
+			// If compile failed, parse error messages and add markers
+			if (procTags.waitFor() != 0) {
+				BufferedReader processError = new BufferedReader(new InputStreamReader(procTags.getErrorStream()));
+				String err_str;
+				
+				try {
+					// Read first line, parse for syntax error
+					err_str = processError.readLine();
+					if (err_str.matches(".+([a-zA-Z0-9]+\\.gf):([0-9]+):([0-9]+):(.+)")) {
+						// Don't worry about syntax errors, xtext will mark them for us
+						return false;
+					}
+					
+					// Assume error is of the form:
+					/*
+						renaming module HelloEng
+						   /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+						   Happened in the renaming of Recipient
+						      atomic term GenderXXX
+						      given ResEng, HelloEng
+						         constant not found: GenderXXX
+         			 */
+					IMarker marker = file.createMarker(IMarker.PROBLEM);
+					marker.setAttribute(IMarker.USER_EDITABLE, false);
+					err_str = processError.readLine();
+					
+					Pattern pattern = Pattern.compile("([a-zA-Z0-9]+\\.gf):([0-9]+):$");
+					Matcher matcher = pattern.matcher(err_str);
+					if (matcher.find()) {
+						marker.setAttribute(IMarker.LINE_NUMBER, Integer.parseInt(matcher.group(2)));
+						marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
+					}
+					
+					// Set message to last line
+					while ((err_str = processError.readLine()) != null) {
+						marker.setAttribute(IMarker.MESSAGE, err_str.trim());
+					}
+					
+				} catch (CoreException e) {
+					log.warn("Error creating marker on "+filename);
+					e.printStackTrace();
+				}				
+				return false;
+			}
 			
+			// Move tags file into subdirectory & rename
+			File tagsFile = new File(workingDir + "tags");
+			File tagsFileDst = new File(workingDir + getTagsFile(filename));
+			if (tagsFile.exists()) {
+				tagsFileDst.delete();
+				tagsFile.renameTo(tagsFileDst);
+			} else {
+				log.warn("tags file for "+filename+" missing!");
+			}
+			
+			// Done
+			return true;
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (InterruptedException e) {
@@ -432,12 +515,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			while ((out_str = processOutput.readLine()) != null) {
 				writer.write(out_str + "\n");
 			}
-			
-			process.waitFor();
 			writer.close();
-			processOutput.close();
-			int retVal = process.exitValue();
-			return (retVal == 0);
+			return (process.waitFor() == 0);
 		} catch (IOException e) {
 			log.error("Couldn't create scraped version of " + sourceFileName);
 		} catch (InterruptedException e) {
@@ -508,8 +587,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			}
 			
 			// Tidy up
-			processInput.close();
-			processOutput.close();
 			process.waitFor();
 			return true;
 			
@@ -520,31 +597,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 		
 		return false;		
-	}
-	
-	/**
-	 * Clean all the files in the build directory for a given file.
-	 *
-	 * @param file the file
-	 */
-	private void cleanFile(IFile file) {
-		if (TAG_BASED_SCOPING) {
-			log.info("Cleaning build directory for " + file.getName());
-			String buildDir = getBuildDirectory(file);
-			// Check the build directory and delete all its contents
-			File buildDirFile = new File(buildDir);
-			if (buildDirFile.exists()) {
-				File[] files = buildDirFile.listFiles();
-				for (File f : files) {
-					try {
-						f.delete();
-						log.info("- " + f.getName());
-					} catch (Exception _) {
-						log.warn("> Failed: " + f.getName());
-					}
-				}
-			}
-		}
 	}
 	
 }

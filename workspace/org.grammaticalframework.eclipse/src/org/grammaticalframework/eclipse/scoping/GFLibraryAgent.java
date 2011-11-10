@@ -45,7 +45,7 @@ public class GFLibraryAgent {
 	 * @return the header path
 	 */
 	public URI getTagsFile(Resource context, String moduleName) {
-		String sb = GFBuilder.getBuildSubfolder(context.getURI().lastSegment())	+ "tags";
+		String sb = GFBuilder.getTagsFile(context.getURI().lastSegment());
 		URI uri = URI.createURI(sb);
 		return uri.resolve(context.getURI());
 	}
