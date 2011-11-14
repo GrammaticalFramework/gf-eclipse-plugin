@@ -1,4 +1,5 @@
-#Mon Nov 14 09:48:21 CET 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="rs.getElements(converter.toQualifiedName(&quot;mkA&quot;));"/>\n<expression enabled\="true" text\="globalScope.getElements(converter.toQualifiedName(&quot;mkN&quot;));"/>\n<expression enabled\="true" text\="scope.getElements((new IQualifiedNameConverter.DefaultImpl()).toQualifiedName(&quot;mkA&quot;));"/>\n</watchExpressions>\n
+#Mon Nov 14 16:51:36 CET 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="((IdentImpl)eObject).getS();"/>\n<expression enabled\="true" text\="id.eProxyURI()"/>\n<expression enabled\="true" text\="((org.eclipse.emf.ecore.impl.MinimalEObjectImpl)e).eProxyURI()"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=false
+org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=false

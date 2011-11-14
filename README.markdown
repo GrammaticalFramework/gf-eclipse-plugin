@@ -161,8 +161,7 @@ Do not hesitate to contact me on `john.j.camilleri` at domain `chalmers.se` and 
 
 1. The in-editor validation often needs to be triggered/updated by a keystroke. So if you can still see errors which you believe should be correct, try adding a space character to ensure the validation has been re-triggered.
 2. Validation expects to have the project's **Build Automatically** option checked (turned on).
-3. Sometimes you may get an entire file marked with errors, even though in fact there is only a single error which is causing the internal builder to fail. In such cases referring to the **Problems** view should help you locate the cause. This behaviour will hopefully be improved in future versions.
-
+3. Sometimes you may get an entire file marked with errors, even though in fact there is only a single error which is causing the internal builder to fail. In such cases referring to the **Problems** view should help you locate the cause. This issue is particularly relevant when changes made to one module may induce errors in its descendants (e.g. renaming a parameter in a resource module). This behaviour will hopefully be improved in future versions. 
 
 ### Criteria
 

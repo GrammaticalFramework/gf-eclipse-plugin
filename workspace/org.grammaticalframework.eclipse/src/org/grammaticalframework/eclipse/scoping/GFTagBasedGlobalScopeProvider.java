@@ -103,14 +103,15 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		GFTagBasedScope gfScope = null;
 		Map<URI, Collection<TagEntry>> uriTagMap = getURITagMap(resource);
 		for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
-			String moduleName = entry.getKey().lastSegment().substring(0, entry.getKey().lastSegment().lastIndexOf('.'));
+			String lastSegment = entry.getKey().lastSegment();
+			int dotIx = lastSegment.lastIndexOf('.');
+			String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
 			gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
 			for (TagEntry tag : entry.getValue()) {
 				gfScope.addTag(resource, tag);
 			}
 		}
 		return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
-//		return IScope.NULLSCOPE;
 	}
 	
 	/**

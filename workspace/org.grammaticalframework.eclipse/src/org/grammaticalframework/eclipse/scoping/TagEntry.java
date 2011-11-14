@@ -40,7 +40,7 @@ public class TagEntry {
 			this.args = elements[3];
 		case 3:
 			int ix = elements[2].lastIndexOf(':');
-			this.file = ix > 0 ? elements[2].substring(0, ix) : elements[2];
+			this.file = (ix > 0) ? elements[2].substring(0, ix) : elements[2];
 			
 			// Line could be single (9) or range (9-18)
 			String lineStr = elements[2].substring(ix+1);

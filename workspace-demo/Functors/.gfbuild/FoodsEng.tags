@@ -1873,12 +1873,17 @@ FoodsEng.Fresh	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Func
 FoodsEng.Is	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:14	
 FoodsEng.Italian	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:27	
 FoodsEng.Item	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:9	
+FoodsEng.Item	lindef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:9	
 FoodsEng.Item2	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf	
+FoodsEng.Item2	lindef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf	
 FoodsEng.Kind	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:10	
+FoodsEng.Kind	lindef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:10	
 FoodsEng.Phrase	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:8	
+FoodsEng.Phrase	lindef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:8	
 FoodsEng.Pizza	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:9	
 FoodsEng.QKind	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:19	
 FoodsEng.Quality	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:11	
+FoodsEng.Quality	lindef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:11	
 FoodsEng.That	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:16	
 FoodsEng.These	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:17	
 FoodsEng.This	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:15	

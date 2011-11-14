@@ -9,13 +9,30 @@
  */
 package org.grammaticalframework.eclipse.scoping;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.EcoreUtil2;
+import org.eclipse.xtext.parser.IParseResult;
+import org.eclipse.xtext.parser.IParser;
+import org.eclipse.xtext.resource.XtextResource;
+import org.eclipse.xtext.resource.XtextResourceSet;
+import org.grammaticalframework.eclipse.GFRuntimeModule;
+import org.grammaticalframework.eclipse.GFStandaloneSetup;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 import org.grammaticalframework.eclipse.gF.GFFactory;
+import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.impl.IdentImpl;
+
+import com.google.inject.Inject;
+import com.google.inject.Injector;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -131,21 +148,71 @@ public class GFLibraryAgent {
 	 *
 	 */
 	public EObject findEObjectInFile(Resource context, String filePath, String ident) {
-//		EObject eObject = GFFactory.eINSTANCE.createIdent();
-//		eObject.eSet(GFPackage.Literals.IDENT__S, unQualifiedName.toString());
-		
+/*		
+		// Creating our own EObjects like this satisfies the validator, but will not allow you to "open declaration"
 		IdentImpl eObject = (IdentImpl) GFFactory.eINSTANCE.createIdent();
 		eObject.setS(ident);
-
-//		IResourceDescriptions irds = provider.getResourceDescriptions(context);
-		
-//		URI uri = URI.createFileURI(filePath);
-		URI uri = context.getURI(); // always supply a valid URi
-		uri = uri.appendFragment("//");
+//		URI uri = URI.createFileURI(filePath).appendFragment("///@body/@judgements.0/@definitions.0/@name");
+		URI uri = URI.createURI("platform:/resource/Hello/ResEng.gf").appendFragment("///@body/@judgements.0/@definitions.0/@name");
 		eObject.eSetProxyURI(uri);
-
-//		URI uri = EcoreUtil.getURI(eObject);
 		return eObject;
+*/
+		// Loads external file as EMF model, but tries to do linking which we don't want
+//		Injector injector = new GFStandaloneSetup().createInjectorAndDoEMFRegistration();
+//		XtextResourceSet resourceSet = injector.getInstance(XtextResourceSet.class);
+//		resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
+//		Resource resource = resourceSet.getResource(uri, true);
+		
+		/*
+		 * TODO
+		 * This "works" except for for when there's a problem in parsing the actual source file, as in the mkN / mkA case.
+		 * Additionally open declaration still doesn't work anyway.
+		 * Essentially nothing I've tried in this method was able to make the OPEN DECLARATION function work, even if can satisfy the dangling
+		 * dependancies. I think for now we'll jsut have to leave it broken, if we want to keep moving :(
+		 */
+
+		if (!openedResources.containsKey(filePath)) {
+			if (resourceSet == null) {
+				Injector injector = new GFStandaloneSetup().createInjectorAndDoEMFRegistration();
+				resourceSet = injector.getInstance(XtextResourceSet.class);
+			}
+			resourceSet.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.FALSE);
+			Resource resource = resourceSet.getResource(URI.createFileURI(filePath), true);
+			openedResources.put(filePath, resource);
+			
+//			Injector injector = new GFStandaloneSetup().createInjectorAndDoEMFRegistration();
+//			IParser parser = injector.getInstance(IParser.class);
+//			IParseResult parse = null;
+//			try {
+//				parse = parser.parse(new FileReader(filePath));
+//				openedResources.put(filePath, parse);
+//			} catch (FileNotFoundException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
+		}
+		
+//		TreeIterator<EObject> iter = openedResources.get(filePath).getRootASTElement().eAllContents();
+		TreeIterator<EObject> iter = openedResources.get(filePath).getAllContents();
+		while (iter.hasNext()) {
+			EObject e = iter.next();
+			if (e instanceof Ident)
+				if (((Ident)e).getS().equals(ident)) {
+//					((MinimalEObjectImpl)e).eSetProxyURI(uri.appendFragment("///@body/@judgements.0/@definitions.0/@name"));
+//					IdentImpl id = (IdentImpl) e;
+//					id.eSetProxyURI(uri);
+//					return id;
+					return e;
+				}
+		}
+
+//		((IdentImpl)eObject).getS();
+		return null;
 	}
 	
+	private XtextResourceSet resourceSet;
+	
+	private Map<String, Resource> openedResources = new HashMap<String, Resource>();
+//	private static Map<String, IParseResult> openedResources = new HashMap<String, IParseResult>();
+
 }

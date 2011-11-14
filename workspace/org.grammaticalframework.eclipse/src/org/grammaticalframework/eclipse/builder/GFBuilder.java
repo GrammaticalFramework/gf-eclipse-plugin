@@ -43,10 +43,6 @@ import org.apache.log4j.Logger;
  * 	http://wiki.eclipse.org/FAQ_How_do_I_implement_an_incremental_project_builder%3F
  * 	http://www.eclipse.org/articles/Article-Builders/builders.html
  * 
- * TODO Adding of markers to files
- * TODO Should this class actually be moved to the UI plugin?
- * TODO Support for monitor, when building takes a long time (progress, cancellation)
- * 
  * @author John J. Camilleri
  *
  */
@@ -323,9 +319,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	}
 	public static String getBuildSubfolder(String sourceFileName, boolean useIndividualFolders) {
 		if (useIndividualFolders) {
+			int dotIx = sourceFileName.lastIndexOf('.');
 			return BUILD_FOLDER
 					+ java.io.File.separator
-					+ sourceFileName.substring(0, sourceFileName.lastIndexOf('.'))
+					+ ((dotIx > 0) ? sourceFileName.substring(0, dotIx) : sourceFileName)
 					+ java.io.File.separator;
 		} else {
 			return BUILD_FOLDER
@@ -342,9 +339,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				+ getBuildSubfolder(filename, useIndividualFolders);
 	}
 	public static String getTagsFile(String sourceFileName) {
+		int dotIx = sourceFileName.lastIndexOf('.');
 		return BUILD_FOLDER
 				+ java.io.File.separator
-				+ sourceFileName.substring(0, sourceFileName.lastIndexOf('.'))
+				+ ((dotIx > 0) ? sourceFileName.substring(0, dotIx) : sourceFileName)
 				+ ".tags";
 	}
 	public static String getTagsFile(IFile file) {
@@ -360,7 +358,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private boolean buildFile(IFile file) {
 		try {
-			// TODO: Delete all markers or just problems?
 			file.deleteMarkers(null, true, IResource.DEPTH_ZERO);
 		} catch(CoreException _) {
 			log.warn("Error trying to delete markers for " + file.getName());
@@ -395,7 +392,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			// Create the scraped version
 //			createScrapedFileCopy(".."+java.io.File.separator+".."+java.io.File.separator+filename, filename, buildDirFile);
 
-			// TODO TEMP: Run --batch first to make it happy
+			// TODO WORKAROUND: Run --batch first to make it happy
 			ProcessBuilder pbBatch = new ProcessBuilder(gfPath, "--batch", filename);
 			pbBatch.directory(workingDirFile);
 			Process procBatch = pbBatch.start();
@@ -482,7 +479,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				      given ResEng, HelloEng
 				         constant not found: GenderXXX
  			 */
-			IMarker marker = file.createMarker(IMarker.PROBLEM);
+			
+			// Using XText marker type so that we get the tooltip on hover!
+			// Refer to: org.eclipse.xtext.ui.MarkerTypes
+			IMarker marker = file.createMarker("org.eclipse.xtext.ui.check.normal"); // IMarker.PROBLEM
 			marker.setAttribute(IMarker.USER_EDITABLE, false);
 			err_str = processError.readLine();
 			log.debug("GF: " + err_str);
@@ -490,7 +490,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			Pattern pattern = Pattern.compile("([a-zA-Z0-9]+\\.gf):([0-9]+):$");
 			Matcher matcher = pattern.matcher(err_str);
 			if (matcher.find()) {
-				marker.setAttribute(IMarker.LINE_NUMBER, Integer.parseInt(matcher.group(2)));
+				Integer lineNo = Integer.parseInt(matcher.group(2));
+				marker.setAttribute(IMarker.LINE_NUMBER, lineNo);
+				marker.setAttribute(IMarker.LOCATION, "line: " + lineNo.toString() + " " + file.getFullPath().toString());
 				marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
 			}
 			
