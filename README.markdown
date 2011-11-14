@@ -4,25 +4,34 @@
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
 
-## Intro & motivation
+## Introduction
 
-The aim behind developing a desktop IDE for GF is to provide more powerful tools than may be possible and/or practical in a web-based setting. In particular, the ability to resolve cross-references between source files and libraries instantaneously during development time is one of the primary goals and motivations for the project.
+The aim behind developing a desktop IDE for GF is to provide more powerful tools than may be possible and/or practical in a web-based environment (the GF Web IDE). In particular, the ability to resolve identifier cross-references and browse external libraries quickly during development time is one of the primary motivations for the project.
 
-The choice was made to develop this desktop IDE as a plugin for the Eclipse Platform as it seemed to be the most popular choice among the GF developer community. Support for the platform is vast and many tools for adapting Eclipse to domain-specific languages already exist. Unlike the zero-click WIDE approach, using the GF Eclipse plugin (GFEP) will require some manual installation and configuration on the development machine. Thus the GFEP is aimed more at seasoned developers rather than just the curious.
+The choice was made to develop this desktop IDE as a plugin for the Eclipse Platform as it emerged as the most popular choice among the GF developer community. Support for the platform is vast and many tools for adapting Eclipse to domain-specific languages already exist. Unlike the zero-click Web IDE approach, using the GF Eclipse plugin (GFEP) will require some manual installation and configuration on the development machine. Thus the GFEP is aimed more at seasoned developers rather than the curious GF newbie.
 
-## Who
+The starting point for the GFEP is using the [Xtext DSL Framework](http://www.eclipse.org/Xtext/) for Eclipse. By converting the GF grammar into the appropriate Extended-BNF form required by the LL(*) ANTLR parser, the framework provides a good starting point for future plugin development, already including a variery of syntax checking tools and some cross-reference resolution support. The specific requirements of the GF language, particularly in the way of its special module hierarchy, mean that significant customisations to this generated base plugin are needed.
 
-The GFEP is being developed as part of Work Package 2 of the MOLTO Project.
+### Who
 
-Primary developer is **John J. Camilleri**, who should be contacted for all queries directly related to the plugin on `john.j.camilleri` at the domain `chalmers.se`.
+The GFEP is being developed as part of Work Package 2 of the [MOLTO Project](http://www.molto-project.eu/).
 
-## Status
+Primary developer is **John J. Camilleri**, who should be contacted for all queries and feedback related to the plugin on `john.j.camilleri` at domain `chalmers.se`.
 
-The starting point for the GFEP is using the Xtext DSL Framework for Eclipse (http://www.eclipse.org/Xtext/). By converting the GF grammar into the appropriate Extended-BNF form required by the LL(*) ANTLR parser, the framework provides a good starting point for future plugin development, already including a variery of syntax checking tools and some cross-reference resolution support. The specific requirements of the GF language, particularly in the way of its special module hierarchy, mean that significant customisations to this generated base plugin are needed.
+### Links
 
-As of 1st October 2011, a first prototype of the GFEP has been released to GF developers to gather some initial feedback. This first release is not intended to be a mature development tool, but a showcase of some of the potential features that can be provided by developing GF grammars within a powerful desktop IDE. Reactions from within the GF developer community will guide the way forward, both in prioritizing the future tasks and also in better guaging the person-month cost that an eventual mature version of the plugin would require.
+ - This document shall contain the most up-to-date information about the plugin. The most up-to-date version of this file can always be found in the source-code repository at <https://github.com/GrammaticalFramework/gf-eclipse-plugin/blob/master/README.markdown>
+- This documentation is also available at the [MOLTO Project Wiki](http://www.molto-project.eu/node/1395).
+- Source code repository is at <https://github.com/GrammaticalFramework/gf-eclipse-plugin> (do not try to run the plugin from source; please only use the packaged releases).
+- Here are some [example GF projects](http://www.grammaticalframework.org/eclipse/examples/) for testing out the plugin features.
+- Software update site URL for installing through Eclipse:
+`http://www.grammaticalframework.org/eclipse/release/`
 
-## Update history
+
+### Update history
+
+**16/11/11**
+: Third BETA released, using new tag-based scoping for better performance.
 
 **11/10/11**
 : Second BETA released, with improved support for qualified names, local variable bindings, selective inheritance, module outlining, and launch configurations. Also new GF Project type.
@@ -42,8 +51,6 @@ As of 1st October 2011, a first prototype of the GFEP has been released to GF de
 
 --------------------------------------------------------------------------------
 
-# Features & issues
-
 ## Features
 
 ### Implemented (or partially implemented)
@@ -53,10 +60,10 @@ As of 1st October 2011, a first prototype of the GFEP has been released to GF de
 - Definition outlining, jump to declaration, find usage
 - Warnings for problems in module dependancy hierarchy
 - Launch configurations, i.e. compilation directly from IDE
-
-### Coming soon
-
 - Auto-completion for declared identifiers
+
+### Near-term
+
 - Inline documentation for function calls, overloads
 - Quick-fix suggestions for syntax and naming errors
 - Code generation for concrete/instance modules
@@ -68,19 +75,16 @@ As of 1st October 2011, a first prototype of the GFEP has been released to GF de
 
 - Test-suite functionality
 - Treebank management and testing
-- Possibility to incorporate treebank tool demonstrated by Jordi Saludes in the Math Grammar Library
 - Provide a single platform for developing and using embedded grammars
 - Integration with ontology engineering tools
 
 
-## Known issues
+### Known issues
 
-1. Interfaces/functors are currently not supported.
-1. The in-editor validation often needs to be triggered by some keystrokes, especially when Eclipse laods
-with some already-opened files.
+1. The in-editor validation often needs to be triggered by a keystroke.
 
 
-## Other remarks
+### Other remarks
 
 1. Interface decisions such as icons were made reltively hastily and may not be entirely suitable or intuitive.
 This will get better as the plugin gets used by more users (and provide feedback).
@@ -88,22 +92,22 @@ This will get better as the plugin gets used by more users (and provide feedback
 
 --------------------------------------------------------------------------------
 
-# Installation & Updating
+## Installation &amp; updating
 
-## Requirements
+### System requirements
 
 1. The plugin was developed using Eclipse 3.7, and has **not** been tested with older versions of Eclipse.
-1. GFEP makes use of the newest GF features, and requires that **GF >= 3.3** is already installed on your system. Paths to GF must be set within the Eclipse plugin (meaning you don't necessarily need to have GF in your `PATH` environment variable).
+1. GFEP makes use of the newest GF features, and requires that the latest developer version of GF is already installed on your system. Paths to GF must be set within the Eclipse plugin (meaning you don't necessarily need to have GF in your `PATH` environment variable).
 
-## Installing the plugin for the first time
+### Installing the plugin for the first time
 
 1. Inside Eclipse, go to **Help &rarr; Install New Software**.
-1. Add new software site using the URL: http://www.grammaticalframework.org/eclipse/release/
+1. Add new software site using the URL: `http://www.grammaticalframework.org/eclipse/release/`
 1. Select the **GF Eclipse Plugin**, click Next, accept the license agreement and install.
 1. Accept the prompt warning that the software is unsigned.
 1. Restart Eclipse when prompted.
 
-### Customizing
+#### Settings
 1. Add the GF perspective by clicking **Open Perspective &rarr; Other** and choosing **GF**.
 1. Set your paths to the GF executable and libraries by going to **Window &rarr; Preferences &rarr; Grammatical Framework**.  
 _The runtime path is assumed to be `~/.cabal/bin/gf`, which may be wrong depending on your
@@ -111,14 +115,16 @@ system and how you installed GF._
 _The library path should get automatically set from your environment's `GF_LIB_PATH` variable._
 
 
-## Updating the plugin
+### Updating the plugin
 
 1. In Eclipse, go to **Help &rarr; Check for updates**.
 1. Any available updates will appear in the dialog. Select them and follow the usual steps.
 
 --------------------------------------------------------------------------------
 
-# Getting started
+## Getting started
+
+Some steps you can follow to get a feel of of the plugin's features.
 
 - Create a new **GF Project**.
 
@@ -129,7 +135,7 @@ _The library path should get automatically set from your environment's `GF_LIB_P
 
 ![New module wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-modulewizard-1.png)
 
-_If asked whether you want to add the **Xtext nature** to your project, you can safely say _no_ (this prompt has been removed in the most recent version of GFEP)._
+_If asked whether you want to add the **Xtext nature** to your project, you can safely say **No** (this prompt has been removed in newer versions)._
 
 - You can find some small examples at http://www.grammaticalframework.org/eclipse/examples/. Download the 
 files and manually add them to your Eclipse workspace. To experiment with some of the plugin features.
@@ -156,13 +162,13 @@ files and manually add them to your Eclipse workspace. To experiment with some o
 
 --------------------------------------------------------------------------------
 
-# Feedback
+## Feedback
 
 As part of the evaluation of the GF Eclipse Plugin, feedback (both negative and positive) on the following would be appreciated:
 
 1. Issues encountered with installation
-1. Compatibilities / conflicts with other Eclipse plugins
-1. Lack of (or incorrect) support of GF syntactic constructs, module hierarchy system
+1. Incorrect support of GF syntactic constructs, module hierarchy system
 1. Performance issues (speed, resources footprint)
 1. General intuitiveness of the UI
 1. Feature wish-list
+1. Compatibilities / conflicts with other Eclipse plugins
