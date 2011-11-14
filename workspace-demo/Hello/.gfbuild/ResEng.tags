@@ -1,6 +1,3 @@
-ResEng.Const1	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:6	Param
-ResEng.Const2	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:6	Param
-ResEng.Fem	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5	Gender
-ResEng.Gender	param	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5	
-ResEng.Masc	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5	Gender
-ResEng.Param	param	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:6	
+ResEng.Fem	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5	GenderX
+ResEng.GenderX	param	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5	
+ResEng.Masc	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5	GenderX

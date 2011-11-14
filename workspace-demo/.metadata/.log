@@ -3964,3 +3964,831 @@ org.eclipse.core.internal.resources.ResourceException: Marker id 191519 not foun
 	at org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor.processIssues(MarkerIssueProcessor.java:43)
 	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:67)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2011-11-14 09:45:23.529 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 09:48:48.697
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+
+!SESSION 2011-11-14 09:56:57.489 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.eclipse.core.jobs 2 2 2011-11-14 09:57:10.655
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.xtext.ui.editor.validation.ValidationJob
+!SESSION 2011-11-14 09:58:37.953 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 09:59:33.452
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 09:59:39.144
+!MESSAGE org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor  - Could not create marker.
+
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:121)
+	at org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor.processIssues(MarkerIssueProcessor.java:43)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Marker id 191653 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:57)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:237)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.setMarkerAttributes(MarkerCreator.java:44)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.createMarker(MarkerCreator.java:23)
+	at org.eclipse.xtext.ui.editor.validation.AddMarkersOperation.execute(AddMarkersOperation.java:89)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	... 3 more
+Root exception:
+org.eclipse.core.internal.resources.ResourceException: Marker id 191653 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:57)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:237)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.setMarkerAttributes(MarkerCreator.java:44)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.createMarker(MarkerCreator.java:23)
+	at org.eclipse.xtext.ui.editor.validation.AddMarkersOperation.execute(AddMarkersOperation.java:89)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor.processIssues(MarkerIssueProcessor.java:43)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2011-11-14 10:24:18.600 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:24:39.972
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:25:32.114
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:25:32.115
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:25:32.116
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 10:25:32.119
+!MESSAGE org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.2.2.2.1.0.1.1.7.0.15.0.0.2.2.0.0.0.1.0.7.0::2::/1' failed.
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-11-14 10:25:32.120
+!MESSAGE An internal error occurred during: "Xtext validation".
+!STACK 0
+org.eclipse.emf.common.util.WrappedException: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:201)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	... 12 more
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 10:25:39.563
+!MESSAGE org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.2.2.1.1.1.1.1.7.0.15.0.0.1.1.7.0::2::/1' failed.
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-11-14 10:25:39.563
+!MESSAGE An internal error occurred during: "Xtext validation".
+!STACK 0
+org.eclipse.emf.common.util.WrappedException: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:201)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	... 12 more
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:25:42.507
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 10:25:42.507
+!MESSAGE org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.2.2.1.1.1.1.1.7.0.15.0.0.1.1.7.0::2::/1' failed.
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-11-14 10:25:42.507
+!MESSAGE An internal error occurred during: "Xtext validation".
+!STACK 0
+org.eclipse.emf.common.util.WrappedException: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:201)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	... 12 more
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:25:45.265
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 10:25:45.266
+!MESSAGE org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.2.2.1.1.1.1.1.7.0.15.0.0.1.1.7.0::2::/1' failed.
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-11-14 10:25:45.267
+!MESSAGE An internal error occurred during: "Xtext validation".
+!STACK 0
+org.eclipse.emf.common.util.WrappedException: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:201)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	... 12 more
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:25:45.269
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 10:25:45.270
+!MESSAGE org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.2.2.1.1.1.1.1.7.0.15.0.0.1.1.7.0::2::/1' failed.
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-11-14 10:25:45.270
+!MESSAGE An internal error occurred during: "Xtext validation".
+!STACK 0
+org.eclipse.emf.common.util.WrappedException: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:201)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	... 12 more
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:26:24.977
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:26:29.914
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 10:26:29.915
+!MESSAGE org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.2.2.1.1.1.1.1.7.0.15.0.0.1.1.7.0::2::/1' failed.
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-11-14 10:26:29.915
+!MESSAGE An internal error occurred during: "Xtext validation".
+!STACK 0
+org.eclipse.emf.common.util.WrappedException: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:201)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	... 12 more
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:26:54.396
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 10:26:54.396
+!MESSAGE org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.2.2.1.1.1.1.1.7.0.15.0.0.1.1.7.0::2::/1' failed.
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-11-14 10:26:54.397
+!MESSAGE An internal error occurred during: "Xtext validation".
+!STACK 0
+org.eclipse.emf.common.util.WrappedException: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:201)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	... 12 more
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:27:01.531
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 10:27:01.532
+!MESSAGE org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.2.2.1.1.1.1.1.7.0.15.0.0.1.1.7.0::2::/1' failed.
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-11-14 10:27:01.532
+!MESSAGE An internal error occurred during: "Xtext validation".
+!STACK 0
+org.eclipse.emf.common.util.WrappedException: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:201)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	... 12 more
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:27:01.533
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 10:27:01.534
+!MESSAGE org.eclipse.xtext.linking.lazy.LazyLinkingResource  - resolution of uriFragment 'xtextLink_::0.2.2.1.1.1.1.1.7.0.15.0.0.1.1.7.0::2::/1' failed.
+
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.eclipse.core.jobs 4 2 2011-11-14 10:27:01.534
+!MESSAGE An internal error occurred during: "Xtext validation".
+!STACK 0
+org.eclipse.emf.common.util.WrappedException: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:201)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReference(LazyLinkingResource.java:139)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.resolveLazyCrossReferences(LazyLinkingResource.java:103)
+	at org.eclipse.xtext.EcoreUtil2.resolveLazyCrossReferences(EcoreUtil2.java:417)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.resolveProxies(ResourceValidatorImpl.java:127)
+	at org.eclipse.xtext.validation.ResourceValidatorImpl.validate(ResourceValidatorImpl.java:62)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:79)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob$1.exec(ValidationJob.java:1)
+	at org.eclipse.xtext.util.concurrent.AbstractReadWriteAcces.readOnly(AbstractReadWriteAcces.java:32)
+	at org.eclipse.xtext.ui.editor.model.XtextDocument.readOnly(XtextDocument.java:86)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.createIssues(ValidationJob.java:75)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NullPointerException
+	at org.eclipse.xtext.linking.impl.ImportedNamesAdapter$WrappingScope.getSingleElement(ImportedNamesAdapter.java:56)
+	at org.eclipse.xtext.scoping.impl.AbstractScope.getSingleElement(AbstractScope.java:104)
+	at org.eclipse.xtext.linking.impl.DefaultLinkingService.getLinkedObjects(DefaultLinkingService.java:121)
+	at org.eclipse.xtext.linking.lazy.LazyLinkingResource.getEObject(LazyLinkingResource.java:170)
+	... 12 more
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:27:01.733
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+
+!SESSION 2011-11-14 10:34:27.642 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.sdk.ide
+Command-line arguments:  -product org.eclipse.sdk.ide -data /home/john/repositories/gf-eclipse-plugin/workspace/../workspace-demo -dev file:/home/john/repositories/gf-eclipse-plugin/workspace/.metadata/.plugins/org.eclipse.pde.core/Eclipse Application/dev.properties -os linux -ws gtk -arch x86 -consoleLog
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.106
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.117
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.120
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.123
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.126
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.130
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.133
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.136
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.139
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.142
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.144
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.156
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.158
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.160
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.170
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.173
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.176
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.232
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:33.249
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:35.664
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.638
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.640
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.642
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.644
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.646
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.648
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.650
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.653
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.655
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.657
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.659
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.661
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.662
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.664
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.666
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.668
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.671
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.672
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.674
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.676
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.678
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.679
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.681
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.682
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.684
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.685
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.686
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.689
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.690
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.692
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.694
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.695
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.697
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.698
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.700
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.700
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.701
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:37.703
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 4 0 2011-11-14 10:34:37.710
+!MESSAGE org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor  - Could not create marker.
+
+!STACK 0
+java.lang.reflect.InvocationTargetException
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:121)
+	at org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor.processIssues(MarkerIssueProcessor.java:43)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Marker id 191692 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:57)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:237)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:223)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.setMarkerAttributes(MarkerCreator.java:39)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.createMarker(MarkerCreator.java:23)
+	at org.eclipse.xtext.ui.editor.validation.AddMarkersOperation.execute(AddMarkersOperation.java:89)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	... 3 more
+Root exception:
+org.eclipse.core.internal.resources.ResourceException: Marker id 191692 not found.
+	at org.eclipse.core.internal.resources.Marker.checkInfo(Marker.java:57)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:237)
+	at org.eclipse.core.internal.resources.Marker.setAttribute(Marker.java:223)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.setMarkerAttributes(MarkerCreator.java:39)
+	at org.eclipse.xtext.ui.editor.validation.MarkerCreator.createMarker(MarkerCreator.java:23)
+	at org.eclipse.xtext.ui.editor.validation.AddMarkersOperation.execute(AddMarkersOperation.java:89)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2344)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.xtext.ui.editor.validation.MarkerIssueProcessor.processIssues(MarkerIssueProcessor.java:43)
+	at org.eclipse.xtext.ui.editor.validation.ValidationJob.run(ValidationJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:38.296
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:42.539
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:34:50.110
+!MESSAGE org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider  - Couldn't find tags file for HelloEng
+
+
+!ENTRY org.apache.log4j 2 0 2011-11-14 10:36:03.063
+!MESSAGE org.grammaticalframework.eclipse.builder.GFBuilder  - ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+

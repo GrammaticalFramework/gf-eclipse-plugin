@@ -39,7 +39,6 @@
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.builder.GFBuilder"/>
 <fullyQualifiedTypeName name="java.util.Hashtable"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.impl.IdentImpl"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.GFFactory"/>
@@ -47,7 +46,6 @@
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider"/>
 <fullyQualifiedTypeName name="com.google.inject.Inject"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScope"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.xml.type.internal.RegEx"/>
 <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
 <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.mwe2.language.scoping.QualifiedNameProvider"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.conversion.impl.QualifiedNameValueConverter"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScope"/>
 </qualifiedTypeNameHistroy>
