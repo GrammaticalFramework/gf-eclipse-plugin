@@ -3,6 +3,7 @@
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
+_This documentation is also available at the [MOLTO Project Wiki](http://www.molto-project.eu/node/1395)._
 
 ## Introduction
 
@@ -21,39 +22,16 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 ### Links
 
 - This document shall contain the most up-to-date information about the plugin. The most up-to-date version of this file can always be found in the source-code repository at <https://github.com/GrammaticalFramework/gf-eclipse-plugin/blob/master/README.markdown>
-- This documentation is also available at the [MOLTO Project Wiki](http://www.molto-project.eu/node/1395).
 - Source code repository is at <https://github.com/GrammaticalFramework/gf-eclipse-plugin> (do not try to run the plugin from source; please only use the packaged releases).
 - Here are some [example GF projects](http://www.grammaticalframework.org/eclipse/examples/) for testing out the plugin features.
 - Software update site URL for installing through Eclipse:
 `http://www.grammaticalframework.org/eclipse/release/`
 
-
-### Update history
-
-**16/11/11**
-: Third BETA released, using new tag-based scoping for better performance.
-
-**11/10/11**
-: Second BETA released, with improved support for qualified names, local variable bindings, selective inheritance, module outlining, and launch configurations. Also new GF Project type.
-
-**01/10/11**
-: Initial BETA released.
-
-**20/09/11**
-: Refactoring of grammar to provide neater syntax trees, and handle cross-referencing contraints. Major work on name resolution across modules, implementing custom `Scoping`, `Naming`, `ResourceDescription` implementations.
-
-**08/09/11**
-: Successfully converted GF language grammar into ANTLR-compaticble format. Refactoring to avoid left-recursion took up the majority of this time so far.
-
-**Late August 2011**
-: Started investigation the use of Xtext as a basis for building the Eclipse plugin. Xtext requires a EBNF-style language grammar in order to generate development tools as a plugin for the Eclipse IDE.
-
-
 --------------------------------------------------------------------------------
 
 ## Features
 
-### Implemented (or partially implemented)
+### Implemented
 
 - Syntax highlighting and error detection
 - Code folding, quick block-commenting, automatic code formatting
@@ -61,6 +39,7 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 - Warnings for problems in module dependancy hierarchy
 - Launch configurations, i.e. compilation directly from IDE
 - Auto-completion for declared identifiers
+- Background compilation (shallow) using project builder
 
 ### Near-term
 
@@ -78,17 +57,27 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 - Provide a single platform for developing and using embedded grammars
 - Integration with ontology engineering tools
 
+--------------------------------------------------------------------------------
 
-### Known issues
+## Update history
 
-1. The in-editor validation often needs to be triggered by a keystroke.
+**16/11/11**
+: Third BETA released, overhauled to take advantage of new compiler features. Tag-based scoping for better performance.
 
+**11/10/11**
+: Second BETA released, with improved support for qualified names, local variable bindings, selective inheritance, module outlining, and launch configurations. Also new GF Project type.
 
-### Other remarks
+**01/10/11**
+: Initial BETA released.
 
-1. Interface decisions such as icons were made reltively hastily and may not be entirely suitable or intuitive.
-This will get better as the plugin gets used by more users (and provide feedback).
-1. A wiki or bug tracker may be set up if there is enough usage feedback to justify it.
+**20/09/11**
+: Refactoring of grammar to provide neater syntax trees, and handle cross-referencing contraints. Major work on name resolution across modules, implementing custom `Scoping`, `Naming`, `ResourceDescription` implementations.
+
+**08/09/11**
+: Successfully converted GF language grammar into ANTLR-compaticble format. Refactoring to avoid left-recursion took up the majority of this time so far.
+
+**Late August 2011**
+: Started investigation the use of Xtext as a basis for building the Eclipse plugin. Xtext requires a EBNF-style language grammar in order to generate development tools as a plugin for the Eclipse IDE.
 
 --------------------------------------------------------------------------------
 
@@ -113,6 +102,7 @@ This will get better as the plugin gets used by more users (and provide feedback
 _The runtime path is assumed to be `~/.cabal/bin/gf`, which may be wrong depending on your
 system and how you installed GF._  
 _The library path should get automatically set from your environment's `GF_LIB_PATH` variable._
+1. You can also adjust the verbosity level of the GFEP logger.
 
 
 ### Updating the plugin
@@ -162,7 +152,19 @@ files and manually add them to your Eclipse workspace. To experiment with some o
 
 --------------------------------------------------------------------------------
 
-## Feedback
+## Evaluation & feedback
+
+Please try to use the plugin for developing your own GF projects and report any issues you come up against.
+Do not hesitate to contact me on `john.j.camilleri` at domain `chalmers.se` and let me know how you think the plugin can be improved.
+
+### Notes
+
+1. The in-editor validation often needs to be triggered/updated by a keystroke. So if you can still see errors which you believe should be correct, try adding a space character to ensure the validation has been re-triggered.
+2. Validation expects to have the project's **Build Automatically** option checked (turned on).
+3. Sometimes you may get an entire file marked with errors, even though in fact there is only a single error which is causing the internal builder to fail. In such cases referring to the **Problems** view should help you locate the cause. This behaviour will hopefully be improved in future versions.
+
+
+### Criteria
 
 As part of the evaluation of the GF Eclipse Plugin, feedback (both negative and positive) on the following would be appreciated:
 
@@ -172,3 +174,7 @@ As part of the evaluation of the GF Eclipse Plugin, feedback (both negative and 
 1. General intuitiveness of the UI
 1. Feature wish-list
 1. Compatibilities / conflicts with other Eclipse plugins
+
+### Logs
+
+The GFEP writes a log file in your Eclipse workspace folder, self-evidently named `gfep.log`. When things go wrong it may be useful to consult this file, or even send it as part of any feedback you provide.
