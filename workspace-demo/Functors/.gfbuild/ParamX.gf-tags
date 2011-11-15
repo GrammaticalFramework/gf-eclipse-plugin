@@ -1,16 +1,16 @@
 Anteriority	param	/home/john/repositories/GF/lib/src/common/ParamX.gf:10-12	
-BIND	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-Bool	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-CAPIT	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+BIND	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Bool	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+CAPIT	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
 Compar	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:8	Degree
 DTail	param	/home/john/repositories/GF/lib/src/common/ParamX.gf:58	
 Degree	param	/home/john/repositories/GF/lib/src/common/ParamX.gf:8	
-E0	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-E1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-E2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ENumber	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-Emore	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-False	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+E0	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+E1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+E2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ENumber	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Emore	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+False	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
 ImpF	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:25	Number -> Bool -> ImpForm
 ImpForm	param	/home/john/repositories/GF/lib/src/common/ParamX.gf:25	
 Neg	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:19	Polarity
@@ -18,7 +18,7 @@ Number	param	/home/john/repositories/GF/lib/src/common/ParamX.gf:6
 P1	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:7	Person
 P2	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:7	Person
 P3	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:7	Person
-PARA	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+PARA	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
 Person	param	/home/john/repositories/GF/lib/src/common/ParamX.gf:7	
 Pl	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:6	Number
 Polarity	param	/home/john/repositories/GF/lib/src/common/ParamX.gf:19	
@@ -28,10 +28,10 @@ Pres	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:14-15	Tense
 QDir	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:21	QForm
 QForm	param	/home/john/repositories/GF/lib/src/common/ParamX.gf:21	
 QIndir	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:21	QForm
-SD2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-SP1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-SS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-SS1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+SD2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SP1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SS1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
 Sg	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:6	Number
 Simul	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:11-12	Anteriority
 Superl	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:8	Degree
@@ -39,50 +39,50 @@ T1	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:58	DTail
 T2	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:58	DTail
 T3	param-value	/home/john/repositories/GF/lib/src/common/ParamX.gf:58	DTail
 Tense	param	/home/john/repositories/GF/lib/src/common/ParamX.gf:13-15	
-True	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-andB	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-bothWays	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-capitalize	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-cc2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-cc3	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+True	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+andB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+bothWays	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+capitalize	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+cc2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+cc3	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
 conjNumber	oper-def	/home/john/repositories/GF/lib/src/common/ParamX.gf:33-37	
 conjNumber	oper-type	/home/john/repositories/GF/lib/src/common/ParamX.gf:33-37	Number -> Number -> Number
 conjPerson	oper-def	/home/john/repositories/GF/lib/src/common/ParamX.gf:42-43	
 conjPerson	oper-type	/home/john/repositories/GF/lib/src/common/ParamX.gf:42-43	Person -> Person -> Person
-constStr	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-constTable	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-eNext	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-embedSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-glue	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-glueOpt	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-id	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ifTok	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-if_then_Str	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-if_then_else	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-infixSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-init	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-isNil	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-last	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-noglueOpt	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-nonExist	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-notB	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+constStr	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+constTable	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+eNext	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+embedSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+glue	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+glueOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+id	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ifTok	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+if_then_Str	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+if_then_else	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+infixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+init	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+isNil	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+last	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+noglueOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+nonExist	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+notB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
 numImp	oper-def	/home/john/repositories/GF/lib/src/common/ParamX.gf:28-31	
 numImp	oper-type	/home/john/repositories/GF/lib/src/common/ParamX.gf:28-31	ImpForm -> Number
-onlyIf	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-optStr	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-orB	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-paren	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-parenss	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-pbool2bool	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+onlyIf	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+optStr	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+orB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+paren	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+parenss	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+pbool2bool	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
 polCases	oper-def	/home/john/repositories/GF/lib/src/common/ParamX.gf:47-52	
 polCases	oper-type	/home/john/repositories/GF/lib/src/common/ParamX.gf:47-52	{s : Str} -> {s : Str} -> {s : Polarity => Str}
-postfixSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-preOrPost	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-prefixSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-sd2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-sp1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ss	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ss1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ss2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ss3	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-strOpt	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+postfixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+preOrPost	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+prefixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+sd2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+sp1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss3	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+strOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags

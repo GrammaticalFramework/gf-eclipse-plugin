@@ -107,9 +107,9 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			int dotIx = lastSegment.lastIndexOf('.');
 			String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
 			gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
-			for (TagEntry tag : entry.getValue()) {
-				gfScope.addTag(resource, tag);
-			}
+			
+			// TODO John: This is taking very long with Functors (ie RGL)... how to speed up?
+			gfScope.addTags(resource, entry.getValue());
 		}
 		return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
 	}
@@ -119,31 +119,31 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @param resource
 	 * @return
 	 */
-	private Set<URI> getImportedURIs(final Resource resource) {
+//	private Set<URI> getImportedURIs(final Resource resource) {
 //		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Set<URI>>(){
 //			public Set<URI> get() {
-				return parseTagsFile(resource).keySet();
+//				return parseTagsFile(resource).keySet();
 //			}
 //		});
-	}
+//	}
 	
 	/**
 	 * Get list of all tags as a one-dimensional list, possibly from cache
 	 * @param resource
 	 * @return
 	 */
-	private Collection<TagEntry> getTags(final Resource resource) {
-		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Collection<TagEntry>>(){
-			public Collection<TagEntry> get() {
-				Collection<Collection<TagEntry>> tags2D = parseTagsFile(resource).values(); 
-				Collection<TagEntry> tags1D = new ArrayList<TagEntry>(); 
-				for (Collection<TagEntry> tagsItem : tags2D) {
-					tags1D.addAll(tagsItem);
-				}
-				return tags1D;
-			}
-		});
-	}
+//	private Collection<TagEntry> getTags(final Resource resource) {
+//		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Collection<TagEntry>>(){
+//			public Collection<TagEntry> get() {
+//				Collection<Collection<TagEntry>> tags2D = parseTagsFile(resource).values(); 
+//				Collection<TagEntry> tags1D = new ArrayList<TagEntry>(); 
+//				for (Collection<TagEntry> tagsItem : tags2D) {
+//					tags1D.addAll(tagsItem);
+//				}
+//				return tags1D;
+//			}
+//		});
+//	}
 	
 	/**
 	 * Get list of all tags grouped by URI, possibly from cache
@@ -166,50 +166,78 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @return
 	 */
 	private Hashtable<URI, Collection<TagEntry>> parseTagsFile(final Resource resource) {
-		final Hashtable<URI, Collection<TagEntry>> uriTagMap = new Hashtable<URI, Collection<TagEntry>>(10);
 		
-		// (try) get module definition
+		// Get module definition
 		ModDef moduleDef;
 		String moduleName;
 		try {
 			moduleDef = (ModDef)resource.getContents().get(0);
 			moduleName = moduleDef.getType().getName().getS();
 		} catch (Exception _) {
-			return uriTagMap;
+			// This means there's a mother syntax error (mid-way during editing). Just return quietly.
+			return new Hashtable<URI, Collection<TagEntry>>();
 		}
 		
-		// Find the corresponding tags file & parse it
+		// Find the corresponding tags file & parse it (1st pass)
+		URI tagFileURI = libAgent.getTagsFile(resource, moduleName);
+		Hashtable<URI, Collection<TagEntry>> uriTagMap = parseSingleTagsFile(tagFileURI, new Predicate<TagEntry>() {
+			// Ignore references to self, ie local scope
+			public boolean apply(TagEntry tag) {
+				return !tag.getFile().endsWith(resource.getURI().lastSegment());
+			}
+		});
+		
+		// Iterate again to replace references to indir tags files with proper references
+		Hashtable<URI, Collection<TagEntry>> resolvedUriTagMap = new Hashtable<URI, Collection<TagEntry>>(10);
+		Iterator<URI> uriIter = uriTagMap.keySet().iterator();
+		while(uriIter.hasNext()) {
+			final URI uri = uriIter.next();
+			// Just remove invalid URIs
+			if (!EcoreUtil2.isValidUri(resource, uri)) {
+				uriIter.remove();
+			}
+			// Resolve refs to other tags files and replace
+			else if (uri.fileExtension().equals("gf-tags")) {
+				resolvedUriTagMap.putAll( parseSingleTagsFile(uri, new Predicate<TagEntry>() {
+					// Only include tags FROM the respective tags file (opposite of above)
+					public boolean apply(TagEntry tag) {
+//						return tag.getFile().endsWith(uri.lastSegment().substring(0, uri.lastSegment().length()-5));
+						return !tag.getFile().endsWith(".gf-tags") ; //&& !tag.getType().equals("overload-type") ;
+					}
+				}) );
+				uriIter.remove();
+			}
+		}
+		
+		// Combine them & return
+		uriTagMap.putAll(resolvedUriTagMap);
+		return uriTagMap;
+	}
+	
+	
+	private Hashtable<URI, Collection<TagEntry>> parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate) {
+		Hashtable<URI, Collection<TagEntry>> uriTagMap = new Hashtable<URI, Collection<TagEntry>>();
 		try {
-			URI tagFileURI = libAgent.getTagsFile(resource, moduleName);
 			InputStream is = uriConverter.createInputStream(tagFileURI);
 			BufferedReader reader = new BufferedReader( new InputStreamReader(is) );
 			String line;
 			// Add everything into our arrays
 			while ((line = reader.readLine()) != null) {
 				TagEntry tag = new TagEntry(line);
-				if (!tag.file.endsWith(resource.getURI().lastSegment())) { // ignore references to self, ie local scope
-					URI importURI = URI.createFileURI(tag.file);
-					if (!uriTagMap.containsKey(importURI)) {
-						uriTagMap.put(importURI, new ArrayList<TagEntry>());
-					}
-					uriTagMap.get(importURI).add(tag);
+				if (!includePredicate.apply(tag))
+					continue;
+				URI importURI = URI.createFileURI(tag.getFile());
+				if (!uriTagMap.containsKey(importURI)) {
+					uriTagMap.put(importURI, new ArrayList<TagEntry>());
 				}
+				uriTagMap.get(importURI).add(tag);
 			}
 			// Clean up
 			reader.close();
 			is.close();
-
-			// Remove anything invalid
-			Iterator<URI> uriIter = uriTagMap.keySet().iterator();
-			while(uriIter.hasNext()) {
-				if (!EcoreUtil2.isValidUri(resource, uriIter.next()))
-					uriIter.remove();
-			}
 		} catch (IOException e) {
-			log.warn("Couldn't find tags file for " + moduleName);
+			log.warn("Couldn't find tags file " + tagFileURI);
 		}
-		
-		// Could be empty..
 		return uriTagMap;
 	}
 	

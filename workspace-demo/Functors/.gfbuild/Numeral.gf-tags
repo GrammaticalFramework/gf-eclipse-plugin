@@ -10,10 +10,10 @@ D_8	fun	/home/john/repositories/GF/lib/src/abstract/Numeral.gf:58	Dig
 D_9	fun	/home/john/repositories/GF/lib/src/abstract/Numeral.gf:58	Dig
 Dig	cat	/home/john/repositories/GF/lib/src/abstract/Numeral.gf:52	
 Digit	cat	/home/john/repositories/GF/lib/src/abstract/Numeral.gf:23	
-Digits	indir	Cat		.gfbuild/Cat.gf-tags
+Digits	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 IDig	fun	/home/john/repositories/GF/lib/src/abstract/Numeral.gf:55	Dig -> Digits
 IIDig	fun	/home/john/repositories/GF/lib/src/abstract/Numeral.gf:56	Dig -> Digits -> Digits
-Numeral	indir	Cat		.gfbuild/Cat.gf-tags
+Numeral	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 Sub10	cat	/home/john/repositories/GF/lib/src/abstract/Numeral.gf:24	
 Sub100	cat	/home/john/repositories/GF/lib/src/abstract/Numeral.gf:25	
 Sub1000	cat	/home/john/repositories/GF/lib/src/abstract/Numeral.gf:26	

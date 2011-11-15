@@ -1,0 +1,283 @@
+AForm	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:80	
+AMod	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:80	GenNum -> Case -> AForm
+APred	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:80	AForm
+Acc	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:21	Case
+Adjective	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:224	
+Adjective	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:224	Type
+Adjf	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:26	
+Ag	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:34	Gender -> Number -> Person -> Agr
+Agr	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:34	
+Anteriority	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+BIND	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Bool	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+CAPIT	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+CAnDat	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:39	CPrep
+CInAcc	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:39	CPrep
+CInDat	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:39	CPrep
+CPrep	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:39	
+CZuDat	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:39	CPrep
+CardOrd	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:123	
+Case	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:21	
+Clause	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:615-617	
+Clause	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:615-617	Type
+Compar	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+DForm	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:124	
+DTail	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+DTeen	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:124	DForm
+DTen	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:124	DForm
+DUnit	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:124	DForm
+Dat	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:21	Case
+Degree	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+E0	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+E1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+E2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ENumber	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Emore	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+False	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Fem	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:22	Gender
+GPl	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:30	GenNum
+GSg	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:30	Gender -> GenNum
+Gen	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:21	Case
+GenNum	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:30	
+Gender	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:22	
+ImpF	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+ImpForm	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Inv	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:110	Order
+MConjunct	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:115	Mood
+MIndic	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:115	Mood
+Main	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:110	Order
+Masc	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:22	Gender
+Mood	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:115	
+NCard	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:123	Gender -> Case -> CardOrd
+NOrd	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:123	AForm -> CardOrd
+NPC	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:38	Case -> PCase
+NPCase	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:64	Case -> NPForm
+NPForm	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:64	
+NPNom	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:42	
+NPNom	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:42	PCase
+NPP	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:38	CPrep -> PCase
+NPPoss	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:64	GenNum -> Case -> NPForm
+Neg	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Neutr	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:22	Gender
+NoCase	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:71	PredetCase
+Nom	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:21	Case
+Noun	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:211	
+Noun	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:211	Type
+Number	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Order	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:110	
+P1	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+P2	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+P3	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+PARA	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+PAg	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:72	Number -> PredetAgr
+PAgNone	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:72	PredetAgr
+PCase	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:38	
+Person	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Pl	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Polarity	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Pos	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Posit	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+PredCase	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:71	PCase -> PredetCase
+PredetAgr	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:72	
+PredetCase	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:71	
+Preposition	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:331	
+Preposition	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:331	Type
+Pres	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QDir	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QForm	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QIndir	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+RAg	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:119	Number -> Person -> RAgr
+RAgr	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:119	
+RNoAg	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:119	RAgr
+SD2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SP1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SS1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Sg	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Simul	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Strong	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:26	Adjf
+Sub	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:110	Order
+Superl	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T1	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T2	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T3	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Tense	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+True	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+VAct	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:104	VType
+VAux	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:102	
+VFin	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:87-88	Bool -> VFormFin -> VForm
+VForm	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:85-90	
+VFormFin	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:92-95	
+VHaben	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:102	VAux
+VImper	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:88-89	Number -> VForm
+VInf	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:86-87	Bool -> VForm
+VP	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:422-431	
+VP	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:422-431	Type
+VPC	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:415-420	
+VPC	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:415-420	Type
+VPFinite	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:98-99	Mood -> Tense -> Anteriority -> VPForm
+VPForm	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:97-100	
+VPImperat	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:99-100	Bool -> VPForm
+VPInfinit	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:100	Anteriority -> VPForm
+VPastPart	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:90	AForm -> VForm
+VPresInd	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:93-94	Number -> Person -> VFormFin
+VPresPart	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:89-90	AForm -> VForm
+VPresSubj	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:94-95	Number -> Person -> VFormFin
+VRefl	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:104	Case -> VType
+VSein	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:102	VAux
+VType	param	/home/john/repositories/GF/lib/src/german/ResGer.gf:104	
+Verb	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:238-243	
+Verb	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:238-243	Type
+Weak	param-value	/home/john/repositories/GF/lib/src/german/ResGer.gf:26	Adjf
+adjForms	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:400-411	
+adjForms	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:400-411	(x1 : Str) -> (x2 : Str) -> AForm => Str
+adjfCase	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:168-171	
+adjfCase	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:168-171	Adjf -> Case -> Adjf
+agrAdj	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:150-164	
+agrAdj	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:150-164	Gender -> Adjf -> Number -> Case -> AForm
+agrP3	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:129	
+agrP3	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:129	Number -> Agr
+agrgP3	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:131-132	
+agrgP3	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:131-132	Gender -> Number -> Agr
+andB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+appAdj	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:388-396	
+appAdj	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:388-396	{s : Degree => AForm => Str} -> Number => Gender => PCase => Str
+appPrep	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:335-336	
+appPrep	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:335-336	{s : Str; c : PCase} -> (PCase => Str) -> Str
+artDef	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:365-370	
+artDef	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:365-370	GenNum => Case => Str
+artDefContr	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:372-383	
+artDefContr	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:372-383	GenNum -> PCase -> Str
+auxPerfect	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:498-502	
+auxPerfect	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:498-502	{s : VForm => Str; aux : VAux; prefix : Str; vtype : VType} -> VForm => Str
+auxVV	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:547	
+auxVV	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:547	{s : VForm => Str; aux : VAux; prefix : Str; vtype : VType} -> {s : VForm => Str; aux : VAux; isAux : Bool; prefix : Str; vtype : VType}
+bothWays	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+capitalize	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+caselist	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:195-201	
+caselist	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:195-201	(x1 : Str) -> Str -> Str -> (x4 : Str) -> Case => Str
+cc2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+cc3	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+conjAgr	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:183-187	
+conjAgr	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:183-187	Agr -> Agr -> Agr
+conjNumber	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+conjPerson	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+conjThan	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:672	
+conjThan	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:672	Str
+conjThat	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:670	
+conjThat	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:670	Str
+constStr	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+constTable	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+eNext	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+embedSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+genderAgr	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:57	
+genderAgr	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:57	Agr -> Gender
+gennum	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:134-138	
+gennum	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:134-138	Gender -> Number -> GenNum
+glue	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+glueOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+haben_V	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:504-509	
+haben_V	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:504-509	{s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}
+heavyNP	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:678-680	
+heavyNP	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:678-680	{s : PCase => Str; a : Agr} -> {s : PCase => Str; a : Agr; isPron : Bool}
+id	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ifTok	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+if_then_Str	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+if_then_else	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+infPart	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:676	
+infPart	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:676	Bool -> Str
+infVP	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:643-648	
+infVP	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:643-648	Bool -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str} -> {p1 : Agr => Str; p2 : Str; p3 : Str}
+infixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+init	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+insertAdV	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:569-578	
+insertAdV	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:569-578	Str -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str} -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str}
+insertAdv	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:580-589	
+insertAdv	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:580-589	Str -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str} -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str}
+insertExtrapos	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:591-600	
+insertExtrapos	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:591-600	Str -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str} -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str}
+insertInf	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:602-611	
+insertInf	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:602-611	Str -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str} -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str}
+insertObj	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:556	
+insertObj	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:556	(Agr => Str) -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str} -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str}
+insertObjNP	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:558-567	
+insertObjNP	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:558-567	Bool -> (Agr => Str) -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str} -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str}
+isNil	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+last	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+mkA	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:226-232	
+mkA	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:226-232	(x1 : Str) -> Str -> Str -> (x4 : Str) -> {s : Degree => AForm => Str}
+mkAgr	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:55-56	
+mkAgr	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:55-56	{g : Gender; n : Number; p : Person} -> Agr
+mkClause	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:619-641	
+mkClause	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:619-641	Str -> Agr -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str} -> {s : Mood => Tense => Anteriority => Polarity => Order => Str}
+mkN	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:213-220	
+mkN	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:213-220	(x1 : Str) -> Str -> Str -> Str -> Str -> (x6 : Str) -> Gender -> {s : Number => Case => Str; g : Gender}
+mkN4	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:305-306	
+mkN4	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:305-306	(x1 : Str) -> Str -> Str -> (x4 : Str) -> Gender -> {s : Number => Case => Str; g : Gender}
+mkPronPers	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:348-356	
+mkPronPers	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:348-356	(x1 : Str) -> Str -> Str -> Str -> (x5 : Str) -> Gender -> Number -> Person -> {s : NPForm => Str; a : Agr}
+mkV	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:245-276	
+mkV	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:245-276	(x1 : Str) -> Str -> Str -> Str -> Str -> Str -> Str -> Str -> Str -> Str -> Str -> (x12 : Str) -> Str -> VAux -> {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}
+negation	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:549-552	
+negation	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:549-552	Polarity => Str
+noCase	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:74	
+noCase	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:74	{k : PredetCase; p : Str}
+noPreposition	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:340-341	
+noPreposition	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:340-341	Case -> {s : Str; c : PCase}
+noglueOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+nonExist	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+notB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+numGenNum	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:142-146	
+numGenNum	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:142-146	GenNum -> Number
+numImp	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+numberAgr	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:58	
+numberAgr	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:58	Agr -> Number
+onlyIf	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+optStr	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+orB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+paren	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+parenss	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+pbool2bool	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+personAgr	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:59	
+personAgr	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:59	Agr -> Person
+polCases	indir	ParamX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+postfixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+preOrPost	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+predV	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:433	
+predV	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:433	{s : VForm => Str; aux : VAux; prefix : Str; vtype : VType} -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str}
+predVGen	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:479-496	
+predVGen	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:479-496	Bool -> {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType} -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str}
+prefixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+prefixV	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:280-299	
+prefixV	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:280-299	Str -> {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType} -> {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}
+prepC	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:43-49	
+prepC	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:43-49	PCase -> {s : Str; c : Case}
+pronEnding	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:358-363	
+pronEnding	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:358-363	GenNum => Case => Str
+reflPron	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:659-668	
+reflPron	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:659-668	Agr => Case => Str
+regA	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:308-314	
+regA	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:308-314	Str -> {s : Degree => AForm => Str}
+regV	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:316-327	
+regV	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:316-327	Str -> {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}
+sd2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+sein_V	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:525-545	
+sein_V	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:525-545	{s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}
+sp1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss3	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+strOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+useInfVP	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:650-652	
+useInfVP	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:650-652	Bool -> {s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str} -> Str
+usePrepC	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:51-52	
+usePrepC	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:51-52	PCase -> (Case -> Str) -> Str
+useVP	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:435-476	
+useVP	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:435-476	{s : {s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}; a1 : Polarity => Str; a2 : Str; ext : Str; inf : Str; isAux : Bool; n0 : Agr => Str; n2 : Agr => Str} -> {s : Bool => Agr => VPForm => {fin : Str; inf : Str}}
+vFin	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:173-181	
+vFin	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:173-181	Bool -> Mood -> Tense -> Agr -> VForm
+werdenPass	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:518-523	
+werdenPass	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:518-523	{s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}
+werden_V	oper-def	/home/john/repositories/GF/lib/src/german/ResGer.gf:511-516	
+werden_V	oper-type	/home/john/repositories/GF/lib/src/german/ResGer.gf:511-516	{s : VForm => Str; aux : VAux; prefix : Str; vtype : VType}

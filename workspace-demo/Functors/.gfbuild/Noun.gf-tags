@@ -1,100 +1,100 @@
-A	indir	Cat		.gfbuild/Cat.gf-tags
-A2	indir	Cat		.gfbuild/Cat.gf-tags
-AP	indir	Cat		.gfbuild/Cat.gf-tags
-AdA	indir	Cat		.gfbuild/Cat.gf-tags
-AdN	indir	Cat		.gfbuild/Cat.gf-tags
+A	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+A2	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+AP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+AdA	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+AdN	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 AdNum	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:67	AdN -> Card -> Card
-AdV	indir	Cat		.gfbuild/Cat.gf-tags
+AdV	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 AdjCN	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:121	AP -> CN -> CN
-Adv	indir	Cat		.gfbuild/Cat.gf-tags
+Adv	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 AdvCN	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:123	CN -> Adv -> CN
 AdvNP	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:29	NP -> Adv -> NP
-Ant	indir	Cat		.gfbuild/Cat.gf-tags
+Ant	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 ApposCN	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:135	CN -> NP -> CN
-CAdv	indir	Cat		.gfbuild/Cat.gf-tags
-CN	indir	Cat		.gfbuild/Cat.gf-tags
-Card	indir	Cat		.gfbuild/Cat.gf-tags
-Cl	indir	Cat		.gfbuild/Cat.gf-tags
-ClSlash	indir	Cat		.gfbuild/Cat.gf-tags
-Comp	indir	Cat		.gfbuild/Cat.gf-tags
+CAdv	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+CN	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Card	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Cl	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+ClSlash	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Comp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 ComplN2	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:107	N2 -> NP -> CN
 ComplN3	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:108	N3 -> NP -> N2
-Conj	indir	Cat		.gfbuild/Cat.gf-tags
+Conj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 DefArt	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:81	Quant
-Det	indir	Cat		.gfbuild/Cat.gf-tags
+Det	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 DetCN	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:15	Det -> CN -> NP
 DetNP	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:34	Det -> NP
 DetQuant	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:42	Quant -> Num -> Det
 DetQuantOrd	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:43	Quant -> Num -> Ord -> Det
-Digits	indir	Cat		.gfbuild/Cat.gf-tags
-IAdv	indir	Cat		.gfbuild/Cat.gf-tags
-IComp	indir	Cat		.gfbuild/Cat.gf-tags
-IDet	indir	Cat		.gfbuild/Cat.gf-tags
-IP	indir	Cat		.gfbuild/Cat.gf-tags
-IQuant	indir	Cat		.gfbuild/Cat.gf-tags
-Imp	indir	Cat		.gfbuild/Cat.gf-tags
+Digits	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IAdv	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+IComp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IDet	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IQuant	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Imp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 IndefArt	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:80	Quant
-Interj	indir	Cat		.gfbuild/Cat.gf-tags
+Interj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 MassNP	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:87	CN -> NP
-N	indir	Cat		.gfbuild/Cat.gf-tags
-N2	indir	Cat		.gfbuild/Cat.gf-tags
-N3	indir	Cat		.gfbuild/Cat.gf-tags
-NP	indir	Cat		.gfbuild/Cat.gf-tags
-Num	indir	Cat		.gfbuild/Cat.gf-tags
+N	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+N2	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+N3	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+NP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Num	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 NumCard	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:54	Card -> Num
 NumDigits	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:59	Digits -> Card
 NumNumeral	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:60	Numeral -> Card
 NumPl	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:53	Num
 NumSg	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:52	Num
-Numeral	indir	Cat		.gfbuild/Cat.gf-tags
-Ord	indir	Cat		.gfbuild/Cat.gf-tags
+Numeral	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Ord	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 OrdDigits	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:72	Digits -> Ord
 OrdNumeral	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:73	Numeral -> Ord
 OrdSuperl	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:74	A -> Ord
-PConj	indir	Cat		.gfbuild/Cat.gf-tags
-PN	indir	Cat		.gfbuild/Cat.gf-tags
+PConj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+PN	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 PPartNP	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:28	NP -> V2 -> NP
-Phr	indir	Cat		.gfbuild/Cat.gf-tags
-Pol	indir	Cat		.gfbuild/Cat.gf-tags
+Phr	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Pol	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 PossPron	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:93	Pron -> Quant
-Predet	indir	Cat		.gfbuild/Cat.gf-tags
+Predet	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 PredetNP	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:23	Predet -> NP -> NP
-Prep	indir	Cat		.gfbuild/Cat.gf-tags
-Pron	indir	Cat		.gfbuild/Cat.gf-tags
-QCl	indir	Cat		.gfbuild/Cat.gf-tags
-QS	indir	Cat		.gfbuild/Cat.gf-tags
-Quant	indir	Cat		.gfbuild/Cat.gf-tags
-RCl	indir	Cat		.gfbuild/Cat.gf-tags
-RP	indir	Cat		.gfbuild/Cat.gf-tags
-RS	indir	Cat		.gfbuild/Cat.gf-tags
+Prep	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Pron	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+QCl	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+QS	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Quant	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+RCl	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+RP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+RS	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 RelCN	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:122	CN -> RS -> CN
 RelNP	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:30	NP -> RS -> NP
-S	indir	Cat		.gfbuild/Cat.gf-tags
-SC	indir	Cat		.gfbuild/Cat.gf-tags
-SSlash	indir	Cat		.gfbuild/Cat.gf-tags
+S	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+SC	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+SSlash	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 SentCN	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:129	CN -> SC -> CN
-Subj	indir	Cat		.gfbuild/Cat.gf-tags
-Temp	indir	Cat		.gfbuild/Cat.gf-tags
-Tense	indir	Cat		.gfbuild/Cat.gf-tags
-Text	indir	Cat		.gfbuild/Cat.gf-tags
+Subj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Temp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Tense	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Text	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 Use2N3	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:114	N3 -> N2
 Use3N3	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:115	N3 -> N2
 UseN	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:103	N -> CN
 UseN2	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:113	N2 -> CN
 UsePN	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:16	PN -> NP
 UsePron	fun	/home/john/repositories/GF/lib/src/abstract/Noun.gf:17	Pron -> NP
-Utt	indir	Cat		.gfbuild/Cat.gf-tags
-V	indir	Cat		.gfbuild/Cat.gf-tags
-V2	indir	Cat		.gfbuild/Cat.gf-tags
-V2A	indir	Cat		.gfbuild/Cat.gf-tags
-V2Q	indir	Cat		.gfbuild/Cat.gf-tags
-V2S	indir	Cat		.gfbuild/Cat.gf-tags
-V2V	indir	Cat		.gfbuild/Cat.gf-tags
-V3	indir	Cat		.gfbuild/Cat.gf-tags
-VA	indir	Cat		.gfbuild/Cat.gf-tags
-VP	indir	Cat		.gfbuild/Cat.gf-tags
-VPSlash	indir	Cat		.gfbuild/Cat.gf-tags
-VQ	indir	Cat		.gfbuild/Cat.gf-tags
-VS	indir	Cat		.gfbuild/Cat.gf-tags
-VV	indir	Cat		.gfbuild/Cat.gf-tags
-Voc	indir	Cat		.gfbuild/Cat.gf-tags
+Utt	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+V	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2A	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2Q	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2S	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2V	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V3	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VA	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VPSlash	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VQ	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VS	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VV	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Voc	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags

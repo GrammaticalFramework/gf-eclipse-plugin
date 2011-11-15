@@ -25,7 +25,7 @@ public class TagEntry {
 	/**
 	 * Record fields
 	 */
-	public String ident, type, file, args;
+	private String ident, type, qualifier, alias, file, args;
 	private Integer lineFrom, lineTo;
 	private Boolean isIndirect;
 	
@@ -41,9 +41,8 @@ public class TagEntry {
 		this.isIndirect = this.type.equals("indir");
 		if (this.isIndirect) {
 			parseFileAndLineNumbers(elements[4]);
-			
-			// TODO Is this manual manipulation really good enough? Ideally poke into ref'd tags file and get URI from there
-			this.file = this.file.replaceFirst("^(.+)(.gfbuild[/\\\\])(.+\\.gf)-tags$", "$1$3");
+			this.qualifier = elements[2];
+			this.alias = elements[3];
 		} else {
 			parseFileAndLineNumbers(elements[2]);
 			this.args = elements[3];
@@ -81,11 +80,26 @@ public class TagEntry {
 		userData.put("ident", ident);
 		userData.put("type", type);
 		userData.put("file", file);
-		userData.put("lineNo", lineFrom != null ? lineFrom.toString() : ""); // TODO Iclude range?
+		userData.put("lineNo", lineFrom != null ? lineFrom.toString() : ""); // TODO Include range?
 		userData.put("args", args);
 		return userData;
 	}
 	
+	public String getIdent() {
+		return ident;
+	}
+	public String getType() {
+		return type;
+	}
+	public String getFile() {
+		return file;
+	}
+	public String getAlias() {
+		return alias;
+	}
+	public String getQualifier() {
+		return qualifier;
+	}
 	public Integer getLineNumber() {
 		return lineFrom;
 	}
@@ -104,10 +118,14 @@ public class TagEntry {
 	 */
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder(ident + "\t" + type + "\t" + file);
+		StringBuilder sb = new StringBuilder(ident + "\t" + type + "\t");
+		if (isIndirect) {
+			sb.append(qualifier + "\t" + alias + "\t");
+		}
+		sb.append(file);
 		if (lineFrom != null) {
 			sb.append(":" + lineFrom);
-			if (lineTo != null) {
+			if (lineTo != null && !lineTo.equals(lineFrom)) {
 				sb.append("-" + lineTo);
 			}
 		}

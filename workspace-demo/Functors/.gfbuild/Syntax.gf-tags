@@ -1,43 +1,43 @@
-A	indir	Cat		.gfbuild/Cat.gf-tags
-A	indir	Structural		.gfbuild/Structural.gf-tags
-A2	indir	Cat		.gfbuild/Cat.gf-tags
-A2	indir	Structural		.gfbuild/Structural.gf-tags
-AP	indir	Cat		.gfbuild/Cat.gf-tags
-AP	indir	Structural		.gfbuild/Structural.gf-tags
-AdA	indir	Cat		.gfbuild/Cat.gf-tags
-AdA	indir	Structural		.gfbuild/Structural.gf-tags
-AdN	indir	Cat		.gfbuild/Cat.gf-tags
-AdN	indir	Structural		.gfbuild/Structural.gf-tags
-AdV	indir	Cat		.gfbuild/Cat.gf-tags
-AdV	indir	Structural		.gfbuild/Structural.gf-tags
-Adv	indir	Cat		.gfbuild/Cat.gf-tags
-Adv	indir	Structural		.gfbuild/Structural.gf-tags
-Ant	indir	Cat		.gfbuild/Cat.gf-tags
-Ant	indir	Structural		.gfbuild/Structural.gf-tags
+A	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+A	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+A2	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+A2	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+AP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+AP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+AdA	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+AdA	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+AdN	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+AdN	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+AdV	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+AdV	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Adv	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Adv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Ant	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Ant	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 Art	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1627	
 Art	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1627	Type
-CAdv	indir	Cat		.gfbuild/Cat.gf-tags
-CAdv	indir	Structural		.gfbuild/Structural.gf-tags
-CN	indir	Cat		.gfbuild/Cat.gf-tags
-CN	indir	Structural		.gfbuild/Structural.gf-tags
-Card	indir	Cat		.gfbuild/Cat.gf-tags
-Card	indir	Structural		.gfbuild/Structural.gf-tags
-Cl	indir	Cat		.gfbuild/Cat.gf-tags
-Cl	indir	Structural		.gfbuild/Structural.gf-tags
-ClSlash	indir	Cat		.gfbuild/Cat.gf-tags
-ClSlash	indir	Structural		.gfbuild/Structural.gf-tags
-Comp	indir	Cat		.gfbuild/Cat.gf-tags
-Comp	indir	Structural		.gfbuild/Structural.gf-tags
+CAdv	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+CAdv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+CN	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+CN	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Card	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Card	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Cl	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Cl	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+ClSlash	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+ClSlash	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Comp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Comp	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 ComplV2	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1608	
 ComplV2	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1608	V2 -> NP -> VP
 ComplV2A	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1609	
 ComplV2A	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1609	V2A -> NP -> AP -> VP
 ComplV3	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1610	
 ComplV3	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1610	V3 -> NP -> NP -> VP
-Conj	indir	Cat		.gfbuild/Cat.gf-tags
-Conj	indir	Structural		.gfbuild/Structural.gf-tags
-Det	indir	Cat		.gfbuild/Cat.gf-tags
-Det	indir	Structural		.gfbuild/Structural.gf-tags
+Conj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Conj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Det	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Det	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 DetArtCard	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1636	
 DetArtCard	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1636	Art -> Card -> Det
 DetArtOrd	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1635	
@@ -50,26 +50,26 @@ DetPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1606
 DetPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1606	Quant -> Num -> Ord -> Det
 DetSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1605	
 DetSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1605	Quant -> Ord -> Det
-Digits	indir	Cat		.gfbuild/Cat.gf-tags
-Digits	indir	Structural		.gfbuild/Structural.gf-tags
-IAdv	indir	Cat		.gfbuild/Cat.gf-tags
-IAdv	indir	Structural		.gfbuild/Structural.gf-tags
-IComp	indir	Cat		.gfbuild/Cat.gf-tags
-IComp	indir	Structural		.gfbuild/Structural.gf-tags
-IDet	indir	Cat		.gfbuild/Cat.gf-tags
-IDet	indir	Structural		.gfbuild/Structural.gf-tags
+Digits	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Digits	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IAdv	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+IAdv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+IComp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IComp	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IDet	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IDet	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 IFPl	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	ImpForm
 IFPol	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	ImpForm
 IFSg	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	ImpForm
-IP	indir	Cat		.gfbuild/Cat.gf-tags
-IP	indir	Structural		.gfbuild/Structural.gf-tags
-IQuant	indir	Cat		.gfbuild/Cat.gf-tags
-IQuant	indir	Structural		.gfbuild/Structural.gf-tags
-Imp	indir	Cat		.gfbuild/Cat.gf-tags
-Imp	indir	Structural		.gfbuild/Structural.gf-tags
+IP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IQuant	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IQuant	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Imp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Imp	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 ImpForm	param	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	
-Interj	indir	Cat		.gfbuild/Cat.gf-tags
-Interj	indir	Structural		.gfbuild/Structural.gf-tags
+Interj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Interj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 ListAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1621	
 ListAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1621	Type
 ListAdv	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1620	
@@ -78,110 +78,110 @@ ListNP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1622
 ListNP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1622	Type
 ListS	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1623	
 ListS	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1623	Type
-N	indir	Cat		.gfbuild/Cat.gf-tags
-N	indir	Structural		.gfbuild/Structural.gf-tags
-N2	indir	Cat		.gfbuild/Cat.gf-tags
-N2	indir	Structural		.gfbuild/Structural.gf-tags
-N3	indir	Cat		.gfbuild/Cat.gf-tags
-N3	indir	Structural		.gfbuild/Structural.gf-tags
-NP	indir	Cat		.gfbuild/Cat.gf-tags
-NP	indir	Structural		.gfbuild/Structural.gf-tags
-Num	indir	Cat		.gfbuild/Cat.gf-tags
-Num	indir	Structural		.gfbuild/Structural.gf-tags
-Numeral	indir	Cat		.gfbuild/Cat.gf-tags
-Numeral	indir	Structural		.gfbuild/Structural.gf-tags
-Ord	indir	Cat		.gfbuild/Cat.gf-tags
-Ord	indir	Structural		.gfbuild/Structural.gf-tags
-PConj	indir	Cat		.gfbuild/Cat.gf-tags
-PConj	indir	Structural		.gfbuild/Structural.gf-tags
+N	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+N	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+N2	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+N2	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+N3	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+N3	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+NP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+NP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Num	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Num	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Numeral	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Numeral	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Ord	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Ord	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+PConj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+PConj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 PExclMark	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
 PFullStop	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
-PN	indir	Cat		.gfbuild/Cat.gf-tags
-PN	indir	Structural		.gfbuild/Structural.gf-tags
+PN	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+PN	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 PQuestMark	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
-Phr	indir	Cat		.gfbuild/Cat.gf-tags
-Phr	indir	Structural		.gfbuild/Structural.gf-tags
+Phr	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Phr	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 PlQuant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1601	
 PlQuant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1601	Quant -> QuantPl
-Pol	indir	Cat		.gfbuild/Cat.gf-tags
-Pol	indir	Structural		.gfbuild/Structural.gf-tags
-Predet	indir	Cat		.gfbuild/Cat.gf-tags
-Predet	indir	Structural		.gfbuild/Structural.gf-tags
-Prep	indir	Cat		.gfbuild/Cat.gf-tags
-Prep	indir	Structural		.gfbuild/Structural.gf-tags
-Pron	indir	Cat		.gfbuild/Cat.gf-tags
-Pron	indir	Structural		.gfbuild/Structural.gf-tags
+Pol	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Pol	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Predet	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Predet	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Prep	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Pron	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Pron	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 Punct	param	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	
-QCl	indir	Cat		.gfbuild/Cat.gf-tags
-QCl	indir	Structural		.gfbuild/Structural.gf-tags
-QS	indir	Cat		.gfbuild/Cat.gf-tags
-QS	indir	Structural		.gfbuild/Structural.gf-tags
-Quant	indir	Cat		.gfbuild/Cat.gf-tags
-Quant	indir	Structural		.gfbuild/Structural.gf-tags
+QCl	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+QCl	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+QS	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+QS	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Quant	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Quant	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1599	
 QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1599	Type
 QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1598	
 QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1598	Type
-RCl	indir	Cat		.gfbuild/Cat.gf-tags
-RCl	indir	Structural		.gfbuild/Structural.gf-tags
-RP	indir	Cat		.gfbuild/Cat.gf-tags
-RP	indir	Structural		.gfbuild/Structural.gf-tags
-RS	indir	Cat		.gfbuild/Cat.gf-tags
-RS	indir	Structural		.gfbuild/Structural.gf-tags
-S	indir	Cat		.gfbuild/Cat.gf-tags
-S	indir	Structural		.gfbuild/Structural.gf-tags
-SC	indir	Cat		.gfbuild/Cat.gf-tags
-SC	indir	Structural		.gfbuild/Structural.gf-tags
-SSlash	indir	Cat		.gfbuild/Cat.gf-tags
-SSlash	indir	Structural		.gfbuild/Structural.gf-tags
+RCl	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+RCl	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+RP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+RP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+RS	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+RS	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+S	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+S	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+SC	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+SC	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+SSlash	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+SSlash	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 SgQuant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1600	
 SgQuant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1600	Quant -> QuantSg
-Subj	indir	Cat		.gfbuild/Cat.gf-tags
-Subj	indir	Structural		.gfbuild/Structural.gf-tags
+Subj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Subj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 TUseCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1638	
 TUseCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1638	Tense -> Ant -> Pol -> Cl -> S
 TUseQCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1639	
 TUseQCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1639	Tense -> Ant -> Pol -> QCl -> QS
 TUseRCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1640	
 TUseRCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1640	Tense -> Ant -> Pol -> RCl -> RS
-Temp	indir	Cat		.gfbuild/Cat.gf-tags
-Temp	indir	Structural		.gfbuild/Structural.gf-tags
-Tense	indir	Cat		.gfbuild/Cat.gf-tags
-Tense	indir	Structural		.gfbuild/Structural.gf-tags
-Text	indir	Cat		.gfbuild/Cat.gf-tags
-Text	indir	Structural		.gfbuild/Structural.gf-tags
+Temp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Temp	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Tense	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Tense	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Text	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Text	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:894-895	
 Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:894-895	Type
-Utt	indir	Cat		.gfbuild/Cat.gf-tags
-Utt	indir	Structural		.gfbuild/Structural.gf-tags
-V	indir	Cat		.gfbuild/Cat.gf-tags
-V	indir	Structural		.gfbuild/Structural.gf-tags
-V2	indir	Cat		.gfbuild/Cat.gf-tags
-V2	indir	Structural		.gfbuild/Structural.gf-tags
-V2A	indir	Cat		.gfbuild/Cat.gf-tags
-V2A	indir	Structural		.gfbuild/Structural.gf-tags
-V2Q	indir	Cat		.gfbuild/Cat.gf-tags
-V2Q	indir	Structural		.gfbuild/Structural.gf-tags
-V2S	indir	Cat		.gfbuild/Cat.gf-tags
-V2S	indir	Structural		.gfbuild/Structural.gf-tags
-V2V	indir	Cat		.gfbuild/Cat.gf-tags
-V2V	indir	Structural		.gfbuild/Structural.gf-tags
-V3	indir	Cat		.gfbuild/Cat.gf-tags
-V3	indir	Structural		.gfbuild/Structural.gf-tags
-VA	indir	Cat		.gfbuild/Cat.gf-tags
-VA	indir	Structural		.gfbuild/Structural.gf-tags
-VP	indir	Cat		.gfbuild/Cat.gf-tags
-VP	indir	Structural		.gfbuild/Structural.gf-tags
-VPSlash	indir	Cat		.gfbuild/Cat.gf-tags
-VPSlash	indir	Structural		.gfbuild/Structural.gf-tags
-VQ	indir	Cat		.gfbuild/Cat.gf-tags
-VQ	indir	Structural		.gfbuild/Structural.gf-tags
-VS	indir	Cat		.gfbuild/Cat.gf-tags
-VS	indir	Structural		.gfbuild/Structural.gf-tags
-VV	indir	Cat		.gfbuild/Cat.gf-tags
-VV	indir	Structural		.gfbuild/Structural.gf-tags
-Voc	indir	Cat		.gfbuild/Cat.gf-tags
-Voc	indir	Structural		.gfbuild/Structural.gf-tags
+Utt	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Utt	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+V	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2A	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2A	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2Q	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2Q	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2S	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2S	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2V	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2V	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V3	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V3	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VA	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VA	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VPSlash	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VPSlash	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VQ	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VQ	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VS	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VS	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VV	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VV	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Voc	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Voc	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 aPl_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:740-741	
 aPl_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:740-741	Det
 aSg_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:738-739	
@@ -192,14 +192,14 @@ a_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:732-733
 a_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:732-733	Det
 a_Quant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:764-765	
 a_Quant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:764-765	Quant
-above_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-after_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-all_Predet	indir	Structural		.gfbuild/Structural.gf-tags
-almost_AdA	indir	Structural		.gfbuild/Structural.gf-tags
-almost_AdN	indir	Structural		.gfbuild/Structural.gf-tags
-although_Subj	indir	Structural		.gfbuild/Structural.gf-tags
-always_AdV	indir	Structural		.gfbuild/Structural.gf-tags
-and_Conj	indir	Structural		.gfbuild/Structural.gf-tags
+above_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+after_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+all_Predet	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+almost_AdA	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+almost_AdN	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+although_Subj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+always_AdV	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+and_Conj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 app	overload-def	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	
 app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N -> NP
 app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N2 -> N -> CN
@@ -209,19 +209,19 @@ app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	
 app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N2 -> NP -> NP -> NP
 app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N3 -> NP -> NP -> CN
 app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N3 -> NP -> NP -> NP
-as_CAdv	indir	Structural		.gfbuild/Structural.gf-tags
-at_least_AdN	indir	Structural		.gfbuild/Structural.gf-tags
-at_most_AdN	indir	Structural		.gfbuild/Structural.gf-tags
-because_Subj	indir	Structural		.gfbuild/Structural.gf-tags
-before_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-behind_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-between_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-both7and_DConj	indir	Structural		.gfbuild/Structural.gf-tags
-but_PConj	indir	Structural		.gfbuild/Structural.gf-tags
-by8agent_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-by8means_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-can8know_VV	indir	Structural		.gfbuild/Structural.gf-tags
-can_VV	indir	Structural		.gfbuild/Structural.gf-tags
+as_CAdv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+at_least_AdN	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+at_most_AdN	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+because_Subj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+before_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+behind_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+between_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+both7and_DConj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+but_PConj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+by8agent_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+by8means_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+can8know_VV	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+can_VV	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 comparAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1086-1087	
 comparAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1086-1087	A -> AP
 coord	overload-def	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	
@@ -235,53 +235,53 @@ coord	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-15
 coord	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	Conj -> S -> S -> S
 digit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1706	
 digit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1706	pattern Str
-during_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-either7or_DConj	indir	Structural		.gfbuild/Structural.gf-tags
+during_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+either7or_DConj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 emptyText	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:120-121	
 emptyText	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:120-121	Text
-every_Det	indir	Structural		.gfbuild/Structural.gf-tags
-everybody_NP	indir	Structural		.gfbuild/Structural.gf-tags
-everything_NP	indir	Structural		.gfbuild/Structural.gf-tags
-everywhere_Adv	indir	Structural		.gfbuild/Structural.gf-tags
-except_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+every_Det	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+everybody_NP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+everything_NP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+everywhere_Adv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+except_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 exclMarkPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:131-132	
 exclMarkPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:131-132	Punct
-few_Det	indir	Structural		.gfbuild/Structural.gf-tags
-for_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-from_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+few_Det	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+for_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+from_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 fullStopPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:127-128	
 fullStopPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:127-128	Punct
 genericCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:431-432	
 genericCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:431-432	VP -> Cl
-have_V2	indir	Structural		.gfbuild/Structural.gf-tags
-have_V3	indir	Structural		.gfbuild/Structural.gf-tags
-have_not_V3	indir	Structural		.gfbuild/Structural.gf-tags
+have_V2	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+have_V3	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+have_not_V3	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 he_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:670-671	
 he_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:670-671	NP
-he_Pron	indir	Structural		.gfbuild/Structural.gf-tags
-here7from_Adv	indir	Structural		.gfbuild/Structural.gf-tags
-here7to_Adv	indir	Structural		.gfbuild/Structural.gf-tags
-here_Adv	indir	Structural		.gfbuild/Structural.gf-tags
-how8many_IDet	indir	Structural		.gfbuild/Structural.gf-tags
-how8much_IAdv	indir	Structural		.gfbuild/Structural.gf-tags
-how_IAdv	indir	Structural		.gfbuild/Structural.gf-tags
+he_Pron	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+here7from_Adv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+here7to_Adv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+here_Adv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+how8many_IDet	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+how8much_IAdv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+how_IAdv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 i_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:664-665	
 i_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:664-665	NP
-i_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+i_Pron	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 idigit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1705	
 idigit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1705	pattern Str
-if_Subj	indir	Structural		.gfbuild/Structural.gf-tags
-if_then_Conj	indir	Structural		.gfbuild/Structural.gf-tags
-in8front_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-in_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+if_Subj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+if_then_Conj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+in8front_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+in_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 it_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:674-675	
 it_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:674-675	NP
-it_Pron	indir	Structural		.gfbuild/Structural.gf-tags
-language_title_Utt	indir	Structural		.gfbuild/Structural.gf-tags
-less_CAdv	indir	Structural		.gfbuild/Structural.gf-tags
+it_Pron	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+language_title_Utt	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+less_CAdv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 lets_Utt	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:236-237	
 lets_Utt	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:236-237	VP -> Utt
-many_Det	indir	Structural		.gfbuild/Structural.gf-tags
+many_Det	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 mkAP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	
 mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	A -> AP
 mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	A -> NP -> AP
@@ -682,10 +682,10 @@ mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	
 mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	Predet -> N -> NP
 mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	Quant -> CN -> NP
 mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	Quant -> N -> NP
-more_CAdv	indir	Structural		.gfbuild/Structural.gf-tags
-most_Predet	indir	Structural		.gfbuild/Structural.gf-tags
-much_Det	indir	Structural		.gfbuild/Structural.gf-tags
-must_VV	indir	Structural		.gfbuild/Structural.gf-tags
+more_CAdv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+most_Predet	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+much_Det	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+must_VV	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 n0_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:932-933	
 n0_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:932-933	Dig
 n1000_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1767-1768	
@@ -787,22 +787,22 @@ noPConj	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:176-177
 noPConj	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:176-177	PConj
 noVoc	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:187-188	
 noVoc	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:187-188	Voc
-no_Quant	indir	Structural		.gfbuild/Structural.gf-tags
-no_Utt	indir	Structural		.gfbuild/Structural.gf-tags
-nobody_NP	indir	Structural		.gfbuild/Structural.gf-tags
-not_Predet	indir	Structural		.gfbuild/Structural.gf-tags
-nothing_NP	indir	Structural		.gfbuild/Structural.gf-tags
-on_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-only_Predet	indir	Structural		.gfbuild/Structural.gf-tags
-or_Conj	indir	Structural		.gfbuild/Structural.gf-tags
-otherwise_PConj	indir	Structural		.gfbuild/Structural.gf-tags
-part_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+no_Quant	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+no_Utt	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+nobody_NP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+not_Predet	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+nothing_NP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+on_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+only_Predet	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+or_Conj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+otherwise_PConj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+part_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 passiveVP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:514-521	
 passiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:514-521	V2 -> NP -> VP
 passiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:514-521	V2 -> VP
 plNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1590	
 plNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1590	Num
-please_Voc	indir	Structural		.gfbuild/Structural.gf-tags
+please_Voc	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 pluralImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:286-287	
 pluralImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:286-287	ImpForm
 pluralNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:794-795	
@@ -811,7 +811,7 @@ politeImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:28
 politeImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:288-289	ImpForm
 positivePol	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:247-248	
 positivePol	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:247-248	Pol
-possess_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+possess_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 pred	overload-def	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	
 pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	A -> NP -> Cl
 pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	A -> NP -> NP -> Cl
@@ -833,7 +833,7 @@ progressiveVP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:52
 progressiveVP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:525-526	VP -> VP
 questMarkPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:129-130	
 questMarkPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:129-130	Punct
-quite_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+quite_Adv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 reflAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1084-1085	
 reflAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1084-1085	A2 -> AP
 reflexiveVP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:504-509	
@@ -843,19 +843,19 @@ sgNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1589
 sgNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1589	Num
 she_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:672-673	
 she_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:672-673	NP
-she_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+she_Pron	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 simultaneousAnt	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:258-259	
 simultaneousAnt	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:258-259	Ant
 singularImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:284-285	
 singularImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:284-285	ImpForm
 singularNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:792-793	
 singularNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:792-793	Num
-so_AdA	indir	Structural		.gfbuild/Structural.gf-tags
-somePl_Det	indir	Structural		.gfbuild/Structural.gf-tags
-someSg_Det	indir	Structural		.gfbuild/Structural.gf-tags
-somebody_NP	indir	Structural		.gfbuild/Structural.gf-tags
-something_NP	indir	Structural		.gfbuild/Structural.gf-tags
-somewhere_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+so_AdA	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+somePl_Det	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+someSg_Det	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+somebody_NP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+something_NP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+somewhere_Adv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 str2card	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1650-1653	
 str2card	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1650-1653	Str -> Card
 str2digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1709-1741	
@@ -870,10 +870,10 @@ that_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:744-745
 that_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:744-745	Det
 that_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:685-686	
 that_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:685-686	NP
-that_Quant	indir	Structural		.gfbuild/Structural.gf-tags
+that_Quant	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 that_QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1584	
 that_QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1584	QuantSg
-that_Subj	indir	Structural		.gfbuild/Structural.gf-tags
+that_Subj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 thePl_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:736-737	
 thePl_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:736-737	Det
 theSg_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:734-735	
@@ -884,10 +884,10 @@ the_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:730-731
 the_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:730-731	Det
 the_Quant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:762-763	
 the_Quant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:762-763	Quant
-there7from_Adv	indir	Structural		.gfbuild/Structural.gf-tags
-there7to_Adv	indir	Structural		.gfbuild/Structural.gf-tags
-there_Adv	indir	Structural		.gfbuild/Structural.gf-tags
-therefore_PConj	indir	Structural		.gfbuild/Structural.gf-tags
+there7from_Adv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+there7to_Adv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+there_Adv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+therefore_PConj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 these_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:746-747	
 these_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:746-747	Det
 these_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:687-688	
@@ -896,12 +896,12 @@ these_QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:15
 these_QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1586	QuantPl
 they_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:680-681	
 they_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:680-681	NP
-they_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+they_Pron	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 this_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:742-743	
 this_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:742-743	Det
 this_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:683-684	
 this_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:683-684	NP
-this_Quant	indir	Structural		.gfbuild/Structural.gf-tags
+this_Quant	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 this_QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1583	
 this_QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1583	QuantSg
 those_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:748-749	
@@ -912,45 +912,45 @@ those_QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:15
 those_QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1587	QuantPl
 thousandfoldNumeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:861-862	
 thousandfoldNumeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:861-862	Sub1000 -> Numeral
-through_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-to_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-too_AdA	indir	Structural		.gfbuild/Structural.gf-tags
-under_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-very_AdA	indir	Structural		.gfbuild/Structural.gf-tags
-want_VV	indir	Structural		.gfbuild/Structural.gf-tags
+through_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+to_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+too_AdA	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+under_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+very_AdA	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+want_VV	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 we_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:676-677	
 we_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:676-677	NP
-we_Pron	indir	Structural		.gfbuild/Structural.gf-tags
-whatPl_IP	indir	Structural		.gfbuild/Structural.gf-tags
-whatSg_IP	indir	Structural		.gfbuild/Structural.gf-tags
+we_Pron	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+whatPl_IP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+whatSg_IP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 what_IP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1293-1294	
 what_IP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1293-1294	IP
-when_IAdv	indir	Structural		.gfbuild/Structural.gf-tags
-when_Subj	indir	Structural		.gfbuild/Structural.gf-tags
-where_IAdv	indir	Structural		.gfbuild/Structural.gf-tags
+when_IAdv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+when_Subj	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+where_IAdv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 whichPl_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1328-1329	
 whichPl_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1328-1329	IDet
 whichSg_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1326-1327	
 whichSg_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1326-1327	IDet
 which_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1324-1325	
 which_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1324-1325	IDet
-which_IQuant	indir	Structural		.gfbuild/Structural.gf-tags
+which_IQuant	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 which_RP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1440-1441	
 which_RP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1440-1441	RP
-whoPl_IP	indir	Structural		.gfbuild/Structural.gf-tags
-whoSg_IP	indir	Structural		.gfbuild/Structural.gf-tags
+whoPl_IP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+whoSg_IP	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 who_IP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1295-1296	
 who_IP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1295-1296	IP
-why_IAdv	indir	Structural		.gfbuild/Structural.gf-tags
-with_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-without_Prep	indir	Structural		.gfbuild/Structural.gf-tags
-yes_Utt	indir	Structural		.gfbuild/Structural.gf-tags
+why_IAdv	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+with_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+without_Prep	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+yes_Utt	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 youPl_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:678-679	
 youPl_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:678-679	NP
-youPl_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+youPl_Pron	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 youPol_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:668-669	
 youPol_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:668-669	NP
-youPol_Pron	indir	Structural		.gfbuild/Structural.gf-tags
-youSg_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+youPol_Pron	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+youSg_Pron	indir	Structural		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 you_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:666-667	
 you_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:666-667	NP

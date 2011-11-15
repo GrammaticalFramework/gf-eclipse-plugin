@@ -97,8 +97,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		gfLibPath = GFPreferences.getLibraryPath();
 		
 		try {
-			// TODO Is doing a full build for every incremental change overkill?
-			// Possible solution: only rebuild files whos tags contain something from the file being rebuilt
+			// Is doing a full build for every incremental change overkill?
+			// The reason we have it is when changes in your file affect teh scoping of another file
+			// TODO SOlution: only rebuild files whos tags contain something from the file being rebuilt
 			if (TAG_BASED_SCOPING || kind == IncrementalProjectBuilder.FULL_BUILD) {
 //			if (kind == IncrementalProjectBuilder.FULL_BUILD) {
 				fullBuild(monitor);
@@ -396,9 +397,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				buildDirFile.mkdir();
 			}
 
-			// Create the scraped version
-//			createScrapedFileCopy(".."+java.io.File.separator+".."+java.io.File.separator+filename, filename, buildDirFile);
-
 			// Compile to get tags with: gf --tags HelloEng.gf
 			ArrayList<String> command = new ArrayList<String>();
 			command.add(gfPath);
@@ -428,16 +426,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				return false;
 			}
 			
-			// Move tags file into subdirectory & rename
-//			File tagsFile = new File(workingDir + "tags");
-//			File tagsFileDst = new File(workingDir + getTagsFile(filename));
-//			if (tagsFile.exists()) {
-//				tagsFileDst.delete();
-//				tagsFile.renameTo(tagsFileDst);
-//			} else {
-//				log.warn("tags file for "+filename+" missing!");
-//			}
-			
 			// Done
 			return true;
 		} catch (IOException e) {
@@ -451,6 +439,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	/**
 	 * Separate method for parsing the GF error stream and adding markers as necessary
 	 * 
+	 * TODO Track indentation in errors, there might be multiple separate errors!
+	 * 
 	 * @param file
 	 * @param errStream
 	 */
@@ -462,24 +452,23 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			/*
 			 * Read first line, parse for syntax error form:
 			 * 
-			  	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:37: parse error
+				/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5:17:
+				   syntax error
 			 */
 			err_str = processError.readLine();
 			log.debug("GF: " + err_str);
-			if (err_str.matches(".+([a-zA-Z0-9]+\\.gf):([0-9]+):([0-9]+):(.+)")) {
+			if (err_str.matches(".+\\.gf:(\\d+):(\\d+):.*")) {
 				// Don't worry about syntax errors, xtext will mark them for us
 				return;
 			}
 			
 			/*
-			 * Assume error is of the form:
+			 * Errors are of the form:
 			 * 
-				renaming module HelloEng
-				   /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
-				   Happened in the renaming of Recipient
-				      atomic term GenderXXX
-				      given ResEng, HelloEng
-				         constant not found: GenderXXX
+				/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+				Happened in the renaming of Recipient
+				   constant not found: Gender
+				   given ResEng, HelloEng
  			 */
 			
 			// Using XText marker type so that we get the tooltip on hover!
@@ -489,20 +478,24 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			err_str = processError.readLine();
 			log.debug("GF: " + err_str);
 			
-			Pattern pattern = Pattern.compile("([a-zA-Z0-9]+\\.gf):([0-9]+):$");
+			Pattern pattern = Pattern.compile("([^/\\\\]+\\.gf):(\\d+)(-(\\d+))?:$");
 			Matcher matcher = pattern.matcher(err_str);
 			if (matcher.find()) {
 				Integer lineNo = Integer.parseInt(matcher.group(2));
+//				Integer lineTo = Integer.parseInt(matcher.group(4));
 				marker.setAttribute(IMarker.LINE_NUMBER, lineNo);
 				marker.setAttribute(IMarker.LOCATION, "line: " + lineNo.toString() + " " + file.getFullPath().toString());
 				marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
 			}
 			
 			// Set message to last line
+			StringBuilder sb = new StringBuilder();
 			while ((err_str = processError.readLine()) != null) {
 				log.debug("GF: " + err_str);
-				marker.setAttribute(IMarker.MESSAGE, err_str.trim());
+				if (sb.length() > 0) sb.append("\n");
+				sb.append(err_str.trim());
 			}
+			marker.setAttribute(IMarker.MESSAGE, sb.toString());
 			
 		} catch (CoreException e) {
 			log.warn("Error creating marker on " + file.getName());

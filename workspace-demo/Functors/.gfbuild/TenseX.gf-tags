@@ -1,53 +1,53 @@
 ASimul	lin	/home/john/repositories/GF/lib/src/common/TenseX.gf:9	
-AdA	indir	CommonX		.gfbuild/CommonX.gf-tags
-AdN	indir	CommonX		.gfbuild/CommonX.gf-tags
-AdV	indir	CommonX		.gfbuild/CommonX.gf-tags
-Adv	indir	CommonX		.gfbuild/CommonX.gf-tags
-Ant	indir	CommonX		.gfbuild/CommonX.gf-tags
-Anteriority	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-CAdv	indir	CommonX		.gfbuild/CommonX.gf-tags
-Compar	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-DTail	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Degree	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-IAdv	indir	CommonX		.gfbuild/CommonX.gf-tags
-ImpF	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-ImpForm	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Interj	indir	CommonX		.gfbuild/CommonX.gf-tags
-Neg	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Number	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-P1	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-P2	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-P3	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-PConj	indir	CommonX		.gfbuild/CommonX.gf-tags
+AdA	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+AdN	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+AdV	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Adv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Ant	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Anteriority	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+CAdv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Compar	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+DTail	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Degree	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+IAdv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+ImpF	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+ImpForm	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Interj	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Neg	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Number	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+P1	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+P2	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+P3	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+PConj	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 PNeg	lin	/home/john/repositories/GF/lib/src/common/TenseX.gf:7	
 PPos	lin	/home/john/repositories/GF/lib/src/common/TenseX.gf:6	
-Person	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Phr	indir	CommonX		.gfbuild/CommonX.gf-tags
-Pl	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Pol	indir	CommonX		.gfbuild/CommonX.gf-tags
-Polarity	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Pos	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Posit	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Pres	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-QDir	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-QForm	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-QIndir	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-SC	indir	CommonX		.gfbuild/CommonX.gf-tags
-Sg	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Simul	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Superl	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-T1	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-T2	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-T3	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Person	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Phr	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Pl	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Pol	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Polarity	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Pos	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Posit	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Pres	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QDir	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QForm	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QIndir	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+SC	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Sg	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Simul	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Superl	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T1	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T2	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T3	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
 TPres	lin	/home/john/repositories/GF/lib/src/common/TenseX.gf:8	
 TTAnt	lin	/home/john/repositories/GF/lib/src/common/TenseX.gf:4	
-Temp	indir	CommonX		.gfbuild/CommonX.gf-tags
-Tense	indir	CommonX		.gfbuild/CommonX.gf-tags
-Tense	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-Text	indir	CommonX		.gfbuild/CommonX.gf-tags
-Utt	indir	CommonX		.gfbuild/CommonX.gf-tags
-Voc	indir	CommonX		.gfbuild/CommonX.gf-tags
-conjNumber	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-conjPerson	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-numImp	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
-polCases	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Temp	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Tense	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Tense	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Text	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Utt	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Voc	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+conjNumber	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+conjPerson	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+numImp	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+polCases	indir	ParamX	ParamX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags

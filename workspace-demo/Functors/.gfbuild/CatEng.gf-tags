@@ -2,63 +2,63 @@ A	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:86
 A	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:86	
 A2	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:87	
 A2	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:87	
-AAdj	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-AAdv	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-AForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+AAdj	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+AAdv	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+AForm	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 AP	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:51	
 AP	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:51	
-AdA	indir	CommonX		.gfbuild/CommonX.gf-tags
-AdN	indir	CommonX		.gfbuild/CommonX.gf-tags
-AdV	indir	CommonX		.gfbuild/CommonX.gf-tags
-Adv	indir	CommonX		.gfbuild/CommonX.gf-tags
-AgP1	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-AgP2	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-AgP3Pl	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-AgP3Sg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Agr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Ant	indir	CommonX		.gfbuild/CommonX.gf-tags
-Anteriority	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Aux	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-BIND	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-Bool	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-CAPIT	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-CAdv	indir	CommonX		.gfbuild/CommonX.gf-tags
+AdA	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+AdN	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+AdV	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Adv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+AgP1	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+AgP2	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+AgP3Pl	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+AgP3Sg	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+Agr	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+Ant	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Anteriority	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Aux	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+BIND	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Bool	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+CAPIT	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+CAdv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 CN	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:55	
 CN	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:55	
-CNeg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-CPolarity	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-CPos	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+CNeg	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+CPolarity	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+CPos	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 Card	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:62	
 Card	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:62	
-CardOrd	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Case	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+CardOrd	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+Case	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 Cl	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:20	
 Cl	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:20	
 ClSlash	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:21-24	
 ClSlash	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:21-24	
-Clause	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Clause	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 Comp	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:47	
 Comp	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:47	
-Compar	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Compar	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
 Conj	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:72	
 Conj	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:72	
-DForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-DTail	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Degree	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+DForm	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+DTail	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Degree	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
 Det	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:58	
 Det	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:58	
 Digits	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:68	
 Digits	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:68	
-E0	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-E1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-E2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ENumber	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-Emore	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-False	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-Fem	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Gen	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Gender	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-IAdv	indir	CommonX		.gfbuild/CommonX.gf-tags
+E0	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+E1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+E2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ENumber	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Emore	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+False	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Fem	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+Gen	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+Gender	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+IAdv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 IComp	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:31	
 IComp	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:31	
 IDet	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:32	
@@ -69,103 +69,103 @@ IQuant	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:33
 IQuant	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:33	
 Imp	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:25	
 Imp	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:25	
-ImpF	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-ImpForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Interj	indir	CommonX		.gfbuild/CommonX.gf-tags
-Masc	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+ImpF	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+ImpForm	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Interj	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Masc	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 N	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:89	
 N	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:89	
 N2	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:90	
 N2	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:90	
 N3	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:91	
 N3	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:91	
-NCard	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-NCase	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-NOrd	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+NCard	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+NCase	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+NOrd	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 NP	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:56	
 NP	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:56	
-NPAcc	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-NPCase	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Neg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Neutr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Nom	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+NPAcc	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+NPCase	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+Neg	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Neutr	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+Nom	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 Num	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:61	
 Num	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:61	
-Number	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Number	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
 Numeral	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:67	
 Numeral	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:67	
-ODir	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-OQuest	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+ODir	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+OQuest	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 Ord	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:60	
 Ord	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:60	
-Order	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-P1	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-P2	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-P3	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-PARA	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-PConj	indir	CommonX		.gfbuild/CommonX.gf-tags
+Order	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+P1	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+P2	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+P3	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+PARA	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+PConj	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 PN	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:92	
 PN	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:92	
-Person	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Phr	indir	CommonX		.gfbuild/CommonX.gf-tags
-Pl	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Person	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Phr	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Pl	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
 Pol	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:9	
 Pol	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:9	
-Polarity	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Pos	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Posit	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Polarity	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Pos	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Posit	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
 Predet	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:59	
 Predet	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:59	
 Prep	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:76	
 Prep	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:76	
-Pres	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Pres	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
 Pron	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:57	
 Pron	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:57	
 QCl	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:29	
 QCl	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:29	
-QDir	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-QForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-QIndir	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+QDir	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QForm	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QIndir	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
 QS	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:14	
 QS	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:14	
 Quant	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:63	
 Quant	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:63	
-RAg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-RAgr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-RC	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-RCase	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+RAg	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+RAgr	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+RC	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+RCase	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 RCl	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:37-40	
 RCl	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:37-40	
-RNoAg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+RNoAg	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 RP	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:41	
 RP	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:41	
-RPrep	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+RPrep	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 RS	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:15	
 RS	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:15	
 S	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:13	
 S	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:13	
-SC	indir	CommonX		.gfbuild/CommonX.gf-tags
-SD2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-SP1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-SS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-SS1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+SC	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+SD2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SP1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SS1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
 SSlash	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:16	
 SSlash	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:16	
-Sg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Simul	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-SlashVP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Sg	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Simul	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+SlashVP	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 Subj	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:75	
 Subj	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:75	
-Superl	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-T1	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-T2	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-T3	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Temp	indir	CommonX		.gfbuild/CommonX.gf-tags
-Tense	indir	CommonX		.gfbuild/CommonX.gf-tags
-Tense	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Text	indir	CommonX		.gfbuild/CommonX.gf-tags
-True	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-Utt	indir	CommonX		.gfbuild/CommonX.gf-tags
+Superl	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T1	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T2	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T3	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Temp	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Tense	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Tense	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Text	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+True	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Utt	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 V	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:80	
 V	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:80	
 V2	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:81	
@@ -182,122 +182,122 @@ V3	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:82
 V3	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:82	
 VA	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:80	
 VA	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:80	
-VForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-VInf	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-VP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VForm	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+VInf	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+VP	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 VP	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:45	
 VP	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:45	
-VPPart	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VPPart	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 VPSlash	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:46	
 VPSlash	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:46	
-VPres	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-VPresPart	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VPres	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+VPresPart	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
 VQ	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:80	
 VQ	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:80	
 VS	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:80	
 VS	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:80	
 VV	lincat	/home/john/repositories/GF/lib/src/english/CatEng.gf:83	
 VV	lindef	/home/john/repositories/GF/lib/src/english/CatEng.gf:83	
-VVAux	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-VVF	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-VVForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-VVInf	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-VVPresNeg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-VVPresPart	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-VVType	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Verb	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-VerbForms	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-Voc	indir	CommonX		.gfbuild/CommonX.gf-tags
-agrP3	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-agrVerb	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-agrgP3	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-andB	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-artDef	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-artIndef	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-auxBe	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-bothWays	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-capitalize	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-cc2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-cc3	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-conjAgr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-conjNumber	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-conjPerson	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-conjThat	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-constStr	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-constTable	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-contrNeg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-does	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-doesnt	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-eNext	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-embedSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-fromAgr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-genitiveS	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-glue	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-glueOpt	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-have	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-havent	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-id	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ifTok	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-if_then_Str	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-if_then_else	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-infVP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-infixSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-init	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-insertAdV	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-insertObj	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-insertObjPre	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-insertObjc	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-isNil	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-last	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-mkAdjective	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-mkCard	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-mkClause	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-mkIP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-mkNP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-mkNoun	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-mkNum	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-mkQuestion	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-mkVerb	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-noglueOpt	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-nonExist	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-notB	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-npGen	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-npNom	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-npcase2case	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-numImp	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-onlyIf	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-optStr	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-orB	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-paren	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-parenss	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-pbool2bool	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-polCases	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-posneg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-postfixSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-preOrPost	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-predAux	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-predV	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-predVV	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-predVc	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-prefixSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-presVerb	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-reflPron	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-regCardOrd	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-regGenitiveS	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-regNP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-regNum	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-regOrd	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-sd2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-sp1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ss	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ss1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ss2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-ss3	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-strOpt	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
-teen	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-ten	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-toAgr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-unit	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-vf	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-vff	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
-vfn	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VVAux	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+VVF	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+VVForm	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+VVInf	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+VVPresNeg	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+VVPresPart	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+VVType	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+Verb	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+VerbForms	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+Voc	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+agrP3	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+agrVerb	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+agrgP3	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+andB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+artDef	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+artIndef	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+auxBe	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+bothWays	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+capitalize	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+cc2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+cc3	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+conjAgr	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+conjNumber	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+conjPerson	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+conjThat	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+constStr	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+constTable	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+contrNeg	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+does	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+doesnt	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+eNext	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+embedSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+fromAgr	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+genitiveS	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+glue	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+glueOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+have	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+havent	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+id	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ifTok	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+if_then_Str	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+if_then_else	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+infVP	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+infixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+init	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+insertAdV	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+insertObj	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+insertObjPre	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+insertObjc	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+isNil	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+last	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+mkAdjective	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+mkCard	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+mkClause	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+mkIP	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+mkNP	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+mkNoun	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+mkNum	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+mkQuestion	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+mkVerb	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+noglueOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+nonExist	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+notB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+npGen	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+npNom	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+npcase2case	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+numImp	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+onlyIf	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+optStr	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+orB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+paren	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+parenss	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+pbool2bool	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+polCases	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+posneg	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+postfixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+preOrPost	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+predAux	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+predV	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+predVV	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+predVc	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+prefixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+presVerb	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+reflPron	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+regCardOrd	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+regGenitiveS	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+regNP	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+regNum	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+regOrd	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+sd2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+sp1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss3	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+strOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+teen	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+ten	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+toAgr	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+unit	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+vf	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+vff	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags
+vfn	indir	ResEng	ResEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResEng.gf-tags

@@ -1,0 +1,6 @@
+1321360238673	Encapsulate field 'qualifier'
+1321360247190	Encapsulate field 'alias'
+1321360294551	Encapsulate field 'file'
+1321360321639	Encapsulate field 'ident'
+1321362792535	Rename local variable 'predicate'
+1321363877491	Rename local variable 'uriTagMap2'

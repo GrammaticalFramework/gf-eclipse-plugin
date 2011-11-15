@@ -1,0 +1,356 @@
+A	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+A2	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+AForm	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+AMod	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+AP	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+APred	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Acc	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+AdA	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+AdN	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+AdV	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Adjective	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Adjf	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Adv	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Ag	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Agr	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Ant	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Anteriority	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+BIND	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+BaseAP	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:40	
+BaseAdv	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:36	
+BaseNP	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:38	
+BaseRS	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:42	
+BaseS	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:27-30	
+Bool	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+CAPIT	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+CAdv	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+CAnDat	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+CInAcc	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+CInDat	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+CN	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+CPrep	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+CZuDat	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Card	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+CardOrd	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Case	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Cl	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+ClSlash	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Clause	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Comp	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Compar	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Conj	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+ConjAP	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:16-18	
+ConjAdv	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:10	
+ConjNP	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:12-14	
+ConjRS	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:20-22	
+ConjS	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:8	
+Conjunction	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+ConjunctionDistr	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+ConsAP	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:41	
+ConsAdv	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:37	
+ConsNP	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:39	
+ConsRS	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:43	
+ConsS	lin	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:31-34	
+DForm	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+DTail	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+DTeen	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+DTen	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+DUnit	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Dat	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Degree	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Det	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Digits	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+E0	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+E1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+E2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ENumber	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Emore	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+False	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+Fem	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+GPl	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+GSg	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Gen	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+GenNum	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Gender	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+IAdv	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+IComp	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+IDet	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+IP	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+IQuant	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Imp	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+ImpF	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+ImpForm	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Interj	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Inv	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+ListAP	lincat	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:49	
+ListAP	lindef	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:49	
+ListAdv	lincat	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:47	
+ListAdv	lindef	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:47	
+ListCN	lincat	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf	
+ListCN	lindef	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf	
+ListIAdv	lincat	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf	
+ListIAdv	lindef	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf	
+ListNP	lincat	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:48	
+ListNP	lindef	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:48	
+ListRS	lincat	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:50	
+ListRS	lindef	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:50	
+ListS	lincat	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:46	
+ListS	lindef	/home/john/repositories/GF/lib/src/german/ConjunctionGer.gf:46	
+ListSize	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+ListTable	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+ListTable2	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+ListTable3	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+ListTable4	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+ListX	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+MConjunct	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+MIndic	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Main	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+ManyElem	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+Masc	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Mood	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+N	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+N2	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+N3	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+NCard	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+NOrd	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+NP	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+NPC	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+NPCase	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+NPForm	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+NPNom	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+NPP	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+NPPoss	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Neg	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Neutr	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+NoCase	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Nom	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Noun	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Num	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Number	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Numeral	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Ord	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Order	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+P1	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+P2	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+P3	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+PARA	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+PAg	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+PAgNone	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+PCase	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+PConj	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+PN	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Person	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Phr	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Pl	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Pol	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Polarity	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Pos	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Posit	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+PredCase	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Predet	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+PredetAgr	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+PredetCase	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Prep	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Preposition	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Pres	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Pron	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+QCl	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+QDir	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QForm	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QIndir	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+QS	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Quant	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+RAg	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+RAgr	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+RCl	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+RNoAg	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+RP	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+RS	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+S	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+SC	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+SD2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SP1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SS1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+SSlash	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Sg	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Simul	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Strong	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Sub	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Subj	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Superl	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T1	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T2	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+T3	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Temp	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Tense	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Tense	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+Text	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+True	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+TwoElem	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+Utt	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+V	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+V2	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+V2A	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+V2Q	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+V2S	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+V2V	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+V3	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+VA	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+VAct	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VAux	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VFin	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VForm	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VFormFin	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VHaben	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VImper	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VInf	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VP	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+VP	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VPC	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VPFinite	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VPForm	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VPImperat	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VPInfinit	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VPSlash	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+VPastPart	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VPresInd	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VPresPart	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VPresSubj	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VQ	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+VRefl	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VS	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+VSein	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VType	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+VV	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Verb	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+Voc	indir	CatGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Weak	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+adjForms	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+adjfCase	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+agrAdj	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+agrP3	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+agrgP3	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+andB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+appAdj	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+appPrep	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+artDef	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+artDefContr	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+auxPerfect	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+auxVV	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+bothWays	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+capitalize	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+caselist	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+cc2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+cc3	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+comma	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjAgr	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+conjNumber	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+conjPerson	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+conjThan	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+conjThat	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+conjunctDistrSS	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctDistrTable	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctDistrTable2	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctDistrTable3	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctDistrTable4	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctDistrX	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctSS	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctTable	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctTable2	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctTable3	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctTable4	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+conjunctX	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consSS	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consStr	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consTable	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consTable2	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consTable3	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consTable4	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consrSS	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consrStr	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consrTable	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consrTable2	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consrTable3	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+consrTable4	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+constStr	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+constTable	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+eNext	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+embedSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+genderAgr	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+gennum	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+glue	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+glueOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+haben_V	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+heavyNP	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+id	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ifTok	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+if_then_Str	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+if_then_else	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+infPart	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+infVP	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+infixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+init	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+insertAdV	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+insertAdv	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+insertExtrapos	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+insertInf	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+insertObj	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+insertObjNP	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+isNil	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+last	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+mkA	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+mkAgr	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+mkClause	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+mkN	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+mkN4	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+mkPronPers	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+mkV	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+negation	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+noCase	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+noPreposition	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+noglueOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+nonExist	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+notB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+numGenNum	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+numImp	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+numberAgr	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+onlyIf	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+optStr	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+orB	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+paren	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+parenss	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+pbool2bool	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+personAgr	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+polCases	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ParamX.gf-tags
+postfixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+preOrPost	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+predV	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+predVGen	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+prefixSS	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+prefixV	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+prepC	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+pronEnding	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+reflPron	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+regA	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+regV	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+sd2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+sein_V	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+sp1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss1	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss2	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+ss3	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+strOpt	indir	Prelude	Prelude	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Prelude.gf-tags
+twoSS	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+twoStr	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+twoTable	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+twoTable2	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+twoTable3	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+twoTable4	indir	Coordination	Coordination	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Coordination.gf-tags
+useInfVP	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+usePrepC	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+useVP	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+vFin	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+werdenPass	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags
+werden_V	indir	ResGer	ResGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ResGer.gf-tags

@@ -44,7 +44,7 @@ public class TagFileHelper {
 			// Add everything into our arrays
 			while ((line = reader.readLine()) != null) {
 				TagEntry tag = new TagEntry(line);
-				if (!ownOnly || tag.file.equals(sourceFilePath)) {
+				if (!ownOnly || tag.getFile().equals(sourceFilePath)) {
 					tags.add(tag);
 				}
 			}

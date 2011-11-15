@@ -8,15 +8,15 @@ E1	param-value	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:135	ENumber
 E2	param-value	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:135	ENumber
 ENumber	param	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:135	
 Emore	param-value	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:135	ENumber
-Error	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+Error	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 False	param-value	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:66	Bool
-Int	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-Ints	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+Int	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+Ints	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 PARA	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:118	
 PARA	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:118	Str
-PBool	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-PFalse	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-PTrue	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+PBool	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+PFalse	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+PTrue	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 SD2	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:30	
 SD2	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:30	Type
 SP1	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:22	
@@ -40,15 +40,15 @@ constStr	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:26
 constStr	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:26	(A : Type) -> Str -> A => Str
 constTable	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:25	
 constTable	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:25	(A : Type) -> (B : Type) -> B -> A => B
-dp	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-drop	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+dp	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+drop	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 eNext	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:138-139	
 eNext	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:138-139	ENumber -> ENumber
 embedSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:61	
 embedSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:61	Str -> Str -> {s : Str} -> {s : Str}
-eqInt	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-eqStr	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-error	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+eqInt	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+eqStr	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+error	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 glue	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:107	
 glue	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:107	Str -> Str -> Str
 glueOpt	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:108	
@@ -67,20 +67,20 @@ init	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:92
 init	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:92	Str -> Str
 isNil	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:97	
 isNil	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:97	Str -> Bool
-isUpper	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+isUpper	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 last	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:93	
 last	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:93	Str -> Str
-length	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-lessInt	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-mapStr	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+length	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+lessInt	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+mapStr	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 noglueOpt	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:109	
 noglueOpt	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:109	Str -> Str -> Str
 nonExist	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:38	
 nonExist	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:38	Str
 notB	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:77	
 notB	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:77	Bool -> Bool
-occur	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-occurs	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+occur	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+occurs	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 onlyIf	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:81-84	
 onlyIf	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:81-84	Bool -> Str -> Str
 optStr	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:42	
@@ -93,17 +93,17 @@ parenss	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:130
 parenss	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:130	{s : Str} -> {s : Str}
 pbool2bool	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:88-90	
 pbool2bool	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:88-90	PBool -> Bool
-plus	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+plus	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 postfixSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:60	
 postfixSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:60	Str -> {s : Str} -> {s : Str}
 preOrPost	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:51-52	
 preOrPost	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:51-52	Bool -> Str -> Str -> Str
 prefixSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:59	
 prefixSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:59	Str -> {s : Str} -> {s : Str}
-read	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+read	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 sd2	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:31	
 sd2	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:31	Str -> Str -> {s1 : Str; s2 : Str}
-show	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+show	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
 sp1	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:23	
 sp1	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:23	(A : Type) -> Str -> A -> {s : Str; p : A}
 ss	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:12	
@@ -116,8 +116,8 @@ ss3	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:14
 ss3	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:14	Str -> Str -> Str -> {s : Str}
 strOpt	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:43	
 strOpt	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:43	Str -> Str
-take	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-tk	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-toLower	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-toStr	indir	Predef	Predef	.gfbuild/Predef.gf-tags
-toUpper	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+take	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+tk	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+toLower	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+toStr	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags
+toUpper	indir	Predef	Predef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Predef.gf-tags

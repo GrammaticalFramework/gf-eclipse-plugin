@@ -1,6 +1,7 @@
 package org.grammaticalframework.eclipse.scoping;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.TreeIterator;
@@ -73,19 +74,24 @@ public class GFTagBasedScope extends AbstractScope {
 		}
 	}
 	
+	public void addTags(Resource context, Collection<TagEntry> tags) {
+		for (TagEntry tag : tags) {
+			addTag(context, tag);
+		}
+	}
 	public void addTag(Resource context, TagEntry tag) {
-		QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.ident);
+		QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getIdent());
 		QualifiedName unQualifiedName = getUnQualifiedName(fullyQualifiedName);
 		
 		EObject eObject = null;
 		try {
-			eObject = libAgent.findEObjectInFile(context, tag.file, unQualifiedName.toString());
+			eObject = libAgent.findEObjectInFile(context, tag.getFile(), unQualifiedName.toString());
 		} catch (RuntimeException _) {	}
 		if (eObject == null) {
 			// Just create a dummy eObject, to satisfy the validator
 			IdentImpl id = (IdentImpl) GFFactory.eINSTANCE.createIdent();
-			id.setS(tag.ident);
-			URI uri = URI.createFileURI(tag.file).appendFragment("///@body/@judgements.0/@definitions.0/@name");
+			id.setS(tag.getIdent());
+			URI uri = URI.createFileURI(tag.getFile()).appendFragment("///@body/@judgements.0/@definitions.0/@name");
 			id.eSetProxyURI(uri);
 			eObject = id;
 		}

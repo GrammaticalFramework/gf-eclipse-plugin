@@ -1,101 +1,101 @@
-A	indir	Grammar		.gfbuild/Grammar.gf-tags
-A2	indir	Grammar		.gfbuild/Grammar.gf-tags
-AP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ASimul	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdA	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdAP	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdN	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdNum	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdV	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdVVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdVVPSlash	indir	Grammar		.gfbuild/Grammar.gf-tags
-AddAdvQVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdjCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdjOrd	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdnCAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-Adv	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdvAP	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdvCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdvIAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdvIP	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdvNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdvQVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdvS	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdvSlash	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdvVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-AdvVPSlash	indir	Grammar		.gfbuild/Grammar.gf-tags
-Ant	indir	Grammar		.gfbuild/Grammar.gf-tags
-ApposCN	indir	Grammar		.gfbuild/Grammar.gf-tags
+A	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+A2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+AP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+ASimul	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Tense.gf-tags
+AdA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+AdAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+AdAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adverb.gf-tags
+AdN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+AdNum	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+AdV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+AdVVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+AdVVPSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+AddAdvQVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+AdjCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+AdjOrd	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+AdnCAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adverb.gf-tags
+Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+AdvAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+AdvCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+AdvIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+AdvIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+AdvNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+AdvQVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+AdvS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+AdvSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+AdvVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+AdvVPSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+Ant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+ApposCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
 Art	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1627	
 Art	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1627	Type
-BaseAP	indir	Grammar		.gfbuild/Grammar.gf-tags
-BaseAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-BaseCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-BaseIAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-BaseNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-BaseRS	indir	Grammar		.gfbuild/Grammar.gf-tags
-BaseS	indir	Grammar		.gfbuild/Grammar.gf-tags
-CAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-CAdvAP	indir	Grammar		.gfbuild/Grammar.gf-tags
-CN	indir	Grammar		.gfbuild/Grammar.gf-tags
-Card	indir	Grammar		.gfbuild/Grammar.gf-tags
-Cl	indir	Grammar		.gfbuild/Grammar.gf-tags
-ClSlash	indir	Grammar		.gfbuild/Grammar.gf-tags
-CleftAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-CleftNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-Comp	indir	Grammar		.gfbuild/Grammar.gf-tags
-CompAP	indir	Grammar		.gfbuild/Grammar.gf-tags
-CompAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-CompCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-CompIAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-CompIP	indir	Grammar		.gfbuild/Grammar.gf-tags
-CompNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComparA	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComparAdvAdj	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComparAdvAdjS	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComplA2	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComplN2	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComplN3	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComplSlash	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComplSlashIP	indir	Grammar		.gfbuild/Grammar.gf-tags
+BaseAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+BaseAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+BaseCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+BaseIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+BaseNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+BaseRS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+BaseS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+CAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+CAdvAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+CN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Card	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Cl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+ClSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+CleftAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Idiom.gf-tags
+CleftNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Idiom.gf-tags
+Comp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+CompAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+CompAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+CompCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+CompIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+CompIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+CompNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+ComparA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+ComparAdvAdj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adverb.gf-tags
+ComparAdvAdjS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adverb.gf-tags
+ComplA2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+ComplN2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+ComplN3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+ComplSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+ComplSlashIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
 ComplV2	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1608	
 ComplV2	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1608	V2 -> NP -> VP
 ComplV2A	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1609	
 ComplV2A	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1609	V2A -> NP -> AP -> VP
 ComplV3	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1610	
 ComplV3	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1610	V3 -> NP -> NP -> VP
-ComplVA	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComplVQ	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComplVS	indir	Grammar		.gfbuild/Grammar.gf-tags
-ComplVV	indir	Grammar		.gfbuild/Grammar.gf-tags
-Conj	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConjAP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConjAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConjCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConjIAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConjNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConjRS	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConjS	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConsAP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConsAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConsCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConsIAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConsNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConsRS	indir	Grammar		.gfbuild/Grammar.gf-tags
-ConsS	indir	Grammar		.gfbuild/Grammar.gf-tags
-D_0	indir	Grammar		.gfbuild/Grammar.gf-tags
-D_1	indir	Grammar		.gfbuild/Grammar.gf-tags
-D_2	indir	Grammar		.gfbuild/Grammar.gf-tags
-D_3	indir	Grammar		.gfbuild/Grammar.gf-tags
-D_4	indir	Grammar		.gfbuild/Grammar.gf-tags
-D_5	indir	Grammar		.gfbuild/Grammar.gf-tags
-D_6	indir	Grammar		.gfbuild/Grammar.gf-tags
-D_7	indir	Grammar		.gfbuild/Grammar.gf-tags
-D_8	indir	Grammar		.gfbuild/Grammar.gf-tags
-D_9	indir	Grammar		.gfbuild/Grammar.gf-tags
-DefArt	indir	Grammar		.gfbuild/Grammar.gf-tags
-Det	indir	Grammar		.gfbuild/Grammar.gf-tags
+ComplVA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+ComplVQ	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+ComplVS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+ComplVV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+Conj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+ConjAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConjAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConjCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConjIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConjNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConjRS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConjS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConsAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConsAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConsCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConsIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConsNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConsRS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ConsS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+D_0	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+D_1	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+D_2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+D_3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+D_4	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+D_5	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+D_6	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+D_7	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+D_8	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+D_9	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+DefArt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 DetArtCard	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1636	
 DetArtCard	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1636	Art -> Card -> Det
 DetArtOrd	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1635	
@@ -104,222 +104,222 @@ DetArtPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1633
 DetArtPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1633	Art -> CN -> NP
 DetArtSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1632	
 DetArtSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1632	Art -> CN -> NP
-DetCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-DetNP	indir	Grammar		.gfbuild/Grammar.gf-tags
+DetCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+DetNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
 DetPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1606	
 DetPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1606	Quant -> Num -> Ord -> Det
-DetQuant	indir	Grammar		.gfbuild/Grammar.gf-tags
-DetQuantOrd	indir	Grammar		.gfbuild/Grammar.gf-tags
+DetQuant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+DetQuantOrd	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
 DetSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1605	
 DetSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1605	Quant -> Ord -> Det
-Dig	indir	Grammar		.gfbuild/Grammar.gf-tags
-Digit	indir	Grammar		.gfbuild/Grammar.gf-tags
-Digits	indir	Grammar		.gfbuild/Grammar.gf-tags
-EmbedQS	indir	Grammar		.gfbuild/Grammar.gf-tags
-EmbedS	indir	Grammar		.gfbuild/Grammar.gf-tags
-EmbedVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ExistIP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ExistNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ExtAdvS	indir	Grammar		.gfbuild/Grammar.gf-tags
-FunRP	indir	Grammar		.gfbuild/Grammar.gf-tags
-GenericCl	indir	Grammar		.gfbuild/Grammar.gf-tags
-IAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-IComp	indir	Grammar		.gfbuild/Grammar.gf-tags
-IDet	indir	Grammar		.gfbuild/Grammar.gf-tags
-IDig	indir	Grammar		.gfbuild/Grammar.gf-tags
+Dig	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+Digit	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+Digits	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+EmbedQS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+EmbedS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+EmbedVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+ExistIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Idiom.gf-tags
+ExistNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Idiom.gf-tags
+ExtAdvS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+FunRP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Relative.gf-tags
+GenericCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Idiom.gf-tags
+IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+IComp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IDet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IDig	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
 IFPl	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	ImpForm
 IFPol	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	ImpForm
 IFSg	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	ImpForm
-IIDig	indir	Grammar		.gfbuild/Grammar.gf-tags
-IP	indir	Grammar		.gfbuild/Grammar.gf-tags
-IQuant	indir	Grammar		.gfbuild/Grammar.gf-tags
-IdRP	indir	Grammar		.gfbuild/Grammar.gf-tags
-IdetCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-IdetIP	indir	Grammar		.gfbuild/Grammar.gf-tags
-IdetQuant	indir	Grammar		.gfbuild/Grammar.gf-tags
-Imp	indir	Grammar		.gfbuild/Grammar.gf-tags
+IIDig	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+IP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IQuant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+IdRP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Relative.gf-tags
+IdetCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+IdetIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+IdetQuant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+Imp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 ImpForm	param	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	
-ImpP3	indir	Grammar		.gfbuild/Grammar.gf-tags
-ImpPl1	indir	Grammar		.gfbuild/Grammar.gf-tags
-ImpVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ImpersCl	indir	Grammar		.gfbuild/Grammar.gf-tags
-IndefArt	indir	Grammar		.gfbuild/Grammar.gf-tags
-Interj	indir	Grammar		.gfbuild/Grammar.gf-tags
-ListAP	indir	Grammar		.gfbuild/Grammar.gf-tags
+ImpP3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Idiom.gf-tags
+ImpPl1	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Idiom.gf-tags
+ImpVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+ImpersCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Idiom.gf-tags
+IndefArt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+Interj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+ListAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
 ListAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1621	
 ListAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1621	Type
-ListAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
+ListAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
 ListAdv	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1620	
 ListAdv	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1620	Type
-ListCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-ListIAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-ListNP	indir	Grammar		.gfbuild/Grammar.gf-tags
+ListCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ListIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ListNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
 ListNP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1622	
 ListNP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1622	Type
-ListRS	indir	Grammar		.gfbuild/Grammar.gf-tags
-ListS	indir	Grammar		.gfbuild/Grammar.gf-tags
+ListRS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
+ListS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Conjunction.gf-tags
 ListS	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1623	
 ListS	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1623	Type
-MassNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-N	indir	Grammar		.gfbuild/Grammar.gf-tags
-N2	indir	Grammar		.gfbuild/Grammar.gf-tags
-N3	indir	Grammar		.gfbuild/Grammar.gf-tags
-NP	indir	Grammar		.gfbuild/Grammar.gf-tags
-NoPConj	indir	Grammar		.gfbuild/Grammar.gf-tags
-NoVoc	indir	Grammar		.gfbuild/Grammar.gf-tags
-Num	indir	Grammar		.gfbuild/Grammar.gf-tags
-NumCard	indir	Grammar		.gfbuild/Grammar.gf-tags
-NumDigits	indir	Grammar		.gfbuild/Grammar.gf-tags
-NumNumeral	indir	Grammar		.gfbuild/Grammar.gf-tags
-NumPl	indir	Grammar		.gfbuild/Grammar.gf-tags
-NumSg	indir	Grammar		.gfbuild/Grammar.gf-tags
-Numeral	indir	Grammar		.gfbuild/Grammar.gf-tags
-Ord	indir	Grammar		.gfbuild/Grammar.gf-tags
-OrdDigits	indir	Grammar		.gfbuild/Grammar.gf-tags
-OrdNumeral	indir	Grammar		.gfbuild/Grammar.gf-tags
-OrdSuperl	indir	Grammar		.gfbuild/Grammar.gf-tags
-PConj	indir	Grammar		.gfbuild/Grammar.gf-tags
-PConjConj	indir	Grammar		.gfbuild/Grammar.gf-tags
+MassNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+N	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+N2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+N3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+NoPConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+NoVoc	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+Num	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+NumCard	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+NumDigits	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+NumNumeral	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+NumPl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+NumSg	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+Numeral	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Ord	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+OrdDigits	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+OrdNumeral	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+OrdSuperl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+PConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+PConjConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
 PExclMark	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
 PFullStop	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
-PN	indir	Grammar		.gfbuild/Grammar.gf-tags
-PNeg	indir	Grammar		.gfbuild/Grammar.gf-tags
-PPartNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-PPos	indir	Grammar		.gfbuild/Grammar.gf-tags
+PN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+PNeg	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Tense.gf-tags
+PPartNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+PPos	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Tense.gf-tags
 PQuestMark	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
-PassV2	indir	Grammar		.gfbuild/Grammar.gf-tags
-Phr	indir	Grammar		.gfbuild/Grammar.gf-tags
-PhrUtt	indir	Grammar		.gfbuild/Grammar.gf-tags
+PassV2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+Phr	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+PhrUtt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
 PlQuant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1601	
 PlQuant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1601	Quant -> QuantPl
-Pol	indir	Grammar		.gfbuild/Grammar.gf-tags
-PositA	indir	Grammar		.gfbuild/Grammar.gf-tags
-PositAdAAdj	indir	Grammar		.gfbuild/Grammar.gf-tags
-PositAdvAdj	indir	Grammar		.gfbuild/Grammar.gf-tags
-PossPron	indir	Grammar		.gfbuild/Grammar.gf-tags
-PredSCVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-PredVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-Predet	indir	Grammar		.gfbuild/Grammar.gf-tags
-PredetNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-PrepIP	indir	Grammar		.gfbuild/Grammar.gf-tags
-PrepNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-ProgrVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-Pron	indir	Grammar		.gfbuild/Grammar.gf-tags
+Pol	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+PositA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+PositAdAAdj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adverb.gf-tags
+PositAdvAdj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adverb.gf-tags
+PossPron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+PredSCVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+PredVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+Predet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+PredetNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+PrepIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+PrepNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adverb.gf-tags
+ProgrVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Idiom.gf-tags
+Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 Punct	param	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	
-QCl	indir	Grammar		.gfbuild/Grammar.gf-tags
-QS	indir	Grammar		.gfbuild/Grammar.gf-tags
-QVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-Quant	indir	Grammar		.gfbuild/Grammar.gf-tags
+QCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+QS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+QVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+Quant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
 QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1599	
 QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1599	Type
 QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1598	
 QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1598	Type
-QuestCl	indir	Grammar		.gfbuild/Grammar.gf-tags
-QuestIAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-QuestIComp	indir	Grammar		.gfbuild/Grammar.gf-tags
-QuestQVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-QuestSlash	indir	Grammar		.gfbuild/Grammar.gf-tags
-QuestVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-RCl	indir	Grammar		.gfbuild/Grammar.gf-tags
-RP	indir	Grammar		.gfbuild/Grammar.gf-tags
-RS	indir	Grammar		.gfbuild/Grammar.gf-tags
-ReflA2	indir	Grammar		.gfbuild/Grammar.gf-tags
-ReflVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-RelCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-RelCl	indir	Grammar		.gfbuild/Grammar.gf-tags
-RelNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-RelS	indir	Grammar		.gfbuild/Grammar.gf-tags
-RelSlash	indir	Grammar		.gfbuild/Grammar.gf-tags
-RelVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-S	indir	Grammar		.gfbuild/Grammar.gf-tags
-SC	indir	Grammar		.gfbuild/Grammar.gf-tags
-SSlash	indir	Grammar		.gfbuild/Grammar.gf-tags
-SSubjS	indir	Grammar		.gfbuild/Grammar.gf-tags
-SentAP	indir	Grammar		.gfbuild/Grammar.gf-tags
-SentCN	indir	Grammar		.gfbuild/Grammar.gf-tags
+QuestCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+QuestIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+QuestIComp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+QuestQVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+QuestSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+QuestVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Question.gf-tags
+RCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+RP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+RS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+ReflA2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+ReflVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+RelCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+RelCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Relative.gf-tags
+RelNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+RelS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+RelSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Relative.gf-tags
+RelVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Relative.gf-tags
+S	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+SC	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+SSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+SSubjS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+SentAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+SentCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
 SgQuant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1600	
 SgQuant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1600	Quant -> QuantSg
-Slash2V3	indir	Grammar		.gfbuild/Grammar.gf-tags
-Slash3V3	indir	Grammar		.gfbuild/Grammar.gf-tags
-SlashPrep	indir	Grammar		.gfbuild/Grammar.gf-tags
-SlashV2A	indir	Grammar		.gfbuild/Grammar.gf-tags
-SlashV2Q	indir	Grammar		.gfbuild/Grammar.gf-tags
-SlashV2S	indir	Grammar		.gfbuild/Grammar.gf-tags
-SlashV2V	indir	Grammar		.gfbuild/Grammar.gf-tags
-SlashV2VNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-SlashV2a	indir	Grammar		.gfbuild/Grammar.gf-tags
-SlashVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-SlashVS	indir	Grammar		.gfbuild/Grammar.gf-tags
-SlashVV	indir	Grammar		.gfbuild/Grammar.gf-tags
-Sub10	indir	Grammar		.gfbuild/Grammar.gf-tags
-Sub100	indir	Grammar		.gfbuild/Grammar.gf-tags
-Sub1000	indir	Grammar		.gfbuild/Grammar.gf-tags
-Sub1000000	indir	Grammar		.gfbuild/Grammar.gf-tags
-Subj	indir	Grammar		.gfbuild/Grammar.gf-tags
-SubjS	indir	Grammar		.gfbuild/Grammar.gf-tags
-TEmpty	indir	Grammar		.gfbuild/Grammar.gf-tags
-TExclMark	indir	Grammar		.gfbuild/Grammar.gf-tags
-TFullStop	indir	Grammar		.gfbuild/Grammar.gf-tags
-TPres	indir	Grammar		.gfbuild/Grammar.gf-tags
-TQuestMark	indir	Grammar		.gfbuild/Grammar.gf-tags
-TTAnt	indir	Grammar		.gfbuild/Grammar.gf-tags
+Slash2V3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+Slash3V3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+SlashPrep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+SlashV2A	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+SlashV2Q	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+SlashV2S	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+SlashV2V	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+SlashV2VNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+SlashV2a	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+SlashVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+SlashVS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+SlashVV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+Sub10	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+Sub100	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+Sub1000	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+Sub1000000	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+SubjS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adverb.gf-tags
+TEmpty	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Text.gf-tags
+TExclMark	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Text.gf-tags
+TFullStop	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Text.gf-tags
+TPres	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Tense.gf-tags
+TQuestMark	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Text.gf-tags
+TTAnt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Tense.gf-tags
 TUseCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1638	
 TUseCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1638	Tense -> Ant -> Pol -> Cl -> S
 TUseQCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1639	
 TUseQCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1639	Tense -> Ant -> Pol -> QCl -> QS
 TUseRCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1640	
 TUseRCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1640	Tense -> Ant -> Pol -> RCl -> RS
-Temp	indir	Grammar		.gfbuild/Grammar.gf-tags
-Tense	indir	Grammar		.gfbuild/Grammar.gf-tags
-Text	indir	Grammar		.gfbuild/Grammar.gf-tags
+Temp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Tense	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+Text	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
 Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:894-895	
 Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:894-895	Type
-Use2N3	indir	Grammar		.gfbuild/Grammar.gf-tags
-Use3N3	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseA2	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseCl	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseComp	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseComparA	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseCopula	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseN	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseN2	indir	Grammar		.gfbuild/Grammar.gf-tags
-UsePN	indir	Grammar		.gfbuild/Grammar.gf-tags
-UsePron	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseQCl	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseRCl	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseSlash	indir	Grammar		.gfbuild/Grammar.gf-tags
-UseV	indir	Grammar		.gfbuild/Grammar.gf-tags
-Utt	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttAP	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttCN	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttCard	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttIAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttIP	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttImpPl	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttImpPol	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttImpSg	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttInterj	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttNP	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttQS	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttS	indir	Grammar		.gfbuild/Grammar.gf-tags
-UttVP	indir	Grammar		.gfbuild/Grammar.gf-tags
-V	indir	Grammar		.gfbuild/Grammar.gf-tags
-V2	indir	Grammar		.gfbuild/Grammar.gf-tags
-V2A	indir	Grammar		.gfbuild/Grammar.gf-tags
-V2Q	indir	Grammar		.gfbuild/Grammar.gf-tags
-V2S	indir	Grammar		.gfbuild/Grammar.gf-tags
-V2V	indir	Grammar		.gfbuild/Grammar.gf-tags
-V3	indir	Grammar		.gfbuild/Grammar.gf-tags
-VA	indir	Grammar		.gfbuild/Grammar.gf-tags
-VP	indir	Grammar		.gfbuild/Grammar.gf-tags
-VPSlash	indir	Grammar		.gfbuild/Grammar.gf-tags
-VQ	indir	Grammar		.gfbuild/Grammar.gf-tags
-VS	indir	Grammar		.gfbuild/Grammar.gf-tags
-VV	indir	Grammar		.gfbuild/Grammar.gf-tags
-Voc	indir	Grammar		.gfbuild/Grammar.gf-tags
-VocNP	indir	Grammar		.gfbuild/Grammar.gf-tags
+Use2N3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+Use3N3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+UseA2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+UseCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+UseComp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+UseComparA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Adjective.gf-tags
+UseCopula	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+UseN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+UseN2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+UsePN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+UsePron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Noun.gf-tags
+UseQCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+UseRCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+UseSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Sentence.gf-tags
+UseV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Verb.gf-tags
+Utt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+UttAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttCard	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttImpPl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttImpPol	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttImpSg	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttInterj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttQS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+UttVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
+V	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2A	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2Q	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2S	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V2V	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+V3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VPSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VQ	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+VV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Cat.gf-tags
+Voc	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Common.gf-tags
+VocNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Phrase.gf-tags
 aPl_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:740-741	
 aPl_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:740-741	Det
 aSg_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:738-739	
@@ -330,89 +330,89 @@ a_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:732-733
 a_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:732-733	Det
 a_Quant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:764-765	
 a_Quant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:764-765	Quant
-above_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-active2passive	indir	Grammar		.gfbuild/Grammar.gf-tags
-after_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-all_Predet	indir	Grammar		.gfbuild/Grammar.gf-tags
-almost_AdA	indir	Grammar		.gfbuild/Grammar.gf-tags
-almost_AdN	indir	Grammar		.gfbuild/Grammar.gf-tags
-although_Subj	indir	Grammar		.gfbuild/Grammar.gf-tags
-always_AdV	indir	Grammar		.gfbuild/Grammar.gf-tags
-and_Conj	indir	Grammar		.gfbuild/Grammar.gf-tags
-as_CAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-at_least_AdN	indir	Grammar		.gfbuild/Grammar.gf-tags
-at_most_AdN	indir	Grammar		.gfbuild/Grammar.gf-tags
-because_Subj	indir	Grammar		.gfbuild/Grammar.gf-tags
-before_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-behind_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-between_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-both7and_DConj	indir	Grammar		.gfbuild/Grammar.gf-tags
-but_PConj	indir	Grammar		.gfbuild/Grammar.gf-tags
-by8agent_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-by8means_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-can8know_VV	indir	Grammar		.gfbuild/Grammar.gf-tags
-can_VV	indir	Grammar		.gfbuild/Grammar.gf-tags
+above_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+active2passive	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Transfer.gf-tags
+after_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+all_Predet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+almost_AdA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+almost_AdN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+although_Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+always_AdV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+and_Conj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+as_CAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+at_least_AdN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+at_most_AdN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+because_Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+before_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+behind_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+between_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+both7and_DConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+but_PConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+by8agent_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+by8means_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+can8know_VV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+can_VV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 comparAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1086-1087	
 comparAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1086-1087	A -> AP
-dconcat	indir	Grammar		.gfbuild/Grammar.gf-tags
+dconcat	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
 digit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1706	
 digit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1706	pattern Str
-digits2num	indir	Grammar		.gfbuild/Grammar.gf-tags
-digits2numeral	indir	Grammar		.gfbuild/Grammar.gf-tags
-dn	indir	Grammar		.gfbuild/Grammar.gf-tags
-dn10	indir	Grammar		.gfbuild/Grammar.gf-tags
-dn100	indir	Grammar		.gfbuild/Grammar.gf-tags
-dn1000	indir	Grammar		.gfbuild/Grammar.gf-tags
-dn1000000a	indir	Grammar		.gfbuild/Grammar.gf-tags
-dn1000000b	indir	Grammar		.gfbuild/Grammar.gf-tags
-dn1000000c	indir	Grammar		.gfbuild/Grammar.gf-tags
-during_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-either7or_DConj	indir	Grammar		.gfbuild/Grammar.gf-tags
+digits2num	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+digits2numeral	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+dn	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+dn10	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+dn100	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+dn1000	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+dn1000000a	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+dn1000000b	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+dn1000000c	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+during_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+either7or_DConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 emptyText	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:120-121	
 emptyText	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:120-121	Text
-every_Det	indir	Grammar		.gfbuild/Grammar.gf-tags
-everybody_NP	indir	Grammar		.gfbuild/Grammar.gf-tags
-everything_NP	indir	Grammar		.gfbuild/Grammar.gf-tags
-everywhere_Adv	indir	Grammar		.gfbuild/Grammar.gf-tags
-except_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
+every_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+everybody_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+everything_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+everywhere_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+except_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 exclMarkPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:131-132	
 exclMarkPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:131-132	Punct
-few_Det	indir	Grammar		.gfbuild/Grammar.gf-tags
-for_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-from_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
+few_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+for_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+from_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 fullStopPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:127-128	
 fullStopPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:127-128	Punct
 genericCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:431-432	
 genericCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:431-432	VP -> Cl
-have_V2	indir	Grammar		.gfbuild/Grammar.gf-tags
-have_V3	indir	Grammar		.gfbuild/Grammar.gf-tags
-have_not_V3	indir	Grammar		.gfbuild/Grammar.gf-tags
+have_V2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+have_V3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+have_not_V3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 he_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:670-671	
 he_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:670-671	NP
-he_Pron	indir	Grammar		.gfbuild/Grammar.gf-tags
-here7from_Adv	indir	Grammar		.gfbuild/Grammar.gf-tags
-here7to_Adv	indir	Grammar		.gfbuild/Grammar.gf-tags
-here_Adv	indir	Grammar		.gfbuild/Grammar.gf-tags
-how8many_IDet	indir	Grammar		.gfbuild/Grammar.gf-tags
-how8much_IAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-how_IAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
+he_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+here7from_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+here7to_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+here_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+how8many_IDet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+how8much_IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+how_IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 i_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:664-665	
 i_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:664-665	NP
-i_Pron	indir	Grammar		.gfbuild/Grammar.gf-tags
+i_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 idigit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1705	
 idigit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1705	pattern Str
-if_Subj	indir	Grammar		.gfbuild/Grammar.gf-tags
-if_then_Conj	indir	Grammar		.gfbuild/Grammar.gf-tags
-in8front_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-in_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
+if_Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+if_then_Conj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+in8front_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+in_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 it_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:674-675	
 it_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:674-675	NP
-it_Pron	indir	Grammar		.gfbuild/Grammar.gf-tags
-language_title_Utt	indir	Grammar		.gfbuild/Grammar.gf-tags
-less_CAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
+it_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+language_title_Utt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+less_CAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 lets_Utt	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:236-237	
 lets_Utt	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:236-237	VP -> Utt
-many_Det	indir	Grammar		.gfbuild/Grammar.gf-tags
+many_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 mkAP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	
 mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	A -> AP
 mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	A -> NP -> AP
@@ -803,10 +803,10 @@ mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1
 mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1494-1514	VV -> VPSlash -> VPSlash
 mkVoc	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:185-186	
 mkVoc	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:185-186	NP -> Voc
-more_CAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-most_Predet	indir	Grammar		.gfbuild/Grammar.gf-tags
-much_Det	indir	Grammar		.gfbuild/Grammar.gf-tags
-must_VV	indir	Grammar		.gfbuild/Grammar.gf-tags
+more_CAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+most_Predet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+much_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+must_VV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 n0_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:932-933	
 n0_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:932-933	Dig
 n1000_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1767-1768	
@@ -829,7 +829,7 @@ n1_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1772-
 n1_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1772-1773	Numeral
 n1_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:897-898	
 n1_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:897-898	Unit
-n2	indir	Grammar		.gfbuild/Grammar.gf-tags
+n2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
 n20_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1763-1764	
 n20_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1763-1764	Digits
 n20_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1792-1793	
@@ -842,7 +842,7 @@ n2_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1774-
 n2_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1774-1775	Numeral
 n2_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:899-900	
 n2_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:899-900	Unit
-n3	indir	Grammar		.gfbuild/Grammar.gf-tags
+n3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
 n3_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:938-939	
 n3_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:938-939	Dig
 n3_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1747-1748	
@@ -851,7 +851,7 @@ n3_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1776-
 n3_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1776-1777	Numeral
 n3_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:901-902	
 n3_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:901-902	Unit
-n4	indir	Grammar		.gfbuild/Grammar.gf-tags
+n4	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
 n4_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:940-941	
 n4_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:940-941	Dig
 n4_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1749-1750	
@@ -860,7 +860,7 @@ n4_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1778-
 n4_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1778-1779	Numeral
 n4_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:903-904	
 n4_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:903-904	Unit
-n5	indir	Grammar		.gfbuild/Grammar.gf-tags
+n5	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
 n5_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:942-943	
 n5_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:942-943	Dig
 n5_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1751-1752	
@@ -869,7 +869,7 @@ n5_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1780-
 n5_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1780-1781	Numeral
 n5_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:905-906	
 n5_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:905-906	Unit
-n6	indir	Grammar		.gfbuild/Grammar.gf-tags
+n6	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
 n6_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:944-945	
 n6_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:944-945	Dig
 n6_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1753-1754	
@@ -878,7 +878,7 @@ n6_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1782-
 n6_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1782-1783	Numeral
 n6_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:907-908	
 n6_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:907-908	Unit
-n7	indir	Grammar		.gfbuild/Grammar.gf-tags
+n7	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
 n7_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:946-947	
 n7_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:946-947	Dig
 n7_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1755-1756	
@@ -887,7 +887,7 @@ n7_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1784-
 n7_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1784-1785	Numeral
 n7_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:909-910	
 n7_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:909-910	Unit
-n8	indir	Grammar		.gfbuild/Grammar.gf-tags
+n8	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
 n8_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:948-949	
 n8_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:948-949	Dig
 n8_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1757-1758	
@@ -896,7 +896,7 @@ n8_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1786-
 n8_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1786-1787	Numeral
 n8_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:911-912	
 n8_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:911-912	Unit
-n9	indir	Grammar		.gfbuild/Grammar.gf-tags
+n9	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
 n9_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:950-951	
 n9_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:950-951	Dig
 n9_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1759-1760	
@@ -905,35 +905,35 @@ n9_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1788-
 n9_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1788-1789	Numeral
 n9_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:913-914	
 n9_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:913-914	Unit
-nd	indir	Grammar		.gfbuild/Grammar.gf-tags
-nd10	indir	Grammar		.gfbuild/Grammar.gf-tags
-nd100	indir	Grammar		.gfbuild/Grammar.gf-tags
-nd1000	indir	Grammar		.gfbuild/Grammar.gf-tags
-nd1000000	indir	Grammar		.gfbuild/Grammar.gf-tags
+nd	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+nd10	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+nd100	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+nd1000	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+nd1000000	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
 negativePol	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:249-250	
 negativePol	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:249-250	Pol
 noPConj	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:176-177	
 noPConj	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:176-177	PConj
 noVoc	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:187-188	
 noVoc	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:187-188	Voc
-no_Quant	indir	Grammar		.gfbuild/Grammar.gf-tags
-no_Utt	indir	Grammar		.gfbuild/Grammar.gf-tags
-nobody_NP	indir	Grammar		.gfbuild/Grammar.gf-tags
-not_Predet	indir	Grammar		.gfbuild/Grammar.gf-tags
-nothing_NP	indir	Grammar		.gfbuild/Grammar.gf-tags
-num	indir	Grammar		.gfbuild/Grammar.gf-tags
-num2digits	indir	Grammar		.gfbuild/Grammar.gf-tags
-on_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-only_Predet	indir	Grammar		.gfbuild/Grammar.gf-tags
-or_Conj	indir	Grammar		.gfbuild/Grammar.gf-tags
-otherwise_PConj	indir	Grammar		.gfbuild/Grammar.gf-tags
-part_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
+no_Quant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+no_Utt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+nobody_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+not_Predet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+nothing_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+num	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+num2digits	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/NumeralTransfer.gf-tags
+on_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+only_Predet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+or_Conj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+otherwise_PConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+part_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 passiveVP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:514-521	
 passiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:514-521	V2 -> NP -> VP
 passiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:514-521	V2 -> VP
 plNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1590	
 plNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1590	Num
-please_Voc	indir	Grammar		.gfbuild/Grammar.gf-tags
+please_Voc	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 pluralImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:286-287	
 pluralImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:286-287	ImpForm
 pluralNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:794-795	
@@ -942,28 +942,28 @@ politeImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:28
 politeImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:288-289	ImpForm
 positivePol	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:247-248	
 positivePol	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:247-248	Pol
-possess_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot0	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot01	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot0as1	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot1	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot110	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot111	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot1as2	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot1plus	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot1to19	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot2	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot2as3	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot2plus	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot3	indir	Grammar		.gfbuild/Grammar.gf-tags
-pot3plus	indir	Grammar		.gfbuild/Grammar.gf-tags
+possess_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+pot0	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot01	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot0as1	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot1	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot110	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot111	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot1as2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot1plus	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot1to19	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot2as3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot2plus	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
+pot3plus	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Numeral.gf-tags
 presentTense	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:267-268	
 presentTense	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:267-268	Tense
 progressiveVP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:525-526	
 progressiveVP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:525-526	VP -> VP
 questMarkPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:129-130	
 questMarkPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:129-130	Punct
-quite_Adv	indir	Grammar		.gfbuild/Grammar.gf-tags
+quite_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 reflAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1084-1085	
 reflAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1084-1085	A2 -> AP
 reflexiveVP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:504-509	
@@ -973,19 +973,19 @@ sgNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1589
 sgNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1589	Num
 she_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:672-673	
 she_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:672-673	NP
-she_Pron	indir	Grammar		.gfbuild/Grammar.gf-tags
+she_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 simultaneousAnt	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:258-259	
 simultaneousAnt	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:258-259	Ant
 singularImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:284-285	
 singularImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:284-285	ImpForm
 singularNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:792-793	
 singularNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:792-793	Num
-so_AdA	indir	Grammar		.gfbuild/Grammar.gf-tags
-somePl_Det	indir	Grammar		.gfbuild/Grammar.gf-tags
-someSg_Det	indir	Grammar		.gfbuild/Grammar.gf-tags
-somebody_NP	indir	Grammar		.gfbuild/Grammar.gf-tags
-something_NP	indir	Grammar		.gfbuild/Grammar.gf-tags
-somewhere_Adv	indir	Grammar		.gfbuild/Grammar.gf-tags
+so_AdA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+somePl_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+someSg_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+somebody_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+something_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+somewhere_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 str2card	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1650-1653	
 str2card	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1650-1653	Str -> Card
 str2digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1709-1741	
@@ -1000,10 +1000,10 @@ that_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:744-745
 that_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:744-745	Det
 that_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:685-686	
 that_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:685-686	NP
-that_Quant	indir	Grammar		.gfbuild/Grammar.gf-tags
+that_Quant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 that_QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1584	
 that_QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1584	QuantSg
-that_Subj	indir	Grammar		.gfbuild/Grammar.gf-tags
+that_Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 thePl_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:736-737	
 thePl_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:736-737	Det
 theSg_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:734-735	
@@ -1014,10 +1014,10 @@ the_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:730-731
 the_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:730-731	Det
 the_Quant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:762-763	
 the_Quant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:762-763	Quant
-there7from_Adv	indir	Grammar		.gfbuild/Grammar.gf-tags
-there7to_Adv	indir	Grammar		.gfbuild/Grammar.gf-tags
-there_Adv	indir	Grammar		.gfbuild/Grammar.gf-tags
-therefore_PConj	indir	Grammar		.gfbuild/Grammar.gf-tags
+there7from_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+there7to_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+there_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+therefore_PConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 these_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:746-747	
 these_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:746-747	Det
 these_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:687-688	
@@ -1026,12 +1026,12 @@ these_QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:15
 these_QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1586	QuantPl
 they_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:680-681	
 they_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:680-681	NP
-they_Pron	indir	Grammar		.gfbuild/Grammar.gf-tags
+they_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 this_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:742-743	
 this_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:742-743	Det
 this_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:683-684	
 this_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:683-684	NP
-this_Quant	indir	Grammar		.gfbuild/Grammar.gf-tags
+this_Quant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 this_QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1583	
 this_QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1583	QuantSg
 those_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:748-749	
@@ -1042,45 +1042,45 @@ those_QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:15
 those_QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1587	QuantPl
 thousandfoldNumeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:861-862	
 thousandfoldNumeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:861-862	Sub1000 -> Numeral
-through_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-to_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-too_AdA	indir	Grammar		.gfbuild/Grammar.gf-tags
-under_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-very_AdA	indir	Grammar		.gfbuild/Grammar.gf-tags
-want_VV	indir	Grammar		.gfbuild/Grammar.gf-tags
+through_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+to_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+too_AdA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+under_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+very_AdA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+want_VV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 we_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:676-677	
 we_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:676-677	NP
-we_Pron	indir	Grammar		.gfbuild/Grammar.gf-tags
-whatPl_IP	indir	Grammar		.gfbuild/Grammar.gf-tags
-whatSg_IP	indir	Grammar		.gfbuild/Grammar.gf-tags
+we_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+whatPl_IP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+whatSg_IP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 what_IP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1293-1294	
 what_IP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1293-1294	IP
-when_IAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-when_Subj	indir	Grammar		.gfbuild/Grammar.gf-tags
-where_IAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
+when_IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+when_Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+where_IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 whichPl_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1328-1329	
 whichPl_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1328-1329	IDet
 whichSg_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1326-1327	
 whichSg_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1326-1327	IDet
 which_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1324-1325	
 which_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1324-1325	IDet
-which_IQuant	indir	Grammar		.gfbuild/Grammar.gf-tags
+which_IQuant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 which_RP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1440-1441	
 which_RP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1440-1441	RP
-whoPl_IP	indir	Grammar		.gfbuild/Grammar.gf-tags
-whoSg_IP	indir	Grammar		.gfbuild/Grammar.gf-tags
+whoPl_IP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+whoSg_IP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 who_IP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1295-1296	
 who_IP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1295-1296	IP
-why_IAdv	indir	Grammar		.gfbuild/Grammar.gf-tags
-with_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-without_Prep	indir	Grammar		.gfbuild/Grammar.gf-tags
-yes_Utt	indir	Grammar		.gfbuild/Grammar.gf-tags
+why_IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+with_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+without_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+yes_Utt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 youPl_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:678-679	
 youPl_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:678-679	NP
-youPl_Pron	indir	Grammar		.gfbuild/Grammar.gf-tags
+youPl_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 youPol_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:668-669	
 youPol_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:668-669	NP
-youPol_Pron	indir	Grammar		.gfbuild/Grammar.gf-tags
-youSg_Pron	indir	Grammar		.gfbuild/Grammar.gf-tags
+youPol_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
+youSg_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Structural.gf-tags
 you_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:666-667	
 you_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:666-667	NP
