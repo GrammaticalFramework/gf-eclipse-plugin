@@ -1,0 +1,6 @@
+--# -path=.:../abstract:../common:../../prelude
+resource ResEng = {
+	
+	param
+		Genddsdser = Masc | Fem ; 
+};

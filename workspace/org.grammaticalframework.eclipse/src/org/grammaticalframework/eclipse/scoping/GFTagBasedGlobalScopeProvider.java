@@ -119,7 +119,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @param resource
 	 * @return
 	 */
-	@SuppressWarnings("unused")
 	private Set<URI> getImportedURIs(final Resource resource) {
 //		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Set<URI>>(){
 //			public Set<URI> get() {
@@ -133,7 +132,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @param resource
 	 * @return
 	 */
-	@SuppressWarnings("unused")
 	private Collection<TagEntry> getTags(final Resource resource) {
 		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Collection<TagEntry>>(){
 			public Collection<TagEntry> get() {
@@ -189,7 +187,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			// Add everything into our arrays
 			while ((line = reader.readLine()) != null) {
 				TagEntry tag = new TagEntry(line);
-				if (!tag.file.contains(GFBuilder.getBuildSubfolder(resource.getURI().lastSegment()))) { // ignore references to self, ie local scope
+				if (!tag.file.endsWith(resource.getURI().lastSegment())) { // ignore references to self, ie local scope
 					URI importURI = URI.createFileURI(tag.file);
 					if (!uriTagMap.containsKey(importURI)) {
 						uriTagMap.put(importURI, new ArrayList<TagEntry>());

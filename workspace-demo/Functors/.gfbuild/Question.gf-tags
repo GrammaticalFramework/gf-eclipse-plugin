@@ -1,0 +1,84 @@
+A	indir	Cat		.gfbuild/Cat.gf-tags
+A2	indir	Cat		.gfbuild/Cat.gf-tags
+AP	indir	Cat		.gfbuild/Cat.gf-tags
+AdA	indir	Cat		.gfbuild/Cat.gf-tags
+AdN	indir	Cat		.gfbuild/Cat.gf-tags
+AdV	indir	Cat		.gfbuild/Cat.gf-tags
+AddAdvQVP	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:52	QVP -> IAdv -> QVP
+Adv	indir	Cat		.gfbuild/Cat.gf-tags
+AdvIAdv	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:35	IAdv -> Adv -> IAdv
+AdvIP	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:23	IP -> Adv -> IP
+AdvQVP	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:51	VP -> IAdv -> QVP
+Ant	indir	Cat		.gfbuild/Cat.gf-tags
+CAdv	indir	Cat		.gfbuild/Cat.gf-tags
+CN	indir	Cat		.gfbuild/Cat.gf-tags
+Card	indir	Cat		.gfbuild/Cat.gf-tags
+Cl	indir	Cat		.gfbuild/Cat.gf-tags
+ClSlash	indir	Cat		.gfbuild/Cat.gf-tags
+Comp	indir	Cat		.gfbuild/Cat.gf-tags
+CompIAdv	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:40	IAdv -> IComp
+CompIP	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:41	IP -> IComp
+ComplSlashIP	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:50	VPSlash -> IP -> QVP
+Conj	indir	Cat		.gfbuild/Cat.gf-tags
+Det	indir	Cat		.gfbuild/Cat.gf-tags
+Digits	indir	Cat		.gfbuild/Cat.gf-tags
+IAdv	indir	Cat		.gfbuild/Cat.gf-tags
+IComp	indir	Cat		.gfbuild/Cat.gf-tags
+IDet	indir	Cat		.gfbuild/Cat.gf-tags
+IP	indir	Cat		.gfbuild/Cat.gf-tags
+IQuant	indir	Cat		.gfbuild/Cat.gf-tags
+IdetCN	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:18	IDet -> CN -> IP
+IdetIP	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:19	IDet -> IP
+IdetQuant	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:27	IQuant -> Num -> IDet
+Imp	indir	Cat		.gfbuild/Cat.gf-tags
+Interj	indir	Cat		.gfbuild/Cat.gf-tags
+N	indir	Cat		.gfbuild/Cat.gf-tags
+N2	indir	Cat		.gfbuild/Cat.gf-tags
+N3	indir	Cat		.gfbuild/Cat.gf-tags
+NP	indir	Cat		.gfbuild/Cat.gf-tags
+Num	indir	Cat		.gfbuild/Cat.gf-tags
+Numeral	indir	Cat		.gfbuild/Cat.gf-tags
+Ord	indir	Cat		.gfbuild/Cat.gf-tags
+PConj	indir	Cat		.gfbuild/Cat.gf-tags
+PN	indir	Cat		.gfbuild/Cat.gf-tags
+Phr	indir	Cat		.gfbuild/Cat.gf-tags
+Pol	indir	Cat		.gfbuild/Cat.gf-tags
+Predet	indir	Cat		.gfbuild/Cat.gf-tags
+Prep	indir	Cat		.gfbuild/Cat.gf-tags
+PrepIP	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:31	Prep -> IP -> IAdv
+Pron	indir	Cat		.gfbuild/Cat.gf-tags
+QCl	indir	Cat		.gfbuild/Cat.gf-tags
+QS	indir	Cat		.gfbuild/Cat.gf-tags
+QVP	cat	/home/john/repositories/GF/lib/src/abstract/Question.gf:48	
+Quant	indir	Cat		.gfbuild/Cat.gf-tags
+QuestCl	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:9	Cl -> QCl
+QuestIAdv	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:12	IAdv -> Cl -> QCl
+QuestIComp	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:13	IComp -> NP -> QCl
+QuestQVP	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:54	IP -> QVP -> QCl
+QuestSlash	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:11	IP -> ClSlash -> QCl
+QuestVP	fun	/home/john/repositories/GF/lib/src/abstract/Question.gf:10	IP -> VP -> QCl
+RCl	indir	Cat		.gfbuild/Cat.gf-tags
+RP	indir	Cat		.gfbuild/Cat.gf-tags
+RS	indir	Cat		.gfbuild/Cat.gf-tags
+S	indir	Cat		.gfbuild/Cat.gf-tags
+SC	indir	Cat		.gfbuild/Cat.gf-tags
+SSlash	indir	Cat		.gfbuild/Cat.gf-tags
+Subj	indir	Cat		.gfbuild/Cat.gf-tags
+Temp	indir	Cat		.gfbuild/Cat.gf-tags
+Tense	indir	Cat		.gfbuild/Cat.gf-tags
+Text	indir	Cat		.gfbuild/Cat.gf-tags
+Utt	indir	Cat		.gfbuild/Cat.gf-tags
+V	indir	Cat		.gfbuild/Cat.gf-tags
+V2	indir	Cat		.gfbuild/Cat.gf-tags
+V2A	indir	Cat		.gfbuild/Cat.gf-tags
+V2Q	indir	Cat		.gfbuild/Cat.gf-tags
+V2S	indir	Cat		.gfbuild/Cat.gf-tags
+V2V	indir	Cat		.gfbuild/Cat.gf-tags
+V3	indir	Cat		.gfbuild/Cat.gf-tags
+VA	indir	Cat		.gfbuild/Cat.gf-tags
+VP	indir	Cat		.gfbuild/Cat.gf-tags
+VPSlash	indir	Cat		.gfbuild/Cat.gf-tags
+VQ	indir	Cat		.gfbuild/Cat.gf-tags
+VS	indir	Cat		.gfbuild/Cat.gf-tags
+VV	indir	Cat		.gfbuild/Cat.gf-tags
+Voc	indir	Cat		.gfbuild/Cat.gf-tags

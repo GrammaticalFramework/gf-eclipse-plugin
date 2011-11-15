@@ -1,0 +1,94 @@
+A	indir	Cat		.gfbuild/Cat.gf-tags
+A2	indir	Cat		.gfbuild/Cat.gf-tags
+AP	indir	Cat		.gfbuild/Cat.gf-tags
+AdA	indir	Cat		.gfbuild/Cat.gf-tags
+AdN	indir	Cat		.gfbuild/Cat.gf-tags
+AdV	indir	Cat		.gfbuild/Cat.gf-tags
+Adv	indir	Cat		.gfbuild/Cat.gf-tags
+Ant	indir	Cat		.gfbuild/Cat.gf-tags
+BaseAP	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:37	AP -> AP -> ListAP
+BaseAdv	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:35	Adv -> Adv -> ListAdv
+BaseCN	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:39	CN -> CN -> ListCN
+BaseIAdv	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:38	IAdv -> IAdv -> ListIAdv
+BaseNP	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:36	NP -> NP -> ListNP
+BaseRS	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:34	RS -> RS -> ListRS
+BaseS	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:33	S -> S -> ListS
+CAdv	indir	Cat		.gfbuild/Cat.gf-tags
+CN	indir	Cat		.gfbuild/Cat.gf-tags
+Card	indir	Cat		.gfbuild/Cat.gf-tags
+Cl	indir	Cat		.gfbuild/Cat.gf-tags
+ClSlash	indir	Cat		.gfbuild/Cat.gf-tags
+Comp	indir	Cat		.gfbuild/Cat.gf-tags
+Conj	indir	Cat		.gfbuild/Cat.gf-tags
+ConjAP	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:22	Conj -> ListAP -> AP
+ConjAdv	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:24	Conj -> ListAdv -> Adv
+ConjCN	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:26	Conj -> ListCN -> CN
+ConjIAdv	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:25	Conj -> ListIAdv -> IAdv
+ConjNP	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:23	Conj -> ListNP -> NP
+ConjRS	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:21	Conj -> ListRS -> RS
+ConjS	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:20	Conj -> ListS -> S
+ConsAP	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:37	AP -> ListAP -> ListAP
+ConsAdv	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:35	Adv -> ListAdv -> ListAdv
+ConsCN	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:39	CN -> ListCN -> ListCN
+ConsIAdv	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:38	IAdv -> ListIAdv -> ListIAdv
+ConsNP	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:36	NP -> ListNP -> ListNP
+ConsRS	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:34	RS -> ListRS -> ListRS
+ConsS	fun	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:33	S -> ListS -> ListS
+Det	indir	Cat		.gfbuild/Cat.gf-tags
+Digits	indir	Cat		.gfbuild/Cat.gf-tags
+IAdv	indir	Cat		.gfbuild/Cat.gf-tags
+IComp	indir	Cat		.gfbuild/Cat.gf-tags
+IDet	indir	Cat		.gfbuild/Cat.gf-tags
+IP	indir	Cat		.gfbuild/Cat.gf-tags
+IQuant	indir	Cat		.gfbuild/Cat.gf-tags
+Imp	indir	Cat		.gfbuild/Cat.gf-tags
+Interj	indir	Cat		.gfbuild/Cat.gf-tags
+ListAP	cat	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:37	
+ListAdv	cat	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:35	
+ListCN	cat	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:39	
+ListIAdv	cat	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:38	
+ListNP	cat	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:36	
+ListRS	cat	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:34	
+ListS	cat	/home/john/repositories/GF/lib/src/abstract/Conjunction.gf:33	
+N	indir	Cat		.gfbuild/Cat.gf-tags
+N2	indir	Cat		.gfbuild/Cat.gf-tags
+N3	indir	Cat		.gfbuild/Cat.gf-tags
+NP	indir	Cat		.gfbuild/Cat.gf-tags
+Num	indir	Cat		.gfbuild/Cat.gf-tags
+Numeral	indir	Cat		.gfbuild/Cat.gf-tags
+Ord	indir	Cat		.gfbuild/Cat.gf-tags
+PConj	indir	Cat		.gfbuild/Cat.gf-tags
+PN	indir	Cat		.gfbuild/Cat.gf-tags
+Phr	indir	Cat		.gfbuild/Cat.gf-tags
+Pol	indir	Cat		.gfbuild/Cat.gf-tags
+Predet	indir	Cat		.gfbuild/Cat.gf-tags
+Prep	indir	Cat		.gfbuild/Cat.gf-tags
+Pron	indir	Cat		.gfbuild/Cat.gf-tags
+QCl	indir	Cat		.gfbuild/Cat.gf-tags
+QS	indir	Cat		.gfbuild/Cat.gf-tags
+Quant	indir	Cat		.gfbuild/Cat.gf-tags
+RCl	indir	Cat		.gfbuild/Cat.gf-tags
+RP	indir	Cat		.gfbuild/Cat.gf-tags
+RS	indir	Cat		.gfbuild/Cat.gf-tags
+S	indir	Cat		.gfbuild/Cat.gf-tags
+SC	indir	Cat		.gfbuild/Cat.gf-tags
+SSlash	indir	Cat		.gfbuild/Cat.gf-tags
+Subj	indir	Cat		.gfbuild/Cat.gf-tags
+Temp	indir	Cat		.gfbuild/Cat.gf-tags
+Tense	indir	Cat		.gfbuild/Cat.gf-tags
+Text	indir	Cat		.gfbuild/Cat.gf-tags
+Utt	indir	Cat		.gfbuild/Cat.gf-tags
+V	indir	Cat		.gfbuild/Cat.gf-tags
+V2	indir	Cat		.gfbuild/Cat.gf-tags
+V2A	indir	Cat		.gfbuild/Cat.gf-tags
+V2Q	indir	Cat		.gfbuild/Cat.gf-tags
+V2S	indir	Cat		.gfbuild/Cat.gf-tags
+V2V	indir	Cat		.gfbuild/Cat.gf-tags
+V3	indir	Cat		.gfbuild/Cat.gf-tags
+VA	indir	Cat		.gfbuild/Cat.gf-tags
+VP	indir	Cat		.gfbuild/Cat.gf-tags
+VPSlash	indir	Cat		.gfbuild/Cat.gf-tags
+VQ	indir	Cat		.gfbuild/Cat.gf-tags
+VS	indir	Cat		.gfbuild/Cat.gf-tags
+VV	indir	Cat		.gfbuild/Cat.gf-tags
+Voc	indir	Cat		.gfbuild/Cat.gf-tags

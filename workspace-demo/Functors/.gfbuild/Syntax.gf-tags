@@ -1,0 +1,956 @@
+A	indir	Cat		.gfbuild/Cat.gf-tags
+A	indir	Structural		.gfbuild/Structural.gf-tags
+A2	indir	Cat		.gfbuild/Cat.gf-tags
+A2	indir	Structural		.gfbuild/Structural.gf-tags
+AP	indir	Cat		.gfbuild/Cat.gf-tags
+AP	indir	Structural		.gfbuild/Structural.gf-tags
+AdA	indir	Cat		.gfbuild/Cat.gf-tags
+AdA	indir	Structural		.gfbuild/Structural.gf-tags
+AdN	indir	Cat		.gfbuild/Cat.gf-tags
+AdN	indir	Structural		.gfbuild/Structural.gf-tags
+AdV	indir	Cat		.gfbuild/Cat.gf-tags
+AdV	indir	Structural		.gfbuild/Structural.gf-tags
+Adv	indir	Cat		.gfbuild/Cat.gf-tags
+Adv	indir	Structural		.gfbuild/Structural.gf-tags
+Ant	indir	Cat		.gfbuild/Cat.gf-tags
+Ant	indir	Structural		.gfbuild/Structural.gf-tags
+Art	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1627	
+Art	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1627	Type
+CAdv	indir	Cat		.gfbuild/Cat.gf-tags
+CAdv	indir	Structural		.gfbuild/Structural.gf-tags
+CN	indir	Cat		.gfbuild/Cat.gf-tags
+CN	indir	Structural		.gfbuild/Structural.gf-tags
+Card	indir	Cat		.gfbuild/Cat.gf-tags
+Card	indir	Structural		.gfbuild/Structural.gf-tags
+Cl	indir	Cat		.gfbuild/Cat.gf-tags
+Cl	indir	Structural		.gfbuild/Structural.gf-tags
+ClSlash	indir	Cat		.gfbuild/Cat.gf-tags
+ClSlash	indir	Structural		.gfbuild/Structural.gf-tags
+Comp	indir	Cat		.gfbuild/Cat.gf-tags
+Comp	indir	Structural		.gfbuild/Structural.gf-tags
+ComplV2	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1608	
+ComplV2	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1608	V2 -> NP -> VP
+ComplV2A	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1609	
+ComplV2A	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1609	V2A -> NP -> AP -> VP
+ComplV3	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1610	
+ComplV3	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1610	V3 -> NP -> NP -> VP
+Conj	indir	Cat		.gfbuild/Cat.gf-tags
+Conj	indir	Structural		.gfbuild/Structural.gf-tags
+Det	indir	Cat		.gfbuild/Cat.gf-tags
+Det	indir	Structural		.gfbuild/Structural.gf-tags
+DetArtCard	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1636	
+DetArtCard	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1636	Art -> Card -> Det
+DetArtOrd	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1635	
+DetArtOrd	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1635	Quant -> Num -> Ord -> Det
+DetArtPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1633	
+DetArtPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1633	Art -> CN -> NP
+DetArtSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1632	
+DetArtSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1632	Art -> CN -> NP
+DetPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1606	
+DetPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1606	Quant -> Num -> Ord -> Det
+DetSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1605	
+DetSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1605	Quant -> Ord -> Det
+Digits	indir	Cat		.gfbuild/Cat.gf-tags
+Digits	indir	Structural		.gfbuild/Structural.gf-tags
+IAdv	indir	Cat		.gfbuild/Cat.gf-tags
+IAdv	indir	Structural		.gfbuild/Structural.gf-tags
+IComp	indir	Cat		.gfbuild/Cat.gf-tags
+IComp	indir	Structural		.gfbuild/Structural.gf-tags
+IDet	indir	Cat		.gfbuild/Cat.gf-tags
+IDet	indir	Structural		.gfbuild/Structural.gf-tags
+IFPl	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	ImpForm
+IFPol	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	ImpForm
+IFSg	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	ImpForm
+IP	indir	Cat		.gfbuild/Cat.gf-tags
+IP	indir	Structural		.gfbuild/Structural.gf-tags
+IQuant	indir	Cat		.gfbuild/Cat.gf-tags
+IQuant	indir	Structural		.gfbuild/Structural.gf-tags
+Imp	indir	Cat		.gfbuild/Cat.gf-tags
+Imp	indir	Structural		.gfbuild/Structural.gf-tags
+ImpForm	param	/home/john/repositories/GF/lib/src/api/Constructors.gf:293	
+Interj	indir	Cat		.gfbuild/Cat.gf-tags
+Interj	indir	Structural		.gfbuild/Structural.gf-tags
+ListAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1621	
+ListAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1621	Type
+ListAdv	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1620	
+ListAdv	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1620	Type
+ListNP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1622	
+ListNP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1622	Type
+ListS	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1623	
+ListS	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1623	Type
+N	indir	Cat		.gfbuild/Cat.gf-tags
+N	indir	Structural		.gfbuild/Structural.gf-tags
+N2	indir	Cat		.gfbuild/Cat.gf-tags
+N2	indir	Structural		.gfbuild/Structural.gf-tags
+N3	indir	Cat		.gfbuild/Cat.gf-tags
+N3	indir	Structural		.gfbuild/Structural.gf-tags
+NP	indir	Cat		.gfbuild/Cat.gf-tags
+NP	indir	Structural		.gfbuild/Structural.gf-tags
+Num	indir	Cat		.gfbuild/Cat.gf-tags
+Num	indir	Structural		.gfbuild/Structural.gf-tags
+Numeral	indir	Cat		.gfbuild/Cat.gf-tags
+Numeral	indir	Structural		.gfbuild/Structural.gf-tags
+Ord	indir	Cat		.gfbuild/Cat.gf-tags
+Ord	indir	Structural		.gfbuild/Structural.gf-tags
+PConj	indir	Cat		.gfbuild/Cat.gf-tags
+PConj	indir	Structural		.gfbuild/Structural.gf-tags
+PExclMark	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
+PFullStop	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
+PN	indir	Cat		.gfbuild/Cat.gf-tags
+PN	indir	Structural		.gfbuild/Structural.gf-tags
+PQuestMark	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
+Phr	indir	Cat		.gfbuild/Cat.gf-tags
+Phr	indir	Structural		.gfbuild/Structural.gf-tags
+PlQuant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1601	
+PlQuant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1601	Quant -> QuantPl
+Pol	indir	Cat		.gfbuild/Cat.gf-tags
+Pol	indir	Structural		.gfbuild/Structural.gf-tags
+Predet	indir	Cat		.gfbuild/Cat.gf-tags
+Predet	indir	Structural		.gfbuild/Structural.gf-tags
+Prep	indir	Cat		.gfbuild/Cat.gf-tags
+Prep	indir	Structural		.gfbuild/Structural.gf-tags
+Pron	indir	Cat		.gfbuild/Cat.gf-tags
+Pron	indir	Structural		.gfbuild/Structural.gf-tags
+Punct	param	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	
+QCl	indir	Cat		.gfbuild/Cat.gf-tags
+QCl	indir	Structural		.gfbuild/Structural.gf-tags
+QS	indir	Cat		.gfbuild/Cat.gf-tags
+QS	indir	Structural		.gfbuild/Structural.gf-tags
+Quant	indir	Cat		.gfbuild/Cat.gf-tags
+Quant	indir	Structural		.gfbuild/Structural.gf-tags
+QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1599	
+QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1599	Type
+QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1598	
+QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1598	Type
+RCl	indir	Cat		.gfbuild/Cat.gf-tags
+RCl	indir	Structural		.gfbuild/Structural.gf-tags
+RP	indir	Cat		.gfbuild/Cat.gf-tags
+RP	indir	Structural		.gfbuild/Structural.gf-tags
+RS	indir	Cat		.gfbuild/Cat.gf-tags
+RS	indir	Structural		.gfbuild/Structural.gf-tags
+S	indir	Cat		.gfbuild/Cat.gf-tags
+S	indir	Structural		.gfbuild/Structural.gf-tags
+SC	indir	Cat		.gfbuild/Cat.gf-tags
+SC	indir	Structural		.gfbuild/Structural.gf-tags
+SSlash	indir	Cat		.gfbuild/Cat.gf-tags
+SSlash	indir	Structural		.gfbuild/Structural.gf-tags
+SgQuant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1600	
+SgQuant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1600	Quant -> QuantSg
+Subj	indir	Cat		.gfbuild/Cat.gf-tags
+Subj	indir	Structural		.gfbuild/Structural.gf-tags
+TUseCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1638	
+TUseCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1638	Tense -> Ant -> Pol -> Cl -> S
+TUseQCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1639	
+TUseQCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1639	Tense -> Ant -> Pol -> QCl -> QS
+TUseRCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1640	
+TUseRCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1640	Tense -> Ant -> Pol -> RCl -> RS
+Temp	indir	Cat		.gfbuild/Cat.gf-tags
+Temp	indir	Structural		.gfbuild/Structural.gf-tags
+Tense	indir	Cat		.gfbuild/Cat.gf-tags
+Tense	indir	Structural		.gfbuild/Structural.gf-tags
+Text	indir	Cat		.gfbuild/Cat.gf-tags
+Text	indir	Structural		.gfbuild/Structural.gf-tags
+Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:894-895	
+Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:894-895	Type
+Utt	indir	Cat		.gfbuild/Cat.gf-tags
+Utt	indir	Structural		.gfbuild/Structural.gf-tags
+V	indir	Cat		.gfbuild/Cat.gf-tags
+V	indir	Structural		.gfbuild/Structural.gf-tags
+V2	indir	Cat		.gfbuild/Cat.gf-tags
+V2	indir	Structural		.gfbuild/Structural.gf-tags
+V2A	indir	Cat		.gfbuild/Cat.gf-tags
+V2A	indir	Structural		.gfbuild/Structural.gf-tags
+V2Q	indir	Cat		.gfbuild/Cat.gf-tags
+V2Q	indir	Structural		.gfbuild/Structural.gf-tags
+V2S	indir	Cat		.gfbuild/Cat.gf-tags
+V2S	indir	Structural		.gfbuild/Structural.gf-tags
+V2V	indir	Cat		.gfbuild/Cat.gf-tags
+V2V	indir	Structural		.gfbuild/Structural.gf-tags
+V3	indir	Cat		.gfbuild/Cat.gf-tags
+V3	indir	Structural		.gfbuild/Structural.gf-tags
+VA	indir	Cat		.gfbuild/Cat.gf-tags
+VA	indir	Structural		.gfbuild/Structural.gf-tags
+VP	indir	Cat		.gfbuild/Cat.gf-tags
+VP	indir	Structural		.gfbuild/Structural.gf-tags
+VPSlash	indir	Cat		.gfbuild/Cat.gf-tags
+VPSlash	indir	Structural		.gfbuild/Structural.gf-tags
+VQ	indir	Cat		.gfbuild/Cat.gf-tags
+VQ	indir	Structural		.gfbuild/Structural.gf-tags
+VS	indir	Cat		.gfbuild/Cat.gf-tags
+VS	indir	Structural		.gfbuild/Structural.gf-tags
+VV	indir	Cat		.gfbuild/Cat.gf-tags
+VV	indir	Structural		.gfbuild/Structural.gf-tags
+Voc	indir	Cat		.gfbuild/Cat.gf-tags
+Voc	indir	Structural		.gfbuild/Structural.gf-tags
+aPl_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:740-741	
+aPl_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:740-741	Det
+aSg_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:738-739	
+aSg_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:738-739	Det
+a_Art	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1576	
+a_Art	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1576	Art
+a_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:732-733	
+a_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:732-733	Det
+a_Quant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:764-765	
+a_Quant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:764-765	Quant
+above_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+after_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+all_Predet	indir	Structural		.gfbuild/Structural.gf-tags
+almost_AdA	indir	Structural		.gfbuild/Structural.gf-tags
+almost_AdN	indir	Structural		.gfbuild/Structural.gf-tags
+although_Subj	indir	Structural		.gfbuild/Structural.gf-tags
+always_AdV	indir	Structural		.gfbuild/Structural.gf-tags
+and_Conj	indir	Structural		.gfbuild/Structural.gf-tags
+app	overload-def	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	
+app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N -> NP
+app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N2 -> N -> CN
+app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N2 -> NP -> CN
+app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N2 -> NP -> NP
+app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N2 -> NP -> NP -> CN
+app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N2 -> NP -> NP -> NP
+app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N3 -> NP -> NP -> CN
+app	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:116-133	N3 -> NP -> NP -> NP
+as_CAdv	indir	Structural		.gfbuild/Structural.gf-tags
+at_least_AdN	indir	Structural		.gfbuild/Structural.gf-tags
+at_most_AdN	indir	Structural		.gfbuild/Structural.gf-tags
+because_Subj	indir	Structural		.gfbuild/Structural.gf-tags
+before_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+behind_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+between_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+both7and_DConj	indir	Structural		.gfbuild/Structural.gf-tags
+but_PConj	indir	Structural		.gfbuild/Structural.gf-tags
+by8agent_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+by8means_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+can8know_VV	indir	Structural		.gfbuild/Structural.gf-tags
+can_VV	indir	Structural		.gfbuild/Structural.gf-tags
+comparAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1086-1087	
+comparAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1086-1087	A -> AP
+coord	overload-def	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	
+coord	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	Conj -> AP -> AP -> AP
+coord	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	Conj -> Adv -> Adv -> Adv
+coord	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	Conj -> ListAP -> AP
+coord	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	Conj -> ListAdv -> Adv
+coord	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	Conj -> ListNP -> NP
+coord	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	Conj -> ListS -> S
+coord	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	Conj -> NP -> NP -> NP
+coord	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:135-152	Conj -> S -> S -> S
+digit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1706	
+digit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1706	pattern Str
+during_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+either7or_DConj	indir	Structural		.gfbuild/Structural.gf-tags
+emptyText	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:120-121	
+emptyText	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:120-121	Text
+every_Det	indir	Structural		.gfbuild/Structural.gf-tags
+everybody_NP	indir	Structural		.gfbuild/Structural.gf-tags
+everything_NP	indir	Structural		.gfbuild/Structural.gf-tags
+everywhere_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+except_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+exclMarkPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:131-132	
+exclMarkPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:131-132	Punct
+few_Det	indir	Structural		.gfbuild/Structural.gf-tags
+for_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+from_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+fullStopPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:127-128	
+fullStopPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:127-128	Punct
+genericCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:431-432	
+genericCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:431-432	VP -> Cl
+have_V2	indir	Structural		.gfbuild/Structural.gf-tags
+have_V3	indir	Structural		.gfbuild/Structural.gf-tags
+have_not_V3	indir	Structural		.gfbuild/Structural.gf-tags
+he_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:670-671	
+he_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:670-671	NP
+he_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+here7from_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+here7to_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+here_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+how8many_IDet	indir	Structural		.gfbuild/Structural.gf-tags
+how8much_IAdv	indir	Structural		.gfbuild/Structural.gf-tags
+how_IAdv	indir	Structural		.gfbuild/Structural.gf-tags
+i_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:664-665	
+i_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:664-665	NP
+i_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+idigit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1705	
+idigit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1705	pattern Str
+if_Subj	indir	Structural		.gfbuild/Structural.gf-tags
+if_then_Conj	indir	Structural		.gfbuild/Structural.gf-tags
+in8front_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+in_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+it_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:674-675	
+it_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:674-675	NP
+it_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+language_title_Utt	indir	Structural		.gfbuild/Structural.gf-tags
+less_CAdv	indir	Structural		.gfbuild/Structural.gf-tags
+lets_Utt	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:236-237	
+lets_Utt	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:236-237	VP -> Utt
+many_Det	indir	Structural		.gfbuild/Structural.gf-tags
+mkAP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	A -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	A -> NP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	A2 -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	A2 -> NP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	AP -> QS -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	AP -> S -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	AP -> SC -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	AP -> VP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	AdA -> A -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	AdA -> AP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	CAdv -> AP -> NP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	Conj -> AP -> AP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	Conj -> ListAP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1032-1082	Ord -> AP
+mkAdN	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:835-836	
+mkAdN	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:835-836	CAdv -> AdN
+mkAdv	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1091-1126	
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1091-1126	A -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1091-1126	AdA -> Adv -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1091-1126	CAdv -> A -> NP -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1091-1126	CAdv -> A -> S -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1091-1126	Conj -> Adv -> Adv -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1091-1126	Conj -> ListAdv -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1091-1126	Prep -> NP -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1091-1126	Subj -> S -> Adv
+mkCN	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	A -> CN -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	A -> N -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	AP -> CN -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	AP -> N -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	CN -> AP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	CN -> Adv -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	CN -> NP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	CN -> QS -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	CN -> RS -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	CN -> S -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	CN -> SC -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	CN -> VP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	N -> AP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	N -> Adv -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	N -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	N -> NP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	N -> RS -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	N2 -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	N2 -> NP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	N3 -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:957-1025	N3 -> NP -> NP -> CN
+mkCard	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:800-809	
+mkCard	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:800-809	AdN -> Card -> Card
+mkCard	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:800-809	Digits -> Card
+mkCard	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:800-809	Numeral -> Card
+mkCard	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:800-809	Str -> Card
+mkCl	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	Adv -> S -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	CN -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	N -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> A -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> A -> NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> A2 -> NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> AP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> Adv -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> CN -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> N -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> RS -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> V -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> V2 -> NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> V2A -> NP -> A -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> V2A -> NP -> AP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> V2Q -> NP -> QS -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> V2S -> NP -> S -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> V2V -> NP -> VP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> V3 -> NP -> NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> VA -> A -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> VA -> AP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> VP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> VQ -> QS -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> VS -> S -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	NP -> VV -> VP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	SC -> VP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	V -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:350-427	VP -> Cl
+mkClSlash	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1458-1489	
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1458-1489	Cl -> Prep -> ClSlash
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1458-1489	ClSlash -> Adv -> ClSlash
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1458-1489	NP -> V2 -> ClSlash
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1458-1489	NP -> VPSlash -> ClSlash
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1458-1489	NP -> VS -> SSlash -> ClSlash
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1458-1489	NP -> VV -> V2 -> ClSlash
+mkComp	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:530-537	
+mkComp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:530-537	AP -> Comp
+mkComp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:530-537	Adv -> Comp
+mkComp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:530-537	NP -> Comp
+mkDet	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	Card -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	Digits -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	Numeral -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	Pron -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	Pron -> Num -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	Quant -> Card -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	Quant -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	Quant -> Num -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	Quant -> Num -> Ord -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:700-727	Quant -> Ord -> Det
+mkDigits	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:921-928	
+mkDigits	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:921-928	Dig -> Digits
+mkDigits	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:921-928	Dig -> Digits -> Digits
+mkDigits	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:921-928	Str -> Digits
+mkIAdv	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1307-1312	
+mkIAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1307-1312	IAdv -> Adv -> IAdv
+mkIAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1307-1312	Prep -> IP -> IAdv
+mkIComp	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1259-1264	
+mkIComp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1259-1264	IAdv -> IComp
+mkIComp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1259-1264	IP -> IComp
+mkIDet	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1317-1322	
+mkIDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1317-1322	IQuant -> IDet
+mkIDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1317-1322	IQuant -> Num -> IDet
+mkIP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1268-1291	
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1268-1291	IDet -> CN -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1268-1291	IDet -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1268-1291	IDet -> N -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1268-1291	IP -> Adv -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1268-1291	IQuant -> CN -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1268-1291	IQuant -> N -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1268-1291	IQuant -> Num -> CN -> IP
+mkImp	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:556-563	
+mkImp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:556-563	V -> Imp
+mkImp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:556-563	V2 -> NP -> Imp
+mkImp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:556-563	VP -> Imp
+mkListAP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1544-1549	
+mkListAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1544-1549	AP -> AP -> ListAP
+mkListAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1544-1549	AP -> ListAP -> ListAP
+mkListAdv	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1533-1538	
+mkListAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1533-1538	Adv -> Adv -> ListAdv
+mkListAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1533-1538	Adv -> ListAdv -> ListAdv
+mkListNP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1555-1560	
+mkListNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1555-1560	NP -> ListNP -> ListNP
+mkListNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1555-1560	NP -> NP -> ListNP
+mkListRS	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1564-1569	
+mkListRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1564-1569	RS -> ListRS -> ListRS
+mkListRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1564-1569	RS -> RS -> ListRS
+mkListS	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1524-1529	
+mkListS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1524-1529	S -> ListS -> ListS
+mkListS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1524-1529	S -> S -> ListS
+mkNP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Card -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Card -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Conj -> ListNP -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Conj -> NP -> NP -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Det -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Det -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Det -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Digit -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Digit -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Digits -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Digits -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	NP -> Adv -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	NP -> RS -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	NP -> V2 -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Numeral -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Numeral -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	PN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Predet -> NP -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Pron -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Pron -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Pron -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Quant -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Quant -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Quant -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Quant -> Num -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Quant -> Num -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Quant -> Num -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	Quant -> Num -> Ord -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	QuantPl -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:575-660	QuantSg -> CN -> NP
+mkNum	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:772-788	
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:772-788	AdN -> Card -> Num
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:772-788	Card -> Num
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:772-788	Digit -> Num
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:772-788	Digits -> Num
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:772-788	Numeral -> Num
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:772-788	Str -> Num
+mkNumeral	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:842-859	
+mkNumeral	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:842-859	Str -> Numeral
+mkNumeral	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:842-859	Sub100 -> Numeral
+mkNumeral	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:842-859	Sub1000 -> Numeral
+mkNumeral	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:842-859	Sub1000 -> Sub1000 -> Numeral
+mkNumeral	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:842-859	Unit -> Numeral
+mkOrd	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:816-828	
+mkOrd	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:816-828	A -> Ord
+mkOrd	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:816-828	Digit -> Ord
+mkOrd	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:816-828	Digits -> Ord
+mkOrd	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:816-828	Numeral -> Ord
+mkPConj	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:174-175	
+mkPConj	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:174-175	Conj -> PConj
+mkPhr	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	Cl -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	Imp -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	PConj -> Utt -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	PConj -> Utt -> Voc -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	QS -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	S -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	Utt -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	Utt -> Voc -> Phr
+mkQCl	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	Cl -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IAdv -> Cl -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IAdv -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IComp -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> A -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> A -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> A2 -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> AP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> Adv -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> CN -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> ClSlash -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> N -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> NP -> V2 -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> V -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> V2 -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> V2A -> NP -> A -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> V2A -> NP -> AP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> V2Q -> NP -> QS -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> V2S -> NP -> S -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> V2V -> NP -> VP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> V3 -> NP -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> VA -> A -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> VA -> AP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> VP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> VQ -> QS -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> VS -> S -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	IP -> VV -> VP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1170-1254	Prep -> IP -> Cl -> QCl
+mkQS	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1133-1165	
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1133-1165	Ant -> Pol -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1133-1165	Ant -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1133-1165	Cl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1133-1165	Pol -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1133-1165	QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1133-1165	Tense -> Ant -> Pol -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1133-1165	Tense -> Ant -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1133-1165	Tense -> Pol -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1133-1165	Tense -> QCl -> QS
+mkQuant	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:757-760	
+mkQuant	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:757-760	Pron -> Quant
+mkQuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1581	
+mkQuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1581	Quant -> QuantPl
+mkQuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1580	
+mkQuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1580	Quant -> QuantSg
+mkRCl	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	Cl -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> A -> NP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> A -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> A2 -> NP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> AP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> Adv -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> CN -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> ClSlash -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> N -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> NP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> NP -> V2 -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> V -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> V2 -> NP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> V2A -> NP -> A -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> V2A -> NP -> AP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> V2Q -> NP -> QS -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> V2S -> NP -> S -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> V2V -> NP -> VP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> V3 -> NP -> NP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> VA -> A -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> VA -> AP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> VP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> VQ -> QS -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> VS -> S -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1371-1434	RP -> VV -> VP -> RCl
+mkRP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1445-1446	
+mkRP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1445-1446	Prep -> NP -> RP -> RP
+mkRS	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	Ant -> Pol -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	Ant -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	Conj -> ListRS -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	Conj -> RS -> RS -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	Pol -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	Temp -> Pol -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	Tense -> Ant -> Pol -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	Tense -> Ant -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	Tense -> Pol -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1343-1367	Tense -> RCl -> RS
+mkS	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Adv -> S -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Ant -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Ant -> Pol -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Conj -> ListS -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Conj -> S -> S -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Pol -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Temp -> Pol -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Tense -> Ant -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Tense -> Ant -> Pol -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Tense -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:310-342	Tense -> Pol -> Cl -> S
+mkSC	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:541-548	
+mkSC	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:541-548	QS -> SC
+mkSC	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:541-548	S -> SC
+mkSC	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:541-548	VP -> SC
+mkSSlash	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1451-1454	
+mkSSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1451-1454	Temp -> Pol -> ClSlash -> SSlash
+mkSub100	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:873-884	
+mkSub100	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:873-884	Unit -> Sub100
+mkSub100	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:873-884	Unit -> Unit -> Sub100
+mkSub1000	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:864-871	
+mkSub1000	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:864-871	Sub100 -> Sub1000
+mkSub1000	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:864-871	Unit -> Sub100 -> Sub1000
+mkSub1000	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:864-871	Unit -> Sub1000
+mkTemp	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:275-276	
+mkTemp	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:275-276	Tense -> Ant -> Temp
+mkText	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Cl -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Imp -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Phr -> Punct -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Phr -> Punct -> Text -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Phr -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Phr -> Text -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Pol -> Imp -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	QS -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	S -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Text -> Text -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Utt -> Text
+mkUtt	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	AP -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	Adv -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	CN -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	Card -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	Cl -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	IAdv -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	IP -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	Imp -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	ImpForm -> Imp -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	ImpForm -> Pol -> Imp -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	NP -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	Pol -> Imp -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	QCl -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	QS -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	S -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	VP -> Utt
+mkUttImp	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:296-301	
+mkUttImp	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:296-301	ImpForm -> Pol -> Imp -> Utt
+mkVP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	A -> NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	A -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	A2 -> NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	AP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	AdV -> VP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	Adv -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	CN -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	Comp -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	N -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	V -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	V2 -> NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	V2A -> NP -> AP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	V2Q -> NP -> QS -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	V2S -> NP -> S -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	V2V -> NP -> VP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	V3 -> NP -> NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	VA -> AP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	VP -> Adv -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	VPSlash -> NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	VPSlash -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	VQ -> QS -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	VS -> S -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:440-501	VV -> VP -> VP
+mkVPSlash	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1494-1514	
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1494-1514	V2 -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1494-1514	V2A -> AP -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1494-1514	V2Q -> QS -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1494-1514	V2S -> S -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1494-1514	V2V -> NP -> VPSlash -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1494-1514	V2V -> VP -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1494-1514	V3 -> NP -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1494-1514	VV -> VPSlash -> VPSlash
+mkVoc	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:185-186	
+mkVoc	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:185-186	NP -> Voc
+mod	overload-def	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	
+mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	A -> N -> CN
+mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	AP -> CN -> CN
+mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	AdA -> A -> AP
+mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	Det -> CN -> NP
+mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	Det -> N -> NP
+mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	Numeral -> N -> NP
+mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	Predet -> N -> NP
+mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	Quant -> CN -> NP
+mod	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:154-173	Quant -> N -> NP
+more_CAdv	indir	Structural		.gfbuild/Structural.gf-tags
+most_Predet	indir	Structural		.gfbuild/Structural.gf-tags
+much_Det	indir	Structural		.gfbuild/Structural.gf-tags
+must_VV	indir	Structural		.gfbuild/Structural.gf-tags
+n0_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:932-933	
+n0_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:932-933	Dig
+n1000_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1767-1768	
+n1000_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1767-1768	Digits
+n1000_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1796-1797	
+n1000_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1796-1797	Numeral
+n100_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1765-1766	
+n100_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1765-1766	Digits
+n100_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1794-1795	
+n100_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1794-1795	Numeral
+n10_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1761-1762	
+n10_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1761-1762	Digits
+n10_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1790-1791	
+n10_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1790-1791	Numeral
+n1_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:934-935	
+n1_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:934-935	Dig
+n1_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1743-1744	
+n1_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1743-1744	Digits
+n1_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1772-1773	
+n1_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1772-1773	Numeral
+n1_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:897-898	
+n1_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:897-898	Unit
+n20_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1763-1764	
+n20_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1763-1764	Digits
+n20_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1792-1793	
+n20_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1792-1793	Numeral
+n2_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:936-937	
+n2_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:936-937	Dig
+n2_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1745-1746	
+n2_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1745-1746	Digits
+n2_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1774-1775	
+n2_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1774-1775	Numeral
+n2_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:899-900	
+n2_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:899-900	Unit
+n3_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:938-939	
+n3_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:938-939	Dig
+n3_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1747-1748	
+n3_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1747-1748	Digits
+n3_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1776-1777	
+n3_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1776-1777	Numeral
+n3_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:901-902	
+n3_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:901-902	Unit
+n4_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:940-941	
+n4_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:940-941	Dig
+n4_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1749-1750	
+n4_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1749-1750	Digits
+n4_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1778-1779	
+n4_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1778-1779	Numeral
+n4_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:903-904	
+n4_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:903-904	Unit
+n5_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:942-943	
+n5_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:942-943	Dig
+n5_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1751-1752	
+n5_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1751-1752	Digits
+n5_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1780-1781	
+n5_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1780-1781	Numeral
+n5_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:905-906	
+n5_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:905-906	Unit
+n6_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:944-945	
+n6_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:944-945	Dig
+n6_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1753-1754	
+n6_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1753-1754	Digits
+n6_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1782-1783	
+n6_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1782-1783	Numeral
+n6_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:907-908	
+n6_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:907-908	Unit
+n7_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:946-947	
+n7_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:946-947	Dig
+n7_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1755-1756	
+n7_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1755-1756	Digits
+n7_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1784-1785	
+n7_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1784-1785	Numeral
+n7_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:909-910	
+n7_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:909-910	Unit
+n8_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:948-949	
+n8_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:948-949	Dig
+n8_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1757-1758	
+n8_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1757-1758	Digits
+n8_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1786-1787	
+n8_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1786-1787	Numeral
+n8_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:911-912	
+n8_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:911-912	Unit
+n9_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:950-951	
+n9_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:950-951	Dig
+n9_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1759-1760	
+n9_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1759-1760	Digits
+n9_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1788-1789	
+n9_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1788-1789	Numeral
+n9_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:913-914	
+n9_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:913-914	Unit
+neg	overload-def	/home/john/repositories/GF/lib/src/api/Combinators.gf:175-184	
+neg	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:175-184	Cl -> S
+neg	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:175-184	Imp -> Utt
+neg	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:175-184	QCl -> QS
+neg	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:175-184	RCl -> RS
+negativePol	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:249-250	
+negativePol	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:249-250	Pol
+noPConj	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:176-177	
+noPConj	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:176-177	PConj
+noVoc	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:187-188	
+noVoc	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:187-188	Voc
+no_Quant	indir	Structural		.gfbuild/Structural.gf-tags
+no_Utt	indir	Structural		.gfbuild/Structural.gf-tags
+nobody_NP	indir	Structural		.gfbuild/Structural.gf-tags
+not_Predet	indir	Structural		.gfbuild/Structural.gf-tags
+nothing_NP	indir	Structural		.gfbuild/Structural.gf-tags
+on_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+only_Predet	indir	Structural		.gfbuild/Structural.gf-tags
+or_Conj	indir	Structural		.gfbuild/Structural.gf-tags
+otherwise_PConj	indir	Structural		.gfbuild/Structural.gf-tags
+part_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+passiveVP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:514-521	
+passiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:514-521	V2 -> NP -> VP
+passiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:514-521	V2 -> VP
+plNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1590	
+plNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1590	Num
+please_Voc	indir	Structural		.gfbuild/Structural.gf-tags
+pluralImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:286-287	
+pluralImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:286-287	ImpForm
+pluralNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:794-795	
+pluralNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:794-795	Num
+politeImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:288-289	
+politeImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:288-289	ImpForm
+positivePol	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:247-248	
+positivePol	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:247-248	Pol
+possess_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+pred	overload-def	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	A -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	A -> NP -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	A2 -> NP -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	Adv -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	CN -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	N -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	N -> NP -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	N2 -> NP -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	NP -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	Prep -> NP -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	V -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	V -> NP -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	V2 -> NP -> NP -> Cl
+pred	overload-type	/home/john/repositories/GF/lib/src/api/Combinators.gf:85-114	V3 -> NP -> NP -> NP -> Cl
+presentTense	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:267-268	
+presentTense	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:267-268	Tense
+progressiveVP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:525-526	
+progressiveVP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:525-526	VP -> VP
+questMarkPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:129-130	
+questMarkPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:129-130	Punct
+quite_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+reflAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1084-1085	
+reflAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1084-1085	A2 -> AP
+reflexiveVP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:504-509	
+reflexiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:504-509	V2 -> VP
+reflexiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:504-509	VPSlash -> VP
+sgNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1589	
+sgNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1589	Num
+she_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:672-673	
+she_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:672-673	NP
+she_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+simultaneousAnt	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:258-259	
+simultaneousAnt	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:258-259	Ant
+singularImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:284-285	
+singularImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:284-285	ImpForm
+singularNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:792-793	
+singularNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:792-793	Num
+so_AdA	indir	Structural		.gfbuild/Structural.gf-tags
+somePl_Det	indir	Structural		.gfbuild/Structural.gf-tags
+someSg_Det	indir	Structural		.gfbuild/Structural.gf-tags
+somebody_NP	indir	Structural		.gfbuild/Structural.gf-tags
+something_NP	indir	Structural		.gfbuild/Structural.gf-tags
+somewhere_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+str2card	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1650-1653	
+str2card	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1650-1653	Str -> Card
+str2digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1709-1741	
+str2digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1709-1741	Str -> Digits
+str2numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1655-1704	
+str2numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1655-1704	Str -> Numeral
+str2ord	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1645-1648	
+str2ord	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1645-1648	Str -> Ord
+tenfoldSub100	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:886-890	
+tenfoldSub100	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:886-890	Unit -> Sub100
+that_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:744-745	
+that_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:744-745	Det
+that_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:685-686	
+that_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:685-686	NP
+that_Quant	indir	Structural		.gfbuild/Structural.gf-tags
+that_QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1584	
+that_QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1584	QuantSg
+that_Subj	indir	Structural		.gfbuild/Structural.gf-tags
+thePl_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:736-737	
+thePl_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:736-737	Det
+theSg_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:734-735	
+theSg_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:734-735	Det
+the_Art	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1575	
+the_Art	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1575	Art
+the_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:730-731	
+the_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:730-731	Det
+the_Quant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:762-763	
+the_Quant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:762-763	Quant
+there7from_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+there7to_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+there_Adv	indir	Structural		.gfbuild/Structural.gf-tags
+therefore_PConj	indir	Structural		.gfbuild/Structural.gf-tags
+these_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:746-747	
+these_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:746-747	Det
+these_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:687-688	
+these_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:687-688	NP
+these_QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1586	
+these_QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1586	QuantPl
+they_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:680-681	
+they_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:680-681	NP
+they_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+this_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:742-743	
+this_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:742-743	Det
+this_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:683-684	
+this_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:683-684	NP
+this_Quant	indir	Structural		.gfbuild/Structural.gf-tags
+this_QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1583	
+this_QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1583	QuantSg
+those_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:748-749	
+those_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:748-749	Det
+those_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:689-690	
+those_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:689-690	NP
+those_QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1587	
+those_QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1587	QuantPl
+thousandfoldNumeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:861-862	
+thousandfoldNumeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:861-862	Sub1000 -> Numeral
+through_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+to_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+too_AdA	indir	Structural		.gfbuild/Structural.gf-tags
+under_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+very_AdA	indir	Structural		.gfbuild/Structural.gf-tags
+want_VV	indir	Structural		.gfbuild/Structural.gf-tags
+we_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:676-677	
+we_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:676-677	NP
+we_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+whatPl_IP	indir	Structural		.gfbuild/Structural.gf-tags
+whatSg_IP	indir	Structural		.gfbuild/Structural.gf-tags
+what_IP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1293-1294	
+what_IP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1293-1294	IP
+when_IAdv	indir	Structural		.gfbuild/Structural.gf-tags
+when_Subj	indir	Structural		.gfbuild/Structural.gf-tags
+where_IAdv	indir	Structural		.gfbuild/Structural.gf-tags
+whichPl_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1328-1329	
+whichPl_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1328-1329	IDet
+whichSg_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1326-1327	
+whichSg_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1326-1327	IDet
+which_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1324-1325	
+which_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1324-1325	IDet
+which_IQuant	indir	Structural		.gfbuild/Structural.gf-tags
+which_RP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1440-1441	
+which_RP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1440-1441	RP
+whoPl_IP	indir	Structural		.gfbuild/Structural.gf-tags
+whoSg_IP	indir	Structural		.gfbuild/Structural.gf-tags
+who_IP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1295-1296	
+who_IP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1295-1296	IP
+why_IAdv	indir	Structural		.gfbuild/Structural.gf-tags
+with_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+without_Prep	indir	Structural		.gfbuild/Structural.gf-tags
+yes_Utt	indir	Structural		.gfbuild/Structural.gf-tags
+youPl_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:678-679	
+youPl_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:678-679	NP
+youPl_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+youPol_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:668-669	
+youPol_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:668-669	NP
+youPol_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+youSg_Pron	indir	Structural		.gfbuild/Structural.gf-tags
+you_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:666-667	
+you_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:666-667	NP

@@ -1,0 +1,220 @@
+A	indir	Noun		.gfbuild/Noun.gf-tags
+A2	indir	Noun		.gfbuild/Noun.gf-tags
+AP	indir	Noun		.gfbuild/Noun.gf-tags
+AdA	indir	Noun		.gfbuild/Noun.gf-tags
+AdN	indir	Noun		.gfbuild/Noun.gf-tags
+AdNum	indir	Noun		.gfbuild/Noun.gf-tags
+AdV	indir	Noun		.gfbuild/Noun.gf-tags
+AdjCN	indir	Noun		.gfbuild/Noun.gf-tags
+Adv	indir	Noun		.gfbuild/Noun.gf-tags
+AdvCN	indir	Noun		.gfbuild/Noun.gf-tags
+AdvNP	indir	Noun		.gfbuild/Noun.gf-tags
+Ant	indir	Noun		.gfbuild/Noun.gf-tags
+ApposCN	indir	Noun		.gfbuild/Noun.gf-tags
+CAdv	indir	Noun		.gfbuild/Noun.gf-tags
+CN	indir	Noun		.gfbuild/Noun.gf-tags
+Card	indir	Noun		.gfbuild/Noun.gf-tags
+Cl	indir	Noun		.gfbuild/Noun.gf-tags
+ClSlash	indir	Noun		.gfbuild/Noun.gf-tags
+Comp	indir	Noun		.gfbuild/Noun.gf-tags
+ComplN2	indir	Noun		.gfbuild/Noun.gf-tags
+ComplN3	indir	Noun		.gfbuild/Noun.gf-tags
+Conj	indir	Noun		.gfbuild/Noun.gf-tags
+D_0	indir	Numeral		.gfbuild/Numeral.gf-tags
+D_1	indir	Numeral		.gfbuild/Numeral.gf-tags
+D_2	indir	Numeral		.gfbuild/Numeral.gf-tags
+D_3	indir	Numeral		.gfbuild/Numeral.gf-tags
+D_4	indir	Numeral		.gfbuild/Numeral.gf-tags
+D_5	indir	Numeral		.gfbuild/Numeral.gf-tags
+D_6	indir	Numeral		.gfbuild/Numeral.gf-tags
+D_7	indir	Numeral		.gfbuild/Numeral.gf-tags
+D_8	indir	Numeral		.gfbuild/Numeral.gf-tags
+D_9	indir	Numeral		.gfbuild/Numeral.gf-tags
+DefArt	indir	Noun		.gfbuild/Noun.gf-tags
+Det	indir	Noun		.gfbuild/Noun.gf-tags
+DetCN	indir	Noun		.gfbuild/Noun.gf-tags
+DetNP	indir	Noun		.gfbuild/Noun.gf-tags
+DetQuant	indir	Noun		.gfbuild/Noun.gf-tags
+DetQuantOrd	indir	Noun		.gfbuild/Noun.gf-tags
+Dig	indir	Numeral		.gfbuild/Numeral.gf-tags
+Digit	indir	Numeral		.gfbuild/Numeral.gf-tags
+Digits	indir	Noun		.gfbuild/Noun.gf-tags
+Digits	indir	Numeral		.gfbuild/Numeral.gf-tags
+IAdv	indir	Noun		.gfbuild/Noun.gf-tags
+IComp	indir	Noun		.gfbuild/Noun.gf-tags
+IDet	indir	Noun		.gfbuild/Noun.gf-tags
+IDig	indir	Numeral		.gfbuild/Numeral.gf-tags
+IIDig	indir	Numeral		.gfbuild/Numeral.gf-tags
+IP	indir	Noun		.gfbuild/Noun.gf-tags
+IQuant	indir	Noun		.gfbuild/Noun.gf-tags
+Imp	indir	Noun		.gfbuild/Noun.gf-tags
+IndefArt	indir	Noun		.gfbuild/Noun.gf-tags
+Interj	indir	Noun		.gfbuild/Noun.gf-tags
+MassNP	indir	Noun		.gfbuild/Noun.gf-tags
+N	indir	Noun		.gfbuild/Noun.gf-tags
+N2	indir	Noun		.gfbuild/Noun.gf-tags
+N3	indir	Noun		.gfbuild/Noun.gf-tags
+NP	indir	Noun		.gfbuild/Noun.gf-tags
+Num	indir	Noun		.gfbuild/Noun.gf-tags
+NumCard	indir	Noun		.gfbuild/Noun.gf-tags
+NumDigits	indir	Noun		.gfbuild/Noun.gf-tags
+NumNumeral	indir	Noun		.gfbuild/Noun.gf-tags
+NumPl	indir	Noun		.gfbuild/Noun.gf-tags
+NumSg	indir	Noun		.gfbuild/Noun.gf-tags
+Numeral	indir	Noun		.gfbuild/Noun.gf-tags
+Numeral	indir	Numeral		.gfbuild/Numeral.gf-tags
+Ord	indir	Noun		.gfbuild/Noun.gf-tags
+OrdDigits	indir	Noun		.gfbuild/Noun.gf-tags
+OrdNumeral	indir	Noun		.gfbuild/Noun.gf-tags
+OrdSuperl	indir	Noun		.gfbuild/Noun.gf-tags
+PConj	indir	Noun		.gfbuild/Noun.gf-tags
+PN	indir	Noun		.gfbuild/Noun.gf-tags
+PPartNP	indir	Noun		.gfbuild/Noun.gf-tags
+Phr	indir	Noun		.gfbuild/Noun.gf-tags
+Pol	indir	Noun		.gfbuild/Noun.gf-tags
+PossPron	indir	Noun		.gfbuild/Noun.gf-tags
+Predet	indir	Noun		.gfbuild/Noun.gf-tags
+PredetNP	indir	Noun		.gfbuild/Noun.gf-tags
+Prep	indir	Noun		.gfbuild/Noun.gf-tags
+Pron	indir	Noun		.gfbuild/Noun.gf-tags
+QCl	indir	Noun		.gfbuild/Noun.gf-tags
+QS	indir	Noun		.gfbuild/Noun.gf-tags
+Quant	indir	Noun		.gfbuild/Noun.gf-tags
+RCl	indir	Noun		.gfbuild/Noun.gf-tags
+RP	indir	Noun		.gfbuild/Noun.gf-tags
+RS	indir	Noun		.gfbuild/Noun.gf-tags
+RelCN	indir	Noun		.gfbuild/Noun.gf-tags
+RelNP	indir	Noun		.gfbuild/Noun.gf-tags
+S	indir	Noun		.gfbuild/Noun.gf-tags
+SC	indir	Noun		.gfbuild/Noun.gf-tags
+SSlash	indir	Noun		.gfbuild/Noun.gf-tags
+SentCN	indir	Noun		.gfbuild/Noun.gf-tags
+Sub10	indir	Numeral		.gfbuild/Numeral.gf-tags
+Sub100	indir	Numeral		.gfbuild/Numeral.gf-tags
+Sub1000	indir	Numeral		.gfbuild/Numeral.gf-tags
+Sub1000000	indir	Numeral		.gfbuild/Numeral.gf-tags
+Subj	indir	Noun		.gfbuild/Noun.gf-tags
+Temp	indir	Noun		.gfbuild/Noun.gf-tags
+Tense	indir	Noun		.gfbuild/Noun.gf-tags
+Text	indir	Noun		.gfbuild/Noun.gf-tags
+Use2N3	indir	Noun		.gfbuild/Noun.gf-tags
+Use3N3	indir	Noun		.gfbuild/Noun.gf-tags
+UseN	indir	Noun		.gfbuild/Noun.gf-tags
+UseN2	indir	Noun		.gfbuild/Noun.gf-tags
+UsePN	indir	Noun		.gfbuild/Noun.gf-tags
+UsePron	indir	Noun		.gfbuild/Noun.gf-tags
+Utt	indir	Noun		.gfbuild/Noun.gf-tags
+V	indir	Noun		.gfbuild/Noun.gf-tags
+V2	indir	Noun		.gfbuild/Noun.gf-tags
+V2A	indir	Noun		.gfbuild/Noun.gf-tags
+V2Q	indir	Noun		.gfbuild/Noun.gf-tags
+V2S	indir	Noun		.gfbuild/Noun.gf-tags
+V2V	indir	Noun		.gfbuild/Noun.gf-tags
+V3	indir	Noun		.gfbuild/Noun.gf-tags
+VA	indir	Noun		.gfbuild/Noun.gf-tags
+VP	indir	Noun		.gfbuild/Noun.gf-tags
+VPSlash	indir	Noun		.gfbuild/Noun.gf-tags
+VQ	indir	Noun		.gfbuild/Noun.gf-tags
+VS	indir	Noun		.gfbuild/Noun.gf-tags
+VV	indir	Noun		.gfbuild/Noun.gf-tags
+Voc	indir	Noun		.gfbuild/Noun.gf-tags
+dconcat	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:84	
+dconcat	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:85	
+dconcat	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:83	Digits -> Digits -> Digits
+digits2num	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:10	
+digits2num	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:11	
+digits2num	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:12	
+digits2num	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:13	
+digits2num	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:14	
+digits2num	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:9	
+digits2num	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:8	Digits -> Numeral
+digits2numeral	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:5	
+digits2numeral	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:6	
+digits2numeral	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:3	Card -> Card
+dn	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:52	
+dn	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:53	
+dn	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:54	
+dn	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:55	
+dn	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:56	
+dn	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:57	
+dn	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:58	
+dn	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:59	
+dn	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:51	Dig -> Digit
+dn10	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:20	
+dn10	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:21	
+dn10	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:19	Dig -> Sub10
+dn100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:24	
+dn100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:25	
+dn100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:26	
+dn100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:27	
+dn100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:28	
+dn100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:29	
+dn100	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:23	Dig -> Dig -> Sub100
+dn1000	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:32	
+dn1000	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:33	
+dn1000	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:34	
+dn1000	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:31	Dig -> Dig -> Dig -> Sub1000
+dn1000000a	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:37	
+dn1000000a	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:38	
+dn1000000a	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:39	
+dn1000000a	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:36	Dig -> Dig -> Dig -> Dig -> Sub1000000
+dn1000000b	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:42	
+dn1000000b	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:43	
+dn1000000b	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:44	
+dn1000000b	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:41	Dig -> Dig -> Dig -> Dig -> Dig -> Sub1000000
+dn1000000c	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:47	
+dn1000000c	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:48	
+dn1000000c	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:49	
+dn1000000c	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:46	Dig -> Dig -> Dig -> Dig -> Dig -> Dig -> Sub1000000
+n2	indir	Numeral		.gfbuild/Numeral.gf-tags
+n3	indir	Numeral		.gfbuild/Numeral.gf-tags
+n4	indir	Numeral		.gfbuild/Numeral.gf-tags
+n5	indir	Numeral		.gfbuild/Numeral.gf-tags
+n6	indir	Numeral		.gfbuild/Numeral.gf-tags
+n7	indir	Numeral		.gfbuild/Numeral.gf-tags
+n8	indir	Numeral		.gfbuild/Numeral.gf-tags
+n9	indir	Numeral		.gfbuild/Numeral.gf-tags
+nd	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:88	
+nd	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:89	
+nd	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:90	
+nd	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:91	
+nd	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:92	
+nd	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:93	
+nd	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:94	
+nd	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:95	
+nd	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:87	Digit -> Dig
+nd10	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:62	
+nd10	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:63	
+nd10	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:61	Sub10 -> Digits
+nd100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:66	
+nd100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:67	
+nd100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:68	
+nd100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:69	
+nd100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:70	
+nd100	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:71	
+nd100	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:65	Sub100 -> Digits
+nd1000	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:74	
+nd1000	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:75	
+nd1000	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:76	
+nd1000	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:73	Sub1000 -> Digits
+nd1000000	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:79	
+nd1000000	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:80	
+nd1000000	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:81	
+nd1000000	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:78	Sub1000000 -> Digits
+num	indir	Numeral		.gfbuild/Numeral.gf-tags
+num2digits	def	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:17	
+num2digits	fun	/home/john/repositories/GF/lib/src/abstract/NumeralTransfer.gf:16	Numeral -> Digits
+pot0	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot01	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot0as1	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot1	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot110	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot111	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot1as2	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot1plus	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot1to19	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot2	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot2as3	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot2plus	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot3	indir	Numeral		.gfbuild/Numeral.gf-tags
+pot3plus	indir	Numeral		.gfbuild/Numeral.gf-tags

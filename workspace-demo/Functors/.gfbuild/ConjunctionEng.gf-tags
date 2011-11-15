@@ -1,0 +1,329 @@
+A	indir	CatEng		.gfbuild/CatEng.gf-tags
+A2	indir	CatEng		.gfbuild/CatEng.gf-tags
+AAdj	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+AAdv	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+AForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+AP	indir	CatEng		.gfbuild/CatEng.gf-tags
+AdA	indir	CatEng		.gfbuild/CatEng.gf-tags
+AdN	indir	CatEng		.gfbuild/CatEng.gf-tags
+AdV	indir	CatEng		.gfbuild/CatEng.gf-tags
+Adv	indir	CatEng		.gfbuild/CatEng.gf-tags
+AgP1	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+AgP2	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+AgP3Pl	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+AgP3Sg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Agr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Ant	indir	CatEng		.gfbuild/CatEng.gf-tags
+Anteriority	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Aux	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+BIND	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+BaseAP	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:36	
+BaseAdv	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:32	
+BaseCN	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:42	
+BaseIAdv	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:40	
+BaseNP	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:34	
+BaseRS	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:38	
+BaseS	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:30	
+Bool	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+CAPIT	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+CAdv	indir	CatEng		.gfbuild/CatEng.gf-tags
+CN	indir	CatEng		.gfbuild/CatEng.gf-tags
+CNeg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+CPolarity	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+CPos	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Card	indir	CatEng		.gfbuild/CatEng.gf-tags
+CardOrd	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Case	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Cl	indir	CatEng		.gfbuild/CatEng.gf-tags
+ClSlash	indir	CatEng		.gfbuild/CatEng.gf-tags
+Clause	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Comp	indir	CatEng		.gfbuild/CatEng.gf-tags
+Compar	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Conj	indir	CatEng		.gfbuild/CatEng.gf-tags
+ConjAP	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:16-18	
+ConjAdv	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:10	
+ConjCN	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:26	
+ConjIAdv	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:24	
+ConjNP	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:12-14	
+ConjRS	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:20-22	
+ConjS	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:8	
+Conjunction	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+ConjunctionDistr	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+ConsAP	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:37	
+ConsAdv	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:33	
+ConsCN	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:43	
+ConsIAdv	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:41	
+ConsNP	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:35	
+ConsRS	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:39	
+ConsS	lin	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:31	
+DForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+DTail	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Degree	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Det	indir	CatEng		.gfbuild/CatEng.gf-tags
+Digits	indir	CatEng		.gfbuild/CatEng.gf-tags
+E0	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+E1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+E2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+ENumber	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+Emore	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+False	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+Fem	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Gen	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Gender	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+IAdv	indir	CatEng		.gfbuild/CatEng.gf-tags
+IComp	indir	CatEng		.gfbuild/CatEng.gf-tags
+IDet	indir	CatEng		.gfbuild/CatEng.gf-tags
+IP	indir	CatEng		.gfbuild/CatEng.gf-tags
+IQuant	indir	CatEng		.gfbuild/CatEng.gf-tags
+Imp	indir	CatEng		.gfbuild/CatEng.gf-tags
+ImpF	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+ImpForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Interj	indir	CatEng		.gfbuild/CatEng.gf-tags
+ListAP	lincat	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:50	
+ListAP	lindef	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:50	
+ListAdv	lincat	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:47	
+ListAdv	lindef	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:47	
+ListCN	lincat	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:52	
+ListCN	lindef	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:52	
+ListIAdv	lincat	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:48	
+ListIAdv	lindef	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:48	
+ListNP	lincat	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:49	
+ListNP	lindef	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:49	
+ListRS	lincat	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:51	
+ListRS	lindef	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:51	
+ListS	lincat	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:46	
+ListS	lindef	/home/john/repositories/GF/lib/src/english/ConjunctionEng.gf:46	
+ListSize	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+ListTable	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+ListTable2	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+ListTable3	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+ListTable4	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+ListX	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+ManyElem	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+Masc	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+N	indir	CatEng		.gfbuild/CatEng.gf-tags
+N2	indir	CatEng		.gfbuild/CatEng.gf-tags
+N3	indir	CatEng		.gfbuild/CatEng.gf-tags
+NCard	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+NCase	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+NOrd	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+NP	indir	CatEng		.gfbuild/CatEng.gf-tags
+NPAcc	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+NPCase	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Neg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Neutr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Nom	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Num	indir	CatEng		.gfbuild/CatEng.gf-tags
+Number	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Numeral	indir	CatEng		.gfbuild/CatEng.gf-tags
+ODir	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+OQuest	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Ord	indir	CatEng		.gfbuild/CatEng.gf-tags
+Order	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+P1	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+P2	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+P3	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+PARA	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+PConj	indir	CatEng		.gfbuild/CatEng.gf-tags
+PN	indir	CatEng		.gfbuild/CatEng.gf-tags
+Person	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Phr	indir	CatEng		.gfbuild/CatEng.gf-tags
+Pl	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Pol	indir	CatEng		.gfbuild/CatEng.gf-tags
+Polarity	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Pos	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Posit	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Predet	indir	CatEng		.gfbuild/CatEng.gf-tags
+Prep	indir	CatEng		.gfbuild/CatEng.gf-tags
+Pres	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Pron	indir	CatEng		.gfbuild/CatEng.gf-tags
+QCl	indir	CatEng		.gfbuild/CatEng.gf-tags
+QDir	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+QForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+QIndir	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+QS	indir	CatEng		.gfbuild/CatEng.gf-tags
+Quant	indir	CatEng		.gfbuild/CatEng.gf-tags
+RAg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+RAgr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+RC	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+RCase	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+RCl	indir	CatEng		.gfbuild/CatEng.gf-tags
+RNoAg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+RP	indir	CatEng		.gfbuild/CatEng.gf-tags
+RPrep	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+RS	indir	CatEng		.gfbuild/CatEng.gf-tags
+S	indir	CatEng		.gfbuild/CatEng.gf-tags
+SC	indir	CatEng		.gfbuild/CatEng.gf-tags
+SD2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+SP1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+SS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+SS1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+SSlash	indir	CatEng		.gfbuild/CatEng.gf-tags
+Sg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Simul	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+SlashVP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Subj	indir	CatEng		.gfbuild/CatEng.gf-tags
+Superl	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+T1	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+T2	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+T3	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Temp	indir	CatEng		.gfbuild/CatEng.gf-tags
+Tense	indir	CatEng		.gfbuild/CatEng.gf-tags
+Tense	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Text	indir	CatEng		.gfbuild/CatEng.gf-tags
+True	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+TwoElem	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+Utt	indir	CatEng		.gfbuild/CatEng.gf-tags
+V	indir	CatEng		.gfbuild/CatEng.gf-tags
+V2	indir	CatEng		.gfbuild/CatEng.gf-tags
+V2A	indir	CatEng		.gfbuild/CatEng.gf-tags
+V2Q	indir	CatEng		.gfbuild/CatEng.gf-tags
+V2S	indir	CatEng		.gfbuild/CatEng.gf-tags
+V2V	indir	CatEng		.gfbuild/CatEng.gf-tags
+V3	indir	CatEng		.gfbuild/CatEng.gf-tags
+VA	indir	CatEng		.gfbuild/CatEng.gf-tags
+VForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VInf	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VP	indir	CatEng		.gfbuild/CatEng.gf-tags
+VP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VPPart	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VPSlash	indir	CatEng		.gfbuild/CatEng.gf-tags
+VPres	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VPresPart	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VQ	indir	CatEng		.gfbuild/CatEng.gf-tags
+VS	indir	CatEng		.gfbuild/CatEng.gf-tags
+VV	indir	CatEng		.gfbuild/CatEng.gf-tags
+VVAux	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VVF	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VVForm	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VVInf	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VVPresNeg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VVPresPart	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VVType	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Verb	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+VerbForms	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+Voc	indir	CatEng		.gfbuild/CatEng.gf-tags
+agrP3	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+agrVerb	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+agrgP3	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+andB	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+artDef	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+artIndef	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+auxBe	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+bothWays	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+capitalize	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+cc2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+cc3	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+comma	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjAgr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+conjNumber	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+conjPerson	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+conjThat	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+conjunctDistrSS	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctDistrTable	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctDistrTable2	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctDistrTable3	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctDistrTable4	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctDistrX	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctSS	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctTable	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctTable2	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctTable3	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctTable4	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+conjunctX	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consSS	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consStr	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consTable	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consTable2	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consTable3	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consTable4	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consrSS	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consrStr	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consrTable	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consrTable2	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consrTable3	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+consrTable4	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+constStr	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+constTable	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+contrNeg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+does	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+doesnt	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+eNext	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+embedSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+fromAgr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+genitiveS	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+glue	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+glueOpt	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+have	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+havent	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+id	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+ifTok	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+if_then_Str	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+if_then_else	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+infVP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+infixSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+init	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+insertAdV	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+insertObj	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+insertObjPre	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+insertObjc	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+isNil	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+last	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+mkAdjective	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+mkCard	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+mkClause	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+mkIP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+mkNP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+mkNoun	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+mkNum	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+mkQuestion	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+mkVerb	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+noglueOpt	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+nonExist	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+notB	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+npGen	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+npNom	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+npcase2case	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+numImp	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+onlyIf	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+optStr	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+orB	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+paren	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+parenss	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+pbool2bool	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+polCases	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+posneg	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+postfixSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+preOrPost	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+predAux	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+predV	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+predVV	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+predVc	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+prefixSS	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+presVerb	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+reflPron	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+regCardOrd	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+regGenitiveS	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+regNP	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+regNum	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+regOrd	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+sd2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+sp1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+ss	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+ss1	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+ss2	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+ss3	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+strOpt	indir	Prelude	Prelude	.gfbuild/Prelude.gf-tags
+teen	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+ten	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+toAgr	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+twoSS	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+twoStr	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+twoTable	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+twoTable2	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+twoTable3	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+twoTable4	indir	Coordination	Coordination	.gfbuild/Coordination.gf-tags
+unit	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+vf	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+vff	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags
+vfn	indir	ResEng	ResEng	.gfbuild/ResEng.gf-tags

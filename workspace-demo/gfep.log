@@ -19793,3 +19793,314 @@ com.google.inject.CreationException: Guice creation errors:
 [2011-11-14 15:46:15,023] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
 [2011-11-14 15:46:15,024] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.tags
 [2011-11-14 15:46:15,043] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 09:28:47,112] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,195] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,199] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,201] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,220] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,223] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,226] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,230] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,234] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,237] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,239] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,245] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,247] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,249] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,251] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,253] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,255] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,396] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:47,405] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 09:28:57,274] INFO  Full build on Hello
+[2011-11-15 09:28:57,287] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 09:28:57,288] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-15 09:28:57,301] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 09:28:57,304] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 09:28:57,305] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-15 09:28:57,318] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 09:28:57,321] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 09:28:57,321] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 09:28:57,322] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 09:28:57,323] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 09:28:57,323] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 09:28:57,334] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 09:28:57,335] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 10:12:10,746] INFO  Full build on Hello
+[2011-11-15 10:12:10,750] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 10:12:10,763] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 10:12:10,764] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-15 10:12:10,764] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 10:12:10,780] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 10:12:10,782] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 10:12:10,783] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-15 10:12:10,784] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 10:12:10,796] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 10:12:10,798] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 10:12:10,798] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 10:12:10,799] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 10:12:10,800] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 10:12:10,801] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 10:12:10,812] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 10:12:10,813] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 10:41:41,655] INFO  Incremental build on Hello
+[2011-11-15 10:41:41,657] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 10:41:41,671] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 10:41:41,672] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 10:41:41,672] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 10:41:41,673] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 10:41:41,674] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 10:50:41,541] INFO  Incremental build on Hello
+[2011-11-15 10:50:41,556] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 10:50:41,594] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 10:50:41,594] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 10:50:41,594] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 10:50:41,594] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... checking module HelloEng
+[2011-11-15 10:50:41,594] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:16-18:
+[2011-11-15 10:50:41,595] DEBUG GF:    Happened in linearization of Parent
+[2011-11-15 10:50:41,595] DEBUG GF:       Warning: patterns never reached:
+[2011-11-15 10:50:41,595] DEBUG GF:                  Fem
+[2011-11-15 10:50:41,595] DEBUG GF:   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 10:50:41,595] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:08:16,358] INFO  Full build on Hello
+[2011-11-15 11:08:16,360] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:08:16,375] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:08:16,377] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-15 11:08:16,377] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:08:16,392] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:08:16,393] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:08:16,394] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-15 11:08:16,395] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:08:16,404] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:08:16,406] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:08:16,406] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:08:16,407] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... checking module HelloEng
+[2011-11-15 11:08:16,407] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:16-18:
+[2011-11-15 11:08:16,407] DEBUG GF:    Happened in linearization of Parent
+[2011-11-15 11:08:16,407] DEBUG GF:       Warning: patterns never reached:
+[2011-11-15 11:08:16,408] DEBUG GF:                  Fem
+[2011-11-15 11:08:16,408] DEBUG GF:   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:08:16,410] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:08:16,410] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:08:16,423] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:08:16,424] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 11:36:58,509] INFO  Full build on Hello
+[2011-11-15 11:36:58,512] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:36:58,521] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:36:58,522] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-15 11:36:58,523] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:36:58,533] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:36:58,534] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:36:58,534] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-15 11:36:58,534] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:36:58,543] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:36:58,544] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:36:58,545] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:36:58,546] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:36:58,547] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:36:58,547] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:36:58,559] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:36:58,560] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 11:44:56,751] INFO  Incremental build on Hello
+[2011-11-15 11:44:56,752] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:44:56,767] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:44:56,768] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:44:56,769] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:44:56,770] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:44:56,771] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:45:03,118] INFO  Incremental build on Hello
+[2011-11-15 11:45:03,119] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:45:03,129] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:45:03,129] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 11:45:10,570] INFO  Incremental build on Hello
+[2011-11-15 11:45:10,571] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:45:10,585] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:45:10,586] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:45:10,586] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:45:10,587] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-15 11:45:10,588] DEBUG GF: renaming module HelloEng
+[2011-11-15 11:45:10,594] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+[2011-11-15 11:45:10,594] DEBUG GF:    Happened in the renaming of Recipient
+[2011-11-15 11:45:10,594] DEBUG GF:       atomic term Gender
+[2011-11-15 11:45:10,595] DEBUG GF:       given ResEng, HelloEng
+[2011-11-15 11:45:10,595] DEBUG GF:          constant not found: Gender
+[2011-11-15 11:45:10,595] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:45:49,877] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,898] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,910] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,916] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,920] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,923] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,927] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,930] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,934] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,937] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,976] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,983] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,985] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,992] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:49,995] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:50,008] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:50,010] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:45:56,966] INFO  Full build on Hello
+[2011-11-15 11:45:56,968] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:45:56,982] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:45:56,983] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-15 11:45:56,984] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:45:56,998] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:45:57,000] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:45:57,000] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-15 11:45:57,011] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:45:57,012] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:45:57,012] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:45:57,013] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:45:57,018] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:45:57,019] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:45:57,032] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:45:57,033] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 11:46:02,613] INFO  Full build on Hello
+[2011-11-15 11:46:02,614] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:02,627] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:02,628] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-15 11:46:02,628] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:02,640] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:02,641] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:02,642] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-15 11:46:02,642] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:46:02,654] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:02,656] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:02,657] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:02,659] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-15 11:46:02,659] DEBUG GF: renaming module HelloEng
+[2011-11-15 11:46:02,661] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+[2011-11-15 11:46:02,662] DEBUG GF:    Happened in the renaming of Recipient
+[2011-11-15 11:46:02,662] DEBUG GF:       atomic term Gender
+[2011-11-15 11:46:02,662] DEBUG GF:       given ResEng, HelloEng
+[2011-11-15 11:46:02,662] DEBUG GF:          constant not found: Gender
+[2011-11-15 11:46:02,663] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:46:02,664] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:02,677] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:02,678] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 11:46:07,353] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,355] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,357] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,358] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,360] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,361] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,363] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,365] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,366] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,368] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,369] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,371] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,372] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,373] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,375] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,376] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:07,377] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:10,126] INFO  Full build on Hello
+[2011-11-15 11:46:10,126] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:10,135] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:10,138] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-15 11:46:10,139] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:10,148] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:10,150] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:10,150] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-15 11:46:10,158] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:10,160] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:10,160] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:10,161] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-15 11:46:10,161] DEBUG GF: renaming module HelloEng
+[2011-11-15 11:46:10,162] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+[2011-11-15 11:46:10,162] DEBUG GF:    Happened in the renaming of Recipient
+[2011-11-15 11:46:10,162] DEBUG GF:       atomic term Gender
+[2011-11-15 11:46:10,162] DEBUG GF:       given ResEng, HelloEng
+[2011-11-15 11:46:10,162] DEBUG GF:          constant not found: Gender
+[2011-11-15 11:46:10,163] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:46:10,163] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:10,173] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:10,174] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 11:46:12,028] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,030] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,031] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,032] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,034] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,035] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,036] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,037] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,038] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,040] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,041] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,042] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,043] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,044] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,045] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,047] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,048] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,050] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,051] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,053] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,054] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,056] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,057] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,059] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,060] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,061] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,062] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,064] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,065] WARN  Couldn't find tags file for HelloEng
+[2011-11-15 11:46:12,234] INFO  Full build on Hello
+[2011-11-15 11:46:12,235] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:12,245] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:12,245] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-15 11:46:12,246] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:12,255] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:12,257] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:12,257] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-15 11:46:12,265] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:12,267] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:12,267] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:12,268] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf... 
+[2011-11-15 11:46:12,268] DEBUG GF: renaming module HelloEng
+[2011-11-15 11:46:12,269] DEBUG GF:    /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+[2011-11-15 11:46:12,269] DEBUG GF:    Happened in the renaming of Recipient
+[2011-11-15 11:46:12,270] DEBUG GF:       atomic term Gender
+[2011-11-15 11:46:12,270] DEBUG GF:       given ResEng, HelloEng
+[2011-11-15 11:46:12,270] DEBUG GF:          constant not found: Gender
+[2011-11-15 11:46:12,270] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:46:12,271] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:12,281] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:12,283] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 11:46:14,774] INFO  Full build on Hello
+[2011-11-15 11:46:14,774] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:14,789] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:14,790] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-15 11:46:14,791] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:14,805] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:14,808] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:14,809] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-15 11:46:14,824] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:14,826] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:14,827] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:14,828] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:46:14,830] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:46:14,830] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:14,842] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:14,843] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-15 11:46:21,826] INFO  Full build on Hello
+[2011-11-15 11:46:21,827] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:21,836] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:21,837] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-15 11:46:21,837] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:21,848] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:21,849] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:21,850] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-15 11:46:21,850] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:46:21,862] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-15 11:46:21,866] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-15 11:46:21,866] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:21,867] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-15 11:46:21,868] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-15 11:46:21,868] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:21,896] DEBUG GF: - compiling /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf...   write file /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-15 11:46:21,896] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf

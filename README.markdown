@@ -85,8 +85,11 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 
 ### System requirements
 
+1. The plugin makes use of the newest GF features, and **requires the latest developer version of GF** to be installed on your system.
+1. Paths to GF must be set within the plugin, meaning:
+    - you don't necessarily need to have GF in your `PATH` environment variable
+    - you can use a separate GF installation for GFEP if you wish
 1. The plugin was developed using Eclipse 3.7, and has **not** been tested with older versions of Eclipse.
-1. GFEP makes use of the newest GF features, and requires that the latest developer version of GF is already installed on your system. Paths to GF must be set within the Eclipse plugin (meaning you don't necessarily need to have GF in your `PATH` environment variable).
 
 ### Installing the plugin for the first time
 

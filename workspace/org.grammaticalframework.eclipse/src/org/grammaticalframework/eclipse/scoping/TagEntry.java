@@ -27,6 +27,7 @@ public class TagEntry {
 	 */
 	public String ident, type, file, args;
 	private Integer lineFrom, lineTo;
+	private Boolean isIndirect;
 	
 	/**
 	 * Instantiates a new tag entry.
@@ -34,30 +35,39 @@ public class TagEntry {
 	 * @param elements The elements as extracted from the tags file, by String.split()
 	 */
 	public TagEntry(String line) {
-		String[] elements = line.split("\t");
-		switch (elements.length) {
-		case 4:
+		String[] elements = line.split("\t", -1);
+		this.ident = elements[0];
+		this.type = elements[1];
+		this.isIndirect = this.type.equals("indir");
+		if (this.isIndirect) {
+			parseFileAndLineNumbers(elements[4]);
+			
+			// TODO Is this manual manipulation really good enough? Ideally poke into ref'd tags file and get URI from there
+			this.file = this.file.replaceFirst("^(.+)(.gfbuild[/\\\\])(.+\\.gf)-tags$", "$1$3");
+		} else {
+			parseFileAndLineNumbers(elements[2]);
 			this.args = elements[3];
-		case 3:
-			int ix = elements[2].lastIndexOf(':');
-			this.file = (ix > 0) ? elements[2].substring(0, ix) : elements[2];
-			
-			// Line could be single (9) or range (9-18)
-			String lineStr = elements[2].substring(ix+1);
-			int rangeIx = lineStr.indexOf('-');
-			try {
-				if (rangeIx > 0) {
-					this.lineFrom = Integer.valueOf(lineStr.substring(0, rangeIx));
-					this.lineTo = Integer.valueOf(lineStr.substring(rangeIx+1));
-				} else {
-					this.lineFrom = this.lineTo = Integer.valueOf(lineStr);
-				}
-			} catch (NumberFormatException e) {
-				this.lineFrom = this.lineTo = null;
+		}
+	}
+	
+	/**
+	 * Parse the file path and line numbers (could be single (9) or range (9-18))
+	 * @param s
+	 */
+	private void parseFileAndLineNumbers(String s) {
+		int ix = s.lastIndexOf(':');
+		this.file = (ix > 0) ? s.substring(0, ix) : s;
+		String lineStr = s.substring(ix+1);
+		int rangeIx = lineStr.indexOf('-');
+		try {
+			if (rangeIx > 0) {
+				this.lineFrom = Integer.valueOf(lineStr.substring(0, rangeIx));
+				this.lineTo = Integer.valueOf(lineStr.substring(rangeIx+1));
+			} else {
+				this.lineFrom = this.lineTo = Integer.valueOf(lineStr);
 			}
-			
-			this.type = elements[1];
-			this.ident = elements[0];
+		} catch (NumberFormatException e) {
+			this.lineFrom = this.lineTo = null;
 		}
 	}
 	
@@ -84,6 +94,9 @@ public class TagEntry {
 	}
 	public Integer getLineTo() {
 		return lineTo;
+	}
+	public Boolean getIsInDirect() {
+		return isIndirect;
 	}
 
 	/**

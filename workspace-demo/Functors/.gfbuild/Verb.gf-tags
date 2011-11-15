@@ -1,0 +1,93 @@
+A	indir	Cat		.gfbuild/Cat.gf-tags
+A2	indir	Cat		.gfbuild/Cat.gf-tags
+AP	indir	Cat		.gfbuild/Cat.gf-tags
+AdA	indir	Cat		.gfbuild/Cat.gf-tags
+AdN	indir	Cat		.gfbuild/Cat.gf-tags
+AdV	indir	Cat		.gfbuild/Cat.gf-tags
+AdVVP	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:59	AdV -> VP -> VP
+AdVVPSlash	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:62	AdV -> VPSlash -> VPSlash
+Adv	indir	Cat		.gfbuild/Cat.gf-tags
+AdvVP	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:58	VP -> Adv -> VP
+AdvVPSlash	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:61	VPSlash -> Adv -> VPSlash
+Ant	indir	Cat		.gfbuild/Cat.gf-tags
+CAdv	indir	Cat		.gfbuild/Cat.gf-tags
+CN	indir	Cat		.gfbuild/Cat.gf-tags
+Card	indir	Cat		.gfbuild/Cat.gf-tags
+Cl	indir	Cat		.gfbuild/Cat.gf-tags
+ClSlash	indir	Cat		.gfbuild/Cat.gf-tags
+Comp	indir	Cat		.gfbuild/Cat.gf-tags
+CompAP	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:73	AP -> Comp
+CompAdv	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:75	Adv -> Comp
+CompCN	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:76	CN -> Comp
+CompNP	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:74	NP -> Comp
+ComplSlash	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:29	VPSlash -> NP -> VP
+ComplVA	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:18	VA -> AP -> VP
+ComplVQ	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:17	VQ -> QS -> VP
+ComplVS	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:16	VS -> S -> VP
+ComplVV	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:15	VV -> VP -> VP
+Conj	indir	Cat		.gfbuild/Cat.gf-tags
+Det	indir	Cat		.gfbuild/Cat.gf-tags
+Digits	indir	Cat		.gfbuild/Cat.gf-tags
+IAdv	indir	Cat		.gfbuild/Cat.gf-tags
+IComp	indir	Cat		.gfbuild/Cat.gf-tags
+IDet	indir	Cat		.gfbuild/Cat.gf-tags
+IP	indir	Cat		.gfbuild/Cat.gf-tags
+IQuant	indir	Cat		.gfbuild/Cat.gf-tags
+Imp	indir	Cat		.gfbuild/Cat.gf-tags
+Interj	indir	Cat		.gfbuild/Cat.gf-tags
+N	indir	Cat		.gfbuild/Cat.gf-tags
+N2	indir	Cat		.gfbuild/Cat.gf-tags
+N3	indir	Cat		.gfbuild/Cat.gf-tags
+NP	indir	Cat		.gfbuild/Cat.gf-tags
+Num	indir	Cat		.gfbuild/Cat.gf-tags
+Numeral	indir	Cat		.gfbuild/Cat.gf-tags
+Ord	indir	Cat		.gfbuild/Cat.gf-tags
+PConj	indir	Cat		.gfbuild/Cat.gf-tags
+PN	indir	Cat		.gfbuild/Cat.gf-tags
+PassV2	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:52	V2 -> VP
+Phr	indir	Cat		.gfbuild/Cat.gf-tags
+Pol	indir	Cat		.gfbuild/Cat.gf-tags
+Predet	indir	Cat		.gfbuild/Cat.gf-tags
+Prep	indir	Cat		.gfbuild/Cat.gf-tags
+Pron	indir	Cat		.gfbuild/Cat.gf-tags
+QCl	indir	Cat		.gfbuild/Cat.gf-tags
+QS	indir	Cat		.gfbuild/Cat.gf-tags
+Quant	indir	Cat		.gfbuild/Cat.gf-tags
+RCl	indir	Cat		.gfbuild/Cat.gf-tags
+RP	indir	Cat		.gfbuild/Cat.gf-tags
+RS	indir	Cat		.gfbuild/Cat.gf-tags
+ReflVP	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:39	VPSlash -> VP
+S	indir	Cat		.gfbuild/Cat.gf-tags
+SC	indir	Cat		.gfbuild/Cat.gf-tags
+SSlash	indir	Cat		.gfbuild/Cat.gf-tags
+Slash2V3	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:21	V3 -> NP -> VPSlash
+Slash3V3	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:22	V3 -> NP -> VPSlash
+SlashV2A	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:27	V2A -> AP -> VPSlash
+SlashV2Q	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:26	V2Q -> QS -> VPSlash
+SlashV2S	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:25	V2S -> S -> VPSlash
+SlashV2V	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:24	V2V -> VP -> VPSlash
+SlashV2VNP	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:32	V2V -> NP -> VPSlash -> VPSlash
+SlashV2a	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:20	V2 -> VPSlash
+SlashVV	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:31	VV -> VPSlash -> VPSlash
+Subj	indir	Cat		.gfbuild/Cat.gf-tags
+Temp	indir	Cat		.gfbuild/Cat.gf-tags
+Tense	indir	Cat		.gfbuild/Cat.gf-tags
+Text	indir	Cat		.gfbuild/Cat.gf-tags
+UseComp	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:40	Comp -> VP
+UseCopula	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:80	VP
+UseV	fun	/home/john/repositories/GF/lib/src/abstract/Verb.gf:13	V -> VP
+Utt	indir	Cat		.gfbuild/Cat.gf-tags
+V	indir	Cat		.gfbuild/Cat.gf-tags
+V2	indir	Cat		.gfbuild/Cat.gf-tags
+V2A	indir	Cat		.gfbuild/Cat.gf-tags
+V2Q	indir	Cat		.gfbuild/Cat.gf-tags
+V2S	indir	Cat		.gfbuild/Cat.gf-tags
+V2V	indir	Cat		.gfbuild/Cat.gf-tags
+V3	indir	Cat		.gfbuild/Cat.gf-tags
+VA	indir	Cat		.gfbuild/Cat.gf-tags
+VP	indir	Cat		.gfbuild/Cat.gf-tags
+VPSlash	indir	Cat		.gfbuild/Cat.gf-tags
+VQ	indir	Cat		.gfbuild/Cat.gf-tags
+VS	indir	Cat		.gfbuild/Cat.gf-tags
+VV	indir	Cat		.gfbuild/Cat.gf-tags
+Voc	indir	Cat		.gfbuild/Cat.gf-tags

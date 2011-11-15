@@ -274,34 +274,35 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	 *
 	 * @param label the label
 	 */
-	@Check
-	public void checkQualifiedNames(Label label) {
-		
-		// Try get first bit of qualified name, i.e. "ResEng". Labels do no necessarily follow Idents, but ANY type of Exp6.
-		try {
-			Ident qualifier = ((Exp5)label.eContainer()).getV().getName();
-			QualifiedName fullyQualifiedName = getConverter().toQualifiedName(qualifier.getS() + "." + label.getName().getS());
-			
-			// See if the qualifier is a valid MODULE name
-			EObject temp = label;
-			while (!(temp  instanceof TopDef) && temp.eContainer() != null) {
-				temp = temp.eContainer();
-			}
-			TopDef topDef = (TopDef)temp;
-			IScope scope = getScopeProvider().getScope(topDef, GFPackage.Literals.TOP_DEF__DEFINITIONS);
-			if (scope.getSingleElement(qualifier) != null) {
-				
-				// We now we are dealing with a Qualified name, now see if the full thing is valid:
-				if (scope.getSingleElement(fullyQualifiedName) == null) {
-					String msg = String.format("No declaration \"%1$s\" found in module \"%2$s\"", label.getName().getS(), qualifier.getS());
-					error(msg, GFPackage.Literals.LABEL__NAME);
-				}
-			}
-			
-		} catch (Exception _) {
-			// just means the first part wasn't an Ident
-		}
-	}
+	// FIXME Re-visit this, make sure it handles aliases proeprly
+//	@Check
+//	public void checkQualifiedNames(Label label) {
+//		
+//		// Try get first bit of qualified name, i.e. "ResEng". Labels do no necessarily follow Idents, but ANY type of Exp6.
+//		try {
+//			Ident qualifier = ((Exp5)label.eContainer()).getV().getName();
+//			QualifiedName fullyQualifiedName = getConverter().toQualifiedName(qualifier.getS() + "." + label.getName().getS());
+//			
+//			// See if the qualifier is a valid MODULE name
+//			EObject temp = label;
+//			while (!(temp  instanceof TopDef) && temp.eContainer() != null) {
+//				temp = temp.eContainer();
+//			}
+//			TopDef topDef = (TopDef)temp;
+//			IScope scope = getScopeProvider().getScope(topDef, GFPackage.Literals.TOP_DEF__DEFINITIONS);
+//			if (scope.getSingleElement(qualifier) != null) {
+//				
+//				// We now we are dealing with a Qualified name, now see if the full thing is valid:
+//				if (scope.getSingleElement(fullyQualifiedName) == null) {
+//					String msg = String.format("No declaration \"%1$s\" found in module \"%2$s\"", label.getName().getS(), qualifier.getS());
+//					error(msg, GFPackage.Literals.LABEL__NAME);
+//				}
+//			}
+//			
+//		} catch (Exception _) {
+//			// just means the first part wasn't an Ident
+//		}
+//	}
 	
 	
 	/**

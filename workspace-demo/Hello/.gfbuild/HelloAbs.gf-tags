@@ -1,0 +1,8 @@
+Farewell	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:5	
+Friends	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:11	Recipient
+Goodbye	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:10	Recipient -> Farewell
+Greeting	indir	AbsCat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+Hello	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:8	Recipient -> Greeting
+Parent	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:11	Recipient
+Recipient	indir	AbsCat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+World	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf:11	Recipient

@@ -6,7 +6,6 @@
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.URIConverter"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.URIConverterImpl"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl"/>
-<fullyQualifiedTypeName name="org.eclipse.emf.common.util.URI"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.IEObjectDescription"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFLibraryAgent"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider"/>
@@ -29,8 +28,6 @@
 <fullyQualifiedTypeName name="java.util.Hashtable"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.impl.IdentImpl"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.GFFactory"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceDescriptions"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
@@ -42,7 +39,6 @@
 <fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.validation.Issue"/>
 <fullyQualifiedTypeName name="org.eclipse.core.runtime.QualifiedName"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.mwe2.language.scoping.QualifiedNameProvider"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.conversion.impl.QualifiedNameValueConverter"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScope"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.parser.IParseResult"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.impl.MinimalEObjectImpl"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.GFFactory"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.common.util.URI"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.impl.IdentImpl"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
 </qualifiedTypeNameHistroy>

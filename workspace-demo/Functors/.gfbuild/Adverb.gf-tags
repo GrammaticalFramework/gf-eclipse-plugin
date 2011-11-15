@@ -1,0 +1,74 @@
+A	indir	Cat		.gfbuild/Cat.gf-tags
+A2	indir	Cat		.gfbuild/Cat.gf-tags
+AP	indir	Cat		.gfbuild/Cat.gf-tags
+AdA	indir	Cat		.gfbuild/Cat.gf-tags
+AdAdv	fun	/home/john/repositories/GF/lib/src/abstract/Adverb.gf:21	AdA -> Adv -> Adv
+AdN	indir	Cat		.gfbuild/Cat.gf-tags
+AdV	indir	Cat		.gfbuild/Cat.gf-tags
+AdnCAdv	fun	/home/john/repositories/GF/lib/src/abstract/Adverb.gf:33	CAdv -> AdN
+Adv	indir	Cat		.gfbuild/Cat.gf-tags
+Ant	indir	Cat		.gfbuild/Cat.gf-tags
+CAdv	indir	Cat		.gfbuild/Cat.gf-tags
+CN	indir	Cat		.gfbuild/Cat.gf-tags
+Card	indir	Cat		.gfbuild/Cat.gf-tags
+Cl	indir	Cat		.gfbuild/Cat.gf-tags
+ClSlash	indir	Cat		.gfbuild/Cat.gf-tags
+Comp	indir	Cat		.gfbuild/Cat.gf-tags
+ComparAdvAdj	fun	/home/john/repositories/GF/lib/src/abstract/Adverb.gf:16	CAdv -> A -> NP -> Adv
+ComparAdvAdjS	fun	/home/john/repositories/GF/lib/src/abstract/Adverb.gf:17	CAdv -> A -> S -> Adv
+Conj	indir	Cat		.gfbuild/Cat.gf-tags
+Det	indir	Cat		.gfbuild/Cat.gf-tags
+Digits	indir	Cat		.gfbuild/Cat.gf-tags
+IAdv	indir	Cat		.gfbuild/Cat.gf-tags
+IComp	indir	Cat		.gfbuild/Cat.gf-tags
+IDet	indir	Cat		.gfbuild/Cat.gf-tags
+IP	indir	Cat		.gfbuild/Cat.gf-tags
+IQuant	indir	Cat		.gfbuild/Cat.gf-tags
+Imp	indir	Cat		.gfbuild/Cat.gf-tags
+Interj	indir	Cat		.gfbuild/Cat.gf-tags
+N	indir	Cat		.gfbuild/Cat.gf-tags
+N2	indir	Cat		.gfbuild/Cat.gf-tags
+N3	indir	Cat		.gfbuild/Cat.gf-tags
+NP	indir	Cat		.gfbuild/Cat.gf-tags
+Num	indir	Cat		.gfbuild/Cat.gf-tags
+Numeral	indir	Cat		.gfbuild/Cat.gf-tags
+Ord	indir	Cat		.gfbuild/Cat.gf-tags
+PConj	indir	Cat		.gfbuild/Cat.gf-tags
+PN	indir	Cat		.gfbuild/Cat.gf-tags
+Phr	indir	Cat		.gfbuild/Cat.gf-tags
+Pol	indir	Cat		.gfbuild/Cat.gf-tags
+PositAdAAdj	fun	/home/john/repositories/GF/lib/src/abstract/Adverb.gf:25	A -> AdA
+PositAdvAdj	fun	/home/john/repositories/GF/lib/src/abstract/Adverb.gf:10	A -> Adv
+Predet	indir	Cat		.gfbuild/Cat.gf-tags
+Prep	indir	Cat		.gfbuild/Cat.gf-tags
+PrepNP	fun	/home/john/repositories/GF/lib/src/abstract/Adverb.gf:11	Prep -> NP -> Adv
+Pron	indir	Cat		.gfbuild/Cat.gf-tags
+QCl	indir	Cat		.gfbuild/Cat.gf-tags
+QS	indir	Cat		.gfbuild/Cat.gf-tags
+Quant	indir	Cat		.gfbuild/Cat.gf-tags
+RCl	indir	Cat		.gfbuild/Cat.gf-tags
+RP	indir	Cat		.gfbuild/Cat.gf-tags
+RS	indir	Cat		.gfbuild/Cat.gf-tags
+S	indir	Cat		.gfbuild/Cat.gf-tags
+SC	indir	Cat		.gfbuild/Cat.gf-tags
+SSlash	indir	Cat		.gfbuild/Cat.gf-tags
+Subj	indir	Cat		.gfbuild/Cat.gf-tags
+SubjS	fun	/home/john/repositories/GF/lib/src/abstract/Adverb.gf:29	Subj -> S -> Adv
+Temp	indir	Cat		.gfbuild/Cat.gf-tags
+Tense	indir	Cat		.gfbuild/Cat.gf-tags
+Text	indir	Cat		.gfbuild/Cat.gf-tags
+Utt	indir	Cat		.gfbuild/Cat.gf-tags
+V	indir	Cat		.gfbuild/Cat.gf-tags
+V2	indir	Cat		.gfbuild/Cat.gf-tags
+V2A	indir	Cat		.gfbuild/Cat.gf-tags
+V2Q	indir	Cat		.gfbuild/Cat.gf-tags
+V2S	indir	Cat		.gfbuild/Cat.gf-tags
+V2V	indir	Cat		.gfbuild/Cat.gf-tags
+V3	indir	Cat		.gfbuild/Cat.gf-tags
+VA	indir	Cat		.gfbuild/Cat.gf-tags
+VP	indir	Cat		.gfbuild/Cat.gf-tags
+VPSlash	indir	Cat		.gfbuild/Cat.gf-tags
+VQ	indir	Cat		.gfbuild/Cat.gf-tags
+VS	indir	Cat		.gfbuild/Cat.gf-tags
+VV	indir	Cat		.gfbuild/Cat.gf-tags
+Voc	indir	Cat		.gfbuild/Cat.gf-tags

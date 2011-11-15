@@ -147,7 +147,7 @@ public class GFLibraryAgent {
 	 * return the EObject matching by ident
 	 *
 	 */
-	public EObject findEObjectInFile(Resource context, String filePath, String ident) {
+	public EObject findEObjectInFile(Resource context, String filePath, String ident) throws RuntimeException {
 /*		
 		// Creating our own EObjects like this satisfies the validator, but will not allow you to "open declaration"
 		IdentImpl eObject = (IdentImpl) GFFactory.eINSTANCE.createIdent();

@@ -1,0 +1,65 @@
+AdA	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:11	
+AdA	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:11	
+AdN	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:12	
+AdN	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:12	
+AdV	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:10	
+AdV	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:10	
+Adv	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:9	
+Adv	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:9	
+Ant	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:20	
+Ant	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:20	
+Anteriority	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+CAdv	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:14	
+CAdv	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:14	
+Compar	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+DTail	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Degree	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+IAdv	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:13	
+IAdv	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:13	
+ImpF	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+ImpForm	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Interj	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:16	
+Interj	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:16	
+Neg	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Number	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+P1	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+P2	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+P3	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+PConj	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:15	
+PConj	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:15	
+Person	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Phr	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:5	
+Phr	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:5	
+Pl	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Pol	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:21	
+Pol	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:21	
+Polarity	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Pos	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Posit	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Pres	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+QDir	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+QForm	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+QIndir	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+SC	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:8	
+SC	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:8	
+Sg	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Simul	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Superl	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+T1	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+T2	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+T3	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Temp	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:18	
+Temp	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:18	
+Tense	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+Tense	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:19	
+Tense	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:19	
+Text	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:4	
+Text	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:4	
+Utt	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:6	
+Utt	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:6	
+Voc	lincat	/home/john/repositories/GF/lib/src/common/CommonX.gf:7	
+Voc	lindef	/home/john/repositories/GF/lib/src/common/CommonX.gf:7	
+conjNumber	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+conjPerson	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+numImp	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags
+polCases	indir	ParamX	ParamX	.gfbuild/ParamX.gf-tags

@@ -1,0 +1,22 @@
+Boring	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:20	Quality
+Cheese	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:18	Kind
+Delicious	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:20	Quality
+Expensive	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:20	Quality
+Fish	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:18	Kind
+Fresh	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:20	Quality
+Is	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:15	Item -> Quality -> Phrase
+Italian	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:20	Quality
+Item	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:9	
+Item2	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:10	
+Kind	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:11	
+Phrase	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:8	
+Pizza	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:18	Kind
+QKind	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:17	Quality -> Kind -> Kind
+Quality	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:12	
+That	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:16	Kind -> Item
+These	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:16	Kind -> Item
+This	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:16	Kind -> Item
+Those	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:16	Kind -> Item
+Very	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:19	Quality -> Quality
+Warm	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:20	Quality
+Wine	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf:18	Kind

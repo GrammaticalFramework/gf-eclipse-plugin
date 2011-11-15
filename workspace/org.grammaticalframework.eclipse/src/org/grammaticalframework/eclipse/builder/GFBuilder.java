@@ -100,6 +100,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			// TODO Is doing a full build for every incremental change overkill?
 			// Possible solution: only rebuild files whos tags contain something from the file being rebuilt
 			if (TAG_BASED_SCOPING || kind == IncrementalProjectBuilder.FULL_BUILD) {
+//			if (kind == IncrementalProjectBuilder.FULL_BUILD) {
 				fullBuild(monitor);
 			} else {
 				IResourceDelta delta = getDelta(getProject());
@@ -140,7 +141,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					if (kind == IResourceDelta.ADDED || kind == IResourceDelta.CHANGED) {
 						if (shouldBuild(resource)) {
 							IFile file = (IFile) resource;
-							cleanFile(file);
 							if (buildFile(file)) {
 								log.info("+ " + delta.getResource().getRawLocation());
 							} else {
@@ -183,7 +183,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				
 				// Build if necessary
 				if (shouldBuild(resource)) {
-					cleanFile((IFile) resource);
 					if (buildFile((IFile) resource)) {
 						log.info("+ " + resource.getRawLocation());
 					} else {
@@ -197,15 +196,17 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		getProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 	
-	/* (non-Javadoc)
-	 * @see org.eclipse.core.resources.IncrementalProjectBuilder#clean(org.eclipse.core.runtime.IProgressMonitor)
+	/**
+	 * Clean Project (invoked by user via menu)
 	 */
 	@Override
 	protected void clean(final IProgressMonitor monitor) throws CoreException {
 		log.info("Clean " + getProject().getName());
 		
+		// Delete all markers
 		getProject().deleteMarkers(null, true, IResource.DEPTH_INFINITE);
 		
+		// Iterate over all files in project, decide what to do with them
 		recursiveDispatcher(getProject().members(), new CallableOnResource() {
 			public void call(IResource resource) {
 				// Check for cancellation
@@ -246,10 +247,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			}
 		});
 	}
-  
 	
 	/**
-	 * Clean all the files in the build directory for a given file.
+	 * Clean all the files in the build directory related to the given file.
 	 *
 	 * @param file the file
 	 */
@@ -298,7 +298,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * Determine if a resource should be built, based on its properties.
 	 *
 	 * @param resource the resource
-	 * @return true, if successful
+	 * @return true, if this is a source fiel which should be built
 	 */
 	private boolean shouldBuild(IResource resource) {
 		try {
@@ -339,11 +339,14 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				+ getBuildSubfolder(filename, useIndividualFolders);
 	}
 	public static String getTagsFile(String sourceFileName) {
-		int dotIx = sourceFileName.lastIndexOf('.');
+//		int dotIx = sourceFileName.lastIndexOf('.');
+//		return BUILD_FOLDER
+//				+ java.io.File.separator
+//				+ ((dotIx > 0) ? sourceFileName.substring(0, dotIx) : sourceFileName)
+//				+ ".tags";
 		return BUILD_FOLDER
 				+ java.io.File.separator
-				+ ((dotIx > 0) ? sourceFileName.substring(0, dotIx) : sourceFileName)
-				+ ".tags";
+				+ sourceFileName + "-tags";
 	}
 	public static String getTagsFile(IFile file) {
 		return file.getRawLocation().removeLastSegments(1).toOSString()
@@ -358,10 +361,14 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private boolean buildFile(IFile file) {
 		try {
+			// Clean up first
+			cleanFile(file);
 			file.deleteMarkers(null, true, IResource.DEPTH_ZERO);
 		} catch(CoreException _) {
 			log.warn("Error trying to delete markers for " + file.getName());
 		}
+		
+		// Delegate to correct method
 		if (TAG_BASED_SCOPING)
 			return buildFileTAGS(file);
 		else
@@ -392,16 +399,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			// Create the scraped version
 //			createScrapedFileCopy(".."+java.io.File.separator+".."+java.io.File.separator+filename, filename, buildDirFile);
 
-			// TODO WORKAROUND: Run --batch first to make it happy
-			ProcessBuilder pbBatch = new ProcessBuilder(gfPath, "--batch", filename);
-			pbBatch.directory(workingDirFile);
-			Process procBatch = pbBatch.start();
-			procBatch.waitFor();
-			
 			// Compile to get tags with: gf --tags HelloEng.gf
 			ArrayList<String> command = new ArrayList<String>();
 			command.add(gfPath);
 			command.add("--tags");
+			command.add("--output-dir=" + buildDir);
 			if (gfLibPath != null && !gfLibPath.isEmpty()) {
 				command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath)); // Use library path in command (if supplied)
 			}
@@ -427,14 +429,14 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			}
 			
 			// Move tags file into subdirectory & rename
-			File tagsFile = new File(workingDir + "tags");
-			File tagsFileDst = new File(workingDir + getTagsFile(filename));
-			if (tagsFile.exists()) {
-				tagsFileDst.delete();
-				tagsFile.renameTo(tagsFileDst);
-			} else {
-				log.warn("tags file for "+filename+" missing!");
-			}
+//			File tagsFile = new File(workingDir + "tags");
+//			File tagsFileDst = new File(workingDir + getTagsFile(filename));
+//			if (tagsFile.exists()) {
+//				tagsFileDst.delete();
+//				tagsFile.renameTo(tagsFileDst);
+//			} else {
+//				log.warn("tags file for "+filename+" missing!");
+//			}
 			
 			// Done
 			return true;
@@ -521,6 +523,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param workingDirectory
 	 * @return
 	 */
+	@SuppressWarnings("unused")
 	private boolean createScrapedFileCopy(String sourceFileName, String targetFileName, File workingDirectory) {
 		try {
 			// MAJOR TODO: use of absolute path!! Reliance on sed!!one!

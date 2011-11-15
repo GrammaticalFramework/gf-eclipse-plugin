@@ -1,0 +1,123 @@
+BIND	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:117	
+BIND	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:117	Str
+Bool	param	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:66	
+CAPIT	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:119	
+CAPIT	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:119	Str
+E0	param-value	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:135	ENumber
+E1	param-value	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:135	ENumber
+E2	param-value	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:135	ENumber
+ENumber	param	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:135	
+Emore	param-value	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:135	ENumber
+Error	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+False	param-value	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:66	Bool
+Int	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+Ints	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+PARA	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:118	
+PARA	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:118	Str
+PBool	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+PFalse	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+PTrue	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+SD2	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:30	
+SD2	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:30	Type
+SP1	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:22	
+SP1	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:22	Type -> Type
+SS	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:11	
+SS	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:11	Type
+SS1	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:19	
+SS1	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:19	Type -> Type
+True	param-value	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:66	Bool
+andB	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:75	
+andB	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:75	Bool -> Bool -> Bool
+bothWays	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:47	
+bothWays	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:47	Str -> Str -> Str
+capitalize	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:113	
+capitalize	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:113	Str -> Str
+cc2	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:16	
+cc2	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:16	{s : Str} -> {s : Str} -> {s : Str}
+cc3	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:17	
+cc3	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:17	{s : Str} -> {s : Str} -> {s : Str} -> {s : Str}
+constStr	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:26	
+constStr	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:26	(A : Type) -> Str -> A => Str
+constTable	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:25	
+constTable	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:25	(A : Type) -> (B : Type) -> B -> A => B
+dp	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+drop	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+eNext	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:138-139	
+eNext	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:138-139	ENumber -> ENumber
+embedSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:61	
+embedSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:61	Str -> Str -> {s : Str} -> {s : Str}
+eqInt	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+eqStr	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+error	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+glue	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:107	
+glue	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:107	Str -> Str -> Str
+glueOpt	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:108	
+glueOpt	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:108	Str -> Str -> Str
+id	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:125	
+id	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:125	(A : Type) -> A -> A
+ifTok	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:99-100	
+ifTok	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:99-100	(A : Type) -> Str -> Str -> A -> A -> A
+if_then_Str	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:79	
+if_then_Str	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:79	Bool -> Str -> Str -> Str
+if_then_else	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:69-73	
+if_then_else	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:69-73	(A : Type) -> Bool -> A -> A -> A
+infixSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:58	
+infixSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:58	Str -> {s : Str} -> {s : Str} -> {s : Str}
+init	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:92	
+init	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:92	Str -> Str
+isNil	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:97	
+isNil	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:97	Str -> Bool
+isUpper	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+last	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:93	
+last	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:93	Str -> Str
+length	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+lessInt	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+mapStr	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+noglueOpt	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:109	
+noglueOpt	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:109	Str -> Str -> Str
+nonExist	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:38	
+nonExist	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:38	Str
+notB	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:77	
+notB	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:77	Bool -> Bool
+occur	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+occurs	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+onlyIf	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:81-84	
+onlyIf	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:81-84	Bool -> Str -> Str
+optStr	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:42	
+optStr	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:42	Str -> Str
+orB	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:76	
+orB	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:76	Bool -> Bool -> Bool
+paren	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:129	
+paren	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:129	Str -> Str
+parenss	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:130	
+parenss	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:130	{s : Str} -> {s : Str}
+pbool2bool	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:88-90	
+pbool2bool	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:88-90	PBool -> Bool
+plus	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+postfixSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:60	
+postfixSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:60	Str -> {s : Str} -> {s : Str}
+preOrPost	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:51-52	
+preOrPost	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:51-52	Bool -> Str -> Str -> Str
+prefixSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:59	
+prefixSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:59	Str -> {s : Str} -> {s : Str}
+read	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+sd2	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:31	
+sd2	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:31	Str -> Str -> {s1 : Str; s2 : Str}
+show	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+sp1	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:23	
+sp1	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:23	(A : Type) -> Str -> A -> {s : Str; p : A}
+ss	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:12	
+ss	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:12	Str -> {s : Str}
+ss1	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:20	
+ss1	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:20	(A : Type) -> Str -> {s : A => Str}
+ss2	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:13	
+ss2	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:13	Str -> Str -> {s : Str}
+ss3	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:14	
+ss3	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:14	Str -> Str -> Str -> {s : Str}
+strOpt	oper-def	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:43	
+strOpt	oper-type	/home/john/repositories/GF/lib/src/prelude/Prelude.gf:43	Str -> Str
+take	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+tk	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+toLower	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+toStr	indir	Predef	Predef	.gfbuild/Predef.gf-tags
+toUpper	indir	Predef	Predef	.gfbuild/Predef.gf-tags

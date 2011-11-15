@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
@@ -13,7 +14,9 @@ import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.AbstractScope;
+import org.grammaticalframework.eclipse.gF.GFFactory;
 import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.impl.IdentImpl;
 
 import com.google.inject.Inject;
 
@@ -65,25 +68,35 @@ public class GFTagBasedScope extends AbstractScope {
 		moduleName = resourceDescription.getURI().lastSegment().substring(0, resourceDescription.getURI().lastSegment().lastIndexOf('.'));
 		descriptions = new ArrayList<IEObjectDescription>();
 		for (IEObjectDescription desc : resourceDescription.getExportedObjects()) {
-//			this.descriptions.add(desc);
-			
-			// Strip off qualified bit of name
-			QualifiedName newName = desc.getQualifiedName().skipFirst(1);
+			QualifiedName newName = getUnQualifiedName(desc.getQualifiedName()); // Strip off qualified bit of name (maybe)
 			descriptions.add(EObjectDescription.create(newName, desc.getEObjectOrProxy()));
 		}
 	}
 	
 	public void addTag(Resource context, TagEntry tag) {
 		QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.ident);
-		QualifiedName unQualifiedName = fullyQualifiedName.skipFirst(1);
+		QualifiedName unQualifiedName = getUnQualifiedName(fullyQualifiedName);
 		
-		EObject eObject = libAgent.findEObjectInFile(context, tag.file, unQualifiedName.toString());
-		if (eObject == null)
-			return;
+		EObject eObject = null;
+		try {
+			eObject = libAgent.findEObjectInFile(context, tag.file, unQualifiedName.toString());
+		} catch (RuntimeException _) {	}
+		if (eObject == null) {
+			// Just create a dummy eObject, to satisfy the validator
+			IdentImpl id = (IdentImpl) GFFactory.eINSTANCE.createIdent();
+			id.setS(tag.ident);
+			URI uri = URI.createFileURI(tag.file).appendFragment("///@body/@judgements.0/@definitions.0/@name");
+			id.eSetProxyURI(uri);
+			eObject = id;
+		}
 		
 		Map<String, String> userData = tag.getProperties();
 		IEObjectDescription eObjectDescription = new EObjectDescription(unQualifiedName, eObject, userData);
 		descriptions.add(eObjectDescription);
+	}
+	
+	private QualifiedName getUnQualifiedName(QualifiedName qn) {
+		return qn.skipFirst(qn.getSegmentCount()-1);
 	}
 	
 	@Override
