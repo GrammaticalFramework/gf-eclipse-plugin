@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.grammaticalframework.eclipse.ui
 Bundle-Vendor: MOLTO Project
-Bundle-Version: 1.1.0.qualifier
+Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.grammaticalframework.eclipse.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.grammaticalframework.eclipse;visibility:=reexport,
