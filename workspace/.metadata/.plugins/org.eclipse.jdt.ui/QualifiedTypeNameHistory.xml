@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.URIConverterImpl"/>
-<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.resource.IEObjectDescription"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFLibraryAgent"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedScope"/>
-<fullyQualifiedTypeName name="org.eclipse.core.runtime.OperationCanceledException"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceDescription"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IFile"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.TagFileHelper"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.TagEntry"/>
 <fullyQualifiedTypeName name="org.eclipse.core.internal.resources.File"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
@@ -27,7 +17,6 @@
 <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IResource"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.validation.Issue"/>
 <fullyQualifiedTypeName name="org.eclipse.core.runtime.QualifiedName"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.mwe2.language.scoping.QualifiedNameProvider"/>
@@ -60,4 +49,15 @@
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.services.GFGrammarAccess"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.services.GFGrammarAccess.IdentElements"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
+<fullyQualifiedTypeName name="com.google.common.base.Function"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.resource.IEObjectDescription"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.TagEntry"/>
+<fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
+<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFException"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.io.PrintStream"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
+<fullyQualifiedTypeName name="java.io.FilterInputStream"/>
 </qualifiedTypeNameHistroy>

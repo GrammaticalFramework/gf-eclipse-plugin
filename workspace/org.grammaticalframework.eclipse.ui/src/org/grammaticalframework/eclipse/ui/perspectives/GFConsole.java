@@ -9,6 +9,12 @@
  */
 package org.grammaticalframework.eclipse.ui.perspectives;
 
+import java.io.BufferedInputStream;
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintStream;
+
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.console.ConsolePlugin;
 import org.eclipse.ui.console.IConsole;
@@ -39,9 +45,14 @@ public class GFConsole {
 	public static MessageConsole getConsole() {
 		if (console == null) {
 			ImageDescriptor image = ImageDescriptor.createFromFile(null, "icons/gf-console.png");
-			console = new MessageConsole("GF Compiler", image);
+			console = new MessageConsole("GF Console", image);
 			console.activate();
 			ConsolePlugin.getDefault().getConsoleManager().addConsoles(new IConsole[]{ console });
+			
+			// Try sort out this interactive console stuff
+			System.setOut(new PrintStream(console.newMessageStream()));
+			System.setErr(new PrintStream(console.newMessageStream()));
+			System.setIn(new FilterInputStream(console.newOutputStream()));
 		}
 		return console;
 	} 

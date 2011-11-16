@@ -58,7 +58,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		}
 		ArrayList<String> command = new ArrayList<String>();
 		command.add(gfPath);
-		command.add("--batch");
+//		command.add("--batch");
 		command.addAll( Arrays.asList(options.split("\\s")) );
 		command.addAll( Arrays.asList(files.split("\\s")) );
 		

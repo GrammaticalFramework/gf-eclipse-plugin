@@ -12,6 +12,8 @@ package org.grammaticalframework.eclipse.scoping;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.grammaticalframework.eclipse.GFException;
+
 /**
  * Represents a single "tag" entry in the GF-produced tags file, e.g.:
  * <pre>
@@ -21,6 +23,17 @@ import java.util.Map;
  * </pre>
  */
 public class TagEntry {
+	
+	/**
+	 * User data keys
+	 */
+	public static String USER_DATA_KEY_IDENT = "ident";
+	public static String USER_DATA_KEY_TYPE = "type";
+	public static String USER_DATA_KEY_QUALIFIER = "qualifier";
+	public static String USER_DATA_KEY_ALIAS = "alias";
+	public static String USER_DATA_KEY_FILE = "file";
+	public static String USER_DATA_KEY_ARGS = "args";
+	public static String USER_DATA_KEY_MODULENAME = "modulename";
 	
 	/**
 	 * Record fields
@@ -35,19 +48,23 @@ public class TagEntry {
 	 *
 	 * @param elements The elements as extracted from the tags file, by String.split()
 	 */
-	public TagEntry(String line) {
-		String[] elements = line.split("\t", -1);
-		this.ident = elements[0];
-		this.type = elements[1];
-		this.isIndirect = this.type.equals("indir");
-		if (this.isIndirect) {
-			parseFileAndLineNumbers(elements[4]);
-			this.qualifier = elements[2];
-			this.alias = elements[3];
-		} else {
-			parseFileAndLineNumbers(elements[2]);
-			this.qualifier = this.moduleName;
-			this.args = elements[3];
+	public TagEntry(String line) throws GFException {
+		try {
+			String[] elements = line.split("\t", -1);
+			this.ident = elements[0];
+			this.type = elements[1];
+			this.isIndirect = this.type.equals("indir");
+			if (this.isIndirect) {
+				parseFileAndLineNumbers(elements[4]);
+				this.qualifier = elements[2];
+				this.alias = elements[3];
+			} else {
+				parseFileAndLineNumbers(elements[2]);
+				this.qualifier = this.moduleName;
+				this.args = elements[3];
+			}
+		} catch (ArrayIndexOutOfBoundsException e) {
+			throw new GFException("Malformed tag line: "+line);
 		}
 	}
 	
@@ -88,11 +105,14 @@ public class TagEntry {
 	 */
 	public Map<String, String> getProperties() {
 		HashMap<String, String> userData = new HashMap<String, String>();
-		userData.put("ident", ident);
-		userData.put("type", type);
-		userData.put("file", file);
-		userData.put("lineNo", lineFrom != null ? lineFrom.toString() : ""); // TODO Include range?
-		userData.put("args", args);
+		userData.put(USER_DATA_KEY_IDENT, ident);
+		userData.put(USER_DATA_KEY_TYPE, type);
+		userData.put(USER_DATA_KEY_QUALIFIER, qualifier);
+		userData.put(USER_DATA_KEY_ALIAS, alias);
+		userData.put(USER_DATA_KEY_MODULENAME, moduleName);
+		userData.put(USER_DATA_KEY_FILE, file);
+//		userData.put(USER_DATA_KEY_LINENO, lineFrom != null ? lineFrom.toString() : "");
+		userData.put(USER_DATA_KEY_ARGS, args);
 		return userData;
 	}
 	
@@ -102,14 +122,32 @@ public class TagEntry {
 	public String getType() {
 		return type;
 	}
-	public String getFile() {
-		return file;
+	
+	/**
+	 * Get the tag's qualifier. Note this is not necessarily the same as the module in which the ident is actually defined;
+	 * for that see getModuleName();
+	 * @return qualifier
+	 */
+	public String getQualifier() {
+		return qualifier;
 	}
+	public void setQualifier(String qualifier) {
+		this.qualifier = qualifier;
+	}
+	
+	/**
+	 * Get the tag's alias, (applies when using the <code>open (Alias = Module)</code> syntax).
+	 * @return alias
+	 */
 	public String getAlias() {
 		return alias;
 	}
-	public String getQualifier() {
-		return qualifier;
+	public void setAlias(String alias) {
+		this.alias = alias;
+	}
+
+	public String getFile() {
+		return file;
 	}
 	public Integer getLineNumber() {
 		return lineFrom;
@@ -124,8 +162,23 @@ public class TagEntry {
 		return isIndirect;
 	}
 
+	/**
+	 * Return the qualified name as determined by the dependancy graph.
+	 *  
+	 * @return qualified name
+	 */
 	public String getQualifiedName() {
 		return this.qualifier + "." + this.ident;
+	}
+	
+	/**
+	 * Return the "true" qualified name, where the qualifier is the name of
+	 * the module in which that function is actually defined.
+	 * 
+	 * @return "true" qualified name
+	 */
+	public String getTrueQualifiedName() {
+		return this.moduleName + "." + this.ident;
 	}
 
 	/**
@@ -147,6 +200,5 @@ public class TagEntry {
 		sb.append("\t" + args);
 		return sb.toString();
 	}
-	
 	
 }

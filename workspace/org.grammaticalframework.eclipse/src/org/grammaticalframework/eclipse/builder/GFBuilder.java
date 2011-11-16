@@ -547,8 +547,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * For a single .gf file, compile it with GF and run "ss -strip -save" to
 	 * capture all the GF headers in the build subfolder.
 	 * 
-	 * TODO Share a single process for the whole build cycle to save on overheads
-	 *
 	 * @param file the file
 	 * @return true, if successful
 	 */

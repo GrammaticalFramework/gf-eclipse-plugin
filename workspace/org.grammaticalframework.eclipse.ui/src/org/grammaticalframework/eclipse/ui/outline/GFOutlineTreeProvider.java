@@ -15,8 +15,8 @@ import org.eclipse.xtext.ui.editor.outline.IOutlineNode;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import org.eclipse.xtext.ui.editor.outline.impl.EObjectNode;
 import org.eclipse.xtext.ui.editor.outline.impl.EStructuralFeatureNode;
+import org.grammaticalframework.eclipse.GFException;
 import org.grammaticalframework.eclipse.gF.*;
-import org.grammaticalframework.eclipse.ui.GFException;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 
 import com.google.inject.Inject;
