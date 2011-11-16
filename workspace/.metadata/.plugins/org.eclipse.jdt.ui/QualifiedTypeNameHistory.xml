@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.URIConverter.ReadableInputStream"/>
-<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-<fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.URIConverter"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.URIConverterImpl"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.IEObjectDescription"/>
@@ -23,8 +20,6 @@
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.builder.GFBuilder"/>
 <fullyQualifiedTypeName name="java.util.Hashtable"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceDescriptions"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.ecore.xml.type.internal.RegEx"/>
@@ -38,7 +33,6 @@
 <fullyQualifiedTypeName name="org.eclipse.emf.mwe2.language.scoping.QualifiedNameProvider"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.conversion.impl.QualifiedNameValueConverter"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IMarker"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.Ident"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFRuntimeModule"/>
 <fullyQualifiedTypeName name="com.google.inject.Injector"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFStandaloneSetup"/>
@@ -60,4 +54,10 @@
 <fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScope"/>
 <fullyQualifiedTypeName name="com.google.common.base.Predicate"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceDescriptions"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.Ident"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.GFPackage"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.services.GFGrammarAccess"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.services.GFGrammarAccess.IdentElements"/>
+<fullyQualifiedTypeName name="org.eclipse.emf.ecore.EObject"/>
 </qualifiedTypeNameHistroy>

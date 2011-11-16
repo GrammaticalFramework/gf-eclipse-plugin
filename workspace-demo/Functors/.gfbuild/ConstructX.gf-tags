@@ -1,20 +1,20 @@
-AdA	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-AdN	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-AdV	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Adv	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Ant	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-CAdv	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-IAdv	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Interj	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-PConj	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Phr	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Pol	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-SC	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Temp	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Tense	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Text	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Utt	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Voc	indir	CommonX	CommonX	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+AdA	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+AdN	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+AdV	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Adv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Ant	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+CAdv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+IAdv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Interj	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+PConj	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Phr	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Pol	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+SC	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Temp	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Tense	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Text	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Utt	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Voc	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 mkAdA	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:13	
 mkAdA	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:13	Str -> {s : Str; lock_AdA : {}}
 mkAdN	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:14	

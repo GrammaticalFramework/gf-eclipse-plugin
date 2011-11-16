@@ -85,16 +85,10 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	}	
 	
 	/**
-	 * The converter.
+	 * Qualified name converter
 	 */
 	@Inject
 	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
-	
-	/**
-	 * Gets the converter.
-	 *
-	 * @return the converter
-	 */
 	protected IQualifiedNameConverter getConverter() {
 		return converter;
 	}

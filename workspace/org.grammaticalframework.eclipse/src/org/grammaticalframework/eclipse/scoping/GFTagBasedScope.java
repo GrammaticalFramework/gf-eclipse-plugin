@@ -2,23 +2,19 @@ package org.grammaticalframework.eclipse.scoping;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.Map;
 
-import org.eclipse.emf.common.util.TreeIterator;
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.resource.Resource;
+import org.apache.log4j.Logger;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.EObjectDescription;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescription;
+import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.AbstractScope;
-import org.grammaticalframework.eclipse.gF.GFFactory;
-import org.grammaticalframework.eclipse.gF.Ident;
-import org.grammaticalframework.eclipse.gF.impl.IdentImpl;
-
+import org.grammaticalframework.eclipse.gF.GFPackage;
 import com.google.inject.Inject;
 
 public class GFTagBasedScope extends AbstractScope {
@@ -30,11 +26,9 @@ public class GFTagBasedScope extends AbstractScope {
 	private IQualifiedNameConverter converter = new IQualifiedNameConverter.DefaultImpl();
 
 	/**
-	 * The library agent.
+	 * The logger
 	 */
-	@Inject
-	private GFLibraryAgent libAgent = new GFLibraryAgent();
-	
+	private static final Logger log = Logger.getLogger(GFTagBasedGlobalScopeProvider.class);
 
 	/**
 	 * The name of the module this scope represents
@@ -74,33 +68,31 @@ public class GFTagBasedScope extends AbstractScope {
 		}
 	}
 	
-	public void addTags(Resource context, Collection<TagEntry> tags) {
+	/**
+	 * Add the collection of tags to the scope. The resource descriptions are used for looking up the corresponding EObjects
+	 * 
+	 * @param resourceDescriptions
+	 * @param tags
+	 */
+	public void addTags(IResourceDescriptions resourceDescriptions, Collection<TagEntry> tags) {
 		for (TagEntry tag : tags) {
-			addTag(context, tag);
+			QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getQualifiedName());
+			QualifiedName unQualifiedName = getUnQualifiedName(fullyQualifiedName);
+			Map<String, String> userData = tag.getProperties();
+			Iterable<IEObjectDescription> matchingEObjects = resourceDescriptions.getExportedObjects(GFPackage.Literals.IDENT, fullyQualifiedName, false);
+			Iterator<IEObjectDescription> iter = matchingEObjects.iterator();
+			if (iter.hasNext()) {
+				// This just always chooses first occurance... is that bad?
+				IEObjectDescription eObjectDescription = iter.next();
+				IEObjectDescription eObjectDescription2 = new EObjectDescription(unQualifiedName, eObjectDescription.getEObjectOrProxy(), userData);
+				descriptions.add(eObjectDescription2);
+			} else {
+				log.debug("No EObject found for " + tag.getQualifiedName());
+			}
 		}
-	}
-	public void addTag(Resource context, TagEntry tag) {
-		QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getIdent());
-		QualifiedName unQualifiedName = getUnQualifiedName(fullyQualifiedName);
-		
-		EObject eObject = null;
-		try {
-			eObject = libAgent.findEObjectInFile(context, tag.getFile(), unQualifiedName.toString());
-		} catch (RuntimeException _) {	}
-		if (eObject == null) {
-			// Just create a dummy eObject, to satisfy the validator
-			IdentImpl id = (IdentImpl) GFFactory.eINSTANCE.createIdent();
-			id.setS(tag.getIdent());
-			URI uri = URI.createFileURI(tag.getFile()).appendFragment("///@body/@judgements.0/@definitions.0/@name");
-			id.eSetProxyURI(uri);
-			eObject = id;
-		}
-		
-		Map<String, String> userData = tag.getProperties();
-		IEObjectDescription eObjectDescription = new EObjectDescription(unQualifiedName, eObject, userData);
-		descriptions.add(eObjectDescription);
 	}
 	
+
 	private QualifiedName getUnQualifiedName(QualifiedName qn) {
 		return qn.skipFirst(qn.getSegmentCount()-1);
 	}

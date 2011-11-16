@@ -102,6 +102,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		/* ----- Method 2: Use the tags themselves ----- */
 		GFTagBasedScope gfScope = null;
 		Map<URI, Collection<TagEntry>> uriTagMap = getURITagMap(resource);
+		IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
 		for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
 			String lastSegment = entry.getKey().lastSegment();
 			int dotIx = lastSegment.lastIndexOf('.');
@@ -109,7 +110,8 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
 			
 			// TODO John: This is taking very long with Functors (ie RGL)... how to speed up?
-			gfScope.addTags(resource, entry.getValue());
+//			gfScope.addTags(resource, entry.getValue());
+			gfScope.addTags(resourceDescriptions, entry.getValue());
 		}
 		return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
 	}
@@ -197,6 +199,13 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				uriIter.remove();
 			}
 			// Resolve refs to other tags files and replace
+			/*
+			 * Note: Because of the behaviour of indirects, the qualifier of these new tags is always the "ultimate" one
+			 * This may be a problem with opens/aliases
+			 * But if changing this, you must also look at:
+			 * 	- GFTagsBasedScope.addTags()
+			 *	- GFQualifiedNameProvider.qualifiedName() 
+			 */
 			else if (uri.fileExtension().equals("gf-tags")) {
 				resolvedUriTagMap.putAll( parseSingleTagsFile(uri, new Predicate<TagEntry>() {
 					// Only include tags FROM the respective tags file (opposite of above)
