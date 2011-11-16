@@ -132,6 +132,9 @@ public class GFParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperDefAccess().getGroup_1_4_1_1(), "rule__OperDef__Group_1_4_1_1__0");
 					put(grammarAccess.getOperDefAccess().getGroup_1_4_1_1_3(), "rule__OperDef__Group_1_4_1_1_3__0");
 					put(grammarAccess.getOperDefAccess().getGroup_2(), "rule__OperDef__Group_2__0");
+					put(grammarAccess.getOperDefAccess().getGroup_2_1(), "rule__OperDef__Group_2_1__0");
+					put(grammarAccess.getOperDefAccess().getGroup_2_6(), "rule__OperDef__Group_2_6__0");
+					put(grammarAccess.getOperDefAccess().getGroup_3(), "rule__OperDef__Group_3__0");
 					put(grammarAccess.getTopDefAccess().getGroup_0(), "rule__TopDef__Group_0__0");
 					put(grammarAccess.getTopDefAccess().getGroup_0_1(), "rule__TopDef__Group_0_1__0");
 					put(grammarAccess.getTopDefAccess().getGroup_1(), "rule__TopDef__Group_1__0");
@@ -367,8 +370,13 @@ public class GFParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOperDefAccess().getOverloadsAssignment_1_4_1_1_2(), "rule__OperDef__OverloadsAssignment_1_4_1_1_2");
 					put(grammarAccess.getOperDefAccess().getOverloadsAssignment_1_4_1_1_3_1(), "rule__OperDef__OverloadsAssignment_1_4_1_1_3_1");
 					put(grammarAccess.getOperDefAccess().getNameAssignment_2_0(), "rule__OperDef__NameAssignment_2_0");
-					put(grammarAccess.getOperDefAccess().getPatternsAssignment_2_1(), "rule__OperDef__PatternsAssignment_2_1");
-					put(grammarAccess.getOperDefAccess().getDefinitionAssignment_2_3(), "rule__OperDef__DefinitionAssignment_2_3");
+					put(grammarAccess.getOperDefAccess().getNameAssignment_2_1_1(), "rule__OperDef__NameAssignment_2_1_1");
+					put(grammarAccess.getOperDefAccess().getOverloadAssignment_2_3(), "rule__OperDef__OverloadAssignment_2_3");
+					put(grammarAccess.getOperDefAccess().getOverloadsAssignment_2_5(), "rule__OperDef__OverloadsAssignment_2_5");
+					put(grammarAccess.getOperDefAccess().getOverloadsAssignment_2_6_1(), "rule__OperDef__OverloadsAssignment_2_6_1");
+					put(grammarAccess.getOperDefAccess().getNameAssignment_3_0(), "rule__OperDef__NameAssignment_3_0");
+					put(grammarAccess.getOperDefAccess().getPatternsAssignment_3_1(), "rule__OperDef__PatternsAssignment_3_1");
+					put(grammarAccess.getOperDefAccess().getDefinitionAssignment_3_3(), "rule__OperDef__DefinitionAssignment_3_3");
 					put(grammarAccess.getTopDefAccess().getCatAssignment_0_0(), "rule__TopDef__CatAssignment_0_0");
 					put(grammarAccess.getTopDefAccess().getDefinitionsAssignment_0_1_0(), "rule__TopDef__DefinitionsAssignment_0_1_0");
 					put(grammarAccess.getTopDefAccess().getFunAssignment_1_0(), "rule__TopDef__FunAssignment_1_0");

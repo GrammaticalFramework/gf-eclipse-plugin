@@ -12,36 +12,38 @@
 	<item value="false" key="OrganizeManifests.Translation.unusedKeys"/>
 	<item value="*.internal*" key="OrganizeManifests.ExportedPackages.packageFilter"/>
 	<item value="false" key="OrganizeManifests.General.cleanup"/>
-	<item value="false" key="initLaunch"/>
-	<item value="false" key="OrganizeManifests.ExportedPackages.makeInternal"/>
 	<item value="false" key="OrganizeManifests.AddDependencies"/>
+	<item value="false" key="OrganizeManifests.ExportedPackages.makeInternal"/>
+	<item value="false" key="initLaunch"/>
 	<item value="false" key="rcpPlugin"/>
-	<item value="false" key="OrganizeManifests.ExportedPackages.removeUnresolved"/>
 	<item value="true" key="OrganizeManifests.RequireImport.findRemoveUnused"/>
+	<item value="false" key="OrganizeManifests.ExportedPackages.removeUnresolved"/>
 	<item value="false" key="OrganizeManifests.RequireImport.resolve:markOptional"/>
 	<item value="false" key="OrganizeManifests.General.cleanup.removeUselessFiles"/>
+	<section name="dependenciesView">
+	</section>
 	<section name="org.eclipse.pde.ui.dialogs.PluginSelectionDialog">
 		<item value="true" key="ShowStatusLine"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
 		<section name="DialogBoundsSettings">
 			<item value="279" key="DIALOG_WIDTH"/>
 			<item value="209" key="DIALOG_Y_ORIGIN"/>
-			<item value="738" key="DIALOG_X_ORIGIN"/>
 			<item value="563" key="DIALOG_HEIGHT"/>
+			<item value="738" key="DIALOG_X_ORIGIN"/>
 			<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		</section>
 	</section>
-	<section name="dependenciesView">
-	</section>
-	<section name="org.eclipse.ltk.ui.refactoring.settings">
-	</section>
 	<section name="quick_assist_proposal_size">
 	</section>
-	<section name="PluginExportWizard">
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
 	</section>
 	<section name="RefactoringWizard.Organize Manifests">
 		<item value="522" key="height"/>
 		<item value="600" key="width"/>
+	</section>
+	<section name="PluginExportWizard">
+	</section>
+	<section name="pluginsView">
 	</section>
 	<section name="pde_compiler_errorwarnings_block">
 		<item value="false" key="3"/>
@@ -49,8 +51,6 @@
 		<item value="false" key="1"/>
 		<item value="true" key="0"/>
 		<item value="false" key="4"/>
-	</section>
-	<section name="pluginsView">
 	</section>
 	<section name="FeatureExportWizard">
 		<item value="true" key="exportUpdate"/>
@@ -65,18 +65,18 @@
 		<item value="false" key="jnlp"/>
 		<item value="" key="keypass"/>
 		<item value="false" key="exportSource"/>
-		<item value="" key="keystore"/>
 		<item value="false" key="useWorkspaceCompiledClasses"/>
-		<item value="" key="siteURL"/>
+		<item value="" key="keystore"/>
 		<item value="1" key="exportType"/>
-		<item value="/home/john/repositories/gf-eclipse-plugin" key="destination3"/>
+		<item value="" key="siteURL"/>
 		<item value="false" key="signJAR"/>
+		<item value="/home/john/repositories/gf-eclipse-plugin" key="destination3"/>
 		<item value="/home/john/repositories/gf-eclipse-plugin/plugins" key="destination2"/>
-		<item value="" key="jre"/>
 		<item value="/home/john/repositories/gf-eclipse-plugin/releases" key="destination1"/>
+		<item value="" key="jre"/>
 		<item value="/home/john/repositories/gf-eclipse-plugin/releases" key="destination0"/>
-		<item value="beta" key="qualifierName"/>
 		<item value="true" key="allowBinaryCycles"/>
+		<item value="beta" key="qualifierName"/>
 	</section>
 	<section name="JavaAttributeWizard">
 	</section>

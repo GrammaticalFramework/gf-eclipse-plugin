@@ -1664,6 +1664,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *     (
 	 *         (name+=Name name+=Name* (definition=Exp | (overload?='overload' overloads+=Def overloads+=Def*))) | 
 	 *         (name+=Name name+=Name* type=Exp (definition=Exp | (overload?='overload' overloads+=Def overloads+=Def*))?) | 
+	 *         (name+=Name name+=Name* overload?='overload' overloads+=Def overloads+=Def*) | 
 	 *         (name+=Name patterns=ListPatt definition=Exp)
 	 *     )
 	 *
@@ -1673,6 +1674,11 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         EXCLUDE_IF_SET overload
 	 *         EXCLUDE_IF_SET overloads
 	 *         EXCLUDE_IF_SET overloads
+	 *         EXCLUDE_IF_SET overload
+	 *         EXCLUDE_IF_SET overloads
+	 *         EXCLUDE_IF_SET overloads
+	 *         EXCLUDE_IF_SET name
+	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET overload
 	 *         EXCLUDE_IF_SET overloads
 	 *         EXCLUDE_IF_SET overloads
@@ -1687,6 +1693,11 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET definition
+	 *         EXCLUDE_IF_SET overload
+	 *         EXCLUDE_IF_SET overloads
+	 *         EXCLUDE_IF_SET overloads
+	 *         EXCLUDE_IF_SET name
+	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET overload
 	 *         EXCLUDE_IF_SET overloads
 	 *         EXCLUDE_IF_SET overloads
@@ -1711,7 +1722,12 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         EXCLUDE_IF_SET overload
 	 *         EXCLUDE_IF_SET overloads
 	 *         EXCLUDE_IF_SET overloads
-	 *    overload[0, 2]
+	 *         EXCLUDE_IF_SET name
+	 *         EXCLUDE_IF_SET name
+	 *         EXCLUDE_IF_SET overload
+	 *         EXCLUDE_IF_SET overloads
+	 *         EXCLUDE_IF_SET overloads
+	 *    overload[0, 3]
 	 *         EXCLUDE_IF_SET definition
 	 *         EXCLUDE_IF_SET definition
 	 *         EXCLUDE_IF_SET name

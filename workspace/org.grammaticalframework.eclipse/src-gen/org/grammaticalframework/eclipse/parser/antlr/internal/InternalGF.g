@@ -1990,41 +1990,153 @@ ruleOperDef returns [EObject current=null]
 	    }
 
 )
+)(	otherlv_27=',' 
+    {
+    	newLeafNode(otherlv_27, grammarAccess.getOperDefAccess().getCommaKeyword_2_1_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getOperDefAccess().getNameNameParserRuleCall_2_1_1_0()); 
+	    }
+		lv_name_28_0=ruleName		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getOperDefRule());
+	        }
+       		add(
+       			$current, 
+       			"name",
+        		lv_name_28_0, 
+        		"Name");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_29=':' 
+    {
+    	newLeafNode(otherlv_29, grammarAccess.getOperDefAccess().getColonKeyword_2_2());
+    }
+(
+(
+		lv_overload_30_0=	'overload' 
+    {
+        newLeafNode(lv_overload_30_0, grammarAccess.getOperDefAccess().getOverloadOverloadKeyword_2_3_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getOperDefRule());
+	        }
+       		setWithLastConsumed($current, "overload", true, "overload");
+	    }
+
+)
+)	otherlv_31='{' 
+    {
+    	newLeafNode(otherlv_31, grammarAccess.getOperDefAccess().getLeftCurlyBracketKeyword_2_4());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getOperDefAccess().getOverloadsDefParserRuleCall_2_5_0()); 
+	    }
+		lv_overloads_32_0=ruleDef		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getOperDefRule());
+	        }
+       		add(
+       			$current, 
+       			"overloads",
+        		lv_overloads_32_0, 
+        		"Def");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_33=';' 
+    {
+    	newLeafNode(otherlv_33, grammarAccess.getOperDefAccess().getSemicolonKeyword_2_6_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getOperDefAccess().getOverloadsDefParserRuleCall_2_6_1_0()); 
+	    }
+		lv_overloads_34_0=ruleDef		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getOperDefRule());
+	        }
+       		add(
+       			$current, 
+       			"overloads",
+        		lv_overloads_34_0, 
+        		"Def");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_35=';' 
+    {
+    	newLeafNode(otherlv_35, grammarAccess.getOperDefAccess().getSemicolonKeyword_2_6_2());
+    }
+)?)*	otherlv_36='}' 
+    {
+    	newLeafNode(otherlv_36, grammarAccess.getOperDefAccess().getRightCurlyBracketKeyword_2_7());
+    }
+)
+    |((
+(
+		{ 
+	        newCompositeNode(grammarAccess.getOperDefAccess().getNameNameParserRuleCall_3_0_0()); 
+	    }
+		lv_name_37_0=ruleName		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getOperDefRule());
+	        }
+       		add(
+       			$current, 
+       			"name",
+        		lv_name_37_0, 
+        		"Name");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getOperDefAccess().getPatternsListPattParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getOperDefAccess().getPatternsListPattParserRuleCall_3_1_0()); 
 	    }
-		lv_patterns_27_0=ruleListPatt		{
+		lv_patterns_38_0=ruleListPatt		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getOperDefRule());
 	        }
        		set(
        			$current, 
        			"patterns",
-        		lv_patterns_27_0, 
+        		lv_patterns_38_0, 
         		"ListPatt");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_28='=' 
+)	otherlv_39='=' 
     {
-    	newLeafNode(otherlv_28, grammarAccess.getOperDefAccess().getEqualsSignKeyword_2_2());
+    	newLeafNode(otherlv_39, grammarAccess.getOperDefAccess().getEqualsSignKeyword_3_2());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getOperDefAccess().getDefinitionExpParserRuleCall_2_3_0()); 
+	        newCompositeNode(grammarAccess.getOperDefAccess().getDefinitionExpParserRuleCall_3_3_0()); 
 	    }
-		lv_definition_29_0=ruleExp		{
+		lv_definition_40_0=ruleExp		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getOperDefRule());
 	        }
        		set(
        			$current, 
        			"definition",
-        		lv_definition_29_0, 
+        		lv_definition_40_0, 
         		"Exp");
 	        afterParserOrEnumRuleCall();
 	    }

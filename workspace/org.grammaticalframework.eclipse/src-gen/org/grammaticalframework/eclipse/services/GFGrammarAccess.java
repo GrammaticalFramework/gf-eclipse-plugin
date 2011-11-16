@@ -29,13 +29,9 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		/// *
-		// * GF grammar based on the GF Book (2011), Appendix C.6
-		// * 
-		// * Some (hopefully syntactically-equivalent) modifications have been made to please ANTLR.
-		// * 
 		// * This grammar basically treats a single resource (file), which is why we start directly
 		// * from ModDef and exclude the rules ListModDef, Grammar.
-		// * / / *
+		//
 		//Grammar :
 		//	ListModDef
 		//;
@@ -1176,22 +1172,43 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Assignment cNameAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
 		private final RuleCall cNameNameParserRuleCall_2_0_0 = (RuleCall)cNameAssignment_2_0.eContents().get(0);
-		private final Assignment cPatternsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cPatternsListPattParserRuleCall_2_1_0 = (RuleCall)cPatternsAssignment_2_1.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		private final Assignment cDefinitionAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
-		private final RuleCall cDefinitionExpParserRuleCall_2_3_0 = (RuleCall)cDefinitionAssignment_2_3.eContents().get(0);
+		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
+		private final Keyword cCommaKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
+		private final Assignment cNameAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
+		private final RuleCall cNameNameParserRuleCall_2_1_1_0 = (RuleCall)cNameAssignment_2_1_1.eContents().get(0);
+		private final Keyword cColonKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
+		private final Assignment cOverloadAssignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
+		private final Keyword cOverloadOverloadKeyword_2_3_0 = (Keyword)cOverloadAssignment_2_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2_4 = (Keyword)cGroup_2.eContents().get(4);
+		private final Assignment cOverloadsAssignment_2_5 = (Assignment)cGroup_2.eContents().get(5);
+		private final RuleCall cOverloadsDefParserRuleCall_2_5_0 = (RuleCall)cOverloadsAssignment_2_5.eContents().get(0);
+		private final Group cGroup_2_6 = (Group)cGroup_2.eContents().get(6);
+		private final Keyword cSemicolonKeyword_2_6_0 = (Keyword)cGroup_2_6.eContents().get(0);
+		private final Assignment cOverloadsAssignment_2_6_1 = (Assignment)cGroup_2_6.eContents().get(1);
+		private final RuleCall cOverloadsDefParserRuleCall_2_6_1_0 = (RuleCall)cOverloadsAssignment_2_6_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2_6_2 = (Keyword)cGroup_2_6.eContents().get(2);
+		private final Keyword cRightCurlyBracketKeyword_2_7 = (Keyword)cGroup_2.eContents().get(7);
+		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
+		private final Assignment cNameAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
+		private final RuleCall cNameNameParserRuleCall_3_0_0 = (RuleCall)cNameAssignment_3_0.eContents().get(0);
+		private final Assignment cPatternsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cPatternsListPattParserRuleCall_3_1_0 = (RuleCall)cPatternsAssignment_3_1.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Assignment cDefinitionAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
+		private final RuleCall cDefinitionExpParserRuleCall_3_3_0 = (RuleCall)cDefinitionAssignment_3_3.eContents().get(0);
 		
 		//// For handling the overload syntax
 		//OperDef returns Def:
 		//	name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)*
 		//	"}") | name+=Name ("," name+=Name)* ":" type=Exp ("=" (definition=Exp | overload?="overload" "{" overloads+=Def (";"
-		//	overloads+=Def ";"?)* "}"))? | name+=Name patterns=ListPatt "=" definition=Exp;
+		//	overloads+=Def ";"?)* "}"))? | name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";"
+		//	overloads+=Def ";"?)* "}" | name+=Name patterns=ListPatt "=" definition=Exp;
 		public ParserRule getRule() { return rule; }
 
 		//name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)*
 		//"}") | name+=Name ("," name+=Name)* ":" type=Exp ("=" (definition=Exp | overload?="overload" "{" overloads+=Def (";"
-		//overloads+=Def ";"?)* "}"))? | name+=Name patterns=ListPatt "=" definition=Exp
+		//overloads+=Def ";"?)* "}"))? | name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";"
+		//overloads+=Def ";"?)* "}" | name+=Name patterns=ListPatt "=" definition=Exp
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)*
@@ -1346,7 +1363,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_1_4_1_1_4() { return cRightCurlyBracketKeyword_1_4_1_1_4; }
 
-		//name+=Name patterns=ListPatt "=" definition=Exp
+		//name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)* "}"
 		public Group getGroup_2() { return cGroup_2; }
 
 		//name+=Name
@@ -1355,20 +1372,77 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//Name
 		public RuleCall getNameNameParserRuleCall_2_0_0() { return cNameNameParserRuleCall_2_0_0; }
 
+		//("," name+=Name)*
+		public Group getGroup_2_1() { return cGroup_2_1; }
+
+		//","
+		public Keyword getCommaKeyword_2_1_0() { return cCommaKeyword_2_1_0; }
+
+		//name+=Name
+		public Assignment getNameAssignment_2_1_1() { return cNameAssignment_2_1_1; }
+
+		//Name
+		public RuleCall getNameNameParserRuleCall_2_1_1_0() { return cNameNameParserRuleCall_2_1_1_0; }
+
+		//":"
+		public Keyword getColonKeyword_2_2() { return cColonKeyword_2_2; }
+
+		//overload?="overload"
+		public Assignment getOverloadAssignment_2_3() { return cOverloadAssignment_2_3; }
+
+		//"overload"
+		public Keyword getOverloadOverloadKeyword_2_3_0() { return cOverloadOverloadKeyword_2_3_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2_4() { return cLeftCurlyBracketKeyword_2_4; }
+
+		//overloads+=Def
+		public Assignment getOverloadsAssignment_2_5() { return cOverloadsAssignment_2_5; }
+
+		//Def
+		public RuleCall getOverloadsDefParserRuleCall_2_5_0() { return cOverloadsDefParserRuleCall_2_5_0; }
+
+		//(";" overloads+=Def ";"?)*
+		public Group getGroup_2_6() { return cGroup_2_6; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2_6_0() { return cSemicolonKeyword_2_6_0; }
+
+		//overloads+=Def
+		public Assignment getOverloadsAssignment_2_6_1() { return cOverloadsAssignment_2_6_1; }
+
+		//Def
+		public RuleCall getOverloadsDefParserRuleCall_2_6_1_0() { return cOverloadsDefParserRuleCall_2_6_1_0; }
+
+		//";"?
+		public Keyword getSemicolonKeyword_2_6_2() { return cSemicolonKeyword_2_6_2; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_2_7() { return cRightCurlyBracketKeyword_2_7; }
+
+		//name+=Name patterns=ListPatt "=" definition=Exp
+		public Group getGroup_3() { return cGroup_3; }
+
+		//name+=Name
+		public Assignment getNameAssignment_3_0() { return cNameAssignment_3_0; }
+
+		//Name
+		public RuleCall getNameNameParserRuleCall_3_0_0() { return cNameNameParserRuleCall_3_0_0; }
+
 		//patterns=ListPatt
-		public Assignment getPatternsAssignment_2_1() { return cPatternsAssignment_2_1; }
+		public Assignment getPatternsAssignment_3_1() { return cPatternsAssignment_3_1; }
 
 		//ListPatt
-		public RuleCall getPatternsListPattParserRuleCall_2_1_0() { return cPatternsListPattParserRuleCall_2_1_0; }
+		public RuleCall getPatternsListPattParserRuleCall_3_1_0() { return cPatternsListPattParserRuleCall_3_1_0; }
 
 		//"="
-		public Keyword getEqualsSignKeyword_2_2() { return cEqualsSignKeyword_2_2; }
+		public Keyword getEqualsSignKeyword_3_2() { return cEqualsSignKeyword_3_2; }
 
 		//definition=Exp
-		public Assignment getDefinitionAssignment_2_3() { return cDefinitionAssignment_2_3; }
+		public Assignment getDefinitionAssignment_3_3() { return cDefinitionAssignment_3_3; }
 
 		//Exp
-		public RuleCall getDefinitionExpParserRuleCall_2_3_0() { return cDefinitionExpParserRuleCall_2_3_0; }
+		public RuleCall getDefinitionExpParserRuleCall_3_3_0() { return cDefinitionExpParserRuleCall_3_3_0; }
 	}
 
 	public class TopDefElements extends AbstractParserRuleElementFinder {
@@ -4898,13 +4972,9 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	/// *
-	// * GF grammar based on the GF Book (2011), Appendix C.6
-	// * 
-	// * Some (hopefully syntactically-equivalent) modifications have been made to please ANTLR.
-	// * 
 	// * This grammar basically treats a single resource (file), which is why we start directly
 	// * from ModDef and exclude the rules ListModDef, Grammar.
-	// * / / *
+	//
 	//Grammar :
 	//	ListModDef
 	//;
@@ -4989,7 +5059,8 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	//OperDef returns Def:
 	//	name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)*
 	//	"}") | name+=Name ("," name+=Name)* ":" type=Exp ("=" (definition=Exp | overload?="overload" "{" overloads+=Def (";"
-	//	overloads+=Def ";"?)* "}"))? | name+=Name patterns=ListPatt "=" definition=Exp;
+	//	overloads+=Def ";"?)* "}"))? | name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";"
+	//	overloads+=Def ";"?)* "}" | name+=Name patterns=ListPatt "=" definition=Exp;
 	public OperDefElements getOperDefAccess() {
 		return (pOperDef != null) ? pOperDef : (pOperDef = new OperDefElements());
 	}
