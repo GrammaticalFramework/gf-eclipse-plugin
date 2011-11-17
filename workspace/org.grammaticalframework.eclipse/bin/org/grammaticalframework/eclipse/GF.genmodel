@@ -112,6 +112,7 @@
     <genClasses ecoreClass="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/sort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/builtInCat"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/string"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/integer"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Exp6/double"/>

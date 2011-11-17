@@ -20,65 +20,41 @@ import org.eclipse.debug.ui.AbstractLaunchConfigurationTab;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.PlatformUI;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class GFLaunchConfigTab.
  */
 public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 
-	// Local/shared UI widgets
-//	private Text fGFPath;
-//	public String getfGFPath() {
-//		return fGFPath.getText();
-//	}
-	/**
-	 * The working directory.
-	 */
+	// UI widgets
 	private Text fWorkingDirectory;
-	
-	/**
-	 * Gets the f working directory.
-	 *
-	 * @return the f working directory
-	 */
 	public String getfWorkingDirectory() {
 		return fWorkingDirectory.getText();
 	}
 	
-	/**
-	 * The options.
-	 */
-	private Text fOptions;
+	private Button fInteractiveMode;
+	public Boolean getfInteractiveMode() {
+		return fInteractiveMode.getSelection();
+	}
 	
-	/**
-	 * Gets the f options.
-	 *
-	 * @return the f options
-	 */
+	private Text fOptions;
 	public String getfOptions() {
 		return fOptions.getText();
 	}
 	
-	/**
-	 * The filenames.
-	 */
 	private Text fFilenames;
-	
-	/**
-	 * Gets the f arguments.
-	 *
-	 * @return the f arguments
-	 */
 	public String getfArguments() {
 		return fFilenames.getText();
 	}
@@ -96,16 +72,7 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		FontData fontData = parent.getFont().getFontData()[0];
 		Font fontItalic = new Font(comp.getDisplay(), new FontData(fontData.getName(), fontData.getHeight(), SWT.ITALIC));
 		
-		// GF Path
-//		new Label(comp, SWT.NULL).setText("&Path to GF executable:");
-//		fGFPath = new Text(comp, SWT.BORDER | SWT.SINGLE);
-//		fGFPath.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-//		fGFPath.addModifyListener(new ModifyListener() {
-//			public void modifyText(ModifyEvent e) {
-//				dialogChanged();
-//			}
-//		});
-//		new Label(comp, SWT.NULL);
+		// Little notice
 		Label l = new Label(comp, SWT.NULL);
 		l.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
 		l.setFont(fontItalic);
@@ -131,9 +98,18 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 			}
 		});
 		new Label(comp, SWT.NULL);
-		l = new Label(comp, SWT.NULL);
-		l.setFont(fontItalic);
-		l.setText("--batch is always implicitly specified ");
+
+		// Batch/Interactive mode
+		fInteractiveMode = new Button(comp, SWT.CHECK);
+		fInteractiveMode.setText("&Interactive mode (GF shell)");
+		fInteractiveMode.addSelectionListener(new SelectionListener() {
+			public void widgetSelected(SelectionEvent e) {
+				dialogChanged();
+			}
+			public void widgetDefaultSelected(SelectionEvent e) {
+				dialogChanged();
+			}
+		});
 		
 		// Filenames
 		new Label(comp, SWT.NULL).setText("&Source filenames:");
@@ -155,10 +131,6 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	 */
 	private void dialogChanged() {
 		setDirty(true);
-//		if (getfGFPath().length() == 0) {
-//			updateStatus("Full path to GF binary must be specified.");
-//		}
-//		else if (getfArguments().length() == 0) {
 		if (getfArguments().length() == 0) {
 			updateStatus("A least one source filename must be specified.");
 		}
@@ -189,12 +161,6 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	 */
 	public void initializeFrom(ILaunchConfiguration configuration) {
 
-//		String defaultGFPath;
-//		try {
-//			defaultGFPath = System.getenv("HOME") + "/.cabal/bin/gf";
-//		} catch (Exception _) {
-//			 defaultGFPath = "";
-//		}
 		String defaultOptions = "--force-recomp";
 		
 		// Determine default working directory
@@ -209,14 +175,14 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		}
 		
 		try {
-//			fGFPath.setText(configuration.getAttribute(IGFLaunchConfigConstants.GF_PATH, defaultGFPath));
 			fWorkingDirectory.setText(configuration.getAttribute(IGFLaunchConfigConstants.WORKING_DIR, defaultWorkingDir));
 			fOptions.setText(configuration.getAttribute(IGFLaunchConfigConstants.OPTIONS, defaultOptions));
+			fInteractiveMode.setSelection(configuration.getAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, false));
 			fFilenames.setText(configuration.getAttribute(IGFLaunchConfigConstants.FILENAMES, ""));
 		} catch (CoreException e) {
-//			fGFPath.setText(null);
 			fWorkingDirectory.setText(null);
 			fOptions.setText("--force-recomp");
+			fInteractiveMode.setSelection(false);
 			fFilenames.setText(null);
 		}
 
@@ -226,9 +192,9 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#performApply(org.eclipse.debug.core.ILaunchConfigurationWorkingCopy)
 	 */
 	public void performApply(ILaunchConfigurationWorkingCopy configuration) {
-//		configuration.setAttribute(IGFLaunchConfigConstants.GF_PATH, getfGFPath());
 		configuration.setAttribute(IGFLaunchConfigConstants.WORKING_DIR, getfWorkingDirectory());
 		configuration.setAttribute(IGFLaunchConfigConstants.OPTIONS, getfOptions());
+		configuration.setAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, getfInteractiveMode());
 		configuration.setAttribute(IGFLaunchConfigConstants.FILENAMES, getfArguments());
 		setDirty(false);
 	}

@@ -1,0 +1,43 @@
+Act	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:7	
+BaseAct	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:15	Act -> Act -> ListAct
+BaseClause	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:12	Clause -> Clause -> ListClause
+BaseClauseO	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:13	ClauseO -> ClauseO -> ListClauseO
+BaseClauseP	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:14	ClauseP -> ClauseP -> ListClauseP
+Clause	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:8	
+ClauseF	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:11	
+ClauseO	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:9	
+ClauseP	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:10	
+ConsAct	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:15	Act -> ListAct -> ListAct
+ConsClause	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:12	Clause -> ListClause -> ListClause
+ConsClauseO	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:13	ClauseO -> ListClauseO -> ListClauseO
+ConsClauseP	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:14	ClauseP -> ListClauseP -> ListClauseP
+F	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:32	Act -> Clause -> ClauseF
+ListAct	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:15	
+ListClause	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:12	
+ListClauseO	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:13	
+ListClauseP	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:14	
+NP	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:5	
+O	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:26	Act -> Clause -> ClauseO
+P	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:29	Act -> ClauseP
+V	indir	Verbs		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verbs.gf-tags
+andAct	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:35	ListAct -> Act
+andC	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:21	ListClause -> Clause
+atom	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:34	V -> NP -> Act
+buy_V	indir	Verbs		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verbs.gf-tags
+check_V	indir	Verbs		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verbs.gf-tags
+choiceO	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:27	ListClauseO -> ClauseO
+choiceP	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:30	ListClauseP -> ClauseP
+clauseF	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:20	NP -> ClauseF -> Clause
+clauseO	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:18	NP -> ClauseO -> Clause
+clauseP	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:19	NP -> ClauseP -> Clause
+cond	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:22	NP -> Act -> Clause -> Clause
+initiate_V	indir	Verbs		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verbs.gf-tags
+npPl	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:38	String -> NP
+npSg	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:37	String -> NP
+open_V	indir	Verbs		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verbs.gf-tags
+reply_V	indir	Verbs		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verbs.gf-tags
+request_V	indir	Verbs		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verbs.gf-tags
+satisfaction	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:23	Clause
+supply_V	indir	Verbs		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verbs.gf-tags
+suspend_V	indir	Verbs		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verbs.gf-tags
+violation	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf:24	Clause

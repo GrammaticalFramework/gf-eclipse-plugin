@@ -1,0 +1,87 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2011
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement n° FP7-ICT-247914.
+ */
+package org.grammaticalframework.eclipse.ui.perspectives;
+
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.ui.console.ConsolePlugin;
+import org.eclipse.ui.console.IConsole;
+import org.eclipse.ui.console.IOConsole;
+import org.eclipse.ui.console.IOConsoleInputStream;
+import org.eclipse.ui.console.IOConsoleOutputStream;
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GFConsole.
+ */
+public class GFConsole {
+	
+	/**
+	 * The console.
+	 */
+	private static IOConsole console = null;
+	
+	/**
+	 * The streams
+	 */
+//	private static IOConsoleInputStream inputStream = null;
+	private static IOConsoleOutputStream outputStream = null;
+	
+	/**
+	 * Gets the console.
+	 *
+	 * @return the console
+	 */
+	public static IOConsole getConsole() {
+		if (console == null) {
+			ImageDescriptor image = ImageDescriptor.createFromFile(null, "icons/gf-console.png");
+			console = new IOConsole("GF Console", image);
+			console.activate();
+			ConsolePlugin.getDefault().getConsoleManager().addConsoles(new IConsole[]{ console });
+			
+			// Try sort out this interactive console stuff
+//			IOConsoleInputStream inputStream = console.getInputStream();
+//			IOConsoleOutputStream outputStream = console.newOutputStream();
+
+//			System.setOut(new PrintStream(console.newMessageStream()));
+//			System.setErr(new PrintStream(console.newMessageStream()));
+//			System.setIn(console.getInputStream());
+		}
+		return console;
+	} 
+	
+	/**
+	 * Gets the output stream.
+	 *
+	 * @return the stream
+	 */
+	public static IOConsoleInputStream getInputStream() {
+		return getConsole().getInputStream();
+	}
+	
+	/**
+	 * Gets the output stream.
+	 *
+	 * @return the stream
+	 */
+	public static IOConsoleOutputStream getOutputStream() {
+		if (outputStream == null) {
+			outputStream = getConsole().newOutputStream();
+		}
+		return outputStream;
+	}
+	
+	/**
+	 * Clear.
+	 */
+	public static void clear() {
+		console.clearConsole();
+	}
+
+}

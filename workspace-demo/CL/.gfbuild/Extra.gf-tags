@@ -1,0 +1,104 @@
+A	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+A2	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+AP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+AdA	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+AdN	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+AdV	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+Adv	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+Ant	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+BaseVPI	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:24	VPI -> VPI -> ListVPI
+BaseVPS	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:34	VPS -> VPS -> ListVPS
+CAdv	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+CN	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Card	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Cl	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+ClSlash	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Comp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+CompIQuant	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:48	IQuant -> IComp
+ComplBareVS	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:13	VS -> S -> VP
+ComplVPIVV	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:29	VV -> VPI -> VP
+Conj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+ConjVPI	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:28	Conj -> ListVPI -> VPI
+ConjVPS	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:38	Conj -> ListVPS -> VPS
+ConsVPI	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:24	VPI -> ListVPI -> ListVPI
+ConsVPS	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:34	VPS -> ListVPS -> ListVPS
+Det	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Digits	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+EmbedPresPart	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:70	VP -> SC
+EmptyRelSlash	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:16	ClSlash -> RCl
+Foc	cat	/home/john/repositories/GF/lib/src/abstract/Extra.gf:55	
+FocAP	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:61	AP -> NP -> Foc
+FocAdV	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:60	AdV -> Cl -> Foc
+FocAdv	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:59	Adv -> Cl -> Foc
+FocNeg	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:62	Cl -> Foc
+FocObj	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:58	NP -> ClSlash -> Foc
+FocVP	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:63	VP -> NP -> Foc
+FocVV	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:64	VV -> VP -> NP -> Foc
+GenIP	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:11	IP -> IQuant
+GenNP	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:10	NP -> Quant
+GenRP	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:12	Num -> CN -> RP
+IAdv	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+IAdvAdv	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:46	Adv -> IAdv
+IComp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+ICompAP	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:45	AP -> IComp
+IDet	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+IP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+IQuant	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Imp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Interj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+ListVPI	cat	/home/john/repositories/GF/lib/src/abstract/Extra.gf:24	
+ListVPS	cat	/home/john/repositories/GF/lib/src/abstract/Extra.gf:34	
+MkVPI	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:27	VP -> VPI
+MkVPS	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:37	Temp -> Pol -> VP -> VPS
+N	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+N2	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+N3	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+NP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Num	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Numeral	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Ord	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+PConj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+PN	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+PartVP	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:69	VP -> AP
+PassVPSlash	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:74	VPSlash -> VP
+Phr	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+Pol	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+PredVPS	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:39	NP -> VPS -> S
+Predet	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Prep	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+PrepCN	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:50	Prep -> CN -> Adv
+ProDrop	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:44	Pron -> Pron
+Pron	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+QCl	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+QS	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Quant	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+RCl	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+RP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+RS	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+S	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+SC	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+SSlash	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+StrandQuestSlash	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:17	IP -> ClSlash -> QCl
+StrandRelSlash	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:15	RP -> ClSlash -> RCl
+Subj	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Temp	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+Tense	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+Text	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+UseFoc	fun	/home/john/repositories/GF/lib/src/abstract/Extra.gf:66	Temp -> Pol -> Foc -> Utt
+Utt	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+V	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V2	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V2A	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V2Q	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V2S	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V2V	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V3	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VA	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VP	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VPI	cat	/home/john/repositories/GF/lib/src/abstract/Extra.gf:23	
+VPS	cat	/home/john/repositories/GF/lib/src/abstract/Extra.gf:33	
+VPSlash	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VQ	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VS	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VV	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Voc	indir	Cat		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags

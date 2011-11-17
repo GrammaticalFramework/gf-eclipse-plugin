@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IFile"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.TagFileHelper"/>
-<fullyQualifiedTypeName name="org.eclipse.core.internal.resources.File"/>
-<fullyQualifiedTypeName name="java.io.File"/>
-<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
-<fullyQualifiedTypeName name="java.io.FileWriter"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.util.IResourceScopeCache"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.builder.GFBuilder"/>
-<fullyQualifiedTypeName name="java.util.Hashtable"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IContainer"/>
-<fullyQualifiedTypeName name="org.eclipse.emf.ecore.xml.type.internal.RegEx"/>
-<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
 <fullyQualifiedTypeName name="java.util.regex.Matcher"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="org.eclipse.core.resources.IResource"/>
@@ -57,7 +43,21 @@
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFException"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.io.PrintStream"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
 <fullyQualifiedTypeName name="java.io.FilterInputStream"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.console.IOConsole"/>
+<fullyQualifiedTypeName name="org.eclipse.ui.console.IOConsoleOutputStream"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.PipedInputStream"/>
+<fullyQualifiedTypeName name="java.io.PipedOutputStream"/>
+<fullyQualifiedTypeName name="org.eclipse.debug.core.DebugPlugin"/>
+<fullyQualifiedTypeName name="org.eclipse.debug.core.model.IProcess"/>
+<fullyQualifiedTypeName name="org.eclipse.debug.core.IStreamListener"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.launch.GFConsoleDelegate"/>
+<fullyQualifiedTypeName name="java.io.BufferedWriter"/>
+<fullyQualifiedTypeName name="java.io.OutputStreamWriter"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Button"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.events.SelectionListener"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.perspectives.GFConsole"/>
 </qualifiedTypeNameHistroy>

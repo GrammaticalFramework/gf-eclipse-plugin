@@ -1,0 +1,132 @@
+BIND	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+Bool	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+CAPIT	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+Conjunction	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:19	
+Conjunction	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:19	Type
+ConjunctionDistr	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:20	
+ConjunctionDistr	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:20	Type
+E0	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+E1	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+E2	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+ENumber	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+Emore	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+False	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+ListSize	param	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:4	
+ListTable	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:36	
+ListTable	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:36	Type -> Type
+ListTable2	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:55-56	
+ListTable2	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:55-56	Type -> Type -> Type
+ListTable3	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:80-81	
+ListTable3	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:80-81	Type -> Type -> Type -> Type
+ListTable4	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:107-108	
+ListTable4	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:107-108	Type -> Type -> Type -> Type -> Type
+ListX	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:7	
+ListX	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:7	Type
+ManyElem	param-value	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:4	ListSize
+PARA	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+SD2	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+SP1	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+SS	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+SS1	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+True	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+TwoElem	param-value	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:4	ListSize
+andB	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+bothWays	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+capitalize	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+cc2	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+cc3	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+comma	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:135	
+comma	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:135	Str
+conjunctDistrSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:31-32	
+conjunctDistrSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:31-32	{s1 : Str; s2 : Str} -> {s1 : Str; s2 : Str} -> {s : Str}
+conjunctDistrTable	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:49-51	
+conjunctDistrTable	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:49-51	(P : Type) -> {s1 : Str; s2 : Str} -> {s1 : P => Str; s2 : P => Str} -> {s : P => Str}
+conjunctDistrTable2	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:74-78	
+conjunctDistrTable2	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:74-78	(P : Type) -> (Q : Type) -> {s1 : Str; s2 : Str} -> {s1 : P => Q => Str; s2 : P => Q => Str} -> {s : P => Q => Str}
+conjunctDistrTable3	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:101-105	
+conjunctDistrTable3	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:101-105	(P : Type) -> (Q : Type) -> (R : Type) -> {s1 : Str; s2 : Str} -> {s1 : P => Q => R => Str; s2 : P => Q => R => Str} -> {s : P => Q => R => Str}
+conjunctDistrTable4	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:128-132	
+conjunctDistrTable4	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:128-132	(P : Type) -> (Q : Type) -> (R : Type) -> (T : Type) -> {s1 : Str; s2 : Str} -> {s1 : P => Q => R => T => Str; s2 : P => Q => R => T => Str} -> {s : P => Q => R => T => Str}
+conjunctDistrX	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:25-26	
+conjunctDistrX	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:25-26	{s1 : Str; s2 : Str} -> {s1 : Str; s2 : Str} -> Str
+conjunctSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:28-29	
+conjunctSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:28-29	{s : Str} -> {s1 : Str; s2 : Str} -> {s : Str}
+conjunctTable	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:45-47	
+conjunctTable	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:45-47	(P : Type) -> {s : Str} -> {s1 : P => Str; s2 : P => Str} -> {s : P => Str}
+conjunctTable2	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:69-72	
+conjunctTable2	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:69-72	(P : Type) -> (Q : Type) -> {s : Str} -> {s1 : P => Q => Str; s2 : P => Q => Str} -> {s : P => Q => Str}
+conjunctTable3	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:96-99	
+conjunctTable3	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:96-99	(P : Type) -> (Q : Type) -> (R : Type) -> {s : Str} -> {s1 : P => Q => R => Str; s2 : P => Q => R => Str} -> {s : P => Q => R => Str}
+conjunctTable4	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:123-126	
+conjunctTable4	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:123-126	(P : Type) -> (Q : Type) -> (R : Type) -> (T : Type) -> {s : Str} -> {s1 : P => Q => R => T => Str; s2 : P => Q => R => T => Str} -> {s : P => Q => R => T => Str}
+conjunctX	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:22-23	
+conjunctX	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:22-23	{s : Str} -> {s1 : Str; s2 : Str} -> Str
+consSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:16-17	
+consSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:16-17	Str -> {s1 : Str; s2 : Str} -> {s : Str} -> {s1 : Str; s2 : Str}
+consStr	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:11-12	
+consStr	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:11-12	Str -> {s1 : Str; s2 : Str} -> Str -> {s1 : Str; s2 : Str}
+consTable	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:41-43	
+consTable	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:41-43	(P : Type) -> Str -> {s1 : P => Str; s2 : P => Str} -> {s : P => Str} -> {s1 : P => Str; s2 : P => Str}
+consTable2	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:62-67	
+consTable2	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:62-67	(P : Type) -> (Q : Type) -> Str -> {s1 : P => Q => Str; s2 : P => Q => Str} -> {s : P => Q => Str} -> {s1 : P => Q => Str; s2 : P => Q => Str}
+consTable3	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:88-94	
+consTable3	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:88-94	(P : Type) -> (Q : Type) -> (R : Type) -> Str -> {s1 : P => Q => R => Str; s2 : P => Q => R => Str} -> {s : P => Q => R => Str} -> {s1 : P => Q => R => Str; s2 : P => Q => R => Str}
+consTable4	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:115-121	
+consTable4	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:115-121	(P : Type) -> (Q : Type) -> (R : Type) -> (T : Type) -> Str -> {s1 : P => Q => R => T => Str; s2 : P => Q => R => T => Str} -> {s : P => Q => R => T => Str} -> {s1 : P => Q => R => T => Str; s2 : P => Q => R => T => Str}
+consrSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:142-143	
+consrSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:142-143	Str -> {s : Str} -> {s1 : Str; s2 : Str} -> {s1 : Str; s2 : Str}
+consrStr	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:139-140	
+consrStr	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:139-140	Str -> Str -> {s1 : Str; s2 : Str} -> {s1 : Str; s2 : Str}
+consrTable	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:145-147	
+consrTable	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:145-147	(P : Type) -> Str -> {s : P => Str} -> {s1 : P => Str; s2 : P => Str} -> {s1 : P => Str; s2 : P => Str}
+consrTable2	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:149-154	
+consrTable2	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:149-154	(P : Type) -> (Q : Type) -> Str -> {s : P => Q => Str} -> {s1 : P => Q => Str; s2 : P => Q => Str} -> {s1 : P => Q => Str; s2 : P => Q => Str}
+consrTable3	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:156-163	
+consrTable3	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:156-163	(P : Type) -> (Q : Type) -> (R : Type) -> Str -> {s : P => Q => R => Str} -> {s1 : P => Q => R => Str; s2 : P => Q => R => Str} -> {s1 : P => Q => R => Str; s2 : P => Q => R => Str}
+consrTable4	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:165-171	
+consrTable4	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:165-171	(P : Type) -> (Q : Type) -> (R : Type) -> (T : Type) -> Str -> {s : P => Q => R => T => Str} -> {s1 : P => Q => R => T => Str; s2 : P => Q => R => T => Str} -> {s1 : P => Q => R => T => Str; s2 : P => Q => R => T => Str}
+constStr	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+constTable	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+eNext	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+embedSS	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+glue	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+glueOpt	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+id	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+ifTok	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+if_then_Str	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+if_then_else	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+infixSS	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+init	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+isNil	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+last	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+noglueOpt	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+nonExist	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+notB	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+onlyIf	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+optStr	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+orB	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+paren	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+parenss	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+pbool2bool	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+postfixSS	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+preOrPost	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+prefixSS	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+sd2	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+sp1	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+ss	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+ss1	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+ss2	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+ss3	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+strOpt	indir	Prelude		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Prelude.gf-tags
+twoSS	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:14-15	
+twoSS	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:14-15	{s : Str} -> {s : Str} -> {s1 : Str; s2 : Str}
+twoStr	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:9-10	
+twoStr	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:9-10	(x : Str) -> (y : Str) -> {s1 : Str; s2 : Str}
+twoTable	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:38-39	
+twoTable	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:38-39	(P : Type) -> {s : P => Str} -> {s : P => Str} -> {s1 : P => Str; s2 : P => Str}
+twoTable2	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:58-60	
+twoTable2	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:58-60	(P : Type) -> (Q : Type) -> {s : P => Q => Str} -> {s : P => Q => Str} -> {s1 : P => Q => Str; s2 : P => Q => Str}
+twoTable3	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:83-86	
+twoTable3	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:83-86	(P : Type) -> (Q : Type) -> (R : Type) -> {s : P => Q => R => Str} -> {s : P => Q => R => Str} -> {s1 : P => Q => R => Str; s2 : P => Q => R => Str}
+twoTable4	oper-def	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:110-113	
+twoTable4	oper-type	/home/john/repositories/GF/lib/src/prelude/Coordination.gf:110-113	(P : Type) -> (Q : Type) -> (R : Type) -> (T : Type) -> {s : P => Q => R => T => Str} -> {s : P => Q => R => T => Str} -> {s1 : P => Q => R => T => Str; s2 : P => Q => R => T => Str}

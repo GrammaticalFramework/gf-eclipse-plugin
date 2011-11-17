@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
 <typeInfo handle="=org.grammaticalframework.eclipse.ui/src&lt;org.grammaticalframework.eclipse.ui.launch{GFLaunchConfigurationTabGroup.java[GFLaunchConfigurationTabGroup" modifiers="1" timestamp="1320330921000"/>
-<typeInfo handle="=org.grammaticalframework.eclipse/src&lt;org.grammaticalframework.eclipse.launch{GFLaunchConfigurationDelegate.java[GFLaunchConfigurationDelegate" modifiers="1" timestamp="1320742737000"/>
+<typeInfo handle="=org.grammaticalframework.eclipse/src&lt;org.grammaticalframework.eclipse.launch{GFLaunchConfigurationDelegate.java[GFLaunchConfigurationDelegate" modifiers="1" timestamp="1321530326000"/>
 <typeInfo handle="=org.grammaticalframework.eclipse.ui/\/home\/john\/eclipse\/plugins\/org.eclipse.debug.ui_3.7.0.v20110518.jar&lt;org.eclipse.debug.ui(AbstractLaunchConfigurationTab.class[AbstractLaunchConfigurationTab" modifiers="1057" timestamp="1308010000000"/>
 <typeInfo handle="=org.grammaticalframework.eclipse.ui/\/home\/john\/eclipse\/plugins\/org.eclipse.jface_3.7.0.I20110522-1430.jar&lt;org.eclipse.jface.wizard(IWizard.class[IWizard" modifiers="1537" timestamp="1308010014000"/>
 <typeInfo handle="=org.grammaticalframework.eclipse.ui/\/usr\/lib\/jvm\/java-6-openjdk\/jre\/lib\/rt.jar&lt;java.lang(Exception.class[Exception" modifiers="1" timestamp="1319245839000"/>

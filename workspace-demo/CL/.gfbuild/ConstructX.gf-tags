@@ -1,0 +1,41 @@
+AdA	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+AdN	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+AdV	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+Adv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+Ant	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+CAdv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+IAdv	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+Interj	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+PConj	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+Phr	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+Pol	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+SC	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+Temp	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+Tense	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+Text	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+Utt	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+Voc	indir	CommonX		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/CommonX.gf-tags
+mkAdA	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:13	
+mkAdA	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:13	Str -> {s : Str; lock_AdA : {}}
+mkAdN	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:14	
+mkAdN	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:14	Str -> {s : Str; lock_AdN : {}}
+mkAdV	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:12	
+mkAdV	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:12	Str -> {s : Str; lock_AdV : {}}
+mkAdv	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:11	
+mkAdv	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:11	Str -> {s : Str; lock_Adv : {}}
+mkCAdv	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:16	
+mkCAdv	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:16	Str -> Str -> {s : Str; lock_CAdv : {}; p : Str}
+mkIAdv	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:15	
+mkIAdv	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:15	Str -> {s : Str; lock_IAdv : {}}
+mkPConj	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:17	
+mkPConj	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:17	Str -> {s : Str; lock_PConj : {}}
+mkPhr	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:7	
+mkPhr	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:7	Str -> {s : Str; lock_Phr : {}}
+mkSC	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:10	
+mkSC	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:10	Str -> {s : Str; lock_SC : {}}
+mkText	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:6	
+mkText	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:6	Str -> {s : Str; lock_Text : {}}
+mkUtt	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:8	
+mkUtt	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:8	Str -> {s : Str; lock_Utt : {}}
+mkVoc	oper-def	/home/john/repositories/GF/lib/src/common/ConstructX.gf:9	
+mkVoc	oper-type	/home/john/repositories/GF/lib/src/common/ConstructX.gf:9	Str -> {s : Str; lock_Voc : {}}

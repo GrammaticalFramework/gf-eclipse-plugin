@@ -1,0 +1,9 @@
+V	cat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf:4	
+buy_V	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf:7	V
+check_V	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf:14	V
+initiate_V	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf:13	V
+open_V	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf:10	V
+reply_V	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf:12	V
+request_V	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf:11	V
+supply_V	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf:9	V
+suspend_V	fun	/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf:8	V

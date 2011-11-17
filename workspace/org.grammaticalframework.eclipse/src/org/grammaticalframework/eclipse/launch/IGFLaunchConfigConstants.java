@@ -9,24 +9,28 @@
  */
 package org.grammaticalframework.eclipse.launch;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Interface IGFLaunchConfigConstants.
+ * Launch Config preferences
  */
 public interface IGFLaunchConfigConstants {
 
 	/**
-	 * The Constant WORKING_DIR.
+	 * Working directory for running GF
 	 */
 	public static final String WORKING_DIR = "org.grammaticalframework.eclipse.launch.config.WORKING_DIR";
 	
 	/**
-	 * The Constant OPTIONS.
+	 * Command line flags
 	 */
 	public static final String OPTIONS = "org.grammaticalframework.eclipse.launch.config.OPTIONS";
 	
 	/**
-	 * The Constant FILENAMES.
+	 * Run in interactive mode (or --batch if not)
+	 */
+	public static final String INTERACTIVE_MODE = "org.grammaticalframework.eclipse.launch.config.INTERACTIVE_MODE";
+	
+	/**
+	 * Files to pass to the compiler
 	 */
 	public static final String FILENAMES = "org.grammaticalframework.eclipse.launch.config.FILENAMES";
 

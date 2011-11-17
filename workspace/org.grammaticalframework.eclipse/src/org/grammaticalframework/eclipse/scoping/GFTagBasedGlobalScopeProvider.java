@@ -265,7 +265,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			reader.close();
 			is.close();
 		} catch (IOException e) {
-			log.warn("Couldn't find tags file " + tagFileURI);
+			log.debug("Couldn't find tags file " + tagFileURI);
 		}
 		return uriTagMap;
 	}

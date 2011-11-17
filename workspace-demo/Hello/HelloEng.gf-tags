@@ -1,0 +1,19 @@
+Farewell	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:8	
+Farewell	lindef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:8	
+Fem	indir	ResEng	Alias	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf-tags
+Friends	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:19	
+Gender	indir	ResEng	Alias	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf-tags
+Goodbye	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:13	
+Greeting	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:8	
+Greeting	lindef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:8	
+Hello	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:12	
+Masc	indir	ResEng	Alias	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf-tags
+Parent	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:16-18	
+Recipient	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9	
+Recipient	lindef	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9	
+World	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:15	
+mega	overload-def	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:25-31	
+mega	overload-type	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:25-31	(s : Str) -> (r : Str) -> {s : Gender => Str; lock_Recipient : {}}
+mega	overload-type	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:25-31	(s : Str) -> {s : Gender => Str; lock_Recipient : {}}
+superate	oper-def	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:22-23	
+superate	oper-type	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:22-23	Str -> {s : Gender => Str; lock_Recipient : {}}

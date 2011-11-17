@@ -1293,7 +1293,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExp6_String()
+  public EAttribute getExp6_BuiltInCat()
   {
     return (EAttribute)exp6EClass.getEStructuralFeatures().get(2);
   }
@@ -1303,7 +1303,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExp6_Integer()
+  public EAttribute getExp6_String()
   {
     return (EAttribute)exp6EClass.getEStructuralFeatures().get(3);
   }
@@ -1313,7 +1313,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExp6_Double()
+  public EAttribute getExp6_Integer()
   {
     return (EAttribute)exp6EClass.getEStructuralFeatures().get(4);
   }
@@ -1323,7 +1323,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExp6_Meta()
+  public EAttribute getExp6_Double()
   {
     return (EAttribute)exp6EClass.getEStructuralFeatures().get(5);
   }
@@ -1333,7 +1333,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExp6_EmptyString()
+  public EAttribute getExp6_Meta()
   {
     return (EAttribute)exp6EClass.getEStructuralFeatures().get(6);
   }
@@ -1343,7 +1343,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExp6_Data()
+  public EAttribute getExp6_EmptyString()
   {
     return (EAttribute)exp6EClass.getEStructuralFeatures().get(7);
   }
@@ -1353,7 +1353,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExp6_ListCat()
+  public EAttribute getExp6_Data()
   {
     return (EAttribute)exp6EClass.getEStructuralFeatures().get(8);
   }
@@ -1363,9 +1363,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExp6_Category()
+  public EAttribute getExp6_ListCat()
   {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(9);
+    return (EAttribute)exp6EClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -1373,7 +1373,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExp6_List()
+  public EReference getExp6_Category()
   {
     return (EReference)exp6EClass.getEStructuralFeatures().get(10);
   }
@@ -1383,9 +1383,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExp6_TokenList()
+  public EReference getExp6_List()
   {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(11);
+    return (EReference)exp6EClass.getEStructuralFeatures().get(11);
   }
 
   /**
@@ -1393,7 +1393,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getExp6_Record()
+  public EAttribute getExp6_TokenList()
   {
     return (EAttribute)exp6EClass.getEStructuralFeatures().get(12);
   }
@@ -1403,9 +1403,19 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getExp6_Record()
+  {
+    return (EAttribute)exp6EClass.getEStructuralFeatures().get(13);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getExp6_DefList()
   {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(13);
+    return (EReference)exp6EClass.getEStructuralFeatures().get(14);
   }
 
   /**
@@ -1415,7 +1425,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    */
   public EAttribute getExp6_Tuple()
   {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(14);
+    return (EAttribute)exp6EClass.getEStructuralFeatures().get(15);
   }
 
   /**
@@ -1425,7 +1435,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    */
   public EReference getExp6_TupleList()
   {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(15);
+    return (EReference)exp6EClass.getEStructuralFeatures().get(16);
   }
 
   /**
@@ -1435,7 +1445,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    */
   public EReference getExp6_V()
   {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(16);
+    return (EReference)exp6EClass.getEStructuralFeatures().get(17);
   }
 
   /**
@@ -1445,7 +1455,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    */
   public EReference getExp6_Type()
   {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(17);
+    return (EReference)exp6EClass.getEStructuralFeatures().get(18);
   }
 
   /**
@@ -1455,7 +1465,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    */
   public EAttribute getExp6_Identity()
   {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(18);
+    return (EAttribute)exp6EClass.getEStructuralFeatures().get(19);
   }
 
   /**
@@ -2271,6 +2281,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     exp6EClass = createEClass(EXP6);
     createEReference(exp6EClass, EXP6__NAME);
     createEAttribute(exp6EClass, EXP6__SORT);
+    createEAttribute(exp6EClass, EXP6__BUILT_IN_CAT);
     createEAttribute(exp6EClass, EXP6__STRING);
     createEAttribute(exp6EClass, EXP6__INTEGER);
     createEAttribute(exp6EClass, EXP6__DOUBLE);
@@ -2524,6 +2535,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     initEClass(exp6EClass, Exp6.class, "Exp6", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getExp6_Name(), this.getIdent(), null, "name", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExp6_Sort(), ecorePackage.getEBoolean(), "sort", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExp6_BuiltInCat(), ecorePackage.getEBoolean(), "builtInCat", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExp6_String(), ecorePackage.getEBoolean(), "string", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExp6_Integer(), ecorePackage.getEBoolean(), "integer", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExp6_Double(), ecorePackage.getEBoolean(), "double", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -1,5 +1,5 @@
-#Wed Nov 16 15:33:02 CET 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="scope.getSingleElement(getConverter().toQualifiedName(label.getName().getS()))"/>\n</watchExpressions>\n
+#Thu Nov 17 13:46:08 CET 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="fInteractiveMode.getSelection()"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=false
 org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true

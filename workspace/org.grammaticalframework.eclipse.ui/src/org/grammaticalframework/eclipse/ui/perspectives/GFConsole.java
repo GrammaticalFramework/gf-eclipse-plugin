@@ -9,71 +9,48 @@
  */
 package org.grammaticalframework.eclipse.ui.perspectives;
 
-import java.io.BufferedInputStream;
-import java.io.FilterInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintStream;
-
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.console.ConsolePlugin;
 import org.eclipse.ui.console.IConsole;
-import org.eclipse.ui.console.MessageConsole;
-import org.eclipse.ui.console.MessageConsoleStream;
+import org.eclipse.ui.console.IOConsole;
+import org.eclipse.ui.console.IOConsoleOutputStream;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Class GFConsole.
+ * The Class GFConsole
  */
 public class GFConsole {
 	
 	/**
-	 * The console.
+	 * The console instances
 	 */
-	private static MessageConsole console = null;
+	private IOConsole logConsole;
+//	private IOConsole launchConsole;
 	
 	/**
-	 * The stream.
+	 * Constructor: Initialise consoles
 	 */
-	private static MessageConsoleStream stream = null;
-	
+	public GFConsole() {
+		ImageDescriptor image = ImageDescriptor.createFromFile(null, "icons/gf-console.png");
+
+		logConsole = new IOConsole("GFEP Log", image);
+		logConsole.activate();
+		
+//		launchConsole = new IOConsole("GF Launch Output", image);
+//		launchConsole.activate();
+		
+//		ConsolePlugin.getDefault().getConsoleManager().addConsoles(new IConsole[]{ logConsole, launchConsole });
+		ConsolePlugin.getDefault().getConsoleManager().addConsoles(new IConsole[]{ logConsole });
+		
+//		org.grammaticalframework.eclipse.launch.GFConsoleDelegate.init(launchConsole.getInputStream(), launchConsole.newOutputStream());
+	}
+
 	/**
-	 * Gets the console.
-	 *
-	 * @return the console
-	 */
-	public static MessageConsole getConsole() {
-		if (console == null) {
-			ImageDescriptor image = ImageDescriptor.createFromFile(null, "icons/gf-console.png");
-			console = new MessageConsole("GF Console", image);
-			console.activate();
-			ConsolePlugin.getDefault().getConsoleManager().addConsoles(new IConsole[]{ console });
-			
-			// Try sort out this interactive console stuff
-			System.setOut(new PrintStream(console.newMessageStream()));
-			System.setErr(new PrintStream(console.newMessageStream()));
-			System.setIn(new FilterInputStream(console.newOutputStream()));
-		}
-		return console;
-	} 
-	
-	/**
-	 * Gets the stream.
+	 * Gets the output stream.
 	 *
 	 * @return the stream
 	 */
-	public static MessageConsoleStream getStream() {
-		if (stream == null) {
-			stream = getConsole().newMessageStream();
-		}
-		return stream;
+	public IOConsoleOutputStream getLogOutputStream() {
+		return logConsole.newOutputStream();
 	}
 	
-	/**
-	 * Clear.
-	 */
-	public static void clear() {
-		console.clearConsole();
-	}
-
 }

@@ -1061,13 +1061,22 @@ public interface GFPackage extends EPackage
   int EXP6__SORT = DDECL_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Built In Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP6__BUILT_IN_CAT = DDECL_FEATURE_COUNT + 2;
+
+  /**
    * The feature id for the '<em><b>String</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP6__STRING = DDECL_FEATURE_COUNT + 2;
+  int EXP6__STRING = DDECL_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Integer</b></em>' attribute.
@@ -1076,7 +1085,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__INTEGER = DDECL_FEATURE_COUNT + 3;
+  int EXP6__INTEGER = DDECL_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Double</b></em>' attribute.
@@ -1085,7 +1094,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__DOUBLE = DDECL_FEATURE_COUNT + 4;
+  int EXP6__DOUBLE = DDECL_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Meta</b></em>' attribute.
@@ -1094,7 +1103,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__META = DDECL_FEATURE_COUNT + 5;
+  int EXP6__META = DDECL_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Empty String</b></em>' attribute.
@@ -1103,7 +1112,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__EMPTY_STRING = DDECL_FEATURE_COUNT + 6;
+  int EXP6__EMPTY_STRING = DDECL_FEATURE_COUNT + 7;
 
   /**
    * The feature id for the '<em><b>Data</b></em>' attribute.
@@ -1112,7 +1121,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__DATA = DDECL_FEATURE_COUNT + 7;
+  int EXP6__DATA = DDECL_FEATURE_COUNT + 8;
 
   /**
    * The feature id for the '<em><b>List Cat</b></em>' attribute.
@@ -1121,7 +1130,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__LIST_CAT = DDECL_FEATURE_COUNT + 8;
+  int EXP6__LIST_CAT = DDECL_FEATURE_COUNT + 9;
 
   /**
    * The feature id for the '<em><b>Category</b></em>' reference.
@@ -1130,7 +1139,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__CATEGORY = DDECL_FEATURE_COUNT + 9;
+  int EXP6__CATEGORY = DDECL_FEATURE_COUNT + 10;
 
   /**
    * The feature id for the '<em><b>List</b></em>' containment reference.
@@ -1139,7 +1148,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__LIST = DDECL_FEATURE_COUNT + 10;
+  int EXP6__LIST = DDECL_FEATURE_COUNT + 11;
 
   /**
    * The feature id for the '<em><b>Token List</b></em>' attribute.
@@ -1148,7 +1157,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__TOKEN_LIST = DDECL_FEATURE_COUNT + 11;
+  int EXP6__TOKEN_LIST = DDECL_FEATURE_COUNT + 12;
 
   /**
    * The feature id for the '<em><b>Record</b></em>' attribute.
@@ -1157,7 +1166,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__RECORD = DDECL_FEATURE_COUNT + 12;
+  int EXP6__RECORD = DDECL_FEATURE_COUNT + 13;
 
   /**
    * The feature id for the '<em><b>Def List</b></em>' containment reference.
@@ -1166,7 +1175,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__DEF_LIST = DDECL_FEATURE_COUNT + 13;
+  int EXP6__DEF_LIST = DDECL_FEATURE_COUNT + 14;
 
   /**
    * The feature id for the '<em><b>Tuple</b></em>' attribute.
@@ -1175,7 +1184,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__TUPLE = DDECL_FEATURE_COUNT + 14;
+  int EXP6__TUPLE = DDECL_FEATURE_COUNT + 15;
 
   /**
    * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
@@ -1184,7 +1193,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__TUPLE_LIST = DDECL_FEATURE_COUNT + 15;
+  int EXP6__TUPLE_LIST = DDECL_FEATURE_COUNT + 16;
 
   /**
    * The feature id for the '<em><b>V</b></em>' containment reference.
@@ -1193,7 +1202,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__V = DDECL_FEATURE_COUNT + 16;
+  int EXP6__V = DDECL_FEATURE_COUNT + 17;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1202,7 +1211,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__TYPE = DDECL_FEATURE_COUNT + 17;
+  int EXP6__TYPE = DDECL_FEATURE_COUNT + 18;
 
   /**
    * The feature id for the '<em><b>Identity</b></em>' attribute.
@@ -1211,7 +1220,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__IDENTITY = DDECL_FEATURE_COUNT + 18;
+  int EXP6__IDENTITY = DDECL_FEATURE_COUNT + 19;
 
   /**
    * The number of structural features of the '<em>Exp6</em>' class.
@@ -1220,7 +1229,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6_FEATURE_COUNT = DDECL_FEATURE_COUNT + 19;
+  int EXP6_FEATURE_COUNT = DDECL_FEATURE_COUNT + 20;
 
   /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp5Impl <em>Exp5</em>}' class.
@@ -3073,6 +3082,17 @@ public interface GFPackage extends EPackage
   EAttribute getExp6_Sort();
 
   /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isBuiltInCat <em>Built In Cat</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Built In Cat</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp6#isBuiltInCat()
+   * @see #getExp6()
+   * @generated
+   */
+  EAttribute getExp6_BuiltInCat();
+
+  /**
    * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isString <em>String</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4722,6 +4742,14 @@ public interface GFPackage extends EPackage
      * @generated
      */
     EAttribute EXP6__SORT = eINSTANCE.getExp6_Sort();
+
+    /**
+     * The meta object literal for the '<em><b>Built In Cat</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP6__BUILT_IN_CAT = eINSTANCE.getExp6_BuiltInCat();
 
     /**
      * The meta object literal for the '<em><b>String</b></em>' attribute feature.

@@ -160,6 +160,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Exp6" eSuperTypes="platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//DDecl">
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="ecore:EClass platform:/resource/org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/GF.ecore#//Ident"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="builtInCat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="integer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="double" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>

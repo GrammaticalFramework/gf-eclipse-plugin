@@ -400,6 +400,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			// Compile to get tags with: gf --tags HelloEng.gf
 			ArrayList<String> command = new ArrayList<String>();
 			command.add(gfPath);
+			command.add("--v=0"); // quiet - errors are still displayed
 			command.add("--tags");
 			command.add("--output-dir=" + buildDir);
 			if (gfLibPath != null && !gfLibPath.isEmpty()) {
@@ -456,7 +457,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				   syntax error
 			 */
 			err_str = processError.readLine();
-			log.debug("GF: " + err_str);
+			log.error("GF: " + err_str);
 			if (err_str.matches(".+\\.gf:(\\d+):(\\d+):.*")) {
 				// Don't worry about syntax errors, xtext will mark them for us
 				return;
@@ -476,7 +477,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			IMarker marker = file.createMarker("org.eclipse.xtext.ui.check.normal"); // IMarker.PROBLEM
 			marker.setAttribute(IMarker.USER_EDITABLE, false);
 			err_str = processError.readLine();
-			log.debug("GF: " + err_str);
+			log.error("GF: " + err_str);
 			
 			Pattern pattern = Pattern.compile("([^/\\\\]+\\.gf):(\\d+)(-(\\d+))?:$");
 			Matcher matcher = pattern.matcher(err_str);
@@ -491,7 +492,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			// Set message to last line
 			StringBuilder sb = new StringBuilder();
 			while ((err_str = processError.readLine()) != null) {
-				log.debug("GF: " + err_str);
+				log.error("GF: " + err_str);
 				if (sb.length() > 0) sb.append("\n");
 				sb.append(err_str.trim());
 			}

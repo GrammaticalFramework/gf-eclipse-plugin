@@ -698,6 +698,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *     (
 	 *         name=[Ident|ID] | 
 	 *         sort?=Sort | 
+	 *         builtInCat?=BuiltInCat | 
 	 *         string?=String | 
 	 *         integer?=Integer | 
 	 *         double?=Double | 
@@ -714,6 +715,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 * Features:
 	 *    name[0, 1]
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -734,6 +736,28 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         EXCLUDE_IF_SET v
 	 *    sort[0, 1]
 	 *         EXCLUDE_IF_SET name
+	 *         EXCLUDE_IF_SET builtInCat
+	 *         EXCLUDE_IF_SET string
+	 *         EXCLUDE_IF_SET integer
+	 *         EXCLUDE_IF_SET double
+	 *         EXCLUDE_IF_SET meta
+	 *         EXCLUDE_IF_SET emptyString
+	 *         EXCLUDE_IF_SET data
+	 *         EXCLUDE_IF_SET listCat
+	 *         EXCLUDE_IF_SET category
+	 *         EXCLUDE_IF_SET list
+	 *         EXCLUDE_IF_SET tokenList
+	 *         EXCLUDE_IF_SET record
+	 *         EXCLUDE_IF_SET defList
+	 *         EXCLUDE_IF_SET tuple
+	 *         EXCLUDE_IF_SET tupleList
+	 *         EXCLUDE_IF_SET v
+	 *         EXCLUDE_IF_SET type
+	 *         EXCLUDE_IF_SET identity
+	 *         EXCLUDE_IF_SET v
+	 *    builtInCat[0, 1]
+	 *         EXCLUDE_IF_SET name
+	 *         EXCLUDE_IF_SET sort
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -755,6 +779,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *    string[0, 1]
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
 	 *         EXCLUDE_IF_SET meta
@@ -775,6 +800,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *    integer[0, 1]
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET double
 	 *         EXCLUDE_IF_SET meta
@@ -795,6 +821,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *    double[0, 1]
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET meta
@@ -815,6 +842,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *    meta[0, 1]
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -835,6 +863,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *    emptyString[0, 1]
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -855,6 +884,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *    data[0, 1]
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -879,6 +909,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         MANDATORY_IF_SET list
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -901,6 +932,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         MANDATORY_IF_SET list
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -923,6 +955,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         MANDATORY_IF_SET category
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -941,6 +974,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *    tokenList[0, 1]
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -963,6 +997,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         MANDATORY_IF_SET defList
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -984,6 +1019,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         MANDATORY_IF_SET record
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -1006,6 +1042,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         MANDATORY_IF_SET type
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -1026,6 +1063,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         EXCLUDE_IF_UNSET tuple
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -1044,6 +1082,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         EXCLUDE_IF_SET tupleList
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -1063,6 +1102,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         EXCLUDE_IF_UNSET tuple
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double
@@ -1082,6 +1122,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         MANDATORY_IF_SET v
 	 *         EXCLUDE_IF_SET name
 	 *         EXCLUDE_IF_SET sort
+	 *         EXCLUDE_IF_SET builtInCat
 	 *         EXCLUDE_IF_SET string
 	 *         EXCLUDE_IF_SET integer
 	 *         EXCLUDE_IF_SET double

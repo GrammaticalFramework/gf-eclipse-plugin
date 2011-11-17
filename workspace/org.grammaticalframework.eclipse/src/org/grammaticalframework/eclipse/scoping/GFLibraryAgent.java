@@ -9,32 +9,11 @@
  */
 package org.grammaticalframework.eclipse.scoping;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.EcoreUtil2;
-import org.eclipse.xtext.parser.IParseResult;
-import org.eclipse.xtext.parser.IParser;
-import org.eclipse.xtext.resource.XtextResource;
-import org.eclipse.xtext.resource.XtextResourceSet;
-import org.grammaticalframework.eclipse.GFRuntimeModule;
-import org.grammaticalframework.eclipse.GFStandaloneSetup;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
-import org.grammaticalframework.eclipse.gF.GFFactory;
-import org.grammaticalframework.eclipse.gF.Ident;
-import org.grammaticalframework.eclipse.gF.impl.IdentImpl;
 
-import com.google.inject.Inject;
-import com.google.inject.Injector;
-
-// TODO: Auto-generated Javadoc
 /**
  * For resolving GF library modules and their exported definitions.
  *

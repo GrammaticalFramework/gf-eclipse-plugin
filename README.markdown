@@ -38,6 +38,7 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 - Definition outlining, jump to declaration, find usage
 - Warnings for problems in module dependancy hierarchy
 - Launch configurations, i.e. compilation directly from IDE
+- Use GF Shell from within Eclipse
 - Auto-completion for declared identifiers
 - Background compilation (shallow) using project builder
 
@@ -61,7 +62,7 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 
 ## Update history
 
-**16/11/11**
+**17/11/11**
 : Third BETA released, overhauled to take advantage of new compiler features. Tag-based scoping for better performance.
 
 **11/10/11**
@@ -152,6 +153,24 @@ files and manually add them to your Eclipse workspace. To experiment with some o
 - Run the launch config and you will see the output from the GF compiler in the console view within Eclipse.
 
 ![Output from the GF compiler](http://www.grammaticalframework.org/eclipse/images/eclipse-compileroutput.png)
+
+### Usage hints
+
+#### Consoles
+
+The plugin provides its own console view named _GFEP Log_, which shows log messages based on the **Log Level** preference (**Window &rarr; Preferences &rarr; Grammatical Framework**).
+
+Additionally, everytime a grammar is **Run** a _new_ console is opened to display the output. This console may also serve as the interactive GF Shell, depending on the **Interactive Mode** checkbox in your **Run Configuration**.
+
+Eclipse does not make it obvious when multiple console windows open; click on the **Display Selected Console** button to switch between open consoles:
+
+![Display Selected Console icon](http://www.grammaticalframework.org/eclipse/images/eclipse-console-icon.png)
+
+_The Eclipse console implementation does not support command history (up arrow) or auto-completion (tab)._
+
+#### Logs
+
+You can set the log verbosity from **Window &rarr; Preferences &rarr; Grammatical Framework**. This setting also affects the verbosity of the log file `gfep.log`.
 
 --------------------------------------------------------------------------------
 

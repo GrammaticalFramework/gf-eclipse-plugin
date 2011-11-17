@@ -22,7 +22,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_DataDef_VerticalLineKeyword_2_2_q;
 	protected AbstractElementAlias match_Exp3_AsteriskAsteriskKeyword_0_1_0_2_or_AsteriskKeyword_0_1_0_1_or_ExclamationMarkKeyword_0_1_0_0;
 	protected AbstractElementAlias match_Exp3_AsteriskAsteriskKeyword_1_2_0_2_or_AsteriskKeyword_1_2_0_1_or_ExclamationMarkKeyword_1_2_0_0;
-	protected AbstractElementAlias match_Exp6_IntegerTerminalRuleCall_5_1_q;
+	protected AbstractElementAlias match_Exp6_IntegerTerminalRuleCall_6_1_q;
 	protected AbstractElementAlias match_Exp_AsteriskAsteriskKeyword_5_1_0_0_0_2_or_AsteriskKeyword_5_1_0_0_0_1_or_ExclamationMarkKeyword_5_1_0_0_0_0;
 	protected AbstractElementAlias match_Exp_AsteriskAsteriskKeyword_6_2_0_2_or_AsteriskKeyword_6_2_0_1_or_ExclamationMarkKeyword_6_2_0_0;
 	protected AbstractElementAlias match_ListExp_SemicolonKeyword_1_2_q;
@@ -49,7 +49,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_DataDef_VerticalLineKeyword_2_2_q = new TokenAlias(true, false, grammarAccess.getDataDefAccess().getVerticalLineKeyword_2_2());
 		match_Exp3_AsteriskAsteriskKeyword_0_1_0_2_or_AsteriskKeyword_0_1_0_1_or_ExclamationMarkKeyword_0_1_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExp3Access().getAsteriskAsteriskKeyword_0_1_0_2()), new TokenAlias(false, false, grammarAccess.getExp3Access().getAsteriskKeyword_0_1_0_1()), new TokenAlias(false, false, grammarAccess.getExp3Access().getExclamationMarkKeyword_0_1_0_0()));
 		match_Exp3_AsteriskAsteriskKeyword_1_2_0_2_or_AsteriskKeyword_1_2_0_1_or_ExclamationMarkKeyword_1_2_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExp3Access().getAsteriskAsteriskKeyword_1_2_0_2()), new TokenAlias(false, false, grammarAccess.getExp3Access().getAsteriskKeyword_1_2_0_1()), new TokenAlias(false, false, grammarAccess.getExp3Access().getExclamationMarkKeyword_1_2_0_0()));
-		match_Exp6_IntegerTerminalRuleCall_5_1_q = new TokenAlias(true, false, grammarAccess.getExp6Access().getIntegerTerminalRuleCall_5_1());
+		match_Exp6_IntegerTerminalRuleCall_6_1_q = new TokenAlias(true, false, grammarAccess.getExp6Access().getIntegerTerminalRuleCall_6_1());
 		match_Exp_AsteriskAsteriskKeyword_5_1_0_0_0_2_or_AsteriskKeyword_5_1_0_0_0_1_or_ExclamationMarkKeyword_5_1_0_0_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpAccess().getAsteriskAsteriskKeyword_5_1_0_0_0_2()), new TokenAlias(false, false, grammarAccess.getExpAccess().getAsteriskKeyword_5_1_0_0_0_1()), new TokenAlias(false, false, grammarAccess.getExpAccess().getExclamationMarkKeyword_5_1_0_0_0_0()));
 		match_Exp_AsteriskAsteriskKeyword_6_2_0_2_or_AsteriskKeyword_6_2_0_1_or_ExclamationMarkKeyword_6_2_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpAccess().getAsteriskAsteriskKeyword_6_2_0_2()), new TokenAlias(false, false, grammarAccess.getExpAccess().getAsteriskKeyword_6_2_0_1()), new TokenAlias(false, false, grammarAccess.getExpAccess().getExclamationMarkKeyword_6_2_0_0()));
 		match_ListExp_SemicolonKeyword_1_2_q = new TokenAlias(true, false, grammarAccess.getListExpAccess().getSemicolonKeyword_1_2());
@@ -110,8 +110,8 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Exp3_AsteriskAsteriskKeyword_0_1_0_2_or_AsteriskKeyword_0_1_0_1_or_ExclamationMarkKeyword_0_1_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Exp3_AsteriskAsteriskKeyword_1_2_0_2_or_AsteriskKeyword_1_2_0_1_or_ExclamationMarkKeyword_1_2_0_0.equals(syntax))
 				emit_Exp3_AsteriskAsteriskKeyword_1_2_0_2_or_AsteriskKeyword_1_2_0_1_or_ExclamationMarkKeyword_1_2_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Exp6_IntegerTerminalRuleCall_5_1_q.equals(syntax))
-				emit_Exp6_IntegerTerminalRuleCall_5_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Exp6_IntegerTerminalRuleCall_6_1_q.equals(syntax))
+				emit_Exp6_IntegerTerminalRuleCall_6_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Exp_AsteriskAsteriskKeyword_5_1_0_0_0_2_or_AsteriskKeyword_5_1_0_0_0_1_or_ExclamationMarkKeyword_5_1_0_0_0_0.equals(syntax))
 				emit_Exp_AsteriskAsteriskKeyword_5_1_0_0_0_2_or_AsteriskKeyword_5_1_0_0_0_1_or_ExclamationMarkKeyword_5_1_0_0_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Exp_AsteriskAsteriskKeyword_6_2_0_2_or_AsteriskKeyword_6_2_0_1_or_ExclamationMarkKeyword_6_2_0_0.equals(syntax))
@@ -164,7 +164,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '*' | '**' | '!'
+	 *     '!' | '**' | '*'
 	 */
 	protected void emit_Exp3_AsteriskAsteriskKeyword_0_1_0_2_or_AsteriskKeyword_0_1_0_1_or_ExclamationMarkKeyword_0_1_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -182,13 +182,13 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     Integer?
 	 */
-	protected void emit_Exp6_IntegerTerminalRuleCall_5_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Exp6_IntegerTerminalRuleCall_6_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Syntax:
-	 *     '*' | '!' | '**'
+	 *     '!' | '*' | '**'
 	 */
 	protected void emit_Exp_AsteriskAsteriskKeyword_5_1_0_0_0_2_or_AsteriskKeyword_5_1_0_0_0_1_or_ExclamationMarkKeyword_5_1_0_0_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -260,7 +260,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     (('{' '}') | ((('open' 'in') | ('**' 'open' 'in') | '**') '{' '}'))?
+	 *     ((('**' | ('**' 'open' 'in') | ('open' 'in')) '{' '}') | ('{' '}'))?
 	 */
 	protected void emit_ModBody_____LeftCurlyBracketKeyword_0_3_RightCurlyBracketKeyword_0_5___or_____AsteriskAsteriskKeyword_0_1_1_or___AsteriskAsteriskKeyword_0_1_1_OpenKeyword_0_2_0_InKeyword_0_2_2___or___OpenKeyword_0_2_0_InKeyword_0_2_2_____LeftCurlyBracketKeyword_0_3_RightCurlyBracketKeyword_0_5____q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -324,7 +324,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     Double | Integer | String | '_' | '?'
+	 *     String | Integer | Double | '_' | '?'
 	 */
 	protected void emit_Patt2_DoubleTerminalRuleCall_4_1_or_IntegerTerminalRuleCall_3_1_or_QuestionMarkKeyword_9_1_or_StringTerminalRuleCall_5_1_or__Keyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -332,7 +332,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '+' | '|'
+	 *     '|' | '+'
 	 */
 	protected void emit_Patt_PlusSignKeyword_1_0_1_or_VerticalLineKeyword_1_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

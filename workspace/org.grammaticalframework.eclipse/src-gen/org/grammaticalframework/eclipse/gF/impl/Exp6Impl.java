@@ -30,6 +30,7 @@ import org.grammaticalframework.eclipse.gF.ListTupleComp;
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.Exp6Impl#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.Exp6Impl#isSort <em>Sort</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.Exp6Impl#isBuiltInCat <em>Built In Cat</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.Exp6Impl#isString <em>String</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.Exp6Impl#isInteger <em>Integer</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.Exp6Impl#isDouble <em>Double</em>}</li>
@@ -83,6 +84,26 @@ public class Exp6Impl extends DDeclImpl implements Exp6
    * @ordered
    */
   protected boolean sort = SORT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isBuiltInCat() <em>Built In Cat</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isBuiltInCat()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean BUILT_IN_CAT_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isBuiltInCat() <em>Built In Cat</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isBuiltInCat()
+   * @generated
+   * @ordered
+   */
+  protected boolean builtInCat = BUILT_IN_CAT_EDEFAULT;
 
   /**
    * The default value of the '{@link #isString() <em>String</em>}' attribute.
@@ -449,6 +470,29 @@ public class Exp6Impl extends DDeclImpl implements Exp6
     sort = newSort;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP6__SORT, oldSort, sort));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isBuiltInCat()
+  {
+    return builtInCat;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBuiltInCat(boolean newBuiltInCat)
+  {
+    boolean oldBuiltInCat = builtInCat;
+    builtInCat = newBuiltInCat;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP6__BUILT_IN_CAT, oldBuiltInCat, builtInCat));
   }
 
   /**
@@ -1026,6 +1070,8 @@ public class Exp6Impl extends DDeclImpl implements Exp6
         return basicGetName();
       case GFPackage.EXP6__SORT:
         return isSort();
+      case GFPackage.EXP6__BUILT_IN_CAT:
+        return isBuiltInCat();
       case GFPackage.EXP6__STRING:
         return isString();
       case GFPackage.EXP6__INTEGER:
@@ -1080,6 +1126,9 @@ public class Exp6Impl extends DDeclImpl implements Exp6
         return;
       case GFPackage.EXP6__SORT:
         setSort((Boolean)newValue);
+        return;
+      case GFPackage.EXP6__BUILT_IN_CAT:
+        setBuiltInCat((Boolean)newValue);
         return;
       case GFPackage.EXP6__STRING:
         setString((Boolean)newValue);
@@ -1152,6 +1201,9 @@ public class Exp6Impl extends DDeclImpl implements Exp6
       case GFPackage.EXP6__SORT:
         setSort(SORT_EDEFAULT);
         return;
+      case GFPackage.EXP6__BUILT_IN_CAT:
+        setBuiltInCat(BUILT_IN_CAT_EDEFAULT);
+        return;
       case GFPackage.EXP6__STRING:
         setString(STRING_EDEFAULT);
         return;
@@ -1221,6 +1273,8 @@ public class Exp6Impl extends DDeclImpl implements Exp6
         return name != null;
       case GFPackage.EXP6__SORT:
         return sort != SORT_EDEFAULT;
+      case GFPackage.EXP6__BUILT_IN_CAT:
+        return builtInCat != BUILT_IN_CAT_EDEFAULT;
       case GFPackage.EXP6__STRING:
         return string != STRING_EDEFAULT;
       case GFPackage.EXP6__INTEGER:
@@ -1272,6 +1326,8 @@ public class Exp6Impl extends DDeclImpl implements Exp6
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (sort: ");
     result.append(sort);
+    result.append(", builtInCat: ");
+    result.append(builtInCat);
     result.append(", string: ");
     result.append(string);
     result.append(", integer: ");

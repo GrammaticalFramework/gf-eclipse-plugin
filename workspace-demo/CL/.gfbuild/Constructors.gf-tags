@@ -1,0 +1,1098 @@
+A	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+A2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+AAnter	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Tense.gf-tags
+AP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+ASimul	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Tense.gf-tags
+AdA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+AdAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+AdAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adverb.gf-tags
+AdN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+AdNum	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+AdV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+AdVVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+AdVVPSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+AddAdvQVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+AdjCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+AdjOrd	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+AdnCAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adverb.gf-tags
+Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+AdvAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+AdvCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+AdvIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+AdvIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+AdvNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+AdvQVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+AdvS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+AdvSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+AdvVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+AdvVPSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+Ant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+ApposCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+Art	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1635	
+Art	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1635	Type
+BaseAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+BaseAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+BaseCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+BaseIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+BaseNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+BaseRS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+BaseS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+CAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+CAdvAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+CN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Card	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Cl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+ClSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+CleftAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Idiom.gf-tags
+CleftNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Idiom.gf-tags
+Comp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+CompAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+CompAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+CompCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+CompIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+CompIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+CompNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+ComparA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+ComparAdvAdj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adverb.gf-tags
+ComparAdvAdjS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adverb.gf-tags
+ComplA2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+ComplN2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+ComplN3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+ComplSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+ComplSlashIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+ComplV2	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1616	
+ComplV2	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1616	V2 -> NP -> VP
+ComplV2A	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1617	
+ComplV2A	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1617	V2A -> NP -> AP -> VP
+ComplV3	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1618	
+ComplV3	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1618	V3 -> NP -> NP -> VP
+ComplVA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+ComplVQ	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+ComplVS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+ComplVV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+Conj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+ConjAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConjAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConjCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConjIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConjNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConjRS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConjS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConsAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConsAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConsCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConsIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConsNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConsRS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ConsS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+D_0	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+D_1	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+D_2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+D_3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+D_4	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+D_5	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+D_6	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+D_7	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+D_8	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+D_9	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+DefArt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+DetArtCard	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1644	
+DetArtCard	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1644	Art -> Card -> Det
+DetArtOrd	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1643	
+DetArtOrd	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1643	Quant -> Num -> Ord -> Det
+DetArtPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1641	
+DetArtPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1641	Art -> CN -> NP
+DetArtSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1640	
+DetArtSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1640	Art -> CN -> NP
+DetCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+DetNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+DetPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1614	
+DetPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1614	Quant -> Num -> Ord -> Det
+DetQuant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+DetQuantOrd	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+DetSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1613	
+DetSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1613	Quant -> Ord -> Det
+Dig	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+Digit	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+Digits	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+EmbedQS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+EmbedS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+EmbedVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+ExistIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Idiom.gf-tags
+ExistNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Idiom.gf-tags
+ExtAdvS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+FunRP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Relative.gf-tags
+GenericCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Idiom.gf-tags
+IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+IComp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+IDet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+IDig	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+IFPl	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:301	ImpForm
+IFPol	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:301	ImpForm
+IFSg	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:301	ImpForm
+IIDig	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+IP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+IQuant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+IdRP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Relative.gf-tags
+IdetCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+IdetIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+IdetQuant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+Imp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+ImpForm	param	/home/john/repositories/GF/lib/src/api/Constructors.gf:301	
+ImpP3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Idiom.gf-tags
+ImpPl1	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Idiom.gf-tags
+ImpVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+ImpersCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Idiom.gf-tags
+IndefArt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+Interj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+ListAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ListAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1629	
+ListAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1629	Type
+ListAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ListAdv	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1628	
+ListAdv	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1628	Type
+ListCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ListIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ListNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ListNP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1630	
+ListNP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1630	Type
+ListRS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ListS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Conjunction.gf-tags
+ListS	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1631	
+ListS	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1631	Type
+MassNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+N	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+N2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+N3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+NoPConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+NoVoc	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+Num	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+NumCard	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+NumDigits	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+NumNumeral	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+NumPl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+NumSg	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+Numeral	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Ord	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+OrdDigits	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+OrdNumeral	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+OrdSuperl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+PConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+PConjConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+PExclMark	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
+PFullStop	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
+PN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+PNeg	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Tense.gf-tags
+PPartNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+PPos	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Tense.gf-tags
+PQuestMark	param-value	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	Punct
+PassV2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+Phr	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+PhrUtt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+PlQuant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1609	
+PlQuant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1609	Quant -> QuantPl
+Pol	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+PositA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+PositAdAAdj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adverb.gf-tags
+PositAdvAdj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adverb.gf-tags
+PossPron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+PredSCVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+PredVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+Predet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+PredetNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+PrepIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+PrepNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adverb.gf-tags
+ProgrVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Idiom.gf-tags
+Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Punct	param	/home/john/repositories/GF/lib/src/api/Constructors.gf:136	
+QCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+QS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+QVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+Quant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1607	
+QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1607	Type
+QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1606	
+QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1606	Type
+QuestCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+QuestIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+QuestIComp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+QuestQVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+QuestSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+QuestVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Question.gf-tags
+RCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+RP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+RS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+ReflA2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+ReflVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+RelCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+RelCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Relative.gf-tags
+RelNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+RelS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+RelSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Relative.gf-tags
+RelVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Relative.gf-tags
+S	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+SC	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+SSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+SSubjS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+SentAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+SentCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+SgQuant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1608	
+SgQuant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1608	Quant -> QuantSg
+Slash2V3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+Slash3V3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+SlashPrep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+SlashV2A	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+SlashV2Q	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+SlashV2S	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+SlashV2V	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+SlashV2VNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+SlashV2a	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+SlashVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+SlashVS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+SlashVV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+Sub10	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+Sub100	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+Sub1000	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+Sub1000000	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+SubjS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adverb.gf-tags
+TCond	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Tense.gf-tags
+TEmpty	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Text.gf-tags
+TExclMark	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Text.gf-tags
+TFullStop	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Text.gf-tags
+TFut	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Tense.gf-tags
+TPast	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Tense.gf-tags
+TPres	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Tense.gf-tags
+TQuestMark	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Text.gf-tags
+TTAnt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Tense.gf-tags
+TUseCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1646	
+TUseCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1646	Tense -> Ant -> Pol -> Cl -> S
+TUseQCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1647	
+TUseQCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1647	Tense -> Ant -> Pol -> QCl -> QS
+TUseRCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1648	
+TUseRCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1648	Tense -> Ant -> Pol -> RCl -> RS
+Temp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+Tense	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+Text	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:902-903	
+Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:902-903	Type
+Use2N3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+Use3N3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+UseA2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+UseCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+UseComp	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+UseComparA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Adjective.gf-tags
+UseCopula	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+UseN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+UseN2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+UsePN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+UsePron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Noun.gf-tags
+UseQCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+UseRCl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+UseSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Sentence.gf-tags
+UseV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Verb.gf-tags
+Utt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+UttAP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttCN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttCard	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttIAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttIP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttImpPl	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttImpPol	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttImpSg	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttInterj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttQS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+UttVP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+V	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V2A	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V2Q	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V2S	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V2V	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+V3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VPSlash	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VQ	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VS	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+VV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Cat.gf-tags
+Voc	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Common.gf-tags
+VocNP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Phrase.gf-tags
+aPl_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:748-749	
+aPl_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:748-749	Det
+aSg_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:746-747	
+aSg_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:746-747	Det
+a_Art	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1584	
+a_Art	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1584	Art
+a_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:740-741	
+a_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:740-741	Det
+a_Quant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:772-773	
+a_Quant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:772-773	Quant
+above_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+active2passive	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Transfer.gf-tags
+after_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+all_Predet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+almost_AdA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+almost_AdN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+although_Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+always_AdV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+and_Conj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+anteriorAnt	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:260-261	
+anteriorAnt	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:260-261	Ant
+as_CAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+at_least_AdN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+at_most_AdN	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+because_Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+before_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+behind_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+between_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+both7and_DConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+but_PConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+by8agent_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+by8means_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+can8know_VV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+can_VV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+comparAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1094-1095	
+comparAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1094-1095	A -> AP
+conditionalTense	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:275-276	
+conditionalTense	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:275-276	Tense
+dconcat	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+digit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1714	
+digit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1714	pattern Str
+digits2num	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+digits2numeral	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+dn	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+dn10	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+dn100	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+dn1000	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+dn1000000a	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+dn1000000b	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+dn1000000c	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+during_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+either7or_DConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+emptyText	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:120-121	
+emptyText	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:120-121	Text
+every_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+everybody_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+everything_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+everywhere_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+except_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+exclMarkPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:131-132	
+exclMarkPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:131-132	Punct
+few_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+for_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+from_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+fullStopPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:127-128	
+fullStopPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:127-128	Punct
+futureTense	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:273-274	
+futureTense	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:273-274	Tense
+genericCl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:439-440	
+genericCl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:439-440	VP -> Cl
+have_V2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+have_V3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+have_not_V3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+he_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:678-679	
+he_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:678-679	NP
+he_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+here7from_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+here7to_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+here_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+how8many_IDet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+how8much_IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+how_IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+i_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:672-673	
+i_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:672-673	NP
+i_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+idigit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1713	
+idigit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1713	pattern Str
+if_Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+if_then_Conj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+in8front_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+in_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+it_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:682-683	
+it_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:682-683	NP
+it_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+language_title_Utt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+less_CAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+lets_Utt	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:236-237	
+lets_Utt	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:236-237	VP -> Utt
+many_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+mkAP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	A -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	A -> NP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	A2 -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	A2 -> NP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	AP -> QS -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	AP -> S -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	AP -> SC -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	AP -> VP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	AdA -> A -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	AdA -> AP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	CAdv -> AP -> NP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	Conj -> AP -> AP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	Conj -> ListAP -> AP
+mkAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1040-1090	Ord -> AP
+mkAdN	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:843-844	
+mkAdN	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:843-844	CAdv -> AdN
+mkAdv	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1099-1134	
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1099-1134	A -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1099-1134	AdA -> Adv -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1099-1134	CAdv -> A -> NP -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1099-1134	CAdv -> A -> S -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1099-1134	Conj -> Adv -> Adv -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1099-1134	Conj -> ListAdv -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1099-1134	Prep -> NP -> Adv
+mkAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1099-1134	Subj -> S -> Adv
+mkCN	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	A -> CN -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	A -> N -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	AP -> CN -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	AP -> N -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	CN -> AP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	CN -> Adv -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	CN -> NP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	CN -> QS -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	CN -> RS -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	CN -> S -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	CN -> SC -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	CN -> VP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	N -> AP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	N -> Adv -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	N -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	N -> NP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	N -> RS -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	N2 -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	N2 -> NP -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	N3 -> CN
+mkCN	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:965-1033	N3 -> NP -> NP -> CN
+mkCard	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:808-817	
+mkCard	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:808-817	AdN -> Card -> Card
+mkCard	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:808-817	Digits -> Card
+mkCard	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:808-817	Numeral -> Card
+mkCard	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:808-817	Str -> Card
+mkCl	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	Adv -> S -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	CN -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	N -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> A -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> A -> NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> A2 -> NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> AP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> Adv -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> CN -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> N -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> RS -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> V -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> V2 -> NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> V2A -> NP -> A -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> V2A -> NP -> AP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> V2Q -> NP -> QS -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> V2S -> NP -> S -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> V2V -> NP -> VP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> V3 -> NP -> NP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> VA -> A -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> VA -> AP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> VP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> VQ -> QS -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> VS -> S -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	NP -> VV -> VP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	SC -> VP -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	V -> Cl
+mkCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:358-435	VP -> Cl
+mkClSlash	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1466-1497	
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1466-1497	Cl -> Prep -> ClSlash
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1466-1497	ClSlash -> Adv -> ClSlash
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1466-1497	NP -> V2 -> ClSlash
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1466-1497	NP -> VPSlash -> ClSlash
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1466-1497	NP -> VS -> SSlash -> ClSlash
+mkClSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1466-1497	NP -> VV -> V2 -> ClSlash
+mkComp	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:538-545	
+mkComp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:538-545	AP -> Comp
+mkComp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:538-545	Adv -> Comp
+mkComp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:538-545	NP -> Comp
+mkDet	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	Card -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	Digits -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	Numeral -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	Pron -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	Pron -> Num -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	Quant -> Card -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	Quant -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	Quant -> Num -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	Quant -> Num -> Ord -> Det
+mkDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:708-735	Quant -> Ord -> Det
+mkDigits	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:929-936	
+mkDigits	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:929-936	Dig -> Digits
+mkDigits	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:929-936	Dig -> Digits -> Digits
+mkDigits	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:929-936	Str -> Digits
+mkIAdv	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1315-1320	
+mkIAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1315-1320	IAdv -> Adv -> IAdv
+mkIAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1315-1320	Prep -> IP -> IAdv
+mkIComp	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1267-1272	
+mkIComp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1267-1272	IAdv -> IComp
+mkIComp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1267-1272	IP -> IComp
+mkIDet	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1325-1330	
+mkIDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1325-1330	IQuant -> IDet
+mkIDet	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1325-1330	IQuant -> Num -> IDet
+mkIP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1276-1299	
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1276-1299	IDet -> CN -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1276-1299	IDet -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1276-1299	IDet -> N -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1276-1299	IP -> Adv -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1276-1299	IQuant -> CN -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1276-1299	IQuant -> N -> IP
+mkIP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1276-1299	IQuant -> Num -> CN -> IP
+mkImp	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:564-571	
+mkImp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:564-571	V -> Imp
+mkImp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:564-571	V2 -> NP -> Imp
+mkImp	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:564-571	VP -> Imp
+mkListAP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1552-1557	
+mkListAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1552-1557	AP -> AP -> ListAP
+mkListAP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1552-1557	AP -> ListAP -> ListAP
+mkListAdv	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1541-1546	
+mkListAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1541-1546	Adv -> Adv -> ListAdv
+mkListAdv	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1541-1546	Adv -> ListAdv -> ListAdv
+mkListNP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1563-1568	
+mkListNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1563-1568	NP -> ListNP -> ListNP
+mkListNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1563-1568	NP -> NP -> ListNP
+mkListRS	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1572-1577	
+mkListRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1572-1577	RS -> ListRS -> ListRS
+mkListRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1572-1577	RS -> RS -> ListRS
+mkListS	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1532-1537	
+mkListS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1532-1537	S -> ListS -> ListS
+mkListS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1532-1537	S -> S -> ListS
+mkNP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Card -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Card -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Conj -> ListNP -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Conj -> NP -> NP -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Det -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Det -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Det -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Digit -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Digit -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Digits -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Digits -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	NP -> Adv -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	NP -> RS -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	NP -> V2 -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Numeral -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Numeral -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	PN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Predet -> NP -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Pron -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Pron -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Pron -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Quant -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Quant -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Quant -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Quant -> Num -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Quant -> Num -> N -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Quant -> Num -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	Quant -> Num -> Ord -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	QuantPl -> CN -> NP
+mkNP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:583-668	QuantSg -> CN -> NP
+mkNum	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:780-796	
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:780-796	AdN -> Card -> Num
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:780-796	Card -> Num
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:780-796	Digit -> Num
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:780-796	Digits -> Num
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:780-796	Numeral -> Num
+mkNum	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:780-796	Str -> Num
+mkNumeral	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:850-867	
+mkNumeral	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:850-867	Str -> Numeral
+mkNumeral	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:850-867	Sub100 -> Numeral
+mkNumeral	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:850-867	Sub1000 -> Numeral
+mkNumeral	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:850-867	Sub1000 -> Sub1000 -> Numeral
+mkNumeral	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:850-867	Unit -> Numeral
+mkOrd	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:824-836	
+mkOrd	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:824-836	A -> Ord
+mkOrd	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:824-836	Digit -> Ord
+mkOrd	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:824-836	Digits -> Ord
+mkOrd	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:824-836	Numeral -> Ord
+mkPConj	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:174-175	
+mkPConj	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:174-175	Conj -> PConj
+mkPhr	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	Cl -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	Imp -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	PConj -> Utt -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	PConj -> Utt -> Voc -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	QS -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	S -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	Utt -> Phr
+mkPhr	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:145-166	Utt -> Voc -> Phr
+mkQCl	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	Cl -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IAdv -> Cl -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IAdv -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IComp -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> A -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> A -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> A2 -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> AP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> Adv -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> CN -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> ClSlash -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> N -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> NP -> V2 -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> V -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> V2 -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> V2A -> NP -> A -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> V2A -> NP -> AP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> V2Q -> NP -> QS -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> V2S -> NP -> S -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> V2V -> NP -> VP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> V3 -> NP -> NP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> VA -> A -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> VA -> AP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> VP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> VQ -> QS -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> VS -> S -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	IP -> VV -> VP -> QCl
+mkQCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1178-1262	Prep -> IP -> Cl -> QCl
+mkQS	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1141-1173	
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1141-1173	Ant -> Pol -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1141-1173	Ant -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1141-1173	Cl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1141-1173	Pol -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1141-1173	QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1141-1173	Tense -> Ant -> Pol -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1141-1173	Tense -> Ant -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1141-1173	Tense -> Pol -> QCl -> QS
+mkQS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1141-1173	Tense -> QCl -> QS
+mkQuant	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:765-768	
+mkQuant	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:765-768	Pron -> Quant
+mkQuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1589	
+mkQuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1589	Quant -> QuantPl
+mkQuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1588	
+mkQuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1588	Quant -> QuantSg
+mkRCl	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	Cl -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> A -> NP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> A -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> A2 -> NP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> AP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> Adv -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> CN -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> ClSlash -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> N -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> NP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> NP -> V2 -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> V -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> V2 -> NP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> V2A -> NP -> A -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> V2A -> NP -> AP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> V2Q -> NP -> QS -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> V2S -> NP -> S -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> V2V -> NP -> VP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> V3 -> NP -> NP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> VA -> A -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> VA -> AP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> VP -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> VQ -> QS -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> VS -> S -> RCl
+mkRCl	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1379-1442	RP -> VV -> VP -> RCl
+mkRP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1453-1454	
+mkRP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1453-1454	Prep -> NP -> RP -> RP
+mkRS	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	Ant -> Pol -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	Ant -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	Conj -> ListRS -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	Conj -> RS -> RS -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	Pol -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	Temp -> Pol -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	Tense -> Ant -> Pol -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	Tense -> Ant -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	Tense -> Pol -> RCl -> RS
+mkRS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1351-1375	Tense -> RCl -> RS
+mkS	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Adv -> S -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Ant -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Ant -> Pol -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Conj -> ListS -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Conj -> S -> S -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Pol -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Temp -> Pol -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Tense -> Ant -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Tense -> Ant -> Pol -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Tense -> Cl -> S
+mkS	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:318-350	Tense -> Pol -> Cl -> S
+mkSC	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:549-556	
+mkSC	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:549-556	QS -> SC
+mkSC	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:549-556	S -> SC
+mkSC	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:549-556	VP -> SC
+mkSSlash	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1459-1462	
+mkSSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1459-1462	Temp -> Pol -> ClSlash -> SSlash
+mkSub100	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:881-892	
+mkSub100	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:881-892	Unit -> Sub100
+mkSub100	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:881-892	Unit -> Unit -> Sub100
+mkSub1000	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:872-879	
+mkSub1000	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:872-879	Sub100 -> Sub1000
+mkSub1000	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:872-879	Unit -> Sub100 -> Sub1000
+mkSub1000	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:872-879	Unit -> Sub1000
+mkTemp	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:283-284	
+mkTemp	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:283-284	Tense -> Ant -> Temp
+mkText	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Cl -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Imp -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Phr -> Punct -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Phr -> Punct -> Text -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Phr -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Phr -> Text -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Pol -> Imp -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	QS -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	S -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Text -> Text -> Text
+mkText	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:76-116	Utt -> Text
+mkUtt	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	AP -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	Adv -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	CN -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	Card -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	Cl -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	IAdv -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	IP -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	Imp -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	ImpForm -> Imp -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	ImpForm -> Pol -> Imp -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	NP -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	Pol -> Imp -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	QCl -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	QS -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	S -> Utt
+mkUtt	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:195-232	VP -> Utt
+mkUttImp	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:304-309	
+mkUttImp	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:304-309	ImpForm -> Pol -> Imp -> Utt
+mkVP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	A -> NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	A -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	A2 -> NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	AP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	AdV -> VP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	Adv -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	CN -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	Comp -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	N -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	V -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	V2 -> NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	V2A -> NP -> AP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	V2Q -> NP -> QS -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	V2S -> NP -> S -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	V2V -> NP -> VP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	V3 -> NP -> NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	VA -> AP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	VP -> Adv -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	VPSlash -> NP -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	VPSlash -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	VQ -> QS -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	VS -> S -> VP
+mkVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:448-509	VV -> VP -> VP
+mkVPSlash	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1502-1522	
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1502-1522	V2 -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1502-1522	V2A -> AP -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1502-1522	V2Q -> QS -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1502-1522	V2S -> S -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1502-1522	V2V -> NP -> VPSlash -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1502-1522	V2V -> VP -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1502-1522	V3 -> NP -> VPSlash
+mkVPSlash	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1502-1522	VV -> VPSlash -> VPSlash
+mkVoc	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:185-186	
+mkVoc	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:185-186	NP -> Voc
+more_CAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+most_Predet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+much_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+must_VV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+n0_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:940-941	
+n0_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:940-941	Dig
+n1000_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1775-1776	
+n1000_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1775-1776	Digits
+n1000_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1804-1805	
+n1000_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1804-1805	Numeral
+n100_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1773-1774	
+n100_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1773-1774	Digits
+n100_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1802-1803	
+n100_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1802-1803	Numeral
+n10_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1769-1770	
+n10_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1769-1770	Digits
+n10_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1798-1799	
+n10_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1798-1799	Numeral
+n1_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:942-943	
+n1_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:942-943	Dig
+n1_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1751-1752	
+n1_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1751-1752	Digits
+n1_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1780-1781	
+n1_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1780-1781	Numeral
+n1_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:905-906	
+n1_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:905-906	Unit
+n2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+n20_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1771-1772	
+n20_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1771-1772	Digits
+n20_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1800-1801	
+n20_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1800-1801	Numeral
+n2_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:944-945	
+n2_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:944-945	Dig
+n2_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1753-1754	
+n2_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1753-1754	Digits
+n2_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1782-1783	
+n2_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1782-1783	Numeral
+n2_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:907-908	
+n2_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:907-908	Unit
+n3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+n3_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:946-947	
+n3_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:946-947	Dig
+n3_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1755-1756	
+n3_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1755-1756	Digits
+n3_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1784-1785	
+n3_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1784-1785	Numeral
+n3_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:909-910	
+n3_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:909-910	Unit
+n4	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+n4_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:948-949	
+n4_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:948-949	Dig
+n4_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1757-1758	
+n4_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1757-1758	Digits
+n4_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1786-1787	
+n4_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1786-1787	Numeral
+n4_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:911-912	
+n4_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:911-912	Unit
+n5	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+n5_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:950-951	
+n5_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:950-951	Dig
+n5_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1759-1760	
+n5_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1759-1760	Digits
+n5_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1788-1789	
+n5_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1788-1789	Numeral
+n5_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:913-914	
+n5_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:913-914	Unit
+n6	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+n6_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:952-953	
+n6_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:952-953	Dig
+n6_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1761-1762	
+n6_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1761-1762	Digits
+n6_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1790-1791	
+n6_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1790-1791	Numeral
+n6_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:915-916	
+n6_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:915-916	Unit
+n7	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+n7_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:954-955	
+n7_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:954-955	Dig
+n7_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1763-1764	
+n7_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1763-1764	Digits
+n7_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1792-1793	
+n7_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1792-1793	Numeral
+n7_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:917-918	
+n7_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:917-918	Unit
+n8	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+n8_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:956-957	
+n8_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:956-957	Dig
+n8_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1765-1766	
+n8_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1765-1766	Digits
+n8_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1794-1795	
+n8_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1794-1795	Numeral
+n8_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:919-920	
+n8_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:919-920	Unit
+n9	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+n9_Dig	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:958-959	
+n9_Dig	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:958-959	Dig
+n9_Digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1767-1768	
+n9_Digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1767-1768	Digits
+n9_Numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1796-1797	
+n9_Numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1796-1797	Numeral
+n9_Unit	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:921-922	
+n9_Unit	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:921-922	Unit
+nd	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+nd10	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+nd100	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+nd1000	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+nd1000000	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+negativePol	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:249-250	
+negativePol	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:249-250	Pol
+noPConj	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:176-177	
+noPConj	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:176-177	PConj
+noVoc	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:187-188	
+noVoc	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:187-188	Voc
+no_Quant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+no_Utt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+nobody_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+not_Predet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+nothing_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+num	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+num2digits	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/NumeralTransfer.gf-tags
+on_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+only_Predet	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+or_Conj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+otherwise_PConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+part_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+passiveVP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:522-529	
+passiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:522-529	V2 -> NP -> VP
+passiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:522-529	V2 -> VP
+pastTense	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:271-272	
+pastTense	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:271-272	Tense
+plNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1598	
+plNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1598	Num
+please_Voc	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+pluralImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:294-295	
+pluralImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:294-295	ImpForm
+pluralNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:802-803	
+pluralNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:802-803	Num
+politeImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:296-297	
+politeImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:296-297	ImpForm
+positivePol	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:247-248	
+positivePol	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:247-248	Pol
+possess_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+pot0	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot01	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot0as1	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot1	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot110	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot111	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot1as2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot1plus	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot1to19	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot2	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot2as3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot2plus	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot3	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+pot3plus	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Numeral.gf-tags
+presentTense	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:269-270	
+presentTense	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:269-270	Tense
+progressiveVP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:533-534	
+progressiveVP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:533-534	VP -> VP
+questMarkPunct	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:129-130	
+questMarkPunct	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:129-130	Punct
+quite_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+reflAP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1092-1093	
+reflAP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1092-1093	A2 -> AP
+reflexiveVP	overload-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:512-517	
+reflexiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:512-517	V2 -> VP
+reflexiveVP	overload-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:512-517	VPSlash -> VP
+sgNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1597	
+sgNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1597	Num
+she_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:680-681	
+she_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:680-681	NP
+she_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+simultaneousAnt	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:258-259	
+simultaneousAnt	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:258-259	Ant
+singularImpForm	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:292-293	
+singularImpForm	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:292-293	ImpForm
+singularNum	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:800-801	
+singularNum	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:800-801	Num
+so_AdA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+somePl_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+someSg_Det	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+somebody_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+something_NP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+somewhere_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+str2card	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1658-1661	
+str2card	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1658-1661	Str -> Card
+str2digits	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1717-1749	
+str2digits	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1717-1749	Str -> Digits
+str2numeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1663-1712	
+str2numeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1663-1712	Str -> Numeral
+str2ord	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1653-1656	
+str2ord	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1653-1656	Str -> Ord
+tenfoldSub100	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:894-898	
+tenfoldSub100	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:894-898	Unit -> Sub100
+that_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:752-753	
+that_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:752-753	Det
+that_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:693-694	
+that_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:693-694	NP
+that_Quant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+that_QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1592	
+that_QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1592	QuantSg
+that_Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+thePl_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:744-745	
+thePl_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:744-745	Det
+theSg_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:742-743	
+theSg_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:742-743	Det
+the_Art	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1583	
+the_Art	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1583	Art
+the_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:738-739	
+the_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:738-739	Det
+the_Quant	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:770-771	
+the_Quant	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:770-771	Quant
+there7from_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+there7to_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+there_Adv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+therefore_PConj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+these_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:754-755	
+these_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:754-755	Det
+these_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:695-696	
+these_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:695-696	NP
+these_QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1594	
+these_QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1594	QuantPl
+they_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:688-689	
+they_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:688-689	NP
+they_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+this_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:750-751	
+this_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:750-751	Det
+this_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:691-692	
+this_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:691-692	NP
+this_Quant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+this_QuantSg	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1591	
+this_QuantSg	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1591	QuantSg
+those_Det	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:756-757	
+those_Det	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:756-757	Det
+those_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:697-698	
+those_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:697-698	NP
+those_QuantPl	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1595	
+those_QuantPl	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1595	QuantPl
+thousandfoldNumeral	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:869-870	
+thousandfoldNumeral	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:869-870	Sub1000 -> Numeral
+through_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+to_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+too_AdA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+under_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+very_AdA	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+want_VV	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+we_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:684-685	
+we_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:684-685	NP
+we_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+whatPl_IP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+whatSg_IP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+what_IP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1301-1302	
+what_IP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1301-1302	IP
+when_IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+when_Subj	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+where_IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+whichPl_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1336-1337	
+whichPl_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1336-1337	IDet
+whichSg_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1334-1335	
+whichSg_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1334-1335	IDet
+which_IDet	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1332-1333	
+which_IDet	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1332-1333	IDet
+which_IQuant	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+which_RP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1448-1449	
+which_RP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1448-1449	RP
+whoPl_IP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+whoSg_IP	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+who_IP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:1303-1304	
+who_IP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:1303-1304	IP
+why_IAdv	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+with_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+without_Prep	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+yes_Utt	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+youPl_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:686-687	
+youPl_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:686-687	NP
+youPl_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+youPol_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:676-677	
+youPol_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:676-677	NP
+youPol_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+youSg_Pron	indir	Grammar		/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/.gfbuild/Structural.gf-tags
+you_NP	oper-def	/home/john/repositories/GF/lib/src/api/Constructors.gf:674-675	
+you_NP	oper-type	/home/john/repositories/GF/lib/src/api/Constructors.gf:674-675	NP

@@ -1,0 +1,5 @@
+package org.grammaticalframework.eclipse.launch;
+
+public class GFConsoleDelegate {
+
+}

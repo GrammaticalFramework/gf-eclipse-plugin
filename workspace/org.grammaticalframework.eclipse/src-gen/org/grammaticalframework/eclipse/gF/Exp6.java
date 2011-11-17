@@ -16,6 +16,7 @@ package org.grammaticalframework.eclipse.gF;
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp6#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp6#isSort <em>Sort</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Exp6#isBuiltInCat <em>Built In Cat</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp6#isString <em>String</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp6#isInteger <em>Integer</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp6#isDouble <em>Double</em>}</li>
@@ -93,6 +94,32 @@ public interface Exp6 extends DDecl
    * @generated
    */
   void setSort(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Built In Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Built In Cat</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Built In Cat</em>' attribute.
+   * @see #setBuiltInCat(boolean)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getExp6_BuiltInCat()
+   * @model
+   * @generated
+   */
+  boolean isBuiltInCat();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Exp6#isBuiltInCat <em>Built In Cat</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Built In Cat</em>' attribute.
+   * @see #isBuiltInCat()
+   * @generated
+   */
+  void setBuiltInCat(boolean value);
 
   /**
    * Returns the value of the '<em><b>String</b></em>' attribute.

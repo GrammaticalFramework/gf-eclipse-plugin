@@ -23,7 +23,6 @@ import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.MultimapBasedSelectable;
 import org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider;
 import org.eclipse.xtext.util.IResourceScopeCache;
-import org.eclipse.xtext.util.Tuples;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListPatt;
@@ -32,33 +31,25 @@ import org.grammaticalframework.eclipse.naming.GFQualifiedNameProvider;
 
 import com.google.common.base.Function;
 import com.google.inject.Inject;
-import com.google.inject.Provider;
 
-// TODO: Auto-generated Javadoc
 /**
  * Custom GF scoping
  * Basically we look at the current resource and return all the un-qualified names
  * Then delegate to global resource provider.
+ * 
+ * TODO Caching in scope provider
  *
  * @author John J. Camilleri
  */
-@SuppressWarnings("unused")
 public class GFScopeProvider extends SimpleLocalScopeProvider {
 	
 	/**
-	 * The cache.
+	 * Cache instance
 	 */
 	@Inject
+	@SuppressWarnings("unused")
 	private IResourceScopeCache cache;
 	
-	/* (non-Javadoc)
-	 * @see org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider#setCache(org.eclipse.xtext.util.IResourceScopeCache)
-	 */
-	@Override
-	public void setCache(IResourceScopeCache cache) {
-		this.cache = cache;
-	}
-
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider#getScope(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference)
 	 */
@@ -68,7 +59,6 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 		// Get local scope
 		ISelectable localResourceContent = getAllDescriptions(context.eResource(), context, reference);
 		
-		// TODO Caching here breaks local variable scoping...
 //		ISelectable localResourceContent = cache.get(Tuples.pair(SimpleLocalScopeProvider.class.getName(), reference), 
 //				context.eResource(), new Provider<ISelectable>() {
 //			public ISelectable get() {

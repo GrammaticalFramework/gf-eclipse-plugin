@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="12" version="2.0">
+<workbench progressCount="31" version="2.0">
 <workbenchAdvisor/>
-<window height="887" width="1158" x="707" y="94">
+<window height="886" width="1154" x="766" y="113">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="87"/>
@@ -23,7 +23,7 @@
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1314645064060" focus="true" label="Workspace - GF">
+<page aggregateWorkingSetId="Aggregate for window 1321536612701" focus="true" label="Workspace - GF">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -34,21 +34,18 @@
 </folder>
 </info>
 </editorArea>
-<editor focus="true" id="org.grammaticalframework.eclipse.GF" name="HelloEng.gf" partName="HelloEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf" title="HelloEng.gf" tooltip="Hello/HelloEng.gf" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.grammaticalframework.eclipse.GF" name="HelloEng.gf" partName="HelloEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf" title="HelloEng.gf" tooltip="Hello/HelloEng.gf" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Hello/HelloEng.gf"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="579" selectionTopPixel="38"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="308" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" currentWorkingSetName="Aggregate for window 1314645064060" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+<viewState CommonNavigator.LINKING_ENABLED="0" currentWorkingSetName="Aggregate for window 1321536612701" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors"/>
-</expanded>
-<columnWidths org.eclipse.ui.ide.locationField="238" org.eclipse.ui.ide.markerType="267" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="117" org.eclipse.ui.ide.severityAndDescriptionField="340"/>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -94,26 +91,25 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="876" ratioRight="292" relationship="2" relative="topLeft">
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="855" ratioRight="285" relationship="2" relative="topLeft">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="292" ratioRight="876" relationship="2" relative="topLeft"/>
-<info folder="true" part="underEditor" ratio="0.65308803" ratioLeft="497" ratioRight="264" relationship="4" relative="org.eclipse.ui.editorss">
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="285" ratioRight="855" relationship="2" relative="topLeft"/>
+<info folder="true" part="underEditor" ratio="0.6592105" ratioLeft="501" ratioRight="259" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottomLeft" ratio="0.4993481" ratioLeft="383" ratioRight="384" relationship="4" relative="topLeft">
+<info folder="true" part="bottomLeft" ratio="0.5" ratioLeft="380" ratioRight="380" relationship="4" relative="topLeft">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -131,7 +127,7 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/HelloEng.gf"/>
 </editors>
 <item active="true" historyLabel="HelloEng.gf" index="0">
-<position info="not_deleted" x="179" y="41"/>
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -139,13 +135,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="topLeft"/>
-<trimItem IMemento.internal.id="bottomLeft"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -159,6 +148,24 @@
 <mruList>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="HelloEng.gf" tooltip="Hello/HelloEng.gf">
 <persistable path="/Hello/HelloEng.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="VPConj.gf" tooltip="CL/VPConj.gf">
+<persistable path="/CL/VPConj.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="VerbsEng.gf" tooltip="CL/VerbsEng.gf">
+<persistable path="/CL/VerbsEng.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="Verbs.gf" tooltip="CL/Verbs.gf">
+<persistable path="/CL/Verbs.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ClEng.gf" tooltip="CL/ClEng.gf">
+<persistable path="/CL/ClEng.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ClSym.gf" tooltip="CL/ClSym.gf">
+<persistable path="/CL/ClSym.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="Cl.gf" tooltip="CL/Cl.gf">
+<persistable path="/CL/Cl.gf"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="Foods.gf" tooltip="Functors/Foods.gf">
 <persistable path="/Functors/Foods.gf"/>
@@ -183,24 +190,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="AbsCat.gf" tooltip="Hello/AbsCat.gf">
 <persistable path="/Hello/AbsCat.gf"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ResEng.gf" tooltip="GF Test Project/hello/ResEng.gf">
-<persistable path="/GF Test Project/hello/ResEng.gf"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="HelloEng.gf" tooltip="GF Test Project/hello/HelloEng.gf">
-<persistable path="/GF Test Project/hello/HelloEng.gf"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="Syntax.gfh" tooltip="GF Test Project/functors/.gfbuild/Syntax.gfh">
-<persistable path="/GF Test Project/functors/.gfbuild/Syntax.gfh"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ParadigmsEng.gfh" tooltip="GF Test Project/functors/.gfbuild/ParadigmsEng.gfh">
-<persistable path="/GF Test Project/functors/.gfbuild/ParadigmsEng.gfh"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="Cat.gfh" tooltip="GF Test Project/functors/.gfbuild/Cat.gfh">
-<persistable path="/GF Test Project/functors/.gfbuild/Cat.gfh"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ParadigmsGer.gfh" tooltip="GF Test Project/functors/.gfbuild/ParadigmsGer.gfh">
-<persistable path="/GF Test Project/functors/.gfbuild/ParadigmsGer.gfh"/>
 </file>
 </mruList>
 </workbench>

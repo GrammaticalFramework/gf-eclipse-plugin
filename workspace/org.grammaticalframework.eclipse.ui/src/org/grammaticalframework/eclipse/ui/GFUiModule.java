@@ -18,12 +18,11 @@ import org.apache.log4j.PatternLayout;
 import org.apache.log4j.RollingFileAppender;
 import org.apache.log4j.WriterAppender;
 import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.ui.console.MessageConsoleStream;
+import org.eclipse.ui.console.IOConsoleOutputStream;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.grammaticalframework.eclipse.GFPreferences;
 import org.grammaticalframework.eclipse.ui.perspectives.GFConsole;
 
-// TODO: Auto-generated Javadoc
 /**
  * Use this class to register components to be used within the IDE.
  */
@@ -38,6 +37,8 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	 * The Apache log4j logger
 	 */
 	public static final Logger log = Logger.getLogger("org.grammaticalframework.eclipse");
+	
+	private GFConsole consoleManager;
 
 	/**
 	 * Instantiates a new GF UI module.
@@ -47,10 +48,9 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	public GFUiModule(AbstractUIPlugin plugin) {
 		super(plugin);
 		
-		// Create GF console
-		MessageConsoleStream consoleStream = GFConsole.getStream();
-		
 		// Setup logging and direct to console
+		consoleManager = new GFConsole();
+		IOConsoleOutputStream consoleStream = consoleManager.getLogOutputStream();
 		Layout layout = new PatternLayout("[%d{yyyy-MM-dd HH:mm:ss,SSS}] %-5p %m%n");
 		log.addAppender(new WriterAppender(layout, consoleStream));
 		try {

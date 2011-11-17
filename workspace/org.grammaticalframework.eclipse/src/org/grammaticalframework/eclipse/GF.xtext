@@ -158,6 +158,7 @@ Exp6 :
 	  name=[Ident|ID]		// constant or variable
 	  
 	| sort?=Sort			// type of types/param types/strings/token lists
+	| builtInCat?=BuiltInCat	// 
 	| string?=String			// string literal
 	| integer?=Integer		// integer literal
 	| double?=Double			// floating point literal
@@ -339,6 +340,12 @@ Sort :
 	| 'PType'
 	| 'Str'
 	| 'Strs'
+;
+
+BuiltInCat :
+	  'String'
+	| 'Int'
+	| 'Float'
 ;
 
 ListPattAss :
