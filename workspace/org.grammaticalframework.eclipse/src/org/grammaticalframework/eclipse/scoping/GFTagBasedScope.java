@@ -81,17 +81,34 @@ public class GFTagBasedScope extends AbstractScope {
 				QualifiedName trueQualifiedName = converter.toQualifiedName(tag.getTrueQualifiedName());
 				QualifiedName unQualifiedName = getUnQualifiedName(trueQualifiedName);
 				Map<String, String> userData = tag.getProperties();
-				Iterable<IEObjectDescription> matchingEObjects = resourceDescriptions.getExportedObjects(GFPackage.Literals.IDENT, trueQualifiedName, false);
-				Iterator<IEObjectDescription> iter = matchingEObjects.iterator();
-				// This just always chooses first occurance... is that bad?
-				if (iter.hasNext()) {
+				
+				IEObjectDescription eObjectDescription = null;
+				
+				// First try trueQualifiedName
+				Iterable<IEObjectDescription> matchingEObjects1 = resourceDescriptions.getExportedObjects(GFPackage.Literals.IDENT, trueQualifiedName, false);
+				Iterator<IEObjectDescription> iter1 = matchingEObjects1.iterator();
+				if (iter1.hasNext()) { // This just always chooses first occurance... is that bad?
+					eObjectDescription = iter1.next();
+//				} else {
+//					// If not, then try fullyQualifiedName
+//					Iterable<IEObjectDescription> matchingEObjects2 = resourceDescriptions.getExportedObjects(GFPackage.Literals.IDENT, fullyQualifiedName, false);
+//					Iterator<IEObjectDescription> iter2 = matchingEObjects2.iterator();
+//					if (iter2.hasNext()) {
+//						eObjectDescription = iter2.next();
+//					}
+				}
+				
+				// Did we find anything?
+				if (eObjectDescription != null) {
 					// Duplicate the object description, so that we can edit the qualified name and add the user data
-					IEObjectDescription eObjectDescription = iter.next();
 					IEObjectDescription eObjectDescription2 = new EObjectDescription(unQualifiedName, eObjectDescription.getEObjectOrProxy(), userData);
 					descriptions.add(eObjectDescription2);
-				} else {
+				}
+				else {
 					log.debug("No EObject found for " + tag.getQualifiedName());
 				}
+				
+				
 			} catch (IllegalStateException _) {
 				// Sometimes happens when you save during a build/validation, etc. Qisu ma ġara xejn. 
 			}

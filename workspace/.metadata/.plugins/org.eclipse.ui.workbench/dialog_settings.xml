@@ -18,37 +18,37 @@
 		<item value="152" key="DIALOG_Y_ORIGIN"/>
 		<item value="463" key="DIALOG_X_ORIGIN"/>
 	</section>
-	<section name="InstallationDialogSettings">
-		<item value="688" key="DIALOG_WIDTH"/>
-		<item value="0" key="DIALOG_Y_ORIGIN"/>
-		<item value="50" key="DIALOG_X_ORIGIN"/>
-		<item value="576" key="DIALOG_HEIGHT"/>
-		<item value="1|Ubuntu|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
-	</section>
 	<section name="NewWizardAction">
 		<item value="org.eclipse.pde.ui.NewCategoryWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.pde.PDE"/>
 		</list>
 	</section>
+	<section name="InstallationDialogSettings">
+		<item value="688" key="DIALOG_WIDTH"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="576" key="DIALOG_HEIGHT"/>
+		<item value="50" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Ubuntu|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
 	<section name="ShowViewDialog">
 		<item value="336" key="DIALOG_WIDTH"/>
 		<item value="org.eclipse.ui.views.BookmarkView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
 		<item value="256" key="DIALOG_Y_ORIGIN"/>
-		<item value="436" key="DIALOG_HEIGHT"/>
 		<item value="819" key="DIALOG_X_ORIGIN"/>
+		<item value="436" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.eclipse.ui"/>
 		</list>
 	</section>
+	<section name="EditorSelectionDialog">
+		<item value="false" key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL"/>
+	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 		<item value="true" key="uncategorizedFilter"/>
 		<item value="true" key="internalFilter"/>
 		<item value="true" key="actionSetFilter"/>
-	</section>
-	<section name="EditorSelectionDialog">
-		<item value="false" key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL"/>
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.pde.ui.featureExportWizard" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>

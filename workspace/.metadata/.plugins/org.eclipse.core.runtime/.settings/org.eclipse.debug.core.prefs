@@ -1,5 +1,5 @@
-#Thu Nov 17 13:46:08 CET 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="fInteractiveMode.getSelection()"/>\n</watchExpressions>\n
+#Thu Nov 17 16:22:46 CET 2011
+prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="fInteractiveMode.getSelection()"/>\n<expression enabled\="true" text\="resourceDescriptions.getExportedObjects(GFPackage.Literals.IDENT, converter.toQualifiedName(&quot;mkQuant&quot;), true)"/>\n<expression enabled\="true" text\="resourceDescriptions.getExportedObjects()"/>\n</watchExpressions>\n
 eclipse.preferences.version=1
 org.eclipse.debug.core.USE_STEP_FILTERS=false
 org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true

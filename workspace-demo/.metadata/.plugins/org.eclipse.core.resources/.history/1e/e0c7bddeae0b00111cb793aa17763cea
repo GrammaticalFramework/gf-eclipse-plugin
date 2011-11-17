@@ -1,7 +1,0 @@
---# -path=.:../abstract:../common:../../prelude
-resource ResEng = {
-	
-	param
-		GenderSS = Masc | Fem ; 
-		Param = Const1 | Const2 ;
-}
