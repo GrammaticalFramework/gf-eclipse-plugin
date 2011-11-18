@@ -1,2 +1,3 @@
 archive-and-commit.sh
 publish-release.sh
+workspace/.metadata/.plugins/org.eclipse.pde.core/tempp2metadata/

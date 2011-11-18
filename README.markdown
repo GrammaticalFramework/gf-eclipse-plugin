@@ -1,6 +1,9 @@
 
 # The GF Eclipse Plugin
 
+John  J. Camilleri  
+Updated: 18 Nov 2011
+
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
 _This documentation is also available at the [MOLTO Project Wiki](http://www.molto-project.eu/node/1395)._
@@ -44,6 +47,7 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 
 ### Near-term
 
+- Full support for _Open Declaration_ (F3)
 - Inline documentation for function calls, overloads
 - Quick-fix suggestions for syntax and naming errors
 - Code generation for concrete/instance modules
@@ -62,11 +66,11 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 
 ## Update history
 
-**17/11/11**
-: Third BETA released, overhauled to take advantage of new compiler features. Tag-based scoping for better performance.
+**18/11/11**
+: Third BETA (1.1.0.x) released, overhauled to take advantage of new compiler features. Tag-based scoping with caching for better performance. Interactive console (GF Shell) for luanch configs.
 
 **11/10/11**
-: Second BETA released, with improved support for qualified names, local variable bindings, selective inheritance, module outlining, and launch configurations. Also new GF Project type.
+: Second BETA (1.0.0.x) released, with improved support for qualified names, local variable bindings, selective inheritance, module outlining, and launch configurations. Also new GF Project type.
 
 **01/10/11**
 : Initial BETA released.
@@ -86,8 +90,8 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 
 ### System requirements
 
-1. The plugin makes use of the newest GF features, and **requires the latest developer version of GF** to be installed on your system.
-1. Paths to GF must be set within the plugin, meaning:
+1. The plugin makes use of the newest GF features, and **requires the latest developer version of GF** to be installed on your system (instructions [here](http://www.grammaticalframework.org/download/index.html)).
+1. Paths to GF must be set within the plugin (see below). This means:
     - you don't necessarily need to have GF in your `PATH` environment variable
     - you can use a separate GF installation for GFEP if you wish
 1. The plugin was developed using Eclipse 3.7, and has **not** been tested with older versions of Eclipse.
@@ -154,7 +158,7 @@ files and manually add them to your Eclipse workspace. To experiment with some o
 
 ![Output from the GF compiler](http://www.grammaticalframework.org/eclipse/images/eclipse-compileroutput.png)
 
-### Usage hints
+### Usage hints & issues
 
 #### Consoles
 
@@ -172,18 +176,20 @@ _The Eclipse console implementation does not support command history (up arrow) 
 
 You can set the log verbosity from **Window &rarr; Preferences &rarr; Grammatical Framework**. This setting also affects the verbosity of the log file `gfep.log`.
 
+#### Validation
+
+For validation to work correctly, the project's **Build Automatically** option should be turned on.
+
+The in-editor validation sometimes needs to be triggered/updated by a keystroke. If you can still see errors which you believe should be correct, try adding a space character to ensure the validation is re-triggered.
+
+Sometimes you may get an entire file marked with errors, even though in fact there is only a single error which is causing the internal builder to fail. In such cases referring to the **Problems** view should help you locate the cause. This issue is particularly relevant when changes made to one module may induce errors in its descendants (e.g. renaming a parameter in a resource module). This behaviour will hopefully be improved in future versions. 
+
 --------------------------------------------------------------------------------
 
 ## Evaluation & feedback
 
 Please try to use the plugin for developing your own GF projects and report any issues you come up against.
 Do not hesitate to contact me on `john.j.camilleri` at domain `chalmers.se` and let me know how you think the plugin can be improved.
-
-### Notes
-
-1. The in-editor validation often needs to be triggered/updated by a keystroke. So if you can still see errors which you believe should be correct, try adding a space character to ensure the validation has been re-triggered.
-2. Validation expects to have the project's **Build Automatically** option checked (turned on).
-3. Sometimes you may get an entire file marked with errors, even though in fact there is only a single error which is causing the internal builder to fail. In such cases referring to the **Problems** view should help you locate the cause. This issue is particularly relevant when changes made to one module may induce errors in its descendants (e.g. renaming a parameter in a resource module). This behaviour will hopefully be improved in future versions. 
 
 ### Criteria
 

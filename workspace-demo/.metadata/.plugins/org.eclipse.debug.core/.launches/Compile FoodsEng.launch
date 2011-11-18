@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.grammaticalframework.eclipse.GFLaunchConfigurationType">
 <stringAttribute key="org.grammaticalframework.eclipse.launch.config.FILENAMES" value="FoodsEng.gf"/>
+<booleanAttribute key="org.grammaticalframework.eclipse.launch.config.INTERACTIVE_MODE" value="false"/>
 <stringAttribute key="org.grammaticalframework.eclipse.launch.config.OPTIONS" value="--force-recomp"/>
 <stringAttribute key="org.grammaticalframework.eclipse.launch.config.WORKING_DIR" value="/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors"/>
 </launchConfiguration>
