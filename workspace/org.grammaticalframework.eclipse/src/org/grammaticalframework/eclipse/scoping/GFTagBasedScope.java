@@ -58,15 +58,16 @@ public class GFTagBasedScope extends AbstractScope {
 	 * @param parent
 	 * @param ignoreCase
 	 */
-	protected GFTagBasedScope(IScope parent, IResourceDescription resourceDescription, boolean ignoreCase) {
-		super(parent==null ? IScope.NULLSCOPE : parent, ignoreCase);
-		moduleName = resourceDescription.getURI().lastSegment().substring(0, resourceDescription.getURI().lastSegment().lastIndexOf('.'));
-		descriptions = new ArrayList<IEObjectDescription>();
-		for (IEObjectDescription desc : resourceDescription.getExportedObjects()) {
-			QualifiedName newName = getUnQualifiedName(desc.getQualifiedName()); // Strip off qualified bit of name (maybe)
-			descriptions.add(EObjectDescription.create(newName, desc.getEObjectOrProxy()));
-		}
-	}
+//	protected GFTagBasedScope(IScope parent, IResourceDescription resourceDescription, boolean ignoreCase) {
+//		super(parent==null ? IScope.NULLSCOPE : parent, ignoreCase);
+//		moduleName = resourceDescription.getURI().lastSegment().substring(0, resourceDescription.getURI().lastSegment().lastIndexOf('.'));
+//		descriptions = new ArrayList<IEObjectDescription>();
+//		for (IEObjectDescription desc : resourceDescription.getExportedObjects()) {
+////			QualifiedName newName = getUnQualifiedName(desc.getQualifiedName()); // Strip off qualified bit of name (maybe)
+////			descriptions.add(EObjectDescription.create(newName, desc.getEObjectOrProxy()));
+//			descriptions.add(desc);
+//		}
+//	}
 	
 	/**
 	 * Add the collection of tags to the scope. The resource descriptions are used for looking up the corresponding EObjects
@@ -77,7 +78,7 @@ public class GFTagBasedScope extends AbstractScope {
 	public void addTags(IResourceDescriptions resourceDescriptions, Collection<TagEntry> tags) {
 		for (TagEntry tag : tags) {
 			try {
-//				QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getQualifiedName());
+				QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getQualifiedName());
 				QualifiedName trueQualifiedName = converter.toQualifiedName(tag.getTrueQualifiedName());
 				QualifiedName unQualifiedName = getUnQualifiedName(trueQualifiedName);
 				Map<String, String> userData = tag.getProperties();
@@ -101,7 +102,7 @@ public class GFTagBasedScope extends AbstractScope {
 				// Did we find anything?
 				if (eObjectDescription != null) {
 					// Duplicate the object description, so that we can edit the qualified name and add the user data
-					IEObjectDescription eObjectDescription2 = new EObjectDescription(unQualifiedName, eObjectDescription.getEObjectOrProxy(), userData);
+					IEObjectDescription eObjectDescription2 = new EObjectDescription(fullyQualifiedName, eObjectDescription.getEObjectOrProxy(), userData);
 					descriptions.add(eObjectDescription2);
 				}
 				else {

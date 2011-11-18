@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.regex.Matcher"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IResource"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.validation.Issue"/>
-<fullyQualifiedTypeName name="org.eclipse.core.runtime.QualifiedName"/>
-<fullyQualifiedTypeName name="org.eclipse.emf.mwe2.language.scoping.QualifiedNameProvider"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.conversion.impl.QualifiedNameValueConverter"/>
-<fullyQualifiedTypeName name="org.eclipse.core.resources.IMarker"/>
-<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFRuntimeModule"/>
-<fullyQualifiedTypeName name="com.google.inject.Injector"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFStandaloneSetup"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.XtextResourceSet"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.XtextResource"/>
-<fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="com.google.inject.Inject"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.parser.IParser"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
@@ -23,10 +11,8 @@
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.GFFactory"/>
 <fullyQualifiedTypeName name="org.eclipse.emf.common.util.URI"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.impl.IdentImpl"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScope"/>
 <fullyQualifiedTypeName name="com.google.common.base.Predicate"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="org.eclipse.xtext.resource.IResourceDescriptions"/>
@@ -41,7 +27,6 @@
 <fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.GFException"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.io.PrintStream"/>
 <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
 <fullyQualifiedTypeName name="java.io.FilterInputStream"/>
@@ -60,4 +45,19 @@
 <fullyQualifiedTypeName name="org.eclipse.swt.widgets.Button"/>
 <fullyQualifiedTypeName name="org.eclipse.swt.events.SelectionListener"/>
 <fullyQualifiedTypeName name="org.grammaticalframework.eclipse.ui.perspectives.GFConsole"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="com.google.common.collect.ArrayListMultimap"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFTagBasedGlobalScopeProvider"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.ModType"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.naming.QualifiedName"/>
+<fullyQualifiedTypeName name="org.apache.log4j.lf5.util.ResourceUtils"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.naming.GFQualifiedNameProvider"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.scoping.GFScopeProvider"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="org.grammaticalframework.eclipse.gF.ListLocDef"/>
+<fullyQualifiedTypeName name="org.eclipse.xtext.scoping.IScope"/>
 </qualifiedTypeNameHistroy>

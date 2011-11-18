@@ -25,7 +25,7 @@ Ant	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspac
 Art	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 Art	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 Art	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
-Boring	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:30	
+Boring	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:30	
 CAdv	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 CAdv	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 CAdv	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
@@ -35,7 +35,7 @@ CN	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace
 Card	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Card	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Card	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
-Cheese	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:23	
+Cheese	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:23	
 Cl	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Cl	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Cl	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
@@ -57,7 +57,7 @@ ComplV3	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/work
 Conj	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Conj	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Conj	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
-Delicious	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:29	
+Delicious	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:29	
 Det	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Det	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Det	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
@@ -82,9 +82,9 @@ DetSg	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/worksp
 Digits	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Digits	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Digits	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
-Expensive	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:28	
-Fish	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:24	
-Fresh	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:25	
+Expensive	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:28	
+Fish	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:24	
+Fresh	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:25	
 IAdv	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 IAdv	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 IAdv	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
@@ -118,11 +118,11 @@ ImpForm	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/work
 Interj	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Interj	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Interj	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Is	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:14	
-Italian	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:27	
-Item	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:9	
+Is	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:14	
+Italian	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:27	
+Item	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:9	
 Item2	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf	
-Kind	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:10	
+Kind	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:10	
 ListAP	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 ListAP	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 ListAP	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
@@ -174,8 +174,8 @@ PQuestMark	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/w
 Phr	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Phr	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Phr	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Phrase	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:8	
-Pizza	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:22	
+Phrase	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:8	
+Pizza	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:22	
 PlQuant	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 PlQuant	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 PlQuant	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
@@ -197,11 +197,11 @@ Punct	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/worksp
 QCl	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 QCl	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 QCl	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
-QKind	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:19	
+QKind	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:19	
 QS	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 QS	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 QS	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
-Quality	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:11	
+Quality	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:11	
 Quant	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Quant	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Quant	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
@@ -253,10 +253,10 @@ Tense	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/worksp
 Text	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Text	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Text	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-That	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:16	
-These	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:17	
-This	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:15	
-Those	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:18	
+That	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:16	
+These	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:17	
+This	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:15	
+Those	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:18	
 Unit	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 Unit	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 Unit	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
@@ -302,12 +302,12 @@ VS	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace
 VV	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 VV	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 VV	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
-Very	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:20	
+Very	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:20	
 Voc	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Voc	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Voc	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
-Warm	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:26	
-Wine	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf:21	
+Warm	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:26	
+Wine	lin	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf:21	
 aPl_Det	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 aPl_Det	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 aPl_Det	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags

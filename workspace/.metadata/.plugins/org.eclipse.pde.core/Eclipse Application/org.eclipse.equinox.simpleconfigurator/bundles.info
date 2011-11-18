@@ -328,8 +328,8 @@ org.grammaticalframework.eclipse,1.1.0.qualifier,file:/home/john/repositories/gf
 org.grammaticalframework.eclipse.tests,1.0.0.qualifier,file:/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse.tests/,4,false
 org.grammaticalframework.eclipse.ui,1.1.0.qualifier,file:/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse.ui/,4,false
 org.hamcrest.core,1.1.0.v20090501071000,file:/home/john/eclipse/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar,4,false
-org.junit,4.8.2.v4_8_2_v20110321-1705,file:/home/john/eclipse/plugins/org.junit_4.8.2.v4_8_2_v20110321-1705/,4,false
 org.junit,3.8.2.v3_8_2_v20100427-1100,file:/home/john/eclipse/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/,4,false
+org.junit,4.8.2.v4_8_2_v20110321-1705,file:/home/john/eclipse/plugins/org.junit_4.8.2.v4_8_2_v20110321-1705/,4,false
 org.junit4,4.8.1.v20100525,file:/home/john/eclipse/plugins/org.junit4_4.8.1.v20100525/,4,false
 org.mortbay.jetty.server,6.1.23.v201012071420,file:/home/john/eclipse/plugins/org.mortbay.jetty.server_6.1.23.v201012071420.jar,4,false
 org.mortbay.jetty.util,6.1.23.v201012071420,file:/home/john/eclipse/plugins/org.mortbay.jetty.util_6.1.23.v201012071420.jar,4,false

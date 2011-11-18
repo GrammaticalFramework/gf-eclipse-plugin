@@ -3,8 +3,8 @@
 	<section name="EXPRESSION_INPUT_DIALOG">
 		<item value="474" key="DIALOG_WIDTH"/>
 		<item value="308" key="DIALOG_Y_ORIGIN"/>
-		<item value="352" key="DIALOG_HEIGHT"/>
 		<item value="731" key="DIALOG_X_ORIGIN"/>
+		<item value="352" key="DIALOG_HEIGHT"/>
 		<item value="1|Ubuntu|9.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
@@ -14,16 +14,16 @@
 		<item value="598" key="WIDTH"/>
 	</section>
 	<section name="conditionHistory">
-		<item value="moduleName.equals(&quot;Syntax&quot;)" key="conditionHistoryEntry_7"/>
+		<item value="tagSpecimen.getAlias().equals(&quot;R&quot;)" key="conditionHistoryEntry_7"/>
+		<item value="alias.equals(&quot;R&quot;);" key="conditionHistoryEntry_6"/>
 		<item value="8" key="conditionHistoryEntryCount"/>
-		<item value="moduleName.equals(&quot;CombinatorsEng&quot;)" key="conditionHistoryEntry_6"/>
-		<item value="context instanceof org.grammaticalframework.eclipse.gF.PrintDef" key="conditionHistoryEntry_9"/>
-		<item value="from instanceof org.grammaticalframework.eclipse.gF.Def" key="conditionHistoryEntry_8"/>
-		<item value="tag.getIdent().equals(&quot;mkQuant&quot;)" key="conditionHistoryEntry_0"/>
-		<item value="tag.getIdent().equals(&quot;mkS&quot;)" key="conditionHistoryEntry_1"/>
-		<item value="tag.getIdent().equals(&quot;mkCl&quot;)" key="conditionHistoryEntry_2"/>
-		<item value="tagFileURI.toString().endsWith(&quot;Syntax.gf-tags&quot;)" key="conditionHistoryEntry_3"/>
-		<item value="eObject==null" key="conditionHistoryEntry_4"/>
-		<item value="moduleName.equals(&quot;Cat&quot;)" key="conditionHistoryEntry_5"/>
+		<item value="moduleName.equals(&quot;Syntax&quot;)" key="conditionHistoryEntry_9"/>
+		<item value="moduleName.equals(&quot;CombinatorsEng&quot;)" key="conditionHistoryEntry_8"/>
+		<item value="qualifierAliasCombos.size() &gt; 1" key="conditionHistoryEntry_0"/>
+		<item value="tag.getIdent().equals(&quot;mkNP&quot;)" key="conditionHistoryEntry_1"/>
+		<item value="tagSpecimen.getIdent().equals(&quot;mkNP&quot;)" key="conditionHistoryEntry_2"/>
+		<item value="label.getName().getS().equals(&quot;mkNP&quot;)" key="conditionHistoryEntry_3"/>
+		<item value="tag.getAlias().equals(&quot;R&quot;) &amp;&amp; tag.getIdent().equals(&quot;mkNP&quot;)" key="conditionHistoryEntry_4"/>
+		<item value="tag.getAlias().equals(&quot;R&quot;)" key="conditionHistoryEntry_5"/>
 	</section>
 </section>

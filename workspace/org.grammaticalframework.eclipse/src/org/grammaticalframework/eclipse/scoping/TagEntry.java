@@ -168,7 +168,7 @@ public class TagEntry {
 	 * @return qualified name
 	 */
 	public String getQualifiedName() {
-		return this.qualifier + "." + this.ident;
+		return qualifier.isEmpty() ? ident : qualifier + "." + ident;
 	}
 	
 	/**
@@ -182,22 +182,27 @@ public class TagEntry {
 	}
 
 	/**
-	 * Returns tag in tab-delimited format (suitable for writing back to a tags file)
+	 * String representation of tag
 	 */
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder(ident + "\t" + type + "\t");
-		if (isIndirect) {
-			sb.append(qualifier + "\t" + alias + "\t");
-		}
-		sb.append(file);
-		if (lineFrom != null) {
-			sb.append(":" + lineFrom);
-			if (lineTo != null && !lineTo.equals(lineFrom)) {
-				sb.append("-" + lineTo);
-			}
-		}
-		sb.append("\t" + args);
+//		StringBuilder sb = new StringBuilder(ident + "\t" + type + "\t");
+//		if (isIndirect) {
+//			sb.append(qualifier + "\t" + alias + "\t");
+//		}
+//		sb.append(file);
+//		if (lineFrom != null) {
+//			sb.append(":" + lineFrom);
+//			if (lineTo != null && !lineTo.equals(lineFrom)) {
+//				sb.append("-" + lineTo);
+//			}
+//		}
+//		sb.append("\t" + args);
+		StringBuilder sb = new StringBuilder(moduleName + "." + ident);
+		sb.append(" (Q:" + qualifier);
+		if (!alias.isEmpty())
+			sb.append(", A:" + alias);
+		sb.append(")");
 		return sb.toString();
 	}
 	

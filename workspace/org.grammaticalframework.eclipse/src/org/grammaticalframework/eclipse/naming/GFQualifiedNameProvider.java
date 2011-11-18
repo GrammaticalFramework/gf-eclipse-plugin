@@ -139,9 +139,8 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 		EObject grandParent = parent.eContainer();
 		EObject greatGrandParent = grandParent.eContainer();
 		
-		// Special case when dealing with alias'd opening (and later on qualified names...)
-		// Include BOTH the true name AND the alias
-		if (parent instanceof Open) {
+		// Always include the raw module name, including this one!
+		if (parent instanceof ModType || parent instanceof Open || parent instanceof Included) {
 			return true;
 		}
 		

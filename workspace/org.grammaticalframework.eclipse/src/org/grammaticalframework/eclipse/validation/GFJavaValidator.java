@@ -27,8 +27,6 @@ import org.eclipse.xtext.validation.Check;
 import org.grammaticalframework.eclipse.gF.*;
 import org.grammaticalframework.eclipse.scoping.GFGlobalScopeProvider;
 import org.grammaticalframework.eclipse.scoping.GFLibraryAgent;
-import org.grammaticalframework.eclipse.scoping.TagEntry;
-
 import com.google.inject.Inject;
  
 
@@ -291,19 +289,25 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 				temp = temp.eContainer();
 			}
 			TopDef topDef = (TopDef)temp;
+			String moduleName = ((ModDef)topDef.eContainer().eContainer()).getType().getName().getS();
 			IScope scope = getScopeProvider().getScope(topDef, GFPackage.Literals.TOP_DEF__DEFINITIONS);
 			if (scope.getSingleElement(qualifier) != null) {
 				
-				boolean found = false;
-				Iterator<IEObjectDescription> matchIter = scope.getElements(unQualifiedName).iterator();
-				while (matchIter.hasNext()) {
-					IEObjectDescription objDesc = matchIter.next();
-					if (qualifier.getS().equals(objDesc.getUserData(TagEntry.USER_DATA_KEY_QUALIFIER))
-							|| qualifier.getS().equals(objDesc.getUserData(TagEntry.USER_DATA_KEY_ALIAS))) {
-						found = true;
-						break;
-					}
-				}
+				QualifiedName searchFor = qualifier.getS().equals(moduleName)
+					? unQualifiedName
+					: fullyQualifiedName;
+				
+				boolean found = (scope.getSingleElement(searchFor) != null);
+//				boolean found = false;
+//				Iterator<IEObjectDescription> matchIter = scope.getElements(fullyQualifiedName).iterator();
+//				while (matchIter.hasNext()) {
+//					IEObjectDescription objDesc = matchIter.next();
+//					if (qualifier.getS().equals(objDesc.getUserData(TagEntry.USER_DATA_KEY_QUALIFIER))
+//							|| qualifier.getS().equals(objDesc.getUserData(TagEntry.USER_DATA_KEY_ALIAS))) {
+//						found = true;
+//						break;
+//					}
+//				}
 				
 				// We now we are dealing with a Qualified name, now see if the full thing is valid:
 				if (!found) {

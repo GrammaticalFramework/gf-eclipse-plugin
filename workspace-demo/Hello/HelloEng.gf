@@ -1,12 +1,12 @@
---concrete HelloEng of HelloAbs = ResEng ** { 
-concrete HelloEng of HelloAbs = open ResEng in {
+concrete HelloEng of HelloAbs = ResEng ** { 
+--concrete HelloEng of HelloAbs = open (R=ResEng) in {
 	
 	flags
 		coding = utf8 ;
  
 	lincat
 		Greeting, Farewell = {s : Str} ;
-		Recipient = {s : Gender => Str} ;
+		Recipient = {s : ResEng.Gender => Str} ;
 
 	lin
  		Hello recip = {s = "hello" ++ recip.s ! Masc } ;
@@ -16,17 +16,5 @@ concrete HelloEng of HelloAbs = open ResEng in {
 		Parent = { s = table {
 			Masc => "dad" ; Fem => "mum"
 		} } ;
-		Friends = mega "friends" "loved ones" ;
-
-	oper
-		superate : Str -> Recipient = \s ->
-			lin Recipient { s = \\_ => "super" ++ s } ;
- 
-		mega : Recipient = overload {
-			mega : Str -> Recipient = \s ->
-				lin Recipient { s = \\_ => "mega" ++ s } ;
-				
-			mega : Str -> Str -> Recipient = \s,r ->
-				lin Recipient { s = \\_ => "mega" ++ s ++ "and" ++ "mega" ++ r }
-		} ;
-} ; 
+		Friends = ResEng.mega "friends" "loved ones" ;
+} ;

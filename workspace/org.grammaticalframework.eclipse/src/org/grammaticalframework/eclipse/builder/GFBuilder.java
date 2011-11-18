@@ -35,6 +35,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.OperationCanceledException;
 import org.grammaticalframework.eclipse.GFPreferences;
+import org.grammaticalframework.eclipse.scoping.GFScopeProvider;
 import org.apache.log4j.Logger;
 
 /**
@@ -111,6 +112,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					incrementalBuild(delta, monitor);
 				}
 			}
+			
+			// Force project refresh
+			getProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);
+			
 		} catch (OperationCanceledException e) {
 			log.info("Build cancelled");
 			throw e;
@@ -157,9 +162,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				}
 			});
 			
-			// Force project refresh
-			getProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);
-			
 		} catch (CoreException e) {
 			e.printStackTrace();
 		}
@@ -192,9 +194,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				}
 			}
 		});
-		
-		// Force project refresh
-		getProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);
 	}
 	
 	/**
@@ -369,6 +368,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			log.warn("Error trying to delete markers for " + file.getName());
 		}
 		
+		// Invalidate scoping cache
+		GFScopeProvider.cacheDirtyState.put(file.getName(), true);
+		
 		// Delegate to correct method
 		if (TAG_BASED_SCOPING)
 			return buildFileTAGS(file);
@@ -447,7 +449,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private void parseGFErrorStream(IFile file, InputStream errStream) {
 		BufferedReader processError = new BufferedReader(new InputStreamReader(errStream));
-		String err_str;
+		String err_str = null;
 		
 		try {
 			/*
@@ -463,6 +465,16 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				return;
 			}
 			
+			if (err_str.matches("^gf: (.+)$")) {
+				// Some un-parseable error
+				IMarker marker = file.createMarker("org.eclipse.xtext.ui.check.normal"); // Instead of IMarker.PROBLEM
+				marker.setAttribute(IMarker.USER_EDITABLE, false);
+				marker.setAttribute(IMarker.LOCATION, file.getFullPath().toString());
+				marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
+				marker.setAttribute(IMarker.MESSAGE, err_str.substring(4));
+				return;
+			}
+			
 			/*
 			 * Errors are of the form:
 			 * 
@@ -474,7 +486,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			
 			// Using XText marker type so that we get the tooltip on hover!
 			// Refer to: org.eclipse.xtext.ui.MarkerTypes
-			IMarker marker = file.createMarker("org.eclipse.xtext.ui.check.normal"); // IMarker.PROBLEM
+			IMarker marker = file.createMarker("org.eclipse.xtext.ui.check.normal"); // Instead of IMarker.PROBLEM
 			marker.setAttribute(IMarker.USER_EDITABLE, false);
 			err_str = processError.readLine();
 			log.error("GF: " + err_str);
@@ -498,6 +510,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			}
 			marker.setAttribute(IMarker.MESSAGE, sb.toString());
 			
+		} catch (NullPointerException e) {
+			log.info("Unrecognized error format!");
 		} catch (CoreException e) {
 			log.warn("Error creating marker on " + file.getName());
 			e.printStackTrace();

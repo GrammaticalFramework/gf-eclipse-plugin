@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="31" version="2.0">
 <workbenchAdvisor/>
-<window height="885" width="1150" x="734" y="68">
+<window height="884" width="1146" x="734" y="58">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="87"/>
@@ -30,13 +30,18 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.grammaticalframework.eclipse.GF" name="ClEng.gf" partName="ClEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/ClEng.gf" title="ClEng.gf" tooltip="CL/ClEng.gf" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/CL/ClEng.gf"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="422" selectionTopPixel="0"/>
+<editor id="org.grammaticalframework.eclipse.GF" name="LexFoods.gf" partName="LexFoods.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf" title="LexFoods.gf" tooltip="Functors/LexFoods.gf" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Functors/LexFoods.gf"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.grammaticalframework.eclipse.GF" name="LexFoodsEng.gf" partName="LexFoodsEng.gf" path="/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf" title="LexFoodsEng.gf" tooltip="Functors/LexFoodsEng.gf" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Functors/LexFoodsEng.gf"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="386" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -45,9 +50,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Errors (78 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -63,7 +65,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.grammaticalframework.eclipse.ui.gfperspective">
+<perspectives activePart="org.grammaticalframework.eclipse.GF" activePerspective="org.grammaticalframework.eclipse.ui.gfperspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.grammaticalframework.eclipse.ui.perspectives.GFPerspectiveFactory" id="org.grammaticalframework.eclipse.ui.gfperspective" label="GF"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -128,19 +130,169 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/HelloEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/ResEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/HelloAbs.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/AbsCat.gf"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/CL/ClEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/CL/ClEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/HelloEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/CL/ClEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/HelloEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/ResEng.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/HelloAbs.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Hello/AbsCat.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Functors/LexFoods.gf"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" path="/Functors/LexFoodsEng.gf"/>
 </editors>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="83" y="0"/>
+</item>
 <item historyLabel="HelloEng.gf" index="0">
-<position info="not_deleted" x="308" y="0"/>
+<position info="not_deleted" x="214" y="0"/>
 </item>
-<item historyLabel="ClEng.gf" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ClEng.gf" index="1">
+<item historyLabel="HelloEng.gf" index="0">
 <position info="not_deleted" x="256" y="0"/>
 </item>
-<item active="true" historyLabel="ClEng.gf" index="1">
-<position info="not_deleted" x="421" y="0"/>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="323" y="0"/>
+</item>
+<item historyLabel="HelloAbs.gf" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="475" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="83" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="417" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="475" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="65" y="0"/>
+</item>
+<item historyLabel="HelloAbs.gf" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="65" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HelloAbs.gf" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="129" y="86"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="186" y="26"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="130" y="9"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="256" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="423" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="220" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="208" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="475" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="208" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="475" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="208" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="475" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="481" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="142" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="202" y="0"/>
+</item>
+<item historyLabel="ClEng.gf" index="4">
+<position info="not_deleted" x="284" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="202" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="164" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="440" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="164" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="475" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="1">
+<position info="not_deleted" x="164" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="0">
+<position info="not_deleted" x="475" y="0"/>
+</item>
+<item historyLabel="ClEng.gf" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ClEng.gf" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ClEng.gf" index="7">
+<position info="not_deleted" x="846" y="0"/>
+</item>
+<item historyLabel="ClEng.gf" index="7">
+<position info="not_deleted" x="828" y="0"/>
+</item>
+<item historyLabel="HelloEng.gf" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ResEng.gf" index="9">
+<position info="not_deleted" x="164" y="0"/>
+</item>
+<item historyLabel="HelloAbs.gf" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="AbsCat.gf" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="LexFoods.gf" index="12">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="LexFoodsEng.gf" index="13">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -159,8 +311,23 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="LexFoodsEng.gf" tooltip="Functors/LexFoodsEng.gf">
+<persistable path="/Functors/LexFoodsEng.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="LexFoods.gf" tooltip="Functors/LexFoods.gf">
+<persistable path="/Functors/LexFoods.gf"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ClEng.gf" tooltip="CL/ClEng.gf">
 <persistable path="/CL/ClEng.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="AbsCat.gf" tooltip="Hello/AbsCat.gf">
+<persistable path="/Hello/AbsCat.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="HelloAbs.gf" tooltip="Hello/HelloAbs.gf">
+<persistable path="/Hello/HelloAbs.gf"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ResEng.gf" tooltip="Hello/ResEng.gf">
+<persistable path="/Hello/ResEng.gf"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="HelloEng.gf" tooltip="Hello/HelloEng.gf">
 <persistable path="/Hello/HelloEng.gf"/>
@@ -186,23 +353,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="FoodsI.gf" tooltip="Functors/FoodsI.gf">
 <persistable path="/Functors/FoodsI.gf"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="ResEng.gf" tooltip="Hello/ResEng.gf">
-<persistable path="/Hello/ResEng.gf"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="LexFoodsEng.gf" tooltip="Functors/LexFoodsEng.gf">
-<persistable path="/Functors/LexFoodsEng.gf"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="HelloAbs.gf" tooltip="Hello/HelloAbs.gf">
-<persistable path="/Hello/HelloAbs.gf"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="FoodsEng.gf" tooltip="Functors/FoodsEng.gf">
 <persistable path="/Functors/FoodsEng.gf"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="LexFoods.gf" tooltip="Functors/LexFoods.gf">
-<persistable path="/Functors/LexFoods.gf"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.grammaticalframework.eclipse.GF" name="AbsCat.gf" tooltip="Hello/AbsCat.gf">
-<persistable path="/Hello/AbsCat.gf"/>
 </file>
 </mruList>
 </workbench>

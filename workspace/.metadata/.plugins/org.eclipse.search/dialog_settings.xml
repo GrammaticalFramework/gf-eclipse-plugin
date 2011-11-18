@@ -14,8 +14,8 @@
 	<section name="DialogBounds_SearchDialog">
 		<item value="554" key="DIALOG_WIDTH"/>
 		<item value="214" key="DIALOG_Y_ORIGIN"/>
-		<item value="866" key="DIALOG_X_ORIGIN"/>
 		<item value="665" key="DIALOG_HEIGHT"/>
+		<item value="866" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Ubuntu|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="Search">

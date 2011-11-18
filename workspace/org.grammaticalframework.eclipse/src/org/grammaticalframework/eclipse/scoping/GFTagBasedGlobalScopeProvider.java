@@ -15,9 +15,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
+
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -69,7 +72,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	@Inject
 	private ExtensibleURIConverterImpl uriConverter; 
 	
-	@SuppressWarnings("unused")
 	@Inject
 	private IResourceScopeCache cache;
 	
@@ -82,7 +84,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 */
 	@Override
 	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
-
+		
 		// Do the parsing, possibly hitting the cache
 		Map<URI, Collection<TagEntry>> uriTagMap = getURITagMap(resource);
 		
@@ -102,20 +104,24 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 //		return scope;
 
 		/* ----- Method 2: Use the tags themselves ----- */
-		GFTagBasedScope gfScope = null;
-		IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
-		for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
-			
-			// Get module name from URI
-			String lastSegment = entry.getKey().lastSegment();
-			int dotIx = lastSegment.lastIndexOf('.');
-			String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
+		try {
+			GFTagBasedScope gfScope = null;
+			IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
+			for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
+				
+				// Get module name from URI
+				String lastSegment = entry.getKey().lastSegment();
+				int dotIx = lastSegment.lastIndexOf('.');
+				String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
 
-			// Append new scope for the current module/uri
-			gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
-			gfScope.addTags(resourceDescriptions, entry.getValue());
+				// Append new scope for the current module/uri
+				gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
+				gfScope.addTags(resourceDescriptions, entry.getValue());
+			}
+			return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
+		} catch (NullPointerException _) {
+			return IScope.NULLSCOPE;
 		}
-		return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
 	}
 	
 	/**
@@ -151,15 +157,18 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	
 	/**
 	 * Get list of all tags grouped by URI, possibly from cache
+	 * 
+	 * TODO Make sure this cache is being flushed correctly.
+	 * 
 	 * @param resource
 	 * @return
 	 */
 	private Hashtable<URI, Collection<TagEntry>> getURITagMap(final Resource resource) {
-//		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Hashtable<URI, Collection<TagEntry>>>(){
-//			public Hashtable<URI, Collection<TagEntry>> get() {
+		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Hashtable<URI, Collection<TagEntry>>>(){
+			public Hashtable<URI, Collection<TagEntry>> get() {
 				return parseTagsFile(resource); 
-//			}
-//		});
+			}
+		});
 	}
 	
 	/**
@@ -192,37 +201,75 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		};
 		Hashtable<URI, Collection<TagEntry>> uriTagMap = parseSingleTagsFile(tagFileURI, includePredicate, null);
 		
-		// Iterate again to replace references to indir tags files with proper references
+		// Iterate again to replace references to indir tags files with proper references (2nd pass)
 		Hashtable<URI, Collection<TagEntry>> resolvedUriTagMap = new Hashtable<URI, Collection<TagEntry>>(uriTagMap.size());
-		Iterator<URI> uriIter = uriTagMap.keySet().iterator();
+//		Iterator<URI> uriIter = uriTagMap.keySet().iterator();
+		Iterator<Entry<URI, Collection<TagEntry>>> uriIter = uriTagMap.entrySet().iterator();
+		
 		while(uriIter.hasNext()) {
-			final URI uri = uriIter.next();
+			Entry<URI, Collection<TagEntry>> iterEntry = uriIter.next();
+			URI uri = iterEntry.getKey();
+			Collection<TagEntry> tagList = iterEntry.getValue();
+			
 			// Just remove invalid URIs
 			if (!EcoreUtil2.isValidUri(resource, uri)) {
 				uriIter.remove();
+				log.warn("Removed invalid URI: " + uri);
 			}
 			// Resolve refs to other tags files and replace, but making sure to keep original qualifier & alias
 			else if (uri.fileExtension().equals("gf-tags")) {
+				
+				// Super low-tech solution: iterate over all tags, capture all the different Qualifier/Alias combos
+//				ArrayListMultimap<String, String> qualifierAliasCombos = ArrayListMultimap.create();
+//				for (TagEntry tag : tagList) {
+//					if (!qualifierAliasCombos.containsEntry(tag.getQualifier(), tag.getAlias()))
+//						qualifierAliasCombos.put(tag.getQualifier(), tag.getAlias());
+//				}
+				HashSet<String> qualifiers = new HashSet<String>();
+				for (TagEntry tag : tagList) {
+					qualifiers.add(tag.getQualifier());
+					qualifiers.add(tag.getAlias()); // this also allows for empty aliases! i.e. when inheriting
+				}
+				
+//				for (Map.Entry<String, String> qaCombo : qualifierAliasCombos.entries()) {
+//					final String qualifier = qaCombo.getKey();
+//					final String alias = qaCombo.getValue();
+//					
+				Iterator<String> qIter = qualifiers.iterator();
+				while (qIter.hasNext()) {
+					final String qualifier = qIter.next();
+					final String alias = "doesnt-matter"; // TODO Clean up this!
+				
 				// Get the qualifier and alias from the first entry
 				// (since everything from a given module is qualified in the same way, this should be safe)
-				TagEntry tagSpecimen = uriTagMap.get(uri).iterator().next(); 
-				final String qualifier = tagSpecimen.getQualifier();
-				final String alias = tagSpecimen.getAlias();
-				Predicate<TagEntry> includePredicate2 = new Predicate<TagEntry>() {
-					// Only include tags FROM the respective tags file (opposite of above)
-					public boolean apply(TagEntry tag) {
-//						return tag.getFile().endsWith(uri.lastSegment().substring(0, uri.lastSegment().length()-5));
-						return !tag.getFile().endsWith(".gf-tags") && !tag.getType().equals("overload-type") ;
+//				TagEntry tagSpecimen = uriTagMap.get(uri).iterator().next(); 
+//				final String qualifier = tagSpecimen.getQualifier();
+//				final String alias = tagSpecimen.getAlias();
+
+					Predicate<TagEntry> includePredicate2 = new Predicate<TagEntry>() {
+						// Only include tags FROM the respective tags file (opposite of above)
+						public boolean apply(TagEntry tag) {
+	//						return tag.getFile().endsWith(uri.lastSegment().substring(0, uri.lastSegment().length()-5));
+							return !tag.getFile().endsWith(".gf-tags") && !tag.getType().equals("overload-type") ;
+						}
+					};
+					Function<TagEntry, TagEntry> customFunction = new Function<TagEntry, TagEntry>() {
+						public TagEntry apply(TagEntry from) {
+							from.setQualifier(qualifier);
+							from.setAlias(alias);
+							return from; // return value not actually used
+						}
+					};
+					Hashtable<URI, Collection<TagEntry>> newUriTagMap = parseSingleTagsFile(uri, includePredicate2, customFunction);
+					
+					// Make sure to add all new refs withouth overwriting
+					for (Map.Entry<URI, Collection<TagEntry>> entry : newUriTagMap.entrySet()) {
+						if (!resolvedUriTagMap.containsKey(entry.getKey()))
+							resolvedUriTagMap.put(entry.getKey(), entry.getValue());
+						else
+							resolvedUriTagMap.get(entry.getKey()).addAll(entry.getValue());
 					}
-				};
-				Function<TagEntry, TagEntry> customFunction = new Function<TagEntry, TagEntry>() {
-					public TagEntry apply(TagEntry from) {
-						from.setQualifier(qualifier);
-						from.setAlias(alias);
-						return from;
-					}
-				};
-				resolvedUriTagMap.putAll(parseSingleTagsFile(uri, includePredicate2, customFunction));
+				}
 				uriIter.remove();
 			}
 		}
@@ -232,37 +279,50 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		return uriTagMap;
 	}
 	
-	
+	/**
+	 * Parse the specified tags file, returning collections of {@link TagEntry}'s grouped by {@link URI}. 
+	 * These URIs may point to other tags files, not necessarily to the original source.
+	 * 
+	 * @param tagFileURI The tag file to parse (using low-level file streams)
+	 * @param includePredicate Predicate applied to tag returns a boolean, determining whether to include the tag or not
+	 * @param customFunction Custom function for transforming each tag as required
+	 * @return collections of tags grouped by URI
+	 */
 	private Hashtable<URI, Collection<TagEntry>> parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate, Function<TagEntry, TagEntry> customFunction) {
-		Hashtable<URI, Collection<TagEntry>> uriTagMap = new Hashtable<URI, Collection<TagEntry>>();
+		Hashtable<String, Collection<TagEntry>> strTagMap = new Hashtable<String, Collection<TagEntry>>();
 		try {
 			InputStream is = uriConverter.createInputStream(tagFileURI);
 			BufferedReader reader = new BufferedReader( new InputStreamReader(is) );
 			String line;
-			// Add everything into our arrays
 			while ((line = reader.readLine()) != null) {
 				TagEntry tag;
 				try {
 					tag = new TagEntry(line);
 				} catch (GFException e) {
-					log.warn(e);
+					log.warn(e); // Would happen if the tags file is malformed somehow
 					continue;
 				}
-				if (!includePredicate.apply(tag))
+				if (includePredicate != null && !includePredicate.apply(tag))
 					continue;
 				if (customFunction != null)
 					customFunction.apply(tag);
-				URI importURI = URI.createFileURI(tag.getFile());
-				if (!uriTagMap.containsKey(importURI)) {
-					uriTagMap.put(importURI, new ArrayList<TagEntry>());
+				if (!strTagMap.containsKey(tag.getFile())) {
+					strTagMap.put(tag.getFile(), new ArrayList<TagEntry>());
 				}
-				uriTagMap.get(importURI).add(tag);
+				strTagMap.get(tag.getFile()).add(tag);
 			}
 			// Clean up
 			reader.close();
 			is.close();
 		} catch (IOException e) {
 			log.debug("Couldn't find tags file " + tagFileURI);
+		}
+		
+		// Convert from String keys to URI keys (this is an optimisation thing)
+		Hashtable<URI, Collection<TagEntry>> uriTagMap = new Hashtable<URI, Collection<TagEntry>>();
+		for (Entry<String, Collection<TagEntry>> entry : strTagMap.entrySet()) {
+			URI importURI = URI.createFileURI(entry.getKey());
+			uriTagMap.put(importURI, entry.getValue());
 		}
 		return uriTagMap;
 	}

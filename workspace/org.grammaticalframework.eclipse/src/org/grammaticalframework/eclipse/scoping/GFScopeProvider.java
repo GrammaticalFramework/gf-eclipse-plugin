@@ -9,7 +9,9 @@
  */
 package org.grammaticalframework.eclipse.scoping;
 
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
@@ -25,6 +27,7 @@ import org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider;
 import org.eclipse.xtext.util.IResourceScopeCache;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.ListBind;
+import org.grammaticalframework.eclipse.gF.ListLocDef;
 import org.grammaticalframework.eclipse.gF.ListPatt;
 import org.grammaticalframework.eclipse.gF.TopDef;
 import org.grammaticalframework.eclipse.naming.GFQualifiedNameProvider;
@@ -44,10 +47,14 @@ import com.google.inject.Inject;
 public class GFScopeProvider extends SimpleLocalScopeProvider {
 	
 	/**
+	 * Very low-tech way of allowing the builder to signal that a file's cache is expired
+	 */
+	public static Map<String, Boolean> cacheDirtyState = new HashMap<String, Boolean>();
+	
+	/**
 	 * Cache instance
 	 */
 	@Inject
-	@SuppressWarnings("unused")
 	private IResourceScopeCache cache;
 	
 	/* (non-Javadoc)
@@ -55,6 +62,13 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	 */
 	@Override
 	public IScope getScope(final EObject context, final EReference reference) {
+		
+		// If builder marked cache as dirty, then clear it
+		String cacheKey = context.eResource().getURI().lastSegment();
+		if (cacheDirtyState.containsKey(cacheKey) && cacheDirtyState.get(cacheKey).equals(true)) {
+			cache.clear(context.eResource());
+			cacheDirtyState.put(cacheKey, false);
+		}
 		
 		// Get local scope
 		ISelectable localResourceContent = getAllDescriptions(context.eResource(), context, reference);
@@ -69,8 +83,10 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 		// Get global scope
 		IScope globalScope = getGlobalScope(context.eResource(), reference);
 
-		// Put them together and return
-		IScope rs = createScope(globalScope, localResourceContent, reference.getEReferenceType(), isIgnoreCase(reference)); 
+		// Put them together
+		IScope rs = createScope(globalScope, localResourceContent, reference.getEReferenceType(), isIgnoreCase(reference));
+		
+		// and.. scene
 		return rs;
 	}	
 	
@@ -152,6 +168,11 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 						
 						// Bindings (code very similar to that above)
 						if (from instanceof Ident && from.eContainer().eContainer() instanceof ListBind && contextJudgement == fromJudgement) {
+							return getConverter().toQualifiedName( ((Ident)from).getS() );
+						}
+						
+						// Stuff in "let" clauses
+						if (from instanceof Ident && from.eContainer().eContainer() instanceof ListLocDef && contextJudgement == fromJudgement) {
 							return getConverter().toQualifiedName( ((Ident)from).getS() );
 						}
 						
