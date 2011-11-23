@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;GF Test Project/functors/FoodsFin.gf&apos; to &apos;FoodsEng.gf&apos;" description="Rename resource &apos;FoodsFin.gf&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="functors/FoodsFin.gf" name="FoodsEng.gf" stamp="1318418415095" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;GF Test Project/functors/LexFoodsFin.gf&apos; to &apos;LexFoodsEng.gf&apos;" description="Rename resource &apos;LexFoodsFin.gf&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="functors/LexFoodsFin.gf" name="LexFoodsEng.gf" stamp="1318418421979" updateReferences="true"/>
-</session>

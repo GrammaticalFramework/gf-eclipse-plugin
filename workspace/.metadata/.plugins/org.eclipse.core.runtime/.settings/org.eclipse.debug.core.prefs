@@ -1,5 +1,0 @@
-#Fri Nov 18 16:06:07 CET 2011
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="scope.getElements(unQualifiedName)"/>\n<expression enabled\="true" text\="scope.getElements(getConverter().toQualifiedName(&quot;Silly.S&quot;))"/>\n<expression enabled\="true" text\="scope.getElements(fullyQualifiedName)"/>\n<expression enabled\="true" text\="getScopeProvider().getScope(topDef.eContainer().eContainer(), org.grammaticalframework.eclipse.gF.GFPackage.Literals.MOD_DEF__BODY)"/>\n<expression enabled\="true" text\="cacheDirtyState"/>\n<expression enabled\="true" text\="GFScopeProvider.cacheDirtyState"/>\n</watchExpressions>\n
-eclipse.preferences.version=1
-org.eclipse.debug.core.USE_STEP_FILTERS=false
-org.eclipse.debug.core.PREF_BREAKPOINT_MANAGER_ENABLED_STATE=true

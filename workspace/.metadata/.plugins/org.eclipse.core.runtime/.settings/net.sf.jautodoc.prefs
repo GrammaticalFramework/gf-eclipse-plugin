@@ -1,7 +1,0 @@
-#Thu Nov 03 15:24:20 CET 2011
-eclipse.preferences.version=1
-replace_header=true
-replacements=<?xml version\="1.0" standalone\="yes"?>\n\n<replacements>\n<replacement key\="get" scope\="1" mode\="0">Gets the</replacement>\n<replacement key\="set" scope\="1" mode\="0">Sets the</replacement>\n<replacement key\="add" scope\="1" mode\="0">Adds the</replacement>\n<replacement key\="edit" scope\="1" mode\="0">Edits the</replacement>\n<replacement key\="remove" scope\="1" mode\="0">Removes the</replacement>\n<replacement key\="init" scope\="1" mode\="0">Inits the</replacement>\n<replacement key\="parse" scope\="1" mode\="0">Parses the</replacement>\n<replacement key\="create" scope\="1" mode\="0">Creates the</replacement>\n<replacement key\="build" scope\="1" mode\="0">Builds the</replacement>\n<replacement key\="is" scope\="1" mode\="0">Checks if is</replacement>\n<replacement key\="print" scope\="1" mode\="0">Prints the</replacement>\n<replacement key\="has" scope\="1" mode\="0">Checks for</replacement>\n</replacements>\n\n
-single_line_comment=false
-add_header=true
-header_text=/**\n * GF Eclipse Plugin\n * http\://www.grammaticalframework.org/eclipse/\n * John J. Camilleri, 2011\n * \n * The research leading to these results has received funding from the\n * European Union's Seventh Framework Programme (FP7/2007-2013) under\n * grant agreement n\u00B0 FP7-ICT-247914.\n */

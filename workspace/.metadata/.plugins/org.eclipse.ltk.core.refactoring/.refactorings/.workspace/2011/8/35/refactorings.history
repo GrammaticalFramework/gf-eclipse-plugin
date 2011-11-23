@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete 3 resources" deleteContents="true" description="Delete 3 resources" element1="/org.xtext.example.mydsl" element2="/org.xtext.example.mydsl.tests" element3="/org.xtext.example.mydsl.ui" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="3" stamp="1314608448108"/>&#x0A;<refactoring comment="Delete 3 resources" deleteContents="true" description="Delete 3 resources" element1="/org.grammaticalframework.eclipse" element2="/org.grammaticalframework.eclipse.tests" element3="/org.grammaticalframework.eclipse.ui" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="3" stamp="1314639332429"/>
-</session>

@@ -1,5 +1,0 @@
-
-abstract Abs1 = {
-	cat myCat;
-	fun myFun : myCat -> myCat ;
-};

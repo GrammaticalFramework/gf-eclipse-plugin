@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move &apos;Foods.gf&apos; to &apos;Functors&apos;" description="Move &apos;Foods.gf&apos; to &apos;Functors&apos;" destination="/Functors" element1="/GF Test Project/functors/Foods.gf" element2="/GF Test Project/functors/FoodsEng.gf" element3="/GF Test Project/functors/FoodsGer.gf" element4="/GF Test Project/functors/FoodsI.gf" element5="/GF Test Project/functors/LexFoods.gf" element6="/GF Test Project/functors/LexFoodsEng.gf" element7="/GF Test Project/functors/LexFoodsGer.gf" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="7" stamp="1320739923260" updateReferences="true"/>
-</session>

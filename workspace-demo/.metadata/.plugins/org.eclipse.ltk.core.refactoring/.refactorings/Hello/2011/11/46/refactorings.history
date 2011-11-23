@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move &apos;AbsCat.gf&apos; to &apos;Hello&apos;" description="Move &apos;AbsCat.gf&apos; to &apos;Hello&apos;" destination="/Hello" element1="/GF Test Project/hello/AbsCat.gf" element2="/GF Test Project/hello/HelloAbs.gf" element3="/GF Test Project/hello/HelloEng.gf" element4="/GF Test Project/hello/ResEng.gf" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="4" stamp="1320739901761" updateReferences="true"/>
-</session>

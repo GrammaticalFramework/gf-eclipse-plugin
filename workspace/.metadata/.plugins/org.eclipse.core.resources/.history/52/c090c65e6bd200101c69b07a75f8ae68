@@ -1,9 +1,0 @@
-grammar org.grammaticalframework.eclipse.GF with org.eclipse.xtext.common.Terminals
-
-generate gF "http://www.grammaticalframework.org/eclipse/GF"
-
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
