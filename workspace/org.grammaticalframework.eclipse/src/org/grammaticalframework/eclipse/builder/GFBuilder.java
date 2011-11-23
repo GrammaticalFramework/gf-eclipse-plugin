@@ -59,7 +59,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	/**
 	 * The Constant BUILD_FOLDER.
 	 */
-	public static final String EXTERNAL_FOLDER = ".external"; //$NON-NLS-1$
+	public static final String EXTERNAL_FOLDER = BUILD_FOLDER; //$NON-NLS-1$
 
 	/**
 	 * Use tag based scoping?
@@ -105,20 +105,20 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		gfLibPath = GFPreferences.getLibraryPath();
 		
 		try {
-			// Is doing a full build for every incremental change overkill?
-			// The reason we have it is when changes in your file affect teh scoping of another file
-			// TODO SOlution: only rebuild files whos tags contain something from the file being rebuilt
-			fullBuild(monitor);
-//			if (kind == IncrementalProjectBuilder.FULL_BUILD) {
-//				fullBuild(monitor);
-//			} else {
+			if (kind == IncrementalProjectBuilder.FULL_BUILD) {
+				fullBuild(monitor);
+			} else {
+				// Is doing a full build for every incremental change overkill?
+				// The reason we have it is when changes in your file affect teh scoping of another file
+				// TODO Solution: only rebuild files whos tags contain something from the file being rebuilt
+				fullBuild(monitor);
 //				IResourceDelta delta = getDelta(getProject());
 //				if (delta == null) {
 //					fullBuild(monitor);
 //				} else {
 //					incrementalBuild(delta, monitor);
 //				}
-//			}
+			}
 			
 			// Force project refresh
 			getProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);

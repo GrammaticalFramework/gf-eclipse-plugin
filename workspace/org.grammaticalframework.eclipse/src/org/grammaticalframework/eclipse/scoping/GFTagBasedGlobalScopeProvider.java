@@ -319,8 +319,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 					importURI = URI.createPlatformResourceURI(trimmedURI, true);
 				} else {
 					// Create a link to the file in the project, and use that URI
-					importURI = registerExternalFile(uriAsStr);
-//					URI.createFileURI(uriAsStr);
+					importURI = registerExternalFile(uriAsStr, tagFileURI);
 				}
 			} else {
 				// Just use a dumb old file:// URI
@@ -331,28 +330,57 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		return uriTagMap;
 	}
 	
-	private URI registerExternalFile(String uriAsStr) {
-		// TODO Get the current project
-		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject("Functors");
-//		if (!project.isOpen())
-//		    project.open(null);
+	/**
+	 * Given an external file path, create a link to it within the BUILD_FOLDER and return
+	 * it as a platform/project URI.
+	 * 
+	 * @param externalFilePath
+	 * @param tagFileURI 
+	 * @return
+	 */
+	private URI registerExternalFile(String externalFilePath, URI tagFileURI) {
+		
+		// Get the corresponding project
+		String workspaceStem = ResourcesPlugin.getWorkspace().getRoot().getRawLocationURI().toString() + java.io.File.separator;
+		String projectName = tagFileURI.deresolve(URI.createURI(workspaceStem)).segment(0);
+		IProject project = null;
+		for (IProject p : ResourcesPlugin.getWorkspace().getRoot().getProjects()) {
+			if (p.getName().equals(projectName)) {
+				project = p;
+				break;
+			}
+		}
+		if (project == null) {
+			// We could find no matching project, just return same URI
+			log.warn("Couldn't find corresponding project for: " + tagFileURI);
+			return URI.createFileURI(externalFilePath);
+		}
 		
 		try {
+			if (!project.isOpen()) {
+				log.info("Opening closed project '" + projectName + "'");
+			    project.open(null);
+			}
+
 			// Create the folder if it doesn't exist
 			IFolder extFolder = project.getFolder(GFBuilder.EXTERNAL_FOLDER);
 			if (!extFolder.exists())
 				extFolder.create(true, true, null);
 	
-			IPath externalPath = new Path(uriAsStr);
+			IPath externalPath = new Path(externalFilePath);
 			String localLink = GFBuilder.EXTERNAL_FOLDER + java.io.File.separator + externalPath.lastSegment();
 			IFile link = project.getFile(localLink);
 			
+			// NOTE! Re-creating the link each time will trigger the builder!!
+//			if (link.exists())
+//				link.delete(true, null);
+//			link.createLink(externalPath, IResource.NONE, null);
 			if (!link.exists())
 				link.createLink(externalPath, IResource.NONE, null);
-//			file.setHidden(true);
+			
 			return URI.createURI(localLink);
 		} catch (CoreException e) {
-			log.equals("Couldn't link to external file " + uriAsStr);
+			log.warn("Couldn't link to external file " + externalFilePath);
 		}
 		return null;
 	}

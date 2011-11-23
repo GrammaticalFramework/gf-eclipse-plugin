@@ -14,4 +14,51 @@
 	<natures>
 		<nature>org.grammaticalframework.eclipse.ui.natures.projectNatureID</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>.gfbuild/CatEng.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/english/CatEng.gf</location>
+		</link>
+		<link>
+			<name>.gfbuild/Combinators.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/api/Combinators.gf</location>
+		</link>
+		<link>
+			<name>.gfbuild/CommonX.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/common/CommonX.gf</location>
+		</link>
+		<link>
+			<name>.gfbuild/Constructors.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/api/Constructors.gf</location>
+		</link>
+		<link>
+			<name>.gfbuild/ExtraEng.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/english/ExtraEng.gf</location>
+		</link>
+		<link>
+			<name>.gfbuild/ParadigmsEng.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/english/ParadigmsEng.gf</location>
+		</link>
+		<link>
+			<name>.gfbuild/ParamX.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/common/ParamX.gf</location>
+		</link>
+		<link>
+			<name>.gfbuild/ResEng.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/english/ResEng.gf</location>
+		</link>
+		<link>
+			<name>.gfbuild/StructuralEng.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/english/StructuralEng.gf</location>
+		</link>
+	</linkedResources>
 </projectDescription>
