@@ -23,8 +23,14 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
@@ -36,6 +42,7 @@ import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.*;
 import org.eclipse.xtext.util.IResourceScopeCache;
+import org.grammaticalframework.eclipse.builder.GFBuilder;
 import org.grammaticalframework.eclipse.gF.ModDef;
 
 import com.google.common.base.Predicate;
@@ -103,22 +110,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			return IScope.NULLSCOPE;
 		}
 		
-//		/* ----- Method 1: Just use the URIs ----- */
-//		// Load all descriptions from all mentioned files/URIs
-//		Set<URI> uniqueImportURIs = uriTagMap.keySet();
-//		IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uniqueImportURIs);
-//
-//		// Add everything from all the URIs mentioned in the tags file
-//		IScope scope = IScope.NULLSCOPE;
-//		for (IResourceDescription resDesc : resourceDescriptions.getAllResourceDescriptions()) {
-//			GFTagBasedScope newScope = new GFTagBasedScope(scope, resDesc, ignoreCase);
-//			if (newScope.localElementCount() > 0)
-//				scope = newScope;
-//		}
-//		
-//		return scope;
-
-		/* ----- Method 2: Use the tags themselves ----- */
+		// Build scope out of tag map
 		try {
 			GFTagBasedScope gfScope = null;
 			IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
@@ -318,11 +310,18 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		for (Entry<String, Collection<TagEntry>> entry : strTagMap.entrySet()) {
 			URI importURI;
 			String uriAsStr = entry.getKey();
-			if (uriAsStr.contains(rootPath) && uriAsStr.endsWith(".gf")) {
-				// If the URI is pointing within the workspace, convert it to a platform URI
-				String trimmedURI = uriAsStr.substring(rootPath.length());
-				root.getFile(new Path(uriAsStr));
-				importURI = URI.createPlatformResourceURI(trimmedURI, true);
+			
+			if (uriAsStr.endsWith(".gf")) {
+				if (uriAsStr.contains(rootPath)) {
+					// If the URI is pointing within the workspace, convert it to a platform URI
+					String trimmedURI = uriAsStr.substring(rootPath.length());
+					root.getFile(new Path(uriAsStr));
+					importURI = URI.createPlatformResourceURI(trimmedURI, true);
+				} else {
+					// Create a link to the file in the project, and use that URI
+					importURI = registerExternalFile(uriAsStr);
+//					URI.createFileURI(uriAsStr);
+				}
 			} else {
 				// Just use a dumb old file:// URI
 				importURI = URI.createFileURI(uriAsStr);
@@ -331,6 +330,33 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		}
 		return uriTagMap;
 	}
+	
+	private URI registerExternalFile(String uriAsStr) {
+		// TODO Get the current project
+		IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject("Functors");
+//		if (!project.isOpen())
+//		    project.open(null);
+		
+		try {
+			// Create the folder if it doesn't exist
+			IFolder extFolder = project.getFolder(GFBuilder.EXTERNAL_FOLDER);
+			if (!extFolder.exists())
+				extFolder.create(true, true, null);
+	
+			IPath externalPath = new Path(uriAsStr);
+			String localLink = GFBuilder.EXTERNAL_FOLDER + java.io.File.separator + externalPath.lastSegment();
+			IFile link = project.getFile(localLink);
+			
+			if (!link.exists())
+				link.createLink(externalPath, IResource.NONE, null);
+//			file.setHidden(true);
+			return URI.createURI(localLink);
+		} catch (CoreException e) {
+			log.equals("Couldn't link to external file " + uriAsStr);
+		}
+		return null;
+	}
+	
 	
 	/**
 	 * Add a tag to a String->[TagEntry] dictionary, creating keys as necessary

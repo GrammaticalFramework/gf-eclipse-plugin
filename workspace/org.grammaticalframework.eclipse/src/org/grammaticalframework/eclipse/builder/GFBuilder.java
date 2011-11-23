@@ -55,6 +55,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * The Constant BUILD_FOLDER.
 	 */
 	public static final String BUILD_FOLDER = ".gfbuild"; //$NON-NLS-1$
+	
+	/**
+	 * The Constant BUILD_FOLDER.
+	 */
+	public static final String EXTERNAL_FOLDER = ".external"; //$NON-NLS-1$
 
 	/**
 	 * Use tag based scoping?
@@ -301,7 +306,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private boolean shouldBuild(IResource resource) {
 		try {
-			return resource.getType() == IResource.FILE && resource.getFileExtension().equals("gf") && !resource.getFullPath().toOSString().contains(BUILD_FOLDER);
+			boolean isFile = resource.getType() == IResource.FILE;
+			boolean isGF = resource.getFileExtension().equals("gf");
+			boolean notInBuildFolder = !resource.getFullPath().toOSString().contains(BUILD_FOLDER);
+			boolean notInExternalFolder = !resource.getFullPath().toOSString().contains(EXTERNAL_FOLDER);
+			return isFile && isGF && notInBuildFolder && notInExternalFolder;
 		} catch (NullPointerException _) {
 			return false;
 		}
@@ -338,11 +347,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				+ getBuildSubfolder(filename, useIndividualFolders);
 	}
 	public static String getTagsFile(String sourceFileName) {
-//		int dotIx = sourceFileName.lastIndexOf('.');
-//		return BUILD_FOLDER
-//				+ java.io.File.separator
-//				+ ((dotIx > 0) ? sourceFileName.substring(0, dotIx) : sourceFileName)
-//				+ ".tags";
 		return BUILD_FOLDER
 				+ java.io.File.separator
 				+ sourceFileName + "-tags";

@@ -4,9 +4,13 @@ import java.net.URISyntaxException;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IStorage;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.WrappedException;
@@ -52,59 +56,44 @@ public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 		if (uri.isPlatformResource())
 			return super.open(uri, crossReference, indexInList, select);
 		
-		// Otherwise we're trying to open an external library
-		IEditorPart editor = null;
-        try {
-        	java.net.URI netURI = new java.net.URI(uri.toString());
-    		IEditorRegistry reg = workbench.getEditorRegistry();
-    		IWorkbenchPage activePage = workbench.getActiveWorkbenchWindow().getActivePage();
-    		
-    		// Open external editor ("notepad")
-//        	editor = IDE.openEditor(activePage, netURI, reg.SYSTEM_EXTERNAL_EDITOR_ID, true);
-    		
-        	// Open Xtext editor - will throw an CompoundXtextEditorCallback when file is external
-			Path path = new Path(uri.toFileString());
-			IFile file = getWorkspaceRoot().getFile(path);
-			IStorage storage = file;
-			IEditorInput editorInput = new XtextReadonlyEditorInput(storage);
-			editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
-			selectAndReveal(editor, uri, crossReference, indexInList, select);
-
-			// If we failed, open basic text editor
-			if (editor == null) {
-				IEditorDescriptor txtEditorPart = reg.getDefaultEditor("fake.txt");
-	        	editor = IDE.openEditor(activePage, netURI, txtEditorPart.getId(), true);
-			}
-
-		} catch (URISyntaxException e) {
-			log.error("Error converting URI '" + uri + "'", e);
-		} catch (PartInitException e) {
-//		} catch (Exception e) {
-			log.error("Error opening editor for '" + uri + "'", e);
-		}
-		return editor; // may be null
-/*		
+		// TODO If file is external, then open it read-only and do not allow validation!
 		
-		uri = uri.trimFragment();
-		try {
-			Path path = new Path(uri.toFileString());
-			IFile file = getWorkspaceRoot().getFile(path);
-			IStorage storage = file;
-			IEditorInput editorInput = new XtextReadonlyEditorInput(storage);
-			IWorkbenchPage activePage = workbench.getActiveWorkbenchWindow().getActivePage();
-			IEditorPart editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
-			selectAndReveal(editor, uri, crossReference, indexInList, select);
-			return EditorUtils.getXtextEditor(editor);
-//		} catch (NullPointerException e) {
-//			log.error("Error while opening editor part for EMF URI '" + uri + "'", e.getCause());
-//		} catch (WrappedException e) {
-//			log.error("Error while opening editor part for EMF URI '" + uri + "'", e.getCause());
-//		} catch (PartInitException partInitException) {
-//			log.error("Error while opening editor part for EMF URI '" + uri + "'", partInitException);
-		} catch (Exception e) {
-			log.error("Error opening editor for '" + uri + "'", e);
-		}
+		
+		log.error("Error opening editor for '" + uri + "'");
 		return null;
-*/
+		
+//		// Otherwise we're trying to open an external library
+//		IEditorPart editor = null;
+//        try {
+//        	java.net.URI netURI = new java.net.URI(uri.toString());
+//    		IEditorRegistry reg = workbench.getEditorRegistry();
+//    		IWorkbenchPage activePage = workbench.getActiveWorkbenchWindow().getActivePage();
+//    		
+//    		// Open external editor ("notepad")
+////        	editor = IDE.openEditor(activePage, netURI, reg.SYSTEM_EXTERNAL_EDITOR_ID, true);
+//    		
+//        	// Open Xtext editor - will throw an CompoundXtextEditorCallback when file is external
+////			Path path = new Path(uri.toFileString());
+////			IFile file = getWorkspaceRoot().getFile(path);
+////			IStorage storage = file;
+//			IEditorInput editorInput = new XtextReadonlyEditorInput(linkedFile);
+//			editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
+//			selectAndReveal(editor, uri, crossReference, indexInList, select);
+//
+//			// If we failed, open basic text editor
+////			if (editor == null) {
+////				IEditorDescriptor txtEditorPart = reg.getDefaultEditor("fake.txt");
+////	        	editor = IDE.openEditor(activePage, netURI, txtEditorPart.getId(), true);
+////			}
+//
+//		} catch (URISyntaxException e) {
+//			log.error("Error converting URI '" + uri + "'", e);
+//		} catch (PartInitException e) {
+////		} catch (Exception e) {
+//			log.error("Error opening editor for '" + uri + "'", e);
+//		}
+//		return editor; // may be null
+
 	}
+	
 }
