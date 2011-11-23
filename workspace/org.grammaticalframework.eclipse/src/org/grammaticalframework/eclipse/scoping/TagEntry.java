@@ -12,8 +12,6 @@ package org.grammaticalframework.eclipse.scoping;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.grammaticalframework.eclipse.GFException;
-
 /**
  * Represents a single "tag" entry in the GF-produced tags file, e.g.:
  * <pre>
@@ -29,11 +27,12 @@ public class TagEntry {
 	 */
 	public static String USER_DATA_KEY_IDENT = "ident";
 	public static String USER_DATA_KEY_TYPE = "type";
+	public static String USER_DATA_KEY_MODULENAME = "modulename";
 	public static String USER_DATA_KEY_QUALIFIER = "qualifier";
 	public static String USER_DATA_KEY_ALIAS = "alias";
 	public static String USER_DATA_KEY_FILE = "file";
+//	public static String USER_DATA_KEY_LINENO = "linenumber";
 	public static String USER_DATA_KEY_ARGS = "args";
-	public static String USER_DATA_KEY_MODULENAME = "modulename";
 	
 	/**
 	 * Record fields
@@ -48,7 +47,7 @@ public class TagEntry {
 	 *
 	 * @param elements The elements as extracted from the tags file, by String.split()
 	 */
-	public TagEntry(String line) throws GFException {
+	public TagEntry(String line) throws GFTagsFileException {
 		try {
 			String[] elements = line.split("\t", -1);
 			this.ident = elements[0];
@@ -64,7 +63,7 @@ public class TagEntry {
 				this.args = elements[3];
 			}
 		} catch (ArrayIndexOutOfBoundsException e) {
-			throw new GFException("Malformed tag line: "+line);
+			throw new GFTagsFileException("Malformed tag line: "+line);
 		}
 	}
 	
@@ -186,18 +185,6 @@ public class TagEntry {
 	 */
 	@Override
 	public String toString() {
-//		StringBuilder sb = new StringBuilder(ident + "\t" + type + "\t");
-//		if (isIndirect) {
-//			sb.append(qualifier + "\t" + alias + "\t");
-//		}
-//		sb.append(file);
-//		if (lineFrom != null) {
-//			sb.append(":" + lineFrom);
-//			if (lineTo != null && !lineTo.equals(lineFrom)) {
-//				sb.append("-" + lineTo);
-//			}
-//		}
-//		sb.append("\t" + args);
 		StringBuilder sb = new StringBuilder(moduleName + "." + ident);
 		sb.append(" (Q:" + qualifier);
 		if (!alias.isEmpty())

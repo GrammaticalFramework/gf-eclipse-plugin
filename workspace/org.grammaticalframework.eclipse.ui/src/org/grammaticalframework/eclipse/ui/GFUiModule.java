@@ -66,8 +66,6 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	
 	/**
 	 * Bind language root preference page.
-	 *
-	 * @return the class<? extends org.eclipse.xtext.ui.editor.preferences. language root preference page>
 	 */
 	public Class<? extends org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage> bindLanguageRootPreferencePage() {
 		return org.grammaticalframework.eclipse.ui.editor.preferences.GFLanguageRootPreferencePage.class;
@@ -87,9 +85,14 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 
 	
 	/**
+	 * Bind custom URI opener implementation
+	 */
+	public Class<? extends org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener> bindLanguageSpecificURIEditorOpener() {
+		return org.grammaticalframework.eclipse.ui.editor.GFURIEditorOpener.class;
+	}
+	
+	/**
 	 * Bind highlighting configuration.
-	 *
-	 * @return the class<? extends org.eclipse.xtext.ui.editor.syntaxcoloring. i highlighting configuration>
 	 */
 	public Class<? extends org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration> bindIHighlightingConfiguration() {
 		return org.grammaticalframework.eclipse.ui.editor.syntaxcoloring.GFHighlightingConfiguration.class;
@@ -97,8 +100,6 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	
 	/**
 	 * Bind abstract antlr token to attribute id mapper.
-	 *
-	 * @return the class<? extends org.eclipse.xtext.ui.editor.syntaxcoloring. abstract antlr token to attribute id mapper>
 	 */
 	public Class<? extends org.eclipse.xtext.ui.editor.syntaxcoloring.AbstractAntlrTokenToAttributeIdMapper> bindAbstractAntlrTokenToAttributeIdMapper() {
 		return org.grammaticalframework.eclipse.ui.editor.syntaxcoloring.GFAntlrTokenToAttributeIdMapper.class;

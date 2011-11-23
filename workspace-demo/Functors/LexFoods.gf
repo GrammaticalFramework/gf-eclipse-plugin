@@ -3,7 +3,7 @@
 --# -path=.:/home/john/.cabal/share/gf-3.3/lib/present
 interface LexFoods =
 	open Syntax in {
-		
+
 	oper
 		wine_N : N ;
 		pizza_N : N ;

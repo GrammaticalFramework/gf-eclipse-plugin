@@ -1582,3 +1582,1204 @@
 [2011-11-18 16:08:59,340] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
 [2011-11-18 16:08:59,341] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
 [2011-11-18 16:08:59,773] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 14:51:33,345] INFO  Full build on Functors
+[2011-11-21 14:51:33,390] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 14:51:33,424] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 14:51:33,425] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 14:51:33,798] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:51:33,842] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:51:33,844] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:51:33,845] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 14:51:33,846] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 14:51:34,278] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:51:34,279] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:51:34,281] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:51:34,281] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 14:51:34,282] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 14:51:34,392] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 14:51:34,393] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 14:51:34,496] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 14:51:34,496] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 14:51:34,822] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:51:34,823] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:51:34,824] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:51:34,825] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 14:51:34,825] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 14:51:35,236] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:51:35,237] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:51:35,238] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:51:35,238] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 14:51:54,188] INFO  Full build on Functors
+[2011-11-21 14:51:54,190] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 14:51:54,208] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 14:51:54,539] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:51:54,540] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:51:54,541] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:51:54,541] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 14:51:54,985] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:51:54,987] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:51:54,987] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:51:54,988] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 14:51:54,988] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 14:51:55,094] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 14:51:55,094] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 14:51:55,200] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 14:51:55,520] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:51:55,521] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:51:55,522] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:51:55,523] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 14:51:55,936] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:51:55,937] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:51:55,939] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:51:55,939] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 14:52:00,311] INFO  Full build on Functors
+[2011-11-21 14:52:00,313] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 14:52:00,329] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 14:52:00,693] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 14:52:01,156] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 14:52:01,157] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 14:52:01,266] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 14:52:01,266] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 14:52:01,372] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 14:52:01,373] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 14:52:01,699] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 14:52:01,699] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 14:52:02,121] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 14:52:07,182] INFO  Full build on Functors
+[2011-11-21 14:52:07,182] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 14:52:07,197] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 14:52:07,198] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 14:52:07,559] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 14:52:07,560] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 14:52:08,033] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 14:52:08,034] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 14:52:08,150] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 14:52:08,150] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 14:52:08,253] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 14:52:08,254] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 14:52:08,659] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 14:52:08,659] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 14:52:09,083] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 14:56:56,047] INFO  Full build on Functors
+[2011-11-21 14:56:56,054] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 14:56:56,138] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 14:56:56,139] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 14:56:56,590] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:56:56,599] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:56:56,607] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:56:56,608] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 14:56:56,609] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 14:56:57,077] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:56:57,079] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:56:57,079] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:56:57,080] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 14:56:57,080] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 14:56:57,198] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 14:56:57,198] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 14:56:57,308] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 14:56:57,308] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 14:56:57,635] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:56:57,636] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:56:57,637] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:56:57,638] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 14:56:57,639] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 14:56:58,057] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:56:58,059] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:56:58,060] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:56:58,060] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 14:57:29,989] INFO  Full build on Functors
+[2011-11-21 14:57:29,990] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 14:57:30,008] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 14:57:30,327] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:57:30,328] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:57:30,329] ERROR GF:    unknown qualified constant ntax.A
+[2011-11-21 14:57:30,329] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 14:57:30,756] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:57:30,757] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:57:30,758] ERROR GF:    unknown qualified constant ntax.A
+[2011-11-21 14:57:30,759] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 14:57:30,760] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 14:57:30,871] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 14:57:30,872] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 14:57:30,979] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 14:57:31,304] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:57:31,305] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:57:31,306] ERROR GF:    unknown qualified constant ntax.A
+[2011-11-21 14:57:31,306] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 14:57:31,725] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:57:31,725] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:57:31,726] ERROR GF:    unknown qualified constant ntax.A
+[2011-11-21 14:57:31,726] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 14:57:35,492] INFO  Full build on Functors
+[2011-11-21 14:57:35,494] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 14:57:35,512] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 14:57:35,847] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:57:35,847] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:57:35,848] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:57:35,848] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 14:57:36,277] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:57:36,279] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:57:36,279] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:57:36,280] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 14:57:36,281] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 14:57:36,389] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 14:57:36,389] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 14:57:36,486] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 14:57:36,810] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:57:36,811] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:57:36,812] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:57:36,812] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 14:57:37,227] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:57:37,228] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:57:37,229] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:57:37,230] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 14:58:26,266] INFO  Full build on Functors
+[2011-11-21 14:58:26,268] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 14:58:26,289] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 14:58:26,616] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:58:26,617] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:58:26,618] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:58:26,618] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 14:58:27,041] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:58:27,042] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:58:27,043] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:58:27,043] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 14:58:27,044] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 14:58:27,157] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 14:58:27,157] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 14:58:27,262] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 14:58:27,593] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:58:27,594] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:58:27,595] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:58:27,595] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 14:58:28,019] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:58:28,020] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:58:28,021] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:58:28,022] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 14:59:58,539] INFO  Full build on Functors
+[2011-11-21 14:59:58,542] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 14:59:58,576] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 14:59:58,930] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:59:58,937] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:59:58,938] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:59:58,938] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 14:59:59,381] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:59:59,382] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:59:59,383] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:59:59,383] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 14:59:59,383] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 14:59:59,491] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 14:59:59,491] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 14:59:59,591] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 14:59:59,911] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 14:59:59,912] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 14:59:59,913] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 14:59:59,914] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 15:00:00,331] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 15:00:00,332] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 15:00:00,333] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 15:00:00,333] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 15:00:21,041] INFO  Full build on Functors
+[2011-11-21 15:00:21,042] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 15:00:21,060] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 15:00:21,395] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 15:00:21,397] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 15:00:21,398] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 15:00:21,399] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 15:00:21,828] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 15:00:21,829] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 15:00:21,830] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 15:00:21,831] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 15:00:21,832] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 15:00:21,947] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 15:00:21,947] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 15:00:22,055] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 15:00:22,374] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 15:00:22,375] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 15:00:22,376] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 15:00:22,376] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 15:00:22,797] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:15:
+[2011-11-21 15:00:22,799] ERROR GF: Happened in the renaming of expensive_A
+[2011-11-21 15:00:22,800] ERROR GF:    unknown qualified constant Syntax.A
+[2011-11-21 15:00:22,800] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 15:01:28,774] INFO  Full build on Functors
+[2011-11-21 15:01:28,775] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 15:01:28,787] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 15:01:29,137] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 15:01:29,584] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 15:01:29,584] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 15:01:29,693] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 15:01:29,693] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 15:01:29,797] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 15:01:29,797] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 15:01:30,118] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 15:01:30,119] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 15:01:30,544] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 15:01:40,367] INFO  Full build on Functors
+[2011-11-21 15:01:40,368] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 15:01:40,384] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 15:01:40,385] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 15:01:40,722] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-21 15:01:40,723] ERROR GF: Happened in the renaming of wine_N
+[2011-11-21 15:01:40,725] ERROR GF:    unknown qualified constant Syntax.N
+[2011-11-21 15:01:40,726] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 15:01:40,726] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 15:01:41,151] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-21 15:01:41,153] ERROR GF: Happened in the renaming of wine_N
+[2011-11-21 15:01:41,153] ERROR GF:    unknown qualified constant Syntax.N
+[2011-11-21 15:01:41,154] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 15:01:41,155] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 15:01:41,270] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 15:01:41,270] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 15:01:41,384] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 15:01:41,385] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 15:01:41,705] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-21 15:01:41,707] ERROR GF: Happened in the renaming of wine_N
+[2011-11-21 15:01:41,708] ERROR GF:    unknown qualified constant Syntax.N
+[2011-11-21 15:01:41,708] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 15:01:41,709] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 15:01:42,129] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-21 15:01:42,131] ERROR GF: Happened in the renaming of wine_N
+[2011-11-21 15:01:42,132] ERROR GF:    unknown qualified constant Syntax.N
+[2011-11-21 15:01:42,132] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 15:06:01,982] INFO  Full build on Functors
+[2011-11-21 15:06:01,987] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 15:06:33,111] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 15:07:22,928] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-21 15:07:43,624] ERROR GF: Happened in the renaming of wine_N
+[2011-11-21 15:07:52,162] ERROR GF:    unknown qualified constant Syntax.N
+[2011-11-21 15:18:14,168] INFO  Full build on Functors
+[2011-11-21 15:18:14,199] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 15:18:21,133] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 15:18:21,452] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-21 15:18:21,459] ERROR GF: Happened in the renaming of wine_N
+[2011-11-21 15:18:21,459] ERROR GF:    unknown qualified constant Syntax.N
+[2011-11-21 15:18:21,460] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 15:18:21,901] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-21 15:18:21,902] ERROR GF: Happened in the renaming of wine_N
+[2011-11-21 15:18:21,903] ERROR GF:    unknown qualified constant Syntax.N
+[2011-11-21 15:18:21,904] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 15:18:21,904] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 15:18:22,008] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 15:18:22,009] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 15:18:22,106] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 15:18:22,430] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-21 15:18:22,432] ERROR GF: Happened in the renaming of wine_N
+[2011-11-21 15:18:22,433] ERROR GF:    unknown qualified constant Syntax.N
+[2011-11-21 15:18:22,434] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 15:18:22,849] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf:8:
+[2011-11-21 15:18:22,851] ERROR GF: Happened in the renaming of wine_N
+[2011-11-21 15:18:22,852] ERROR GF:    unknown qualified constant Syntax.N
+[2011-11-21 15:18:22,852] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 15:18:26,863] INFO  Full build on Functors
+[2011-11-21 15:18:26,865] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 15:18:26,882] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 15:18:27,271] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 15:18:27,737] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 15:18:27,738] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 15:18:27,847] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 15:18:27,847] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 15:18:27,947] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 15:18:27,948] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 15:18:28,272] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 15:18:28,273] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 15:18:28,693] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 15:18:34,083] INFO  Full build on Functors
+[2011-11-21 15:18:34,084] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 15:18:34,102] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 15:18:34,103] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 15:18:34,456] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 15:18:34,457] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 15:18:34,934] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 15:18:34,935] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 15:18:35,046] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 15:18:35,047] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 15:18:35,149] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 15:18:35,150] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 15:18:35,472] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 15:18:35,472] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 15:18:35,897] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 15:31:52,486] INFO  Full build on Functors
+[2011-11-21 15:31:52,487] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 15:31:52,505] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 15:31:52,505] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 15:31:52,523] ERROR GF: File ParadiXXgmsEng.gf does not exist.
+[2011-11-21 15:31:52,524] ERROR GF: searched in: ./
+[2011-11-21 15:31:52,525] ERROR GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-21 15:31:52,525] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2011-11-21 15:31:52,525] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/present
+[2011-11-21 15:31:52,526] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2011-11-21 15:31:52,526] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 15:31:52,527] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 15:31:53,000] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 15:31:53,000] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 15:31:53,107] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 15:31:53,108] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 15:31:53,212] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 15:31:53,213] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 15:31:53,232] ERROR GF: File ParadiXXgmsEng.gf does not exist.
+[2011-11-21 15:31:53,234] ERROR GF: searched in: ./
+[2011-11-21 15:31:53,234] ERROR GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-21 15:31:53,235] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2011-11-21 15:31:53,235] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/present
+[2011-11-21 15:31:53,235] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2011-11-21 15:31:53,236] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 15:31:53,236] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 15:31:53,677] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 15:32:25,961] INFO  Full build on Functors
+[2011-11-21 15:32:25,964] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 15:32:25,979] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 15:32:25,994] ERROR GF: File ParadiXXgmsEng.gf does not exist.
+[2011-11-21 15:32:26,006] ERROR GF: searched in: ./
+[2011-11-21 15:32:26,007] ERROR GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-21 15:32:26,008] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/present
+[2011-11-21 15:32:26,009] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 15:32:26,010] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 15:32:26,484] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 15:32:26,485] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 15:32:26,586] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 15:32:26,587] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 15:32:26,691] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 15:32:26,709] ERROR GF: File ParadiXXgmsEng.gf does not exist.
+[2011-11-21 15:32:26,710] ERROR GF: searched in: ./
+[2011-11-21 15:32:26,711] ERROR GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-21 15:32:26,712] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/present
+[2011-11-21 15:32:26,713] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 15:32:26,714] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 15:32:27,138] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 15:33:33,757] INFO  Full build on Functors
+[2011-11-21 15:33:33,758] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 15:33:33,776] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 15:33:34,120] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 15:33:34,121] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 15:33:34,586] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 15:33:34,586] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 15:33:34,697] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 15:33:34,697] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 15:33:34,802] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 15:33:34,802] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 15:33:35,126] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 15:33:35,127] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 15:33:35,547] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 16:01:28,773] INFO  Full build on Functors
+[2011-11-21 16:01:28,775] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 16:01:28,797] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 16:01:28,798] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 16:01:28,823] ERROR GF: File ParadXXigmsEng.gf does not exist.
+[2011-11-21 16:01:28,831] ERROR GF: searched in: ./
+[2011-11-21 16:01:28,832] ERROR GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-21 16:01:28,833] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/present
+[2011-11-21 16:01:28,834] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 16:01:28,835] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 16:01:29,303] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 16:01:29,303] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 16:01:29,416] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 16:01:29,416] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 16:01:29,521] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 16:01:29,521] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 16:01:29,543] ERROR GF: File ParadXXigmsEng.gf does not exist.
+[2011-11-21 16:01:29,544] ERROR GF: searched in: ./
+[2011-11-21 16:01:29,545] ERROR GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-21 16:01:29,546] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/present
+[2011-11-21 16:01:29,547] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 16:01:29,548] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 16:01:29,974] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 16:34:04,539] INFO  Full build on Functors
+[2011-11-21 16:34:04,542] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 16:34:04,555] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 16:34:04,569] ERROR GF: File ParadXigmsEng.gf does not exist.
+[2011-11-21 16:34:04,570] ERROR GF: searched in: ./
+[2011-11-21 16:34:04,570] ERROR GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-21 16:34:04,570] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/present
+[2011-11-21 16:34:04,571] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 16:34:04,572] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 16:34:05,041] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 16:34:05,041] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 16:34:05,151] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 16:34:05,152] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 16:34:05,257] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 16:34:05,273] ERROR GF: File ParadXigmsEng.gf does not exist.
+[2011-11-21 16:34:05,274] ERROR GF: searched in: ./
+[2011-11-21 16:34:05,275] ERROR GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-21 16:34:05,276] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/present
+[2011-11-21 16:34:05,277] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 16:34:05,278] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 16:34:05,699] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 16:35:40,261] INFO  Full build on Functors
+[2011-11-21 16:35:40,263] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 16:35:40,282] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 16:35:40,632] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 16:35:40,633] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 16:35:41,101] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 16:35:41,102] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 16:35:41,210] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 16:35:41,210] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 16:35:41,317] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 16:35:41,318] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 16:35:41,636] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 16:35:41,637] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 16:35:42,064] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 16:35:48,300] INFO  Full build on Functors
+[2011-11-21 16:35:48,301] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 16:35:48,314] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 16:35:48,314] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 16:35:48,663] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 16:35:48,664] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 16:35:49,123] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 16:35:49,123] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 16:35:49,238] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 16:35:49,238] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 16:35:49,345] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 16:35:49,346] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 16:35:49,670] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 16:35:49,671] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 16:35:50,094] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 16:36:06,035] INFO  Full build on Functors
+[2011-11-21 16:36:06,036] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 16:36:06,055] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 16:36:06,056] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 16:36:06,385] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf:14:
+[2011-11-21 16:36:06,386] ERROR GF: Happened in the renaming of fresh_A
+[2011-11-21 16:36:06,387] ERROR GF:    constant not found: mkAN
+[2011-11-21 16:36:06,387] ERROR GF:    given ParadigmsEng, SyntaxEng, LexFoodsEng
+[2011-11-21 16:36:06,390] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 16:36:06,391] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 16:36:06,866] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 16:36:06,866] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 16:36:06,979] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 16:36:06,980] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 16:36:07,086] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 16:36:07,087] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 16:36:07,411] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf:14:
+[2011-11-21 16:36:07,412] ERROR GF: Happened in the renaming of fresh_A
+[2011-11-21 16:36:07,412] ERROR GF:    constant not found: mkAN
+[2011-11-21 16:36:07,413] ERROR GF:    given ParadigmsEng, SyntaxEng, LexFoodsEng
+[2011-11-21 16:36:07,415] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 16:36:07,415] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 16:36:07,839] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 16:36:19,755] INFO  Full build on Functors
+[2011-11-21 16:36:19,756] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 16:36:19,771] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 16:36:20,126] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 16:36:20,127] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 16:36:20,601] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 16:36:20,602] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 16:36:20,714] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 16:36:20,714] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 16:36:20,823] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 16:36:20,823] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 16:36:21,151] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 16:36:21,151] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 16:36:21,626] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 16:36:26,682] INFO  Full build on Functors
+[2011-11-21 16:36:26,683] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 16:36:26,698] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 16:36:26,699] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 16:36:27,048] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 16:36:27,048] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 16:36:27,533] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 16:36:27,533] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 16:36:27,648] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 16:36:27,648] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 16:36:27,752] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 16:36:27,753] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 16:36:28,078] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 16:36:28,078] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 16:36:28,511] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 16:57:53,227] INFO  Full build on Functors
+[2011-11-21 16:57:53,231] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 16:57:53,257] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 16:57:53,258] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 16:57:53,297] ERROR GF: File ParadigSSmsEng.gf does not exist.
+[2011-11-21 16:57:53,303] ERROR GF: searched in: ./
+[2011-11-21 16:57:53,304] ERROR GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-21 16:57:53,304] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/present
+[2011-11-21 16:57:53,308] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 16:57:53,308] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 16:57:53,783] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 16:57:53,784] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 16:57:53,886] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 16:57:53,886] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 16:57:53,988] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 16:57:53,988] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 16:57:54,004] ERROR GF: File ParadigSSmsEng.gf does not exist.
+[2011-11-21 16:57:54,004] ERROR GF: searched in: ./
+[2011-11-21 16:57:54,005] ERROR GF:              /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+[2011-11-21 16:57:54,005] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/present
+[2011-11-21 16:57:54,006] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 16:57:54,007] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 16:57:54,424] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 17:07:45,344] INFO  Full build on Functors
+[2011-11-21 17:07:45,347] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 17:07:45,366] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 17:07:45,708] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 17:07:45,708] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 17:07:46,177] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 17:07:46,178] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 17:07:46,286] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 17:07:46,287] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 17:07:46,393] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 17:07:46,394] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 17:07:46,719] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 17:07:46,720] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 17:07:47,145] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 17:08:13,303] INFO  Full build on Functors
+[2011-11-21 17:08:13,305] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 17:08:13,325] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 17:08:13,326] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 17:08:13,664] ERROR GF: gf: no occurrence of element mkN
+[2011-11-21 17:08:13,675] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 17:08:13,675] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 17:08:14,142] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 17:08:14,142] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 17:08:14,256] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 17:08:14,257] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 17:08:14,365] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 17:08:14,365] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 17:08:14,688] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 17:08:14,688] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 17:08:15,112] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 17:08:30,263] INFO  Full build on Functors
+[2011-11-21 17:08:30,263] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 17:08:30,276] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 17:08:30,621] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 17:08:30,621] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 17:08:31,092] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 17:08:31,092] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 17:08:31,212] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 17:08:31,213] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 17:08:31,317] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 17:08:31,318] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 17:08:31,646] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 17:08:31,647] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 17:08:32,064] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 17:09:05,879] INFO  Full build on Functors
+[2011-11-21 17:09:05,880] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/Foods.gf-tags
+[2011-11-21 17:09:05,900] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-21 17:09:05,901] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsEng.gf-tags
+[2011-11-21 17:09:06,255] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-21 17:09:06,256] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsGer.gf-tags
+[2011-11-21 17:09:06,726] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-21 17:09:06,726] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/FoodsI.gf-tags
+[2011-11-21 17:09:06,838] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-21 17:09:06,839] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoods.gf-tags
+[2011-11-21 17:09:06,947] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-21 17:09:06,947] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsEng.gf-tags
+[2011-11-21 17:09:07,270] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-21 17:09:07,271] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/LexFoodsGer.gf-tags
+[2011-11-21 17:09:07,699] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-21 17:09:11,047] INFO  Full build on Hello
+[2011-11-21 17:09:11,047] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-21 17:09:11,078] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-21 17:09:11,078] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-21 17:09:11,096] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-21 17:09:11,096] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-21 17:09:11,119] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-21 17:09:11,120] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-21 17:09:11,137] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 10:58:08,174] INFO  Full build on Hello
+[2011-11-22 10:58:08,200] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-22 10:58:08,495] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 10:58:08,495] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-22 10:58:08,532] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 10:58:08,533] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-22 10:58:08,568] ERROR GF: File Eng.gf does not exist.
+[2011-11-22 10:58:08,591] ERROR GF: searched in: ./
+[2011-11-22 10:58:08,592] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 10:58:08,593] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-22 10:58:08,610] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 11:07:36,904] INFO  Full build on Hello
+[2011-11-22 11:07:36,906] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-22 11:07:36,916] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 11:07:36,916] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-22 11:07:36,925] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 11:07:37,044] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+[2011-11-22 11:07:37,046] ERROR GF: Happened in the renaming of Recipient
+[2011-11-22 11:07:37,046] ERROR GF:    unknown qualified constant ResEngXX.Gender
+[2011-11-22 11:07:37,048] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 11:07:37,049] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-22 11:07:37,057] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 11:10:52,968] INFO  Full build on Hello
+[2011-11-22 11:10:52,988] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 11:10:53,007] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 11:10:53,044] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 11:10:53,062] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 11:11:00,739] INFO  Full build on Hello
+[2011-11-22 11:11:00,754] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 11:11:00,765] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 11:11:00,779] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+[2011-11-22 11:11:00,790] ERROR GF: Happened in the renaming of Recipient
+[2011-11-22 11:11:00,791] ERROR GF:    unknown qualified constant ResEngXX.Gender
+[2011-11-22 11:11:00,793] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 11:11:00,808] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 11:11:12,669] INFO  Full build on Hello
+[2011-11-22 11:11:12,680] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 11:11:12,695] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 11:11:12,716] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 11:11:12,735] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 11:11:26,537] INFO  Full build on Hello
+[2011-11-22 11:11:26,546] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 11:11:26,557] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 11:11:26,568] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+[2011-11-22 11:11:26,568] ERROR GF: Happened in the renaming of Recipient
+[2011-11-22 11:11:26,569] ERROR GF:    unknown qualified constant ResEng89089.Gender
+[2011-11-22 11:11:26,570] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 11:11:26,580] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 11:11:45,405] INFO  Full build on Hello
+[2011-11-22 11:11:45,413] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 11:11:45,424] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 11:11:45,438] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 11:11:45,451] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 16:03:01,535] INFO  Opening: file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name
+[2011-11-22 16:03:37,372] INFO  Opening: file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name
+[2011-11-22 16:05:58,667] INFO  Opening: file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name
+[2011-11-22 16:13:19,853] INFO  Opening: file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name
+[2011-11-22 16:15:01,077] INFO  Opening: file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name
+[2011-11-22 16:15:01,080] ERROR Error while opening editor part for EMF URI 'file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name'
+org.eclipse.ui.PartInitException: System editor can only open file base resources.
+	at org.eclipse.ui.internal.EditorManager.openEditorFromDescriptor(EditorManager.java:694)
+	at org.eclipse.ui.internal.EditorManager.openEditor(EditorManager.java:666)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2942)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2850)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2842)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2793)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2789)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2773)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2756)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:439)
+	at org.grammaticalframework.eclipse.ui.editor.GFURIEditorOpener.open(GFURIEditorOpener.java:55)
+	at org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener.open(LanguageSpecificURIEditorOpener.java:70)
+	at org.eclipse.xtext.ui.editor.GlobalURIEditorOpener.open(GlobalURIEditorOpener.java:61)
+	at org.eclipse.xtext.ui.editor.hyperlinking.XtextHyperlink.open(XtextHyperlink.java:26)
+	at org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler.execute(OpenDeclarationHandler.java:45)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1531)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1257)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1282)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1267)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1294)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:730)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3019)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:734)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1743)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5016)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4408)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8394)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1245)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2258)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3207)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2696)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2660)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2494)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:674)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:667)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+[2011-11-22 16:15:20,949] INFO  Opening: file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name
+[2011-11-22 16:15:20,949] ERROR Error while opening editor part for EMF URI 'file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name'
+org.eclipse.ui.PartInitException: System editor can only open file base resources.
+	at org.eclipse.ui.internal.EditorManager.openEditorFromDescriptor(EditorManager.java:694)
+	at org.eclipse.ui.internal.EditorManager.openEditor(EditorManager.java:666)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2942)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2850)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2842)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2793)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2789)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2773)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2756)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:439)
+	at org.grammaticalframework.eclipse.ui.editor.GFURIEditorOpener.open(GFURIEditorOpener.java:55)
+	at org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener.open(LanguageSpecificURIEditorOpener.java:70)
+	at org.eclipse.xtext.ui.editor.GlobalURIEditorOpener.open(GlobalURIEditorOpener.java:61)
+	at org.eclipse.xtext.ui.editor.hyperlinking.XtextHyperlink.open(XtextHyperlink.java:26)
+	at org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler.execute(OpenDeclarationHandler.java:45)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1531)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1257)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1282)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1267)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1294)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:730)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3019)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:734)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1743)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5016)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4408)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8394)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1245)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2258)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3207)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2696)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2660)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2494)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:674)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:667)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+[2011-11-22 16:18:04,907] INFO  Opening: file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name
+[2011-11-22 16:19:39,428] INFO  Opening: file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name
+[2011-11-22 16:20:05,294] INFO  Opening: file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name
+[2011-11-22 16:21:47,660] ERROR Error opening editor for 'file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name'
+java.lang.IllegalArgumentException
+	at org.eclipse.ui.part.FileEditorInput.getPath(FileEditorInput.java:208)
+	at org.eclipse.ui.internal.EditorManager.openEditorFromDescriptor(EditorManager.java:692)
+	at org.eclipse.ui.internal.EditorManager.openEditor(EditorManager.java:666)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2942)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2850)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2842)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2793)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2789)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2773)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2756)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:439)
+	at org.grammaticalframework.eclipse.ui.editor.GFURIEditorOpener.open(GFURIEditorOpener.java:55)
+	at org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener.open(LanguageSpecificURIEditorOpener.java:70)
+	at org.eclipse.xtext.ui.editor.GlobalURIEditorOpener.open(GlobalURIEditorOpener.java:61)
+	at org.eclipse.xtext.ui.editor.hyperlinking.XtextHyperlink.open(XtextHyperlink.java:26)
+	at org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler.execute(OpenDeclarationHandler.java:45)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1531)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1257)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1282)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1267)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1294)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:730)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3019)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:734)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1743)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5016)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4408)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8394)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1245)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2258)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3207)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2696)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2660)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2494)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:674)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:667)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+[2011-11-22 16:22:08,653] ERROR Error opening editor for 'file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name'
+java.lang.IllegalArgumentException
+	at org.eclipse.ui.part.FileEditorInput.getPath(FileEditorInput.java:208)
+	at org.eclipse.ui.internal.EditorManager.openEditorFromDescriptor(EditorManager.java:692)
+	at org.eclipse.ui.internal.EditorManager.openEditor(EditorManager.java:666)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2942)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2850)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2842)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2793)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2789)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2773)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2756)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:439)
+	at org.grammaticalframework.eclipse.ui.editor.GFURIEditorOpener.open(GFURIEditorOpener.java:55)
+	at org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener.open(LanguageSpecificURIEditorOpener.java:70)
+	at org.eclipse.xtext.ui.editor.GlobalURIEditorOpener.open(GlobalURIEditorOpener.java:61)
+	at org.eclipse.xtext.ui.editor.hyperlinking.XtextHyperlink.open(XtextHyperlink.java:26)
+	at org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler.execute(OpenDeclarationHandler.java:45)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1531)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1257)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1282)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1267)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1294)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:730)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3019)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:734)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1743)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5016)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4408)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8394)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1245)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2258)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3207)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2696)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2660)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2494)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:674)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:667)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+[2011-11-22 16:22:55,858] ERROR Error opening editor for 'file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf'
+java.lang.IllegalArgumentException
+	at org.eclipse.ui.part.FileEditorInput.getPath(FileEditorInput.java:208)
+	at org.eclipse.ui.internal.EditorManager.openEditorFromDescriptor(EditorManager.java:692)
+	at org.eclipse.ui.internal.EditorManager.openEditor(EditorManager.java:666)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2942)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2850)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2842)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2793)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2789)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2773)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2756)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:439)
+	at org.grammaticalframework.eclipse.ui.editor.GFURIEditorOpener.open(GFURIEditorOpener.java:56)
+	at org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener.open(LanguageSpecificURIEditorOpener.java:70)
+	at org.eclipse.xtext.ui.editor.GlobalURIEditorOpener.open(GlobalURIEditorOpener.java:61)
+	at org.eclipse.xtext.ui.editor.hyperlinking.XtextHyperlink.open(XtextHyperlink.java:26)
+	at org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler.execute(OpenDeclarationHandler.java:45)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1531)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1257)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1282)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1267)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1294)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:730)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3019)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:734)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1743)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5016)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4408)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8394)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1245)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2258)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3207)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2696)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2660)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2494)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:674)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:667)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+[2011-11-22 16:45:46,593] ERROR Error opening editor for 'file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf#//@body/@judgements.0/@definitions.0/@constructors.0/@name'
+org.eclipse.ui.PartInitException: CoreException opening the file store on the URI.
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:481)
+	at org.grammaticalframework.eclipse.ui.editor.GFURIEditorOpener.open(GFURIEditorOpener.java:60)
+	at org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener.open(LanguageSpecificURIEditorOpener.java:70)
+	at org.eclipse.xtext.ui.editor.GlobalURIEditorOpener.open(GlobalURIEditorOpener.java:61)
+	at org.eclipse.xtext.ui.editor.hyperlinking.XtextHyperlink.open(XtextHyperlink.java:26)
+	at org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclarationHandler.execute(OpenDeclarationHandler.java:45)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:293)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:468)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:786)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:885)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:567)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:508)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:123)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1531)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1257)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1282)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1267)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1294)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:730)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3019)
+	at org.eclipse.swt.widgets.Composite.gtk_key_press_event(Composite.java:734)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1743)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5016)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4408)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8394)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1245)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2258)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3207)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2696)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2660)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2494)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:674)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:667)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+Caused by: org.eclipse.core.runtime.CoreException: Must specify a URI scheme:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:55)
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:50)
+	at org.eclipse.core.internal.filesystem.InternalFileSystemCore.getStore(InternalFileSystemCore.java:106)
+	at org.eclipse.core.filesystem.EFS.getStore(EFS.java:470)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:479)
+	... 54 more
+[2011-11-22 16:53:36,419] INFO  Full build on Hello
+[2011-11-22 16:53:36,439] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 16:53:36,457] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 16:53:36,478] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 16:53:36,497] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 17:03:47,883] WARN  Removed invalid URI: platform:/resource/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-22 17:06:06,464] INFO  Full build on Hello
+[2011-11-22 17:06:06,483] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 17:06:06,505] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 17:06:06,520] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 17:06:06,536] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 17:06:11,969] INFO  Full build on Hello
+[2011-11-22 17:06:11,984] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 17:06:11,998] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 17:06:12,013] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 17:06:12,027] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 17:07:08,889] INFO  Full build on Hello
+[2011-11-22 17:07:08,898] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 17:07:08,912] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 17:07:08,925] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 17:07:08,937] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 17:07:49,878] INFO  Clean Hello
+[2011-11-22 17:07:49,886] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/AbsCat.gf-tags
+[2011-11-22 17:07:49,887] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloAbs.gf-tags
+[2011-11-22 17:07:49,888] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/HelloEng.gf-tags
+[2011-11-22 17:07:49,889] INFO  - /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/.gfbuild/ResEng.gf-tags
+[2011-11-22 17:07:49,993] INFO  Full build on Hello
+[2011-11-22 17:07:50,010] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 17:07:50,032] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 17:07:50,055] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 17:07:50,070] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 17:08:05,089] INFO  Full build on Hello
+[2011-11-22 17:08:05,101] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 17:08:05,114] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 17:08:05,128] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 17:08:05,140] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 17:08:43,316] INFO  Full build on Hello
+[2011-11-22 17:08:43,332] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 17:08:43,347] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 17:08:43,361] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 17:08:43,372] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 17:09:54,543] INFO  Full build on Hello
+[2011-11-22 17:09:54,561] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 17:09:54,574] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 17:09:54,588] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 17:09:54,600] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-22 17:20:37,724] INFO  Full build on Hello
+[2011-11-22 17:20:37,739] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-22 17:20:37,754] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-22 17:20:37,769] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-22 17:20:37,785] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-23 10:10:28,306] ERROR Guice creation errors:
+
+1) No implementation for org.eclipse.ui.IEditorRegistry was bound.
+  while locating org.eclipse.ui.IEditorRegistry
+    for field at org.grammaticalframework.eclipse.ui.editor.GFURIEditorOpener.reg(GFURIEditorOpener.java:30)
+  at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:55)
+
+1 error
+com.google.inject.CreationException: Guice creation errors:
+
+1) No implementation for org.eclipse.ui.IEditorRegistry was bound.
+  while locating org.eclipse.ui.IEditorRegistry
+    for field at org.grammaticalframework.eclipse.ui.editor.GFURIEditorOpener.reg(GFURIEditorOpener.java:30)
+  at org.eclipse.xtext.service.MethodBasedModule.configure(MethodBasedModule.java:55)
+
+1 error
+	at com.google.inject.internal.Errors.throwCreationExceptionIfErrorsExist(Errors.java:354)
+	at com.google.inject.InjectorBuilder.initializeStatically(InjectorBuilder.java:152)
+	at com.google.inject.InjectorBuilder.build(InjectorBuilder.java:105)
+	at com.google.inject.Guice.createInjector(Guice.java:92)
+	at com.google.inject.Guice.createInjector(Guice.java:69)
+	at com.google.inject.Guice.createInjector(Guice.java:59)
+	at org.grammaticalframework.eclipse.ui.internal.GFActivator.registerInjectorFor(GFActivator.java:47)
+	at org.grammaticalframework.eclipse.ui.internal.GFActivator.start(GFActivator.java:38)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:299)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:268)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:462)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:400)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:476)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:429)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:417)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:345)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1207)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:268)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:264)
+	at org.eclipse.ui.internal.registry.EditorDescriptor.createEditor(EditorDescriptor.java:235)
+	at org.eclipse.ui.internal.EditorManager.createPart(EditorManager.java:875)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:609)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:465)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:271)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1459)
+	at org.eclipse.ui.internal.EditorManager$5.runWithException(EditorManager.java:972)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$33.runWithException(Workbench.java:1595)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3563)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3212)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2604)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2494)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:674)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:667)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)

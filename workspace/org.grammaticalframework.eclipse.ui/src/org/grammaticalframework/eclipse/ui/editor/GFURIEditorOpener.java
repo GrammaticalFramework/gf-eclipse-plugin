@@ -11,6 +11,7 @@ import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.ui.IEditorDescriptor;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorRegistry;
@@ -36,37 +37,52 @@ public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 	
 	@Inject
 	@Named(Constants.LANGUAGE_NAME)
-	private String editorID;
+	private String GF_XTEXT_EDITOR_ID;
 	
 	@Inject(optional = true)
-	private IWorkbench workbench;	
-
+	private IWorkbench workbench;
+	
 	protected IWorkspaceRoot getWorkspaceRoot() {
 		return ResourcesPlugin.getWorkspace().getRoot();
 	}
 
 	@Override
 	public IEditorPart open(URI uri, EReference crossReference, int indexInList, boolean select) {
-		// If platform URL, jsut use the parent
+		// If platform URL, just use the parent
 		if (uri.isPlatformResource())
 			return super.open(uri, crossReference, indexInList, select);
 		
-		//TODO
-		
 		// Otherwise we're trying to open an external library
+		IEditorPart editor = null;
         try {
         	java.net.URI netURI = new java.net.URI(uri.toString());
-//    		Path path = new Path(uri.toFileString());
-//    		IFile file = getWorkspaceRoot().getFile(path);
+    		IEditorRegistry reg = workbench.getEditorRegistry();
     		IWorkbenchPage activePage = workbench.getActiveWorkbenchWindow().getActivePage();
-        	IEditorPart editor = IDE.openEditor(activePage, netURI, IEditorRegistry.SYSTEM_EXTERNAL_EDITOR_ID, true);
-        	return editor;
+    		
+    		// Open external editor ("notepad")
+//        	editor = IDE.openEditor(activePage, netURI, reg.SYSTEM_EXTERNAL_EDITOR_ID, true);
+    		
+        	// Open Xtext editor - will throw an CompoundXtextEditorCallback when file is external
+			Path path = new Path(uri.toFileString());
+			IFile file = getWorkspaceRoot().getFile(path);
+			IStorage storage = file;
+			IEditorInput editorInput = new XtextReadonlyEditorInput(storage);
+			editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
+			selectAndReveal(editor, uri, crossReference, indexInList, select);
+
+			// If we failed, open basic text editor
+			if (editor == null) {
+				IEditorDescriptor txtEditorPart = reg.getDefaultEditor("fake.txt");
+	        	editor = IDE.openEditor(activePage, netURI, txtEditorPart.getId(), true);
+			}
+
 		} catch (URISyntaxException e) {
 			log.error("Error converting URI '" + uri + "'", e);
 		} catch (PartInitException e) {
+//		} catch (Exception e) {
 			log.error("Error opening editor for '" + uri + "'", e);
 		}
-		return null;
+		return editor; // may be null
 /*		
 		
 		uri = uri.trimFragment();
@@ -76,7 +92,7 @@ public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 			IStorage storage = file;
 			IEditorInput editorInput = new XtextReadonlyEditorInput(storage);
 			IWorkbenchPage activePage = workbench.getActiveWorkbenchWindow().getActivePage();
-			IEditorPart editor = IDE.openEditor(activePage, editorInput, IEditorRegistry.SYSTEM_EXTERNAL_EDITOR_ID);
+			IEditorPart editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
 			selectAndReveal(editor, uri, crossReference, indexInList, select);
 			return EditorUtils.getXtextEditor(editor);
 //		} catch (NullPointerException e) {

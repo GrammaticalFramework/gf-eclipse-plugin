@@ -10,7 +10,6 @@ import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.EObjectDescription;
 import org.eclipse.xtext.resource.IEObjectDescription;
-import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.AbstractScope;
@@ -28,7 +27,7 @@ public class GFTagBasedScope extends AbstractScope {
 	/**
 	 * The logger
 	 */
-	private static final Logger log = Logger.getLogger(GFTagBasedGlobalScopeProvider.class);
+	private static final Logger log = Logger.getLogger(GFTagBasedScope.class);
 
 	/**
 	 * The name of the module this scope represents
@@ -80,7 +79,7 @@ public class GFTagBasedScope extends AbstractScope {
 			try {
 				QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getQualifiedName());
 				QualifiedName trueQualifiedName = converter.toQualifiedName(tag.getTrueQualifiedName());
-				QualifiedName unQualifiedName = getUnQualifiedName(trueQualifiedName);
+//				QualifiedName unQualifiedName = getUnQualifiedName(trueQualifiedName);
 				Map<String, String> userData = tag.getProperties();
 				
 				IEObjectDescription eObjectDescription = null;
@@ -88,7 +87,7 @@ public class GFTagBasedScope extends AbstractScope {
 				// First try trueQualifiedName
 				Iterable<IEObjectDescription> matchingEObjects1 = resourceDescriptions.getExportedObjects(GFPackage.Literals.IDENT, trueQualifiedName, false);
 				Iterator<IEObjectDescription> iter1 = matchingEObjects1.iterator();
-				if (iter1.hasNext()) { // This just always chooses first occurance... is that bad?
+				if (iter1.hasNext()) { // TODO This just always chooses first occurance... is that bad?
 					eObjectDescription = iter1.next();
 //				} else {
 //					// If not, then try fullyQualifiedName
@@ -117,6 +116,7 @@ public class GFTagBasedScope extends AbstractScope {
 	}
 	
 
+	@SuppressWarnings("unused")
 	private QualifiedName getUnQualifiedName(QualifiedName qn) {
 		return qn.skipFirst(qn.getSegmentCount()-1);
 	}
@@ -133,5 +133,5 @@ public class GFTagBasedScope extends AbstractScope {
 	protected String getModuleName() {
 		return moduleName;
 	}
-
+	
 }

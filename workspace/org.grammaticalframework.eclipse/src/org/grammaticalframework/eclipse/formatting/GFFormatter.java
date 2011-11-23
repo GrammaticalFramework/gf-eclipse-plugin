@@ -43,10 +43,14 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		c.setLinewrap(0, 1, 2).before(f.getML_COMMENTRule());
 		c.setLinewrap(0, 1, 1).after(f.getML_COMMENTRule());
 
-		// Find common keywords an specify formatting for them
+		// Find common keywords and specify formatting for them
 		for (Pair<Keyword, Keyword> pair : f.findKeywordPairs("(", ")")) {
 			c.setNoSpace().after(pair.getFirst());
 			c.setNoSpace().before(pair.getSecond());
+		}
+		for (Keyword period : f.findKeywords(".")) {
+			c.setNoSpace().before(period);
+			c.setNoSpace().after(period);
 		}
 		for (Keyword comma : f.findKeywords(",")) {
 			c.setNoSpace().before(comma);

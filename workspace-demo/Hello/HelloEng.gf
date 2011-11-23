@@ -6,7 +6,7 @@ concrete HelloEng of HelloAbs = ResEng ** {
  
 	lincat
 		Greeting, Farewell = {s : Str} ;
-		Recipient = {s : ResEng.Gender => Str} ;
+		Recipient = {s : ResEng.Gender => Str} ; 
 
 	lin
  		Hello recip = {s = "hello" ++ recip.s ! Masc } ;

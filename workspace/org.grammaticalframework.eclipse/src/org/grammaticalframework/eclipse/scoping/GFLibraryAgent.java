@@ -106,16 +106,16 @@ public class GFLibraryAgent {
 		}
 	}
 	
-	/**
-	 * Check if a module exists.
-	 *
-	 * @param context the context
-	 * @param moduleName the module name
-	 * @return true, if successful
-	 */
-	public boolean moduleExists(Resource context, String moduleName) {
-		return (getModuleURI(context, moduleName) != null);
-	}
+//	/**
+//	 * Check if a module exists.
+//	 *
+//	 * @param context the context
+//	 * @param moduleName the module name
+//	 * @return true, if successful
+//	 */
+//	public boolean moduleExists(Resource context, String moduleName) {
+//		return (getModuleURI(context, moduleName) != null);
+//	}
 	
 
 }

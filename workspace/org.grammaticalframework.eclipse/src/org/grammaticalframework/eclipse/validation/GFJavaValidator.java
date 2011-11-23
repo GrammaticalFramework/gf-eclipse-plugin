@@ -11,22 +11,14 @@ package org.grammaticalframework.eclipse.validation;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.LinkedHashSet;
-
-import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
-import org.eclipse.xtext.resource.IEObjectDescription;
-import org.eclipse.xtext.resource.IResourceDescription;
-import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.IScopeProvider;
 import org.eclipse.xtext.validation.Check;
 import org.grammaticalframework.eclipse.gF.*;
-import org.grammaticalframework.eclipse.scoping.GFGlobalScopeProvider;
-import org.grammaticalframework.eclipse.scoping.GFLibraryAgent;
 import com.google.inject.Inject;
  
 
@@ -51,11 +43,11 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 		return scopeProvider;
 	}
 
-	/**
-	 * The provider.
-	 */
-	@Inject
-	private GFGlobalScopeProvider provider;
+//	/**
+//	 * Global scope provider
+//	 */
+//	@Inject
+//	private GFGlobalScopeProvider provider;
 	
 	/**
 	 * The converter.
@@ -72,11 +64,11 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 		return converter;
 	}
 
-	/**
-	 * The lib agent.
-	 */
-	@Inject
-	private GFLibraryAgent libAgent;
+//	/**
+//	 * Library agent.
+//	 */
+//	@Inject
+//	private GFLibraryAgent libAgent;
 
 	// ==============================================
 
@@ -94,28 +86,26 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 		}
 	}
 
-	/**
-	 * Warn when referencing a module which does not exist.
-	 *
-	 * @param modtype the modtype
-	 */
-	@Check
-	public void checkAbstractModuleExists(ModType modtype) {
-		// Concrete, Instance
-		if (modtype.getAbstractName().getS() != null) {
-			if (!libAgent.moduleExists(modtype.eResource(), modtype.getAbstractName().getS())) {
-				String msg = String.format("Module \"%s\" not found", modtype.getAbstractName().getS());
-				warning(msg, GFPackage.Literals.MOD_TYPE__ABSTRACT_NAME);
-			}
-		}
-	}
-	
-	/**
-	 * Check referenced module exists.
-	 *
-	 * @param open the open
-	 */
-// TODO These checks need to respect PATH directives in order to be useful!
+//	/**
+//	 * Warn when referencing a module which does not exist.
+//	 *
+//	 * @param modtype the modtype
+//	 */
+//	@Check
+//	public void checkAbstractModuleExists(ModType modtype) {
+//		// Concrete, Instance
+//		if (modtype.getAbstractName().getS() != null) {
+//			if (!libAgent.moduleExists(modtype.eResource(), modtype.getAbstractName().getS())) {
+//				String msg = String.format("Module \"%s\" not found", modtype.getAbstractName().getS());
+//				warning(msg, GFPackage.Literals.MOD_TYPE__ABSTRACT_NAME);
+//			}
+//		}
+//	}
+//	/**
+//	 * Check referenced module exists.
+//	 *
+//	 * @param open the open
+//	 */
 //	@Check
 //	public void checkReferencedModuleExists(Open open) {
 //		// Opens, Instantiations
@@ -273,7 +263,6 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	 *
 	 * @param label the label
 	 */
-	// FIXME Re-visit this, make sure it handles aliases proeprly
 	@Check
 	public void checkQualifiedNames(Label label) {
 		
@@ -298,16 +287,6 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 					: fullyQualifiedName;
 				
 				boolean found = (scope.getSingleElement(searchFor) != null);
-//				boolean found = false;
-//				Iterator<IEObjectDescription> matchIter = scope.getElements(fullyQualifiedName).iterator();
-//				while (matchIter.hasNext()) {
-//					IEObjectDescription objDesc = matchIter.next();
-//					if (qualifier.getS().equals(objDesc.getUserData(TagEntry.USER_DATA_KEY_QUALIFIER))
-//							|| qualifier.getS().equals(objDesc.getUserData(TagEntry.USER_DATA_KEY_ALIAS))) {
-//						found = true;
-//						break;
-//					}
-//				}
 				
 				// We now we are dealing with a Qualified name, now see if the full thing is valid:
 				if (!found) {
@@ -322,52 +301,52 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	}
 	
 	
-	/**
-	 * Warn when functor instantiations don't fully instantiate their functor.
-	 *
-	 * @param modBody the mod body
-	 */
-	@Check
-	public void checkFunctorInstantiations(ModBody modBody) {
-		if (modBody.isFunctorInstantiation()) {
-			// Get list of what the functor itself OPENs
-			Ident functorName = modBody.getFunctor().getName();
-			ArrayList<String> functorOpens = new ArrayList<String>();
-			URI uri = libAgent.getModuleURI(modBody.eResource(), functorName.getS() );
-			if (!libAgent.moduleExists(modBody.eResource(), functorName.getS())) {
-				// This should have already been checked
-//				String msg = String.format("Cannot find module \"%1$s\"", functorName.getS());
-//				error(msg, GFPackage.Literals.OPEN__NAME);
-				return;
-			}
-			final LinkedHashSet<URI> uriAsCollection = new LinkedHashSet<URI>(1);
-			uriAsCollection.add(uri);
-			IResourceDescriptions descriptions = provider.getResourceDescriptions(modBody.eResource(), uriAsCollection);
-			IResourceDescription desc = descriptions.getResourceDescription(uri);
-			// TODO Checking via regexp is very bad! But it works >:(
-			for (IEObjectDescription qn : desc.getExportedObjectsByType(GFPackage.Literals.IDENT)) {
-				if(qn.getEObjectURI().toString().matches("^.*?//@body/@opens.[0-9]+/@name$")) {
-					functorOpens.add(qn.getName().getLastSegment());
-				}
-			}
-			
-			ArrayList<String> thisOpens = new ArrayList<String>();
-			for (Open o : modBody.getInstantiations())
-				thisOpens.add(o.getAlias().getS());
-			
-			// Check that we are instantiating one of them
-			if (!thisOpens.containsAll(functorOpens)) {
-				StringBuilder msg = new StringBuilder();
-				msg.append( String.format("Instantiation of functor \"%1$s\" must instantiate: ", functorName.getS()) );
-				Iterator<String> i = functorOpens.iterator();
-				while (i.hasNext()) {
-					msg.append(i.next());
-					if (i.hasNext())
-						msg.append(", ");
-				}
-				error(msg.toString(), GFPackage.Literals.MOD_BODY__FUNCTOR_INSTANTIATION);
-			}
-		}
-	}
+//	/**
+//	 * Warn when functor instantiations don't fully instantiate their functor.
+//	 *
+//	 * @param modBody the mod body
+//	 */
+//	@Check
+//	public void checkFunctorInstantiations(ModBody modBody) {
+//		if (modBody.isFunctorInstantiation()) {
+//			// Get list of what the functor itself OPENs
+//			Ident functorName = modBody.getFunctor().getName();
+//			ArrayList<String> functorOpens = new ArrayList<String>();
+//			URI uri = libAgent.getModuleURI(modBody.eResource(), functorName.getS() );
+//			if (!libAgent.moduleExists(modBody.eResource(), functorName.getS())) {
+//				// This should have already been checked
+////				String msg = String.format("Cannot find module \"%1$s\"", functorName.getS());
+////				error(msg, GFPackage.Literals.OPEN__NAME);
+//				return;
+//			}
+//			final LinkedHashSet<URI> uriAsCollection = new LinkedHashSet<URI>(1);
+//			uriAsCollection.add(uri);
+//			IResourceDescriptions descriptions = provider.getResourceDescriptions(modBody.eResource(), uriAsCollection);
+//			IResourceDescription desc = descriptions.getResourceDescription(uri);
+//			// TODO Checking via regexp is very bad! But it works >:(
+//			for (IEObjectDescription qn : desc.getExportedObjectsByType(GFPackage.Literals.IDENT)) {
+//				if(qn.getEObjectURI().toString().matches("^.*?//@body/@opens.[0-9]+/@name$")) {
+//					functorOpens.add(qn.getName().getLastSegment());
+//				}
+//			}
+//			
+//			ArrayList<String> thisOpens = new ArrayList<String>();
+//			for (Open o : modBody.getInstantiations())
+//				thisOpens.add(o.getAlias().getS());
+//			
+//			// Check that we are instantiating one of them
+//			if (!thisOpens.containsAll(functorOpens)) {
+//				StringBuilder msg = new StringBuilder();
+//				msg.append( String.format("Instantiation of functor \"%1$s\" must instantiate: ", functorName.getS()) );
+//				Iterator<String> i = functorOpens.iterator();
+//				while (i.hasNext()) {
+//					msg.append(i.next());
+//					if (i.hasNext())
+//						msg.append(", ");
+//				}
+//				error(msg.toString(), GFPackage.Literals.MOD_BODY__FUNCTOR_INSTANTIATION);
+//			}
+//		}
+//	}
 
 }

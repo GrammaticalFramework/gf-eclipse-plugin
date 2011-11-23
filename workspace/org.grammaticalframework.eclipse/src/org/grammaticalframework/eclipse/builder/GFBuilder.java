@@ -63,6 +63,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * Use tag based scoping?
 	 */
 	public static final Boolean TAG_BASED_SCOPING = true;
+	
+	/**
+	 * Clean old tags fiel before rebuilding?
+	 */
+	private static final Boolean CLEAN_BEFORE_BUILD = false;
 
 	/**
 	 * The GF paths.
@@ -360,9 +365,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @return
 	 */
 	private boolean buildFile(IFile file) {
-		try {
-			// Clean up first
+		// Clean up first
+		if (CLEAN_BEFORE_BUILD)
 			cleanFile(file);
+		try {
 			file.deleteMarkers(null, true, IResource.DEPTH_ZERO);
 		} catch(CoreException _) {
 			log.warn("Error trying to delete markers for " + file.getName());
@@ -449,67 +455,72 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private void parseGFErrorStream(IFile file, InputStream errStream) {
 		BufferedReader processError = new BufferedReader(new InputStreamReader(errStream));
-		String err_str = null;
 		
 		try {
-			/*
-			 * Read first line, parse for syntax error form:
-			 * 
-				/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5:17:
-				   syntax error
-			 */
-			err_str = processError.readLine();
-			log.error("GF: " + err_str);
-			if (err_str.matches(".+\\.gf:(\\d+):(\\d+):.*")) {
+
+			// Stick all the error message lines into an array list
+			ArrayList<String> errorLines = new ArrayList<String>();
+			String err_str = null;
+			while ((err_str = processError.readLine()) != null) {
+				if (!err_str.isEmpty()) {
+					errorLines.add(err_str.trim());
+					log.error("GF: " + err_str);
+				}
+			}
+			
+			//	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5:17:
+			//	   syntax error
+			if (errorLines.get(0).matches(".+\\.gf:(\\d+):(\\d+):.*")) {
 				// Don't worry about syntax errors, xtext will mark them for us
 				return;
 			}
+
+			// Using XText marker type so that we get the tooltip on hover! Refer to: org.eclipse.xtext.ui.MarkerTypes
+			IMarker marker = file.createMarker("org.eclipse.xtext.ui.check.normal"); // Instead of IMarker.PROBLEM
+			marker.setAttribute(IMarker.USER_EDITABLE, false);
+			marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
+			marker.setAttribute(IMarker.LOCATION, file.getFullPath().toString());
 			
-			if (err_str.matches("^gf: (.+)$")) {
-				// Some un-parseable error
-				IMarker marker = file.createMarker("org.eclipse.xtext.ui.check.normal"); // Instead of IMarker.PROBLEM
-				marker.setAttribute(IMarker.USER_EDITABLE, false);
-				marker.setAttribute(IMarker.LOCATION, file.getFullPath().toString());
-				marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
-				marker.setAttribute(IMarker.MESSAGE, err_str.substring(4));
+			// Some errors are just a single error beginning with "gf:"
+			if (errorLines.get(0).matches("^gf: (.+)$")) {
+				marker.setAttribute(IMarker.MESSAGE, errorLines.get(0).substring(4));
 				return;
 			}
 			
-			/*
-			 * Errors are of the form:
-			 * 
-				/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
-				Happened in the renaming of Recipient
-				   constant not found: Gender
-				   given ResEng, HelloEng
- 			 */
+			//	File ParadXXigmsEng.gf does not exist.
+			//	searched in: ./
+            //				/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
+            //				/home/john/.cabal/share/gf-3.3/lib
+            //				/home/john/.cabal/share/gf-3.3/lib/present
+            //				/home/john/.cabal/share/gf-3.3/lib/prelude
+			if (errorLines.get(0).matches("^File (.+) does not exist.$")) {
+				marker.setAttribute(IMarker.MESSAGE, errorLines.get(0));
+				return;
+			}
 			
-			// Using XText marker type so that we get the tooltip on hover!
-			// Refer to: org.eclipse.xtext.ui.MarkerTypes
-			IMarker marker = file.createMarker("org.eclipse.xtext.ui.check.normal"); // Instead of IMarker.PROBLEM
-			marker.setAttribute(IMarker.USER_EDITABLE, false);
-			err_str = processError.readLine();
-			log.error("GF: " + err_str);
-			
+			//	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
+			//	Happened in the renaming of Recipient
+			//	   constant not found: Gender
+			//	   given ResEng, HelloEng
 			Pattern pattern = Pattern.compile("([^/\\\\]+\\.gf):(\\d+)(-(\\d+))?:$");
-			Matcher matcher = pattern.matcher(err_str);
+			Matcher matcher = pattern.matcher(errorLines.get(0));
 			if (matcher.find()) {
 				Integer lineNo = Integer.parseInt(matcher.group(2));
 //				Integer lineTo = Integer.parseInt(matcher.group(4));
 				marker.setAttribute(IMarker.LINE_NUMBER, lineNo);
-				marker.setAttribute(IMarker.LOCATION, "line: " + lineNo.toString() + " " + file.getFullPath().toString());
-				marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
+
+				// Set message, skipping first line
+				StringBuilder sb = new StringBuilder();
+				for (String s : errorLines.subList(1, errorLines.size())) {
+					if (sb.length() > 0) sb.append("\n");
+					sb.append(s);
+				}
+				marker.setAttribute(IMarker.MESSAGE, sb.toString());
 			}
 			
-			// Set message to last line
-			StringBuilder sb = new StringBuilder();
-			while ((err_str = processError.readLine()) != null) {
-				log.error("GF: " + err_str);
-				if (sb.length() > 0) sb.append("\n");
-				sb.append(err_str.trim());
-			}
-			marker.setAttribute(IMarker.MESSAGE, sb.toString());
 			
+		} catch (IndexOutOfBoundsException e) {
+			// TODO
 		} catch (NullPointerException e) {
 			log.info("Unrecognized error format!");
 		} catch (CoreException e) {

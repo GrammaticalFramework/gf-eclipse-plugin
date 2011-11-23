@@ -20,8 +20,12 @@ import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
+import org.eclipse.core.resources.IWorkspaceRoot;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -32,13 +36,12 @@ import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.*;
 import org.eclipse.xtext.util.IResourceScopeCache;
-import org.grammaticalframework.eclipse.GFException;
 import org.grammaticalframework.eclipse.gF.ModDef;
 
-import com.google.common.base.Function;
 import com.google.common.base.Predicate;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import com.google.inject.ProvisionException;
 
 /**
  * Global scope provider is responsible for defining what is visible from
@@ -79,6 +82,12 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		this.cache = cache;
 	}
 
+	@Inject
+	private Provider<LoadOnDemandResourceDescriptions> loadOnDemandDescriptions;
+	
+//	@Inject
+//	private ResourceDescriptionsProvider provider;
+	
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider#getScope(org.eclipse.emf.ecore.resource.Resource, boolean, org.eclipse.emf.ecore.EClass, com.google.common.base.Predicate)
 	 */
@@ -86,7 +95,13 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
 		
 		// Do the parsing, possibly hitting the cache
-		Map<URI, Collection<TagEntry>> uriTagMap = getURITagMap(resource);
+		Map<URI, Collection<TagEntry>> uriTagMap;
+		try {
+			uriTagMap = getURITagMap(resource);
+		} catch (GFTagsFileException e) {
+//			return new FakeScope(provider, resource, type);
+			return IScope.NULLSCOPE;
+		}
 		
 //		/* ----- Method 1: Just use the URIs ----- */
 //		// Load all descriptions from all mentioned files/URIs
@@ -138,37 +153,26 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 //	}
 	
 	/**
-	 * Get list of all tags as a one-dimensional list, possibly from cache
-	 * @param resource
-	 * @return
-	 */
-//	private Collection<TagEntry> getTags(final Resource resource) {
-//		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Collection<TagEntry>>(){
-//			public Collection<TagEntry> get() {
-//				Collection<Collection<TagEntry>> tags2D = parseTagsFile(resource).values(); 
-//				Collection<TagEntry> tags1D = new ArrayList<TagEntry>(); 
-//				for (Collection<TagEntry> tagsItem : tags2D) {
-//					tags1D.addAll(tagsItem);
-//				}
-//				return tags1D;
-//			}
-//		});
-//	}
-	
-	/**
 	 * Get list of all tags grouped by URI, possibly from cache
 	 * 
-	 * TODO Make sure this cache is being flushed correctly.
-	 * 
 	 * @param resource
 	 * @return
+	 * @throws GFTagsFileException 
 	 */
-	private Hashtable<URI, Collection<TagEntry>> getURITagMap(final Resource resource) {
-		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Hashtable<URI, Collection<TagEntry>>>(){
-			public Hashtable<URI, Collection<TagEntry>> get() {
-				return parseTagsFile(resource); 
-			}
-		});
+	private Hashtable<URI, Collection<TagEntry>> getURITagMap(final Resource resource) throws GFTagsFileException {
+		try {
+			return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Hashtable<URI, Collection<TagEntry>>>(){
+				public Hashtable<URI, Collection<TagEntry>> get() {
+					try {
+						return parseTagsFile(resource);
+					} catch (GFTagsFileException e) {
+						throw new ProvisionException(e.getMessage());
+					}
+				}
+			});
+		} catch (ProvisionException e) {
+			throw new GFTagsFileException(e.getMessage());
+		}
 	}
 	
 	/**
@@ -177,8 +181,9 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * 
 	 * @param resource
 	 * @return
+	 * @throws GFTagsFileException 
 	 */
-	private Hashtable<URI, Collection<TagEntry>> parseTagsFile(final Resource resource) {
+	private Hashtable<URI, Collection<TagEntry>> parseTagsFile(final Resource resource) throws GFTagsFileException {
 		
 		// Get module definition
 		ModDef moduleDef;
@@ -219,57 +224,30 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			// Resolve refs to other tags files and replace, but making sure to keep original qualifier & alias
 			else if (uri.fileExtension().equals("gf-tags")) {
 				
-				// Super low-tech solution: iterate over all tags, capture all the different Qualifier/Alias combos
-//				ArrayListMultimap<String, String> qualifierAliasCombos = ArrayListMultimap.create();
-//				for (TagEntry tag : tagList) {
-//					if (!qualifierAliasCombos.containsEntry(tag.getQualifier(), tag.getAlias()))
-//						qualifierAliasCombos.put(tag.getQualifier(), tag.getAlias());
-//				}
+				// Iterate over all tags, to capture all the different qualifiers
 				HashSet<String> qualifiers = new HashSet<String>();
 				for (TagEntry tag : tagList) {
 					qualifiers.add(tag.getQualifier());
 					qualifiers.add(tag.getAlias()); // this also allows for empty aliases! i.e. when inheriting
 				}
 				
-//				for (Map.Entry<String, String> qaCombo : qualifierAliasCombos.entries()) {
-//					final String qualifier = qaCombo.getKey();
-//					final String alias = qaCombo.getValue();
-//					
-				Iterator<String> qIter = qualifiers.iterator();
-				while (qIter.hasNext()) {
-					final String qualifier = qIter.next();
-					final String alias = "doesnt-matter"; // TODO Clean up this!
-				
-				// Get the qualifier and alias from the first entry
-				// (since everything from a given module is qualified in the same way, this should be safe)
-//				TagEntry tagSpecimen = uriTagMap.get(uri).iterator().next(); 
-//				final String qualifier = tagSpecimen.getQualifier();
-//				final String alias = tagSpecimen.getAlias();
-
-					Predicate<TagEntry> includePredicate2 = new Predicate<TagEntry>() {
-						// Only include tags FROM the respective tags file (opposite of above)
-						public boolean apply(TagEntry tag) {
-	//						return tag.getFile().endsWith(uri.lastSegment().substring(0, uri.lastSegment().length()-5));
-							return !tag.getFile().endsWith(".gf-tags") && !tag.getType().equals("overload-type") ;
-						}
-					};
-					Function<TagEntry, TagEntry> customFunction = new Function<TagEntry, TagEntry>() {
-						public TagEntry apply(TagEntry from) {
-							from.setQualifier(qualifier);
-							from.setAlias(alias);
-							return from; // return value not actually used
-						}
-					};
-					Hashtable<URI, Collection<TagEntry>> newUriTagMap = parseSingleTagsFile(uri, includePredicate2, customFunction);
-					
-					// Make sure to add all new refs withouth overwriting
-					for (Map.Entry<URI, Collection<TagEntry>> entry : newUriTagMap.entrySet()) {
-						if (!resolvedUriTagMap.containsKey(entry.getKey()))
-							resolvedUriTagMap.put(entry.getKey(), entry.getValue());
-						else
-							resolvedUriTagMap.get(entry.getKey()).addAll(entry.getValue());
+				Predicate<TagEntry> includePredicate2 = new Predicate<TagEntry>() {
+					// Only include tags FROM the respective tags file (opposite of above)
+					public boolean apply(TagEntry tag) {
+						return !tag.getFile().endsWith(".gf-tags") && !tag.getType().equals("overload-type") ;
 					}
+				};
+				Hashtable<URI, Collection<TagEntry>> newUriTagMap = parseSingleTagsFile(uri, includePredicate2, qualifiers);
+				
+				// Make sure to add all new refs withouth overwriting (I suspect this level of checking is no longer needed)
+				for (Map.Entry<URI, Collection<TagEntry>> entry : newUriTagMap.entrySet()) {
+					if (!resolvedUriTagMap.containsKey(entry.getKey()))
+						resolvedUriTagMap.put(entry.getKey(), entry.getValue());
+					else
+						resolvedUriTagMap.get(entry.getKey()).addAll(entry.getValue());
 				}
+				
+				// Remove original
 				uriIter.remove();
 			}
 		}
@@ -287,8 +265,11 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @param includePredicate Predicate applied to tag returns a boolean, determining whether to include the tag or not
 	 * @param customFunction Custom function for transforming each tag as required
 	 * @return collections of tags grouped by URI
+	 * @throws GFTagsFileException 
 	 */
-	private Hashtable<URI, Collection<TagEntry>> parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate, Function<TagEntry, TagEntry> customFunction) {
+	private Hashtable<URI, Collection<TagEntry>> parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate, Set<String> qualifiers)
+			throws GFTagsFileException {
+		
 		Hashtable<String, Collection<TagEntry>> strTagMap = new Hashtable<String, Collection<TagEntry>>();
 		try {
 			InputStream is = uriConverter.createInputStream(tagFileURI);
@@ -298,38 +279,70 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				TagEntry tag;
 				try {
 					tag = new TagEntry(line);
-				} catch (GFException e) {
+				} catch (GFTagsFileException e) {
 					log.warn(e); // Would happen if the tags file is malformed somehow
 					continue;
 				}
+				// Determine whether to include the tag
 				if (includePredicate != null && !includePredicate.apply(tag))
 					continue;
-				if (customFunction != null)
-					customFunction.apply(tag);
-				if (!strTagMap.containsKey(tag.getFile())) {
-					strTagMap.put(tag.getFile(), new ArrayList<TagEntry>());
+				
+				// Add tag to map...
+				if (qualifiers != null) {
+					// Add with multiple qualifiers, as needed
+					for (String q : qualifiers) {
+						TagEntry tag2 = new TagEntry(line);
+						tag2.setQualifier(q);
+//						tag2.setAlias(""); // this is just a precaution
+						addTagToTagMap(tag2, strTagMap);
+					}
+				} else {
+					// Add tag with its "true" qualifier
+					addTagToTagMap(tag, strTagMap);
 				}
-				strTagMap.get(tag.getFile()).add(tag);
 			}
 			// Clean up
 			reader.close();
 			is.close();
-		} catch (IOException e) {
-			log.debug("Couldn't find tags file " + tagFileURI);
+		} catch (IOException _) {
+			// Problem reading the actual file (not just a particular line)
+			GFTagsFileException e = new GFTagsFileException(tagFileURI);
+			log.debug(e.getMessage());
+			throw e;
 		}
 		
 		// Convert from String keys to URI keys (this is an optimisation thing)
 		Hashtable<URI, Collection<TagEntry>> uriTagMap = new Hashtable<URI, Collection<TagEntry>>();
+		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+		String rootPath = root.getLocation().toString();
 		for (Entry<String, Collection<TagEntry>> entry : strTagMap.entrySet()) {
-			URI importURI = URI.createFileURI(entry.getKey());
+			URI importURI;
+			String uriAsStr = entry.getKey();
+			if (uriAsStr.contains(rootPath) && uriAsStr.endsWith(".gf")) {
+				// If the URI is pointing within the workspace, convert it to a platform URI
+				String trimmedURI = uriAsStr.substring(rootPath.length());
+				root.getFile(new Path(uriAsStr));
+				importURI = URI.createPlatformResourceURI(trimmedURI, true);
+			} else {
+				// Just use a dumb old file:// URI
+				importURI = URI.createFileURI(uriAsStr);
+			}
 			uriTagMap.put(importURI, entry.getValue());
 		}
 		return uriTagMap;
 	}
 	
-	
-	@Inject
-	private Provider<LoadOnDemandResourceDescriptions> loadOnDemandDescriptions;
+	/**
+	 * Add a tag to a String->[TagEntry] dictionary, creating keys as necessary
+	 * @param tag
+	 * @param strTagMap
+	 */
+	private void addTagToTagMap(TagEntry tag, Hashtable<String, Collection<TagEntry>> strTagMap) {
+		if (!strTagMap.containsKey(tag.getFile())) {
+			strTagMap.put(tag.getFile(), new ArrayList<TagEntry>());
+		}
+		strTagMap.get(tag.getFile()).add(tag);
+	}
 	
 	/**
 	 * Gets the descriptions of resources listed in importUris
