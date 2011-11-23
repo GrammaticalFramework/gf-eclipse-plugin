@@ -61,10 +61,10 @@ public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 				// If in external folder, then it's a link to an external library
 				Path path = new Path(uri.toPlatformString(true));
 				IFile file = getWorkspaceRoot().getFile(path);
-				IEditorInput editorInput = new XtextReadonlyEditorInput(file);
-				IEditorPart editor;
+//				IEditorInput editorInput = new XtextReadonlyEditorInput(file);
 				try {
-					editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
+//					editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
+					IEditorPart editor = IDE.openEditor(activePage, file, GF_XTEXT_EDITOR_ID);
 					selectAndReveal(editor, uri, crossReference, indexInList, select);
 					return editor;
 				} catch (PartInitException e) {

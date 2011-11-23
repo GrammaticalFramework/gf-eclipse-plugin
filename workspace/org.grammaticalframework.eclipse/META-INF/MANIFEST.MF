@@ -33,4 +33,7 @@ Export-Package: org.grammaticalframework.eclipse,
  org.grammaticalframework.eclipse.parser.antlr.internal,
  org.grammaticalframework.eclipse.serializer,
  org.grammaticalframework.eclipse.services,
- org.grammaticalframework.eclipse.validation
+ org.grammaticalframework.eclipse.validation,
+ org.grammaticalframework.eclipse.generator,
+ org.grammaticalframework.eclipse.formatting
+

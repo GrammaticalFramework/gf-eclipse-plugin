@@ -3293,3 +3293,6 @@ com.google.inject.CreationException: Guice creation errors:
 [2011-11-23 16:04:10,292] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
 [2011-11-23 16:04:10,621] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
 [2011-11-23 16:04:11,053] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-23 16:43:45,164] ERROR java.lang.ClassNotFoundException: org.eclipse.xtext.ui.refactoring.ui.RenameElementHandler
+[2011-11-23 16:46:15,913] ERROR java.lang.ClassNotFoundException: org.eclipse.xtext.ui.refactoring.ui.RenameElementHandler
+[2011-11-23 16:50:35,254] ERROR java.lang.ClassNotFoundException: org.eclipse.xtext.ui.refactoring.ui.RenameElementHandler
