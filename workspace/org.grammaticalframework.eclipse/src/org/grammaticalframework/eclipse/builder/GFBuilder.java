@@ -10,13 +10,10 @@
 package org.grammaticalframework.eclipse.builder;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -62,7 +59,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	/**
 	 * Use tag based scoping?
 	 */
-	public static final Boolean TAG_BASED_SCOPING = true;
+//	public static final Boolean TAG_BASED_SCOPING = true;
 	
 	/**
 	 * Clean old tags fiel before rebuilding?
@@ -106,17 +103,17 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			// Is doing a full build for every incremental change overkill?
 			// The reason we have it is when changes in your file affect teh scoping of another file
 			// TODO SOlution: only rebuild files whos tags contain something from the file being rebuilt
-			if (TAG_BASED_SCOPING || kind == IncrementalProjectBuilder.FULL_BUILD) {
+			fullBuild(monitor);
 //			if (kind == IncrementalProjectBuilder.FULL_BUILD) {
-				fullBuild(monitor);
-			} else {
-				IResourceDelta delta = getDelta(getProject());
-				if (delta == null) {
-					fullBuild(monitor);
-				} else {
-					incrementalBuild(delta, monitor);
-				}
-			}
+//				fullBuild(monitor);
+//			} else {
+//				IResourceDelta delta = getDelta(getProject());
+//				if (delta == null) {
+//					fullBuild(monitor);
+//				} else {
+//					incrementalBuild(delta, monitor);
+//				}
+//			}
 			
 			// Force project refresh
 			getProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);
@@ -135,6 +132,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param delta the delta
 	 * @param monitor the monitor
 	 */
+	@SuppressWarnings("unused")
 	private void incrementalBuild(IResourceDelta delta, final IProgressMonitor monitor) throws OperationCanceledException {
 		log.info("Incremental build on " + delta.getResource().getName());
 		try {
@@ -228,15 +226,13 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				if (isFile && extension.equals("gfo")) {
 					delete = true;
 				}
-				else if (TAG_BASED_SCOPING) {
+				else {
 					try {
 						IContainer parent = resource.getParent();
 						delete = parent.getName().equals(BUILD_FOLDER);
 					} catch (NullPointerException _) {
 						// file has no grand/parent
 					}
-				} else {
-					delete = (isFile && extension.equals("gfh"));
 				}
 				
 				// Do the deed
@@ -259,15 +255,13 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param file the file
 	 */
 	private void cleanFile(IFile file) {
-		if (TAG_BASED_SCOPING) {
-			File tagsFile = new File( getTagsFile(file) );
-			if (tagsFile.exists()) {
-				try {
-					tagsFile.delete();
-					log.info("- " + tagsFile.getAbsolutePath());
-				} catch (Exception _) {
-					log.warn("✕ " + tagsFile.getAbsolutePath());
-				}
+		File tagsFile = new File( getTagsFile(file) );
+		if (tagsFile.exists()) {
+			try {
+				tagsFile.delete();
+				log.info("- " + tagsFile.getAbsolutePath());
+			} catch (Exception _) {
+				log.warn("✕ " + tagsFile.getAbsolutePath());
 			}
 		}
 	}
@@ -377,11 +371,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		// Invalidate scoping cache
 		GFScopeProvider.cacheDirtyState.put(file.getName(), true);
 		
-		// Delegate to correct method
-		if (TAG_BASED_SCOPING)
-			return buildFileTAGS(file);
-		else
-			return buildFileSS(file);
+		// Do it
+		return buildFileTAGS(file);
 	}
 	
 	/**
@@ -518,11 +509,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				marker.setAttribute(IMarker.MESSAGE, sb.toString());
 			}
 			
-			
 		} catch (IndexOutOfBoundsException e) {
-			// TODO
+			log.info("Unrecognized error format");
 		} catch (NullPointerException e) {
-			log.info("Unrecognized error format!");
+			log.info("Unrecognized error format");
 		} catch (CoreException e) {
 			log.warn("Error creating marker on " + file.getName());
 			e.printStackTrace();
@@ -531,113 +521,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			e.printStackTrace();
 		}		
 	}
-	
-	/**
-	 * Create a copy of a source file with only the module header intact, and the body "scraped out".
-	 * The reasons for this is to be able to get a valid tags file even when there are syntax/type/ref errors
-	 * in the current source file.
-	 * 
-	 * @param sourceFileName
-	 * @param targetFileName
-	 * @param workingDirectory
-	 * @return
-	 */
-	@SuppressWarnings("unused")
-	private boolean createScrapedFileCopy(String sourceFileName, String targetFileName, File workingDirectory) {
-		try {
-			// MAJOR TODO: use of absolute path!! Reliance on sed!!one!
-			ProcessBuilder b = new ProcessBuilder("/bin/sed", "-n", "1h;1!H;${;g;s/{.*/{}/g;p;}", sourceFileName);
-			b.directory(workingDirectory);
-			Process process = b.start();
-			
-			// Consume output and write to targetFile
-			File targetFile = new File(workingDirectory.getAbsolutePath() + java.io.File.separator + targetFileName);
-			BufferedWriter writer = new BufferedWriter(new FileWriter(targetFile));
-			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
-			String out_str;
-			while ((out_str = processOutput.readLine()) != null) {
-				writer.write(out_str + "\n");
-			}
-			writer.close();
-			return (process.waitFor() == 0);
-		} catch (IOException e) {
-			log.error("Couldn't create scraped version of " + sourceFileName);
-		} catch (InterruptedException e) {
-			log.error("Scraping of " + sourceFileName + " interrupted");
-		}
-		return false;				
-	}
-	
-	
-	/**
-	 * For a single .gf file, compile it with GF and run "ss -strip -save" to
-	 * capture all the GF headers in the build subfolder.
-	 * 
-	 * @param file the file
-	 * @return true, if successful
-	 */
-	private boolean buildFileSS(IFile file) {
-		/* 
-		 * We want to compile each source file in .gf with these commands:
-		 * i --retain HelloEng.gf
-		 * ss -strip -save
-		 * 
-		 * Shell command: echo "ss -strip -save" | gf -retain HelloEng.gf
-		 */
-		String filename = file.getName();
-		String buildDir = getBuildDirectory(file);
-		
-		ArrayList<String> command = new ArrayList<String>();
-		command.add(gfPath);
-		command.add("--retain");
-		
-		// Use library path in command (if supplied)
-		if (gfLibPath != null && !gfLibPath.isEmpty()) {
-			command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath));
-		}
-		
-		command.add(".." + java.io.File.separator + filename);
-		
-		try {
-			// Check the build directory and try to create it
-			File buildDirFile = new File(buildDir);
-			if (!buildDirFile.exists()) {
-				buildDirFile.mkdir();
-			}
-			
-			// Piece together our GF process
-			ProcessBuilder b = new ProcessBuilder(command);
-			b.directory(buildDirFile);
-			b.redirectErrorStream(true);
-			Process process = b.start();
-			
-			// Feed it our commands, then quit
-			BufferedWriter processInput = new BufferedWriter(new OutputStreamWriter(process.getOutputStream()));
-			processInput.write("ss -strip -save");
-			processInput.newLine();
-			processInput.flush();
-			processInput.write("quit");
-			processInput.newLine();
-			processInput.flush();
-			
-			// Consume & log all output
-			BufferedReader processOutput = new BufferedReader(new InputStreamReader(process.getInputStream()));
-			String out_str;
-			while ((out_str = processOutput.readLine()) != null) {
-				log.debug("GF: " + out_str);
-			}
-			
-			// Tidy up
-			process.waitFor();
-			return true;
-			
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
-		return false;		
-	}
+
 	
 }
