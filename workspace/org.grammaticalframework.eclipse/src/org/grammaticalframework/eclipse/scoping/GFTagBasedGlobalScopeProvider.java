@@ -43,6 +43,7 @@ import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.*;
 import org.eclipse.xtext.util.IResourceScopeCache;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
+import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
 import org.grammaticalframework.eclipse.gF.ModDef;
 
 import com.google.common.base.Predicate;
@@ -75,9 +76,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	public GFTagBasedGlobalScopeProvider() {
 		super();
 	}
-	
-	@Inject
-	private GFLibraryAgent libAgent;
 	
 	@Inject
 	private ExtensibleURIConverterImpl uriConverter; 
@@ -189,7 +187,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		}
 		
 		// Find the corresponding tags file & parse it (1st pass)
-		URI tagFileURI = libAgent.getTagsFile(resource, moduleName);
+		URI tagFileURI = GFLibraryHelper.getTagsFile(resource, moduleName);
 		Predicate<TagEntry> includePredicate = new Predicate<TagEntry>() {
 			// Ignore references to self, ie local scope
 			public boolean apply(TagEntry tag) {

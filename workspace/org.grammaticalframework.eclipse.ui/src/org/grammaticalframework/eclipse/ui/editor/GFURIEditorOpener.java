@@ -4,18 +4,11 @@ import java.net.URISyntaxException;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.IStorage;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.ui.IEditorDescriptor;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorRegistry;
@@ -23,12 +16,10 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.ide.IDE;
-import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.xtext.Constants;
 import org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener;
 import org.eclipse.xtext.ui.editor.XtextReadonlyEditorInput;
-import org.eclipse.xtext.ui.editor.utils.EditorUtils;
-import org.grammaticalframework.eclipse.builder.GFBuilder;
+import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
@@ -56,15 +47,16 @@ public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 		IWorkbenchPage activePage = workbench.getActiveWorkbenchWindow().getActivePage();
 		
 		if (uri.isPlatformResource()) {
-			if (uri.segment(uri.segmentCount()-2).equals(GFBuilder.EXTERNAL_FOLDER)) {
+//			if (uri.segment(uri.segmentCount()-2).equals(GFBuilder.EXTERNAL_FOLDER)) {
+			if (GFLibraryHelper.isLinkedResource(uri)) {
 
 				// If in external folder, then it's a link to an external library
 				Path path = new Path(uri.toPlatformString(true));
 				IFile file = getWorkspaceRoot().getFile(path);
-//				IEditorInput editorInput = new XtextReadonlyEditorInput(file);
 				try {
-//					editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
-					IEditorPart editor = IDE.openEditor(activePage, file, GF_XTEXT_EDITOR_ID);
+					IEditorInput editorInput = new XtextReadonlyEditorInput(file);
+					IEditorPart editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
+//					IEditorPart editor = IDE.openEditor(activePage, file, GF_XTEXT_EDITOR_ID);
 					selectAndReveal(editor, uri, crossReference, indexInList, select);
 					return editor;
 				} catch (PartInitException e) {

@@ -16,7 +16,7 @@ import org.eclipse.xtext.util.CancelIndicator;
 import org.eclipse.xtext.validation.CheckMode;
 import org.eclipse.xtext.validation.Issue;
 import org.eclipse.xtext.validation.ResourceValidatorImpl;
-import org.grammaticalframework.eclipse.builder.GFBuilder;
+import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
 
 public class GFResourceValidator extends ResourceValidatorImpl {
 
@@ -24,7 +24,7 @@ public class GFResourceValidator extends ResourceValidatorImpl {
 	public List<Issue> validate(Resource resource, CheckMode mode, CancelIndicator mon) {
 		
 		// Never validate anything in the external folder
-		if (resource.getURI().segment(resource.getURI().segmentCount()-2).equals(GFBuilder.EXTERNAL_FOLDER)) {
+		if (GFLibraryHelper.isLinkedResource(resource)) {
 			return null;
 		}
 

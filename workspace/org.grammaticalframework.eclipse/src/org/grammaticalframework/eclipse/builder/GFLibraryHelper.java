@@ -7,19 +7,19 @@
  * European Union's Seventh Framework Programme (FP7/2007-2013) under
  * grant agreement n° FP7-ICT-247914.
  */
-package org.grammaticalframework.eclipse.scoping;
+package org.grammaticalframework.eclipse.builder;
 
+import org.eclipse.core.resources.IResource;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.EcoreUtil2;
-import org.grammaticalframework.eclipse.builder.GFBuilder;
 
 /**
  * For resolving GF library modules and their exported definitions.
  *
  * @author John J. Camilleri
  */
-public class GFLibraryAgent {
+public class GFLibraryHelper {
 	
 	/**
 	 * Put together path to local gf source file.
@@ -28,7 +28,7 @@ public class GFLibraryAgent {
 	 * @param moduleName the module name
 	 * @return the local source path
 	 */
-	private String getLocalSourcePath(Resource context, String moduleName) {
+	private static String getLocalSourcePath(Resource context, String moduleName) {
 		URI uri = context.getURI();
 		return uri.trimSegments(1) + java.io.File.separator + moduleName + ".gf";
 	}
@@ -40,7 +40,7 @@ public class GFLibraryAgent {
 	 * @param moduleName the module name
 	 * @return the header path
 	 */
-	public URI getTagsFile(Resource context, String moduleName) {
+	public static URI getTagsFile(Resource context, String moduleName) {
 		String sb = GFBuilder.getTagsFile(context.getURI().lastSegment());
 		URI uri = URI.createURI(sb);
 		return uri.resolve(context.getURI());
@@ -53,7 +53,7 @@ public class GFLibraryAgent {
 	 * @param moduleName the module name
 	 * @return the header path
 	 */
-	private String getHeaderPath(Resource context, String moduleName) {
+	private static String getHeaderPath(Resource context, String moduleName) {
 		StringBuilder sb = new StringBuilder();
 		
 		// Are we "outside" the gfbuild folder?
@@ -71,7 +71,7 @@ public class GFLibraryAgent {
 	 * @param moduleName the module name
 	 * @return the module uri
 	 */
-	public URI getModuleURI(Resource context, String moduleName) {
+	public static URI getModuleURI(Resource context, String moduleName) {
 		URI uri;
 		
 		// First try a local file
@@ -97,7 +97,7 @@ public class GFLibraryAgent {
 	 * @param moduleName the module name
 	 * @return the module resource
 	 */
-	public Resource getModuleResource(Resource context, String moduleName) {
+	public static Resource getModuleResource(Resource context, String moduleName) {
 		URI uri = getModuleURI(context, moduleName);
 		try {
 			return EcoreUtil2.getResource(context, uri.toString() );
@@ -105,6 +105,23 @@ public class GFLibraryAgent {
 			return null;
 		}
 	}
+	
+	/**
+	 * 
+	 * @param resource
+	 * @return
+	 */
+	public static Boolean isLinkedResource(IResource resource) {
+		URI uri = URI.createURI(resource.getFullPath().toString());
+		return isLinkedResource(uri);
+	}
+	public static Boolean isLinkedResource(Resource resource) {
+		return isLinkedResource(resource.getURI()); 
+	}
+	public static Boolean isLinkedResource(URI uri) {
+		return uri.segment(uri.segmentCount()-2).equals(GFBuilder.EXTERNAL_FOLDER);
+	}
+
 	
 //	/**
 //	 * Check if a module exists.

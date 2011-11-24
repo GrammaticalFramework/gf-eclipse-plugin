@@ -24,6 +24,7 @@ import org.eclipse.xtext.resource.IResourceDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.*;
+import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.Included;
 import org.grammaticalframework.eclipse.gF.ModDef;
@@ -87,12 +88,6 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 //		return loadOnDemandDescriptions;
 //	}
 	
-	/**
-	 * The library agent.
-	 */
-	@Inject
-	private GFLibraryAgent libAgent;
-
 // TODO Implement caching for Global Scope Provider
 //	@Inject
 //	private IResourceScopeCache cache;
@@ -280,7 +275,7 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 
 		
 		// Recurse into the named module's parents and get their defs
-		Resource namedModuleResource = libAgent.getModuleResource(resource, moduleName);
+		Resource namedModuleResource = GFLibraryHelper.getModuleResource(resource, moduleName);
 		IScope namedModuleScope = getScope(namedModuleResource, ignoreCase, type, filter);
 		if (!namedModuleScope.equals(IScope.NULLSCOPE)) {
 			scope = new SimpleScope(scope, namedModuleScope.getAllElements(), ignoreCase);
@@ -306,7 +301,7 @@ public class GFGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			boolean ignoreCase, boolean ignoreModuleName, String moduleAlias) {
 
 		try {
-			URI uri = libAgent.getModuleURI(resource, moduleName);
+			URI uri = GFLibraryHelper.getModuleURI(resource, moduleName);
 			if (uri == null)
 				return parent;
 		

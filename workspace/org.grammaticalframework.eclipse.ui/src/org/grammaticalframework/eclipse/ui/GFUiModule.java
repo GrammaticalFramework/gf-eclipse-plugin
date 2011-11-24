@@ -92,6 +92,13 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	}
 	
 	/**
+	 * Bind 
+	 */
+	public Class<? extends org.eclipse.xtext.ui.editor.validation.ValidatingEditorCallback> bindValidatingEditorCallback() {
+		return org.grammaticalframework.eclipse.ui.editor.validation.GFValidatingEditorCallback.class;
+	}
+	
+	/**
 	 * Bind highlighting configuration.
 	 */
 	public Class<? extends org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration> bindIHighlightingConfiguration() {

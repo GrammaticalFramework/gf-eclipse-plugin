@@ -16,14 +16,29 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>(External)/Cat.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/abstract/Cat.gf</location>
+		</link>
+		<link>
 			<name>(External)/CatEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/CatEng.gf</location>
 		</link>
 		<link>
+			<name>(External)/CatGer.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/german/CatGer.gf</location>
+		</link>
+		<link>
 			<name>(External)/Combinators.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/api/Combinators.gf</location>
+		</link>
+		<link>
+			<name>(External)/Common.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/abstract/Common.gf</location>
 		</link>
 		<link>
 			<name>(External)/CommonX.gf</name>
@@ -41,9 +56,24 @@
 			<location>/home/john/repositories/GF/lib/src/english/ParadigmsEng.gf</location>
 		</link>
 		<link>
+			<name>(External)/ParadigmsGer.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/german/ParadigmsGer.gf</location>
+		</link>
+		<link>
+			<name>(External)/Structural.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/abstract/Structural.gf</location>
+		</link>
+		<link>
 			<name>(External)/StructuralEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/StructuralEng.gf</location>
+		</link>
+		<link>
+			<name>(External)/StructuralGer.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/german/StructuralGer.gf</location>
 		</link>
 	</linkedResources>
 </projectDescription>
