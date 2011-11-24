@@ -59,7 +59,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	/**
 	 * The Constant BUILD_FOLDER.
 	 */
-	public static final String EXTERNAL_FOLDER = BUILD_FOLDER; //$NON-NLS-1$
+	public static final String EXTERNAL_FOLDER = "(External)"; //$NON-NLS-1$
 
 	/**
 	 * Use tag based scoping?

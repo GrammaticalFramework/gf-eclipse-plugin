@@ -16,32 +16,32 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>.gfbuild/CatEng.gf</name>
+			<name>(External)/CatEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/CatEng.gf</location>
 		</link>
 		<link>
-			<name>.gfbuild/Combinators.gf</name>
+			<name>(External)/Combinators.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/api/Combinators.gf</location>
 		</link>
 		<link>
-			<name>.gfbuild/CommonX.gf</name>
+			<name>(External)/CommonX.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/common/CommonX.gf</location>
 		</link>
 		<link>
-			<name>.gfbuild/Constructors.gf</name>
+			<name>(External)/Constructors.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/api/Constructors.gf</location>
 		</link>
 		<link>
-			<name>.gfbuild/ParadigmsEng.gf</name>
+			<name>(External)/ParadigmsEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/ParadigmsEng.gf</location>
 		</link>
 		<link>
-			<name>.gfbuild/StructuralEng.gf</name>
+			<name>(External)/StructuralEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/StructuralEng.gf</location>
 		</link>

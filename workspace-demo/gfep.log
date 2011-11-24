@@ -3296,3 +3296,56 @@ com.google.inject.CreationException: Guice creation errors:
 [2011-11-23 16:43:45,164] ERROR java.lang.ClassNotFoundException: org.eclipse.xtext.ui.refactoring.ui.RenameElementHandler
 [2011-11-23 16:46:15,913] ERROR java.lang.ClassNotFoundException: org.eclipse.xtext.ui.refactoring.ui.RenameElementHandler
 [2011-11-23 16:50:35,254] ERROR java.lang.ClassNotFoundException: org.eclipse.xtext.ui.refactoring.ui.RenameElementHandler
+[2011-11-24 09:36:54,051] INFO  Full build on Hello
+[2011-11-24 09:36:54,273] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-24 09:36:54,346] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-24 09:36:54,389] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-24 09:36:54,405] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-24 09:37:11,921] INFO  Full build on Functors
+[2011-11-24 09:37:11,949] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-24 09:37:12,656] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-24 09:37:13,349] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-24 09:37:13,463] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-24 09:37:13,569] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-24 09:37:13,897] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-24 09:37:14,322] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-24 09:37:18,725] INFO  Full build on Functors
+[2011-11-24 09:37:18,744] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-24 09:37:19,105] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-24 09:37:19,596] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-24 09:37:19,708] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-24 09:37:19,811] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-24 09:37:20,153] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-24 09:37:20,598] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-24 09:39:54,960] INFO  Full build on Functors
+[2011-11-24 09:39:54,979] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-24 09:39:55,334] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-24 09:39:55,811] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-24 09:39:55,931] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-24 09:39:56,040] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-24 09:39:56,363] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-24 09:39:56,790] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-24 09:40:41,031] INFO  Full build on Functors
+[2011-11-24 09:40:41,052] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-24 09:40:41,401] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-24 09:40:41,873] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-24 09:40:41,988] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-24 09:40:42,103] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-24 09:40:42,436] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-24 09:40:42,883] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-24 09:42:41,414] INFO  Full build on Functors
+[2011-11-24 09:42:41,454] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-24 09:42:41,915] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-24 09:42:42,408] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-24 09:42:42,522] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-24 09:42:42,622] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-24 09:42:42,951] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-24 09:42:43,398] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-24 09:43:05,944] INFO  Full build on Functors
+[2011-11-24 09:43:05,966] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-24 09:43:06,317] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-24 09:43:06,784] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-24 09:43:06,885] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-24 09:43:06,993] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-24 09:43:07,343] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-24 09:43:07,777] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
