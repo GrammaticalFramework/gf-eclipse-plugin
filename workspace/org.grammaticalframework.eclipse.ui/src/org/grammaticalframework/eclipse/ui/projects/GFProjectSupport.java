@@ -21,22 +21,23 @@ import org.eclipse.core.resources.IWorkspaceDescription;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Assert;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.xtext.ui.XtextProjectHelper;
 
 import org.grammaticalframework.eclipse.ui.natures.GFProjectNature;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 
-// TODO: Auto-generated Javadoc
 /**
  * Based on: http://cvalcarcel.wordpress.com/2009/07/26/writing-an-eclipse-plug-in-part-4-create-a-custom-project-in-eclipse-new-project-wizard-the-behavior/
+ * 
  * @author John J. Camilleri
- *
  */
 public class GFProjectSupport {
 	
     /**
-     * For this marvelous project we need to: - create the default Eclipse
-     * project - add the custom project nature - create the folder structure.
+     * For this marvelous project we need to:
+     * - create the project
+     * - add the project natures
+     * - create the folder structure.
      *
      * @param projectName the project name
      * @param location the location
@@ -51,8 +52,7 @@ public class GFProjectSupport {
         	addNature(project);
         	addBuilder(project);
             turnOnAutoBuild();
-//            String[] paths = { "parent/child1-1/child2", "parent/child1-2/child2/child3" }; //$NON-NLS-1$ //$NON-NLS-2$
-            String[] paths = { GFBuilder.BUILD_FOLDER };
+            String[] paths = { GFBuilder.BUILD_FOLDER, GFBuilder.EXTERNAL_FOLDER }; // "parent/child1-1/child2"
             addToProjectStructure(project, paths);
 
             // Maybe this is rude?
@@ -129,32 +129,34 @@ public class GFProjectSupport {
     }
     
     /**
-     * Adds the nature.
+     * Adds by Xtext and GF natures to the project
      *
      * @param project the project
      * @throws CoreException the core exception
      */
     private static void addNature(IProject project) throws CoreException {
     	
-//		// Refer: http://www.eclipse.org/forums/index.php/m/547428/
-//		IProjectDescription description = currentProject.getDescription();
-//		description.setNatureIds(new String[] { XtextProjectHelper.NATURE_ID });
-//		currentProject.setDescription(description, null);
+		// Refer: http://www.eclipse.org/forums/index.php/m/547428/
+		IProjectDescription description = project.getDescription();
+		description.setNatureIds(new String[] { XtextProjectHelper.NATURE_ID, GFProjectNature.NATURE_ID });
+		project.setDescription(description, null);
+
 //		// or...
 //		IResource resource = editor.getResource();
-//		toggleNature.toggleNature(resource.getProject());	
-    	
-    	if (!project.hasNature(GFProjectNature.NATURE_ID)) {
-    		IProjectDescription description = project.getDescription();
-    		String[] prevNatures = description.getNatureIds();
-    		String[] newNatures = new String[prevNatures.length + 1];
-    		System.arraycopy(prevNatures, 0, newNatures, 0, prevNatures.length);
-    		newNatures[prevNatures.length] = GFProjectNature.NATURE_ID;
-    		description.setNatureIds(newNatures);
-    		
-    		IProgressMonitor monitor = null;
-    		project.setDescription(description, monitor);
-    	}
+//		toggleNature.toggleNature(resource.getProject());
+
+//		This code will safely preserve any other natures
+//    	if (!project.hasNature(GFProjectNature.NATURE_ID)) {
+//    		IProjectDescription description = project.getDescription();
+//    		String[] prevNatures = description.getNatureIds();
+//    		String[] newNatures = new String[prevNatures.length + 1];
+//    		System.arraycopy(prevNatures, 0, newNatures, 0, prevNatures.length);
+//    		newNatures[prevNatures.length] = GFProjectNature.NATURE_ID;
+//    		description.setNatureIds(newNatures);
+//    		
+//    		IProgressMonitor monitor = null;
+//    		project.setDescription(description, monitor);
+//    	}
     }
 
     /**

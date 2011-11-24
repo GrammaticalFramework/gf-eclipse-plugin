@@ -3365,3 +3365,45 @@ com.google.inject.CreationException: Guice creation errors:
 [2011-11-24 13:03:39,057] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
 [2011-11-24 13:03:39,382] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
 [2011-11-24 13:03:39,803] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-24 13:27:42,461] INFO  Full build on Functors
+[2011-11-24 13:27:42,478] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-24 13:27:42,821] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-24 13:27:43,283] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-24 13:27:43,394] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-24 13:27:43,499] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-24 13:27:43,829] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-24 13:27:44,252] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-24 13:28:31,857] INFO  Full build on Hello
+[2011-11-24 13:28:31,869] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/AbsCat.gf
+[2011-11-24 13:28:31,885] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloAbs.gf
+[2011-11-24 13:28:31,899] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf
+[2011-11-24 13:28:31,914] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf
+[2011-11-24 13:28:53,316] INFO  Full build on CL
+[2011-11-24 13:28:53,346] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf
+[2011-11-24 13:28:54,062] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/ClEng.gf
+[2011-11-24 13:28:54,457] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/ClSym.gf
+[2011-11-24 13:28:54,490] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/VPConj.gf
+[2011-11-24 13:28:54,505] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf
+[2011-11-24 13:28:54,883] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/VerbsEng.gf
+[2011-11-24 13:29:56,922] INFO  Full build on CL
+[2011-11-24 13:29:56,941] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf
+[2011-11-24 13:29:57,361] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/ClEng.gf
+[2011-11-24 13:29:57,773] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/ClSym.gf
+[2011-11-24 13:29:57,806] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/VPConj.gf
+[2011-11-24 13:29:57,822] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf
+[2011-11-24 13:29:58,240] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/VerbsEng.gf
+[2011-11-24 13:30:16,039] INFO  Full build on CL
+[2011-11-24 13:30:16,053] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Cl.gf
+[2011-11-24 13:30:16,474] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/ClEng.gf
+[2011-11-24 13:30:16,878] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/ClSym.gf
+[2011-11-24 13:30:16,922] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/VPConj.gf
+[2011-11-24 13:30:16,934] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/Verbs.gf
+[2011-11-24 13:30:17,316] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/CL/VerbsEng.gf
+[2011-11-24 14:24:52,735] INFO  Full build on Functors
+[2011-11-24 14:24:52,771] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-24 14:24:53,132] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-24 14:24:53,623] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-24 14:24:53,732] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-24 14:24:53,852] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-24 14:24:54,200] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-24 14:24:54,636] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf

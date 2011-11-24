@@ -9,7 +9,6 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorRegistry;
 import org.eclipse.ui.IWorkbench;
@@ -18,7 +17,6 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.ide.IDE;
 import org.eclipse.xtext.Constants;
 import org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener;
-import org.eclipse.xtext.ui.editor.XtextReadonlyEditorInput;
 import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
 
 import com.google.inject.Inject;
@@ -45,30 +43,25 @@ public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 	@Override
 	public IEditorPart open(URI uri, EReference crossReference, int indexInList, boolean select) {
 		IWorkbenchPage activePage = workbench.getActiveWorkbenchWindow().getActivePage();
-		
 		if (uri.isPlatformResource()) {
-//			if (uri.segment(uri.segmentCount()-2).equals(GFBuilder.EXTERNAL_FOLDER)) {
 			if (GFLibraryHelper.isLinkedResource(uri)) {
-
 				// If in external folder, then it's a link to an external library
 				Path path = new Path(uri.toPlatformString(true));
 				IFile file = getWorkspaceRoot().getFile(path);
 				try {
-					IEditorInput editorInput = new XtextReadonlyEditorInput(file);
-					IEditorPart editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
-//					IEditorPart editor = IDE.openEditor(activePage, file, GF_XTEXT_EDITOR_ID);
+//					IEditorInput editorInput = new XtextReadonlyEditorInput(file);
+//					IEditorPart editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
+					// TODO Make opening of libraries READ-ONLY
+					IEditorPart editor = IDE.openEditor(activePage, file, GF_XTEXT_EDITOR_ID);
 					selectAndReveal(editor, uri, crossReference, indexInList, select);
 					return editor;
 				} catch (PartInitException e) {
 					log.error("Error opening editor for '" + uri + "': ", e); 
 				}
-				
 			} else {
-				
 				// If not in the external folder, then open normally
 				return super.open(uri, crossReference, indexInList, select);
 			}
-			
 		} else {
 			// It's some other external file.
 			log.info("Opening as plain text: " + uri);

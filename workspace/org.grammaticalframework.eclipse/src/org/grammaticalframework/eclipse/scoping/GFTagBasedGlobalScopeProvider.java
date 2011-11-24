@@ -28,6 +28,7 @@ import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
+import org.eclipse.core.resources.ResourceAttributes;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
@@ -373,8 +374,14 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 //			if (link.exists())
 //				link.delete(true, null);
 //			link.createLink(externalPath, IResource.NONE, null);
-			if (!link.exists())
+			
+			if (!link.exists()) {
+				// Create and make read-only
 				link.createLink(externalPath, IResource.NONE, null);
+				ResourceAttributes attributes = link.getResourceAttributes();
+				attributes.setReadOnly(true);
+				link.setResourceAttributes(attributes);
+			}
 			
 			return URI.createURI(localLink);
 		} catch (CoreException e) {

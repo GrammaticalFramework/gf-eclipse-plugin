@@ -6,12 +6,13 @@
 	</projects>
 	<buildSpec>
 		<buildCommand>
-			<name>org.grammaticalframework.eclipse.ui.build.GFBuilderID</name>
+			<name>org.eclipse.xtext.ui.shared.xtextBuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 		<nature>org.grammaticalframework.eclipse.ui.natures.projectNatureID</nature>
 	</natures>
 </projectDescription>
