@@ -44,10 +44,10 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 - Use GF Shell from within Eclipse
 - Auto-completion for declared identifiers
 - Background compilation (shallow) using project builder
+- Full support for _Open Declaration_ (F3)
 
 ### Near-term
 
-- Full support for _Open Declaration_ (F3)
 - Inline documentation for function calls, overloads
 - Quick-fix suggestions for syntax and naming errors
 - Code generation for concrete/instance modules
@@ -65,6 +65,9 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 --------------------------------------------------------------------------------
 
 ## Update history
+
+**24/11/11**
+: (1.2.0.x) with support for "Open Declaration" (F3) function, including for external libraries.
 
 **18/11/11**
 : Third BETA (1.1.0.x) released, overhauled to take advantage of new compiler features. Tag-based scoping with caching for better performance. Interactive console (GF Shell) for luanch configs.
@@ -117,6 +120,12 @@ _The library path should get automatically set from your environment's `GF_LIB_P
 
 1. In Eclipse, go to **Help &rarr; Check for updates**.
 1. Any available updates will appear in the dialog. Select them and follow the usual steps.
+
+#### Upgrading to GFEP 1.2.0
+
+- You may receive a prompt asking if you want to add the Xtext nature to your project; click **Yes** to this (should not apply for newly-created projects).
+
+- A new folder named `(External)` may be created in your project, which contains symbolic links to any external GF libraries referenced by your files. You may double click these links as usual (the libraries will be opened as _read-only_).
 
 --------------------------------------------------------------------------------
 
