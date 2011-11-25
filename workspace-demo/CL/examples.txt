@@ -1,7 +1,0 @@
-clauseF (npSg "the client") (F (atom supply_V (npSg "false information")) (clauseP (npSg "the provider") (P (atom suspend_V (npSg "the service")))))
-
-clauseO (npSg "the ground crew") (O (andAct (BaseAct (atom open_V (npSg "the check-in desk")) (atom request_V (npSg "the passenger")))) violation)
-
-clauseO (npSg "the airline") (O (atom reply_V (npSg "to the passenger manifest request")) violation)
-
-clauseO (npSg "the check-in crew") (O (andAct (BaseAct (atom check_V (npSg "that the passport details match what is written on the ticket")) (atom check_V (npSg "that the luggage is within the weight limits"))))  violation)
