@@ -135,6 +135,7 @@ ListNP	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/works
 ListS	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 ListS	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
 ListS	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsGer.gf-tags
+ListTest	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf	
 N	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 N	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 N	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
@@ -250,6 +251,7 @@ Temp	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspa
 Tense	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Tense	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
 Tense	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatGer.gf-tags
+Test	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf	
 Text	indir	SyntaxGer		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Text	indir	SyntaxGer	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Text	indir	SyntaxGer	SyntaxGer	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags

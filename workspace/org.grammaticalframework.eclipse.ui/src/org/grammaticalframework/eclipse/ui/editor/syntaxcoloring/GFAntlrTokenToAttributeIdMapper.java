@@ -14,6 +14,12 @@ import org.eclipse.xtext.ui.editor.syntaxcoloring.DefaultAntlrTokenToAttributeId
 public class GFAntlrTokenToAttributeIdMapper extends DefaultAntlrTokenToAttributeIdMapper {
 
 	protected String calculateId(String tokenName, int tokenType) {
+		if("RULE_ID".equals(tokenName)) {
+			return GFHighlightingConfiguration.ID_ID;
+		}
+		if("RULE_INTEGER".equals(tokenName) || "RULE_DOUBLE".equals(tokenName)) {
+			return GFHighlightingConfiguration.NUMBER_ID;
+		}
 		if("RULE_COMPILER_PRAGMA".equals(tokenName)) {
 			return GFHighlightingConfiguration.COMPILER_PRAGMA_ID;
 		}

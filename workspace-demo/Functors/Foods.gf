@@ -10,6 +10,9 @@ abstract Foods = {
 		Item2 ;
 		Kind ;
 		Quality ;
+		
+		Test ;
+		[Test]{45} ;
 
 	fun
 		Is : Item -> Quality -> Phrase ;

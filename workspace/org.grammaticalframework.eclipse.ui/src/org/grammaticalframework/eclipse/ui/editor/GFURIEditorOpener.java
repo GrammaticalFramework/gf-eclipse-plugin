@@ -51,7 +51,6 @@ public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 				try {
 //					IEditorInput editorInput = new XtextReadonlyEditorInput(file);
 //					IEditorPart editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
-					// TODO Make opening of libraries READ-ONLY
 					IEditorPart editor = IDE.openEditor(activePage, file, GF_XTEXT_EDITOR_ID);
 					selectAndReveal(editor, uri, crossReference, indexInList, select);
 					return editor;

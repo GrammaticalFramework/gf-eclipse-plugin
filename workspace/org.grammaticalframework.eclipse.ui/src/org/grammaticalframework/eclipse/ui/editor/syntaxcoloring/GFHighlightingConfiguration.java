@@ -14,15 +14,12 @@ import org.eclipse.xtext.ui.editor.syntaxcoloring.DefaultHighlightingConfigurati
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfigurationAcceptor;
 import org.eclipse.xtext.ui.editor.utils.TextStyle;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Class GFHighlightingConfiguration.
+ * Configuration for highlighting
  */
 public class GFHighlightingConfiguration extends DefaultHighlightingConfiguration {
 
-	/**
-	 * The Constant COMPILER_PRAGMA_ID.
-	 */
+	public static final String ID_ID = "id";
 	public static final String COMPILER_PRAGMA_ID = "compiler pragma";
 	
 	/* (non-Javadoc)
@@ -31,13 +28,39 @@ public class GFHighlightingConfiguration extends DefaultHighlightingConfiguratio
 	@Override
 	public void configure(IHighlightingConfigurationAcceptor acceptor) {
 		super.configure(acceptor);
+		acceptor.acceptDefaultHighlighting(ID_ID, "Identifier", idTextStyle());
 		acceptor.acceptDefaultHighlighting(COMPILER_PRAGMA_ID, "Compiler pragma", compilerPragmaTextStyle());
+	}
+	
+	/**
+	 * Id text style.
+	 */
+	public TextStyle idTextStyle() {
+		return defaultTextStyle().copy();
+	}
+	
+	/**
+	 * Punctuation text style.
+	 */
+	@Override
+	public TextStyle punctuationTextStyle() {
+		TextStyle textStyle = defaultTextStyle().copy();
+		textStyle.setColor(new RGB(119, 119, 119)); // #777777
+		return textStyle;
+	}
+	
+	/**
+	 * Number text style.
+	 */
+	@Override
+	public TextStyle numberTextStyle() {
+		TextStyle textStyle = defaultTextStyle().copy();
+		textStyle.setColor(new RGB(165, 42, 42)); // maroon
+		return textStyle;
 	}
 
 	/**
 	 * Compiler pragma text style.
-	 *
-	 * @return the text style
 	 */
 	public TextStyle compilerPragmaTextStyle() {
 		TextStyle textStyle = defaultTextStyle().copy();

@@ -22,7 +22,10 @@ import com.google.inject.Inject;
 
 /**
  * This class exists to prevent validation on an exernal linked resource
- * when opening a linked resource. 
+ * when opening a linked resource.
+ * 
+ * THIS IS NOT CURENTLY IN USE!
+ * 
  * 
  * @author John J. Camilleri
  *

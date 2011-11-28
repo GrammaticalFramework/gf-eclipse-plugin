@@ -142,6 +142,7 @@ ListNP	indir	SyntaxEng	SyntaxEng	/home/john/repositories/gf-eclipse-plugin/works
 ListS	indir	SyntaxEng		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsEng.gf-tags
 ListS	indir	SyntaxEng	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsEng.gf-tags
 ListS	indir	SyntaxEng	SyntaxEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/ConstructorsEng.gf-tags
+ListTest	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf	
 N	indir	SyntaxEng		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatEng.gf-tags
 N	indir	SyntaxEng	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatEng.gf-tags
 N	indir	SyntaxEng	SyntaxEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CatEng.gf-tags
@@ -259,6 +260,7 @@ Temp	indir	SyntaxEng	SyntaxEng	/home/john/repositories/gf-eclipse-plugin/workspa
 Tense	indir	SyntaxEng		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Tense	indir	SyntaxEng	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Tense	indir	SyntaxEng	SyntaxEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
+Test	lincat	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf	
 Text	indir	SyntaxEng		/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Text	indir	SyntaxEng	Syntax	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
 Text	indir	SyntaxEng	SyntaxEng	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/.gfbuild/CommonX.gf-tags
