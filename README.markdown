@@ -142,10 +142,10 @@ Some steps you can follow to get a feel of of the plugin's features.
 
 _If asked whether you want to add the **Xtext nature** to your project, you can safely say **No** (this prompt has been removed in newer versions)._
 
-- You can find some small examples at http://www.grammaticalframework.org/eclipse/examples/. Download the 
-files and manually add them to your Eclipse workspace. To experiment with some of the plugin features.
+- You can find some small examples at <http://www.grammaticalframework.org/eclipse/examples/>. Download the 
+files and manually add them to your Eclipse workspace to experiment with some of the plugin features.
 
-- You can change your syntax colouring styles as you wish from **Window &rarr; Preferences &rarr; Grammatical Framework &rarr; Syntax Colouring**
+- You can change your syntax colouring styles as you wish from **Window &rarr; Preferences &rarr; Grammatical Framework &rarr; Syntax Coloring**
 
 ![Syntax highlighting styles](http://www.grammaticalframework.org/eclipse/images/eclipse-syntaxcoloring.png)
 
