@@ -9,4 +9,3 @@ concrete FoodsEng of Foods = FoodsI - [Pizza] with
 		Pizza = mkCN (mkA "Italian") (mkN "pies") ;
 		
 } ;
- 

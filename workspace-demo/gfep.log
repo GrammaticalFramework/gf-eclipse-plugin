@@ -3787,3 +3787,11 @@ com.google.inject.CreationException: Guice creation errors:
 [2011-11-29 09:43:26,664] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
 [2011-11-29 09:43:26,978] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
 [2011-11-29 09:43:27,396] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2011-11-29 15:57:17,056] INFO  Full build on Functors
+[2011-11-29 15:57:17,072] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2011-11-29 15:57:17,439] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2011-11-29 15:57:17,915] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2011-11-29 15:57:18,023] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2011-11-29 15:57:18,127] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2011-11-29 15:57:18,454] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2011-11-29 15:57:18,872] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf

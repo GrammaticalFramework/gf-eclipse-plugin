@@ -2,7 +2,7 @@
 <feature
       id="org.grammaticalframework.feature"
       label="GF Eclipse Plugin"
-      version="1.2.0.qualifier"
+      version="1.2.1.qualifier"
       provider-name="MOLTO Project">
 
    <description url="http://www.grammaticalframework.org/">
@@ -43,25 +43,60 @@ Look at the source file for every lexicon for details.
 Please refer to http://www.grammaticalframework.org/LICENSE for full details.
    </license>
 
+   <url>
+      <update label="Grammatical Framework" url="http://www.grammaticalframework.org/eclipse/release/"/>
+   </url>
+
+   <requires>
+      <import plugin="org.eclipse.xtext" version="2.1.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.log4j" version="1.2.15" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.util"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.common"/>
+      <import plugin="org.antlr.runtime"/>
+      <import plugin="org.eclipse.xtext.common.types"/>
+      <import plugin="org.eclipse.debug.core"/>
+      <import plugin="org.eclipse.core.runtime" version="3.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.xbase.lib"/>
+      <import plugin="org.eclipse.xtext.xtend2.lib"/>
+      <import plugin="org.grammaticalframework.eclipse"/>
+      <import plugin="org.grammaticalframework.eclipse.ui"/>
+      <import plugin="org.eclipse.xtext.junit4"/>
+      <import plugin="org.eclipse.xtext.ui.junit"/>
+      <import plugin="org.junit4"/>
+      <import plugin="org.apache.commons.logging"/>
+      <import plugin="org.eclipse.xtext.ui"/>
+      <import plugin="org.eclipse.ui.ide" version="3.5.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.xtext.ui.shared"/>
+      <import plugin="org.eclipse.xtext.builder"/>
+      <import plugin="org.eclipse.xtext.common.types.ui"/>
+      <import plugin="org.eclipse.xtext.ui.codetemplates.ui"/>
+      <import plugin="org.eclipse.compare"/>
+      <import plugin="org.eclipse.ui.console" version="3.5.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.debug.ui" version="3.7.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.editors"/>
+      <import plugin="org.eclipse.ui"/>
+   </requires>
+
    <plugin
          id="org.grammaticalframework.eclipse"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.2.1.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.grammaticalframework.eclipse.tests"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.2.1.qualifier"
          unpack="false"/>
 
    <plugin
          id="org.grammaticalframework.eclipse.ui"
          download-size="0"
          install-size="0"
-         version="0.0.0"
+         version="1.2.1.qualifier"
          unpack="false"/>
 
 </feature>
