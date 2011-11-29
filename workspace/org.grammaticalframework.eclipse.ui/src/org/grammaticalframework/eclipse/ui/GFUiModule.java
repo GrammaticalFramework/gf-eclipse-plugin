@@ -106,6 +106,16 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	}
 	
 	/**
+	 * Remove the prompt for Xtext nature
+	 */
+	@Override
+	public Class<? extends org.eclipse.xtext.ui.editor.IXtextEditorCallback> bindIXtextEditorCallback() {
+		return org.grammaticalframework.eclipse.ui.editor.GFEditorCallback.class;
+	}
+	
+	
+	
+	/**
 	 * This has 2 functions:
 	 * 		Remove the prompt for Xtext nature (Refer: http://www.eclipse.org/forums/index.php/mv/msg/173440/552043/#msg_552043)
 	 * 		Disabling validation when openind a linked external resource

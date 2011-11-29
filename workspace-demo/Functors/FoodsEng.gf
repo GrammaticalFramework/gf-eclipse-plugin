@@ -6,6 +6,7 @@ concrete FoodsEng of Foods = FoodsI - [Pizza] with
 	open SyntaxEng, ParadigmsEng in {
 
 	lin
-		Pizza = mkCN (mkA "Italian") (mkN "pies") ; 
+		Pizza = mkCN (mkA "Italian") (mkN "pies") ;
+		
 } ;
  

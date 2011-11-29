@@ -13,7 +13,6 @@
 	</buildSpec>
 	<natures>
 		<nature>org.grammaticalframework.eclipse.ui.natures.projectNatureID</nature>
-		<nature>org.eclipse.xtext.ui.shared.xtextNature</nature>
 	</natures>
 	<linkedResources>
 		<link>
