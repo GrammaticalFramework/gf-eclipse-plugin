@@ -2,7 +2,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 24 Nov 2011
+Updated: 29 Nov 2011
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
@@ -123,8 +123,6 @@ _The library path should get automatically set from your environment's `GF_LIB_P
 
 #### Upgrading to GFEP 1.2.0
 
-- You may receive a prompt asking if you want to add the Xtext nature to your project; click **Yes** to this (should not apply for newly-created projects).
-
 - A new folder named `(External)` may be created in your project, which contains symbolic links to any external GF libraries referenced by your files. You may double click these links as usual (the libraries will be opened as _read-only_).
 
 --------------------------------------------------------------------------------
@@ -138,7 +136,7 @@ Some steps you can follow to get a feel of of the plugin's features.
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-2.png)
 
-- Create some new modules using the **GF Module** wizard from **File > New > Other > GF Module**:
+- Create some new modules using the **GF Module** wizard from **File &rarr; New &rarr; Other &rarr; GF Module**:
 
 ![New module wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-modulewizard-1.png)
 
@@ -146,6 +144,10 @@ _If asked whether you want to add the **Xtext nature** to your project, you can 
 
 - You can find some small examples at http://www.grammaticalframework.org/eclipse/examples/. Download the 
 files and manually add them to your Eclipse workspace. To experiment with some of the plugin features.
+
+- You can change your syntax colouring styles as you wish from **Window &rarr; Preferences &rarr; Grammatical Framework &rarr; Syntax Colouring**
+
+![Syntax highlighting styles](http://www.grammaticalframework.org/eclipse/images/eclipse-syntaxcoloring.png)
 
 - Use Eclipes' own features to drag and drop your editor tabs to suit your needs. Notice the **Outline** view in the bottom-right offers a quite overview of your module structure. Clicking any of the terms will make your cursor jump to that point in the file.
 
