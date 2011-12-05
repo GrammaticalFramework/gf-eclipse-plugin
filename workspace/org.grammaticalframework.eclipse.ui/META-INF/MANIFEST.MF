@@ -7,29 +7,20 @@ Bundle-SymbolicName: org.grammaticalframework.eclipse.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.grammaticalframework.eclipse;visibility:=reexport,
  org.eclipse.xtext.ui,
+ org.eclipse.ui.editors;bundle-version="3.5.0",
  org.eclipse.ui.ide;bundle-version="3.5.0",
  org.eclipse.xtext.ui.shared,
+ org.eclipse.ui,
  org.eclipse.xtext.builder,
+ org.antlr.runtime,
  org.eclipse.xtext.common.types.ui,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare,
  org.eclipse.ui.console;bundle-version="3.5.100",
- org.eclipse.debug.ui;bundle-version="3.7.0",
- org.eclipse.ui.editors,
- org.eclipse.ui,
- org.antlr.runtime
-Import-Package: org.apache.log4j
+ org.eclipse.debug.ui;bundle-version="3.7.0"
+Import-Package: org.apache.log4j,
+ org.apache.commons.logging
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.grammaticalframework.eclipse.ui,
- org.grammaticalframework.eclipse.ui.contentassist,
- org.grammaticalframework.eclipse.ui.contentassist.antlr,
- org.grammaticalframework.eclipse.ui.contentassist.antlr.internal;x-internal:=true,
- org.grammaticalframework.eclipse.ui.editor.syntaxcoloring,
- org.grammaticalframework.eclipse.ui.internal;x-internal:=true,
- org.grammaticalframework.eclipse.ui.labeling,
- org.grammaticalframework.eclipse.ui.launch,
- org.grammaticalframework.eclipse.ui.outline,
- org.grammaticalframework.eclipse.ui.perspectives,
- org.grammaticalframework.eclipse.ui.quickfix,
- org.grammaticalframework.eclipse.ui.wizards
+Export-Package: org.grammaticalframework.eclipse.ui.contentassist.antlr,
+ org.grammaticalframework.eclipse.ui.internal
 Bundle-Activator: org.grammaticalframework.eclipse.ui.internal.GFActivator
