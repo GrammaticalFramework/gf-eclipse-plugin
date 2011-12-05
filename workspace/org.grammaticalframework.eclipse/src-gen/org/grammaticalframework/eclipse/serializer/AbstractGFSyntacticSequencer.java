@@ -168,7 +168,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '!' | '**' | '*'
+	 *     '**' | '*' | '!'
 	 */
 	protected void emit_Exp3_AsteriskAsteriskKeyword_1_2_0_2_or_AsteriskKeyword_1_2_0_1_or_ExclamationMarkKeyword_1_2_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -184,7 +184,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '**' | '!' | '*'
+	 *     '**' | '*' | '!'
 	 */
 	protected void emit_Exp_AsteriskAsteriskKeyword_5_1_0_0_0_2_or_AsteriskKeyword_5_1_0_0_0_1_or_ExclamationMarkKeyword_5_1_0_0_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -192,7 +192,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '**' | '!' | '*'
+	 *     '!' | '*' | '**'
 	 */
 	protected void emit_Exp_AsteriskAsteriskKeyword_6_2_0_2_or_AsteriskKeyword_6_2_0_1_or_ExclamationMarkKeyword_6_2_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -312,7 +312,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '?' | '_' | Integer | String | Double
+	 *     Double | String | '?' | Integer | '_'
 	 */
 	protected void emit_Patt2_DoubleTerminalRuleCall_4_1_or_IntegerTerminalRuleCall_3_1_or_QuestionMarkKeyword_9_1_or_StringTerminalRuleCall_5_1_or__Keyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
