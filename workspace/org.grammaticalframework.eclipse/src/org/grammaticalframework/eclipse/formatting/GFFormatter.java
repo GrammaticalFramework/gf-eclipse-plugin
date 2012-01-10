@@ -10,32 +10,42 @@
 package org.grammaticalframework.eclipse.formatting;
 
 import org.eclipse.xtext.Keyword;
+import org.eclipse.xtext.formatting.IIndentationInformation;
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
 import org.eclipse.xtext.util.Pair;
 import org.grammaticalframework.eclipse.services.GFGrammarAccess;
 
-// TODO: Auto-generated Javadoc
+import com.google.inject.Inject;
+
 /**
  * This class contains custom formatting description.
- * 
- * see : http://www.eclipse.org/Xtext/documentation/latest/xtext.html#formatting
- * on how and when to use it
  * 
  * Also see {@link org.eclipse.xtext.xtext.XtextFormattingTokenSerializer} as an
  * example
  */
 public class GFFormatter extends AbstractDeclarativeFormatter {
 
+	protected IIndentationInformation getIndentInfo() {
+		return indentInfo;
+	}
+	@Inject(optional = true)
+	private IIndentationInformation indentInfo = new IIndentationInformation() {
+		public String getIndentString() {
+			return "  ";
+		}
+	};
+	
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter#configureFormatting(org.eclipse.xtext.formatting.impl.FormattingConfig)
 	 */
 	protected void configureFormatting(FormattingConfig c) {
 		GFGrammarAccess f = (GFGrammarAccess) getGrammarAccess();
 		
-		// General use
+		// For general use
 		Keyword[] ks;
 
+		// Never auto-wrap lines
 		c.setNoLinewrap();
 
 		// Preserve newlines around comments
@@ -90,9 +100,9 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		}
 		
 		// Indentation within the ModDef's body
-		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_0_3(), f.getModBodyAccess().getRightCurlyBracketKeyword_0_5());
-		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_3_6(), f.getModBodyAccess().getRightCurlyBracketKeyword_3_8());
-		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_5_8(), f.getModBodyAccess().getRightCurlyBracketKeyword_5_10());
+//		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_0_3(), f.getModBodyAccess().getRightCurlyBracketKeyword_0_5());
+//		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_3_6(), f.getModBodyAccess().getRightCurlyBracketKeyword_3_8());
+//		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_5_8(), f.getModBodyAccess().getRightCurlyBracketKeyword_5_10());
 
 		// Top def groupings (cat, fun, lin ....)
 		ks = new Keyword[] {
