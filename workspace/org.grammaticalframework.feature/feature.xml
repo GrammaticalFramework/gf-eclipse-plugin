@@ -98,13 +98,6 @@ Please refer to http://www.grammaticalframework.org/LICENSE for full details.
          unpack="false"/>
 
    <plugin
-         id="org.grammaticalframework.eclipse.tests"
-         download-size="0"
-         install-size="0"
-         version="1.2.2.qualifier"
-         unpack="false"/>
-
-   <plugin
          id="org.grammaticalframework.eclipse.ui"
          download-size="0"
          install-size="0"
