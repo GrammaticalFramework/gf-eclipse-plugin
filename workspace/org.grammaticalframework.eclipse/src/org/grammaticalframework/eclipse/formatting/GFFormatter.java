@@ -100,9 +100,9 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		}
 		
 		// Indentation within the ModDef's body
-//		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_0_3(), f.getModBodyAccess().getRightCurlyBracketKeyword_0_5());
-//		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_3_6(), f.getModBodyAccess().getRightCurlyBracketKeyword_3_8());
-//		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_5_8(), f.getModBodyAccess().getRightCurlyBracketKeyword_5_10());
+		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_0_3(), f.getModBodyAccess().getRightCurlyBracketKeyword_0_5());
+		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_3_6(), f.getModBodyAccess().getRightCurlyBracketKeyword_3_8());
+		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_5_8(), f.getModBodyAccess().getRightCurlyBracketKeyword_5_10());
 
 		// Top def groupings (cat, fun, lin ....)
 		ks = new Keyword[] {
