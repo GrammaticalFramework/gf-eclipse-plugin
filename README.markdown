@@ -2,7 +2,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 29 Nov 2011
+Updated: 11 Jan 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
@@ -66,6 +66,9 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 
 ## Update history
 
+**10/01/12**
+: (1.2.2.x) Updated to use Xtext 2.1.0.
+
 **24/11/11**
 : (1.2.0.x) with support for "Open Declaration" (F3) function, including for external libraries.
 
@@ -103,9 +106,13 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 
 1. Inside Eclipse, go to **Help &rarr; Install New Software**.
 1. Add new software site using the URL: `http://www.grammaticalframework.org/eclipse/release/`
-1. Select the **GF Eclipse Plugin**, click Next, accept the license agreement and install.
+1. Select the **GF Eclipse Plugin**, and make sure the option _Contact all update sites during install to find required software_ is checked.
+1. Click Next, accept the license agreement and install.
 1. Accept the prompt warning that the software is unsigned.
 1. Restart Eclipse when prompted.
+
+**Note when installing on Ubuntu:**
+If you installed the Eclipse package from Ubuntu's Software Centre you may find that your update site list is empty, as described by [this bug](https://bugs.launchpad.net/ubuntu/+source/eclipse/+bug/460944). This will cause the GFEP installation to fail; You will need to add the standard Eclipse update site URL manually, e.g. `http://download.eclipse.org/releases/indigo/`
 
 #### Settings
 1. Add the GF perspective by clicking **Open Perspective &rarr; Other** and choosing **GF**.
