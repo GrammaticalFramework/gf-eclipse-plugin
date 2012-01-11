@@ -10,13 +10,10 @@
 package org.grammaticalframework.eclipse.formatting;
 
 import org.eclipse.xtext.Keyword;
-import org.eclipse.xtext.formatting.IIndentationInformation;
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
 import org.eclipse.xtext.util.Pair;
 import org.grammaticalframework.eclipse.services.GFGrammarAccess;
-
-import com.google.inject.Inject;
 
 /**
  * This class contains custom formatting description.

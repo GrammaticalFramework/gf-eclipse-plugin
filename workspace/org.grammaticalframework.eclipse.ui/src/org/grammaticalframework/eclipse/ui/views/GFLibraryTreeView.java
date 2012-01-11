@@ -310,7 +310,6 @@ public class GFLibraryTreeView extends ViewPart {
 
 		// Add a listener which udpates the view each time the active editor is changed
 		getSite().getWorkbenchWindow().getPartService().addPartListener(new IPartListener2() {
-			@Override
 			public void partActivated(IWorkbenchPartReference partRef) {
 				try {
 					IEditorPart editor = partRef.getPage().getActiveEditor();
@@ -325,47 +324,26 @@ public class GFLibraryTreeView extends ViewPart {
 					log.info("GFLibraryTreeView has nothing to show.");
 				}
 			}
-
-			@Override
 			public void partBroughtToTop(IWorkbenchPartReference partRef) {
 				// TODO Auto-generated method stub
-				
 			}
-
-			@Override
 			public void partClosed(IWorkbenchPartReference partRef) {
 				// TODO Auto-generated method stub
-				
 			}
-
-			@Override
 			public void partDeactivated(IWorkbenchPartReference partRef) {
 				// TODO Auto-generated method stub
-				
 			}
-
-			@Override
 			public void partOpened(IWorkbenchPartReference partRef) {
 				// TODO Auto-generated method stub
-				
 			}
-
-			@Override
 			public void partHidden(IWorkbenchPartReference partRef) {
 				// TODO Auto-generated method stub
-				
 			}
-
-			@Override
 			public void partVisible(IWorkbenchPartReference partRef) {
 				// TODO Auto-generated method stub
-				
 			}
-
-			@Override
 			public void partInputChanged(IWorkbenchPartReference partRef) {
 				// TODO Auto-generated method stub
-				
 			}
 		});
 		
