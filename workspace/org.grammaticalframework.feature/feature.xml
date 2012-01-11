@@ -2,7 +2,7 @@
 <feature
       id="org.grammaticalframework.feature"
       label="GF Eclipse Plugin"
-      version="1.2.2.qualifier"
+      version="1.2.3.qualifier"
       provider-name="MOLTO Project">
 
    <description url="http://www.grammaticalframework.org/">

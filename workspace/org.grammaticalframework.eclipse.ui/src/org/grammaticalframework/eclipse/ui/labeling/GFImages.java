@@ -160,6 +160,15 @@ public class GFImages {
 	public Image forParam() {
 		return imageHelper.getImage("parameter.gif");
 	}
+	
+	/**
+	 * For library reference.
+	 *
+	 * @return the image
+	 */
+	public Image forLibraryReference() {
+		return imageHelper.getImage("library-reference.gif");
+	}
 
 
 

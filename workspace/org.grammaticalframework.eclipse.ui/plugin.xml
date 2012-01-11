@@ -413,7 +413,7 @@
            class="org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView"
            icon="icons/gf-logo.png"
            id="org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView"
-           name="GF Library Viewer (Tree)">
+           name="GF Library Browser">
      </view>
   </extension>
   <extension

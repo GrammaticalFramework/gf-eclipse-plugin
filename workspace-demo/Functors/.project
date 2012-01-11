@@ -16,64 +16,34 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>(External)/Cat.gf</name>
+			<name>.gfexternal/CatEng.gf</name>
 			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/abstract/Cat.gf</location>
+			<location>/home/john/repositories/GF-readonly/lib/src/english/CatEng.gf</location>
 		</link>
 		<link>
-			<name>(External)/CatEng.gf</name>
+			<name>.gfexternal/Combinators.gf</name>
 			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/english/CatEng.gf</location>
+			<location>/home/john/repositories/GF-readonly/lib/src/api/Combinators.gf</location>
 		</link>
 		<link>
-			<name>(External)/CatGer.gf</name>
+			<name>.gfexternal/CommonX.gf</name>
 			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/german/CatGer.gf</location>
+			<location>/home/john/repositories/GF-readonly/lib/src/common/CommonX.gf</location>
 		</link>
 		<link>
-			<name>(External)/Combinators.gf</name>
+			<name>.gfexternal/Constructors.gf</name>
 			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/api/Combinators.gf</location>
+			<location>/home/john/repositories/GF-readonly/lib/src/api/Constructors.gf</location>
 		</link>
 		<link>
-			<name>(External)/Common.gf</name>
+			<name>.gfexternal/ParadigmsEng.gf</name>
 			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/abstract/Common.gf</location>
+			<location>/home/john/repositories/GF-readonly/lib/src/english/ParadigmsEng.gf</location>
 		</link>
 		<link>
-			<name>(External)/CommonX.gf</name>
+			<name>.gfexternal/StructuralEng.gf</name>
 			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/common/CommonX.gf</location>
-		</link>
-		<link>
-			<name>(External)/Constructors.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/api/Constructors.gf</location>
-		</link>
-		<link>
-			<name>(External)/ParadigmsEng.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/english/ParadigmsEng.gf</location>
-		</link>
-		<link>
-			<name>(External)/ParadigmsGer.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/german/ParadigmsGer.gf</location>
-		</link>
-		<link>
-			<name>(External)/Structural.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/abstract/Structural.gf</location>
-		</link>
-		<link>
-			<name>(External)/StructuralEng.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/english/StructuralEng.gf</location>
-		</link>
-		<link>
-			<name>(External)/StructuralGer.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/german/StructuralGer.gf</location>
+			<location>/home/john/repositories/GF-readonly/lib/src/english/StructuralEng.gf</location>
 		</link>
 	</linkedResources>
 </projectDescription>

@@ -363,8 +363,9 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 
 			// Create the folder if it doesn't exist
 			IFolder extFolder = project.getFolder(GFBuilder.EXTERNAL_FOLDER);
-			if (!extFolder.exists())
+			if (!extFolder.exists()) {
 				extFolder.create(true, true, null);
+			}
 	
 			IPath externalPath = new Path(externalFilePath);
 			String localLink = GFBuilder.EXTERNAL_FOLDER + java.io.File.separator + externalPath.lastSegment();

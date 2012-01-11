@@ -1,34 +1,39 @@
 package org.grammaticalframework.eclipse.ui.views;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.part.*;
 import org.eclipse.jface.viewers.*;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.jface.action.*;
-import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.ui.*;
+import org.eclipse.xtext.ui.IImageHelper;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.SWT;
-import org.eclipse.core.runtime.IAdaptable;
-
+import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.CoreException;
+import org.grammaticalframework.eclipse.builder.GFBuilder;
+import com.google.inject.Inject;
 
 /**
- * This sample class demonstrates how to plug-in a new
- * workbench view. The view shows data obtained from the
- * model. The sample creates a dummy model on the fly,
- * but a real implementation would connect to the model
- * available either in this or another plug-in (e.g. the workspace).
- * The view is connected to the model using a content provider.
+ * This sample class demonstrates how to plug-in a new workbench view. The view
+ * shows data obtained from the model. The sample creates a dummy model on the
+ * fly, but a real implementation would connect to the model available either in
+ * this or another plug-in (e.g. the workspace). The view is connected to the
+ * model using a content provider.
  * <p>
- * The view uses a label provider to define how model
- * objects should be presented in the view. Each
- * view can present the same model objects using
- * different labels and icons, if needed. Alternatively,
- * a single label provider can be shared between views
- * in order to ensure that objects of the same type are
- * presented in the same way everywhere.
+ * The view uses a label provider to define how model objects should be
+ * presented in the view. Each view can present the same model objects using
+ * different labels and icons, if needed. Alternatively, a single label provider
+ * can be shared between views in order to ensure that objects of the same type
+ * are presented in the same way everywhere.
  * <p>
  */
 
@@ -38,138 +43,243 @@ public class GFLibraryTreeView extends ViewPart {
 	 * The ID of the view as specified by the extension.
 	 */
 	public static final String ID = "org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView";
+	
+	/**
+	 * Logger
+	 */
+	private static final Logger log = Logger.getLogger(GFLibraryTreeView.class);
 
 	private TreeViewer viewer;
-	private DrillDownAdapter drillDownAdapter;
-	private Action action1;
-	private Action action2;
+//	private DrillDownAdapter drillDownAdapter;
+//	private Action action1;
+//	private Action action2;
 	private Action doubleClickAction;
 
-	/*
-	 * The content provider class is responsible for
-	 * providing objects to the view. It can wrap
-	 * existing objects in adapters or simply return
-	 * objects as-is. These objects may be sensitive
-	 * to the current input of the view, or ignore
-	 * it and always show the same content 
-	 * (like Task List, for example).
-	 */
-	 
-	class TreeObject implements IAdaptable {
-		private String name;
-		private TreeParent parent;
-		
-		public TreeObject(String name) {
-			this.name = name;
-		}
-		public String getName() {
-			return name;
-		}
-		public void setParent(TreeParent parent) {
-			this.parent = parent;
-		}
-		public TreeParent getParent() {
-			return parent;
-		}
-		public String toString() {
-			return getName();
-		}
-		public Object getAdapter(Class key) {
-			return null;
-		}
+	interface ITreeNode {
+		public String getName();
+
+		public List<ITreeNode> getChildren();
+
+		public boolean hasChildren();
+
+		public ITreeNode getParent();
 	}
-	
-	class TreeParent extends TreeObject {
-		private ArrayList children;
-		public TreeParent(String name) {
-			super(name);
-			children = new ArrayList();
+
+	abstract class TreeNode implements ITreeNode {
+		protected ITreeNode fParent;
+		protected List<ITreeNode> fChildren;
+		protected String number;
+
+		public TreeNode(ITreeNode parent) {
+			fParent = parent;
 		}
-		public void addChild(TreeObject child) {
-			children.add(child);
-			child.setParent(this);
-		}
-		public void removeChild(TreeObject child) {
-			children.remove(child);
-			child.setParent(null);
-		}
-		public TreeObject [] getChildren() {
-			return (TreeObject [])children.toArray(new TreeObject[children.size()]);
-		}
+
 		public boolean hasChildren() {
-			return children.size()>0;
+			return true;
+		}
+
+		public ITreeNode getParent() {
+			return fParent;
+		}
+
+		public List<ITreeNode> getChildren() {
+			if (fChildren != null)
+				return fChildren;
+
+			fChildren = new ArrayList<ITreeNode>();
+			createChildren(fChildren);
+
+			return fChildren;
+		}
+
+		/* subclasses should override this method and add the child nodes */
+		protected abstract void createChildren(List<ITreeNode> children);
+	}
+
+	class FolderNode extends TreeNode {
+		private IFolder fFolder; /* actual data object */
+
+		public FolderNode(IFolder folder) {
+			this(null, folder);
+		}
+
+		public FolderNode(ITreeNode parent, IFolder folder) {
+			super(parent);
+			fFolder = folder;
+		}
+
+		public String getName() {
+			return fFolder.getName();
+		}
+
+		@Override
+		protected void createChildren(List<ITreeNode> children) {
+			try {
+				IResource[] childFiles = fFolder.members();
+				for (int i = 0; i < childFiles.length; i++) {
+					IResource childFile = childFiles[i];
+					if (childFile instanceof IFolder)
+						children.add(new FolderNode(this, (IFolder) childFile));
+					else if (childFile instanceof IFile)
+						children.add(new FileNode(this, (IFile) childFile));
+				}
+			} catch (CoreException e) {
+				log.warn("Couldn't get contents of "+getName());
+			}
+
 		}
 	}
 
-	class ViewContentProvider implements IStructuredContentProvider, ITreeContentProvider {
-		private TreeParent invisibleRoot;
+	class FileNode extends TreeNode {
+		private IFile fFile;
 
-		public void inputChanged(Viewer v, Object oldInput, Object newInput) {
+		public FileNode(ITreeNode parent, IFile file) {
+			super(parent);
+			this.fFile = file;
 		}
-		public void dispose() {
+
+		public String getName() {
+			return this.fFile.getName();
 		}
-		public Object[] getElements(Object parent) {
-			if (parent.equals(getViewSite())) {
-				if (invisibleRoot==null) initialize();
-				return getChildren(invisibleRoot);
-			}
-			return getChildren(parent);
+		public IFile getFile() {
+			return this.fFile;
 		}
-		public Object getParent(Object child) {
-			if (child instanceof TreeObject) {
-				return ((TreeObject)child).getParent();
-			}
-			return null;
+
+		protected void createChildren(List<ITreeNode> children) {
+			// empty
 		}
-		public Object [] getChildren(Object parent) {
-			if (parent instanceof TreeParent) {
-				return ((TreeParent)parent).getChildren();
-			}
-			return new Object[0];
-		}
-		public boolean hasChildren(Object parent) {
-			if (parent instanceof TreeParent)
-				return ((TreeParent)parent).hasChildren();
+
+		public boolean hasChildren() {
 			return false;
 		}
-/*
- * We will set up a dummy model to initialize tree heararchy.
- * In a real code, you will connect to a real model and
- * expose its hierarchy.
- */
-		private void initialize() {
-			TreeParent p1 = new TreeParent("A");
-			p1.addChild(new TreeObject("mkA"));
-			p1.addChild(new TreeObject("compoundA"));
-			p1.addChild(new TreeObject("simpleA"));
-			
-			TreeParent p2 = new TreeParent("AP");
-			p2.addChild(new TreeObject("compareAP"));
-			p2.addChild(new TreeObject("mkAP"));
-			p2.addChild(new TreeObject("reflAP"));
-			
-			TreeParent root = new TreeParent("Categories");
-			root.addChild(p1);
-			root.addChild(p2);
-			
-			invisibleRoot = new TreeParent("");
-			invisibleRoot.addChild(root);
-		}
 	}
-	class ViewLabelProvider extends LabelProvider {
 
-		public String getText(Object obj) {
-			return obj.toString();
+	class TreeContentProvider implements ITreeContentProvider {
+		public Object[] getChildren(Object parentElement) {
+			if (parentElement instanceof IFolder) {
+				ITreeNode t = new FolderNode((IFolder)parentElement);
+				return t.getChildren().toArray();
+			} else {
+				return null;
+			}
 		}
-		public Image getImage(Object obj) {
-			String imageKey = ISharedImages.IMG_OBJ_ELEMENT;
-			if (obj instanceof TreeParent)
-			   imageKey = ISharedImages.IMG_OBJ_FOLDER;
-			return PlatformUI.getWorkbench().getSharedImages().getImage(imageKey);
+
+		public Object getParent(Object element) {
+			return ((ITreeNode) element).getParent();
+		}
+
+		public boolean hasChildren(Object element) {
+			return ((ITreeNode) element).hasChildren();
+		}
+
+		public Object[] getElements(Object inputElement) {
+			return getChildren(inputElement);
+		}
+
+		public void dispose() {
+		}
+
+		public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
 		}
 	}
-	class NameSorter extends ViewerSorter {
+
+	class TreeLabelProvider extends LabelProvider {
+
+		@Inject
+		private IImageHelper imageHelper;
+
+		@Override
+		// TODO This never seems to work :(
+		public Image getImage(Object element) {
+			if (imageHelper != null)
+				return imageHelper.getImage("library-reference.gif");
+			else
+				return super.getImage(element);
+		}
+
+		@Override
+		public String getText(Object element) {
+			return ((ITreeNode)element).getName();
+		}
+		
 	}
+
+	class TreeSorter extends ViewerComparator {
+//		private final ListFiles view;
+//		private final ViewerComparator elementsorter = new JavaElementComparator();
+//
+//		private int sortcolumn;
+//		private boolean reversesort;
+//
+//		public TreeSorter(ListFiles view) {
+//			this.view = view;
+//		}
+//
+//		void addColumn(final TreeColumn column, final int columnidx) {
+//			column.addSelectionListener(new SelectionListener() {
+//				@Override
+//				public void widgetSelected(SelectionEvent e) {
+//					toggleSortColumn(columnidx);
+//					setSortColumnAndDirection(column,
+//							isReverseSort() ? SWT.DOWN : SWT.UP);
+//					view.refreshViewer();
+//				}
+//
+//				@Override
+//				public void widgetDefaultSelected(SelectionEvent e) {
+//				}
+//			});
+//		}
+//
+//		void setSortColumnAndDirection(TreeColumn sortColumn, int direction) {
+//			sortColumn.getParent().setSortColumn(sortColumn);
+//			sortColumn.getParent().setSortDirection(direction);
+//		}
+//
+//		public int getSortColumn() {
+//			return sortcolumn;
+//		}
+//
+//		public boolean isReverseSort() {
+//			return reversesort;
+//		}
+//
+//		public void toggleSortColumn(int column) {
+//			if (sortcolumn == column) {
+//				reversesort = !reversesort;
+//			} else {
+//				reversesort = false;
+//				sortcolumn = column;
+//			}
+//		}
+//
+//		@Override
+//		public int compare(Viewer viewer, Object e1, Object e2) {
+//			ITreeNode node1 = (ITreeNode) e1;
+//			ITreeNode node2 = (ITreeNode) e2;
+//
+//			int res = 0;
+//
+//			switch (getSortColumn()) {
+//			case ListFiles.COLUMN_ELEMENT:
+//				res = node1.getName().compareTo(node2.getName());
+//				break;
+//			case ListFiles.COLUMN_NUMBER:
+//				res = (int) (node1.getChildren().size() - node2.getChildren()
+//						.size());
+//				break;
+//			}
+//
+//			if (res == 0)
+//				res = elementsorter.compare(viewer, e1, e2);
+//			else
+//				res = isReverseSort() ? -res : res;
+//
+//			return res;
+//		}
+	}
+	
+	// ----------------------------------------------------------------
 
 	/**
 	 * The constructor.
@@ -178,23 +288,87 @@ public class GFLibraryTreeView extends ViewPart {
 	}
 
 	/**
-	 * This is a callback that will allow us
-	 * to create the viewer and initialize it.
+	 * This is a callback that will allow us to create the viewer and initialize
+	 * it.
 	 */
 	public void createPartControl(Composite parent) {
 		viewer = new TreeViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
-		drillDownAdapter = new DrillDownAdapter(viewer);
-		viewer.setContentProvider(new ViewContentProvider());
-		viewer.setLabelProvider(new ViewLabelProvider());
-		viewer.setSorter(new NameSorter());
-		viewer.setInput(getViewSite());
+//		drillDownAdapter = new DrillDownAdapter(viewer);
+		viewer.setContentProvider(new TreeContentProvider());
+		viewer.setLabelProvider(new TreeLabelProvider());
+		// viewer.setSorter(new NameSorter());
+		viewer.setComparator(new TreeSorter());
+		viewer.setInput(null); // our listener below will take care of this
 
 		// Create the help context id for the viewer's control
-		PlatformUI.getWorkbench().getHelpSystem().setHelp(viewer.getControl(), "org.grammaticalframework.eclipse.ui.viewer");
+		// PlatformUI.getWorkbench().getHelpSystem().setHelp(viewer.getControl(),
+		// "org.grammaticalframework.eclipse.ui.viewer");
 		makeActions();
 		hookContextMenu();
 		hookDoubleClickAction();
 		contributeToActionBars();
+
+		// Add a listener which udpates the view each time the active editor is changed
+		getSite().getWorkbenchWindow().getPartService().addPartListener(new IPartListener2() {
+			@Override
+			public void partActivated(IWorkbenchPartReference partRef) {
+				try {
+					IEditorPart editor = partRef.getPage().getActiveEditor();
+					IEditorInput input = editor.getEditorInput();
+					if (input instanceof IFileEditorInput) {
+						IFile file = ((IFileEditorInput) input).getFile();
+						IProject project = file.getProject();
+						IFolder buildFolder = project.getFolder(GFBuilder.EXTERNAL_FOLDER);
+						viewer.setInput(buildFolder);
+					}
+				} catch (NullPointerException e) {
+					log.info("GFLibraryTreeView has nothing to show.");
+				}
+			}
+
+			@Override
+			public void partBroughtToTop(IWorkbenchPartReference partRef) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void partClosed(IWorkbenchPartReference partRef) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void partDeactivated(IWorkbenchPartReference partRef) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void partOpened(IWorkbenchPartReference partRef) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void partHidden(IWorkbenchPartReference partRef) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void partVisible(IWorkbenchPartReference partRef) {
+				// TODO Auto-generated method stub
+				
+			}
+
+			@Override
+			public void partInputChanged(IWorkbenchPartReference partRef) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
 	}
 
 	private void hookContextMenu() {
@@ -217,50 +391,60 @@ public class GFLibraryTreeView extends ViewPart {
 	}
 
 	private void fillLocalPullDown(IMenuManager manager) {
-		manager.add(action1);
-		manager.add(new Separator());
-		manager.add(action2);
+//		manager.add(action1);
+//		manager.add(new Separator());
+//		manager.add(action2);
 	}
 
 	private void fillContextMenu(IMenuManager manager) {
-		manager.add(action1);
-		manager.add(action2);
-		manager.add(new Separator());
-		drillDownAdapter.addNavigationActions(manager);
-		// Other plug-ins can contribute there actions here
-		manager.add(new Separator(IWorkbenchActionConstants.MB_ADDITIONS));
+//		manager.add(action1);
+//		manager.add(action2);
+//		manager.add(new Separator());
+//		drillDownAdapter.addNavigationActions(manager);
+//		// Other plug-ins can contribute there actions here
+//		manager.add(new Separator(IWorkbenchActionConstants.MB_ADDITIONS));
 	}
-	
+
 	private void fillLocalToolBar(IToolBarManager manager) {
-		manager.add(action1);
-		manager.add(action2);
-		manager.add(new Separator());
-		drillDownAdapter.addNavigationActions(manager);
+//		manager.add(action1);
+//		manager.add(action2);
+//		manager.add(new Separator());
+//		drillDownAdapter.addNavigationActions(manager);
 	}
 
 	private void makeActions() {
-		action1 = new Action() {
-			public void run() {
-				showMessage("Action 1 executed");
-			}
-		};
-		action1.setText("Action 1");
-		action1.setToolTipText("Action 1 tooltip");
-		action1.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
-		
-		action2 = new Action() {
-			public void run() {
-				showMessage("Action 2 executed");
-			}
-		};
-		action2.setText("Action 2");
-		action2.setToolTipText("Action 2 tooltip");
-		action2.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
+//		action1 = new Action() {
+//			public void run() {
+//				showMessage("Action 1 executed");
+//			}
+//		};
+//		action1.setText("Action 1");
+//		action1.setToolTipText("Action 1 tooltip");
+//		action1.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages()
+//				.getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
+//
+//		action2 = new Action() {
+//			public void run() {
+//				showMessage("Action 2 executed");
+//			}
+//		};
+//		action2.setText("Action 2");
+//		action2.setToolTipText("Action 2 tooltip");
+//		action2.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages()
+//				.getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
 		doubleClickAction = new Action() {
 			public void run() {
 				ISelection selection = viewer.getSelection();
-				Object obj = ((IStructuredSelection)selection).getFirstElement();
-				showMessage("Double-click detected on "+obj.toString());
+				Object obj = ((IStructuredSelection) selection).getFirstElement();
+				if (obj instanceof FileNode) {
+					IFile file = ((FileNode)obj).getFile();
+					IWorkbenchPage page = getSite().getWorkbenchWindow().getActivePage();
+					try {
+						IDE.openEditor(page, file);
+					} catch (PartInitException e) {
+						log.warn("Couldn't open "+file.getRawLocation().toOSString());
+					}
+				}
 			}
 		};
 	}
@@ -271,12 +455,6 @@ public class GFLibraryTreeView extends ViewPart {
 				doubleClickAction.run();
 			}
 		});
-	}
-	private void showMessage(String message) {
-		MessageDialog.openInformation(
-			viewer.getControl().getShell(),
-			"RGL Browser",
-			message);
 	}
 
 	/**
