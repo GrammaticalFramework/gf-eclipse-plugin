@@ -94,14 +94,14 @@ Please refer to http://www.grammaticalframework.org/LICENSE for full details.
          id="org.grammaticalframework.eclipse"
          download-size="0"
          install-size="0"
-         version="1.2.2.qualifier"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="org.grammaticalframework.eclipse.ui"
          download-size="0"
          install-size="0"
-         version="1.2.2.qualifier"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>

@@ -138,7 +138,8 @@ public class GFProjectSupport {
     	
 		// Refer: http://www.eclipse.org/forums/index.php/m/547428/
 		IProjectDescription description = project.getDescription();
-		description.setNatureIds(new String[] { XtextProjectHelper.NATURE_ID, GFProjectNature.NATURE_ID });
+//		description.setNatureIds(new String[] { XtextProjectHelper.NATURE_ID, GFProjectNature.NATURE_ID });
+		description.setNatureIds(new String[] { GFProjectNature.NATURE_ID });
 		project.setDescription(description, null);
 
 //		// or...

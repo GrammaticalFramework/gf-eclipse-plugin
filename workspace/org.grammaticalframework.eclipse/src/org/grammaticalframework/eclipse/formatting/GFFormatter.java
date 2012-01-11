@@ -26,6 +26,10 @@ import com.google.inject.Inject;
  */
 public class GFFormatter extends AbstractDeclarativeFormatter {
 
+	/*
+	 * Can't get this to work, and either way it's best to allow
+	 * users to choose their own preferences for indentation
+	@Override
 	protected IIndentationInformation getIndentInfo() {
 		return indentInfo;
 	}
@@ -35,6 +39,7 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 			return "  ";
 		}
 	};
+	*/
 	
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter#configureFormatting(org.eclipse.xtext.formatting.impl.FormattingConfig)

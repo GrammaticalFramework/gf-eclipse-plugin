@@ -252,7 +252,7 @@
         point="org.eclipse.ui.newWizards">
      <category
            id="org.grammaticalframework.eclipse.ui.category.wizards"
-           name="Grammatical Framework (GF)">
+           name="Grammatical Framework">
      </category>
      <wizard
            category="org.grammaticalframework.eclipse.ui.category.wizards"
@@ -394,6 +394,33 @@
      <initializer
            class="org.grammaticalframework.eclipse.ui.editor.preferences.GFPreferenceInitializer">
      </initializer>
+  </extension>
+  <extension
+        point="org.eclipse.ui.views">
+     <category
+           id="org.grammaticalframework.eclipse.ui.views"
+           name="Grammatical Framework">
+     </category>
+     <view
+           category="org.grammaticalframework.eclipse.ui.views"
+           class="org.grammaticalframework.eclipse.ui.views.GFLibraryTableView"
+           icon="icons/gf-logo.png"
+           id="org.grammaticalframework.eclipse.ui.views.GFLibraryTableView"
+           name="GF Library Browser (Table)">
+     </view>
+     <view
+           category="org.grammaticalframework.eclipse.ui.views"
+           class="org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView"
+           icon="icons/gf-logo.png"
+           id="org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView"
+           name="GF Library Viewer (Tree)">
+     </view>
+  </extension>
+  <extension
+        point="org.eclipse.help.contexts">
+     <contexts
+           file="contexts.xml">
+     </contexts>
   </extension>
 
 </plugin>

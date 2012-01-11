@@ -14,6 +14,8 @@ import org.eclipse.ui.IFolderLayout;
 import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 import org.eclipse.ui.console.IConsoleConstants;
+import org.grammaticalframework.eclipse.ui.views.GFLibraryTableView;
+import org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView;
 
 /**
  * Set up custom GF perspective
@@ -45,6 +47,8 @@ public class GFPerspectiveFactory implements IPerspectiveFactory {
 		// Bottom left: Outline view and Property Sheet view
 		IFolderLayout bottomLeft = layout.createFolder("bottomLeft", IPageLayout.BOTTOM, 0.50f, "topLeft");
 		bottomLeft.addView(IPageLayout.ID_OUTLINE);
+		bottomLeft.addView(GFLibraryTreeView.ID);
+		bottomLeft.addView(GFLibraryTableView.ID);
 		//bottomLeft.addView(IPageLayout.ID_PROP_SHEET);
 
 		// Bottom right: Console, Problems

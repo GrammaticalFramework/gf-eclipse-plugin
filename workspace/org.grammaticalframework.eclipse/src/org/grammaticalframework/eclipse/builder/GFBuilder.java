@@ -406,9 +406,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			command.add("--v=0"); // quiet - errors are still displayed
 			command.add("--tags");
 			command.add("--output-dir=" + buildDir);
-			if (gfLibPath != null && !gfLibPath.isEmpty()) {
-				command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath)); // Use library path in command (if supplied)
-			}
+//			if (gfLibPath != null && !gfLibPath.isEmpty()) {
+//				command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath)); // Use library path in command (if supplied)
+//			}
 			command.add(filename);
 
 			// Execute command
