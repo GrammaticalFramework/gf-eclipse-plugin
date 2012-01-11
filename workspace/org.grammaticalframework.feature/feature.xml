@@ -45,6 +45,7 @@ Please refer to http://www.grammaticalframework.org/LICENSE for full details.
 
    <url>
       <update label="Grammatical Framework" url="http://www.grammaticalframework.org/eclipse/release/"/>
+      <discovery label="Xtext" url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
    </url>
 
    <includes
