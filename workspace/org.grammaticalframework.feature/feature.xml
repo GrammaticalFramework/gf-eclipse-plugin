@@ -73,11 +73,6 @@ Please refer to http://www.grammaticalframework.org/LICENSE for full details.
       <import plugin="org.apache.commons.logging"/>
       <import plugin="org.eclipse.xtext.xbase.lib"/>
       <import plugin="org.eclipse.xtext.xtend2.lib"/>
-      <import plugin="org.grammaticalframework.eclipse"/>
-      <import plugin="org.grammaticalframework.eclipse.ui"/>
-      <import plugin="org.eclipse.xtext.junit4"/>
-      <import plugin="org.eclipse.xtext.ui.junit"/>
-      <import plugin="org.junit4"/>
       <import plugin="org.eclipse.xtext.ui"/>
       <import plugin="org.eclipse.ui.editors" version="3.5.0" match="greaterOrEqual"/>
       <import plugin="org.eclipse.ui.ide" version="3.5.0" match="greaterOrEqual"/>

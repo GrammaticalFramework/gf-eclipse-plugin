@@ -64,10 +64,10 @@ Primary developer is **John J. Camilleri**, who should be contacted for all quer
 
 --------------------------------------------------------------------------------
 
-## Update history
+## Major release history
 
-**10/01/12**
-: (1.2.2.x) Updated to use Xtext 2.1.0.
+**11/01/12**
+: (1.2.3.x) Updated to use Xtext 2.1.0. Links to external files now moved into new "GF Library View".
 
 **24/11/11**
 : (1.2.0.x) with support for "Open Declaration" (F3) function, including for external libraries.
@@ -128,9 +128,9 @@ _The library path should get automatically set from your environment's `GF_LIB_P
 1. In Eclipse, go to **Help &rarr; Check for updates**.
 1. Any available updates will appear in the dialog. Select them and follow the usual steps.
 
-#### Upgrading to GFEP 1.2.0
+#### Upgrading to GFEP 1.2.3
 
-- A new folder named `(External)` may be created in your project, which contains symbolic links to any external GF libraries referenced by your files. You may double click these links as usual (the libraries will be opened as _read-only_).
+- If your project has a folder named `(External)` you can safely delete this **via the Eclipse Project Explorer**. It is no longer used in GFEP >= 1.2.3
 
 --------------------------------------------------------------------------------
 

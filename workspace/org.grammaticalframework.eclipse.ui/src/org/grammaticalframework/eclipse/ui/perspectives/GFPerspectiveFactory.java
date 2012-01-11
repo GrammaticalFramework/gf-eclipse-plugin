@@ -48,7 +48,7 @@ public class GFPerspectiveFactory implements IPerspectiveFactory {
 		IFolderLayout bottomLeft = layout.createFolder("bottomLeft", IPageLayout.BOTTOM, 0.50f, "topLeft");
 		bottomLeft.addView(IPageLayout.ID_OUTLINE);
 		bottomLeft.addView(GFLibraryTreeView.ID);
-		bottomLeft.addView(GFLibraryTableView.ID);
+		//bottomLeft.addView(GFLibraryTableView.ID);
 		//bottomLeft.addView(IPageLayout.ID_PROP_SHEET);
 
 		// Bottom right: Console, Problems
