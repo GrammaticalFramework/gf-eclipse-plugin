@@ -1,4 +1,6 @@
 archive-and-commit.sh
 publish-release.sh
-workspace/.metadata/
-workspace-demo/.metadata/
+.metadata/
+releases/
+.gfbuild/
+

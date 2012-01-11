@@ -3882,3 +3882,108 @@ com.google.inject.CreationException: Guice creation errors:
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+[2012-01-11 09:35:13,195] INFO  Full build on Functors
+[2012-01-11 09:35:13,264] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2012-01-11 09:35:14,018] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2012-01-11 09:35:14,707] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2012-01-11 09:35:14,823] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2012-01-11 09:35:14,937] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2012-01-11 09:35:15,256] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2012-01-11 09:35:15,635] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2012-01-11 09:35:15,649] INFO  Full build on Test
+[2012-01-11 09:35:55,753] INFO  Full build on Test
+[2012-01-11 09:35:55,767] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/Foods.gf
+[2012-01-11 09:35:56,417] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsCat.gf
+[2012-01-11 09:35:56,728] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsEng.gf
+[2012-01-11 09:35:57,238] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsFin.gf
+[2012-01-11 09:35:57,652] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsGer.gf
+[2012-01-11 09:35:57,670] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:35:57,670] ERROR GF: searched in: ./
+[2012-01-11 09:35:57,670] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:35:57,670] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:35:57,677] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsI.gf
+[2012-01-11 09:35:58,334] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsIta.gf
+[2012-01-11 09:35:58,941] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsSwe.gf
+[2012-01-11 09:35:58,954] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:35:58,954] ERROR GF: searched in: ./
+[2012-01-11 09:35:58,955] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:35:58,955] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:35:58,955] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoods.gf
+[2012-01-11 09:35:58,973] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:35:58,974] ERROR GF: searched in: ./
+[2012-01-11 09:35:58,974] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:35:58,974] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:35:58,975] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsCat.gf
+[2012-01-11 09:35:58,994] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:35:58,994] ERROR GF: searched in: ./
+[2012-01-11 09:35:58,994] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:35:58,995] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:35:58,995] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsEng.gf
+[2012-01-11 09:35:59,011] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:35:59,011] ERROR GF: searched in: ./
+[2012-01-11 09:35:59,011] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:35:59,011] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:35:59,012] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsFin.gf
+[2012-01-11 09:35:59,032] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:35:59,033] ERROR GF: searched in: ./
+[2012-01-11 09:35:59,033] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:35:59,033] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:35:59,034] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsGer.gf
+[2012-01-11 09:35:59,053] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:35:59,053] ERROR GF: searched in: ./
+[2012-01-11 09:35:59,053] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:35:59,054] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:35:59,054] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsIta.gf
+[2012-01-11 09:35:59,068] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:35:59,068] ERROR GF: searched in: ./
+[2012-01-11 09:35:59,068] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:35:59,068] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:35:59,069] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsSwe.gf
+[2012-01-11 09:36:14,152] INFO  Full build on Test
+[2012-01-11 09:36:14,176] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/Foods.gf
+[2012-01-11 09:36:14,649] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsCat.gf
+[2012-01-11 09:36:14,967] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsEng.gf
+[2012-01-11 09:36:15,388] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsFin.gf
+[2012-01-11 09:36:15,797] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsGer.gf
+[2012-01-11 09:36:15,820] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:36:15,820] ERROR GF: searched in: ./
+[2012-01-11 09:36:15,820] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:36:15,820] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:36:15,821] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsI.gf
+[2012-01-11 09:36:16,315] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsIta.gf
+[2012-01-11 09:36:16,755] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/FoodsSwe.gf
+[2012-01-11 09:36:16,773] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:36:16,773] ERROR GF: searched in: ./
+[2012-01-11 09:36:16,773] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:36:16,773] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:36:16,774] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoods.gf
+[2012-01-11 09:36:16,799] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:36:16,800] ERROR GF: searched in: ./
+[2012-01-11 09:36:16,800] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:36:16,800] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:36:16,801] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsCat.gf
+[2012-01-11 09:36:16,825] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:36:16,826] ERROR GF: searched in: ./
+[2012-01-11 09:36:16,826] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:36:16,826] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:36:16,827] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsEng.gf
+[2012-01-11 09:36:16,851] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:36:16,851] ERROR GF: searched in: ./
+[2012-01-11 09:36:16,851] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:36:16,852] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:36:16,852] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsFin.gf
+[2012-01-11 09:36:16,875] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:36:16,875] ERROR GF: searched in: ./
+[2012-01-11 09:36:16,875] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:36:16,875] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:36:16,876] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsGer.gf
+[2012-01-11 09:36:16,892] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:36:16,892] ERROR GF: searched in: ./
+[2012-01-11 09:36:16,892] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:36:16,892] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:36:16,892] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsIta.gf
+[2012-01-11 09:36:16,908] ERROR GF: File Syntax.gf does not exist.
+[2012-01-11 09:36:16,908] ERROR GF: searched in: ./
+[2012-01-11 09:36:16,908] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib
+[2012-01-11 09:36:16,908] ERROR GF:              /home/john/.cabal/share/gf-3.3/lib/prelude
+[2012-01-11 09:36:16,909] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Test/LexFoodsSwe.gf

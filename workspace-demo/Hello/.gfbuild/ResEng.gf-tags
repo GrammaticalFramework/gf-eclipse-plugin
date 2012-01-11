@@ -1,8 +1,0 @@
-Fem	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5	Gender
-Gender	param	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5	
-Masc	param-value	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5	Gender
-mega	overload-def	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:11-17	
-mega	overload-type	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:11-17	(s : Str) -> (r : Str) -> {s : Gender => Str}
-mega	overload-type	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:11-17	(s : Str) -> {s : Gender => Str}
-superate	oper-def	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:8-9	
-superate	oper-type	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:8-9	Str -> {s : Gender => Str}
