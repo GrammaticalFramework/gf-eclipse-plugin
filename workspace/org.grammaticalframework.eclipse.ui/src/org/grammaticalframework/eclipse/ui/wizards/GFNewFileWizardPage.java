@@ -288,8 +288,12 @@ public class GFNewFileWizardPage extends WizardPage {
 	private void traverseFileList(IResource resource, ArrayList<String> suggestions) {
 		if (resource instanceof IFile) {
 			IFile file = (IFile)resource;
-			if (file.getFileExtension().equalsIgnoreCase("gf")) {
-				suggestions.add( resource.getName().substring(0, resource.getName().length()-3) );
+			try {
+				if (file.getFileExtension().equalsIgnoreCase("gf")) {
+					suggestions.add( resource.getName().substring(0, resource.getName().length()-3) );
+				}
+			} catch (NullPointerException e) {
+				// there was no file extension
 			}
 		} else if (resource instanceof IContainer) {
 			try {
