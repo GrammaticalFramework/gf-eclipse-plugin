@@ -3,4 +3,5 @@ publish-release.sh
 .metadata/
 releases/
 .gfbuild/
+*.class
 
