@@ -16,6 +16,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>.gfexternal/Cat.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF-readonly/lib/src/abstract/Cat.gf</location>
+		</link>
+		<link>
 			<name>.gfexternal/CatEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF-readonly/lib/src/english/CatEng.gf</location>
@@ -24,6 +29,11 @@
 			<name>.gfexternal/Combinators.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF-readonly/lib/src/api/Combinators.gf</location>
+		</link>
+		<link>
+			<name>.gfexternal/Common.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF-readonly/lib/src/abstract/Common.gf</location>
 		</link>
 		<link>
 			<name>.gfexternal/CommonX.gf</name>
@@ -39,6 +49,11 @@
 			<name>.gfexternal/ParadigmsEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF-readonly/lib/src/english/ParadigmsEng.gf</location>
+		</link>
+		<link>
+			<name>.gfexternal/Structural.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF-readonly/lib/src/abstract/Structural.gf</location>
 		</link>
 		<link>
 			<name>.gfexternal/StructuralEng.gf</name>

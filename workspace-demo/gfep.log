@@ -4450,3 +4450,33 @@ com.google.inject.CreationException: Guice creation errors:
 [2012-01-11 13:28:26,405] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
 [2012-01-11 13:28:26,774] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
 [2012-01-11 13:29:15,097] INFO  GFLibraryTreeView has nothing to show.
+[2012-01-11 16:13:33,081] INFO  GFLibraryTreeView has nothing to show.
+[2012-01-11 16:13:38,038] INFO  GFLibraryTreeView has nothing to show.
+[2012-01-11 16:13:55,558] INFO  Full build on Functors
+[2012-01-11 16:13:55,571] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2012-01-11 16:13:55,891] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:10:
+[2012-01-11 16:13:55,891] ERROR GF: Happened in the renaming of Mk
+[2012-01-11 16:13:55,891] ERROR GF:    constant not found: j
+[2012-01-11 16:13:55,892] ERROR GF:    given LexFoodsEng, SyntaxEng, LexFoods, Syntax, LexFoodsEng,
+[2012-01-11 16:13:55,892] ERROR GF:          SyntaxEng, LexFoodsEng, SyntaxEng, LexFoodsEng, ParadigmsEng,
+[2012-01-11 16:13:55,892] ERROR GF:          SyntaxEng, FoodsEng
+[2012-01-11 16:13:55,897] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2012-01-11 16:13:56,305] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2012-01-11 16:13:56,421] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2012-01-11 16:13:56,525] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2012-01-11 16:13:56,841] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2012-01-11 16:13:57,222] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf
+[2012-01-18 15:49:28,402] INFO  Full build on Functors
+[2012-01-18 15:49:28,859] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/Foods.gf
+[2012-01-18 15:49:29,584] ERROR GF: /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf:10:
+[2012-01-18 15:49:29,584] ERROR GF: Happened in the renaming of Mk
+[2012-01-18 15:49:29,584] ERROR GF:    constant not found: j
+[2012-01-18 15:49:29,584] ERROR GF:    given LexFoodsEng, SyntaxEng, LexFoods, Syntax, LexFoodsEng,
+[2012-01-18 15:49:29,584] ERROR GF:          SyntaxEng, LexFoodsEng, SyntaxEng, LexFoodsEng, ParadigmsEng,
+[2012-01-18 15:49:29,584] ERROR GF:          SyntaxEng, FoodsEng
+[2012-01-18 15:49:29,586] WARN  ✕ /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsEng.gf
+[2012-01-18 15:49:30,201] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsGer.gf
+[2012-01-18 15:49:30,309] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/FoodsI.gf
+[2012-01-18 15:49:30,411] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoods.gf
+[2012-01-18 15:49:30,733] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsEng.gf
+[2012-01-18 15:49:31,120] INFO  + /home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors/LexFoodsGer.gf

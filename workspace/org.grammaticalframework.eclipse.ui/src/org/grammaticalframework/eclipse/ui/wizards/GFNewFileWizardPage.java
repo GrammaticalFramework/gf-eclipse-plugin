@@ -1,7 +1,7 @@
 /**
  * GF Eclipse Plugin
  * http://www.grammaticalframework.org/eclipse/
- * John J. Camilleri, 2011
+ * John J. Camilleri, 2012
  * 
  * The research leading to these results has received funding from the
  * European Union's Seventh Framework Programme (FP7/2007-2013) under
@@ -61,41 +61,19 @@ public class GFNewFileWizardPage extends WizardPage {
 	/**
 	 * The Constant PAGE_DESCRIPTION.
 	 */
-	private static final String PAGE_DESCRIPTION = "This wizard creates a new GF module source file (*.gf)"; //$NON-NLS-1$
+	private static final String PAGE_DESCRIPTION = "This wizard creates a new GF module source file (*.gf)";
 
 	/**
-	 * The container text.
+	 * Fields
 	 */
-	private Text containerText;
+	private Text field_Path;
+	private Text field_ModuleName;
+	private Combo field_ModuleType;
+	private Text field_Of;
+	private Text field_Extends,field_Opens, field_Instantiates, field_With;
+	private Label label_Of, label_Instantiates, label_With;
 	
-	/**
-	 * The mod name text.
-	 */
-	private Text modNameText;
 	
-	/**
-	 * The mod incomplete button.
-	 */
-	private Button modIncompleteButton;
-	
-	/**
-	 * The mod type combo drop down.
-	 */
-	private Combo modTypeComboDropDown;
-	
-	/**
-	 * The mod of text.
-	 */
-	private Text modOfText;
-	
-	/**
-	 * The mod instantiates text.
-	 */
-	private Text modExtendsText,modOpensText, modFunctorText, modInstantiatesText;
-
-	/**
-	 * The selection.
-	 */
 	private ISelection selection;
 
 	/**
@@ -120,20 +98,21 @@ public class GFNewFileWizardPage extends WizardPage {
 		Composite container = new Composite(parent, SWT.NULL);
 		GridLayout layout = new GridLayout();
 		container.setLayout(layout);
-		layout.numColumns = 3;
+		layout.numColumns = 4;
 		layout.verticalSpacing = 5;
 		
-		// Container
-		new Label(container, SWT.NULL).setText("&Save to:");
-
-		containerText = new Text(container, SWT.BORDER | SWT.SINGLE);
-		containerText.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-		containerText.addModifyListener(new ModifyListener() {
+		// General use listener
+		ModifyListener listener = new ModifyListener() {
 			public void modifyText(ModifyEvent e) {
 				dialogChanged();
 			}
-		});
-
+		};
+		
+		// Save to
+		new Label(container, SWT.NULL).setText("&Save to:");
+		field_Path = new Text(container, SWT.BORDER | SWT.SINGLE);
+		field_Path.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
+		field_Path.addModifyListener(listener);
 		Button button = new Button(container, SWT.PUSH);
 		button.setText("Browse...");
 		button.addSelectionListener(new SelectionAdapter() {
@@ -142,52 +121,66 @@ public class GFNewFileWizardPage extends WizardPage {
 			}
 		});
 		
-		// Module name
-		new Label(container, SWT.NULL).setText("&Module name:");
-		modNameText = new Text(container, SWT.BORDER | SWT.SINGLE);
-		modNameText.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-		modNameText.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
-		new Label(container, SWT.NULL); // Skip cell!
-		
-		// Incomplete?
-		modIncompleteButton = new Button(container, SWT.CHECK);
-		modIncompleteButton.setText("&Incomplete");
-	    modIncompleteButton.setLayoutData(new GridData(SWT.BEGINNING, SWT.TOP, true, false, 3, 1));
-		
-	    // Type
-	    modTypeComboDropDown = new Combo(container, SWT.DROP_DOWN | SWT.BORDER | SWT.READ_ONLY);
-	    modTypeComboDropDown.setItems(new String[] {
-    	    "abstract",
-    	    "resource",
-    	    "interface",
-    	    "concrete of",
-    	    "instance of",
+		// Module type
+		new Label(container, SWT.NULL).setText("Module &type:");
+	    field_ModuleType = new Combo(container, SWT.DROP_DOWN | SWT.BORDER | SWT.READ_ONLY);
+	    field_ModuleType.setItems(new String[] {
+	    	    "Abstract",		// 0
+	    	    "Concrete",		// 1
+	    	    "Resource",		// 2
+	    	    "Interface",	// 3
+	    	    "Instance",		// 4
+	    	    "Functor",		// 5
+	    	    "Functor Instantiation", // 6
 	    });
-	    modTypeComboDropDown.addSelectionListener(new SelectionListener() {
+	    field_ModuleType.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
-				if (modTypeComboDropDown.getText().equals("concrete of") || modTypeComboDropDown.getText().equals("instance of")) {
-					modOfText.setEnabled(true);
-					dialogChanged();
-				} else {
-					modOfText.setText("");
-					modOfText.setEnabled(false);
+				field_Instantiates.setEnabled(false);
+				field_With.setEnabled(false);
+				field_Of.setEnabled(false);
+				label_Instantiates.setEnabled(false);
+				label_With.setEnabled(false);
+				label_Of.setEnabled(false);
+				switch (field_ModuleType.getSelectionIndex()) {
+				case 6:
+					field_Instantiates.setEnabled(true);
+					field_With.setEnabled(true);
+					label_Instantiates.setEnabled(true);
+					label_With.setEnabled(true);
+				case 1:
+				case 4:
+				case 5:
+					field_Of.setEnabled(true);
+					label_Of.setEnabled(true);
+					break;
 				}
+				dialogChanged();
 			}
 			public void widgetDefaultSelected(SelectionEvent e) {
 				widgetSelected(e);
 			}
 		});
-	    
-	    
-	    // Ref: http://www.vogella.de/articles/EclipseRCP/article.html#fieldassist
-		modOfText = new Text(container, SWT.BORDER | SWT.SINGLE);
-		modOfText.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+		field_ModuleType.select(0);
+		new Label(container, SWT.NULL); // Skip cell!
+		new Label(container, SWT.NULL); // Skip cell!
+		
+		// Module name
+		new Label(container, SWT.NULL).setText("Module &name:");
+		field_ModuleName = new Text(container, SWT.BORDER | SWT.SINGLE);
+		field_ModuleName.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+		field_ModuleName.addModifyListener(listener);
+
+	    // "of" for instance/concrete
+		label_Of = new Label(container, SWT.NULL);
+		label_Of.setText("of");
+		label_Of.setEnabled(false);
+	    field_Of = new Text(container, SWT.BORDER | SWT.SINGLE);
+		field_Of.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+		field_Of.addModifyListener(listener);
+	    field_Of.setEnabled(false);
 
 	    // Get suggestions...
+	    // Ref: http://www.vogella.de/articles/EclipseRCP/article.html#fieldassist
 		ArrayList<String> suggestions = getFileList();
 		KeyStroke keystroke = null;
 		try {
@@ -196,73 +189,45 @@ public class GFNewFileWizardPage extends WizardPage {
 		}		
 		@SuppressWarnings("unused")
 		ContentProposalAdapter adapter = new ContentProposalAdapter(
-				modOfText,
+				field_Of,
 				new TextContentAdapter(),
 				new SimpleContentProposalProvider(suggestions.toArray(new String[]{})),
 				keystroke, null);
 
 		// Create the decoration for the text UI component
-		final ControlDecoration deco = new ControlDecoration(modOfText, SWT.TOP | SWT.RIGHT);
+		final ControlDecoration deco = new ControlDecoration(field_Of, SWT.TOP | SWT.RIGHT);
 		Image image = FieldDecorationRegistry.getDefault()
 				.getFieldDecoration(FieldDecorationRegistry.DEC_CONTENT_PROPOSAL)
 				.getImage();
 		deco.setDescriptionText("Use Ctrl+Space to see possible values");
 			deco.setImage(image);
 		
-		modOfText.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
-
-		// Init
-		modTypeComboDropDown.select(0);
-	    modOfText.setEnabled(false);
-		
-		new Label(container, SWT.NULL); // Skip cell!
-
-		// Extends
-		new Label(container, SWT.NULL).setText("&Extends:");
-		modExtendsText = new Text(container, SWT.BORDER | SWT.SINGLE);
-		modExtendsText.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
-		modExtendsText.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
-		
 		// Functor Instantiations
-		new Label(container, SWT.NULL).setText("&Functor:");
-		modFunctorText = new Text(container, SWT.BORDER | SWT.SINGLE);
-		modFunctorText.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-		modFunctorText.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
-		new Label(container, SWT.NULL); // Skip cell
+		label_Instantiates = new Label(container, SWT.NULL);
+		label_Instantiates.setText("&Instantiates:");
+		label_Instantiates.setEnabled(false);
+		field_Instantiates = new Text(container, SWT.BORDER | SWT.SINGLE);
+		field_Instantiates.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+		field_Instantiates.addModifyListener(listener);
+		field_Instantiates.setEnabled(false);
+		label_With = new Label(container, SWT.NULL);
+		label_With.setText("with");
+		label_With.setEnabled(false);
+		field_With = new Text(container, SWT.BORDER | SWT.SINGLE);
+		field_With.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+		field_With.addModifyListener(listener);
+		field_With.setEnabled(false);
 		
-		new Label(container, SWT.NULL).setText("&With:");
-		modInstantiatesText = new Text(container, SWT.BORDER | SWT.SINGLE);
-		modInstantiatesText.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
-		modInstantiatesText.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
-
-		// Opens
+		// Opens & Extends are available to all!
 		new Label(container, SWT.NULL).setText("&Opens:");
-		modOpensText = new Text(container, SWT.BORDER | SWT.SINGLE);
-		modOpensText.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
-		modOpensText.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
+		field_Opens = new Text(container, SWT.BORDER | SWT.SINGLE);
+		field_Opens.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
+		field_Opens.addModifyListener(listener);
+		new Label(container, SWT.NULL).setText("&Extends:");
+		field_Extends = new Text(container, SWT.BORDER | SWT.SINGLE);
+		field_Extends.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
+		field_Extends.addModifyListener(listener);
 		
-		// ...		
-
 		initialize();
 		setControl(container);
 	}
@@ -306,26 +271,16 @@ public class GFNewFileWizardPage extends WizardPage {
 		}
 	}
 	
-
-	/**
-	 * Gets the mod is incomplete.
-	 *
-	 * @return the mod is incomplete
-	 */
-	protected Boolean getModIsIncomplete() {
-		return modIncompleteButton.getSelection();
-	}
-	
 	/**
 	 * Gets the module type.
 	 *
 	 * @return the module type
 	 */
 	protected String getModuleType() {
-		if (modTypeComboDropDown.getText().endsWith("of"))
-			return modTypeComboDropDown.getText().substring(0, 8); // concrete & instance both 8 chars long
+		if (field_ModuleType.getText().endsWith("of"))
+			return field_ModuleType.getText().substring(0, 8); // concrete & instance both 8 chars long
 		else
-			return modTypeComboDropDown.getText();
+			return field_ModuleType.getText();
 	}
 	
 	/**
@@ -334,7 +289,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 * @return the mod of
 	 */
 	protected String getModOf() {
-		return modOfText.getText();
+		return field_Of.getText();
 	}
 
 	/**
@@ -343,7 +298,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 * @return the module extends
 	 */
 	protected String getModuleExtends() {
-		return modExtendsText.getText();
+		return field_Extends.getText();
 	}
 	
 	/**
@@ -352,7 +307,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 * @return the module functor
 	 */
 	protected String getModuleFunctor() {
-		return modFunctorText.getText();
+		return field_Instantiates.getText();
 	}
 	
 	/**
@@ -361,7 +316,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 * @return the module instantiates
 	 */
 	protected String getModuleInstantiates() {
-		return modInstantiatesText.getText();
+		return field_With.getText();
 	}
 	
 	/**
@@ -370,7 +325,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 * @return the module opens
 	 */
 	protected String getModuleOpens() {
-		return modOpensText.getText();
+		return field_Opens.getText();
 	}
 	
 	/**
@@ -379,7 +334,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 * @return the module name
 	 */
 	protected String getModuleName() {
-		return modNameText.getText();
+		return field_ModuleName.getText();
 	}
 
 	/**
@@ -388,7 +343,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 * @return the container name
 	 */
 	protected String getContainerName() {
-		return containerText.getText();
+		return field_Path.getText();
 	}
 
 	/**
@@ -407,10 +362,10 @@ public class GFNewFileWizardPage extends WizardPage {
 					container = (IContainer) obj;
 				else
 					container = ((IResource) obj).getParent();
-				containerText.setText(container.getFullPath().toString());
+				field_Path.setText(container.getFullPath().toString());
 			}
 		}
-		modNameText.setText("untitled");
+		field_ModuleName.setText("");
 	}
 
 	/**
@@ -425,7 +380,7 @@ public class GFNewFileWizardPage extends WizardPage {
 		if (dialog.open() == ContainerSelectionDialog.OK) {
 			Object[] result = dialog.getResult();
 			if (result.length == 1) {
-				containerText.setText(((Path) result[0]).toString());
+				field_Path.setText(((Path) result[0]).toString());
 			}
 		}
 	}
@@ -467,11 +422,11 @@ public class GFNewFileWizardPage extends WizardPage {
 		}
 
 		// Concrete / Instance of
-		if (modTypeComboDropDown.getText().equals("concrete of") && getModOf().isEmpty()) {
+		if (field_ModuleType.getText().equals("concrete of") && getModOf().isEmpty()) {
 			updateStatus("Concrete of ... must be specified");
 			return;
 		}
-		if (modTypeComboDropDown.getText().equals("instance of") && getModOf().isEmpty()) {
+		if (field_ModuleType.getText().equals("instance of") && getModOf().isEmpty()) {
 			updateStatus("Instance of ... must be specified");
 			return;
 		}

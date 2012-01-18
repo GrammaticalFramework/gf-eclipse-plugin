@@ -406,14 +406,14 @@
            class="org.grammaticalframework.eclipse.ui.views.GFLibraryTableView"
            icon="icons/gf-logo.png"
            id="org.grammaticalframework.eclipse.ui.views.GFLibraryTableView"
-           name="GF Library Browser (Table)">
+           name="GF RGL Browser (Beta)">
      </view>
      <view
            category="org.grammaticalframework.eclipse.ui.views"
            class="org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView"
            icon="icons/gf-logo.png"
            id="org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView"
-           name="GF Library Browser">
+           name="GF External Libraries">
      </view>
   </extension>
   <extension

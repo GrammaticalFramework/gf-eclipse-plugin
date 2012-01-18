@@ -280,6 +280,8 @@ public class GFLibraryTreeView extends ViewPart {
 	}
 	
 	// ----------------------------------------------------------------
+	
+	private IPartListener2 listener;
 
 	/**
 	 * The constructor.
@@ -309,7 +311,7 @@ public class GFLibraryTreeView extends ViewPart {
 		contributeToActionBars();
 
 		// Add a listener which udpates the view each time the active editor is changed
-		getSite().getWorkbenchWindow().getPartService().addPartListener(new IPartListener2() {
+		listener = new IPartListener2() {
 			public void partActivated(IWorkbenchPartReference partRef) {
 				try {
 					IEditorPart editor = partRef.getPage().getActiveEditor();
@@ -325,27 +327,21 @@ public class GFLibraryTreeView extends ViewPart {
 				}
 			}
 			public void partBroughtToTop(IWorkbenchPartReference partRef) {
-				// TODO Auto-generated method stub
 			}
 			public void partClosed(IWorkbenchPartReference partRef) {
-				// TODO Auto-generated method stub
 			}
 			public void partDeactivated(IWorkbenchPartReference partRef) {
-				// TODO Auto-generated method stub
 			}
 			public void partOpened(IWorkbenchPartReference partRef) {
-				// TODO Auto-generated method stub
 			}
 			public void partHidden(IWorkbenchPartReference partRef) {
-				// TODO Auto-generated method stub
 			}
 			public void partVisible(IWorkbenchPartReference partRef) {
-				// TODO Auto-generated method stub
 			}
 			public void partInputChanged(IWorkbenchPartReference partRef) {
-				// TODO Auto-generated method stub
 			}
-		});
+		};
+		getSite().getWorkbenchWindow().getPartService().addPartListener(listener);
 		
 	}
 
@@ -441,4 +437,12 @@ public class GFLibraryTreeView extends ViewPart {
 	public void setFocus() {
 		viewer.getControl().setFocus();
 	}
+
+	@Override
+	public void dispose() {
+		super.dispose();
+		getSite().getWorkbenchWindow().getPartService().removePartListener(listener);
+	}
+	
+	
 }
