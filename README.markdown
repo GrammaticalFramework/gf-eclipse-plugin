@@ -2,7 +2,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 11 Jan 2012
+Updated: 18 Jan 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
@@ -16,16 +16,13 @@ The choice was made to develop this desktop IDE as a plugin for the Eclipse Plat
 
 The starting point for the GFEP is using the [Xtext DSL Framework](http://www.eclipse.org/Xtext/) for Eclipse. By converting the GF grammar into the appropriate Extended-BNF form required by the LL(*) ANTLR parser, the framework provides a good starting point for future plugin development, already including a variery of syntax checking tools and some cross-reference resolution support. The specific requirements of the GF language, particularly in the way of its special module hierarchy, mean that significant customisations to this generated base plugin are needed.
 
-### Who
-
-The GFEP is being developed as part of Work Package 2 of the [MOLTO Project](http://www.molto-project.eu/).
-
-Primary developer is **John J. Camilleri**, who should be contacted for all queries and feedback related to the plugin on `john.j.camilleri` at domain `chalmers.se`.
+The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project](http://www.molto-project.eu/).
 
 ### Links
 
 - This document shall contain the most up-to-date information about the plugin. The most up-to-date version of this file can always be found in the source-code repository at <https://github.com/GrammaticalFramework/gf-eclipse-plugin/blob/master/README.markdown>
 - Source code repository is at <https://github.com/GrammaticalFramework/gf-eclipse-plugin> (do not try to run the plugin from source; please only use the packaged releases).
+- For reporting bugs and requesting features, please use the [GitHub Issue Tracker](https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues)
 - Here are some [example GF projects](http://www.grammaticalframework.org/eclipse/examples/) for testing out the plugin features.
 - Software update site URL for installing through Eclipse:
 `http://www.grammaticalframework.org/eclipse/release/`
@@ -207,7 +204,10 @@ Sometimes you may get an entire file marked with errors, even though in fact the
 ## Evaluation & feedback
 
 Please try to use the plugin for developing your own GF projects and report any issues you come up against.
-Do not hesitate to contact me on `john.j.camilleri` at domain `chalmers.se` and let me know how you think the plugin can be improved.
+
+For all bug reports and feature requests please use the GitHub Issue Tracker at <https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues>.
+
+Do not hesitate to let us know how you think the plugin can be improved!
 
 ### Criteria
 
