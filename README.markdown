@@ -24,8 +24,7 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 - Source code repository is at <https://github.com/GrammaticalFramework/gf-eclipse-plugin> (do not try to run the plugin from source; please only use the packaged releases).
 - For reporting bugs and requesting features, please use the [GitHub Issue Tracker](https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues)
 - Here are some [example GF projects](http://www.grammaticalframework.org/eclipse/examples/) for testing out the plugin features.
-- Software update site URL for installing through Eclipse:
-`http://www.grammaticalframework.org/eclipse/release/`
+- Software update site URL for installing through Eclipse: <http://www.grammaticalframework.org/eclipse/release/>
 
 --------------------------------------------------------------------------------
 
