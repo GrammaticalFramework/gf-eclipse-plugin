@@ -9,6 +9,7 @@
  */
 package org.grammaticalframework.eclipse.ui.wizards;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import org.eclipse.core.resources.IContainer;
@@ -18,12 +19,11 @@ import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.jface.bindings.keys.KeyStroke;
-import org.eclipse.jface.bindings.keys.ParseException;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.fieldassist.ContentProposalAdapter;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.jface.fieldassist.FieldDecorationRegistry;
+import org.eclipse.jface.fieldassist.IContentProposal;
 import org.eclipse.jface.fieldassist.SimpleContentProposalProvider;
 import org.eclipse.jface.fieldassist.TextContentAdapter;
 import org.eclipse.jface.viewers.ISelection;
@@ -36,11 +36,13 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ContainerSelectionDialog;
@@ -75,6 +77,25 @@ public class GFNewFileWizardPage extends WizardPage {
 	
 	
 	private ISelection selection;
+	
+	private String[] moduleTypeOptions = new String[] {
+			"Abstract",		// 0
+			"Concrete",		// 1
+			"Resource",		// 2
+			"Interface",	// 3
+			"Instance",		// 4
+			"Functor",		// 5
+			"Functor Instantiation", // 6
+	};
+	private String[] moduleTypeKeywords = new String[] {
+    	    "abstract",		// 0
+    	    "concrete",		// 1
+    	    "resource",		// 2
+    	    "interface",	// 3
+    	    "instance",		// 4
+    	    "incomplete concrete",		// 5
+    	    "concrete", // 6
+    };
 
 	/**
 	 * Constructor for SampleNewWizardPage.
@@ -124,15 +145,8 @@ public class GFNewFileWizardPage extends WizardPage {
 		// Module type
 		new Label(container, SWT.NULL).setText("Module &type:");
 	    field_ModuleType = new Combo(container, SWT.DROP_DOWN | SWT.BORDER | SWT.READ_ONLY);
-	    field_ModuleType.setItems(new String[] {
-	    	    "Abstract",		// 0
-	    	    "Concrete",		// 1
-	    	    "Resource",		// 2
-	    	    "Interface",	// 3
-	    	    "Instance",		// 4
-	    	    "Functor",		// 5
-	    	    "Functor Instantiation", // 6
-	    });
+		field_ModuleType.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
+	    field_ModuleType.setItems(moduleTypeOptions);
 	    field_ModuleType.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
 				field_Instantiates.setEnabled(false);
@@ -161,14 +175,13 @@ public class GFNewFileWizardPage extends WizardPage {
 			}
 		});
 		field_ModuleType.select(0);
-		new Label(container, SWT.NULL); // Skip cell!
-		new Label(container, SWT.NULL); // Skip cell!
 		
 		// Module name
 		new Label(container, SWT.NULL).setText("Module &name:");
 		field_ModuleName = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_ModuleName.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 		field_ModuleName.addModifyListener(listener);
+		field_ModuleName.setFocus();
 
 	    // "of" for instance/concrete
 		label_Of = new Label(container, SWT.NULL);
@@ -178,29 +191,7 @@ public class GFNewFileWizardPage extends WizardPage {
 		field_Of.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 		field_Of.addModifyListener(listener);
 	    field_Of.setEnabled(false);
-
-	    // Get suggestions...
-	    // Ref: http://www.vogella.de/articles/EclipseRCP/article.html#fieldassist
-		ArrayList<String> suggestions = getFileList();
-		KeyStroke keystroke = null;
-		try {
-			keystroke = KeyStroke.getInstance("Ctrl+Space");
-		} catch (ParseException _) {
-		}		
-		@SuppressWarnings("unused")
-		ContentProposalAdapter adapter = new ContentProposalAdapter(
-				field_Of,
-				new TextContentAdapter(),
-				new SimpleContentProposalProvider(suggestions.toArray(new String[]{})),
-				keystroke, null);
-
-		// Create the decoration for the text UI component
-		final ControlDecoration deco = new ControlDecoration(field_Of, SWT.TOP | SWT.RIGHT);
-		Image image = FieldDecorationRegistry.getDefault()
-				.getFieldDecoration(FieldDecorationRegistry.DEC_CONTENT_PROPOSAL)
-				.getImage();
-		deco.setDescriptionText("Use Ctrl+Space to see possible values");
-			deco.setImage(image);
+	    enableAutoSuggest(field_Of);
 		
 		// Functor Instantiations
 		label_Instantiates = new Label(container, SWT.NULL);
@@ -210,6 +201,7 @@ public class GFNewFileWizardPage extends WizardPage {
 		field_Instantiates.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
 		field_Instantiates.addModifyListener(listener);
 		field_Instantiates.setEnabled(false);
+	    enableAutoSuggest(field_Instantiates);
 		label_With = new Label(container, SWT.NULL);
 		label_With.setText("with");
 		label_With.setEnabled(false);
@@ -223,13 +215,74 @@ public class GFNewFileWizardPage extends WizardPage {
 		field_Opens = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_Opens.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
 		field_Opens.addModifyListener(listener);
+		enableAutoSuggest(field_Opens);
 		new Label(container, SWT.NULL).setText("&Extends:");
 		field_Extends = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_Extends.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
 		field_Extends.addModifyListener(listener);
+		enableAutoSuggest(field_Extends);
 		
 		initialize();
 		setControl(container);
+	}
+	
+	private class GFModuleContentProposalProvider extends SimpleContentProposalProvider {
+		public GFModuleContentProposalProvider() {
+			super(new String[]{});
+			String[] proposals = getFileList().toArray(new String[]{});
+			setProposals(proposals);
+			this.setFiltering(true);
+		}
+		public GFModuleContentProposalProvider(String[] proposals) {
+			super(proposals);
+			this.setFiltering(true);
+		}
+		@Override
+		public IContentProposal[] getProposals(String contents, int position) {
+			// Only consider AFTER the last comma (but before cursor), then delegate to parent
+			contents = contents.substring(0, position);
+			int ix = contents.lastIndexOf(',');
+			if (ix > -1) {
+				contents = contents.substring(ix+1).trim();
+			}
+			return super.getProposals(contents, position);
+		}
+	}
+	private class GFModuleContentAdapter extends TextContentAdapter {
+		@Override
+		public Point getSelection(Control control) {
+			//Always select from caret position to left-closest comma or space character
+			// e.g. for "Kittens, Pupp|ies" we want to return "Pupp"
+			int pos = ((Text) control).getCaretPosition();
+			String contents = ((Text) control).getText(0, pos);
+			int ix = Math.max(contents.lastIndexOf(','), contents.lastIndexOf(' '));
+			return (ix < 0) ? new Point(0, pos) : new Point(ix+1, pos);
+		}
+	}
+	
+	private GFModuleContentProposalProvider proposalProvider = new GFModuleContentProposalProvider();
+	private TextContentAdapter contentAdapter = new GFModuleContentAdapter();
+	
+	/**
+	 * Enable augo-suggest on a given field
+	 * Ref: http://www.vogella.de/articles/EclipseRCP/article.html#fieldassist 
+	 * @param field
+	 */
+	private void enableAutoSuggest(Text field) {
+//		KeyStroke keystroke = null;
+//		try {
+//			keystroke = KeyStroke.getInstance("Ctrl+Space");
+//		} catch (ParseException _) {
+//		}		
+//		new ContentProposalAdapter(field, contentAdapter, proposalProvider, keystroke, null);
+		new ContentProposalAdapter(field, contentAdapter, proposalProvider, null, null); // always activate!
+
+		// Create the decoration for the text UI component
+		final ControlDecoration deco = new ControlDecoration(field, SWT.TOP | SWT.RIGHT);
+		Image image = FieldDecorationRegistry.getDefault().getFieldDecoration(FieldDecorationRegistry.DEC_CONTENT_PROPOSAL).getImage();
+		deco.setImage(image);
+//		deco.setDescriptionText("Use Ctrl+Space to see possible values");
+		deco.setDescriptionText("Auto-suggest enabled");
 	}
 	
 	/**
@@ -245,7 +298,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	}
 	
 	/**
-	 * Traverse file list.
+	 * Traverse file list recursively, for suggestions
 	 *
 	 * @param resource the resource
 	 * @param suggestions the suggestions
@@ -276,11 +329,13 @@ public class GFNewFileWizardPage extends WizardPage {
 	 *
 	 * @return the module type
 	 */
-	protected String getModuleType() {
-		if (field_ModuleType.getText().endsWith("of"))
-			return field_ModuleType.getText().substring(0, 8); // concrete & instance both 8 chars long
-		else
-			return field_ModuleType.getText();
+	protected String getField_ModuleKeywords() {
+		try {
+			return moduleTypeKeywords[field_ModuleType.getSelectionIndex()];
+		}
+		catch (IndexOutOfBoundsException _) {
+			return "";
+		}
 	}
 	
 	/**
@@ -288,7 +343,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 *
 	 * @return the mod of
 	 */
-	protected String getModOf() {
+	protected String getField_Of() {
 		return field_Of.getText();
 	}
 
@@ -297,7 +352,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 *
 	 * @return the module extends
 	 */
-	protected String getModuleExtends() {
+	protected String getField_Extends() {
 		return field_Extends.getText();
 	}
 	
@@ -306,7 +361,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 *
 	 * @return the module functor
 	 */
-	protected String getModuleFunctor() {
+	protected String getField_Instantiates() {
 		return field_Instantiates.getText();
 	}
 	
@@ -315,7 +370,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 *
 	 * @return the module instantiates
 	 */
-	protected String getModuleInstantiates() {
+	protected String getField_With() {
 		return field_With.getText();
 	}
 	
@@ -324,7 +379,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 *
 	 * @return the module opens
 	 */
-	protected String getModuleOpens() {
+	protected String getField_Opens() {
 		return field_Opens.getText();
 	}
 	
@@ -333,7 +388,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 *
 	 * @return the module name
 	 */
-	protected String getModuleName() {
+	protected String getField_ModuleName() {
 		return field_ModuleName.getText();
 	}
 
@@ -342,7 +397,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 *
 	 * @return the container name
 	 */
-	protected String getContainerName() {
+	protected String getField_Path() {
 		return field_Path.getText();
 	}
 
@@ -389,7 +444,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 * Dialog changed.
 	 */
 	private void dialogChanged() {
-		IResource container = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getContainerName()));
+		IResource container = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getField_Path()));
 		
 		String regexModName = "[a-zA-Z_][a-zA-Z0-9_']*";
 		String regexFunctor = "[a-zA-Z_][a-zA-Z0-9_']*\\s*(\\s*-?\\s*\\[.*?\\])?";
@@ -397,7 +452,7 @@ public class GFNewFileWizardPage extends WizardPage {
 		String regexOpens = "([a-zA-Z_][a-zA-Z0-9_']*|\\(\\s*[a-zA-Z_][a-zA-Z0-9_']*\\s*(=\\s*[a-zA-Z_][a-zA-Z0-9_']*\\s*)?\\))\\s*(\\s*,\\s*([a-zA-Z_][a-zA-Z0-9_']*|\\(\\s*[a-zA-Z_][a-zA-Z0-9_']*\\s*(=\\s*[a-zA-Z_][a-zA-Z0-9_']*\\s*)?\\))\\s*)*";
 		
 		// Container / location
-		if (getContainerName().length() == 0) {
+		if (getField_Path().length() == 0) {
 			updateStatus("File container must be specified");
 			return;
 		}
@@ -411,41 +466,46 @@ public class GFNewFileWizardPage extends WizardPage {
 		}
 
 		// Module name
-		String moduleName = getModuleName();
-		if (moduleName.length() == 0) {
+		if (getField_ModuleName().length() == 0) {
 			updateStatus("Module name must be specified");
 			return;
 		}
-		if (!moduleName.matches(regexModName)) {
-			updateStatus("Module name is invalid");
+		if (!getField_ModuleName().matches(regexModName)) {
+			updateStatus("Module name is invalid (don't include extension)");
+			return;
+		}
+		String eventualFilename = getField_ModuleName() + ".gf";
+		IResource fileExists = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getField_Path() + File.separator + eventualFilename));
+		if (fileExists!=null) {
+			updateStatus(String.format("Module \"%s\" already exists at that location", eventualFilename));
 			return;
 		}
 
 		// Concrete / Instance of
-		if (field_ModuleType.getText().equals("concrete of") && getModOf().isEmpty()) {
+		if (field_ModuleType.getText().equals("concrete of") && getField_Of().isEmpty()) {
 			updateStatus("Concrete of ... must be specified");
 			return;
 		}
-		if (field_ModuleType.getText().equals("instance of") && getModOf().isEmpty()) {
+		if (field_ModuleType.getText().equals("instance of") && getField_Of().isEmpty()) {
 			updateStatus("Instance of ... must be specified");
 			return;
 		}
 		
 		
 		// Extends, Functor, Instantiates, Opens
-		if (!getModuleExtends().isEmpty() && !getModuleExtends().matches(regexExtends)) {
+		if (!getField_Extends().isEmpty() && !getField_Extends().matches(regexExtends)) {
 			updateStatus("Extends field is invalid");
 			return;
 		}
-		if (!getModuleInstantiates().isEmpty() && !getModuleInstantiates().matches(regexOpens)) {
+		if (!getField_With().isEmpty() && !getField_With().matches(regexOpens)) {
 			updateStatus("Instantiates field is invalid");
 			return;
 		}
-		if (!getModuleOpens().isEmpty() && !getModuleOpens().matches(regexOpens)) {
+		if (!getField_Opens().isEmpty() && !getField_Opens().matches(regexOpens)) {
 			updateStatus("Opens field is invalid");
 			return;
 		}
-		if (!getModuleFunctor().isEmpty() && !getModuleFunctor().matches(regexFunctor)) {
+		if (!getField_Instantiates().isEmpty() && !getField_Instantiates().matches(regexFunctor)) {
 			updateStatus("Functor field is invalid");
 			return;
 		}

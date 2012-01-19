@@ -78,7 +78,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	private String gfLibPath;
 
 	/**
-	 * The Constant log.
+	 * Logger
 	 */
 	private static final Logger log = Logger.getLogger(GFBuilder.class);
 	

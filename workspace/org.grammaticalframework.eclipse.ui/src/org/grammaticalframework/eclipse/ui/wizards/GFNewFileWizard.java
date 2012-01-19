@@ -9,6 +9,9 @@
  */
 package org.grammaticalframework.eclipse.ui.wizards;
 
+import org.apache.log4j.Logger;
+import org.eclipse.jface.text.source.ISourceViewer;
+import org.eclipse.jface.text.source.SourceViewer;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
@@ -23,8 +26,8 @@ import org.eclipse.core.runtime.CoreException;
 import java.io.*;
 import org.eclipse.ui.*;
 import org.eclipse.ui.ide.IDE;
+import org.eclipse.xtext.ui.editor.XtextEditor;
 
-// TODO: Auto-generated Javadoc
 /**
  * This is a sample new wizard. Its role is to create a new file 
  * resource in the provided container. If the container resource
@@ -37,6 +40,8 @@ import org.eclipse.ui.ide.IDE;
  */
 
 public class GFNewFileWizard extends Wizard implements INewWizard {
+	
+	private static final Logger log = Logger.getLogger(GFNewFileWizard.class);
 	
 	/**
 	 * The page.
@@ -73,8 +78,8 @@ public class GFNewFileWizard extends Wizard implements INewWizard {
 	 * @return true, if successful
 	 */
 	public boolean performFinish() {
-		final String containerName = page.getContainerName();
-		final String fileName = page.getModuleName() + ".gf";
+		final String containerName = page.getField_Path();
+		final String fileName = page.getField_ModuleName() + ".gf";
 		final String fileContents = generateFileContents();
 		IRunnableWithProgress op = new IRunnableWithProgress() {
 			public void run(IProgressMonitor monitor) throws InvocationTargetException {
@@ -110,7 +115,6 @@ public class GFNewFileWizard extends Wizard implements INewWizard {
 	 * @param monitor the monitor
 	 * @throws CoreException the core exception
 	 */
-
 	private void doFinish(
 		String containerName,
 		String fileName,
@@ -140,14 +144,27 @@ public class GFNewFileWizard extends Wizard implements INewWizard {
 		monitor.setTaskName("Opening file for editing...");
 		getShell().getDisplay().asyncExec(new Runnable() {
 			public void run() {
-				IWorkbenchPage page =
-					PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+				IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
+				IEditorPart editor;
 				try {
-					IDE.openEditor(page, file, true);
+					// open file
+					editor = IDE.openEditor(page, file, true);
+					
+					// format it
+					XtextEditor xed = (XtextEditor)editor;
+					SourceViewer sv = (SourceViewer)xed.getInternalSourceViewer();
+					sv.doOperation(ISourceViewer.FORMAT);
+					
+					// save it
+					editor.doSave(null);
 				} catch (PartInitException e) {
+					log.warn("Couldn't open file for editing", e);
+				} catch (ClassCastException e) {
+					log.warn("Error auto-formatting new module", e);
 				}
 			}
 		});
+		
 		monitor.worked(1);
 	}
 	
@@ -160,36 +177,41 @@ public class GFNewFileWizard extends Wizard implements INewWizard {
 	private String generateFileContents() {
 		// TODO: Template needs to be more sophisticated
 		StringBuilder sb = new StringBuilder("-- Auto-generated template\n");
-		if (page.getModIsIncomplete()) {
-			sb.append("incomplete ");
-		}
-		sb.append(page.getModuleType());
+		sb.append(page.getField_ModuleKeywords());
 		sb.append(" ");
-		sb.append(page.getModuleName());
-		if (!page.getModOf().isEmpty()) {
+		sb.append(page.getField_ModuleName());
+		if (!page.getField_Of().isEmpty()) {
 			sb.append(" of ");
-			sb.append(page.getModOf());
+			sb.append(page.getField_Of());
 		}
 		sb.append(" = ");
-		if (!page.getModuleExtends().isEmpty()) {
-			sb.append(page.getModuleExtends());
+		if (!page.getField_Extends().isEmpty()) {
+			sb.append(page.getField_Extends());
 			sb.append(" ** ");
 		}
-		if (!page.getModuleFunctor().isEmpty()) {
-			sb.append(page.getModuleFunctor());
+		if (!page.getField_Instantiates().isEmpty()) {
+			sb.append(page.getField_Instantiates());
 			sb.append(" with\n\t");
-			sb.append(page.getModuleInstantiates());
-			if (!page.getModuleOpens().isEmpty()) {
+			sb.append(page.getField_With());
+			if (!page.getField_Opens().isEmpty()) {
 				sb.append(" **");
 			}
 			sb.append("\n\t");
 		}
-		if (!page.getModuleOpens().isEmpty()) {
+		if (!page.getField_Opens().isEmpty()) {
 			sb.append(" open ");
-			sb.append(page.getModuleOpens());
+			sb.append(page.getField_Opens());
 			sb.append(" in ");
 		}
-		sb.append("{\n\n\t-- add own code here\n\n};\n");
+		sb.append("{\n\n");
+//		if (page.getField_ModuleKeywords().equals("abstract")) {
+//			sb.append("\tcat\n\n\tfun\n");
+//		}
+//		if (page.getField_ModuleKeywords().equals("concrete")) {
+//			sb.append("\tlincat\n\n\tlin\n");
+//		}
+		sb.append("\n};\n");		
+		
 		return sb.toString();
 	}
 
