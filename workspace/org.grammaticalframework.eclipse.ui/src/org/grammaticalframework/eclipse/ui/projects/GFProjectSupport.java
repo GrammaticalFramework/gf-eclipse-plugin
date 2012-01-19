@@ -56,7 +56,7 @@ public class GFProjectSupport {
             addToProjectStructure(project, paths);
 
             // Maybe this is rude?
-            turnOnAutoBuild();
+            //turnOnAutoBuild();
         } catch (CoreException e) {
             e.printStackTrace();
             project = null;
