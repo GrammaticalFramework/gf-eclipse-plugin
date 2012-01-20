@@ -2,7 +2,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 18 Jan 2012
+Updated: 20 Jan 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
@@ -96,9 +96,18 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 1. Paths to GF must be set within the plugin (see below). This means:
     - you don't necessarily need to have GF in your `PATH` environment variable
     - you can use a separate GF installation for GFEP if you wish
-1. The plugin was developed using Eclipse 3.7, and has **not** been tested with older versions of Eclipse.
+1. The plugin was developed using Eclipse 3.7. It has been successfully installed on Eclipse as low as 3.6.2.
 
 ### Installing the plugin for the first time
+
+**Note about Available Software Sites**
+
+In order for dependencies to be satisfied, you need to ensure that your Eclipse has the following update site URLs set:
+
+- Eclipse releases (change version number to match): <http://download.eclipse.org/eclipse/updates/3.7/>
+- Xtext: <http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/>
+
+**Steps for installation**
 
 1. Inside Eclipse, go to **Help &rarr; Install New Software**.
 1. Add new software site using the URL: `http://www.grammaticalframework.org/eclipse/release/`

@@ -31,7 +31,7 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	/**
 	 * The Constant LOG_FILE_NAME.
 	 */
-	private static final String LOG_FILE_NAME = "gfep.log";
+//	private static final String LOG_FILE_NAME = "gfep.log";
 	
 	/**
 	 * The Apache log4j logger
@@ -53,13 +53,13 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 		IOConsoleOutputStream consoleStream = consoleManager.getLogOutputStream();
 		Layout layout = new PatternLayout("[%d{yyyy-MM-dd HH:mm:ss,SSS}] %-5p %m%n");
 		log.addAppender(new WriterAppender(layout, consoleStream));
-		try {
-			String logFileFull = ResourcesPlugin.getWorkspace().getRoot().getRawLocation().toOSString() + java.io.File.separator + LOG_FILE_NAME;
-			RollingFileAppender logfile = new RollingFileAppender(layout, logFileFull);
-			log.addAppender(logfile);
-		} catch (IOException e) {
-			log.warn(e.getMessage());
-		}
+//		try {
+//			String logFileFull = ResourcesPlugin.getWorkspace().getRoot().getRawLocation().toOSString() + java.io.File.separator + LOG_FILE_NAME;
+//			RollingFileAppender logfile = new RollingFileAppender(layout, logFileFull);
+//			log.addAppender(logfile);
+//		} catch (IOException e) {
+//			log.warn(e.getMessage());
+//		}
 		
 		log.setLevel( Level.toLevel( GFPreferences.getLogLevel(), Level.INFO ) );
 	}
