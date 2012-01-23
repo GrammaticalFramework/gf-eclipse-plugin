@@ -1,4 +1,5 @@
 -- Auto-generated template
-concrete FoodsIta of Foods = ExtendsIta ** FoodsI with
-  (Syntax = SyntaxIta) **
-  open ResIta in { } ;
+--# -path=present
+concrete FoodsIta of Foods = FoodsI with
+  (Syntax = SyntaxIta),
+  (LexFoods = LexFoodsIta) ;

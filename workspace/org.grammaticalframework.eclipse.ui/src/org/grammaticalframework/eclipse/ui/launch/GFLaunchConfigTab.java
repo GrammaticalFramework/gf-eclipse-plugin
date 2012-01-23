@@ -65,7 +65,15 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	public void createControl(Composite parent) {
 		Composite comp = new Composite(parent, SWT.NONE);
 		setControl(comp);
-		PlatformUI.getWorkbench().getHelpSystem().setHelp(getControl(), getHelpContextId());
+		
+		String helpContextID;
+		try {
+			helpContextID = getHelpContextId(); // only available since 3.7
+		} catch (NoSuchMethodError _) {
+			helpContextID = null;
+		}
+		PlatformUI.getWorkbench().getHelpSystem().setHelp(getControl(), helpContextID);
+		
 		comp.setLayout(new GridLayout(2, false));
 		comp.setFont(parent.getFont());
 		

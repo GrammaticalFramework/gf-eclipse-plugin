@@ -67,7 +67,7 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 			int level = getSeverity(event);
 			String message = event.getRenderedMessage();
 			Throwable exp = (event.getThrowableInformation()!=null) ? event.getThrowableInformation().getThrowable() : null;
-			log.log(new Status(level, pluginID, message, exp));
+			this.log.log(new Status(level, pluginID, message, exp));
 		}
 		public void close() {
 			// Nothing to close
@@ -103,6 +103,9 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 		IOConsoleOutputStream consoleStream = consoleManager.getLogOutputStream();
 //		Layout layout = new PatternLayout("[%d{yyyy-MM-dd HH:mm:ss,SSS}] %-5p %m%n");
 		Layout layout = new PatternLayout("%d{HH:mm:ss} [%-5p] %m%n");
+		
+		// At the top level, record everyting
+		log.setLevel(Level.ALL);
 		
 		// Write to GF console (level is user-defined)
 		WriterAppender appender1 = new WriterAppender(layout, consoleStream);

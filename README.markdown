@@ -62,6 +62,9 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 
 ## Major release history
 
+**23/01/12**
+: (1.2.4.x) Logging is now done to the Eclipse Platform Log (use "Error Log" view). Tested with Eclipse 3.6.2. Bug fixes.
+
 **11/01/12**
 : (1.2.3.x) Updated to use Xtext 2.1.0. Links to external files now moved into new "GF Library View".
 

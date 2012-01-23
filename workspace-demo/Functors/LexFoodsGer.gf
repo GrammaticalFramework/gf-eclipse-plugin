@@ -1,5 +1,5 @@
 -- Lexicon Instance
---# -path=.:/home/john/.cabal/share/gf-3.3/lib/present
+--# -path=present
 instance LexFoodsGer of LexFoods =
 	open SyntaxGer, ParadigmsGer in {
 

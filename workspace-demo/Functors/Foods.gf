@@ -12,7 +12,7 @@ abstract Foods = {
 		Quality ;
 		
 		Test ;
-		[Test]{45} ;
+		[Test]{3} ;
 
 	fun
 		Is : Item -> Quality -> Phrase ;

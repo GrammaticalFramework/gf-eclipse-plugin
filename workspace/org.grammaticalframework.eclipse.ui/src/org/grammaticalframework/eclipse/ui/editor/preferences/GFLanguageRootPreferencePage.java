@@ -46,8 +46,10 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 		new Label(parent, SWT.NULL); // skip cell
 		Label libPathNote = new Label(parent, SWT.NULL);
 		libPathNote.setFont(fontItalic);
-		libPathNote.setText("This is passed to GF using the --gf-lib-path flag ");
+		libPathNote.setText("This is passed to GF using the --gf-lib-path flag (optional) ");
 
+		new Label(parent, SWT.NULL); // skip cell
+		new Label(parent, SWT.NULL); // skip cell
 		String[][] entryNamesAndValues = new String[][]{
 			// Refer: http://logging.apache.org/log4j/1.2/manual.html
 			{"All", "DEBUG"},
@@ -55,6 +57,10 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 			{"None", "OFF"},
 		};
 		addField(new ComboFieldEditor(GFPreferences.LOG_LEVEL, "Log Le&vel:", entryNamesAndValues, parent));
+		new Label(parent, SWT.NULL); // skip cell
+		Label logLevelNote = new Label(parent, SWT.NULL);
+		logLevelNote.setFont(fontItalic);
+		logLevelNote.setText("Only affects console output, not internal Eclipse log ");
 	}
 	
 	/* (non-Javadoc)

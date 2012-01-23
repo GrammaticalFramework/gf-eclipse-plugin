@@ -89,9 +89,9 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			
 			process.waitFor();
 		} catch (IOException e) {
-			log.error("Error: " + e.getMessage());
+			log.error("Error running launch.", e);
 		} catch (InterruptedException e) {
-			log.error("Interrupted: " + e.getMessage());
+			log.error("Launch interrupted.", e);
 		} finally {
 			monitor.done();
 		}
