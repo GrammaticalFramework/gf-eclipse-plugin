@@ -36,7 +36,7 @@ import org.grammaticalframework.eclipse.scoping.GFScopeProvider;
 import org.apache.log4j.Logger;
 
 /**
- * Custom GF builder, yeah!
+ * Custom GF builder
  * Some refs..
  * 	http://wiki.eclipse.org/FAQ_How_do_I_implement_an_incremental_project_builder%3F
  * 	http://www.eclipse.org/articles/Article-Builders/builders.html

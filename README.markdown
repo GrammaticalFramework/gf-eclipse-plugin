@@ -194,7 +194,7 @@ _The Eclipse console implementation does not support command history (up arrow) 
 
 #### Logs
 
-You can set the log verbosity from **Window &rarr; Preferences &rarr; Grammatical Framework**. This setting also affects the verbosity of the log file `gfep.log`.
+You can set the log verbosity from **Window &rarr; Preferences &rarr; Grammatical Framework**.
 
 #### Validation
 
@@ -227,4 +227,8 @@ As part of the evaluation of the GF Eclipse Plugin, feedback (both negative and 
 
 ### Logs
 
-The GFEP writes a log file in your Eclipse workspace folder, self-evidently named `gfep.log`. When things go wrong it may be useful to consult this file, or even send it as part of any feedback you provide.
+The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
+
+1. By opening the **Error Log** view in Eclipse
+1. Accessing the file directly at `workspace/.metadata/.log`
+

@@ -46,7 +46,8 @@ public class GFPreferenceInitializer extends AbstractPreferenceInitializer {
 		store.addPropertyChangeListener(new IPropertyChangeListener() {
 			public void propertyChange(PropertyChangeEvent event) {
 				if (event.getProperty().equals(GFPreferences.LOG_LEVEL)) {
-					GFUiModule.log.setLevel(Level.toLevel(event.getNewValue().toString(), Level.INFO));
+					Level level = Level.toLevel(event.getNewValue().toString(), Level.INFO);
+					GFUiModule.setConsoleLogLevel(level);
 				}
 			}
 		});

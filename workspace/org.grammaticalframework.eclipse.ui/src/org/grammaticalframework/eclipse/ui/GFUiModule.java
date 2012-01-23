@@ -9,15 +9,16 @@
  */
 package org.grammaticalframework.eclipse.ui;
 
-import java.io.IOException;
-
+import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.Layout;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
-import org.apache.log4j.RollingFileAppender;
 import org.apache.log4j.WriterAppender;
-import org.eclipse.core.resources.ResourcesPlugin;
+import org.apache.log4j.spi.LoggingEvent;
+import org.eclipse.core.runtime.ILog;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
 import org.eclipse.ui.console.IOConsoleOutputStream;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.grammaticalframework.eclipse.GFPreferences;
@@ -31,14 +32,66 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	/**
 	 * The Constant LOG_FILE_NAME.
 	 */
-//	private static final String LOG_FILE_NAME = "gfep.log";
+	private static final String CONSOLE_LOG_NAME = "gf-console";
+	private static final String PLATFORM_LOG_NAME = "eclipse-platform";
 	
 	/**
 	 * The Apache log4j logger
 	 */
 	public static final Logger log = Logger.getLogger("org.grammaticalframework.eclipse");
+	public static void setConsoleLogLevel(Level level) {
+		try {
+			((WriterAppender)log.getAppender(CONSOLE_LOG_NAME)).setThreshold(level);
+		} catch (Exception e) {
+			log.warn("Error trying to change log level", e);
+		}
+	}
 	
 	private GFConsole consoleManager;
+	
+	/**
+	 * Apache Log4j listener which writes to the Eclipse platform log
+	 * @author John J. Camilleri
+	 */
+	private class EclipsePlatformLogWriter extends AppenderSkeleton {
+		private ILog log;
+		private String pluginID;
+		public EclipsePlatformLogWriter(AbstractUIPlugin plugin) {
+			this.log = plugin.getLog();
+			this.pluginID = plugin.toString();
+		}
+		@Override
+		public boolean requiresLayout() {
+			return false;
+		}
+		@Override
+		protected void append(LoggingEvent event) {
+			int level = getSeverity(event);
+			String message = event.getRenderedMessage();
+			Throwable exp = (event.getThrowableInformation()!=null) ? event.getThrowableInformation().getThrowable() : null;
+			log.log(new Status(level, pluginID, message, exp));
+		}
+		@Override
+		public void close() {
+			// Nothing to close
+		}
+		/**
+		 * Convert log4j LEVEL to Eclipse SEVERITY
+		 * Ref: http://www.eclipsezone.com/articles/franey-logging/
+		 */
+		private int getSeverity(LoggingEvent ev) {
+			Level level = ev.getLevel();
+			if (level == Level.FATAL || level == Level.ERROR)
+				return IStatus.ERROR;
+			else if (level == Level.WARN)
+				return IStatus.WARNING;
+			else if (level == Level.INFO)
+				return IStatus.INFO;
+			else
+				// debug, trace and custom levels
+				return IStatus.OK;
+		}
+	}
 
 	/**
 	 * Instantiates a new GF UI module.
@@ -51,17 +104,22 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 		// Setup logging and direct to console
 		consoleManager = new GFConsole();
 		IOConsoleOutputStream consoleStream = consoleManager.getLogOutputStream();
-		Layout layout = new PatternLayout("[%d{yyyy-MM-dd HH:mm:ss,SSS}] %-5p %m%n");
-		log.addAppender(new WriterAppender(layout, consoleStream));
-//		try {
-//			String logFileFull = ResourcesPlugin.getWorkspace().getRoot().getRawLocation().toOSString() + java.io.File.separator + LOG_FILE_NAME;
-//			RollingFileAppender logfile = new RollingFileAppender(layout, logFileFull);
-//			log.addAppender(logfile);
-//		} catch (IOException e) {
-//			log.warn(e.getMessage());
-//		}
+//		Layout layout = new PatternLayout("[%d{yyyy-MM-dd HH:mm:ss,SSS}] %-5p %m%n");
+		Layout layout = new PatternLayout("%d{HH:mm:ss} [%-5p] %m%n");
 		
-		log.setLevel( Level.toLevel( GFPreferences.getLogLevel(), Level.INFO ) );
+		// Write to GF console (level is user-defined)
+		WriterAppender appender1 = new WriterAppender(layout, consoleStream);
+		appender1.setName(CONSOLE_LOG_NAME);
+		Level userLevel = Level.toLevel(GFPreferences.getLogLevel(), Level.INFO);
+		appender1.setThreshold(userLevel);
+		log.addAppender(appender1);
+
+		// Write to Eclipse platform log (level is hardcoded)
+		EclipsePlatformLogWriter appender2 = new EclipsePlatformLogWriter(plugin);
+		appender2.setName(PLATFORM_LOG_NAME);
+		appender2.setThreshold(Level.ALL); // include everything!
+		log.addAppender(appender2);
+
 	}
 	
 	/**
