@@ -18,10 +18,7 @@ Copyright MOLTO Project, 2011.
    </copyright>
 
    <license url="http://www.grammaticalframework.org/LICENSE">
-      The research leading to these results has received funding from
-the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)
-under grant agreement no FP7-ICT-247914.
-Copyright MOLTO Project, 2011.
+      GF Eclipse Plugin License Agreement
 
       Grammatical Framework is a software package consisting of several different
 components. In summary:
@@ -45,7 +42,6 @@ Please refer to http://www.grammaticalframework.org/LICENSE for full details.
 
    <url>
       <update label="Grammatical Framework" url="http://www.grammaticalframework.org/eclipse/release/"/>
-      <discovery label="Xtext" url="http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/"/>
    </url>
 
    <requires>

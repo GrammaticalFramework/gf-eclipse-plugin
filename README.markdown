@@ -110,20 +110,20 @@ In order for dependencies to be satisfied, you need to ensure that your Eclipse 
 **Steps for installation**
 
 1. Inside Eclipse, go to **Help &rarr; Install New Software**.
-1. Add new software site using the URL: `http://www.grammaticalframework.org/eclipse/release/`
+1. Add new software site using the URL: <http://www.grammaticalframework.org/eclipse/release/>
 1. Select the **GF Eclipse Plugin**, and make sure the **Contact all update sites during install to find required software** option is checked.
 1. Click Next, accept the license agreement and install.
 1. Accept the prompt warning that the software is unsigned.
 1. Restart Eclipse when prompted.
 
 #### Settings
+
 1. Add the GF perspective by clicking **Open Perspective &rarr; Other** and choosing **GF**.
 1. Set your paths to the GF executable and libraries by going to **Window &rarr; Preferences &rarr; Grammatical Framework**.  
 _The runtime path is assumed to be `~/.cabal/bin/gf`, which may be wrong depending on your
 system and how you installed GF._  
 _The library path should get automatically set from your environment's `GF_LIB_PATH` variable._
 1. You can also adjust the verbosity level of the GFEP logger.
-
 
 ### Updating the plugin
 
