@@ -60,18 +60,15 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 			this.log = plugin.getLog();
 			this.pluginID = plugin.toString();
 		}
-		@Override
 		public boolean requiresLayout() {
 			return false;
 		}
-		@Override
 		protected void append(LoggingEvent event) {
 			int level = getSeverity(event);
 			String message = event.getRenderedMessage();
 			Throwable exp = (event.getThrowableInformation()!=null) ? event.getThrowableInformation().getThrowable() : null;
 			log.log(new Status(level, pluginID, message, exp));
 		}
-		@Override
 		public void close() {
 			// Nothing to close
 		}

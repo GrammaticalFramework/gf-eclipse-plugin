@@ -67,7 +67,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 //	public static final Boolean TAG_BASED_SCOPING = true;
 	
 	/**
-	 * Clean old tags fiel before rebuilding?
+	 * Clean old tags file before rebuilding?
 	 */
 	private static final Boolean CLEAN_BEFORE_BUILD = false;
 
