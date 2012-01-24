@@ -133,6 +133,14 @@ public class TagEntry {
 	public void setQualifier(String qualifier) {
 		this.qualifier = qualifier;
 	}
+
+	/**
+	 * Get the tag's true module name. Note this is not necessarily the same as the qualifier.
+	 * @return qualifier
+	 */
+	public String getModuleName() {
+		return moduleName;
+	}
 	
 	/**
 	 * Get the tag's alias, (applies when using the <code>open (Alias = Module)</code> syntax).
@@ -157,7 +165,7 @@ public class TagEntry {
 	public Integer getLineTo() {
 		return lineTo;
 	}
-	public Boolean getIsInDirect() {
+	public Boolean getIsIndirect() {
 		return isIndirect;
 	}
 
