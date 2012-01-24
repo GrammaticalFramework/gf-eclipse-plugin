@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -136,6 +138,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private void incrementalBuild(final IResourceDelta projectDelta, final IProgressMonitor monitor) throws OperationCanceledException, CoreException {
 		log.info("Incremental build on: " + projectDelta.getResource().getName());
+		
+		// First pass: rebuild changed files and remember them
+		final Set<String> changedFiles = new HashSet<String>();
 		projectDelta.accept(new IResourceDeltaVisitor() {
 			public boolean visit(IResourceDelta delta) {
 				
@@ -155,22 +160,46 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				int mask_new = IResourceDelta.COPIED_FROM | IResourceDelta.MOVED_FROM;
 				int mask_change = IResourceDelta.CONTENT;
 				
+				boolean build = false;
 				if (kind == IResourceDelta.ADDED || (flags & mask_new) == mask_new) {
-					// Build, no questions asked
-					buildFile(file);
+					build = true;
 				}
 				else if (kind == IResourceDelta.CHANGED && (flags & mask_change) == mask_change) {
-					// Only build if the imports have changed!
-					// Load tags file for resource, get list of all modules mentioned
-					// compare lists (both ways)
-//					Set<String> importSet = GFBuilderHelper.readTagsFile(file);
-					Set<String> lastImports = GFBuilderHelper.readFileImports(file);
+					build = true;
+				}
+				if (build) {
 					buildFile(file);
+					String moduleName = file.getName().substring(0, file.getName().length()-file.getFileExtension().length()-1);
+					changedFiles.add(moduleName);
 				}
 				
-				// TODO: need to track any files which refer to those changed, and rebuild them too
-				// Does this need to recurse? Or will one level be enough?
-				
+				// Visit children too
+				return true;
+			}
+		});
+		
+		// Second pass: go through ALL project source files, and if their tags refer to anything in 
+		getProject().accept(new IResourceVisitor() {
+			public boolean visit(IResource resource) {
+				// Check for cancellation
+				if (monitor.isCanceled()) {
+					throw new OperationCanceledException();
+				}
+				// Build
+				if (shouldBuild(resource)) {
+					IFile file = (IFile) resource;
+					Set<String> imports = GFBuilderHelper.getFileImports(file);
+					if (imports == null) {
+						buildFile((IFile) resource);
+						return true;
+					}
+					for (String s : changedFiles) {
+						if (imports.contains(s)) {
+							buildFile((IFile) resource);
+							break;
+						}
+					}
+				}
 				// Visit children too
 				return true;
 			}
@@ -224,6 +253,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				String extension;
 				if ((extension = resource.getFileExtension()) == null) extension = "";
 				
+				// If it's a buildable file, then clear its 'imports' data!
+				if (shouldBuild(resource)) {
+					GFBuilderHelper.clearFileImports(resource);
+				}
+				
 				// Decide if we want to delete it
 				boolean delete = false;
 				if (isFile && extension.equals("gfo")) {
@@ -238,7 +272,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					}
 				}
 				
-				// Do the deed
+				// Perform any deletion
 				try {
 					if (delete) {
 						resource.delete(true, monitor);
@@ -247,6 +281,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				} catch (CoreException e) {
 					log.warn("Delete failed: " + resource.getRawLocation(), e);
 				}
+				
 				// Visit children too
 				return true;
 			}
@@ -263,6 +298,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		if (tagsFile.exists()) {
 			try {
 				tagsFile.delete();
+				GFBuilderHelper.clearFileImports(file);
 				log.info("- " + tagsFile.getAbsolutePath());
 			} catch (Exception _) {
 				log.warn("✕ " + tagsFile.getAbsolutePath());
@@ -287,17 +323,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			return false;
 		}
 	}
-	@SuppressWarnings("unused")
-	private boolean shouldBuild(IFile resource) {
-		try {
-			boolean isGF = resource.getFileExtension().equals("gf");
-			boolean notInBuildFolder = !resource.getFullPath().toOSString().contains(BUILD_FOLDER);
-			boolean notInExternalFolder = !resource.getFullPath().toOSString().contains(EXTERNAL_FOLDER);
-			return isGF && notInBuildFolder && notInExternalFolder;
-		} catch (NullPointerException _) {
-			return false;
-		}
-	}
 	
 	/**
 	 * Call the respective build method depending on the type of build
@@ -315,14 +340,14 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 		
 		// Invalidate scoping cache
-//		GFScopeProvider.cacheDirtyState.put(file.getName(), true);
 		GFScopeProvider.setCacheDirty(file);
 		
 		// Do it
 		buildFileTags(file);
 		
 		// Process tags file and save imports
-//		GFBuilderHelper.saveFileImports(file, set);
+		Set<String> imports = GFBuilderHelper.readTagsFile(file);
+		GFBuilderHelper.saveFileImports(file, imports);
 	}
 	
 	/**
