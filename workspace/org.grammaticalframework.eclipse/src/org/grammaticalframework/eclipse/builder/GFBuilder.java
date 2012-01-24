@@ -32,6 +32,7 @@ import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.OperationCanceledException;
+import org.eclipse.core.runtime.QualifiedName;
 import org.grammaticalframework.eclipse.GFException;
 import org.grammaticalframework.eclipse.GFPreferences;
 import org.grammaticalframework.eclipse.scoping.GFScopeProvider;
@@ -163,7 +164,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					// Load tags file for resource, get list of all modules mentioned
 					// compare lists (both ways)
 //					Set<String> importSet = GFBuilderHelper.readTagsFile(file);
-//					file.setSessionProperty(key, value)
+					String[] lastImports = GFBuilderHelper.readFileImports(file);
 					buildFile(file);
 				}
 				

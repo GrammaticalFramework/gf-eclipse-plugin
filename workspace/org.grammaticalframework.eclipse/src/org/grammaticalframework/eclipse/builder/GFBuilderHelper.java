@@ -7,11 +7,13 @@ import java.io.InputStreamReader;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Hashtable;
+import java.util.List;
 import java.util.Set;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.QualifiedName;
 import org.grammaticalframework.eclipse.scoping.GFTagsFileException;
 import org.grammaticalframework.eclipse.scoping.TagEntry;
 
@@ -96,6 +98,28 @@ public class GFBuilderHelper {
 			return GFBuilder.BUILD_FOLDER
 				+ java.io.File.separator;
 		}
+	}
+	
+	
+	public static void saveFileImports(IResource file, Set<String> imports) {
+		StringBuilder list = new StringBuilder(imports.size()*10);
+		for (String s : imports) {
+			if (list.length()>0) list.append(",");
+			list.append(s);
+		}
+		try {
+			file.setSessionProperty(new QualifiedName("org.grammaticalframework.eclipse", "imports"), list.toString());
+		} catch (CoreException e) {
+			
+		}		
+	}
+	public static String[] readFileImports(IResource file) {
+		try {
+			String list = (String)file.getSessionProperty(new QualifiedName("org.grammaticalframework.eclipse", "imports"));
+			return list.split("\\s*,\\s*");
+		} catch (CoreException e) {
+		}
+		return new String[]{};
 	}
 
 }
