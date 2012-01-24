@@ -112,7 +112,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		}
 		
 		// Build scope out of tag map
-		HashSet<String> set = new HashSet<String>();
+//		HashSet<String> set = new HashSet<String>();
 		try {
 			GFTagBasedScope gfScope = null;
 			IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
@@ -123,7 +123,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				int dotIx = lastSegment.lastIndexOf('.');
 				String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
 				
-				set.add(moduleName);
+//				set.add(moduleName);
 
 				// Append new scope for the current module/uri
 				gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
@@ -131,8 +131,8 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			}
 			
 			// Save list of modules as an IResource persistent property
-			IResource iRes = ResourcesPlugin.getWorkspace().getRoot().findMember(resource.getURI().toPlatformString(false));
-			GFBuilderHelper.saveFileImports(iRes, set);
+//			IResource iRes = ResourcesPlugin.getWorkspace().getRoot().findMember(resource.getURI().toPlatformString(false));
+//			GFBuilderHelper.saveFileImports(iRes, set);
 			
 			return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
 		} catch (NullPointerException _) {

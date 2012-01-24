@@ -164,7 +164,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					// Load tags file for resource, get list of all modules mentioned
 					// compare lists (both ways)
 //					Set<String> importSet = GFBuilderHelper.readTagsFile(file);
-					String[] lastImports = GFBuilderHelper.readFileImports(file);
+					Set<String> lastImports = GFBuilderHelper.readFileImports(file);
 					buildFile(file);
 				}
 				
@@ -315,10 +315,14 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 		
 		// Invalidate scoping cache
-		GFScopeProvider.cacheDirtyState.put(file.getName(), true);
+//		GFScopeProvider.cacheDirtyState.put(file.getName(), true);
+		GFScopeProvider.setCacheDirty(file);
 		
 		// Do it
 		buildFileTags(file);
+		
+		// Process tags file and save imports
+//		GFBuilderHelper.saveFileImports(file, set);
 	}
 	
 	/**

@@ -9,10 +9,10 @@
  */
 package org.grammaticalframework.eclipse.scoping;
 
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
-
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -40,16 +40,38 @@ import com.google.inject.Inject;
  * Basically we look at the current resource and return all the un-qualified names
  * Then delegate to global resource provider.
  * 
- * TODO Caching in scope provider
- *
  * @author John J. Camilleri
  */
 public class GFScopeProvider extends SimpleLocalScopeProvider {
 	
 	/**
-	 * Very low-tech way of allowing the builder to signal that a file's cache is expired
+	 * System for allowing the builder to signal that a file's cache is expired
 	 */
-	public static Map<String, Boolean> cacheDirtyState = new HashMap<String, Boolean>();
+	private static org.eclipse.core.runtime.QualifiedName cachePropertyKey = new org.eclipse.core.runtime.QualifiedName("org.grammaticalframework.eclipse", "cache.dirty"); 
+	public static void setCacheDirty(IResource iresource) {
+		try {
+			iresource.setSessionProperty(cachePropertyKey, new Boolean(true));
+		} catch (CoreException e) {
+			
+		}
+	}
+	private static boolean isCacheDirty(Resource resource) {
+		IResource iresource = ResourcesPlugin.getWorkspace().getRoot().findMember(resource.getURI().toPlatformString(false));
+		try {
+			Boolean value = (Boolean)iresource.getSessionProperty(cachePropertyKey);
+			return value.booleanValue();
+		} catch (Exception _) {
+			return true; // something went wrong or no cache set, assume it is dirty!
+		}
+	}
+	private static void setCacheClean(Resource resource) {
+		IResource iresource = ResourcesPlugin.getWorkspace().getRoot().findMember(resource.getURI().toPlatformString(false));
+		try {
+			iresource.setSessionProperty(cachePropertyKey, new Boolean(false));
+		} catch (CoreException e) {
+		}
+	}
+	
 	
 	/**
 	 * Cache instance
@@ -64,15 +86,13 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	public IScope getScope(final EObject context, final EReference reference) {
 		
 		// If builder marked cache as dirty, then clear it
-		String cacheKey = context.eResource().getURI().lastSegment();
-		if (cacheDirtyState.containsKey(cacheKey) && cacheDirtyState.get(cacheKey).equals(true)) {
+		if (isCacheDirty(context.eResource())) {
 			cache.clear(context.eResource());
-			cacheDirtyState.put(cacheKey, false);
+			setCacheClean(context.eResource());
 		}
 		
 		// Get local scope
 		ISelectable localResourceContent = getAllDescriptions(context.eResource(), context, reference);
-		
 //		ISelectable localResourceContent = cache.get(Tuples.pair(SimpleLocalScopeProvider.class.getName(), reference), 
 //				context.eResource(), new Provider<ISelectable>() {
 //			public ISelectable get() {
