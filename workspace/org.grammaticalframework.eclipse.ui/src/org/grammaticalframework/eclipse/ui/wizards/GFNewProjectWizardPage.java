@@ -9,6 +9,12 @@
  */
 package org.grammaticalframework.eclipse.ui.wizards;
 
+import java.io.File;
+
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IWorkspaceRoot;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
@@ -76,13 +82,32 @@ public class GFNewProjectWizardPage extends WizardPage {
 	 */
 	private void dialogChanged() {
 		
-//		if (false) {
-//			updateStatus("Error");
-//			return;
-//		}
-
-		updateStatus(null);
+		// Check format of name
+		if (getProjectName().contains(java.io.File.separator)) {
+			updateStatus("Invalid project name.");
+			return;
+		}
 		
+		IWorkspaceRoot workspace = ResourcesPlugin.getWorkspace().getRoot();
+		
+		// Check to see if project name already exists in filesystem
+		File file = new File(workspace.getRawLocation() + java.io.File.separator + getProjectName());
+		if (file != null && file.exists()) {
+			String message = String.format(" A folder named \"%1$s\" already exists. A GF project called \"%1$s\" will be created in this location using your existing files.", getProjectName());
+			setMessage(message, INFORMATION);
+		} else {
+			setMessage(null, INFORMATION);
+		}
+		
+		// Check to see if project name is already in workspace
+		IResource container = workspace.findMember(new Path(getProjectName()));
+		if (container != null && container.exists()) {
+			String message = String.format("A project named \"%s\" already exists.", getProjectName());
+			updateStatus(message);
+			return;
+		}
+		
+		updateStatus(null);
 	}
 
 	/**
