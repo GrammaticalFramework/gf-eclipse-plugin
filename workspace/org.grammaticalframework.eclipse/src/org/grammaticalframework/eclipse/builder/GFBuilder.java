@@ -15,14 +15,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IProject;
@@ -34,7 +32,6 @@ import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.OperationCanceledException;
-import org.eclipse.core.runtime.QualifiedName;
 import org.grammaticalframework.eclipse.GFException;
 import org.grammaticalframework.eclipse.GFPreferences;
 import org.grammaticalframework.eclipse.scoping.GFScopeProvider;
@@ -76,6 +73,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private String gfPath;
 	private String gfLibPath;
+	private Boolean buildDependents;
 
 	/**
 	 * Logger
@@ -83,23 +81,18 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	private static final Logger log = Logger.getLogger(GFBuilder.class);
 	
 	/**
-	 * The main build method
-	 * 
-	 * After completing a build, this builder may return a list of projects for which it requires a resource delta the next time it is run.
-	 * This builder's project is implicitly included and need not be specified. The build mechanism will attempt to maintain and compute
-	 * deltas relative to the identified projects when asked the next time this builder is run. Builders must re-specify the list of interesting 
-	 * projects every time they are run as this is not carried forward beyond the next build. Projects mentioned in return value but which
-	 * do not exist will be ignored and no delta will be made available for them.
+	 * Main build method
 	 */
 	@Override
 	protected IProject[] build(int kind, Map<String, String> args, IProgressMonitor monitor) throws OperationCanceledException, CoreException {
 		// Get some prefs
 		gfPath = GFPreferences.getRuntimePath();
 		if (gfPath == null || gfPath.trim().isEmpty()) {
-			log.error("Error during build: GF path not specified.");
+			log.error("GF path not specified");
 			return null;
 		}
 		gfLibPath = GFPreferences.getLibraryPath();
+		buildDependents = GFPreferences.getBuildDependents();
 		
 		try {
 			switch (kind) {
@@ -121,8 +114,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			getProject().refreshLocal(IResource.DEPTH_INFINITE, monitor);
 			
 		} catch (OperationCanceledException e) {
-			log.info("Build cancelled", e);
-			throw e;
+			log.info("Build cancelled");
+			throw e; // handled by the platform
 		}
 		
 		// build has no dependencies on other projects
@@ -179,6 +172,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		});
 		
 		// Second pass: go through ALL project source files, and if their tags refer to anything in 
+		if (!buildDependents) return;
+		log.info("Inferred build on dependents of changed files");
 		getProject().accept(new IResourceVisitor() {
 			public boolean visit(IResource resource) {
 				// Check for cancellation
@@ -248,38 +243,24 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				if (monitor.isCanceled()) {
 					throw new OperationCanceledException();
 				}
-				// Get some details
-				boolean isFile = (resource.getType() == IResource.FILE);
-				String extension;
-				if ((extension = resource.getFileExtension()) == null) extension = "";
 				
 				// If it's a buildable file, then clear its 'imports' data!
 				if (shouldBuild(resource)) {
 					GFBuilderHelper.clearFileImports(resource);
+					return true;
 				}
 				
 				// Decide if we want to delete it
-				boolean delete = false;
-				if (isFile && extension.equals("gfo")) {
-					delete = true;
-				}
-				else {
+				boolean isFile = (resource.getType() == IResource.FILE);
+				String extension = (resource.getFileExtension() != null) ? resource.getFileExtension() : "";
+				String parent = (resource.getParent() != null) ? resource.getParent().getName() : "";
+				if (isFile && (extension.equals("gfo") || parent.equals(BUILD_FOLDER))) {
 					try {
-						IContainer parent = resource.getParent();
-						delete = parent.getName().equals(BUILD_FOLDER);
-					} catch (NullPointerException _) {
-						// file has no grand/parent
-					}
-				}
-				
-				// Perform any deletion
-				try {
-					if (delete) {
 						resource.delete(true, monitor);
-						log.info("Deleted: " + resource.getRawLocation());
+						log.info("Deleted: " + resource.getFullPath());
+					} catch (CoreException e) {
+						log.warn("Delete failed: " + resource.getFullPath(), e);
 					}
-				} catch (CoreException e) {
-					log.warn("Delete failed: " + resource.getRawLocation(), e);
 				}
 				
 				// Visit children too
@@ -299,11 +280,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			try {
 				tagsFile.delete();
 				GFBuilderHelper.clearFileImports(file);
-				log.info("- " + tagsFile.getAbsolutePath());
 			} catch (Exception _) {
-				log.warn("✕ " + tagsFile.getAbsolutePath());
+				
 			}
 		}
+		
 	}
 	
 	/**
@@ -335,8 +316,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			cleanFile(file);
 		try {
 			file.deleteMarkers(null, true, IResource.DEPTH_ZERO);
-		} catch(CoreException _) {
-			log.warn("Error trying to delete markers for " + file.getName());
+		} catch(CoreException e) {
+			log.warn("Error deleting markers for: " + file.getFullPath(), e);
 		}
 		
 		// Invalidate scoping cache
@@ -401,15 +382,15 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			if (procTags.waitFor() != 0) {
 				String message = parseGFErrorStream(file, procTags.getErrorStream());
 //				log.warn("Build failed on: "+file.getRawLocation(), new GFException(message.toString()));
-				log.warn(String.format("Build failed on: %s\n%s", file.getName(), message.toString()));
+				log.warn(String.format("Build failed on: %s\n%s", file.getFullPath(), message.toString()));
 			} else {
-				log.info("Built: "+ file.getName());
+				log.info("Built: "+ file.getFullPath());
 			}
 
 		} catch (IOException e) {
-			log.error("Build failed on: "+file.getName(), e);
+			log.error("Build failed on: "+file.getFullPath(), e);
 		} catch (InterruptedException e) {
-			log.error("Build interrupted on: "+file.getName(), e);
+			log.error("Build interrupted on: "+file.getFullPath(), e);
 		}
 	}
 	
@@ -486,13 +467,13 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			}
 			
 		} catch (IndexOutOfBoundsException e) {
-			log.info("Unrecognized error format", e);
+			log.info("Unrecognized error format when building: " + file.getFullPath(), e);
 		} catch (NullPointerException e) {
-			log.info("Unrecognized error format", e);
+			log.info("Unrecognized error format when building: " + file.getFullPath(), e);
 		} catch (CoreException e) {
-			log.warn("Error creating marker on: " + file.getName(), e);
+			log.warn("Error creating marker on: " + file.getFullPath(), e);
 		} catch (IOException e) {
-			log.warn("Error parsing error stream for: " + file.getName(), e);
+			log.warn("Error parsing error stream for: " + file.getFullPath(), e);
 		}		
 		return errorString.toString();
 	}

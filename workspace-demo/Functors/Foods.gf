@@ -7,15 +7,11 @@ abstract Foods = {
 	cat
 		Phrase ;
 		Item ;
-		Item2 ;
 		Kind ;
 		Quality ;
-		
-		Test ;
-		[Test]{2} ;
 
 	fun
-		Is : Item -> Quality -> Phrase ;
+		-- Is : Item -> Quality -> Phrase ;
 		This, That, These, Those : Kind -> Item ;
 		QKind : Quality -> Kind -> Kind ;
 		Wine, Cheese, Fish, Pizza : Kind ;

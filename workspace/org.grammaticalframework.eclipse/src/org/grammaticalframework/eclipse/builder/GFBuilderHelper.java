@@ -48,7 +48,6 @@ public class GFBuilderHelper {
 	
 	public static Set<String> readTagsFile(IFile file) {
 		boolean includeSelf = false;
-//		Hashtable<String, Collection<TagEntry>> strTagMap = new Hashtable<String, Collection<TagEntry>>();
 		String tagsFileName = getTagsFileNameRelative(file.getName());
 		try {
 			IFile tagsFile = (IFile)file.getParent().findMember(tagsFileName);
@@ -60,13 +59,9 @@ public class GFBuilderHelper {
 				TagEntry tag;
 				try {
 					tag = new TagEntry(line);
-					
-					
-					// TODO: Properly check this code! Specifically, is getModuleName() below the right choice?
-					
 					importSet.add(tag.getModuleName());
 				} catch (GFTagsFileException e) {
-					//log.warn(e); // Would happen if the tags file is malformed somehow
+					// The tags file is malformed somehow
 					continue;
 				}
 			}

@@ -33,7 +33,6 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.core.runtime.QualifiedName;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -45,7 +44,6 @@ import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.*;
 import org.eclipse.xtext.util.IResourceScopeCache;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
-import org.grammaticalframework.eclipse.builder.GFBuilderHelper;
 import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
 import org.grammaticalframework.eclipse.gF.ModDef;
 
@@ -112,7 +110,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		}
 		
 		// Build scope out of tag map
-//		HashSet<String> set = new HashSet<String>();
 		try {
 			GFTagBasedScope gfScope = null;
 			IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
@@ -123,16 +120,10 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				int dotIx = lastSegment.lastIndexOf('.');
 				String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
 				
-//				set.add(moduleName);
-
 				// Append new scope for the current module/uri
 				gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
 				gfScope.addTags(resourceDescriptions, entry.getValue());
 			}
-			
-			// Save list of modules as an IResource persistent property
-//			IResource iRes = ResourcesPlugin.getWorkspace().getRoot().findMember(resource.getURI().toPlatformString(false));
-//			GFBuilderHelper.saveFileImports(iRes, set);
 			
 			return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
 		} catch (NullPointerException _) {

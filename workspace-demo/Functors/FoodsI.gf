@@ -8,8 +8,7 @@ incomplete concrete FoodsI of Foods =
 		Phrase = Cl ;
 		Item = NP ;
 		Kind = CN ;
-		Quality = AP ;
-
+		Quality = AP ; 
 	lin
 		Is item quality = mkCl item quality ;
 		This kind = mkNP this_Det kind ;

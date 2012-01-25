@@ -4,4 +4,5 @@ publish-release.sh
 releases/
 .gfbuild/
 *.class
+*.gfo
 

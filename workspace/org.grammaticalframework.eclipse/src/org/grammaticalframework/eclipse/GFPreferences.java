@@ -51,6 +51,14 @@ public class GFPreferences {
 	}
 	
 	/**
+	 * Preference to control auto-building dependencies
+	 */
+	public static final String BUILD_DEPENDENTS = "buildDependents"; 
+	public static Boolean getBuildDependents() {
+		return getBoolean(BUILD_DEPENDENTS);
+	}
+	
+	/**
 	 * Preference to specify debug level
 	 */
 	public static final String LOG_LEVEL = "logLevel";
@@ -89,11 +97,13 @@ public class GFPreferences {
 	 * @param defaultValue the default value
 	 * @return the boolean
 	 */
-	public static Boolean getBoolean(String prefKey, Boolean defaultValue) {
+//	public static Boolean getBoolean(String prefKey, Boolean defaultValue) {
+	public static Boolean getBoolean(String prefKey) {
 		IPreferencesService prefs = Platform.getPreferencesService();
 //		IScopeContext[] contexts = new IScopeContext[] { ConfigurationScope.INSTANCE }; 
 		IScopeContext[] contexts = null; 
-		return prefs.getBoolean(QUALIFIER, prefKey, defaultValue, contexts);
+//		return prefs.getBoolean(QUALIFIER, prefKey, defaultValue, contexts);
+		return prefs.getBoolean(QUALIFIER, prefKey, false, contexts);
 	}
 	
 }

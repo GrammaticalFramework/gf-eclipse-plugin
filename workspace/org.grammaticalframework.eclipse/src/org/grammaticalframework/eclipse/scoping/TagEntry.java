@@ -135,7 +135,7 @@ public class TagEntry {
 	}
 
 	/**
-	 * Get the tag's true module name. Note this is not necessarily the same as the qualifier.
+	 * Get the tag's true module name, determined by the name of the file where it appears. Note this is not necessarily the same as the qualifier.
 	 * @return qualifier
 	 */
 	public String getModuleName() {

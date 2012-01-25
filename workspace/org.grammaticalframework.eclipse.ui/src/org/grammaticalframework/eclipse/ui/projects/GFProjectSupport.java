@@ -21,8 +21,6 @@ import org.eclipse.core.resources.IWorkspaceDescription;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Assert;
 import org.eclipse.core.runtime.CoreException;
-import org.eclipse.xtext.ui.XtextProjectHelper;
-
 import org.grammaticalframework.eclipse.ui.natures.GFProjectNature;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 
