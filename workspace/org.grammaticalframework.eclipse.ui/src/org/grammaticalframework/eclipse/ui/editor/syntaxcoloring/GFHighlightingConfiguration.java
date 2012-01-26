@@ -45,7 +45,7 @@ public class GFHighlightingConfiguration extends DefaultHighlightingConfiguratio
 	@Override
 	public TextStyle punctuationTextStyle() {
 		TextStyle textStyle = defaultTextStyle().copy();
-		textStyle.setColor(new RGB(119, 119, 119)); // #777777
+		textStyle.setColor(new RGB(102, 102, 102)); // #666666
 		return textStyle;
 	}
 	
