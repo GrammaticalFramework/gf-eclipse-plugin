@@ -46,6 +46,8 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ContainerSelectionDialog;
+import org.grammaticalframework.eclipse.ui.wizards.WizardHelper.GFModuleContentProposalProvider;
+import org.grammaticalframework.eclipse.ui.wizards.WizardHelper.GFModuleContentAdapter;
 
 /**
  * The "New" wizard page allows setting the container for the new file as well
@@ -226,41 +228,7 @@ public class GFNewFileWizardPage extends WizardPage {
 		setControl(container);
 	}
 	
-	private class GFModuleContentProposalProvider extends SimpleContentProposalProvider {
-		public GFModuleContentProposalProvider() {
-			super(new String[]{});
-			String[] proposals = getFileList().toArray(new String[]{});
-			setProposals(proposals);
-			this.setFiltering(true);
-		}
-		public GFModuleContentProposalProvider(String[] proposals) {
-			super(proposals);
-			this.setFiltering(true);
-		}
-		@Override
-		public IContentProposal[] getProposals(String contents, int position) {
-			// Only consider AFTER the last comma (but before cursor), then delegate to parent
-			contents = contents.substring(0, position);
-			int ix = contents.lastIndexOf(',');
-			if (ix > -1) {
-				contents = contents.substring(ix+1).trim();
-			}
-			return super.getProposals(contents, position);
-		}
-	}
-	private class GFModuleContentAdapter extends TextContentAdapter {
-		@Override
-		public Point getSelection(Control control) {
-			//Always select from caret position to left-closest comma or space character
-			// e.g. for "Kittens, Pupp|ies" we want to return "Pupp"
-			int pos = ((Text) control).getCaretPosition();
-			String contents = ((Text) control).getText(0, pos);
-			int ix = Math.max(contents.lastIndexOf(','), contents.lastIndexOf(' '));
-			return (ix < 0) ? new Point(0, pos) : new Point(ix+1, pos);
-		}
-	}
-	
-	private GFModuleContentProposalProvider proposalProvider = new GFModuleContentProposalProvider();
+	private GFModuleContentProposalProvider proposalProvider = new GFModuleContentProposalProvider(WizardHelper.getFileList(true));
 	private TextContentAdapter contentAdapter = new GFModuleContentAdapter();
 	
 	/**
@@ -283,45 +251,6 @@ public class GFNewFileWizardPage extends WizardPage {
 		deco.setImage(image);
 //		deco.setDescriptionText("Use Ctrl+Space to see possible values");
 		deco.setDescriptionText("Auto-suggest enabled");
-	}
-	
-	/**
-	 * Recursively find all files in the workspace, in a flat list to be used as suggestions.
-	 *
-	 * @return the file list
-	 */
-	private ArrayList<String> getFileList() {
-		ArrayList<String> suggestions = new ArrayList<String>();
-		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-		traverseFileList(root, suggestions);
-		return suggestions;
-	}
-	
-	/**
-	 * Traverse file list recursively, for suggestions
-	 *
-	 * @param resource the resource
-	 * @param suggestions the suggestions
-	 */
-	private void traverseFileList(IResource resource, ArrayList<String> suggestions) {
-		if (resource instanceof IFile) {
-			IFile file = (IFile)resource;
-			try {
-				if (file.getFileExtension().equalsIgnoreCase("gf")) {
-					suggestions.add( resource.getName().substring(0, resource.getName().length()-3) );
-				}
-			} catch (NullPointerException e) {
-				// there was no file extension
-			}
-		} else if (resource instanceof IContainer) {
-			try {
-				for (IResource member : ((IContainer)resource).members()) {
-					traverseFileList(member, suggestions);
-				}
-			} catch (CoreException e) {
-				// No problem
-			}
-		}
 	}
 	
 	/**
