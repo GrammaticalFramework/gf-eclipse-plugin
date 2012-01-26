@@ -9,7 +9,9 @@
  */
 package org.grammaticalframework.eclipse.formatting;
 
+import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.Keyword;
+import org.eclipse.xtext.ParserRule;
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
 import org.eclipse.xtext.util.Pair;
@@ -65,15 +67,22 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		}
 
 		// Special case when using `open (Alias = Name)`
-		Keyword k2 = f.getOpenAccess().getLeftParenthesisKeyword_2_0();
-		c.setLinewrap().before(k2);
-		c.setIndentationIncrement().before(k2);
-		c.setIndentationDecrement().after(k2); // don't cascade the indentation!
-
+		for (Keyword k : new Keyword[] {
+			f.getOpenAccess().getLeftParenthesisKeyword_2_0()
+		}) {
+			c.setLinewrap().before(k);
+			c.setIndentationIncrement().before(k);
+			c.setIndentationDecrement().after(k);
+		}
+			
 		// Indentation within the ModDef's body
-		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_0_3(), f.getModBodyAccess().getRightCurlyBracketKeyword_0_5());
-		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_3_6(), f.getModBodyAccess().getRightCurlyBracketKeyword_3_8());
-		c.setIndentation(f.getModBodyAccess().getLeftCurlyBracketKeyword_5_8(), f.getModBodyAccess().getRightCurlyBracketKeyword_5_10());
+		for (Keyword[] k : new Keyword[][] {
+				{ f.getModBodyAccess().getLeftCurlyBracketKeyword_0_3(), f.getModBodyAccess().getRightCurlyBracketKeyword_0_5() },
+				{ f.getModBodyAccess().getLeftCurlyBracketKeyword_3_6(), f.getModBodyAccess().getRightCurlyBracketKeyword_3_8() },
+				{ f.getModBodyAccess().getLeftCurlyBracketKeyword_5_8(), f.getModBodyAccess().getRightCurlyBracketKeyword_5_10() },
+		}) {
+			c.setIndentation(k[0], k[1]);
+		}		
 
 		// Top def groupings (`cat`, `fun`, `lin` ...)
 		for (Keyword k : new Keyword[] {
@@ -129,13 +138,16 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		// Comma in lincat judgements, e.g.: `Cat1, Cat2 : SS ;`
 		c.setLinewrap().after(f.getPrintDefAccess().getCommaKeyword_1_0());
 
-		// c.setLinewrap().before(f.getCatDefRule());
-		// c.setLinewrap().before(f.getFunDefRule());
-		// c.setLinewrap().before(f.getDefRule());
-		// c.setLinewrap().before(f.getDataDefRule());
-		// c.setLinewrap().before(f.getParDefRule());
-		// c.setLinewrap().before(f.getPrintDefRule());
-		// c.setLinewrap().before(f.getFlagDefRule());
+//		for (ParserRule r : new ParserRule[]{
+//		 f.getCatDefRule(),
+//		 f.getFunDefRule(),
+//		 f.getDefRule(),
+//		 f.getDataDefRule(),
+//		 f.getParDefRule(),
+//		 f.getPrintDefRule(),
+//		 f.getFlagDefRule(),
+//	}) {
+//	}
 
 		// case, table
 		// c.setLinewrap().before(f.getListCaseRule());
@@ -151,7 +163,63 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 			c.setIndentation(k[0], k[1]);
 			c.setLinewrap().before(k[1]);
 		}
+		
+		// let ... in ...
+		// TODO This should be combined with the commented code below, although that refuses to work :(
+		// See: https://bugs.eclipse.org/bugs/show_bug.cgi?id=369795
+		// and: http://www.eclipse.org/forums/index.php/t/279480/
+		for (Keyword[] k : new Keyword[][] {
+				{ f.getExpAccess().getLetKeyword_2_0(), f.getExpAccess().getInKeyword_2_4() },
+				{ f.getExpAccess().getLetKeyword_3_0(), f.getExpAccess().getInKeyword_3_2() },
+		}) {
+			c.setLinewrap().before(k[0]);
+			c.setIndentationIncrement().before(k[0]);
+		}
+		for (Keyword[] k : new Keyword[][] {
+				{ f.getExpAccess().getLeftCurlyBracketKeyword_2_1(), f.getExpAccess().getRightCurlyBracketKeyword_2_3() },
+				{ f.getExpAccess().getLetKeyword_3_0(), f.getExpAccess().getInKeyword_3_2() },
+		}) {
+			c.setLinewrap().after(k[0]);
+			c.setIndentationIncrement().after(k[0]);
+			
+			c.setLinewrap().before(k[1]);
+			c.setIndentationDecrement().before(k[1]);
+			c.setIndentationDecrement().after(k[1]); // this is probably wrong
+		}
+		
+//		for (Assignment k : new Assignment[] {
+//				f.getExpAccess().getVAssignment_0_3(),
+//				f.getExpAccess().getVAssignment_1_4(),
+//				f.getExpAccess().getVAssignment_2_5(),
+//				f.getExpAccess().getVAssignment_3_3(),
+//				f.getExpAccess().getVAssignment_4_6(),
+//				f.getExpAccess().getVAssignment_5_0(),
+//				f.getExpAccess().getVAssignment_6_1(),
+//				f.getExpAccess().getDefListAssignment_2_2(),
+//				f.getExpAccess().getDefListAssignment_3_1(),
+//				f.getExpAccess().getDefListAssignment_5_1_0_1_1_2(),
+//				f.getExpAccess().getDefListAssignment_6_3_1_2(),
+//		}) {
+//			c.setLinewrap().before(k);
+//			c.setIndentationIncrement().before(k);
+//			c.setIndentationDecrement().after(k);
+//			c.setLinewrap().after(k);
+//		}
+		
+		// TODO where
 
+		// Record fields
+		for (Keyword[] k : new Keyword[][] {
+				// { f.getPatt2Access().getLeftCurlyBracketKeyword_6_0(), f.getPatt2Access().getLeftCurlyBracketKeyword_6_0() },
+				{ f.getExp6Access().getRecordLeftCurlyBracketKeyword_11_0_0(), f.getExp6Access().getRightCurlyBracketKeyword_11_2() },
+		}) {
+			c.setLinewrap().after(k[0]);
+			c.setIndentation(k[0], k[1]);
+			c.setLinewrap().before(k[1]);
+		}
+		c.setLinewrap().after(f.getListLocDefAccess().getSemicolonKeyword_1_1_0());
+		c.setLinewrap().after(f.getListLocDefAccess().getSemicolonKeyword_1_2());
+		
 		// Commas in local bindings
 		c.setNoSpace().after(f.getListBindAccess().getCommaKeyword_1_1_0());
 
@@ -177,8 +245,6 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 			c.setNoSpace().after(pair.getFirst());
 			c.setNoSpace().before(pair.getSecond());
 		}
-
-		// TODO Formatting for let
 
 	}
 }
