@@ -4510,13 +4510,14 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Keyword cStringKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
 		private final Keyword cIntKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
-		private final Keyword cFloatKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		private final Keyword cIntsKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
+		private final Keyword cFloatKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
 		
 		//BuiltInCat:
-		//	"String" | "Int" | "Float";
+		//	"String" | "Int" | "Ints" | "Float";
 		public ParserRule getRule() { return rule; }
 
-		//"String" | "Int" | "Float"
+		//"String" | "Int" | "Ints" | "Float"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//"String"
@@ -4525,8 +4526,11 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"Int"
 		public Keyword getIntKeyword_1() { return cIntKeyword_1; }
 
+		//"Ints"
+		public Keyword getIntsKeyword_2() { return cIntsKeyword_2; }
+
 		//"Float"
-		public Keyword getFloatKeyword_2() { return cFloatKeyword_2; }
+		public Keyword getFloatKeyword_3() { return cFloatKeyword_3; }
 	}
 
 	public class ListPattAssElements extends AbstractParserRuleElementFinder {
@@ -5447,7 +5451,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BuiltInCat:
-	//	"String" | "Int" | "Float";
+	//	"String" | "Int" | "Ints" | "Float";
 	public BuiltInCatElements getBuiltInCatAccess() {
 		return (pBuiltInCat != null) ? pBuiltInCat : (pBuiltInCat = new BuiltInCatElements());
 	}

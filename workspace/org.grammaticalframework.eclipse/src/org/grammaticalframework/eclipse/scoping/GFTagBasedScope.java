@@ -105,7 +105,7 @@ public class GFTagBasedScope extends AbstractScope {
 					descriptions.add(eObjectDescription2);
 				}
 				else {
-					log.debug("No EObject found for " + tag.getQualifiedName());
+					//log.debug("No EObject found for " + tag.getQualifiedName());
 				}
 				
 				

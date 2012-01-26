@@ -1750,6 +1750,7 @@
     <alternatives xsi:type="xtext:Alternatives">
       <elements xsi:type="xtext:Keyword" value="String"/>
       <elements xsi:type="xtext:Keyword" value="Int"/>
+      <elements xsi:type="xtext:Keyword" value="Ints"/>
       <elements xsi:type="xtext:Keyword" value="Float"/>
     </alternatives>
   </rules>

@@ -22,7 +22,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INTEGER", "RULE_STRING", "RULE_ID", "RULE_DOUBLE", "RULE_COMPILER_PRAGMA", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'incomplete'", "'='", "';'", "'abstract'", "'resource'", "'interface'", "'concrete'", "'of'", "'instance'", "','", "'**'", "'open'", "'in'", "'{'", "'}'", "'with'", "'('", "')'", "'['", "']'", "'-'", "':'", "'overload'", "'cat'", "'fun'", "'data'", "'def'", "'param'", "'oper'", "'lincat'", "'lindef'", "'lin'", "'printname'", "'flags'", "'|'", "'.'", "'?'", "'<'", "'>'", "'table'", "'case'", "'variants'", "'pre'", "'!'", "'*'", "'#'", "'+'", "'++'", "'\\\\'", "'->'", "'=>'", "'let'", "'where'", "'_'", "'@'", "'$'", "'Type'", "'PType'", "'Str'", "'Strs'", "'String'", "'Int'", "'Float'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INTEGER", "RULE_STRING", "RULE_ID", "RULE_DOUBLE", "RULE_COMPILER_PRAGMA", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'incomplete'", "'='", "';'", "'abstract'", "'resource'", "'interface'", "'concrete'", "'of'", "'instance'", "','", "'**'", "'open'", "'in'", "'{'", "'}'", "'with'", "'('", "')'", "'['", "']'", "'-'", "':'", "'overload'", "'cat'", "'fun'", "'data'", "'def'", "'param'", "'oper'", "'lincat'", "'lindef'", "'lin'", "'printname'", "'flags'", "'|'", "'.'", "'?'", "'<'", "'>'", "'table'", "'case'", "'variants'", "'pre'", "'!'", "'*'", "'#'", "'+'", "'++'", "'\\\\'", "'->'", "'=>'", "'let'", "'where'", "'_'", "'@'", "'$'", "'Type'", "'PType'", "'Str'", "'Strs'", "'String'", "'Int'", "'Ints'", "'Float'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -93,6 +93,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int RULE_WS=11;
+    public static final int T__76=76;
     public static final int T__75=75;
     public static final int T__74=74;
     public static final int T__73=73;
@@ -3198,11 +3199,11 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 if ( (LA34_2==RULE_ID) ) {
                     int LA34_3 = input.LA(3);
 
-                    if ( (LA34_3==30) ) {
-                        alt34=2;
-                    }
-                    else if ( (LA34_3==14) ) {
+                    if ( (LA34_3==14) ) {
                         alt34=3;
+                    }
+                    else if ( (LA34_3==30) ) {
+                        alt34=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
@@ -3529,16 +3530,6 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             if ( (LA37_0==RULE_ID) ) {
                 switch ( input.LA(2) ) {
-                case 31:
-                    {
-                    alt37=2;
-                    }
-                    break;
-                case 33:
-                    {
-                    alt37=3;
-                    }
-                    break;
                 case EOF:
                 case 15:
                 case 22:
@@ -3546,6 +3537,16 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 28:
                     {
                     alt37=1;
+                    }
+                    break;
+                case 33:
+                    {
+                    alt37=3;
+                    }
+                    break;
+                case 31:
+                    {
+                    alt37=2;
                     }
                     break;
                 default:
@@ -4814,7 +4815,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt45=2;
                     int LA45_0 = input.LA(1);
 
-                    if ( ((LA45_0>=RULE_INTEGER && LA45_0<=RULE_DOUBLE)||LA45_0==26||LA45_0==29||LA45_0==31||LA45_0==38||LA45_0==42||LA45_0==44||(LA45_0>=49 && LA45_0<=50)||(LA45_0>=52 && LA45_0<=55)||LA45_0==58||LA45_0==61||LA45_0==64||(LA45_0>=69 && LA45_0<=75)) ) {
+                    if ( ((LA45_0>=RULE_INTEGER && LA45_0<=RULE_DOUBLE)||LA45_0==26||LA45_0==29||LA45_0==31||LA45_0==38||LA45_0==42||LA45_0==44||(LA45_0>=49 && LA45_0<=50)||(LA45_0>=52 && LA45_0<=55)||LA45_0==58||LA45_0==61||LA45_0==64||(LA45_0>=69 && LA45_0<=76)) ) {
                         alt45=1;
                     }
                     else if ( (LA45_0==35) ) {
@@ -5223,7 +5224,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             int alt49=2;
                             int LA49_0 = input.LA(1);
 
-                            if ( ((LA49_0>=RULE_INTEGER && LA49_0<=RULE_DOUBLE)||LA49_0==26||LA49_0==29||LA49_0==31||LA49_0==38||LA49_0==42||LA49_0==44||(LA49_0>=49 && LA49_0<=50)||(LA49_0>=52 && LA49_0<=55)||LA49_0==58||LA49_0==61||LA49_0==64||(LA49_0>=69 && LA49_0<=75)) ) {
+                            if ( ((LA49_0>=RULE_INTEGER && LA49_0<=RULE_DOUBLE)||LA49_0==26||LA49_0==29||LA49_0==31||LA49_0==38||LA49_0==42||LA49_0==44||(LA49_0>=49 && LA49_0<=50)||(LA49_0>=52 && LA49_0<=55)||LA49_0==58||LA49_0==61||LA49_0==64||(LA49_0>=69 && LA49_0<=76)) ) {
                                 alt49=1;
                             }
                             else if ( (LA49_0==35) ) {
@@ -7589,7 +7590,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt69=2;
                         int LA69_0 = input.LA(1);
 
-                        if ( ((LA69_0>=RULE_INTEGER && LA69_0<=RULE_DOUBLE)||LA69_0==26||LA69_0==29||LA69_0==31||LA69_0==38||(LA69_0>=49 && LA69_0<=50)||(LA69_0>=69 && LA69_0<=75)) ) {
+                        if ( ((LA69_0>=RULE_INTEGER && LA69_0<=RULE_DOUBLE)||LA69_0==26||LA69_0==29||LA69_0==31||LA69_0==38||(LA69_0>=49 && LA69_0<=50)||(LA69_0>=69 && LA69_0<=76)) ) {
                             alt69=1;
                         }
 
@@ -7695,7 +7696,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt70=2;
                         int LA70_0 = input.LA(1);
 
-                        if ( ((LA70_0>=RULE_INTEGER && LA70_0<=RULE_DOUBLE)||LA70_0==26||LA70_0==29||LA70_0==31||LA70_0==38||(LA70_0>=49 && LA70_0<=50)||(LA70_0>=69 && LA70_0<=75)) ) {
+                        if ( ((LA70_0>=RULE_INTEGER && LA70_0<=RULE_DOUBLE)||LA70_0==26||LA70_0==29||LA70_0==31||LA70_0==38||(LA70_0>=49 && LA70_0<=50)||(LA70_0>=69 && LA70_0<=76)) ) {
                             alt70=1;
                         }
 
@@ -9155,7 +9156,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt82=2;
                 int LA82_0 = input.LA(1);
 
-                if ( ((LA82_0>=RULE_INTEGER && LA82_0<=RULE_DOUBLE)||LA82_0==26||LA82_0==29||LA82_0==31||LA82_0==38||(LA82_0>=49 && LA82_0<=50)||(LA82_0>=69 && LA82_0<=75)) ) {
+                if ( ((LA82_0>=RULE_INTEGER && LA82_0<=RULE_DOUBLE)||LA82_0==26||LA82_0==29||LA82_0==31||LA82_0==38||(LA82_0>=49 && LA82_0<=50)||(LA82_0>=69 && LA82_0<=76)) ) {
                     alt82=1;
                 }
 
@@ -11880,7 +11881,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt97=2;
                         int LA97_0 = input.LA(1);
 
-                        if ( ((LA97_0>=RULE_INTEGER && LA97_0<=RULE_DOUBLE)||LA97_0==26||LA97_0==29||LA97_0==31||LA97_0==38||(LA97_0>=49 && LA97_0<=50)||(LA97_0>=69 && LA97_0<=75)) ) {
+                        if ( ((LA97_0>=RULE_INTEGER && LA97_0<=RULE_DOUBLE)||LA97_0==26||LA97_0==29||LA97_0==31||LA97_0==38||(LA97_0>=49 && LA97_0<=50)||(LA97_0>=69 && LA97_0<=76)) ) {
                             alt97=1;
                         }
 
@@ -12125,7 +12126,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt99=2;
                         int LA99_0 = input.LA(1);
 
-                        if ( ((LA99_0>=RULE_INTEGER && LA99_0<=RULE_DOUBLE)||LA99_0==26||LA99_0==29||LA99_0==31||LA99_0==38||(LA99_0>=49 && LA99_0<=50)||(LA99_0>=69 && LA99_0<=75)) ) {
+                        if ( ((LA99_0>=RULE_INTEGER && LA99_0<=RULE_DOUBLE)||LA99_0==26||LA99_0==29||LA99_0==31||LA99_0==38||(LA99_0>=49 && LA99_0<=50)||(LA99_0>=69 && LA99_0<=76)) ) {
                             alt99=1;
                         }
 
@@ -12284,7 +12285,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt100=2;
                         int LA100_0 = input.LA(1);
 
-                        if ( ((LA100_0>=RULE_INTEGER && LA100_0<=RULE_DOUBLE)||LA100_0==26||LA100_0==29||LA100_0==31||LA100_0==38||(LA100_0>=49 && LA100_0<=50)||(LA100_0>=69 && LA100_0<=75)) ) {
+                        if ( ((LA100_0>=RULE_INTEGER && LA100_0<=RULE_DOUBLE)||LA100_0==26||LA100_0==29||LA100_0==31||LA100_0==38||(LA100_0>=49 && LA100_0<=50)||(LA100_0>=69 && LA100_0<=76)) ) {
                             alt100=1;
                         }
 
@@ -12402,7 +12403,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt101=2;
                         int LA101_0 = input.LA(1);
 
-                        if ( ((LA101_0>=RULE_INTEGER && LA101_0<=RULE_DOUBLE)||LA101_0==26||LA101_0==29||LA101_0==31||LA101_0==38||(LA101_0>=49 && LA101_0<=50)||(LA101_0>=69 && LA101_0<=75)) ) {
+                        if ( ((LA101_0>=RULE_INTEGER && LA101_0<=RULE_DOUBLE)||LA101_0==26||LA101_0==29||LA101_0==31||LA101_0==38||(LA101_0>=49 && LA101_0<=50)||(LA101_0>=69 && LA101_0<=76)) ) {
                             alt101=1;
                         }
 
@@ -12520,7 +12521,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt102=2;
                         int LA102_0 = input.LA(1);
 
-                        if ( ((LA102_0>=RULE_INTEGER && LA102_0<=RULE_DOUBLE)||LA102_0==26||LA102_0==29||LA102_0==31||LA102_0==38||(LA102_0>=49 && LA102_0<=50)||(LA102_0>=69 && LA102_0<=75)) ) {
+                        if ( ((LA102_0>=RULE_INTEGER && LA102_0<=RULE_DOUBLE)||LA102_0==26||LA102_0==29||LA102_0==31||LA102_0==38||(LA102_0>=49 && LA102_0<=50)||(LA102_0>=69 && LA102_0<=76)) ) {
                             alt102=1;
                         }
 
@@ -12616,7 +12617,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt103=2;
                         int LA103_0 = input.LA(1);
 
-                        if ( ((LA103_0>=RULE_INTEGER && LA103_0<=RULE_DOUBLE)||LA103_0==26||LA103_0==29||LA103_0==31||LA103_0==38||(LA103_0>=49 && LA103_0<=50)||(LA103_0>=69 && LA103_0<=75)) ) {
+                        if ( ((LA103_0>=RULE_INTEGER && LA103_0<=RULE_DOUBLE)||LA103_0==26||LA103_0==29||LA103_0==31||LA103_0==38||(LA103_0>=49 && LA103_0<=50)||(LA103_0>=69 && LA103_0<=76)) ) {
                             alt103=1;
                         }
 
@@ -12747,7 +12748,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt104=2;
                         int LA104_0 = input.LA(1);
 
-                        if ( ((LA104_0>=RULE_INTEGER && LA104_0<=RULE_DOUBLE)||LA104_0==26||LA104_0==29||LA104_0==31||LA104_0==38||(LA104_0>=49 && LA104_0<=50)||(LA104_0>=69 && LA104_0<=75)) ) {
+                        if ( ((LA104_0>=RULE_INTEGER && LA104_0<=RULE_DOUBLE)||LA104_0==26||LA104_0==29||LA104_0==31||LA104_0==38||(LA104_0>=49 && LA104_0<=50)||(LA104_0>=69 && LA104_0<=76)) ) {
                             alt104=1;
                         }
 
@@ -12847,7 +12848,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt105=2;
                         int LA105_0 = input.LA(1);
 
-                        if ( ((LA105_0>=RULE_INTEGER && LA105_0<=RULE_DOUBLE)||LA105_0==26||LA105_0==29||LA105_0==31||LA105_0==38||(LA105_0>=49 && LA105_0<=50)||(LA105_0>=69 && LA105_0<=75)) ) {
+                        if ( ((LA105_0>=RULE_INTEGER && LA105_0<=RULE_DOUBLE)||LA105_0==26||LA105_0==29||LA105_0==31||LA105_0==38||(LA105_0>=49 && LA105_0<=50)||(LA105_0>=69 && LA105_0<=76)) ) {
                             alt105=1;
                         }
 
@@ -12993,7 +12994,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt111=2;
             int LA111_0 = input.LA(1);
 
-            if ( ((LA111_0>=RULE_INTEGER && LA111_0<=RULE_DOUBLE)||LA111_0==26||LA111_0==29||LA111_0==31||LA111_0==38||LA111_0==42||LA111_0==44||(LA111_0>=49 && LA111_0<=50)||(LA111_0>=52 && LA111_0<=55)||(LA111_0>=69 && LA111_0<=75)) ) {
+            if ( ((LA111_0>=RULE_INTEGER && LA111_0<=RULE_DOUBLE)||LA111_0==26||LA111_0==29||LA111_0==31||LA111_0==38||LA111_0==42||LA111_0==44||(LA111_0>=49 && LA111_0<=50)||(LA111_0>=52 && LA111_0<=55)||(LA111_0>=69 && LA111_0<=76)) ) {
                 alt111=1;
             }
             else if ( (LA111_0==58) ) {
@@ -16077,7 +16078,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt135=2;
             int LA135_0 = input.LA(1);
 
-            if ( ((LA135_0>=RULE_INTEGER && LA135_0<=RULE_DOUBLE)||LA135_0==26||LA135_0==29||LA135_0==31||LA135_0==38||LA135_0==42||LA135_0==44||(LA135_0>=49 && LA135_0<=50)||(LA135_0>=52 && LA135_0<=55)||LA135_0==58||LA135_0==61||LA135_0==64||(LA135_0>=69 && LA135_0<=75)) ) {
+            if ( ((LA135_0>=RULE_INTEGER && LA135_0<=RULE_DOUBLE)||LA135_0==26||LA135_0==29||LA135_0==31||LA135_0==38||LA135_0==42||LA135_0==44||(LA135_0>=49 && LA135_0<=50)||(LA135_0>=52 && LA135_0<=55)||LA135_0==58||LA135_0==61||LA135_0==64||(LA135_0>=69 && LA135_0<=76)) ) {
                 alt135=1;
             }
             switch (alt135) {
@@ -16128,7 +16129,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         if ( (LA133_0==15) ) {
                             int LA133_1 = input.LA(2);
 
-                            if ( ((LA133_1>=RULE_INTEGER && LA133_1<=RULE_DOUBLE)||LA133_1==26||LA133_1==29||LA133_1==31||LA133_1==38||LA133_1==42||LA133_1==44||(LA133_1>=49 && LA133_1<=50)||(LA133_1>=52 && LA133_1<=55)||LA133_1==58||LA133_1==61||LA133_1==64||(LA133_1>=69 && LA133_1<=75)) ) {
+                            if ( ((LA133_1>=RULE_INTEGER && LA133_1<=RULE_DOUBLE)||LA133_1==26||LA133_1==29||LA133_1==31||LA133_1==38||LA133_1==42||LA133_1==44||(LA133_1>=49 && LA133_1<=50)||(LA133_1>=52 && LA133_1<=55)||LA133_1==58||LA133_1==61||LA133_1==64||(LA133_1>=69 && LA133_1<=76)) ) {
                                 alt133=1;
                             }
 
@@ -16317,7 +16318,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt136=2;
                 int LA136_0 = input.LA(1);
 
-                if ( ((LA136_0>=RULE_INTEGER && LA136_0<=RULE_DOUBLE)||LA136_0==26||LA136_0==29||LA136_0==31||LA136_0==38||(LA136_0>=49 && LA136_0<=50)||(LA136_0>=69 && LA136_0<=75)) ) {
+                if ( ((LA136_0>=RULE_INTEGER && LA136_0<=RULE_DOUBLE)||LA136_0==26||LA136_0==29||LA136_0==31||LA136_0==38||(LA136_0>=49 && LA136_0<=50)||(LA136_0>=69 && LA136_0<=76)) ) {
                     alt136=1;
                 }
 
@@ -17073,32 +17074,18 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             case RULE_ID:
                 {
                 switch ( input.LA(2) ) {
-                case RULE_INTEGER:
-                case RULE_STRING:
-                case RULE_ID:
-                case RULE_DOUBLE:
-                case 26:
-                case 29:
-                case 49:
-                case 50:
-                case 58:
-                case 66:
-                    {
-                    alt139=1;
-                    }
-                    break;
                 case 48:
                     {
-                    int LA139_5 = input.LA(3);
+                    int LA139_4 = input.LA(3);
 
-                    if ( (LA139_5==RULE_ID) ) {
+                    if ( (LA139_4==RULE_ID) ) {
                         int LA139_7 = input.LA(4);
 
-                        if ( ((LA139_7>=RULE_INTEGER && LA139_7<=RULE_DOUBLE)||LA139_7==26||LA139_7==29||(LA139_7>=49 && LA139_7<=50)||LA139_7==58||LA139_7==66) ) {
-                            alt139=2;
-                        }
-                        else if ( (LA139_7==EOF||LA139_7==15||LA139_7==22||LA139_7==27||LA139_7==30||LA139_7==47||LA139_7==51||LA139_7==57||LA139_7==59||LA139_7==63) ) {
+                        if ( (LA139_7==EOF||LA139_7==15||LA139_7==22||LA139_7==27||LA139_7==30||LA139_7==47||LA139_7==51||LA139_7==57||LA139_7==59||LA139_7==63) ) {
                             alt139=5;
+                        }
+                        else if ( ((LA139_7>=RULE_INTEGER && LA139_7<=RULE_DOUBLE)||LA139_7==26||LA139_7==29||(LA139_7>=49 && LA139_7<=50)||LA139_7==58||LA139_7==66) ) {
+                            alt139=2;
                         }
                         else {
                             if (state.backtracking>0) {state.failed=true; return current;}
@@ -17111,7 +17098,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 139, 5, input);
+                            new NoViableAltException("", 139, 4, input);
 
                         throw nvae;
                     }
@@ -17129,6 +17116,20 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 63:
                     {
                     alt139=5;
+                    }
+                    break;
+                case RULE_INTEGER:
+                case RULE_STRING:
+                case RULE_ID:
+                case RULE_DOUBLE:
+                case 26:
+                case 29:
+                case 49:
+                case 50:
+                case 58:
+                case 66:
+                    {
+                    alt139=1;
                     }
                     break;
                 case 67:
@@ -18406,7 +18407,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBuiltInCat"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6478:1: ruleBuiltInCat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'String' | kw= 'Int' | kw= 'Float' ) ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6478:1: ruleBuiltInCat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'String' | kw= 'Int' | kw= 'Ints' | kw= 'Float' ) ;
     public final AntlrDatatypeRuleToken ruleBuiltInCat() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -18415,11 +18416,11 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6481:28: ( (kw= 'String' | kw= 'Int' | kw= 'Float' ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6482:1: (kw= 'String' | kw= 'Int' | kw= 'Float' )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6481:28: ( (kw= 'String' | kw= 'Int' | kw= 'Ints' | kw= 'Float' ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6482:1: (kw= 'String' | kw= 'Int' | kw= 'Ints' | kw= 'Float' )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6482:1: (kw= 'String' | kw= 'Int' | kw= 'Float' )
-            int alt145=3;
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6482:1: (kw= 'String' | kw= 'Int' | kw= 'Ints' | kw= 'Float' )
+            int alt145=4;
             switch ( input.LA(1) ) {
             case 73:
                 {
@@ -18434,6 +18435,11 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             case 75:
                 {
                 alt145=3;
+                }
+                break;
+            case 76:
+                {
+                alt145=4;
                 }
                 break;
             default:
@@ -18472,13 +18478,26 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6497:2: kw= 'Float'
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6497:2: kw= 'Ints'
                     {
                     kw=(Token)match(input,75,FOLLOW_75_in_ruleBuiltInCat12496); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getBuiltInCatAccess().getFloatKeyword_2()); 
+                              newLeafNode(kw, grammarAccess.getBuiltInCatAccess().getIntsKeyword_2()); 
+                          
+                    }
+
+                    }
+                    break;
+                case 4 :
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6504:2: kw= 'Float'
+                    {
+                    kw=(Token)match(input,76,FOLLOW_76_in_ruleBuiltInCat12515); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                              current.merge(kw);
+                              newLeafNode(kw, grammarAccess.getBuiltInCatAccess().getFloatKeyword_3()); 
                           
                     }
 
@@ -18507,7 +18526,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleListPattAss"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6510:1: entryRuleListPattAss returns [EObject current=null] : iv_ruleListPattAss= ruleListPattAss EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6517:1: entryRuleListPattAss returns [EObject current=null] : iv_ruleListPattAss= ruleListPattAss EOF ;
     public final EObject entryRuleListPattAss() throws RecognitionException {
         EObject current = null;
 
@@ -18515,13 +18534,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6511:2: (iv_ruleListPattAss= ruleListPattAss EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6512:2: iv_ruleListPattAss= ruleListPattAss EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6518:2: (iv_ruleListPattAss= ruleListPattAss EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6519:2: iv_ruleListPattAss= ruleListPattAss EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getListPattAssRule()); 
             }
-            pushFollow(FOLLOW_ruleListPattAss_in_entryRuleListPattAss12536);
+            pushFollow(FOLLOW_ruleListPattAss_in_entryRuleListPattAss12555);
             iv_ruleListPattAss=ruleListPattAss();
 
             state._fsp--;
@@ -18529,7 +18548,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleListPattAss; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleListPattAss12546); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleListPattAss12565); if (state.failed) return current;
 
             }
 
@@ -18547,7 +18566,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleListPattAss"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6519:1: ruleListPattAss returns [EObject current=null] : ( () ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )? ) ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6526:1: ruleListPattAss returns [EObject current=null] : ( () ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )? ) ;
     public final EObject ruleListPattAss() throws RecognitionException {
         EObject current = null;
 
@@ -18561,14 +18580,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6522:28: ( ( () ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )? ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6523:1: ( () ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )? )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6529:28: ( ( () ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )? ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6530:1: ( () ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )? )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6523:1: ( () ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )? )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6523:2: () ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )?
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6530:1: ( () ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )? )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6530:2: () ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )?
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6523:2: ()
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6524:5: 
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6530:2: ()
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6531:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -18580,7 +18599,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6529:2: ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )?
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6536:2: ( ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )? )?
             int alt148=2;
             int LA148_0 = input.LA(1);
 
@@ -18589,20 +18608,20 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             }
             switch (alt148) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6529:3: ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )?
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6536:3: ( (lv_assignments_1_0= rulePattAss ) ) (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )* (otherlv_4= ';' )?
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6529:3: ( (lv_assignments_1_0= rulePattAss ) )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6530:1: (lv_assignments_1_0= rulePattAss )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6536:3: ( (lv_assignments_1_0= rulePattAss ) )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6537:1: (lv_assignments_1_0= rulePattAss )
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6530:1: (lv_assignments_1_0= rulePattAss )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6531:3: lv_assignments_1_0= rulePattAss
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6537:1: (lv_assignments_1_0= rulePattAss )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6538:3: lv_assignments_1_0= rulePattAss
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getListPattAssAccess().getAssignmentsPattAssParserRuleCall_1_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_rulePattAss_in_ruleListPattAss12602);
+                    pushFollow(FOLLOW_rulePattAss_in_ruleListPattAss12621);
                     lv_assignments_1_0=rulePattAss();
 
                     state._fsp--;
@@ -18626,7 +18645,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6547:2: (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )*
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6554:2: (otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) ) )*
                     loop146:
                     do {
                         int alt146=2;
@@ -18645,26 +18664,26 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                         switch (alt146) {
                     	case 1 :
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6547:4: otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6554:4: otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleListPattAss12615); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleListPattAss12634); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getListPattAssAccess().getSemicolonKeyword_1_1_0());
                     	          
                     	    }
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6551:1: ( (lv_assignments_3_0= rulePattAss ) )
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6552:1: (lv_assignments_3_0= rulePattAss )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6558:1: ( (lv_assignments_3_0= rulePattAss ) )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6559:1: (lv_assignments_3_0= rulePattAss )
                     	    {
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6552:1: (lv_assignments_3_0= rulePattAss )
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6553:3: lv_assignments_3_0= rulePattAss
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6559:1: (lv_assignments_3_0= rulePattAss )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6560:3: lv_assignments_3_0= rulePattAss
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getListPattAssAccess().getAssignmentsPattAssParserRuleCall_1_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_rulePattAss_in_ruleListPattAss12636);
+                    	    pushFollow(FOLLOW_rulePattAss_in_ruleListPattAss12655);
                     	    lv_assignments_3_0=rulePattAss();
 
                     	    state._fsp--;
@@ -18697,7 +18716,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6569:4: (otherlv_4= ';' )?
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6576:4: (otherlv_4= ';' )?
                     int alt147=2;
                     int LA147_0 = input.LA(1);
 
@@ -18706,9 +18725,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     }
                     switch (alt147) {
                         case 1 :
-                            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6569:6: otherlv_4= ';'
+                            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6576:6: otherlv_4= ';'
                             {
-                            otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleListPattAss12651); if (state.failed) return current;
+                            otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleListPattAss12670); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_4, grammarAccess.getListPattAssAccess().getSemicolonKeyword_1_2());
@@ -18749,7 +18768,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleListPatt"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6581:1: entryRuleListPatt returns [EObject current=null] : iv_ruleListPatt= ruleListPatt EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6588:1: entryRuleListPatt returns [EObject current=null] : iv_ruleListPatt= ruleListPatt EOF ;
     public final EObject entryRuleListPatt() throws RecognitionException {
         EObject current = null;
 
@@ -18757,13 +18776,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6582:2: (iv_ruleListPatt= ruleListPatt EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6583:2: iv_ruleListPatt= ruleListPatt EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6589:2: (iv_ruleListPatt= ruleListPatt EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6590:2: iv_ruleListPatt= ruleListPatt EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getListPattRule()); 
             }
-            pushFollow(FOLLOW_ruleListPatt_in_entryRuleListPatt12691);
+            pushFollow(FOLLOW_ruleListPatt_in_entryRuleListPatt12710);
             iv_ruleListPatt=ruleListPatt();
 
             state._fsp--;
@@ -18771,7 +18790,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleListPatt; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleListPatt12701); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleListPatt12720); if (state.failed) return current;
 
             }
 
@@ -18789,7 +18808,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleListPatt"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6590:1: ruleListPatt returns [EObject current=null] : ( (lv_patterns_0_0= rulePatt2 ) )+ ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6597:1: ruleListPatt returns [EObject current=null] : ( (lv_patterns_0_0= rulePatt2 ) )+ ;
     public final EObject ruleListPatt() throws RecognitionException {
         EObject current = null;
 
@@ -18799,10 +18818,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6593:28: ( ( (lv_patterns_0_0= rulePatt2 ) )+ )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6594:1: ( (lv_patterns_0_0= rulePatt2 ) )+
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6600:28: ( ( (lv_patterns_0_0= rulePatt2 ) )+ )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6601:1: ( (lv_patterns_0_0= rulePatt2 ) )+
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6594:1: ( (lv_patterns_0_0= rulePatt2 ) )+
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6601:1: ( (lv_patterns_0_0= rulePatt2 ) )+
             int cnt149=0;
             loop149:
             do {
@@ -18816,17 +18835,17 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                 switch (alt149) {
             	case 1 :
-            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6595:1: (lv_patterns_0_0= rulePatt2 )
+            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6602:1: (lv_patterns_0_0= rulePatt2 )
             	    {
-            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6595:1: (lv_patterns_0_0= rulePatt2 )
-            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6596:3: lv_patterns_0_0= rulePatt2
+            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6602:1: (lv_patterns_0_0= rulePatt2 )
+            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6603:3: lv_patterns_0_0= rulePatt2
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getListPattAccess().getPatternsPatt2ParserRuleCall_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_rulePatt2_in_ruleListPatt12746);
+            	    pushFollow(FOLLOW_rulePatt2_in_ruleListPatt12765);
             	    lv_patterns_0_0=rulePatt2();
 
             	    state._fsp--;
@@ -18881,7 +18900,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBind"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6620:1: entryRuleBind returns [EObject current=null] : iv_ruleBind= ruleBind EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6627:1: entryRuleBind returns [EObject current=null] : iv_ruleBind= ruleBind EOF ;
     public final EObject entryRuleBind() throws RecognitionException {
         EObject current = null;
 
@@ -18889,13 +18908,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6621:2: (iv_ruleBind= ruleBind EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6622:2: iv_ruleBind= ruleBind EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6628:2: (iv_ruleBind= ruleBind EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6629:2: iv_ruleBind= ruleBind EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getBindRule()); 
             }
-            pushFollow(FOLLOW_ruleBind_in_entryRuleBind12782);
+            pushFollow(FOLLOW_ruleBind_in_entryRuleBind12801);
             iv_ruleBind=ruleBind();
 
             state._fsp--;
@@ -18903,7 +18922,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleBind; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBind12792); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBind12811); if (state.failed) return current;
 
             }
 
@@ -18921,7 +18940,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBind"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6629:1: ruleBind returns [EObject current=null] : ( ( (lv_name_0_0= ruleIdent ) ) | ( () otherlv_2= '_' ) ) ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6636:1: ruleBind returns [EObject current=null] : ( ( (lv_name_0_0= ruleIdent ) ) | ( () otherlv_2= '_' ) ) ;
     public final EObject ruleBind() throws RecognitionException {
         EObject current = null;
 
@@ -18932,10 +18951,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6632:28: ( ( ( (lv_name_0_0= ruleIdent ) ) | ( () otherlv_2= '_' ) ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6633:1: ( ( (lv_name_0_0= ruleIdent ) ) | ( () otherlv_2= '_' ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6639:28: ( ( ( (lv_name_0_0= ruleIdent ) ) | ( () otherlv_2= '_' ) ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6640:1: ( ( (lv_name_0_0= ruleIdent ) ) | ( () otherlv_2= '_' ) )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6633:1: ( ( (lv_name_0_0= ruleIdent ) ) | ( () otherlv_2= '_' ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6640:1: ( ( (lv_name_0_0= ruleIdent ) ) | ( () otherlv_2= '_' ) )
             int alt150=2;
             int LA150_0 = input.LA(1);
 
@@ -18954,20 +18973,20 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             }
             switch (alt150) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6633:2: ( (lv_name_0_0= ruleIdent ) )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6640:2: ( (lv_name_0_0= ruleIdent ) )
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6633:2: ( (lv_name_0_0= ruleIdent ) )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6634:1: (lv_name_0_0= ruleIdent )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6640:2: ( (lv_name_0_0= ruleIdent ) )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6641:1: (lv_name_0_0= ruleIdent )
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6634:1: (lv_name_0_0= ruleIdent )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6635:3: lv_name_0_0= ruleIdent
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6641:1: (lv_name_0_0= ruleIdent )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6642:3: lv_name_0_0= ruleIdent
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getBindAccess().getNameIdentParserRuleCall_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleIdent_in_ruleBind12838);
+                    pushFollow(FOLLOW_ruleIdent_in_ruleBind12857);
                     lv_name_0_0=ruleIdent();
 
                     state._fsp--;
@@ -18995,13 +19014,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6652:6: ( () otherlv_2= '_' )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6659:6: ( () otherlv_2= '_' )
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6652:6: ( () otherlv_2= '_' )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6652:7: () otherlv_2= '_'
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6659:6: ( () otherlv_2= '_' )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6659:7: () otherlv_2= '_'
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6652:7: ()
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6653:5: 
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6659:7: ()
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6660:5: 
                     {
                     if ( state.backtracking==0 ) {
 
@@ -19013,7 +19032,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,66,FOLLOW_66_in_ruleBind12866); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,66,FOLLOW_66_in_ruleBind12885); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getBindAccess().get_Keyword_1_1());
@@ -19048,7 +19067,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleListBind"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6670:1: entryRuleListBind returns [EObject current=null] : iv_ruleListBind= ruleListBind EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6677:1: entryRuleListBind returns [EObject current=null] : iv_ruleListBind= ruleListBind EOF ;
     public final EObject entryRuleListBind() throws RecognitionException {
         EObject current = null;
 
@@ -19056,13 +19075,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6671:2: (iv_ruleListBind= ruleListBind EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6672:2: iv_ruleListBind= ruleListBind EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6678:2: (iv_ruleListBind= ruleListBind EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6679:2: iv_ruleListBind= ruleListBind EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getListBindRule()); 
             }
-            pushFollow(FOLLOW_ruleListBind_in_entryRuleListBind12903);
+            pushFollow(FOLLOW_ruleListBind_in_entryRuleListBind12922);
             iv_ruleListBind=ruleListBind();
 
             state._fsp--;
@@ -19070,7 +19089,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleListBind; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleListBind12913); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleListBind12932); if (state.failed) return current;
 
             }
 
@@ -19088,7 +19107,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleListBind"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6679:1: ruleListBind returns [EObject current=null] : ( () ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )? ) ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6686:1: ruleListBind returns [EObject current=null] : ( () ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )? ) ;
     public final EObject ruleListBind() throws RecognitionException {
         EObject current = null;
 
@@ -19101,14 +19120,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6682:28: ( ( () ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )? ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6683:1: ( () ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )? )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6689:28: ( ( () ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )? ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6690:1: ( () ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )? )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6683:1: ( () ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )? )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6683:2: () ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )?
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6690:1: ( () ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )? )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6690:2: () ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )?
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6683:2: ()
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6684:5: 
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6690:2: ()
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6691:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -19120,7 +19139,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6689:2: ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )?
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6696:2: ( ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )* )?
             int alt152=2;
             int LA152_0 = input.LA(1);
 
@@ -19129,20 +19148,20 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             }
             switch (alt152) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6689:3: ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )*
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6696:3: ( (lv_bindings_1_0= ruleBind ) ) (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )*
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6689:3: ( (lv_bindings_1_0= ruleBind ) )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6690:1: (lv_bindings_1_0= ruleBind )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6696:3: ( (lv_bindings_1_0= ruleBind ) )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6697:1: (lv_bindings_1_0= ruleBind )
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6690:1: (lv_bindings_1_0= ruleBind )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6691:3: lv_bindings_1_0= ruleBind
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6697:1: (lv_bindings_1_0= ruleBind )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6698:3: lv_bindings_1_0= ruleBind
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getListBindAccess().getBindingsBindParserRuleCall_1_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleBind_in_ruleListBind12969);
+                    pushFollow(FOLLOW_ruleBind_in_ruleListBind12988);
                     lv_bindings_1_0=ruleBind();
 
                     state._fsp--;
@@ -19166,7 +19185,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6707:2: (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )*
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6714:2: (otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) ) )*
                     loop151:
                     do {
                         int alt151=2;
@@ -19179,26 +19198,26 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                         switch (alt151) {
                     	case 1 :
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6707:4: otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6714:4: otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleListBind12982); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleListBind13001); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getListBindAccess().getCommaKeyword_1_1_0());
                     	          
                     	    }
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6711:1: ( (lv_bindings_3_0= ruleBind ) )
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6712:1: (lv_bindings_3_0= ruleBind )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6718:1: ( (lv_bindings_3_0= ruleBind ) )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6719:1: (lv_bindings_3_0= ruleBind )
                     	    {
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6712:1: (lv_bindings_3_0= ruleBind )
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6713:3: lv_bindings_3_0= ruleBind
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6719:1: (lv_bindings_3_0= ruleBind )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6720:3: lv_bindings_3_0= ruleBind
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getListBindAccess().getBindingsBindParserRuleCall_1_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleBind_in_ruleListBind13003);
+                    	    pushFollow(FOLLOW_ruleBind_in_ruleListBind13022);
                     	    lv_bindings_3_0=ruleBind();
 
                     	    state._fsp--;
@@ -19260,7 +19279,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTupleComp"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6737:1: entryRuleTupleComp returns [EObject current=null] : iv_ruleTupleComp= ruleTupleComp EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6744:1: entryRuleTupleComp returns [EObject current=null] : iv_ruleTupleComp= ruleTupleComp EOF ;
     public final EObject entryRuleTupleComp() throws RecognitionException {
         EObject current = null;
 
@@ -19268,13 +19287,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6738:2: (iv_ruleTupleComp= ruleTupleComp EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6739:2: iv_ruleTupleComp= ruleTupleComp EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6745:2: (iv_ruleTupleComp= ruleTupleComp EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6746:2: iv_ruleTupleComp= ruleTupleComp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTupleCompRule()); 
             }
-            pushFollow(FOLLOW_ruleTupleComp_in_entryRuleTupleComp13043);
+            pushFollow(FOLLOW_ruleTupleComp_in_entryRuleTupleComp13062);
             iv_ruleTupleComp=ruleTupleComp();
 
             state._fsp--;
@@ -19282,7 +19301,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleTupleComp; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleComp13053); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTupleComp13072); if (state.failed) return current;
 
             }
 
@@ -19300,7 +19319,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTupleComp"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6746:1: ruleTupleComp returns [EObject current=null] : this_Exp_0= ruleExp ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6753:1: ruleTupleComp returns [EObject current=null] : this_Exp_0= ruleExp ;
     public final EObject ruleTupleComp() throws RecognitionException {
         EObject current = null;
 
@@ -19310,15 +19329,15 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6749:28: (this_Exp_0= ruleExp )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6751:5: this_Exp_0= ruleExp
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6756:28: (this_Exp_0= ruleExp )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6758:5: this_Exp_0= ruleExp
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getTupleCompAccess().getExpParserRuleCall()); 
                   
             }
-            pushFollow(FOLLOW_ruleExp_in_ruleTupleComp13099);
+            pushFollow(FOLLOW_ruleExp_in_ruleTupleComp13118);
             this_Exp_0=ruleExp();
 
             state._fsp--;
@@ -19349,7 +19368,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulePattTupleComp"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6767:1: entryRulePattTupleComp returns [EObject current=null] : iv_rulePattTupleComp= rulePattTupleComp EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6774:1: entryRulePattTupleComp returns [EObject current=null] : iv_rulePattTupleComp= rulePattTupleComp EOF ;
     public final EObject entryRulePattTupleComp() throws RecognitionException {
         EObject current = null;
 
@@ -19357,13 +19376,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6768:2: (iv_rulePattTupleComp= rulePattTupleComp EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6769:2: iv_rulePattTupleComp= rulePattTupleComp EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6775:2: (iv_rulePattTupleComp= rulePattTupleComp EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6776:2: iv_rulePattTupleComp= rulePattTupleComp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getPattTupleCompRule()); 
             }
-            pushFollow(FOLLOW_rulePattTupleComp_in_entryRulePattTupleComp13133);
+            pushFollow(FOLLOW_rulePattTupleComp_in_entryRulePattTupleComp13152);
             iv_rulePattTupleComp=rulePattTupleComp();
 
             state._fsp--;
@@ -19371,7 +19390,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_rulePattTupleComp; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRulePattTupleComp13143); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRulePattTupleComp13162); if (state.failed) return current;
 
             }
 
@@ -19389,7 +19408,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePattTupleComp"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6776:1: rulePattTupleComp returns [EObject current=null] : this_Patt_0= rulePatt ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6783:1: rulePattTupleComp returns [EObject current=null] : this_Patt_0= rulePatt ;
     public final EObject rulePattTupleComp() throws RecognitionException {
         EObject current = null;
 
@@ -19399,15 +19418,15 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6779:28: (this_Patt_0= rulePatt )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6781:5: this_Patt_0= rulePatt
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6786:28: (this_Patt_0= rulePatt )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6788:5: this_Patt_0= rulePatt
             {
             if ( state.backtracking==0 ) {
                
                       newCompositeNode(grammarAccess.getPattTupleCompAccess().getPattParserRuleCall()); 
                   
             }
-            pushFollow(FOLLOW_rulePatt_in_rulePattTupleComp13189);
+            pushFollow(FOLLOW_rulePatt_in_rulePattTupleComp13208);
             this_Patt_0=rulePatt();
 
             state._fsp--;
@@ -19438,7 +19457,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleListTupleComp"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6797:1: entryRuleListTupleComp returns [EObject current=null] : iv_ruleListTupleComp= ruleListTupleComp EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6804:1: entryRuleListTupleComp returns [EObject current=null] : iv_ruleListTupleComp= ruleListTupleComp EOF ;
     public final EObject entryRuleListTupleComp() throws RecognitionException {
         EObject current = null;
 
@@ -19446,13 +19465,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6798:2: (iv_ruleListTupleComp= ruleListTupleComp EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6799:2: iv_ruleListTupleComp= ruleListTupleComp EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6805:2: (iv_ruleListTupleComp= ruleListTupleComp EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6806:2: iv_ruleListTupleComp= ruleListTupleComp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getListTupleCompRule()); 
             }
-            pushFollow(FOLLOW_ruleListTupleComp_in_entryRuleListTupleComp13223);
+            pushFollow(FOLLOW_ruleListTupleComp_in_entryRuleListTupleComp13242);
             iv_ruleListTupleComp=ruleListTupleComp();
 
             state._fsp--;
@@ -19460,7 +19479,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleListTupleComp; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleListTupleComp13233); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleListTupleComp13252); if (state.failed) return current;
 
             }
 
@@ -19478,7 +19497,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleListTupleComp"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6806:1: ruleListTupleComp returns [EObject current=null] : ( () ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )? ) ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6813:1: ruleListTupleComp returns [EObject current=null] : ( () ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )? ) ;
     public final EObject ruleListTupleComp() throws RecognitionException {
         EObject current = null;
 
@@ -19491,14 +19510,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6809:28: ( ( () ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )? ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6810:1: ( () ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )? )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6816:28: ( ( () ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )? ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6817:1: ( () ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )? )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6810:1: ( () ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )? )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6810:2: () ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )?
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6817:1: ( () ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )? )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6817:2: () ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )?
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6810:2: ()
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6811:5: 
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6817:2: ()
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6818:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -19510,29 +19529,29 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6816:2: ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )?
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6823:2: ( ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )* )?
             int alt154=2;
             int LA154_0 = input.LA(1);
 
-            if ( ((LA154_0>=RULE_INTEGER && LA154_0<=RULE_DOUBLE)||LA154_0==26||LA154_0==29||LA154_0==31||LA154_0==38||LA154_0==42||LA154_0==44||(LA154_0>=49 && LA154_0<=50)||(LA154_0>=52 && LA154_0<=55)||LA154_0==58||LA154_0==61||LA154_0==64||(LA154_0>=69 && LA154_0<=75)) ) {
+            if ( ((LA154_0>=RULE_INTEGER && LA154_0<=RULE_DOUBLE)||LA154_0==26||LA154_0==29||LA154_0==31||LA154_0==38||LA154_0==42||LA154_0==44||(LA154_0>=49 && LA154_0<=50)||(LA154_0>=52 && LA154_0<=55)||LA154_0==58||LA154_0==61||LA154_0==64||(LA154_0>=69 && LA154_0<=76)) ) {
                 alt154=1;
             }
             switch (alt154) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6816:3: ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )*
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6823:3: ( (lv_l_1_0= ruleTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )*
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6816:3: ( (lv_l_1_0= ruleTupleComp ) )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6817:1: (lv_l_1_0= ruleTupleComp )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6823:3: ( (lv_l_1_0= ruleTupleComp ) )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6824:1: (lv_l_1_0= ruleTupleComp )
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6817:1: (lv_l_1_0= ruleTupleComp )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6818:3: lv_l_1_0= ruleTupleComp
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6824:1: (lv_l_1_0= ruleTupleComp )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6825:3: lv_l_1_0= ruleTupleComp
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getListTupleCompAccess().getLTupleCompParserRuleCall_1_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleTupleComp_in_ruleListTupleComp13289);
+                    pushFollow(FOLLOW_ruleTupleComp_in_ruleListTupleComp13308);
                     lv_l_1_0=ruleTupleComp();
 
                     state._fsp--;
@@ -19556,7 +19575,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6834:2: (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )*
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6841:2: (otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) ) )*
                     loop153:
                     do {
                         int alt153=2;
@@ -19569,26 +19588,26 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                         switch (alt153) {
                     	case 1 :
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6834:4: otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6841:4: otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleListTupleComp13302); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleListTupleComp13321); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getListTupleCompAccess().getCommaKeyword_1_1_0());
                     	          
                     	    }
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6838:1: ( (lv_l_3_0= ruleTupleComp ) )
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6839:1: (lv_l_3_0= ruleTupleComp )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6845:1: ( (lv_l_3_0= ruleTupleComp ) )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6846:1: (lv_l_3_0= ruleTupleComp )
                     	    {
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6839:1: (lv_l_3_0= ruleTupleComp )
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6840:3: lv_l_3_0= ruleTupleComp
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6846:1: (lv_l_3_0= ruleTupleComp )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6847:3: lv_l_3_0= ruleTupleComp
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getListTupleCompAccess().getLTupleCompParserRuleCall_1_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_ruleTupleComp_in_ruleListTupleComp13323);
+                    	    pushFollow(FOLLOW_ruleTupleComp_in_ruleListTupleComp13342);
                     	    lv_l_3_0=ruleTupleComp();
 
                     	    state._fsp--;
@@ -19650,7 +19669,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleListPattTupleComp"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6864:1: entryRuleListPattTupleComp returns [EObject current=null] : iv_ruleListPattTupleComp= ruleListPattTupleComp EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6871:1: entryRuleListPattTupleComp returns [EObject current=null] : iv_ruleListPattTupleComp= ruleListPattTupleComp EOF ;
     public final EObject entryRuleListPattTupleComp() throws RecognitionException {
         EObject current = null;
 
@@ -19658,13 +19677,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6865:2: (iv_ruleListPattTupleComp= ruleListPattTupleComp EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6866:2: iv_ruleListPattTupleComp= ruleListPattTupleComp EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6872:2: (iv_ruleListPattTupleComp= ruleListPattTupleComp EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6873:2: iv_ruleListPattTupleComp= ruleListPattTupleComp EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getListPattTupleCompRule()); 
             }
-            pushFollow(FOLLOW_ruleListPattTupleComp_in_entryRuleListPattTupleComp13363);
+            pushFollow(FOLLOW_ruleListPattTupleComp_in_entryRuleListPattTupleComp13382);
             iv_ruleListPattTupleComp=ruleListPattTupleComp();
 
             state._fsp--;
@@ -19672,7 +19691,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleListPattTupleComp; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleListPattTupleComp13373); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleListPattTupleComp13392); if (state.failed) return current;
 
             }
 
@@ -19690,7 +19709,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleListPattTupleComp"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6873:1: ruleListPattTupleComp returns [EObject current=null] : ( () ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )? ) ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6880:1: ruleListPattTupleComp returns [EObject current=null] : ( () ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )? ) ;
     public final EObject ruleListPattTupleComp() throws RecognitionException {
         EObject current = null;
 
@@ -19703,14 +19722,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6876:28: ( ( () ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )? ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6877:1: ( () ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )? )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6883:28: ( ( () ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )? ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6884:1: ( () ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )? )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6877:1: ( () ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )? )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6877:2: () ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )?
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6884:1: ( () ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )? )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6884:2: () ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )?
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6877:2: ()
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6878:5: 
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6884:2: ()
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6885:5: 
             {
             if ( state.backtracking==0 ) {
 
@@ -19722,7 +19741,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6883:2: ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )?
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6890:2: ( ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )* )?
             int alt156=2;
             int LA156_0 = input.LA(1);
 
@@ -19731,20 +19750,20 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             }
             switch (alt156) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6883:3: ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )*
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6890:3: ( (lv_l_1_0= rulePattTupleComp ) ) (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )*
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6883:3: ( (lv_l_1_0= rulePattTupleComp ) )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6884:1: (lv_l_1_0= rulePattTupleComp )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6890:3: ( (lv_l_1_0= rulePattTupleComp ) )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6891:1: (lv_l_1_0= rulePattTupleComp )
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6884:1: (lv_l_1_0= rulePattTupleComp )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6885:3: lv_l_1_0= rulePattTupleComp
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6891:1: (lv_l_1_0= rulePattTupleComp )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6892:3: lv_l_1_0= rulePattTupleComp
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getListPattTupleCompAccess().getLPattTupleCompParserRuleCall_1_0_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13429);
+                    pushFollow(FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13448);
                     lv_l_1_0=rulePattTupleComp();
 
                     state._fsp--;
@@ -19768,7 +19787,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6901:2: (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )*
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6908:2: (otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) ) )*
                     loop155:
                     do {
                         int alt155=2;
@@ -19781,26 +19800,26 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                         switch (alt155) {
                     	case 1 :
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6901:4: otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6908:4: otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleListPattTupleComp13442); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleListPattTupleComp13461); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getListPattTupleCompAccess().getCommaKeyword_1_1_0());
                     	          
                     	    }
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6905:1: ( (lv_l_3_0= rulePattTupleComp ) )
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6906:1: (lv_l_3_0= rulePattTupleComp )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6912:1: ( (lv_l_3_0= rulePattTupleComp ) )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6913:1: (lv_l_3_0= rulePattTupleComp )
                     	    {
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6906:1: (lv_l_3_0= rulePattTupleComp )
-                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6907:3: lv_l_3_0= rulePattTupleComp
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6913:1: (lv_l_3_0= rulePattTupleComp )
+                    	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6914:3: lv_l_3_0= rulePattTupleComp
                     	    {
                     	    if ( state.backtracking==0 ) {
                     	       
                     	      	        newCompositeNode(grammarAccess.getListPattTupleCompAccess().getLPattTupleCompParserRuleCall_1_1_1_0()); 
                     	      	    
                     	    }
-                    	    pushFollow(FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13463);
+                    	    pushFollow(FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13482);
                     	    lv_l_3_0=rulePattTupleComp();
 
                     	    state._fsp--;
@@ -19862,7 +19881,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCase"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6931:1: entryRuleCase returns [EObject current=null] : iv_ruleCase= ruleCase EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6938:1: entryRuleCase returns [EObject current=null] : iv_ruleCase= ruleCase EOF ;
     public final EObject entryRuleCase() throws RecognitionException {
         EObject current = null;
 
@@ -19870,13 +19889,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6932:2: (iv_ruleCase= ruleCase EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6933:2: iv_ruleCase= ruleCase EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6939:2: (iv_ruleCase= ruleCase EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6940:2: iv_ruleCase= ruleCase EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getCaseRule()); 
             }
-            pushFollow(FOLLOW_ruleCase_in_entryRuleCase13503);
+            pushFollow(FOLLOW_ruleCase_in_entryRuleCase13522);
             iv_ruleCase=ruleCase();
 
             state._fsp--;
@@ -19884,7 +19903,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleCase; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCase13513); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCase13532); if (state.failed) return current;
 
             }
 
@@ -19902,7 +19921,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCase"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6940:1: ruleCase returns [EObject current=null] : ( ( (lv_pattern_0_0= rulePatt ) ) otherlv_1= '=>' ( (lv_e_2_0= ruleExp ) ) ) ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6947:1: ruleCase returns [EObject current=null] : ( ( (lv_pattern_0_0= rulePatt ) ) otherlv_1= '=>' ( (lv_e_2_0= ruleExp ) ) ) ;
     public final EObject ruleCase() throws RecognitionException {
         EObject current = null;
 
@@ -19915,24 +19934,24 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6943:28: ( ( ( (lv_pattern_0_0= rulePatt ) ) otherlv_1= '=>' ( (lv_e_2_0= ruleExp ) ) ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6944:1: ( ( (lv_pattern_0_0= rulePatt ) ) otherlv_1= '=>' ( (lv_e_2_0= ruleExp ) ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6950:28: ( ( ( (lv_pattern_0_0= rulePatt ) ) otherlv_1= '=>' ( (lv_e_2_0= ruleExp ) ) ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6951:1: ( ( (lv_pattern_0_0= rulePatt ) ) otherlv_1= '=>' ( (lv_e_2_0= ruleExp ) ) )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6944:1: ( ( (lv_pattern_0_0= rulePatt ) ) otherlv_1= '=>' ( (lv_e_2_0= ruleExp ) ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6944:2: ( (lv_pattern_0_0= rulePatt ) ) otherlv_1= '=>' ( (lv_e_2_0= ruleExp ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6951:1: ( ( (lv_pattern_0_0= rulePatt ) ) otherlv_1= '=>' ( (lv_e_2_0= ruleExp ) ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6951:2: ( (lv_pattern_0_0= rulePatt ) ) otherlv_1= '=>' ( (lv_e_2_0= ruleExp ) )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6944:2: ( (lv_pattern_0_0= rulePatt ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6945:1: (lv_pattern_0_0= rulePatt )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6951:2: ( (lv_pattern_0_0= rulePatt ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6952:1: (lv_pattern_0_0= rulePatt )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6945:1: (lv_pattern_0_0= rulePatt )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6946:3: lv_pattern_0_0= rulePatt
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6952:1: (lv_pattern_0_0= rulePatt )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6953:3: lv_pattern_0_0= rulePatt
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getCaseAccess().getPatternPattParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_rulePatt_in_ruleCase13559);
+            pushFollow(FOLLOW_rulePatt_in_ruleCase13578);
             lv_pattern_0_0=rulePatt();
 
             state._fsp--;
@@ -19956,24 +19975,24 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,63,FOLLOW_63_in_ruleCase13571); if (state.failed) return current;
+            otherlv_1=(Token)match(input,63,FOLLOW_63_in_ruleCase13590); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCaseAccess().getEqualsSignGreaterThanSignKeyword_1());
                   
             }
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6966:1: ( (lv_e_2_0= ruleExp ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6967:1: (lv_e_2_0= ruleExp )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6973:1: ( (lv_e_2_0= ruleExp ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6974:1: (lv_e_2_0= ruleExp )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6967:1: (lv_e_2_0= ruleExp )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6968:3: lv_e_2_0= ruleExp
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6974:1: (lv_e_2_0= ruleExp )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6975:3: lv_e_2_0= ruleExp
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getCaseAccess().getEExpParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleExp_in_ruleCase13592);
+            pushFollow(FOLLOW_ruleExp_in_ruleCase13611);
             lv_e_2_0=ruleExp();
 
             state._fsp--;
@@ -20020,7 +20039,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleListCase"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6992:1: entryRuleListCase returns [EObject current=null] : iv_ruleListCase= ruleListCase EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6999:1: entryRuleListCase returns [EObject current=null] : iv_ruleListCase= ruleListCase EOF ;
     public final EObject entryRuleListCase() throws RecognitionException {
         EObject current = null;
 
@@ -20028,13 +20047,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6993:2: (iv_ruleListCase= ruleListCase EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6994:2: iv_ruleListCase= ruleListCase EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7000:2: (iv_ruleListCase= ruleListCase EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7001:2: iv_ruleListCase= ruleListCase EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getListCaseRule()); 
             }
-            pushFollow(FOLLOW_ruleListCase_in_entryRuleListCase13628);
+            pushFollow(FOLLOW_ruleListCase_in_entryRuleListCase13647);
             iv_ruleListCase=ruleListCase();
 
             state._fsp--;
@@ -20042,7 +20061,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleListCase; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleListCase13638); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleListCase13657); if (state.failed) return current;
 
             }
 
@@ -20060,7 +20079,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleListCase"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7001:1: ruleListCase returns [EObject current=null] : ( ( (lv_cases_0_0= ruleCase ) ) (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )* ) ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7008:1: ruleListCase returns [EObject current=null] : ( ( (lv_cases_0_0= ruleCase ) ) (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )* ) ;
     public final EObject ruleListCase() throws RecognitionException {
         EObject current = null;
 
@@ -20073,24 +20092,24 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7004:28: ( ( ( (lv_cases_0_0= ruleCase ) ) (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )* ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7005:1: ( ( (lv_cases_0_0= ruleCase ) ) (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )* )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7011:28: ( ( ( (lv_cases_0_0= ruleCase ) ) (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )* ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7012:1: ( ( (lv_cases_0_0= ruleCase ) ) (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )* )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7005:1: ( ( (lv_cases_0_0= ruleCase ) ) (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )* )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7005:2: ( (lv_cases_0_0= ruleCase ) ) (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )*
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7012:1: ( ( (lv_cases_0_0= ruleCase ) ) (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )* )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7012:2: ( (lv_cases_0_0= ruleCase ) ) (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )*
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7005:2: ( (lv_cases_0_0= ruleCase ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7006:1: (lv_cases_0_0= ruleCase )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7012:2: ( (lv_cases_0_0= ruleCase ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7013:1: (lv_cases_0_0= ruleCase )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7006:1: (lv_cases_0_0= ruleCase )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7007:3: lv_cases_0_0= ruleCase
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7013:1: (lv_cases_0_0= ruleCase )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7014:3: lv_cases_0_0= ruleCase
             {
             if ( state.backtracking==0 ) {
                
               	        newCompositeNode(grammarAccess.getListCaseAccess().getCasesCaseParserRuleCall_0_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleCase_in_ruleListCase13684);
+            pushFollow(FOLLOW_ruleCase_in_ruleListCase13703);
             lv_cases_0_0=ruleCase();
 
             state._fsp--;
@@ -20114,7 +20133,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7023:2: (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )*
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7030:2: (otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) ) )*
             loop157:
             do {
                 int alt157=2;
@@ -20127,26 +20146,26 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                 switch (alt157) {
             	case 1 :
-            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7023:4: otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) )
+            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7030:4: otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) )
             	    {
-            	    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleListCase13697); if (state.failed) return current;
+            	    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleListCase13716); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_1, grammarAccess.getListCaseAccess().getSemicolonKeyword_1_0());
             	          
             	    }
-            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7027:1: ( (lv_cases_2_0= ruleCase ) )
-            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7028:1: (lv_cases_2_0= ruleCase )
+            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7034:1: ( (lv_cases_2_0= ruleCase ) )
+            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7035:1: (lv_cases_2_0= ruleCase )
             	    {
-            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7028:1: (lv_cases_2_0= ruleCase )
-            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7029:3: lv_cases_2_0= ruleCase
+            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7035:1: (lv_cases_2_0= ruleCase )
+            	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7036:3: lv_cases_2_0= ruleCase
             	    {
             	    if ( state.backtracking==0 ) {
             	       
             	      	        newCompositeNode(grammarAccess.getListCaseAccess().getCasesCaseParserRuleCall_1_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleCase_in_ruleListCase13718);
+            	    pushFollow(FOLLOW_ruleCase_in_ruleListCase13737);
             	    lv_cases_2_0=ruleCase();
 
             	    state._fsp--;
@@ -20202,7 +20221,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDDecl"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7053:1: entryRuleDDecl returns [EObject current=null] : iv_ruleDDecl= ruleDDecl EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7060:1: entryRuleDDecl returns [EObject current=null] : iv_ruleDDecl= ruleDDecl EOF ;
     public final EObject entryRuleDDecl() throws RecognitionException {
         EObject current = null;
 
@@ -20210,13 +20229,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7054:2: (iv_ruleDDecl= ruleDDecl EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7055:2: iv_ruleDDecl= ruleDDecl EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7061:2: (iv_ruleDDecl= ruleDDecl EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7062:2: iv_ruleDDecl= ruleDDecl EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDDeclRule()); 
             }
-            pushFollow(FOLLOW_ruleDDecl_in_entryRuleDDecl13756);
+            pushFollow(FOLLOW_ruleDDecl_in_entryRuleDDecl13775);
             iv_ruleDDecl=ruleDDecl();
 
             state._fsp--;
@@ -20224,7 +20243,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleDDecl; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDDecl13766); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDDecl13785); if (state.failed) return current;
 
             }
 
@@ -20242,7 +20261,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDDecl"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7062:1: ruleDDecl returns [EObject current=null] : ( (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' ) | this_Exp6_5= ruleExp6 ) ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7069:1: ruleDDecl returns [EObject current=null] : ( (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' ) | this_Exp6_5= ruleExp6 ) ;
     public final EObject ruleDDecl() throws RecognitionException {
         EObject current = null;
 
@@ -20259,15 +20278,40 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7065:28: ( ( (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' ) | this_Exp6_5= ruleExp6 ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7066:1: ( (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' ) | this_Exp6_5= ruleExp6 )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7072:28: ( ( (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' ) | this_Exp6_5= ruleExp6 ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7073:1: ( (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' ) | this_Exp6_5= ruleExp6 )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7066:1: ( (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' ) | this_Exp6_5= ruleExp6 )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7073:1: ( (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' ) | this_Exp6_5= ruleExp6 )
             int alt158=2;
             int LA158_0 = input.LA(1);
 
             if ( (LA158_0==29) ) {
                 switch ( input.LA(2) ) {
+                case RULE_ID:
+                    {
+                    int LA158_3 = input.LA(3);
+
+                    if ( (LA158_3==22||LA158_3==34) ) {
+                        alt158=1;
+                    }
+                    else if ( ((LA158_3>=RULE_INTEGER && LA158_3<=RULE_DOUBLE)||LA158_3==23||LA158_3==26||(LA158_3>=29 && LA158_3<=31)||LA158_3==38||(LA158_3>=47 && LA158_3<=50)||(LA158_3>=56 && LA158_3<=57)||(LA158_3>=59 && LA158_3<=60)||(LA158_3>=62 && LA158_3<=63)||LA158_3==65||(LA158_3>=69 && LA158_3<=76)) ) {
+                        alt158=2;
+                    }
+                    else {
+                        if (state.backtracking>0) {state.failed=true; return current;}
+                        NoViableAltException nvae =
+                            new NoViableAltException("", 158, 3, input);
+
+                        throw nvae;
+                    }
+                    }
+                    break;
+                case 34:
+                case 66:
+                    {
+                    alt158=1;
+                    }
+                    break;
                 case RULE_INTEGER:
                 case RULE_STRING:
                 case RULE_DOUBLE:
@@ -20293,33 +20337,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 73:
                 case 74:
                 case 75:
+                case 76:
                     {
                     alt158=2;
-                    }
-                    break;
-                case RULE_ID:
-                    {
-                    int LA158_3 = input.LA(3);
-
-                    if ( (LA158_3==22||LA158_3==34) ) {
-                        alt158=1;
-                    }
-                    else if ( ((LA158_3>=RULE_INTEGER && LA158_3<=RULE_DOUBLE)||LA158_3==23||LA158_3==26||(LA158_3>=29 && LA158_3<=31)||LA158_3==38||(LA158_3>=47 && LA158_3<=50)||(LA158_3>=56 && LA158_3<=57)||(LA158_3>=59 && LA158_3<=60)||(LA158_3>=62 && LA158_3<=63)||LA158_3==65||(LA158_3>=69 && LA158_3<=75)) ) {
-                        alt158=2;
-                    }
-                    else {
-                        if (state.backtracking>0) {state.failed=true; return current;}
-                        NoViableAltException nvae =
-                            new NoViableAltException("", 158, 3, input);
-
-                        throw nvae;
-                    }
-                    }
-                    break;
-                case 34:
-                case 66:
-                    {
-                    alt158=1;
                     }
                     break;
                 default:
@@ -20331,7 +20351,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 }
 
             }
-            else if ( ((LA158_0>=RULE_INTEGER && LA158_0<=RULE_DOUBLE)||LA158_0==26||LA158_0==31||LA158_0==38||(LA158_0>=49 && LA158_0<=50)||(LA158_0>=69 && LA158_0<=75)) ) {
+            else if ( ((LA158_0>=RULE_INTEGER && LA158_0<=RULE_DOUBLE)||LA158_0==26||LA158_0==31||LA158_0==38||(LA158_0>=49 && LA158_0<=50)||(LA158_0>=69 && LA158_0<=76)) ) {
                 alt158=2;
             }
             else {
@@ -20343,29 +20363,29 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             }
             switch (alt158) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7066:2: (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7073:2: (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' )
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7066:2: (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7066:4: otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')'
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7073:2: (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7073:4: otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')'
                     {
-                    otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleDDecl13804); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleDDecl13823); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_0, grammarAccess.getDDeclAccess().getLeftParenthesisKeyword_0_0());
                           
                     }
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7070:1: ( (lv_bindList_1_0= ruleListBind ) )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7071:1: (lv_bindList_1_0= ruleListBind )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7077:1: ( (lv_bindList_1_0= ruleListBind ) )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7078:1: (lv_bindList_1_0= ruleListBind )
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7071:1: (lv_bindList_1_0= ruleListBind )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7072:3: lv_bindList_1_0= ruleListBind
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7078:1: (lv_bindList_1_0= ruleListBind )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7079:3: lv_bindList_1_0= ruleListBind
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getDDeclAccess().getBindListListBindParserRuleCall_0_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleListBind_in_ruleDDecl13825);
+                    pushFollow(FOLLOW_ruleListBind_in_ruleDDecl13844);
                     lv_bindList_1_0=ruleListBind();
 
                     state._fsp--;
@@ -20389,24 +20409,24 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,34,FOLLOW_34_in_ruleDDecl13837); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,34,FOLLOW_34_in_ruleDDecl13856); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getDDeclAccess().getColonKeyword_0_2());
                           
                     }
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7092:1: ( (lv_e_3_0= ruleExp ) )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7093:1: (lv_e_3_0= ruleExp )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7099:1: ( (lv_e_3_0= ruleExp ) )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7100:1: (lv_e_3_0= ruleExp )
                     {
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7093:1: (lv_e_3_0= ruleExp )
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7094:3: lv_e_3_0= ruleExp
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7100:1: (lv_e_3_0= ruleExp )
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7101:3: lv_e_3_0= ruleExp
                     {
                     if ( state.backtracking==0 ) {
                        
                       	        newCompositeNode(grammarAccess.getDDeclAccess().getEExpParserRuleCall_0_3_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleExp_in_ruleDDecl13858);
+                    pushFollow(FOLLOW_ruleExp_in_ruleDDecl13877);
                     lv_e_3_0=ruleExp();
 
                     state._fsp--;
@@ -20430,7 +20450,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleDDecl13870); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleDDecl13889); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getDDeclAccess().getRightParenthesisKeyword_0_4());
@@ -20443,14 +20463,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7116:5: this_Exp6_5= ruleExp6
+                    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7123:5: this_Exp6_5= ruleExp6
                     {
                     if ( state.backtracking==0 ) {
                        
                               newCompositeNode(grammarAccess.getDDeclAccess().getExp6ParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleExp6_in_ruleDDecl13899);
+                    pushFollow(FOLLOW_ruleExp6_in_ruleDDecl13918);
                     this_Exp6_5=ruleExp6();
 
                     state._fsp--;
@@ -20487,7 +20507,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIdent"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7132:1: entryRuleIdent returns [EObject current=null] : iv_ruleIdent= ruleIdent EOF ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7139:1: entryRuleIdent returns [EObject current=null] : iv_ruleIdent= ruleIdent EOF ;
     public final EObject entryRuleIdent() throws RecognitionException {
         EObject current = null;
 
@@ -20495,13 +20515,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7133:2: (iv_ruleIdent= ruleIdent EOF )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7134:2: iv_ruleIdent= ruleIdent EOF
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7140:2: (iv_ruleIdent= ruleIdent EOF )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7141:2: iv_ruleIdent= ruleIdent EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getIdentRule()); 
             }
-            pushFollow(FOLLOW_ruleIdent_in_entryRuleIdent13934);
+            pushFollow(FOLLOW_ruleIdent_in_entryRuleIdent13953);
             iv_ruleIdent=ruleIdent();
 
             state._fsp--;
@@ -20509,7 +20529,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleIdent; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleIdent13944); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleIdent13963); if (state.failed) return current;
 
             }
 
@@ -20527,7 +20547,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIdent"
-    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7141:1: ruleIdent returns [EObject current=null] : ( (lv_s_0_0= RULE_ID ) ) ;
+    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7148:1: ruleIdent returns [EObject current=null] : ( (lv_s_0_0= RULE_ID ) ) ;
     public final EObject ruleIdent() throws RecognitionException {
         EObject current = null;
 
@@ -20536,16 +20556,16 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7144:28: ( ( (lv_s_0_0= RULE_ID ) ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7145:1: ( (lv_s_0_0= RULE_ID ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7151:28: ( ( (lv_s_0_0= RULE_ID ) ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7152:1: ( (lv_s_0_0= RULE_ID ) )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7145:1: ( (lv_s_0_0= RULE_ID ) )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7146:1: (lv_s_0_0= RULE_ID )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7152:1: ( (lv_s_0_0= RULE_ID ) )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7153:1: (lv_s_0_0= RULE_ID )
             {
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7146:1: (lv_s_0_0= RULE_ID )
-            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7147:3: lv_s_0_0= RULE_ID
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7153:1: (lv_s_0_0= RULE_ID )
+            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7154:3: lv_s_0_0= RULE_ID
             {
-            lv_s_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIdent13985); if (state.failed) return current;
+            lv_s_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleIdent14004); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(lv_s_0_0, grammarAccess.getIdentAccess().getSIDTerminalRuleCall_0()); 
@@ -20839,29 +20859,29 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA33_eotS =
         "\115\uffff";
     static final String DFA33_eofS =
-        "\2\4\6\uffff\1\20\2\uffff\1\4\1\uffff\1\20\4\uffff\1\36\5\uffff"+
-        "\1\4\3\uffff\1\36\5\uffff\1\4\3\uffff\1\20\2\uffff\1\20\10\uffff"+
-        "\1\4\4\uffff\1\36\1\uffff\1\36\3\uffff\1\4\2\uffff\2\20\5\uffff"+
+        "\2\4\6\uffff\1\20\1\uffff\1\4\2\uffff\1\20\4\uffff\1\36\5\uffff"+
+        "\1\4\3\uffff\1\36\7\uffff\1\4\1\uffff\1\20\2\uffff\1\20\6\uffff"+
+        "\1\4\5\uffff\1\36\2\uffff\1\36\4\uffff\1\4\1\uffff\2\20\5\uffff"+
         "\1\36\1\uffff\1\36\1\20\1\uffff\1\36";
     static final String DFA33_minS =
-        "\1\6\1\17\1\6\2\uffff\1\37\3\6\1\34\1\6\1\17\1\26\1\17\1\6\2\uffff"+
-        "\1\37\2\6\1\26\1\37\2\6\1\17\1\6\1\16\1\6\1\17\1\6\2\uffff\1\26"+
-        "\1\6\1\17\1\6\2\26\1\17\2\6\1\17\1\26\1\6\1\16\1\6\1\34\2\26\1\6"+
-        "\1\17\1\16\1\36\1\6\1\34\1\17\1\6\1\17\1\6\1\26\1\6\1\17\1\26\1"+
-        "\6\2\17\1\26\1\16\1\36\1\26\1\36\1\17\1\6\2\17\1\36\1\17";
+        "\1\6\1\17\1\6\2\uffff\1\6\1\37\2\6\1\34\1\17\1\6\1\26\1\17\1\6\2"+
+        "\uffff\2\6\1\37\1\6\1\37\1\26\1\6\1\17\1\6\1\16\1\26\1\17\1\6\2"+
+        "\uffff\1\6\1\26\2\6\1\17\1\26\1\17\2\6\1\17\1\6\1\34\1\6\1\16\1"+
+        "\26\1\6\1\17\2\26\1\16\1\36\1\26\1\17\2\6\1\17\1\6\1\34\1\26\1\6"+
+        "\1\17\1\6\2\17\1\16\1\36\2\26\1\36\1\17\1\6\2\17\1\36\1\17";
     static final String DFA33_maxS =
-        "\1\32\1\41\1\32\2\uffff\1\37\2\6\1\35\1\41\1\6\1\41\1\40\1\27\1"+
-        "\6\2\uffff\1\37\1\35\1\6\1\40\1\37\2\6\1\34\1\35\1\36\1\6\1\27\1"+
-        "\6\2\uffff\1\40\1\6\1\34\1\6\2\40\1\27\2\6\1\27\1\40\1\35\1\36\1"+
-        "\6\1\34\2\40\1\6\1\27\2\36\1\6\1\34\1\27\1\6\1\27\1\6\1\40\1\6\1"+
-        "\27\1\40\1\6\2\27\1\40\2\36\1\40\1\36\1\27\1\6\2\27\1\36\1\27";
+        "\1\32\1\41\1\32\2\uffff\1\6\1\37\1\6\1\35\2\41\1\6\1\40\1\27\1\6"+
+        "\2\uffff\1\6\1\35\1\37\1\6\1\37\1\40\1\6\1\34\1\35\1\36\1\40\1\27"+
+        "\1\6\2\uffff\1\6\1\40\2\6\1\34\1\40\1\27\2\6\1\27\1\6\1\34\1\35"+
+        "\1\36\1\40\1\6\1\27\2\40\2\36\1\40\1\27\2\6\1\27\1\6\1\34\1\40\1"+
+        "\6\1\27\1\6\2\27\2\36\2\40\1\36\1\27\1\6\2\27\1\36\1\27";
     static final String DFA33_acceptS =
         "\3\uffff\1\1\1\2\12\uffff\1\4\1\3\15\uffff\1\5\1\6\55\uffff";
     static final String DFA33_specialS =
         "\115\uffff}>";
     static final String[] DFA33_transitionS = {
             "\1\1\10\uffff\1\4\7\uffff\1\2\1\3\1\uffff\1\3",
-            "\1\4\6\uffff\1\6\1\2\4\uffff\1\10\2\uffff\1\7\1\uffff\1\5",
+            "\1\4\6\uffff\1\5\1\2\4\uffff\1\10\2\uffff\1\7\1\uffff\1\6",
             "\1\11\21\uffff\1\3\1\uffff\1\3",
             "",
             "",
@@ -20869,9 +20889,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "\1\13",
             "\1\14",
             "\1\15\10\uffff\1\20\7\uffff\1\17\5\uffff\1\16",
-            "\1\22\2\uffff\1\23\1\uffff\1\21",
-            "\1\24",
-            "\1\4\6\uffff\1\6\1\2\7\uffff\1\26\1\uffff\1\25",
+            "\1\22\2\uffff\1\21\1\uffff\1\23",
+            "\1\4\6\uffff\1\5\1\2\7\uffff\1\24\1\uffff\1\25",
+            "\1\26",
             "\1\27\11\uffff\1\30",
             "\1\20\6\uffff\1\31\1\17",
             "\1\32",
@@ -20880,63 +20900,63 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "\1\33",
             "\1\34\10\uffff\1\36\7\uffff\1\37\5\uffff\1\35",
             "\1\40",
-            "\1\41\11\uffff\1\42",
-            "\1\43",
-            "\1\44",
+            "\1\41",
+            "\1\42",
+            "\1\43\11\uffff\1\44",
             "\1\45",
-            "\1\4\6\uffff\1\6\1\2\4\uffff\1\10",
+            "\1\4\6\uffff\1\5\1\2\4\uffff\1\10",
             "\1\46\26\uffff\1\47",
             "\1\50\17\uffff\1\51",
-            "\1\52",
-            "\1\36\6\uffff\1\53\1\37",
-            "\1\54",
+            "\1\52\11\uffff\1\53",
+            "\1\36\6\uffff\1\54\1\37",
+            "\1\55",
             "",
             "",
-            "\1\55\11\uffff\1\56",
-            "\1\57",
-            "\1\4\6\uffff\1\6\1\2\4\uffff\1\10",
-            "\1\60",
-            "\1\61\11\uffff\1\62",
+            "\1\56",
+            "\1\57\11\uffff\1\60",
+            "\1\61",
+            "\1\62",
+            "\1\4\6\uffff\1\5\1\2\4\uffff\1\10",
             "\1\27\11\uffff\1\30",
             "\1\20\6\uffff\1\31\1\17",
             "\1\63",
             "\1\64",
             "\1\20\6\uffff\1\31\1\17",
-            "\1\65\11\uffff\1\66",
-            "\1\67\26\uffff\1\70",
-            "\1\72\17\uffff\1\71",
-            "\1\73",
+            "\1\65",
             "\1\22",
-            "\1\41\11\uffff\1\42",
-            "\1\74\11\uffff\1\75",
-            "\1\76",
-            "\1\4\6\uffff\1\6\1\2",
+            "\1\66\26\uffff\1\67",
+            "\1\70\17\uffff\1\71",
+            "\1\72\11\uffff\1\73",
+            "\1\74",
+            "\1\4\6\uffff\1\5\1\2",
+            "\1\75\11\uffff\1\76",
+            "\1\43\11\uffff\1\44",
             "\1\77\17\uffff\1\100",
             "\1\101",
+            "\1\52\11\uffff\1\53",
+            "\1\36\6\uffff\1\54\1\37",
             "\1\102",
-            "\1\22",
-            "\1\36\6\uffff\1\53\1\37",
             "\1\103",
-            "\1\36\6\uffff\1\53\1\37",
+            "\1\36\6\uffff\1\54\1\37",
             "\1\104",
-            "\1\55\11\uffff\1\56",
+            "\1\22",
+            "\1\57\11\uffff\1\60",
             "\1\105",
-            "\1\4\6\uffff\1\6\1\2",
-            "\1\61\11\uffff\1\62",
+            "\1\4\6\uffff\1\5\1\2",
             "\1\106",
             "\1\20\6\uffff\1\31\1\17",
             "\1\20\6\uffff\1\31\1\17",
-            "\1\65\11\uffff\1\66",
             "\1\110\17\uffff\1\107",
             "\1\111",
-            "\1\74\11\uffff\1\75",
+            "\1\72\11\uffff\1\73",
+            "\1\75\11\uffff\1\76",
             "\1\112",
-            "\1\36\6\uffff\1\53\1\37",
+            "\1\36\6\uffff\1\54\1\37",
             "\1\113",
-            "\1\36\6\uffff\1\53\1\37",
+            "\1\36\6\uffff\1\54\1\37",
             "\1\20\6\uffff\1\31\1\17",
             "\1\114",
-            "\1\36\6\uffff\1\53\1\37"
+            "\1\36\6\uffff\1\54\1\37"
     };
 
     static final short[] DFA33_eot = DFA.unpackEncodedString(DFA33_eotS);
@@ -20981,25 +21001,25 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA41_maxS =
         "\1\37\1\102\1\6\1\37\3\uffff\1\40\1\42\1\6\1\102\1\40\1\42";
     static final String DFA41_acceptS =
-        "\4\uffff\1\2\1\3\1\1\6\uffff";
+        "\4\uffff\1\1\1\3\1\2\6\uffff";
     static final String DFA41_specialS =
         "\15\uffff}>";
     static final String[] DFA41_transitionS = {
             "\1\1\30\uffff\1\2",
-            "\4\5\6\uffff\1\6\7\uffff\1\3\3\uffff\1\5\2\uffff\1\5\4\uffff"+
-            "\1\4\16\uffff\2\5\7\uffff\1\5\7\uffff\1\5",
+            "\4\5\6\uffff\1\4\7\uffff\1\3\3\uffff\1\5\2\uffff\1\5\4\uffff"+
+            "\1\6\16\uffff\2\5\7\uffff\1\5\7\uffff\1\5",
             "\1\7",
             "\1\10\30\uffff\1\11",
             "",
             "",
             "",
             "\1\12",
-            "\1\6\7\uffff\1\3\13\uffff\1\4",
+            "\1\4\7\uffff\1\3\13\uffff\1\6",
             "\1\13",
-            "\4\5\6\uffff\1\6\7\uffff\1\3\3\uffff\1\5\2\uffff\1\5\4\uffff"+
-            "\1\4\16\uffff\2\5\7\uffff\1\5\7\uffff\1\5",
+            "\4\5\6\uffff\1\4\7\uffff\1\3\3\uffff\1\5\2\uffff\1\5\4\uffff"+
+            "\1\6\16\uffff\2\5\7\uffff\1\5\7\uffff\1\5",
             "\1\14",
-            "\1\6\7\uffff\1\3\13\uffff\1\4"
+            "\1\4\7\uffff\1\3\13\uffff\1\6"
     };
 
     static final short[] DFA41_eot = DFA.unpackEncodedString(DFA41_eotS);
@@ -21043,7 +21063,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         "\1\6\1\4\1\6\1\uffff\1\6\1\uffff\1\4\1\40\1\16\1\6\2\uffff\1\4\1"+
         "\40\1\16";
     static final String DFA54_maxS =
-        "\1\37\1\102\1\6\1\uffff\1\37\1\uffff\1\113\1\40\1\42\1\6\2\uffff"+
+        "\1\37\1\102\1\6\1\uffff\1\37\1\uffff\1\114\1\40\1\42\1\6\2\uffff"+
         "\1\102\1\40\1\42";
     static final String DFA54_acceptS =
         "\3\uffff\1\4\1\uffff\1\1\4\uffff\1\3\1\2\3\uffff";
@@ -21059,7 +21079,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "",
             "\4\13\22\uffff\1\13\2\uffff\1\13\1\uffff\1\13\3\uffff\1\12"+
             "\2\uffff\1\13\3\uffff\1\13\1\uffff\1\13\4\uffff\2\13\1\uffff"+
-            "\4\13\2\uffff\1\13\2\uffff\1\13\2\uffff\1\13\4\uffff\7\13",
+            "\4\13\2\uffff\1\13\2\uffff\1\13\2\uffff\1\13\4\uffff\10\13",
             "\1\14",
             "\1\5\7\uffff\1\4\13\uffff\1\6",
             "\1\15",
@@ -21114,7 +21134,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         "\1\56\2\uffff\1\6\6\uffff\1\45\1\uffff\1\42\4\uffff";
     static final String DFA68_acceptS =
         "\1\uffff\1\1\1\2\1\uffff\1\4\1\6\1\7\1\10\1\11\1\12\1\uffff\1\15"+
-        "\1\uffff\1\13\1\14\1\3\1\5";
+        "\1\uffff\1\13\1\14\1\5\1\3";
     static final String DFA68_specialS =
         "\21\uffff}>";
     static final String[] DFA68_transitionS = {
@@ -21130,7 +21150,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "",
             "\1\15\1\16",
             "",
-            "\1\20\7\uffff\1\17\13\uffff\1\17",
+            "\1\17\7\uffff\1\20\13\uffff\1\20",
             "",
             "",
             "",
@@ -21231,7 +21251,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA95_minS =
         "\1\4\7\uffff\1\5\7\uffff";
     static final String DFA95_maxS =
-        "\1\113\7\uffff\1\40\7\uffff";
+        "\1\114\7\uffff\1\40\7\uffff";
     static final String DFA95_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\uffff\1\11\1\14\1\15\1\16"+
         "\1\13\1\12\1\10";
@@ -21239,7 +21259,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         "\20\uffff}>";
     static final String[] DFA95_transitionS = {
             "\1\5\1\4\1\1\1\6\22\uffff\1\12\2\uffff\1\14\1\uffff\1\10\6\uffff"+
-            "\1\11\12\uffff\1\7\1\13\22\uffff\4\2\3\3",
+            "\1\11\12\uffff\1\7\1\13\22\uffff\4\2\4\3",
             "",
             "",
             "",
@@ -21291,24 +21311,25 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         }
     }
     static final String DFA94_eotS =
-        "\35\uffff";
+        "\36\uffff";
     static final String DFA94_eofS =
-        "\35\uffff";
+        "\36\uffff";
     static final String DFA94_minS =
-        "\1\4\32\0\2\uffff";
+        "\1\4\33\0\2\uffff";
     static final String DFA94_maxS =
-        "\1\113\32\0\2\uffff";
+        "\1\114\33\0\2\uffff";
     static final String DFA94_acceptS =
-        "\33\uffff\1\1\1\2";
+        "\34\uffff\1\1\1\2";
     static final String DFA94_specialS =
         "\1\0\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15\1"+
         "\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32"+
-        "\2\uffff}>";
+        "\1\33\2\uffff}>";
     static final String[] DFA94_transitionS = {
-            "\1\23\1\22\1\12\1\24\22\uffff\1\30\2\uffff\1\3\1\uffff\1\26"+
-            "\6\uffff\1\27\3\uffff\1\10\1\uffff\1\11\4\uffff\1\25\1\31\1"+
-            "\33\1\4\1\5\1\6\1\7\2\uffff\1\32\2\uffff\1\1\2\uffff\1\2\4\uffff"+
-            "\1\13\1\14\1\15\1\16\1\17\1\20\1\21",
+            "\1\24\1\23\1\12\1\25\22\uffff\1\31\2\uffff\1\3\1\uffff\1\27"+
+            "\6\uffff\1\30\3\uffff\1\10\1\uffff\1\11\4\uffff\1\26\1\32\1"+
+            "\34\1\4\1\5\1\6\1\7\2\uffff\1\33\2\uffff\1\1\2\uffff\1\2\4\uffff"+
+            "\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22",
+            "\1\uffff",
             "\1\uffff",
             "\1\uffff",
             "\1\uffff",
@@ -21416,25 +21437,27 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                         else if ( (LA94_0==75) ) {s = 17;}
 
-                        else if ( (LA94_0==RULE_STRING) ) {s = 18;}
+                        else if ( (LA94_0==76) ) {s = 18;}
 
-                        else if ( (LA94_0==RULE_INTEGER) ) {s = 19;}
+                        else if ( (LA94_0==RULE_STRING) ) {s = 19;}
 
-                        else if ( (LA94_0==RULE_DOUBLE) ) {s = 20;}
+                        else if ( (LA94_0==RULE_INTEGER) ) {s = 20;}
 
-                        else if ( (LA94_0==49) ) {s = 21;}
+                        else if ( (LA94_0==RULE_DOUBLE) ) {s = 21;}
 
-                        else if ( (LA94_0==31) ) {s = 22;}
+                        else if ( (LA94_0==49) ) {s = 22;}
 
-                        else if ( (LA94_0==38) ) {s = 23;}
+                        else if ( (LA94_0==31) ) {s = 23;}
 
-                        else if ( (LA94_0==26) ) {s = 24;}
+                        else if ( (LA94_0==38) ) {s = 24;}
 
-                        else if ( (LA94_0==50) ) {s = 25;}
+                        else if ( (LA94_0==26) ) {s = 25;}
 
-                        else if ( (LA94_0==58) ) {s = 26;}
+                        else if ( (LA94_0==50) ) {s = 26;}
 
-                        else if ( (LA94_0==51) && (synpred2_InternalGF())) {s = 27;}
+                        else if ( (LA94_0==58) ) {s = 27;}
+
+                        else if ( (LA94_0==51) && (synpred2_InternalGF())) {s = 28;}
 
                          
                         input.seek(index94_0);
@@ -21447,9 +21470,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_1 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_1);
@@ -21462,9 +21485,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_2 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_2);
@@ -21477,9 +21500,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_3 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_3);
@@ -21492,9 +21515,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_4 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_4);
@@ -21507,9 +21530,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_5 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_5);
@@ -21522,9 +21545,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_6 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_6);
@@ -21537,9 +21560,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_7 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_7);
@@ -21552,9 +21575,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_8 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_8);
@@ -21567,9 +21590,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_9 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_9);
@@ -21582,9 +21605,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_10 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_10);
@@ -21597,9 +21620,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_11 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_11);
@@ -21612,9 +21635,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_12 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_12);
@@ -21627,9 +21650,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_13 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_13);
@@ -21642,9 +21665,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_14 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_14);
@@ -21657,9 +21680,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_15 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_15);
@@ -21672,9 +21695,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_16 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_16);
@@ -21687,9 +21710,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_17 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_17);
@@ -21702,9 +21725,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_18 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_18);
@@ -21717,9 +21740,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_19 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_19);
@@ -21732,9 +21755,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_20 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_20);
@@ -21747,9 +21770,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_21 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_21);
@@ -21762,9 +21785,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_22 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_22);
@@ -21777,9 +21800,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_23 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_23);
@@ -21792,9 +21815,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_24 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_24);
@@ -21807,9 +21830,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_25 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_25);
@@ -21822,12 +21845,27 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_26 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (synpred2_InternalGF()) ) {s = 27;}
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
 
-                        else if ( (true) ) {s = 28;}
+                        else if ( (true) ) {s = 29;}
 
                          
                         input.seek(index94_26);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 27 : 
+                        int LA94_27 = input.LA(1);
+
+                         
+                        int index94_27 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( (synpred2_InternalGF()) ) {s = 28;}
+
+                        else if ( (true) ) {s = 29;}
+
+                         
+                        input.seek(index94_27);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -21845,7 +21883,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA106_minS =
         "\2\4\7\uffff\2\4\1\uffff";
     static final String DFA106_maxS =
-        "\2\113\7\uffff\1\102\1\103\1\uffff";
+        "\2\114\7\uffff\1\102\1\103\1\uffff";
     static final String DFA106_acceptS =
         "\2\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\2\2\uffff\1\1";
     static final String DFA106_specialS =
@@ -21853,9 +21891,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String[] DFA106_transitionS = {
             "\4\7\22\uffff\1\7\2\uffff\1\7\1\uffff\1\7\6\uffff\1\7\3\uffff"+
             "\1\5\1\uffff\1\6\4\uffff\2\7\1\uffff\1\1\1\2\1\3\1\4\15\uffff"+
-            "\7\7",
+            "\10\7",
             "\4\10\22\uffff\1\11\2\uffff\1\10\1\uffff\1\10\6\uffff\1\10"+
-            "\12\uffff\2\10\22\uffff\7\10",
+            "\12\uffff\2\10\22\uffff\10\10",
             "",
             "",
             "",
@@ -21911,7 +21949,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA132_minS =
         "\1\4\2\6\1\4\6\uffff\1\4\1\uffff";
     static final String DFA132_maxS =
-        "\1\113\1\102\1\32\1\113\6\uffff\1\113\1\uffff";
+        "\1\114\1\102\1\32\1\114\6\uffff\1\114\1\uffff";
     static final String DFA132_acceptS =
         "\4\uffff\1\6\1\7\1\1\1\2\1\4\1\3\1\uffff\1\5";
     static final String DFA132_specialS =
@@ -21919,13 +21957,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String[] DFA132_transitionS = {
             "\4\4\22\uffff\1\4\2\uffff\1\3\1\uffff\1\4\6\uffff\1\4\3\uffff"+
             "\1\4\1\uffff\1\4\4\uffff\2\4\1\uffff\4\4\2\uffff\1\5\2\uffff"+
-            "\1\1\2\uffff\1\2\4\uffff\7\4",
+            "\1\1\2\uffff\1\2\4\uffff\10\4",
             "\1\6\66\uffff\1\7\1\6\3\uffff\1\6",
             "\1\10\22\uffff\1\10\1\11",
             "\2\4\1\12\1\4\22\uffff\1\4\2\uffff\1\4\1\uffff\1\4\2\uffff"+
             "\1\13\3\uffff\1\4\3\uffff\1\4\1\uffff\1\4\4\uffff\2\4\1\uffff"+
             "\4\4\2\uffff\1\4\2\uffff\1\4\2\uffff\1\4\1\uffff\1\13\2\uffff"+
-            "\7\4",
+            "\10\4",
             "",
             "",
             "",
@@ -21934,7 +21972,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "",
             "\4\4\16\uffff\1\13\1\4\2\uffff\1\4\2\uffff\3\4\2\uffff\1\13"+
             "\3\uffff\1\4\10\uffff\4\4\5\uffff\2\4\1\uffff\2\4\1\uffff\2"+
-            "\4\1\uffff\1\4\3\uffff\7\4",
+            "\4\1\uffff\1\4\3\uffff\10\4",
             ""
     };
 
@@ -22155,25 +22193,25 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleName_in_ruleDef2645 = new BitSet(new long[]{0x0000000000404000L});
     public static final BitSet FOLLOW_22_in_ruleDef2658 = new BitSet(new long[]{0x0000000080000040L});
     public static final BitSet FOLLOW_ruleName_in_ruleDef2679 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_14_in_ruleDef2693 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_14_in_ruleDef2693 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleDef2714 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleName_in_ruleDef2743 = new BitSet(new long[]{0x0000000400400000L});
     public static final BitSet FOLLOW_22_in_ruleDef2756 = new BitSet(new long[]{0x0000000080000040L});
     public static final BitSet FOLLOW_ruleName_in_ruleDef2777 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_34_in_ruleDef2791 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_34_in_ruleDef2791 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleDef2812 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleDef2825 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_14_in_ruleDef2825 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleDef2846 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleName_in_ruleDef2877 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
     public static final BitSet FOLLOW_ruleListPatt_in_ruleDef2898 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleDef2910 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_14_in_ruleDef2910 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleDef2931 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleOperDef_in_entryRuleOperDef2968 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleOperDef2978 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleName_in_ruleOperDef3025 = new BitSet(new long[]{0x0000000000404000L});
     public static final BitSet FOLLOW_22_in_ruleOperDef3038 = new BitSet(new long[]{0x0000000080000040L});
     public static final BitSet FOLLOW_ruleName_in_ruleOperDef3059 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_14_in_ruleOperDef3073 = new BitSet(new long[]{0x24F61448A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_14_in_ruleOperDef3073 = new BitSet(new long[]{0x24F61448A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleOperDef3095 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_35_in_ruleOperDef3120 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_26_in_ruleOperDef3145 = new BitSet(new long[]{0x0000000080000040L});
@@ -22185,9 +22223,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleName_in_ruleOperDef3260 = new BitSet(new long[]{0x0000000400400000L});
     public static final BitSet FOLLOW_22_in_ruleOperDef3273 = new BitSet(new long[]{0x0000000080000040L});
     public static final BitSet FOLLOW_ruleName_in_ruleOperDef3294 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_34_in_ruleOperDef3308 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_34_in_ruleOperDef3308 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleOperDef3329 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleOperDef3342 = new BitSet(new long[]{0x24F61448A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_14_in_ruleOperDef3342 = new BitSet(new long[]{0x24F61448A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleOperDef3364 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_35_in_ruleOperDef3389 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_26_in_ruleOperDef3414 = new BitSet(new long[]{0x0000000080000040L});
@@ -22209,7 +22247,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_27_in_ruleOperDef3706 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleName_in_ruleOperDef3735 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
     public static final BitSet FOLLOW_ruleListPatt_in_ruleOperDef3756 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleOperDef3768 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_14_in_ruleOperDef3768 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleOperDef3789 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTopDef_in_entryRuleTopDef3826 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTopDef3836 = new BitSet(new long[]{0x0000000000000002L});
@@ -22256,11 +22294,11 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_15_in_ruleTopDef4851 = new BitSet(new long[]{0x0000000000000042L});
     public static final BitSet FOLLOW_ruleCatDef_in_entryRuleCatDef4890 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCatDef4900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleCatDef4947 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleDDecl_in_ruleCatDef4968 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleCatDef4947 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleDDecl_in_ruleCatDef4968 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_31_in_ruleCatDef4989 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleCatDef5010 = new BitSet(new long[]{0x00F61441A40000F0L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleDDecl_in_ruleCatDef5031 = new BitSet(new long[]{0x00F61441A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleCatDef5010 = new BitSet(new long[]{0x00F61441A40000F0L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleDDecl_in_ruleCatDef5031 = new BitSet(new long[]{0x00F61441A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_32_in_ruleCatDef5044 = new BitSet(new long[]{0x0000000004000002L});
     public static final BitSet FOLLOW_26_in_ruleCatDef5057 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_INTEGER_in_ruleCatDef5074 = new BitSet(new long[]{0x0000000008000000L});
@@ -22270,7 +22308,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleIdent_in_ruleFunDef5186 = new BitSet(new long[]{0x0000000400400000L});
     public static final BitSet FOLLOW_22_in_ruleFunDef5199 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleFunDef5220 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_34_in_ruleFunDef5234 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_34_in_ruleFunDef5234 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleFunDef5255 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDataDef_in_entryRuleDataDef5291 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDataDef5301 = new BitSet(new long[]{0x0000000000000002L});
@@ -22303,14 +22341,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleIdent_in_ruleParDef5894 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParConstr_in_entryRuleParConstr5930 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleParConstr5940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleParConstr5986 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleDDecl_in_ruleParConstr6007 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleParConstr5986 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleDDecl_in_ruleParConstr6007 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_rulePrintDef_in_entryRulePrintDef6044 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePrintDef6054 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleName_in_rulePrintDef6100 = new BitSet(new long[]{0x0000000000404000L});
     public static final BitSet FOLLOW_22_in_rulePrintDef6113 = new BitSet(new long[]{0x0000000080000040L});
     public static final BitSet FOLLOW_ruleName_in_rulePrintDef6134 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_14_in_rulePrintDef6148 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_14_in_rulePrintDef6148 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_rulePrintDef6169 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFlagDef_in_entryRuleFlagDef6205 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFlagDef6215 = new BitSet(new long[]{0x0000000000000002L});
@@ -22329,14 +22367,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6550 = new BitSet(new long[]{0x0000000400400000L});
     public static final BitSet FOLLOW_22_in_ruleLocDef6563 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6584 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_34_in_ruleLocDef6598 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_34_in_ruleLocDef6598 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleLocDef6619 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleLocDef6632 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_14_in_ruleLocDef6632 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleLocDef6653 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6684 = new BitSet(new long[]{0x0000000000404000L});
     public static final BitSet FOLLOW_22_in_ruleLocDef6697 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6718 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_14_in_ruleLocDef6732 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_14_in_ruleLocDef6732 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleLocDef6753 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleListLocDef_in_entryRuleListLocDef6790 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListLocDef6800 = new BitSet(new long[]{0x0000000000000002L});
@@ -22358,7 +22396,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_32_in_ruleExp67245 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_38_in_ruleExp67270 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_31_in_ruleExp67308 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExp67341 = new BitSet(new long[]{0x00F61441A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExp67341 = new BitSet(new long[]{0x00F61441A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExps_in_ruleExp67362 = new BitSet(new long[]{0x0000000100000000L});
     public static final BitSet FOLLOW_32_in_ruleExp67374 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_31_in_ruleExp67400 = new BitSet(new long[]{0x0000000000000020L});
@@ -22367,13 +22405,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_26_in_ruleExp67461 = new BitSet(new long[]{0x0000000008000040L});
     public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp67495 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_27_in_ruleExp67507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleExp67533 = new BitSet(new long[]{0x24FE1440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_50_in_ruleExp67533 = new BitSet(new long[]{0x24FE1440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleListTupleComp_in_ruleExp67578 = new BitSet(new long[]{0x0008000000000000L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp67606 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleExp67618 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_34_in_ruleExp67618 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp67639 = new BitSet(new long[]{0x0008000000000000L});
     public static final BitSet FOLLOW_51_in_ruleExp67653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleExp67679 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_29_in_ruleExp67679 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp67713 = new BitSet(new long[]{0x0000000040000000L});
     public static final BitSet FOLLOW_30_in_ruleExp67725 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp5_in_entryRuleExp57762 = new BitSet(new long[]{0x0000000000000000L});
@@ -22386,150 +22424,150 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_52_in_ruleExp47938 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_26_in_ruleExp47950 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
     public static final BitSet FOLLOW_ruleListCase_in_ruleExp47971 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp47983 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48004 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_52_in_ruleExp48025 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_27_in_ruleExp47983 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48004 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_52_in_ruleExp48025 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp6_in_ruleExp48046 = new BitSet(new long[]{0x0000000084000000L});
     public static final BitSet FOLLOW_26_in_ruleExp48060 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
     public static final BitSet FOLLOW_ruleListCase_in_ruleExp48081 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp48093 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_31_in_ruleExp48113 = new BitSet(new long[]{0x24F61441A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_27_in_ruleExp48093 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_31_in_ruleExp48113 = new BitSet(new long[]{0x24F61441A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleListExp_in_ruleExp48134 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleExp48146 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48169 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_53_in_ruleExp48190 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_32_in_ruleExp48146 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48169 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_53_in_ruleExp48190 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp48211 = new BitSet(new long[]{0x0000000000100000L});
     public static final BitSet FOLLOW_20_in_ruleExp48223 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_26_in_ruleExp48235 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
     public static final BitSet FOLLOW_ruleListCase_in_ruleExp48256 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp48268 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48289 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_27_in_ruleExp48268 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48289 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_54_in_ruleExp48310 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleExp48322 = new BitSet(new long[]{0x24F61440AC0000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_26_in_ruleExp48322 = new BitSet(new long[]{0x24F61440AC0000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleListExp_in_ruleExp48343 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp48355 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48376 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_27_in_ruleExp48355 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48376 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_55_in_ruleExp48397 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_26_in_ruleExp48409 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
     public static final BitSet FOLLOW_ruleListCase_in_ruleExp48430 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp48442 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48463 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_27_in_ruleExp48442 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48463 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_42_in_ruleExp48484 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExp48504 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48525 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExp48504 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48525 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_44_in_ruleExp48546 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExp48566 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleExp6_in_ruleExp48587 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48608 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48638 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48659 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExp48566 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleExp6_in_ruleExp48587 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48608 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48638 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48659 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp3_in_entryRuleExp38697 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp38707 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp4_in_ruleExp38754 = new BitSet(new long[]{0x0300000000800002L});
-    public static final BitSet FOLLOW_56_in_ruleExp38768 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_57_in_ruleExp38786 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_23_in_ruleExp38804 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_56_in_ruleExp38768 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_57_in_ruleExp38786 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_23_in_ruleExp38804 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp4_in_ruleExp38826 = new BitSet(new long[]{0x0300000000800002L});
     public static final BitSet FOLLOW_58_in_ruleExp38848 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
     public static final BitSet FOLLOW_rulePatt2_in_ruleExp38869 = new BitSet(new long[]{0x0300000000800002L});
-    public static final BitSet FOLLOW_56_in_ruleExp38883 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_57_in_ruleExp38901 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_23_in_ruleExp38919 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_56_in_ruleExp38883 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_57_in_ruleExp38901 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_23_in_ruleExp38919 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp4_in_ruleExp38941 = new BitSet(new long[]{0x0300000000800002L});
     public static final BitSet FOLLOW_ruleExp2_in_entryRuleExp28980 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp28990 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp3_in_ruleExp29036 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleExp29049 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_59_in_ruleExp29049 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp2_in_ruleExp29070 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp1_in_entryRuleExp19108 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp19118 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp2_in_ruleExp19164 = new BitSet(new long[]{0x1000000000000002L});
-    public static final BitSet FOLLOW_60_in_ruleExp19177 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_60_in_ruleExp19177 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp19198 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp_in_entryRuleExp9236 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp9246 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_61_in_ruleExp9284 = new BitSet(new long[]{0x4000000000000040L,0x0000000000000004L});
     public static final BitSet FOLLOW_ruleListBind_in_ruleExp9305 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_62_in_ruleExp9317 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_62_in_ruleExp9317 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp9338 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp9359 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_47_in_ruleExp9359 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp9381 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_61_in_ruleExp9403 = new BitSet(new long[]{0x2000000000000000L});
     public static final BitSet FOLLOW_61_in_ruleExp9415 = new BitSet(new long[]{0x8000000000000040L,0x0000000000000004L});
     public static final BitSet FOLLOW_ruleListBind_in_ruleExp9436 = new BitSet(new long[]{0x8000000000000000L});
-    public static final BitSet FOLLOW_63_in_ruleExp9448 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_63_in_ruleExp9448 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp9469 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp9490 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_47_in_ruleExp9490 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp9512 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_64_in_ruleExp9534 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_26_in_ruleExp9546 = new BitSet(new long[]{0x0000000008000040L});
     public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp9567 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_27_in_ruleExp9579 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleExp9591 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_25_in_ruleExp9591 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp9612 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp9633 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_47_in_ruleExp9633 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp9655 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_64_in_ruleExp9677 = new BitSet(new long[]{0x0000000002000040L});
     public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp9698 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleExp9710 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_25_in_ruleExp9710 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp9731 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp9752 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_47_in_ruleExp9752 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp9774 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_29_in_ruleExp9796 = new BitSet(new long[]{0x0000000400000040L,0x0000000000000004L});
     public static final BitSet FOLLOW_ruleListBind_in_ruleExp9817 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleExp9829 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_34_in_ruleExp9829 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp9850 = new BitSet(new long[]{0x0000000040000000L});
     public static final BitSet FOLLOW_30_in_ruleExp9862 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_62_in_ruleExp9874 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_62_in_ruleExp9874 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp9895 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp9916 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_47_in_ruleExp9916 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp9938 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_ruleExp4_in_ruleExp9969 = new BitSet(new long[]{0xDB00800000800002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleExp9985 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_57_in_ruleExp10003 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_23_in_ruleExp10021 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_56_in_ruleExp9985 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_57_in_ruleExp10003 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_23_in_ruleExp10021 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp4_in_ruleExp10043 = new BitSet(new long[]{0x9B00800000800002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleExp10059 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_63_in_ruleExp10059 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp10080 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_65_in_ruleExp10100 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_26_in_ruleExp10112 = new BitSet(new long[]{0x0000000008000040L});
     public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp10133 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_27_in_ruleExp10145 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_59_in_ruleExp10166 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_59_in_ruleExp10166 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp2_in_ruleExp10187 = new BitSet(new long[]{0x1000800000000002L});
-    public static final BitSet FOLLOW_60_in_ruleExp10202 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_60_in_ruleExp10202 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp10223 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_62_in_ruleExp10247 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_62_in_ruleExp10247 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp10268 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp10291 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_47_in_ruleExp10291 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp10313 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_58_in_ruleExp10335 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
     public static final BitSet FOLLOW_rulePatt2_in_ruleExp10356 = new BitSet(new long[]{0x9B00800000800002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleExp10370 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_57_in_ruleExp10388 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
-    public static final BitSet FOLLOW_23_in_ruleExp10406 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_56_in_ruleExp10370 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_57_in_ruleExp10388 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
+    public static final BitSet FOLLOW_23_in_ruleExp10406 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp4_in_ruleExp10428 = new BitSet(new long[]{0x9B00800000800002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleExp10444 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_63_in_ruleExp10444 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleExp10465 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_65_in_ruleExp10485 = new BitSet(new long[]{0x0000000004000000L});
     public static final BitSet FOLLOW_26_in_ruleExp10497 = new BitSet(new long[]{0x0000000008000040L});
     public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp10518 = new BitSet(new long[]{0x0000000008000000L});
     public static final BitSet FOLLOW_27_in_ruleExp10530 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_59_in_ruleExp10551 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_59_in_ruleExp10551 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp2_in_ruleExp10572 = new BitSet(new long[]{0x1000800000000002L});
-    public static final BitSet FOLLOW_60_in_ruleExp10587 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_60_in_ruleExp10587 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp10608 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp10633 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_47_in_ruleExp10633 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp10655 = new BitSet(new long[]{0x0000800000000002L});
     public static final BitSet FOLLOW_ruleListExp_in_entryRuleListExp10694 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListExp10704 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp_in_ruleListExp10760 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListExp10773 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
+    public static final BitSet FOLLOW_15_in_ruleListExp10773 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
     public static final BitSet FOLLOW_ruleExp_in_ruleListExp10794 = new BitSet(new long[]{0x0000000000008002L});
     public static final BitSet FOLLOW_15_in_ruleListExp10809 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExps_in_entryRuleExps10849 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExps10859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp6_in_ruleExps10914 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000000FE0L});
+    public static final BitSet FOLLOW_ruleExp6_in_ruleExps10914 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000001FE0L});
     public static final BitSet FOLLOW_rulePatt2_in_entryRulePatt210951 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePatt210961 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_66_in_rulePatt211008 = new BitSet(new long[]{0x0000000000000002L});
@@ -22596,61 +22634,62 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_73_in_ruleBuiltInCat12458 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_74_in_ruleBuiltInCat12477 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_75_in_ruleBuiltInCat12496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListPattAss_in_entryRuleListPattAss12536 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleListPattAss12546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePattAss_in_ruleListPattAss12602 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListPattAss12615 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rulePattAss_in_ruleListPattAss12636 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListPattAss12651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListPatt_in_entryRuleListPatt12691 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleListPatt12701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePatt2_in_ruleListPatt12746 = new BitSet(new long[]{0x04060000240000F2L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleBind_in_entryRuleBind12782 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBind12792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleBind12838 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleBind12866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListBind_in_entryRuleListBind12903 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleListBind12913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBind_in_ruleListBind12969 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleListBind12982 = new BitSet(new long[]{0x0000000000000040L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleBind_in_ruleListBind13003 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_ruleTupleComp_in_entryRuleTupleComp13043 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTupleComp13053 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleTupleComp13099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePattTupleComp_in_entryRulePattTupleComp13133 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulePattTupleComp13143 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePatt_in_rulePattTupleComp13189 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListTupleComp_in_entryRuleListTupleComp13223 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleListTupleComp13233 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTupleComp_in_ruleListTupleComp13289 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleListTupleComp13302 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
-    public static final BitSet FOLLOW_ruleTupleComp_in_ruleListTupleComp13323 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_ruleListPattTupleComp_in_entryRuleListPattTupleComp13363 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleListPattTupleComp13373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13429 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleListPattTupleComp13442 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13463 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_ruleCase_in_entryRuleCase13503 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCase13513 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePatt_in_ruleCase13559 = new BitSet(new long[]{0x8000000000000000L});
-    public static final BitSet FOLLOW_63_in_ruleCase13571 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleCase13592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListCase_in_entryRuleListCase13628 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleListCase13638 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCase_in_ruleListCase13684 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListCase13697 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleCase_in_ruleListCase13718 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_ruleDDecl_in_entryRuleDDecl13756 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDDecl13766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleDDecl13804 = new BitSet(new long[]{0x0000000400000040L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListBind_in_ruleDDecl13825 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleDDecl13837 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000000FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleDDecl13858 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleDDecl13870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp6_in_ruleDDecl13899 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_entryRuleIdent13934 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleIdent13944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleIdent13985 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleBuiltInCat12515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListPattAss_in_entryRuleListPattAss12555 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleListPattAss12565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePattAss_in_ruleListPattAss12621 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleListPattAss12634 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rulePattAss_in_ruleListPattAss12655 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleListPattAss12670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListPatt_in_entryRuleListPatt12710 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleListPatt12720 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePatt2_in_ruleListPatt12765 = new BitSet(new long[]{0x04060000240000F2L,0x0000000000000004L});
+    public static final BitSet FOLLOW_ruleBind_in_entryRuleBind12801 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBind12811 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleBind12857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleBind12885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListBind_in_entryRuleListBind12922 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleListBind12932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBind_in_ruleListBind12988 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_22_in_ruleListBind13001 = new BitSet(new long[]{0x0000000000000040L,0x0000000000000004L});
+    public static final BitSet FOLLOW_ruleBind_in_ruleListBind13022 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_ruleTupleComp_in_entryRuleTupleComp13062 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTupleComp13072 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleTupleComp13118 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePattTupleComp_in_entryRulePattTupleComp13152 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulePattTupleComp13162 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePatt_in_rulePattTupleComp13208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListTupleComp_in_entryRuleListTupleComp13242 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleListTupleComp13252 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTupleComp_in_ruleListTupleComp13308 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_22_in_ruleListTupleComp13321 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
+    public static final BitSet FOLLOW_ruleTupleComp_in_ruleListTupleComp13342 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_ruleListPattTupleComp_in_entryRuleListPattTupleComp13382 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleListPattTupleComp13392 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13448 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_22_in_ruleListPattTupleComp13461 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
+    public static final BitSet FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13482 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_ruleCase_in_entryRuleCase13522 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCase13532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePatt_in_ruleCase13578 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_63_in_ruleCase13590 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleCase13611 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListCase_in_entryRuleListCase13647 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleListCase13657 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCase_in_ruleListCase13703 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleListCase13716 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
+    public static final BitSet FOLLOW_ruleCase_in_ruleListCase13737 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_ruleDDecl_in_entryRuleDDecl13775 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDDecl13785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_ruleDDecl13823 = new BitSet(new long[]{0x0000000400000040L,0x0000000000000004L});
+    public static final BitSet FOLLOW_ruleListBind_in_ruleDDecl13844 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_ruleDDecl13856 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000001FE1L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleDDecl13877 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleDDecl13889 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExp6_in_ruleDDecl13918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_entryRuleIdent13953 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleIdent13963 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleIdent14004 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_INTEGER_in_synpred1_InternalGF7188 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleListTupleComp_in_synpred2_InternalGF7561 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_47_in_synpred3_InternalGF9351 = new BitSet(new long[]{0x0000000000000002L});

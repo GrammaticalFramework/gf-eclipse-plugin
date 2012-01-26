@@ -160,7 +160,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '*' | '!' | '**'
+	 *     '**' | '!' | '*'
 	 */
 	protected void emit_Exp3_AsteriskAsteriskKeyword_0_1_0_2_or_AsteriskKeyword_0_1_0_1_or_ExclamationMarkKeyword_0_1_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -168,7 +168,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '**' | '*' | '!'
+	 *     '!' | '**' | '*'
 	 */
 	protected void emit_Exp3_AsteriskAsteriskKeyword_1_2_0_2_or_AsteriskKeyword_1_2_0_1_or_ExclamationMarkKeyword_1_2_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -192,7 +192,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '!' | '*' | '**'
+	 *     '*' | '**' | '!'
 	 */
 	protected void emit_Exp_AsteriskAsteriskKeyword_6_2_0_2_or_AsteriskKeyword_6_2_0_1_or_ExclamationMarkKeyword_6_2_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -312,7 +312,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     Double | String | '?' | Integer | '_'
+	 *     String | '?' | Integer | '_' | Double
 	 */
 	protected void emit_Patt2_DoubleTerminalRuleCall_4_1_or_IntegerTerminalRuleCall_3_1_or_QuestionMarkKeyword_9_1_or_StringTerminalRuleCall_5_1_or__Keyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -320,7 +320,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '|' | '+'
+	 *     '+' | '|'
 	 */
 	protected void emit_Patt_PlusSignKeyword_1_0_1_or_VerticalLineKeyword_1_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

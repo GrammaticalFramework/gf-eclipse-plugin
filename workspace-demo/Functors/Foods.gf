@@ -11,7 +11,7 @@ abstract Foods = {
 		Quality ;
 
 	fun
-		-- Is : Item -> Quality -> Phrase ;
+		Is : Item -> Quality -> Phrase ;
 		This, That, These, Those : Kind -> Item ;
 		QKind : Quality -> Kind -> Kind ;
 		Wine, Cheese, Fish, Pizza : Kind ;

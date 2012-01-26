@@ -345,6 +345,7 @@ Sort :
 BuiltInCat :
 	  'String'
 	| 'Int'
+	| 'Ints'
 	| 'Float'
 ;
 

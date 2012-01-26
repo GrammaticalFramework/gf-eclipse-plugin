@@ -2567,11 +2567,19 @@ rule__BuiltInCat__Alternatives
 )
 
     |(
-{ before(grammarAccess.getBuiltInCatAccess().getFloatKeyword_2()); }
+{ before(grammarAccess.getBuiltInCatAccess().getIntsKeyword_2()); }
+
+	'Ints' 
+
+{ after(grammarAccess.getBuiltInCatAccess().getIntsKeyword_2()); }
+)
+
+    |(
+{ before(grammarAccess.getBuiltInCatAccess().getFloatKeyword_3()); }
 
 	'Float' 
 
-{ after(grammarAccess.getBuiltInCatAccess().getFloatKeyword_2()); }
+{ after(grammarAccess.getBuiltInCatAccess().getFloatKeyword_3()); }
 )
 
 ;

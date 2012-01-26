@@ -6494,10 +6494,17 @@ ruleBuiltInCat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
     }
 
     |
+	kw='Ints' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBuiltInCatAccess().getIntsKeyword_2()); 
+    }
+
+    |
 	kw='Float' 
     {
         $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getBuiltInCatAccess().getFloatKeyword_2()); 
+        newLeafNode(kw, grammarAccess.getBuiltInCatAccess().getFloatKeyword_3()); 
     }
 )
     ;
