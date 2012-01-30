@@ -1,9 +1,19 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2012
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement no. FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.ui.popup.actions;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.IWizard;
 import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.widgets.Shell;
@@ -12,6 +22,7 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.wizards.IWizardDescriptor;
+import org.grammaticalframework.eclipse.ui.wizards.GFCloneModuleWizard;
 
 public class CloneForNewLanguage implements IObjectActionDelegate {
 
@@ -44,21 +55,17 @@ public class CloneForNewLanguage implements IObjectActionDelegate {
 	 * @see IActionDelegate#run(IAction)
 	 */
 	public void run(IAction action) {
-//		MessageDialog.openInformation(
-//			shell,
-//			"org.grammaticalframework.eclipse.ui",
-//			"Clone for new language was executed.");
-//		new GFCloneModuleWizard().init(workbench, selection);
 		IWizardDescriptor descriptor = PlatformUI.getWorkbench().getNewWizardRegistry().findWizard("org.grammaticalframework.eclipse.ui.wizards.GFCloneModuleWizard");
 		if (descriptor != null) {
 			IWizard wizard;
 			try {
 				wizard = descriptor.createWizard();
+				((GFCloneModuleWizard)wizard).init(workbench, (IStructuredSelection) selection);
 				WizardDialog wd = new WizardDialog(shell, wizard);
 				wd.setTitle(wizard.getWindowTitle());
 				wd.open();
 			} catch (CoreException e) {
-				log.warn("Unable to open Clone wizard", e);
+				log.error("Unable to open Clone Module wizard", e);
 			}
 		}
 	}

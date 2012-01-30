@@ -1,3 +1,12 @@
+/**
+ * GF Eclipse Plugin
+ * http://www.grammaticalframework.org/eclipse/
+ * John J. Camilleri, 2012
+ * 
+ * The research leading to these results has received funding from the
+ * European Union's Seventh Framework Programme (FP7/2007-2013) under
+ * grant agreement no. FP7-ICT-247914.
+ */
 package org.grammaticalframework.eclipse.scoping;
 
 import java.util.ArrayList;
@@ -27,6 +36,7 @@ public class GFTagBasedScope extends AbstractScope {
 	/**
 	 * The logger
 	 */
+	@SuppressWarnings("unused")
 	private static final Logger log = Logger.getLogger(GFTagBasedScope.class);
 
 	/**

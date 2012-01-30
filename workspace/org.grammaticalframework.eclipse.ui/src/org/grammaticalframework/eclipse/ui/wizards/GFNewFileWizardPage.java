@@ -5,26 +5,19 @@
  * 
  * The research leading to these results has received funding from the
  * European Union's Seventh Framework Programme (FP7/2007-2013) under
- * grant agreement n° FP7-ICT-247914.
+ * grant agreement no. FP7-ICT-247914.
  */
 package org.grammaticalframework.eclipse.ui.wizards;
 
 import java.io.File;
-import java.util.ArrayList;
-
 import org.eclipse.core.resources.IContainer;
-import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.fieldassist.ContentProposalAdapter;
 import org.eclipse.jface.fieldassist.ControlDecoration;
 import org.eclipse.jface.fieldassist.FieldDecorationRegistry;
-import org.eclipse.jface.fieldassist.IContentProposal;
-import org.eclipse.jface.fieldassist.SimpleContentProposalProvider;
 import org.eclipse.jface.fieldassist.TextContentAdapter;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -36,18 +29,16 @@ import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ContainerSelectionDialog;
-import org.grammaticalframework.eclipse.ui.wizards.WizardHelper.GFModuleContentProposalProvider;
-import org.grammaticalframework.eclipse.ui.wizards.WizardHelper.GFModuleContentAdapter;
+import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper.GFModuleContentProposalProvider;
+import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper.GFModuleContentAdapter;
 
 /**
  * The "New" wizard page allows setting the container for the new file as well
@@ -228,7 +219,7 @@ public class GFNewFileWizardPage extends WizardPage {
 		setControl(container);
 	}
 	
-	private GFModuleContentProposalProvider proposalProvider = new GFModuleContentProposalProvider(WizardHelper.getFileList(true));
+	private GFModuleContentProposalProvider proposalProvider = new GFModuleContentProposalProvider(GFWizardHelper.getModuleList(true));
 	private TextContentAdapter contentAdapter = new GFModuleContentAdapter();
 	
 	/**
@@ -246,7 +237,7 @@ public class GFNewFileWizardPage extends WizardPage {
 		new ContentProposalAdapter(field, contentAdapter, proposalProvider, null, null); // always activate!
 
 		// Create the decoration for the text UI component
-		final ControlDecoration deco = new ControlDecoration(field, SWT.TOP | SWT.RIGHT);
+		final ControlDecoration deco = new ControlDecoration(field, SWT.TOP | SWT.LEFT);
 		Image image = FieldDecorationRegistry.getDefault().getFieldDecoration(FieldDecorationRegistry.DEC_CONTENT_PROPOSAL).getImage();
 		deco.setImage(image);
 //		deco.setDescriptionText("Use Ctrl+Space to see possible values");
@@ -337,8 +328,8 @@ public class GFNewFileWizardPage extends WizardPage {
 		if (selection != null && selection.isEmpty() == false
 				&& selection instanceof IStructuredSelection) {
 			IStructuredSelection ssel = (IStructuredSelection) selection;
-			if (ssel.size() > 1)
-				return;
+//			if (ssel.size() > 1)
+//				return;
 			Object obj = ssel.getFirstElement();
 			if (obj instanceof IResource) {
 				IContainer container;
@@ -349,7 +340,7 @@ public class GFNewFileWizardPage extends WizardPage {
 				field_Path.setText(container.getFullPath().toString());
 			}
 		}
-		field_ModuleName.setText("");
+		setPageComplete(false);
 	}
 
 	/**
