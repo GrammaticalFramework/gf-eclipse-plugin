@@ -2,7 +2,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 23 Jan 2012
+Updated: 31 Jan 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
@@ -62,6 +62,9 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 
 ## Major release history
 
+**31/01/12**
+: (1.2.5.x) Hugely improved scoping performance. New "Clone to new language" wizard. Improved code formatting. More efficient builder.
+
 **23/01/12**
 : (1.2.4.x) Logging is now done to the Eclipse Platform Log (use "Error Log" view). Tested with Eclipse 3.6.2. Bug fixes.
 
@@ -80,14 +83,6 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 **01/10/11**
 : Initial BETA released.
 
-**20/09/11**
-: Refactoring of grammar to provide neater syntax trees, and handle cross-referencing contraints. Major work on name resolution across modules, implementing custom `Scoping`, `Naming`, `ResourceDescription` implementations.
-
-**08/09/11**
-: Successfully converted GF language grammar into ANTLR-compaticble format. Refactoring to avoid left-recursion took up the majority of this time so far.
-
-**Late August 2011**
-: Started investigation the use of Xtext as a basis for building the Eclipse plugin. Xtext requires a EBNF-style language grammar in order to generate development tools as a plugin for the Eclipse IDE.
 
 --------------------------------------------------------------------------------
 
@@ -136,6 +131,32 @@ _The library path should get automatically set from your environment's `GF_LIB_P
 #### Upgrading to GFEP 1.2.3
 
 - If your project has a folder named `(External)` you can safely delete this **via the Eclipse Project Explorer**. It is no longer used in GFEP >= 1.2.3
+
+### Project settings
+
+Although the plugin should take care of your project settings for you, in case anything gets messed up you can always correct them manually as follows:
+
+#### Project nature
+
+Your `.project` file should include the GF Project Nature as follows:
+
+    <natures>
+      <nature>org.grammaticalframework.eclipse.ui.natures.projectNatureID</nature>
+    </natures>
+
+
+#### Builder
+
+Your `.project` file should include the GF Builder as follows:
+
+    <buildSpec>
+      <buildCommand>
+          <name>org.grammaticalframework.eclipse.ui.build.GFBuilderID</name>
+          <arguments>
+          </arguments>
+      </buildCommand>
+    </buildSpec>
+
 
 --------------------------------------------------------------------------------
 

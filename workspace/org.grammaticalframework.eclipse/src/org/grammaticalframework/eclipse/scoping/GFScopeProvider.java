@@ -9,10 +9,10 @@
  */
 package org.grammaticalframework.eclipse.scoping;
 
+import java.util.ArrayList;
 import java.util.Iterator;
-import org.eclipse.core.resources.IResource;
-import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.CoreException;
+import org.apache.log4j.Logger;
+import org.eclipse.emf.common.util.TreeIterator;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -24,7 +24,7 @@ import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.MultimapBasedSelectable;
 import org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider;
-import org.eclipse.xtext.util.IResourceScopeCache;
+import org.eclipse.xtext.util.OnChangeEvictingCache;
 import org.eclipse.xtext.util.Tuples;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.ListBind;
@@ -47,55 +47,16 @@ import com.google.inject.Provider;
 public class GFScopeProvider extends SimpleLocalScopeProvider {
 	
 	/**
-	 * System for allowing the builder to signal that a file's cache is expired
+	 * Logger
 	 */
-	private static org.eclipse.core.runtime.QualifiedName cachePropertyKey = new org.eclipse.core.runtime.QualifiedName("org.grammaticalframework.eclipse", "cache.dirty"); 
+	@SuppressWarnings("unused")
+	private static final Logger log = Logger.getLogger(GFScopeProvider.class);
 	
 	/**
-	 * Invalidate the cache on a resource by marking it as dirty.
-	 * @param iresource
-	 */
-	public static void setCacheDirty(IResource iresource) {
-		try {
-			iresource.setSessionProperty(cachePropertyKey, new Boolean(true));
-		} catch (CoreException e) {
-			
-		}
-	}
-	
-	/**
-	 * Check the dirty state of a resource. Unless the flag is explicitly false, return true (even on failure).
-	 * @param resource
-	 * @return boolean
-	 */
-	private static boolean isCacheDirty(Resource resource) {
-		IResource iresource = ResourcesPlugin.getWorkspace().getRoot().findMember(resource.getURI().toPlatformString(false));
-		try {
-			Boolean value = (Boolean)iresource.getSessionProperty(cachePropertyKey);
-			return value.booleanValue();
-		} catch (Exception _) {
-			return true; // something went wrong or no cache set, assume it is dirty!
-		}
-	}
-	
-	/**
-	 * Indicate a resource is clean by setting its dirty flag to false.
-	 * @param resource
-	 */
-	private static void setCacheClean(Resource resource) {
-		IResource iresource = ResourcesPlugin.getWorkspace().getRoot().findMember(resource.getURI().toPlatformString(false));
-		try {
-			iresource.setSessionProperty(cachePropertyKey, new Boolean(false));
-		} catch (CoreException e) {
-		}
-	}
-	
-	
-	/**
-	 * Cache instance
+	 * Cache instance, automatically invalidated when file changes
 	 */
 	@Inject
-	private IResourceScopeCache cache;
+	private OnChangeEvictingCache cache;
 	
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider#getScope(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference)
@@ -103,20 +64,8 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	@Override
 	public IScope getScope(final EObject context, final EReference reference) {
 		
-		// If builder marked cache as dirty, then clear it
-		if (isCacheDirty(context.eResource())) {
-			cache.clear(context.eResource());
-			setCacheClean(context.eResource());
-		}
-		
 		// Get local scope
-//		ISelectable localResourceContent = getAllDescriptions(context.eResource(), context, reference);
-		ISelectable localResourceContent = cache.get(Tuples.pair(GFScopeProvider.class.getName(), reference), 
-				context.eResource(), new Provider<ISelectable>() {
-			public ISelectable get() {
-				return getAllDescriptions(context.eResource(), context, reference);
-			}
-		});
+		ISelectable localResourceContent = getLocalScope(context.eResource(), context, reference);
 		
 		// Get global scope
 		IScope globalScope = getGlobalScope(context.eResource(), reference);
@@ -138,20 +87,50 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	}
 	
 	/**
-	 * Return all local descriptions for the given resource.
+	 * For a given reference, get the top-level local descriptions from the cache,
+	 * and combine with judgement-level arguments and bindings (not cached).
+	 * 
+	 * @param resource
+	 * @param context
+	 * @param reference
+	 * @return
+	 */
+	private ISelectable getLocalScope(final Resource resource, final EObject context, final EReference reference) {
+		
+		// Top-level, with no context (cached)
+		ISelectable localResourceContent = cache.get(Tuples.pair(GFScopeProvider.class.getName(), reference), context.eResource(), new Provider<ISelectable>() {
+			public ISelectable get() {
+				return getAllDescriptions(context.eResource());
+			}
+		});
+		
+		// Include refs local to the judgement, i.e. args and bindings (not cached)
+		Iterable<IEObjectDescription> judgementLevelRefs = getJudgementLevelDescriptions(context, reference);
+		
+		// Join together and return
+		ArrayList<IEObjectDescription> joinedList = new ArrayList<IEObjectDescription>(100);
+		for (IEObjectDescription ieod : localResourceContent.getExportedObjects())
+			joinedList.add(ieod);
+		for (IEObjectDescription ieod : judgementLevelRefs)
+			joinedList.add(ieod);
+		return new MultimapBasedSelectable(joinedList);
+	}
+	
+	/**
+	 * Return all "top-level" descriptions for the given resource.
 	 *
 	 * @param resource the resource
 	 * @return the all descriptions
 	 */
 	@Override
 	protected ISelectable getAllDescriptions(final Resource resource) {
+		
 		Iterable<EObject> allContents = new Iterable<EObject>(){
 			public Iterator<EObject> iterator() {
 				return resource.getAllContents();
 			}
 		}; 
-		Iterable<IEObjectDescription> allDescriptions = Scopes.scopedElementsFor(allContents,
-				new Function<EObject, QualifiedName>() {
+		Iterable<IEObjectDescription> allDescriptions = Scopes.scopedElementsFor(allContents, new Function<EObject, QualifiedName>() {
 			public QualifiedName apply(EObject from) {
 				if (from instanceof Ident && GFQualifiedNameProvider.shouldBeExported( (Ident)from) ) {
 					return getConverter().toQualifiedName( ((Ident)from).getS() );
@@ -163,73 +142,61 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	}
 
 	/**
-	 * Get all descriptions of a resource, when referenced from a given context/reference
-	 * What is returned in allDescriptions depends on various GF-specific criteria.
+	 * Get judgment-level descriptions for a given context/reference.
 	 *
-	 * @param resource the resource
 	 * @param context the context
 	 * @param reference the reference
 	 * @return the all descriptions
 	 */
-	protected ISelectable getAllDescriptions(final Resource resource, final EObject context, final EReference reference) {
-		
-		// Get all contents as EObjects
-		Iterable<EObject> allContents = new Iterable<EObject>(){
-			public Iterator<EObject> iterator() {
-				return resource.getAllContents();
-			}
-		};
+	protected Iterable<IEObjectDescription> getJudgementLevelDescriptions(final EObject context, final EReference reference) {
 		
 		// Attempt to find the TopDef for context
 		EObject temp = context;
 		while (temp.eContainer() != null && !(temp.eContainer() instanceof TopDef)) {
 			temp = temp.eContainer();
 		}
-		final EObject contextJudgement = (temp.eContainer() != null) ? temp : null;
+		if (temp.eContainer() == null) {
+			return new ArrayList<IEObjectDescription>(0);
+		}
+		final EObject contextJudgement = temp;
 		
-		// Create descriptions for each, if they deserve one!
-		Iterable<IEObjectDescription> allDescriptions = Scopes.scopedElementsFor(allContents,
+		// Get all contents within the judgement and convert to iterable
+		TreeIterator<EObject> contents = contextJudgement.eAllContents();
+		ArrayList<EObject> iterable = new ArrayList<EObject>(100);
+		while (contents.hasNext()) {
+			iterable.add(contents.next());
+		}
+		
+		// Filter
+		Iterable<IEObjectDescription> descriptions = Scopes.scopedElementsFor(iterable,
 				new Function<EObject, QualifiedName>() {
 					public QualifiedName apply(EObject from) {
-
-						// Attempt to find the top judgment for from
-						EObject temp = from;
-						while (temp.eContainer() != null && !(temp.eContainer() instanceof TopDef)) {
-							temp = temp.eContainer();
-						}
-						EObject fromJudgement = (temp.eContainer() != null) ? temp : null;
-						
-						// Local variables
-						if (from instanceof Ident && from.eContainer().eContainer() instanceof ListPatt && contextJudgement == fromJudgement) {
-							return getConverter().toQualifiedName( ((Ident)from).getS() );
-						}
-						
-						// Bindings (code very similar to that above)
-						if (from instanceof Ident && from.eContainer().eContainer() instanceof ListBind && contextJudgement == fromJudgement) {
-							return getConverter().toQualifiedName( ((Ident)from).getS() );
-						}
-						
-						// Stuff in "let" clauses
-						if (from instanceof Ident && from.eContainer().eContainer() instanceof ListLocDef && contextJudgement == fromJudgement) {
-							return getConverter().toQualifiedName( ((Ident)from).getS() );
+						EObject parent = from.eContainer();
+						EObject grandparent = parent.eContainer();
+						if (from instanceof Ident) {
+							Ident ident = ((Ident)from);
+							
+							// Local variables
+							if (grandparent instanceof ListPatt) {
+								return getConverter().toQualifiedName(ident.getS());
+							}
+							
+							// Bindings (code very similar to that above)
+							if (grandparent instanceof ListBind) {
+								return getConverter().toQualifiedName(ident.getS());
+							}
+							
+							// Stuff in "let" clauses
+							if (grandparent instanceof ListLocDef) {
+								return getConverter().toQualifiedName(ident.getS());
+							}
 						}
 						
-						// Try not to include self in your own scope!
-						if (contextJudgement == fromJudgement && fromJudgement != null) {
-							return null;
-						}
-						
-						// Top level declarations
-						if (from instanceof Ident && GFQualifiedNameProvider.shouldBeExported( (Ident)from) ) {
-							return getConverter().toQualifiedName( ((Ident)from).getS() );
-						}
-						
-						// All else has failed...
+						// We don't want it
 						return null;
 					}
 				});
-		return new MultimapBasedSelectable(allDescriptions);
+		return descriptions;
 	}
-
 	
 }

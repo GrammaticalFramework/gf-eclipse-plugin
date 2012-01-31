@@ -45,7 +45,7 @@ class FolderNode extends TreeNode {
 					children.add(new FileNode(this, (IFile) childFile));
 			}
 		} catch (CoreException e) {
-			GFLibraryTreeView.log.warn("Couldn't get contents of: "+getName(), e);
+			//GFLibraryTreeView.log.warn("Couldn't get contents of: "+getName(), e);
 		}
 
 	}

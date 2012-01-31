@@ -34,7 +34,6 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.OperationCanceledException;
 import org.grammaticalframework.eclipse.GFException;
 import org.grammaticalframework.eclipse.GFPreferences;
-import org.grammaticalframework.eclipse.scoping.GFScopeProvider;
 import org.apache.log4j.Logger;
 
 /**
@@ -319,9 +318,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		} catch(CoreException e) {
 			log.warn("Error deleting markers for: " + file.getFullPath(), e);
 		}
-		
-		// Invalidate scoping cache
-		GFScopeProvider.setCacheDirty(file);
 		
 		// Do it
 		buildFileTags(file);

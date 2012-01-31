@@ -42,7 +42,7 @@ import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.*;
-import org.eclipse.xtext.util.IResourceScopeCache;
+import org.eclipse.xtext.util.OnChangeEvictingCache;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
 import org.grammaticalframework.eclipse.gF.ModDef;
@@ -50,95 +50,43 @@ import org.grammaticalframework.eclipse.gF.ModDef;
 import com.google.common.base.Predicate;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import com.google.inject.ProvisionException;
 
 /**
- * Global scope provider is responsible for defining what is visible from
- * outside the current resource, for any given reference.
- * 
- * In our case, this means considering;
- * - Anything exended/inherited in this resource (remember inheritance is transitive)
- * - Anything opened in this resource
- * - If this is a concrete module, anything in its abstract
- * (where "this" means the resource in which the reference is defined)
+ * Global scope provider is responsible for defining what is visible from outside the current resource, for any given reference.
  * 
  */
-
 public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	
 	/**
 	 * The logger
 	 */
 	private static final Logger log = Logger.getLogger(GFTagBasedGlobalScopeProvider.class);
-
-	/**
-	 * Instantiates a new gF global scope provider.
-	 */
-	public GFTagBasedGlobalScopeProvider() {
-		super();
-	}
 	
+	/**
+	 * URI converter
+	 */
 	@Inject
 	private ExtensibleURIConverterImpl uriConverter; 
 	
+	/**
+	 * Cache instance, automatically invalidated when file changes
+	 */
 	@Inject
-	private IResourceScopeCache cache;
+	private OnChangeEvictingCache cache;
 	
-	public void setCache(IResourceScopeCache cache) {
-		this.cache = cache;
-	}
-	
+	/**
+	 * 
+	 */
 	@Inject
 	private Provider<LoadOnDemandResourceDescriptions> loadOnDemandDescriptions;
-	
-//	@Inject
-//	private ResourceDescriptionsProvider provider;
 	
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider#getScope(org.eclipse.emf.ecore.resource.Resource, boolean, org.eclipse.emf.ecore.EClass, com.google.common.base.Predicate)
 	 */
 	@Override
 	protected IScope getScope(final Resource resource, final boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
-		
-//		final long t0 = System.currentTimeMillis();
-//		final long t1 = System.currentTimeMillis();
-//		System.out.println(String.format("Global Stage 1: %d", t1-t0));
-/*		
-		// Do the parsing, possibly hitting the cache
-		Map<URI, Collection<TagEntry>> uriTagMap;
-		try {
-			uriTagMap = getURITagMap(resource);
-		} catch (GFTagsFileException e) {
-//			return new FakeScope(provider, resource, type);
-			return IScope.NULLSCOPE;
-		}
-
-		// Build scope out of tag map
-		try {
-			GFTagBasedScope gfScope = null;
-			IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
-			for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
-				
-				// Get module name from URI
-				String lastSegment = entry.getKey().lastSegment();
-				int dotIx = lastSegment.lastIndexOf('.');
-				String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
-				
-				// Append new scope for the current module/uri
-				gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
-				gfScope.addTags(resourceDescriptions, entry.getValue());
-			}
-			
-			return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
-		} catch (NullPointerException _) {
-			return IScope.NULLSCOPE;
-		}
-*/		
-		
 		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<IScope>(){
 			public IScope get() {
-				
-//				Map<URI, Collection<TagEntry>> uriTagMap = getURITagMap(resource);
 				Map<URI, Collection<TagEntry>> uriTagMap;
 				try {
 //					uriTagMap = getURITagMap(resource); // cached
@@ -172,11 +120,11 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		
 	}
 	
-	/**
-	 * Get the import URIs for a source file, possibly from cache
-	 * @param resource
-	 * @return
-	 */
+//	/**
+//	 * Get the import URIs for a source file, possibly from cache
+//	 * @param resource
+//	 * @return
+//	 */
 //	private Set<URI> getImportedURIs(final Resource resource) {
 //		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Set<URI>>(){
 //			public Set<URI> get() {
@@ -184,29 +132,29 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 //			}
 //		});
 //	}
-	
-	/**
-	 * Get list of all tags grouped by URI, possibly from cache
-	 * 
-	 * @param resource
-	 * @return
-	 * @throws GFTagsFileException 
-	 */
-	private Hashtable<URI, Collection<TagEntry>> getURITagMap(final Resource resource) throws GFTagsFileException {
-		try {
-			return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Hashtable<URI, Collection<TagEntry>>>(){
-				public Hashtable<URI, Collection<TagEntry>> get() {
-					try {
-						return parseTagsFile(resource);
-					} catch (GFTagsFileException e) {
-						throw new ProvisionException(e.getMessage());
-					}
-				}
-			});
-		} catch (ProvisionException e) {
-			throw new GFTagsFileException(e.getMessage());
-		}
-	}
+//	
+//	/**
+//	 * Get list of all tags grouped by URI, possibly from cache
+//	 * 
+//	 * @param resource
+//	 * @return
+//	 * @throws GFTagsFileException 
+//	 */
+//	private Hashtable<URI, Collection<TagEntry>> getURITagMap(final Resource resource) throws GFTagsFileException {
+//		try {
+//			return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Hashtable<URI, Collection<TagEntry>>>(){
+//				public Hashtable<URI, Collection<TagEntry>> get() {
+//					try {
+//						return parseTagsFile(resource);
+//					} catch (GFTagsFileException e) {
+//						throw new ProvisionException(e.getMessage());
+//					}
+//				}
+//			});
+//		} catch (ProvisionException e) {
+//			throw new GFTagsFileException(e.getMessage());
+//		}
+//	}
 	
 	/**
 	 * For a given resource, find its tags file and get a list of the all the files mentioned

@@ -1,7 +1,7 @@
 concrete HelloEng of HelloAbs = ResEng ** { 
 --concrete HelloEng of HelloAbs = open (R=ResEng) in {
 	
-	flags
+	flags 
 		coding = utf8 ;
  
 	lincat
