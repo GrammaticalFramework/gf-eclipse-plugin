@@ -25,6 +25,7 @@ import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.MultimapBasedSelectable;
 import org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider;
 import org.eclipse.xtext.util.IResourceScopeCache;
+import org.eclipse.xtext.util.Tuples;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListLocDef;
@@ -34,10 +35,11 @@ import org.grammaticalframework.eclipse.naming.GFQualifiedNameProvider;
 
 import com.google.common.base.Function;
 import com.google.inject.Inject;
+import com.google.inject.Provider;
 
 /**
  * Custom GF scoping
- * Basically we look at the current resource and return all the un-qualified names
+ * Look at the current resource and return all the un-qualified names.
  * Then delegate to global resource provider.
  * 
  * @author John J. Camilleri
@@ -48,6 +50,11 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	 * System for allowing the builder to signal that a file's cache is expired
 	 */
 	private static org.eclipse.core.runtime.QualifiedName cachePropertyKey = new org.eclipse.core.runtime.QualifiedName("org.grammaticalframework.eclipse", "cache.dirty"); 
+	
+	/**
+	 * Invalidate the cache on a resource by marking it as dirty.
+	 * @param iresource
+	 */
 	public static void setCacheDirty(IResource iresource) {
 		try {
 			iresource.setSessionProperty(cachePropertyKey, new Boolean(true));
@@ -55,6 +62,12 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 			
 		}
 	}
+	
+	/**
+	 * Check the dirty state of a resource. Unless the flag is explicitly false, return true (even on failure).
+	 * @param resource
+	 * @return boolean
+	 */
 	private static boolean isCacheDirty(Resource resource) {
 		IResource iresource = ResourcesPlugin.getWorkspace().getRoot().findMember(resource.getURI().toPlatformString(false));
 		try {
@@ -64,6 +77,11 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 			return true; // something went wrong or no cache set, assume it is dirty!
 		}
 	}
+	
+	/**
+	 * Indicate a resource is clean by setting its dirty flag to false.
+	 * @param resource
+	 */
 	private static void setCacheClean(Resource resource) {
 		IResource iresource = ResourcesPlugin.getWorkspace().getRoot().findMember(resource.getURI().toPlatformString(false));
 		try {
@@ -92,13 +110,13 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 		}
 		
 		// Get local scope
-		ISelectable localResourceContent = getAllDescriptions(context.eResource(), context, reference);
-//		ISelectable localResourceContent = cache.get(Tuples.pair(SimpleLocalScopeProvider.class.getName(), reference), 
-//				context.eResource(), new Provider<ISelectable>() {
-//			public ISelectable get() {
-//				return getAllDescriptions(context.eResource(), context, reference);
-//			}
-//		});
+//		ISelectable localResourceContent = getAllDescriptions(context.eResource(), context, reference);
+		ISelectable localResourceContent = cache.get(Tuples.pair(GFScopeProvider.class.getName(), reference), 
+				context.eResource(), new Provider<ISelectable>() {
+			public ISelectable get() {
+				return getAllDescriptions(context.eResource(), context, reference);
+			}
+		});
 		
 		// Get global scope
 		IScope globalScope = getGlobalScope(context.eResource(), reference);
@@ -120,7 +138,7 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	}
 	
 	/**
-	 * Return all local descriptions for a given resource.
+	 * Return all local descriptions for the given resource.
 	 *
 	 * @param resource the resource
 	 * @return the all descriptions

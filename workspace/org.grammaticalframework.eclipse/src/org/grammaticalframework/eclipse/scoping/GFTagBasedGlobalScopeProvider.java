@@ -87,7 +87,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	public void setCache(IResourceScopeCache cache) {
 		this.cache = cache;
 	}
-
+	
 	@Inject
 	private Provider<LoadOnDemandResourceDescriptions> loadOnDemandDescriptions;
 	
@@ -98,8 +98,12 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @see org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider#getScope(org.eclipse.emf.ecore.resource.Resource, boolean, org.eclipse.emf.ecore.EClass, com.google.common.base.Predicate)
 	 */
 	@Override
-	protected IScope getScope(Resource resource, boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
+	protected IScope getScope(final Resource resource, final boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
 		
+//		final long t0 = System.currentTimeMillis();
+//		final long t1 = System.currentTimeMillis();
+//		System.out.println(String.format("Global Stage 1: %d", t1-t0));
+/*		
 		// Do the parsing, possibly hitting the cache
 		Map<URI, Collection<TagEntry>> uriTagMap;
 		try {
@@ -108,7 +112,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 //			return new FakeScope(provider, resource, type);
 			return IScope.NULLSCOPE;
 		}
-		
+
 		// Build scope out of tag map
 		try {
 			GFTagBasedScope gfScope = null;
@@ -129,6 +133,43 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		} catch (NullPointerException _) {
 			return IScope.NULLSCOPE;
 		}
+*/		
+		
+		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<IScope>(){
+			public IScope get() {
+				
+//				Map<URI, Collection<TagEntry>> uriTagMap = getURITagMap(resource);
+				Map<URI, Collection<TagEntry>> uriTagMap;
+				try {
+//					uriTagMap = getURITagMap(resource); // cached
+					uriTagMap = parseTagsFile(resource); // not cached
+				} catch (GFTagsFileException e) {
+					return IScope.NULLSCOPE;
+				}
+				
+				// Build scope out of tag map
+				try {
+					GFTagBasedScope gfScope = null;
+					IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
+					for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
+						
+						// Get module name from URI
+						String lastSegment = entry.getKey().lastSegment();
+						int dotIx = lastSegment.lastIndexOf('.');
+						String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
+						
+						// Append new scope for the current module/uri
+						gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
+						gfScope.addTags(resourceDescriptions, entry.getValue());
+					}
+					
+					return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
+				} catch (NullPointerException _) {
+					return IScope.NULLSCOPE;
+				}				
+			}
+		});
+		
 	}
 	
 	/**
