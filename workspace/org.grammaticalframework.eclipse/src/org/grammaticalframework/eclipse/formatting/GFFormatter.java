@@ -10,10 +10,13 @@
 package org.grammaticalframework.eclipse.formatting;
 
 import org.eclipse.xtext.Keyword;
+import org.eclipse.xtext.formatting.IIndentationInformation;
 import org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter;
 import org.eclipse.xtext.formatting.impl.FormattingConfig;
 import org.eclipse.xtext.util.Pair;
 import org.grammaticalframework.eclipse.services.GFGrammarAccess;
+
+import com.google.inject.Inject;
 
 /**
  * This class contains custom formatting description.
@@ -23,17 +26,37 @@ import org.grammaticalframework.eclipse.services.GFGrammarAccess;
  */
 public class GFFormatter extends AbstractDeclarativeFormatter {
 
-	/*
-	 * Can't get this to work, and either way it's best to allow users to choose
-	 * their own preferences for indentation
-	 * 
-	 * @Override protected IIndentationInformation getIndentInfo() { return
-	 * indentInfo; }
-	 * 
-	 * @Inject(optional = true) private IIndentationInformation indentInfo = new
-	 * IIndentationInformation() { public String getIndentString() { return
-	 * "  "; } };
+	/**
+	 * Custom indentation, using 2 spaces.
 	 */
+	@Inject(optional = true)
+	private IIndentationInformation indentInfo_2Spaces = new IIndentationInformation() {
+		public String getIndentString() {
+			return "  ";
+		}
+	};
+	
+	/**
+	 * Get out custom indentation
+	 */
+	@Override
+	protected IIndentationInformation getIndentInfo() {
+		return indentInfo_2Spaces;
+	}
+	
+	/**
+	 * Create formatting config, using our custom indentation
+
+	 * @see org.eclipse.xtext.formatting.impl.AbstractDeclarativeFormatter#
+	 * createFormatterStream(String, org.eclipse.xtext.parsetree.reconstr.ITokenStream, boolean)
+	 */
+	@Override
+	@SuppressWarnings("deprecation")
+	protected FormattingConfig createFormattingConfig() {
+		FormattingConfig cfg = new FormattingConfig(super.getGrammarAccess(), super.getHiddenTokenHelper(), indentInfo_2Spaces);
+		cfg.setWhitespaceRule(getWSRule());
+		return cfg;
+	}
 
 	/*
 	 * (non-Javadoc)
@@ -104,11 +127,11 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		}
 		c.setIndentationDecrement().after(f.getTopDefRule());
 		
-		// TODO What about when we have a judgement type every time?:
-		// cat Noun ;
-		// cat Verb ;
-		// etc... Not sure if this is possible!
-
+		/* TODO What about when we have a judgement type keyword on every line? e.g.:
+				cat Noun ;
+				cat Verb ;
+		*/
+		
 		// New line for each judgement
 		for (Keyword k : new Keyword[] {
 				f.getTopDefAccess().getSemicolonKeyword_0_1_1(),
@@ -133,7 +156,7 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 				f.getCatDefAccess().getLeftCurlyBracketKeyword_1_4_0(),
 				f.getCatDefAccess().getRightCurlyBracketKeyword_1_4_2());
 
-		// Comma in lincat judgements, e.g.: `Cat1, Cat2 : SS ;`
+		// Comma in lincat judgements, e.g.: `Cat1,\nCat2 : SS ;`
 		c.setLinewrap().after(f.getPrintDefAccess().getCommaKeyword_1_0());
 
 //		for (ParserRule r : new ParserRule[]{
@@ -203,8 +226,6 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 //			c.setIndentationDecrement().after(k);
 //			c.setLinewrap().after(k);
 //		}
-		
-		// TODO where
 
 		// Record fields
 		for (Keyword[] k : new Keyword[][] {
