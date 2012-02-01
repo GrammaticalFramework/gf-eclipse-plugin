@@ -28,6 +28,6 @@ public class ParserTest extends XtextTest {
 
 	@Test
 	def void parseGF() {
-		testFile("gf-files/chapter5/Foods.gf")
+		testFile("model/chapter5/Foods.gf")
 	}
 }

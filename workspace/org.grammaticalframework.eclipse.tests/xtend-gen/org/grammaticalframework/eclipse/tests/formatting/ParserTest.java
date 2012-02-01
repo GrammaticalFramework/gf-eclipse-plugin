@@ -13,6 +13,6 @@ import org.junit.runner.RunWith;
 public class ParserTest extends XtextTest {
   @Test
   public void parseGF() {
-    this.testFile("gf-files/chapter5/Foods.gf");
+    this.testFile("model/chapter5/Foods.gf");
   }
 }
