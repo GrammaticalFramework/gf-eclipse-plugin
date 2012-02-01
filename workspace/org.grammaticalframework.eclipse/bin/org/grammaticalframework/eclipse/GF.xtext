@@ -78,9 +78,9 @@ Def :
 
 // For handling the overload syntax
 OperDef returns Def :
-	  name+=Name (',' name+=Name)*				 '=' ( definition=Exp | overload?='overload' '{' overloads+=Def (';' overloads+=Def ';'? )* '}')
-	| name+=Name (',' name+=Name)* ':' type=Exp	('=' ( definition=Exp | overload?='overload' '{' overloads+=Def (';' overloads+=Def ';'? )* '}'))?
-	| name+=Name (',' name+=Name)* ':' overload?='overload'	'{' overloads+=Def (';' overloads+=Def ';'? )* '}'
+	  name+=Name (',' name+=Name)*				 '=' ( definition=Exp | overload?='overload' '{' overloads+=Def (';' overloads+=Def )* ';'? '}')
+	| name+=Name (',' name+=Name)* ':' type=Exp	('=' ( definition=Exp | overload?='overload' '{' overloads+=Def (';' overloads+=Def )* ';'? '}'))?
+	| name+=Name (',' name+=Name)* ':' overload?='overload'	'{' overloads+=Def (';' overloads+=Def )* ';'? '}'
 	| name+=Name patterns=ListPatt				 '=' definition=Exp
 ;
 
@@ -347,6 +347,7 @@ BuiltInCat :
 	| 'Int'
 	| 'Ints'
 	| 'Float'
+	| 'pattern'
 ;
 
 ListPattAss :

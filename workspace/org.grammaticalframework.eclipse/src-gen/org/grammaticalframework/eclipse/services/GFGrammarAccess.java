@@ -1140,8 +1140,8 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_0_3_1_3_0 = (Keyword)cGroup_0_3_1_3.eContents().get(0);
 		private final Assignment cOverloadsAssignment_0_3_1_3_1 = (Assignment)cGroup_0_3_1_3.eContents().get(1);
 		private final RuleCall cOverloadsDefParserRuleCall_0_3_1_3_1_0 = (RuleCall)cOverloadsAssignment_0_3_1_3_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_0_3_1_3_2 = (Keyword)cGroup_0_3_1_3.eContents().get(2);
-		private final Keyword cRightCurlyBracketKeyword_0_3_1_4 = (Keyword)cGroup_0_3_1.eContents().get(4);
+		private final Keyword cSemicolonKeyword_0_3_1_4 = (Keyword)cGroup_0_3_1.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_0_3_1_5 = (Keyword)cGroup_0_3_1.eContents().get(5);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Assignment cNameAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
 		private final RuleCall cNameNameParserRuleCall_1_0_0 = (RuleCall)cNameAssignment_1_0.eContents().get(0);
@@ -1167,8 +1167,8 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_1_4_1_1_3_0 = (Keyword)cGroup_1_4_1_1_3.eContents().get(0);
 		private final Assignment cOverloadsAssignment_1_4_1_1_3_1 = (Assignment)cGroup_1_4_1_1_3.eContents().get(1);
 		private final RuleCall cOverloadsDefParserRuleCall_1_4_1_1_3_1_0 = (RuleCall)cOverloadsAssignment_1_4_1_1_3_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_1_4_1_1_3_2 = (Keyword)cGroup_1_4_1_1_3.eContents().get(2);
-		private final Keyword cRightCurlyBracketKeyword_1_4_1_1_4 = (Keyword)cGroup_1_4_1_1.eContents().get(4);
+		private final Keyword cSemicolonKeyword_1_4_1_1_4 = (Keyword)cGroup_1_4_1_1.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_1_4_1_1_5 = (Keyword)cGroup_1_4_1_1.eContents().get(5);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Assignment cNameAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
 		private final RuleCall cNameNameParserRuleCall_2_0_0 = (RuleCall)cNameAssignment_2_0.eContents().get(0);
@@ -1186,8 +1186,8 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSemicolonKeyword_2_6_0 = (Keyword)cGroup_2_6.eContents().get(0);
 		private final Assignment cOverloadsAssignment_2_6_1 = (Assignment)cGroup_2_6.eContents().get(1);
 		private final RuleCall cOverloadsDefParserRuleCall_2_6_1_0 = (RuleCall)cOverloadsAssignment_2_6_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_2_6_2 = (Keyword)cGroup_2_6.eContents().get(2);
-		private final Keyword cRightCurlyBracketKeyword_2_7 = (Keyword)cGroup_2.eContents().get(7);
+		private final Keyword cSemicolonKeyword_2_7 = (Keyword)cGroup_2.eContents().get(7);
+		private final Keyword cRightCurlyBracketKeyword_2_8 = (Keyword)cGroup_2.eContents().get(8);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
 		private final Assignment cNameAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
 		private final RuleCall cNameNameParserRuleCall_3_0_0 = (RuleCall)cNameAssignment_3_0.eContents().get(0);
@@ -1199,19 +1199,19 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//// For handling the overload syntax
 		//OperDef returns Def:
-		//	name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)*
+		//	name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def)* ";"?
 		//	"}") | name+=Name ("," name+=Name)* ":" type=Exp ("=" (definition=Exp | overload?="overload" "{" overloads+=Def (";"
-		//	overloads+=Def ";"?)* "}"))? | name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";"
-		//	overloads+=Def ";"?)* "}" | name+=Name patterns=ListPatt "=" definition=Exp;
+		//	overloads+=Def)* ";"? "}"))? | name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";"
+		//	overloads+=Def)* ";"? "}" | name+=Name patterns=ListPatt "=" definition=Exp;
 		public ParserRule getRule() { return rule; }
 
-		//name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)*
+		//name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def)* ";"?
 		//"}") | name+=Name ("," name+=Name)* ":" type=Exp ("=" (definition=Exp | overload?="overload" "{" overloads+=Def (";"
-		//overloads+=Def ";"?)* "}"))? | name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";"
-		//overloads+=Def ";"?)* "}" | name+=Name patterns=ListPatt "=" definition=Exp
+		//overloads+=Def)* ";"? "}"))? | name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";"
+		//overloads+=Def)* ";"? "}" | name+=Name patterns=ListPatt "=" definition=Exp
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)*
+		//name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def)* ";"?
 		//"}")
 		public Group getGroup_0() { return cGroup_0; }
 
@@ -1236,7 +1236,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_0_2() { return cEqualsSignKeyword_0_2; }
 
-		//definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)* "}"
+		//definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def)* ";"? "}"
 		public Alternatives getAlternatives_0_3() { return cAlternatives_0_3; }
 
 		//definition=Exp
@@ -1245,7 +1245,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//Exp
 		public RuleCall getDefinitionExpParserRuleCall_0_3_0_0() { return cDefinitionExpParserRuleCall_0_3_0_0; }
 
-		//overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)* "}"
+		//overload?="overload" "{" overloads+=Def (";" overloads+=Def)* ";"? "}"
 		public Group getGroup_0_3_1() { return cGroup_0_3_1; }
 
 		//overload?="overload"
@@ -1263,7 +1263,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//Def
 		public RuleCall getOverloadsDefParserRuleCall_0_3_1_2_0() { return cOverloadsDefParserRuleCall_0_3_1_2_0; }
 
-		//(";" overloads+=Def ";"?)*
+		//(";" overloads+=Def)*
 		public Group getGroup_0_3_1_3() { return cGroup_0_3_1_3; }
 
 		//";"
@@ -1276,13 +1276,13 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getOverloadsDefParserRuleCall_0_3_1_3_1_0() { return cOverloadsDefParserRuleCall_0_3_1_3_1_0; }
 
 		//";"?
-		public Keyword getSemicolonKeyword_0_3_1_3_2() { return cSemicolonKeyword_0_3_1_3_2; }
+		public Keyword getSemicolonKeyword_0_3_1_4() { return cSemicolonKeyword_0_3_1_4; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_0_3_1_4() { return cRightCurlyBracketKeyword_0_3_1_4; }
+		public Keyword getRightCurlyBracketKeyword_0_3_1_5() { return cRightCurlyBracketKeyword_0_3_1_5; }
 
 		//name+=Name ("," name+=Name)* ":" type=Exp ("=" (definition=Exp | overload?="overload" "{" overloads+=Def (";"
-		//overloads+=Def ";"?)* "}"))?
+		//overloads+=Def)* ";"? "}"))?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//name+=Name
@@ -1312,13 +1312,13 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//Exp
 		public RuleCall getTypeExpParserRuleCall_1_3_0() { return cTypeExpParserRuleCall_1_3_0; }
 
-		//("=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)* "}"))?
+		//("=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def)* ";"? "}"))?
 		public Group getGroup_1_4() { return cGroup_1_4; }
 
 		//"="
 		public Keyword getEqualsSignKeyword_1_4_0() { return cEqualsSignKeyword_1_4_0; }
 
-		//definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)* "}"
+		//definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def)* ";"? "}"
 		public Alternatives getAlternatives_1_4_1() { return cAlternatives_1_4_1; }
 
 		//definition=Exp
@@ -1327,7 +1327,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//Exp
 		public RuleCall getDefinitionExpParserRuleCall_1_4_1_0_0() { return cDefinitionExpParserRuleCall_1_4_1_0_0; }
 
-		//overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)* "}"
+		//overload?="overload" "{" overloads+=Def (";" overloads+=Def)* ";"? "}"
 		public Group getGroup_1_4_1_1() { return cGroup_1_4_1_1; }
 
 		//overload?="overload"
@@ -1345,7 +1345,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//Def
 		public RuleCall getOverloadsDefParserRuleCall_1_4_1_1_2_0() { return cOverloadsDefParserRuleCall_1_4_1_1_2_0; }
 
-		//(";" overloads+=Def ";"?)*
+		//(";" overloads+=Def)*
 		public Group getGroup_1_4_1_1_3() { return cGroup_1_4_1_1_3; }
 
 		//";"
@@ -1358,12 +1358,12 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getOverloadsDefParserRuleCall_1_4_1_1_3_1_0() { return cOverloadsDefParserRuleCall_1_4_1_1_3_1_0; }
 
 		//";"?
-		public Keyword getSemicolonKeyword_1_4_1_1_3_2() { return cSemicolonKeyword_1_4_1_1_3_2; }
+		public Keyword getSemicolonKeyword_1_4_1_1_4() { return cSemicolonKeyword_1_4_1_1_4; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_1_4_1_1_4() { return cRightCurlyBracketKeyword_1_4_1_1_4; }
+		public Keyword getRightCurlyBracketKeyword_1_4_1_1_5() { return cRightCurlyBracketKeyword_1_4_1_1_5; }
 
-		//name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)* "}"
+		//name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";" overloads+=Def)* ";"? "}"
 		public Group getGroup_2() { return cGroup_2; }
 
 		//name+=Name
@@ -1402,7 +1402,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//Def
 		public RuleCall getOverloadsDefParserRuleCall_2_5_0() { return cOverloadsDefParserRuleCall_2_5_0; }
 
-		//(";" overloads+=Def ";"?)*
+		//(";" overloads+=Def)*
 		public Group getGroup_2_6() { return cGroup_2_6; }
 
 		//";"
@@ -1415,10 +1415,10 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getOverloadsDefParserRuleCall_2_6_1_0() { return cOverloadsDefParserRuleCall_2_6_1_0; }
 
 		//";"?
-		public Keyword getSemicolonKeyword_2_6_2() { return cSemicolonKeyword_2_6_2; }
+		public Keyword getSemicolonKeyword_2_7() { return cSemicolonKeyword_2_7; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_2_7() { return cRightCurlyBracketKeyword_2_7; }
+		public Keyword getRightCurlyBracketKeyword_2_8() { return cRightCurlyBracketKeyword_2_8; }
 
 		//name+=Name patterns=ListPatt "=" definition=Exp
 		public Group getGroup_3() { return cGroup_3; }
@@ -4512,12 +4512,13 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cIntKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
 		private final Keyword cIntsKeyword_2 = (Keyword)cAlternatives.eContents().get(2);
 		private final Keyword cFloatKeyword_3 = (Keyword)cAlternatives.eContents().get(3);
+		private final Keyword cPatternKeyword_4 = (Keyword)cAlternatives.eContents().get(4);
 		
 		//BuiltInCat:
-		//	"String" | "Int" | "Ints" | "Float";
+		//	"String" | "Int" | "Ints" | "Float" | "pattern";
 		public ParserRule getRule() { return rule; }
 
-		//"String" | "Int" | "Ints" | "Float"
+		//"String" | "Int" | "Ints" | "Float" | "pattern"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//"String"
@@ -4531,6 +4532,9 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"Float"
 		public Keyword getFloatKeyword_3() { return cFloatKeyword_3; }
+
+		//"pattern"
+		public Keyword getPatternKeyword_4() { return cPatternKeyword_4; }
 	}
 
 	public class ListPattAssElements extends AbstractParserRuleElementFinder {
@@ -5098,10 +5102,10 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 
 	//// For handling the overload syntax
 	//OperDef returns Def:
-	//	name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def ";"?)*
+	//	name+=Name ("," name+=Name)* "=" (definition=Exp | overload?="overload" "{" overloads+=Def (";" overloads+=Def)* ";"?
 	//	"}") | name+=Name ("," name+=Name)* ":" type=Exp ("=" (definition=Exp | overload?="overload" "{" overloads+=Def (";"
-	//	overloads+=Def ";"?)* "}"))? | name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";"
-	//	overloads+=Def ";"?)* "}" | name+=Name patterns=ListPatt "=" definition=Exp;
+	//	overloads+=Def)* ";"? "}"))? | name+=Name ("," name+=Name)* ":" overload?="overload" "{" overloads+=Def (";"
+	//	overloads+=Def)* ";"? "}" | name+=Name patterns=ListPatt "=" definition=Exp;
 	public OperDefElements getOperDefAccess() {
 		return (pOperDef != null) ? pOperDef : (pOperDef = new OperDefElements());
 	}
@@ -5451,7 +5455,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//BuiltInCat:
-	//	"String" | "Int" | "Ints" | "Float";
+	//	"String" | "Int" | "Ints" | "Float" | "pattern";
 	public BuiltInCatElements getBuiltInCatAccess() {
 		return (pBuiltInCat != null) ? pBuiltInCat : (pBuiltInCat = new BuiltInCatElements());
 	}

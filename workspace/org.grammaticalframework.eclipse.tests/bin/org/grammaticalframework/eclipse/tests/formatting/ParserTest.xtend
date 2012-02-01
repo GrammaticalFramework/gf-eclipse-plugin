@@ -1,33 +1,89 @@
 package org.grammaticalframework.eclipse.tests.formatting
 
-import org.eclipse.xtext.junit.AbstractXtextTests
 import org.eclipse.xtext.junit4.InjectWith
 import org.eclipse.xtext.junit4.XtextRunner
-import org.eclipse.xtext.junit4.util.ParseHelper
+import org.eclipselabs.xtext.utils.unittesting.XtextTest
 import org.grammaticalframework.eclipse.GFInjectorProvider
-import org.grammaticalframework.eclipse.gF.ModDef
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.eclipselabs.xtext.utils.unittesting.XtextTest
-
-import com.google.inject.Inject
-import static junit.framework.Assert.*
 
 @InjectWith(typeof(GFInjectorProvider))
 @RunWith(typeof(XtextRunner))
-public class ParserTest extends XtextTest {
-//	@Inject
-//	ParseHelper<ModDef> parser
-//	
-//	@Test
-//	def void parseGF() {
-//		val model = parser.parse("abstract Foods = { cat Kind; }")
-////		val modname = model.type.name as Ident
-//		assertEquals(model.type.name.s, "Foods")
-//	}
-
-	@Test
-	def void parseGF() {
-		testFile("model/chapter5/Foods.gf")
+class ParserTest extends XtextTest {
+	
+    @Test
+    def void testIdent() {
+        testTerminal("bar", "ID")
+        testTerminal("bar3", "ID")
+        testTerminal("bar'", "ID")
+        testTerminal("bar's", "ID")
+        
+        testNotTerminal("_bar_", "ID")
+        testNotTerminal("$bar$", "ID")
+        testNotTerminal("3bar", "ID")
+        testNotTerminal("#bar", "ID")
+        
+        // token streams with multiple token
+        testTerminal("foo.bar", "ID", "'.'", "ID")
+        testTerminal("foo.*", "ID", "'.'", "'*'")
 	}
+
+    @Test
+    def void testString() {
+        testTerminal("\"bar\"", "STRING")
+        testTerminal("\"bar's\"", "STRING")
+        testTerminal("\"bar\\\"s\"", "STRING")
+        testTerminal("\"bar\\\\s\"", "STRING")
+        
+        testNotTerminal("\"bar\\s\"", "STRING")
+        testNotTerminal("\"bar\"s\"", "STRING")
+	}
+
+    @Test
+    def void testInteger() {
+        testTerminal("0", "INTEGER")
+        testTerminal("5", "INTEGER")
+        testTerminal("09", "INTEGER")
+        testTerminal("10", "INTEGER")
+	}
+
+    @Test
+    def void testDouble() {
+        testTerminal("0.135", "DOUBLE")
+        testTerminal("15.5", "DOUBLE")
+        testTerminal("15.5e10", "DOUBLE")
+        testTerminal("15.5e-10", "DOUBLE")
+        testNotTerminal(".5", "DOUBLE")
+        testNotTerminal("0.", "DOUBLE")
+        testNotTerminal(".", "DOUBLE")
+	}
+
+    @Test
+    def void testCompilerPragma() {
+        testTerminal("--# ...", "COMPILER_PRAGMA")
+        testNotTerminal("-- ...", "COMPILER_PRAGMA")
+	}
+	
+    @Test
+    def void testExpressions() {
+        testParserRule("
+lin VV {
+  s = table {
+    R.VVF R.VInf => [\"shall\"] ;
+    R.VVPresNeg => \"shall not\"
+  } ;
+  typ = R.VVAux }
+", "Exp")
+	}
+
+    @Test
+    def void testOverloads() {
+        testParserRule("
+mkQuant : overload {
+  mkQuant : (this, these : Str) -> Quant ; --%
+  mkQuant : (no_sg, no_pl, none_sg, non_pl : Str) -> Quant ; --%
+}
+", "OperDef")
+	}
+
 }

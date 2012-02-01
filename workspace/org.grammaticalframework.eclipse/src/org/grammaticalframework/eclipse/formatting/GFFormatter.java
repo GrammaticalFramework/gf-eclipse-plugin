@@ -58,6 +58,19 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		return cfg;
 	}
 
+	/**
+	 * Convenience method for block indenting between keyword pairs
+	 * @param c
+	 * @param keywords
+	 */
+	protected void blockIndent(FormattingConfig c, Keyword[][] keywords) {
+		for (Keyword[] k : keywords) {
+			c.setLinewrap().after(k[0]);
+			c.setIndentation(k[0], k[1]);
+			c.setLinewrap().before(k[1]);
+		}
+	}
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -71,8 +84,10 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		c.setAutoLinewrap(Integer.MAX_VALUE / 2);
 
 		// Preserve newlines around comments
-		c.setLinewrap(0, 1, 2).before(f.getSL_COMMENTRule());
-		c.setLinewrap(0, 1, 2).before(f.getML_COMMENTRule());
+//		c.setLinewrap(0, 1, 2).before(f.getSL_COMMENTRule());
+//		c.setLinewrap(0, 1, 2).before(f.getML_COMMENTRule());
+		c.setLinewrap(0, 1, 1).before(f.getSL_COMMENTRule());
+		c.setLinewrap(0, 1, 1).before(f.getML_COMMENTRule());
 		c.setLinewrap(0, 1, 1).after(f.getML_COMMENTRule());
 
 		// open
@@ -83,8 +98,7 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		}) {
 			c.setLinewrap().before(k);
 			c.setIndentationIncrement().before(k);
-			c.setIndentationDecrement().after(k); // don't cascade the
-													// indentation!
+			c.setIndentationDecrement().after(k);
 		}
 
 		// Special case when using `open (Alias = Name)`
@@ -121,7 +135,7 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 				f.getTopDefAccess().getPrintnamePrintnameKeyword_11_0_0(),
 				f.getTopDefAccess().getFlagsFlagsKeyword_12_0_0(),
 		}) {
-			c.setLinewrap(2).before(k);
+			c.setLinewrap(1, 1, 2).before(k);
 			c.setLinewrap().after(k);
 			c.setIndentationIncrement().after(k);
 		}
@@ -169,21 +183,24 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 //		 f.getFlagDefRule(),
 //	}) {
 //	}
+		
+		// overload
+		blockIndent(c, new Keyword[][] {
+				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_0_3_1_1(), f.getOperDefAccess().getRightCurlyBracketKeyword_0_3_1_5() },
+				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_1_4_1_1_1(), f.getOperDefAccess().getRightCurlyBracketKeyword_1_4_1_1_5() },
+				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_2_4(), f.getOperDefAccess().getRightCurlyBracketKeyword_2_8() },
+		});	
 
 		// case, table
 		// c.setLinewrap().before(f.getListCaseRule());
 		c.setLinewrap().after(f.getListCaseAccess().getSemicolonKeyword_1_0());
-		for (Keyword[] k : new Keyword[][] {
+		blockIndent(c, new Keyword[][] {
 				{ f.getExp4Access().getLeftCurlyBracketKeyword_0_1(), f.getExp4Access().getRightCurlyBracketKeyword_0_3() },
 				{ f.getExp4Access().getLeftCurlyBracketKeyword_1_2_0_0(), f.getExp4Access().getRightCurlyBracketKeyword_1_2_0_2() },
 				{ f.getExp4Access().getLeftCurlyBracketKeyword_2_3(), f.getExp4Access().getRightCurlyBracketKeyword_2_5() },
 				{ f.getExp4Access().getLeftCurlyBracketKeyword_3_1(), f.getExp4Access().getRightCurlyBracketKeyword_3_3() },
 				{ f.getExp4Access().getLeftCurlyBracketKeyword_4_1(), f.getExp4Access().getRightCurlyBracketKeyword_4_3() },
-		}) {
-			c.setLinewrap().after(k[0]);
-			c.setIndentation(k[0], k[1]);
-			c.setLinewrap().before(k[1]);
-		}
+		});
 		
 		// let ... in ...
 		// TODO This should be combined with the commented code below, although that refuses to work :(
@@ -228,14 +245,10 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 //		}
 
 		// Record fields
-		for (Keyword[] k : new Keyword[][] {
+		blockIndent(c, new Keyword[][] {
 				// { f.getPatt2Access().getLeftCurlyBracketKeyword_6_0(), f.getPatt2Access().getLeftCurlyBracketKeyword_6_0() },
 				{ f.getExp6Access().getRecordLeftCurlyBracketKeyword_11_0_0(), f.getExp6Access().getRightCurlyBracketKeyword_11_2() },
-		}) {
-			c.setLinewrap().after(k[0]);
-			c.setIndentation(k[0], k[1]);
-			c.setLinewrap().before(k[1]);
-		}
+		});
 		c.setLinewrap().after(f.getListLocDefAccess().getSemicolonKeyword_1_1_0());
 		c.setLinewrap().after(f.getListLocDefAccess().getSemicolonKeyword_1_2());
 		

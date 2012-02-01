@@ -1810,13 +1810,13 @@ ruleOperDef returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_10=';' 
+))*(	otherlv_10=';' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getOperDefAccess().getSemicolonKeyword_0_3_1_3_2());
+    	newLeafNode(otherlv_10, grammarAccess.getOperDefAccess().getSemicolonKeyword_0_3_1_4());
     }
-)?)*	otherlv_11='}' 
+)?	otherlv_11='}' 
     {
-    	newLeafNode(otherlv_11, grammarAccess.getOperDefAccess().getRightCurlyBracketKeyword_0_3_1_4());
+    	newLeafNode(otherlv_11, grammarAccess.getOperDefAccess().getRightCurlyBracketKeyword_0_3_1_5());
     }
 )))
     |((
@@ -1963,13 +1963,13 @@ ruleOperDef returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_24=';' 
+))*(	otherlv_24=';' 
     {
-    	newLeafNode(otherlv_24, grammarAccess.getOperDefAccess().getSemicolonKeyword_1_4_1_1_3_2());
+    	newLeafNode(otherlv_24, grammarAccess.getOperDefAccess().getSemicolonKeyword_1_4_1_1_4());
     }
-)?)*	otherlv_25='}' 
+)?	otherlv_25='}' 
     {
-    	newLeafNode(otherlv_25, grammarAccess.getOperDefAccess().getRightCurlyBracketKeyword_1_4_1_1_4());
+    	newLeafNode(otherlv_25, grammarAccess.getOperDefAccess().getRightCurlyBracketKeyword_1_4_1_1_5());
     }
 )))?)
     |((
@@ -2075,13 +2075,13 @@ ruleOperDef returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_35=';' 
+))*(	otherlv_35=';' 
     {
-    	newLeafNode(otherlv_35, grammarAccess.getOperDefAccess().getSemicolonKeyword_2_6_2());
+    	newLeafNode(otherlv_35, grammarAccess.getOperDefAccess().getSemicolonKeyword_2_7());
     }
-)?)*	otherlv_36='}' 
+)?	otherlv_36='}' 
     {
-    	newLeafNode(otherlv_36, grammarAccess.getOperDefAccess().getRightCurlyBracketKeyword_2_7());
+    	newLeafNode(otherlv_36, grammarAccess.getOperDefAccess().getRightCurlyBracketKeyword_2_8());
     }
 )
     |((
@@ -6505,6 +6505,13 @@ ruleBuiltInCat returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToke
     {
         $current.merge(kw);
         newLeafNode(kw, grammarAccess.getBuiltInCatAccess().getFloatKeyword_3()); 
+    }
+
+    |
+	kw='pattern' 
+    {
+        $current.merge(kw);
+        newLeafNode(kw, grammarAccess.getBuiltInCatAccess().getPatternKeyword_4()); 
     }
 )
     ;
