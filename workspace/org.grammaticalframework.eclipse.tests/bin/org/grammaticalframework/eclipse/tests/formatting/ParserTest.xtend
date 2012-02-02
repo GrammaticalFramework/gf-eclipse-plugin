@@ -59,9 +59,11 @@ class ParserTest extends XtextTest {
 	}
 
     @Test
-    def void testCompilerPragma() {
+    def void testHidden() {
         testTerminal("--# ...", "COMPILER_PRAGMA")
-        testNotTerminal("-- ...", "COMPILER_PRAGMA")
+        testTerminal("--% ...", "GF_DOC")
+        testTerminal("--: ...", "GF_COC")
+        testTerminal("-- ...", "SL_COMMENT")
 	}
 	
     @Test

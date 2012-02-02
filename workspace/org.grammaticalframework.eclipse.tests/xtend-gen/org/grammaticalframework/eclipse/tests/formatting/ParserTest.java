@@ -55,9 +55,11 @@ public class ParserTest extends XtextTest {
   }
   
   @Test
-  public void testCompilerPragma() {
+  public void testHidden() {
       this.testTerminal("--# ...", "COMPILER_PRAGMA");
-      this.testNotTerminal("-- ...", "COMPILER_PRAGMA");
+      this.testTerminal("--% ...", "GF_DOC");
+      this.testTerminal("--: ...", "GF_COC");
+      this.testTerminal("-- ...", "SL_COMMENT");
   }
   
   @Test
