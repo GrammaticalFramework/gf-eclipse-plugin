@@ -71,7 +71,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * The GF paths.
 	 */
 	private String gfPath;
-	private String gfLibPath;
+//	private String gfLibPath;
 	private Boolean buildDependents;
 
 	/**
@@ -90,7 +90,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			log.error("GF path not specified");
 			return null;
 		}
-		gfLibPath = GFPreferences.getLibraryPath();
+//		gfLibPath = GFPreferences.getLibraryPath();
 		buildDependents = GFPreferences.getBuildDependents();
 		
 		try {
@@ -354,9 +354,15 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			command.add("--v=0"); // quiet - errors are still displayed
 			command.add("--tags");
 			command.add("--output-dir=" + buildDir);
-			if (gfLibPath != null && !gfLibPath.isEmpty()) {
-				command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath)); // Use library path in command (if supplied)
-			}
+
+			/*
+			 * Specifying the library path doesn't really help at all, just forget the whole thing.
+			 * Pointed out by Thomas H. 2012-02-02
+			 */
+//			if (gfLibPath != null && !gfLibPath.isEmpty()) {
+//				command.add(String.format("--gf-lib-path=\"%s\"", gfLibPath)); // Use library path in command (if supplied)
+//			}
+			
 			command.add(filename);
 
 			// Execute command

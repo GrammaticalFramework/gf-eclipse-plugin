@@ -9,7 +9,10 @@
  */
 package org.grammaticalframework.eclipse.ui.editor.preferences;
 
+import java.io.File;
+
 import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 import org.eclipse.jface.util.IPropertyChangeListener;
@@ -23,6 +26,11 @@ import org.grammaticalframework.eclipse.ui.internal.GFActivator;
  */
 public class GFPreferenceInitializer extends AbstractPreferenceInitializer {
 
+	/**
+	 * Logger
+	 */
+	private static final Logger log = Logger.getLogger(GFPreferenceInitializer.class);
+	
 	/* (non-Javadoc)
 	 * @see org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer#initializeDefaultPreferences()
 	 */
@@ -33,12 +41,38 @@ public class GFPreferenceInitializer extends AbstractPreferenceInitializer {
 		
 		// Set defaults from environment variables
 		try {
-			store.setDefault(GFPreferences.GF_BIN_PATH, System.getenv("HOME") + "/.cabal/bin/gf");
-		} catch (SecurityException _) {	}
+//			store.setDefault(GFPreferences.GF_BIN_PATH, System.getenv("HOME") + "/.cabal/bin/gf");
+			String gfpath = null;
+			File file = null;
+			String path = System.getenv("PATH");
+			
+			// Unix-type
+			for (String s : path.split(":")) {
+				file = new File(s+"/"+"gf");
+				if (file.exists()) {
+					gfpath = file.getAbsolutePath();
+					break;
+				}
+			}
+			// Windows
+			if (gfpath == null)
+				for (String s : path.split(";")) {
+					file = new File(s+"/"+"gf.exe");
+					if (file.exists()) {
+						gfpath = file.getAbsolutePath();
+						break;
+					}
+				}
+			if (gfpath!=null) {
+				store.setDefault(GFPreferences.GF_BIN_PATH, gfpath);
+			}
+		} catch (Exception e) {
+			log.warn("Cannot determine path to GF runtime", e);
+		}
 		
-		try {
-			store.setDefault(GFPreferences.GF_LIB_PATH, System.getenv("GF_LIB_PATH"));
-		} catch (SecurityException _) {	}
+//		try {
+//			store.setDefault(GFPreferences.GF_LIB_PATH, System.getenv("GF_LIB_PATH"));
+//		} catch (SecurityException _) {	}
 		
 		store.setDefault(GFPreferences.LOG_LEVEL, "INFO");
 		

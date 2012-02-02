@@ -43,11 +43,15 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 		
 		addField(new StringFieldEditor(GFPreferences.GF_BIN_PATH, "&Runtime path:", parent));
 
-		addField(new StringFieldEditor(GFPreferences.GF_LIB_PATH, "&Library path:", parent));
-		new Label(parent, SWT.NULL); // skip cell
-		Label label_LibraryPath = new Label(parent, SWT.NULL);
-		label_LibraryPath.setFont(fontItalic);
-		label_LibraryPath.setText("This is passed to GF using the --gf-lib-path flag (optional) ");
+		/*
+		 * Specifying the library path doesn't really help at all, just forget the whole thing.
+		 * Pointed out by Thomas H. 2012-02-02
+		 */
+//		addField(new StringFieldEditor(GFPreferences.GF_LIB_PATH, "&Library path:", parent));
+//		new Label(parent, SWT.NULL); // skip cell
+//		Label label_LibraryPath = new Label(parent, SWT.NULL);
+//		label_LibraryPath.setFont(fontItalic);
+//		label_LibraryPath.setText("This is passed to GF using the --gf-lib-path flag (optional) ");
 
 		String[][] entryNamesAndValues = new String[][]{
 			// Refer: http://logging.apache.org/log4j/1.2/manual.html
@@ -61,7 +65,7 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 		label_LogLevel.setFont(fontItalic);
 		label_LogLevel.setText("Only affects console output, not Eclipse's internal log ");
 
-		addField(new BooleanFieldEditor(GFPreferences.BUILD_DEPENDENTS, "&Build inferred dependents of changed files (may be slow)", parent));
+		addField(new BooleanFieldEditor(GFPreferences.BUILD_DEPENDENTS, "&Build inferred dependents of changed files", parent));
 		
 	}
 	

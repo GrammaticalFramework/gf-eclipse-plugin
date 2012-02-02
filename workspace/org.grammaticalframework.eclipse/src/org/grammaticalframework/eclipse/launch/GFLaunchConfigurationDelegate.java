@@ -82,8 +82,8 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			IProcess iProcess = DebugPlugin.newProcess(launch, process, "gf");
 			iProcess.getStreamsProxy().getOutputStreamMonitor().addListener(new IStreamListener() {
 				public void streamAppended(String text, IStreamMonitor monitor) {
-					log.debug(text);
-//					GFConsoleDelegate.write(text);
+//					log.debug(text);
+					GFConsoleDelegate.write(text);
 				}
 			});
 			
