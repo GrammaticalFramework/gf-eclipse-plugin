@@ -1,8 +1,7 @@
-
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 31 Jan 2012
+Updated: 2 Feb 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
@@ -40,16 +39,16 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 - Use GF Shell from within Eclipse
 - Auto-completion for declared identifiers
 - Background compilation (shallow) using project builder
-- Full support for _Open Declaration_ (F3)
+- Support for _Open Declaration_ (F3)
+- Code generation for new languages in application grammars
 
 ### Near-term
 
+- Built-in library browser (in particular for GF resource grammar library)
 - Inline documentation for function calls, overloads
 - Quick-fix suggestions for syntax and naming errors
 - Code generation for concrete/instance modules
-- Code generation for new languages in application grammars
 - Grouping of concrete syntaxes by language, fast switching and linked navigation
-- Built-in library browser (in particular for GF resource grammar library)
 
 ### Long-term goals
 
@@ -62,8 +61,8 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 
 ## Major release history
 
-**31/01/12**
-: (1.2.5.x) Hugely improved scoping performance. New "Clone to new language" wizard. Improved code formatting. More efficient builder.
+**02/02/12**
+: (1.2.5.x) Hugely improved scoping performance. New "Clone to new language" wizard. Improved code formatting. More efficient builder. Removed library path preference. GF runtime is now automatically found.
 
 **23/01/12**
 : (1.2.4.x) Logging is now done to the Eclipse Platform Log (use "Error Log" view). Tested with Eclipse 3.6.2. Bug fixes.
@@ -117,20 +116,18 @@ In order for dependencies to be satisfied, you need to ensure that your Eclipse 
 #### Settings
 
 1. Add the GF perspective by clicking **Open Perspective &rarr; Other** and choosing **GF**.
-1. Set your paths to the GF executable and libraries by going to **Window &rarr; Preferences &rarr; Grammatical Framework**.  
-_The runtime path is assumed to be `~/.cabal/bin/gf`, which may be wrong depending on your
-system and how you installed GF._  
-_The library path should get automatically set from your environment's `GF_LIB_PATH` variable._
-1. You can also adjust the verbosity level of the GFEP logger.
+1. The plugin will try to determine the path to your GF executable automatically. You can always check/overwrite it by going to **Window &rarr; Preferences &rarr; Grammatical Framework**.  
+1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
 
 ### Updating the plugin
 
 1. In Eclipse, go to **Help &rarr; Check for updates**.
 1. Any available updates will appear in the dialog. Select them and follow the usual steps.
 
-#### Upgrading to GFEP 1.2.3
+#### Deprecated stuff
 
 - If your project has a folder named `(External)` you can safely delete this **via the Eclipse Project Explorer**. It is no longer used in GFEP >= 1.2.3
+- If your workspace contains a log file `gfep.log` then you can safely delete it from your system. As of version 1.2.4, GFEP uses Eclipse's standard log file at `.metadata/.log`
 
 ### Project settings
 
@@ -255,4 +252,3 @@ The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
 
 1. By opening the **Error Log** view in Eclipse
 1. Accessing the file directly at `workspace/.metadata/.log`
-
