@@ -153,77 +153,51 @@ ListLocDef :
 	{ListLocDef} ( localDefinitions+=LocDef (';' localDefinitions+=LocDef)* ';'? )?
 ;
 
-Exp6 :
-//	  {Exp6} Ident
+Exp6 returns Exp :
 	  name=[Ident|ID]		// constant or variable
-	  
 	| sort?=Sort			// type of types/param types/strings/token lists
-	| builtInCat?=BuiltInCat	// 
+	| builtInCat?=BuiltInCat	// TODO
 	| string?=String			// string literal
 	| integer?=Integer		// integer literal
 	| double?=Double			// floating point literal
-
-//	| {Exp6} '?' Integer
-//	| {Exp6} '?'
-	| meta?='?' (=>Integer)?		// metavariable
-
+	| meta?='?' 		// metavariable
 	| emptyString?='[' ']'		// empty token list
-	| data?='data'			
-	
-//	| '[' Ident es=Exps ']'
 	| listCat?='[' category=[Ident|ID] list=Exps ']'		// list category
-	
 	| tokenList?='[' String ']'						// token list
 	| record?='{' defList=ListLocDef '}'				// record / record type
-
-//	| '<' ltc=ListTupleComp '>'
-//	| '<' e+=Exp ':' e+=Exp '>'
 	| tuple?='<' (=> tupleList=ListTupleComp | v=Exp ':' type=Exp) '>'		// tuple | type-annotated expression
-
+	// TODO LString (?)
 	| identity?='(' v=Exp ')'
 ;
 
-Exp5 :
-	// Exp5 . Label | Exp6
-	  v=Exp6 ('.' label+=Label)*		// projection or qualification
+Exp5 returns Exp :
+	Exp6 ('.' label+=Label)*		// projection or qualification
 ;
 
-Exp4 :
-//	  e1=Exp4 e2=Exp5		// function application
-	  'table' '{' caseList=ListCase '}'				(args+=Exp5)*
-	  
-//	| 'table' e+=Exp6 '{' lc=ListCase '}'		(e+=Exp5)*
-//	| 'table' e+=Exp6 '[' le=ListExp ']'		(e+=Exp5)*
-	| 'table' argType=Exp6 ( '{' caseList=ListCase '}' | '[' expList=ListExp ']' )		(args+=Exp5)*			// course-of-values table
-	
-	| 'case' caseOf=Exp 'of' '{' caseList=ListCase '}'	(args+=Exp5)*
-	| 'variants' '{' expList=ListExp '}'			(args+=Exp5)*
-	| 'pre' '{' caseList=ListCase '}'				(args+=Exp5)*
-	| 'lincat' name=[Ident|ID]						(args+=Exp5)*
-	| 'lin' name=[Ident|ID] inner=Exp6				(args+=Exp5)*
-	| v=Exp5										(args+=Exp5)*
+Exp4 returns Exp :
+	  'case' caseOf=Exp 'of' '{' caseList=ListCase '}'	(e+=Exp5 | '{'e+=Exp'}')*
+	| 'variants' '{' expList=ListExp '}'				(e+=Exp5 | '{'e+=Exp'}')*
+	| 'pre' '{' caseList=ListCase '}'					(e+=Exp5 | '{'e+=Exp'}')*
+	| 'strs' '{' expList=ListExp '}'					(e+=Exp5 | '{'e+=Exp'}')*
+	| '#' pattern=Patt3									(e+=Exp5 | '{'e+=Exp'}')*  // TODO Check!
+	| 'lincat' name=[Ident|ID] inner=Exp5				(e+=Exp5 | '{'e+=Exp'}')*
+	| 'lin' name=[Ident|ID] inner=Exp5					(e+=Exp5 | '{'e+=Exp'}')*
+	| Exp5												(e+=Exp5 | '{'e+=Exp'}')*
 ;
 
-Exp3 :
-//	  e1=Exp3 '!' e2=Exp4
-//	| e1=Exp3 '*' e2=Exp4
-//	| e1=Exp3 '**' e2=Exp4
-//	| '#' Patt2
-//	| Exp4
-	  		v=Exp4		(('!'|'*'|'**') e+=Exp4)*
-	| '#'	v=Patt2		(('!'|'*'|'**') e+=Exp4)*
+Exp3 returns Exp :
+	  Exp4											(('!'|'*'|'**') e+=Exp4)*
+	| 'table' '{' caseList=ListCase '}'				(('!'|'*'|'**') e+=Exp4)*
+	| 'table' argType=Exp6 ( '{' caseList=ListCase '}' | '[' expList=ListExp ']' )		(('!'|'*'|'**') e+=Exp4)*			// course-of-values table
+//	| '#'	v=Patt2		(('!'|'*'|'**') e+=Exp4)*
 ;
 
-Exp2 :
-//	  e1=Exp3 '+' e2=Exp2
-//	| Exp3
-	  v=Exp3 ('+' e+=Exp2)?
+Exp2 returns Exp :
+	Exp3 ('+' e+=Exp2)*
 ;
 
-Exp1 :
-//	  e1=Exp2 '++' e2=Exp1
-//	| Exp2
-	  v=Exp2 ('++' e+=Exp1)?
+Exp1 returns Exp :
+	Exp2 ('++' e+=Exp1)*
 ;
 
 Exp :
@@ -264,25 +238,6 @@ Exp :
 			| ('+' e+=Exp2)? ('++' e+=Exp1)?
 		)
 		(=> '|' e+=Exp1)*
-
-/*
- * The following is an amalgamation of:
- *  Exp3 => Exp
- * 	Exp3 where { ListLocDef }
- * 	Exp1
- *
-	| e+=Exp3
-		(
-			  '=>' e+=Exp
-			| 'where' '{' e+=ListLocDef '}'
-			| ('+' e+=Exp2)? ('++' e+=Exp1)?
-		)
-		(=> '|' e+=Exp1)*
-
-*/
-
-//-	| e+=Exp '|' e+=Exp1
-//-	| e+=Exp1										(=> '|' e+=Exp1)*
  
 ;
 
@@ -296,28 +251,34 @@ Exps :
 	{Exps} (expressions+=Exp6)*
 ;
 
-Patt2 :
-	  {Patt2} '_'
-	| {Patt2} name=Ident
-	| {Patt2} name=Ident '.' label=Ident
-	| {Patt2} Integer
-	| {Patt2} Double
-	| {Patt2} String
+Patt3 returns Patt :
+	  '?'
+	| '[' String ']'
+	| '#' name=Ident
+	| '#' name=Ident '.' label=Ident
+	| '_'
+	| name=Ident
+	| name=Ident '.' label=Ident
+	| Integer
+	| Double
+	| String
 	| '{' ListPattAss '}'
 	| '<' ListPattTupleComp '>'
-	| {Patt2} '#' name=Ident
-	| {Patt2} '?'
 	| '(' Patt ')'
 ;
 
-Patt1 :
+Patt2 returns Patt :
+	  name=Ident '@' value=Patt3
+	| '-' Patt3
+	| '~' Exp6
+	| Patt3
+;
+
+Patt1 returns Patt :
 	  name=Ident value=ListPatt
 	| name=Ident '.' label=Ident value=ListPatt
-//	| Patt2 '*'
-	| name=Ident '@' value=Patt2
-	| '-' Patt2
-	| Patt2 ('*')?
-//	| Patt2
+	| Patt3 '*'
+	| Patt2
 ;
 
 Patt :
@@ -338,6 +299,7 @@ Label :
 Sort :
 	  'Type'
 	| 'PType'
+	| 'Tok'
 	| 'Str'
 	| 'Strs'
 ;
