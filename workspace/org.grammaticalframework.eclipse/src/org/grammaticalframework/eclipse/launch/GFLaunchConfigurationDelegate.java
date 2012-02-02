@@ -61,7 +61,9 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		command.add(opt_GFPath);
 		if (!opt_Interactive)
 			command.add("--batch");
-		command.addAll( Arrays.asList(opt_Options.split("\\s")) );
+		if (!opt_Options.trim().isEmpty()) {
+			command.addAll( Arrays.asList(opt_Options.split("\\s")) );
+		}
 		command.addAll( Arrays.asList(opt_Files.split("\\s")) );
 		
 		try {
