@@ -26161,6 +26161,8 @@ RULE_DOUBLE : ('0'..'9')+ '.' ('0'..'9')+ ('e' '-'? ('0'..'9')+)?;
 
 RULE_COMPILER_PRAGMA : '--#' ~(('\n'|'\r'))* ('\r'? '\n')?;
 
+RULE_GF_DOC : ('--%'|'--:') ~(('\n'|'\r'))* ('\r'? '\n')?;
+
 RULE_ML_COMMENT : '{-' ( options {greedy=false;} : . )*'-}';
 
 RULE_SL_COMMENT : '--' ~(('\n'|'\r'))* ('\r'? '\n')?;

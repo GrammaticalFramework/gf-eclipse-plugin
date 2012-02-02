@@ -22,7 +22,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INTEGER", "RULE_STRING", "RULE_ID", "RULE_DOUBLE", "RULE_COMPILER_PRAGMA", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'incomplete'", "'='", "';'", "'abstract'", "'resource'", "'interface'", "'concrete'", "'of'", "'instance'", "','", "'**'", "'open'", "'in'", "'{'", "'}'", "'with'", "'('", "')'", "'['", "']'", "'-'", "':'", "'overload'", "'cat'", "'fun'", "'data'", "'def'", "'param'", "'oper'", "'lincat'", "'lindef'", "'lin'", "'printname'", "'flags'", "'|'", "'.'", "'?'", "'<'", "'>'", "'table'", "'case'", "'variants'", "'pre'", "'!'", "'*'", "'#'", "'+'", "'++'", "'\\\\'", "'->'", "'=>'", "'let'", "'where'", "'_'", "'@'", "'$'", "'Type'", "'PType'", "'Str'", "'Strs'", "'String'", "'Int'", "'Ints'", "'Float'", "'pattern'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_INTEGER", "RULE_STRING", "RULE_ID", "RULE_DOUBLE", "RULE_COMPILER_PRAGMA", "RULE_GF_DOC", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'incomplete'", "'='", "';'", "'abstract'", "'resource'", "'interface'", "'concrete'", "'of'", "'instance'", "','", "'**'", "'open'", "'in'", "'{'", "'}'", "'with'", "'('", "')'", "'['", "']'", "'-'", "':'", "'overload'", "'cat'", "'fun'", "'data'", "'def'", "'param'", "'oper'", "'lincat'", "'lindef'", "'lin'", "'printname'", "'flags'", "'|'", "'.'", "'?'", "'<'", "'>'", "'table'", "'case'", "'variants'", "'pre'", "'!'", "'*'", "'#'", "'+'", "'++'", "'\\\\'", "'->'", "'=>'", "'let'", "'where'", "'_'", "'@'", "'$'", "'Type'", "'PType'", "'Str'", "'Strs'", "'String'", "'Int'", "'Ints'", "'Float'", "'pattern'"
     };
     public static final int T__68=68;
     public static final int T__69=69;
@@ -41,7 +41,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=12;
+    public static final int RULE_ANY_OTHER=13;
     public static final int T__21=21;
     public static final int T__20=20;
     public static final int T__61=61;
@@ -57,12 +57,11 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final int T__51=51;
     public static final int T__15=15;
     public static final int T__52=52;
-    public static final int T__53=53;
     public static final int T__18=18;
+    public static final int T__53=53;
     public static final int T__54=54;
     public static final int T__17=17;
     public static final int T__14=14;
-    public static final int T__13=13;
     public static final int T__59=59;
     public static final int T__50=50;
     public static final int T__42=42;
@@ -75,9 +74,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final int T__45=45;
     public static final int T__48=48;
     public static final int T__49=49;
-    public static final int RULE_SL_COMMENT=10;
+    public static final int RULE_SL_COMMENT=11;
+    public static final int RULE_GF_DOC=9;
     public static final int RULE_DOUBLE=7;
-    public static final int RULE_ML_COMMENT=9;
+    public static final int RULE_ML_COMMENT=10;
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int RULE_STRING=5;
@@ -92,12 +92,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
-    public static final int RULE_WS=11;
+    public static final int RULE_WS=12;
     public static final int T__76=76;
     public static final int T__75=75;
     public static final int T__74=74;
     public static final int T__73=73;
     public static final int RULE_INTEGER=4;
+    public static final int T__78=78;
     public static final int T__77=77;
 
     // delegates
@@ -204,7 +205,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==13) ) {
+            if ( (LA1_0==14) ) {
                 alt1=1;
             }
             switch (alt1) {
@@ -214,7 +215,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:81:1: (lv_incomplete_0_0= 'incomplete' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:82:3: lv_incomplete_0_0= 'incomplete'
                     {
-                    lv_incomplete_0_0=(Token)match(input,13,FOLLOW_13_in_ruleModDef128); if (state.failed) return current;
+                    lv_incomplete_0_0=(Token)match(input,14,FOLLOW_14_in_ruleModDef128); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_incomplete_0_0, grammarAccess.getModDefAccess().getIncompleteIncompleteKeyword_0_0());
@@ -272,7 +273,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,14,FOLLOW_14_in_ruleModDef175); if (state.failed) return current;
+            otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleModDef175); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_2, grammarAccess.getModDefAccess().getEqualsSignKeyword_2());
@@ -319,7 +320,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==15) ) {
+                if ( (LA2_0==16) ) {
                     alt2=1;
                 }
 
@@ -328,7 +329,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:135:4: otherlv_4= ';'
             	    {
-            	    otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleModDef209); if (state.failed) return current;
+            	    otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleModDef209); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_4, grammarAccess.getModDefAccess().getSemicolonKeyword_4());
@@ -441,27 +442,27 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:160:1: ( ( ( (lv_abstract_0_0= 'abstract' ) ) ( (lv_name_1_0= ruleIdent ) ) ) | ( ( (lv_resource_2_0= 'resource' ) ) ( (lv_name_3_0= ruleIdent ) ) ) | ( ( (lv_interface_4_0= 'interface' ) ) ( (lv_name_5_0= ruleIdent ) ) ) | ( ( (lv_concrete_6_0= 'concrete' ) ) ( (lv_name_7_0= ruleIdent ) ) otherlv_8= 'of' ( (lv_abstractName_9_0= ruleIdent ) ) ) | ( ( (lv_instance_10_0= 'instance' ) ) ( (lv_name_11_0= ruleIdent ) ) otherlv_12= 'of' ( (lv_abstractName_13_0= ruleIdent ) ) ) )
             int alt3=5;
             switch ( input.LA(1) ) {
-            case 16:
+            case 17:
                 {
                 alt3=1;
                 }
                 break;
-            case 17:
+            case 18:
                 {
                 alt3=2;
                 }
                 break;
-            case 18:
+            case 19:
                 {
                 alt3=3;
                 }
                 break;
-            case 19:
+            case 20:
                 {
                 alt3=4;
                 }
                 break;
-            case 21:
+            case 22:
                 {
                 alt3=5;
                 }
@@ -487,7 +488,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:161:1: (lv_abstract_0_0= 'abstract' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:162:3: lv_abstract_0_0= 'abstract'
                     {
-                    lv_abstract_0_0=(Token)match(input,16,FOLLOW_16_in_ruleModType301); if (state.failed) return current;
+                    lv_abstract_0_0=(Token)match(input,17,FOLLOW_17_in_ruleModType301); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_abstract_0_0, grammarAccess.getModTypeAccess().getAbstractAbstractKeyword_0_0_0());
@@ -560,7 +561,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:195:1: (lv_resource_2_0= 'resource' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:196:3: lv_resource_2_0= 'resource'
                     {
-                    lv_resource_2_0=(Token)match(input,17,FOLLOW_17_in_ruleModType361); if (state.failed) return current;
+                    lv_resource_2_0=(Token)match(input,18,FOLLOW_18_in_ruleModType361); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_resource_2_0, grammarAccess.getModTypeAccess().getResourceResourceKeyword_1_0_0());
@@ -633,7 +634,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:229:1: (lv_interface_4_0= 'interface' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:230:3: lv_interface_4_0= 'interface'
                     {
-                    lv_interface_4_0=(Token)match(input,18,FOLLOW_18_in_ruleModType421); if (state.failed) return current;
+                    lv_interface_4_0=(Token)match(input,19,FOLLOW_19_in_ruleModType421); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_interface_4_0, grammarAccess.getModTypeAccess().getInterfaceInterfaceKeyword_2_0_0());
@@ -706,7 +707,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:263:1: (lv_concrete_6_0= 'concrete' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:264:3: lv_concrete_6_0= 'concrete'
                     {
-                    lv_concrete_6_0=(Token)match(input,19,FOLLOW_19_in_ruleModType481); if (state.failed) return current;
+                    lv_concrete_6_0=(Token)match(input,20,FOLLOW_20_in_ruleModType481); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_concrete_6_0, grammarAccess.getModTypeAccess().getConcreteConcreteKeyword_3_0_0());
@@ -761,7 +762,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_8=(Token)match(input,20,FOLLOW_20_in_ruleModType527); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,21,FOLLOW_21_in_ruleModType527); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_8, grammarAccess.getModTypeAccess().getOfKeyword_3_2());
@@ -820,7 +821,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:319:1: (lv_instance_10_0= 'instance' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:320:3: lv_instance_10_0= 'instance'
                     {
-                    lv_instance_10_0=(Token)match(input,21,FOLLOW_21_in_ruleModType574); if (state.failed) return current;
+                    lv_instance_10_0=(Token)match(input,22,FOLLOW_22_in_ruleModType574); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_instance_10_0, grammarAccess.getModTypeAccess().getInstanceInstanceKeyword_4_0_0());
@@ -875,7 +876,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_12=(Token)match(input,20,FOLLOW_20_in_ruleModType620); if (state.failed) return current;
+                    otherlv_12=(Token)match(input,21,FOLLOW_21_in_ruleModType620); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_12, grammarAccess.getModTypeAccess().getOfKeyword_4_2());
@@ -1113,7 +1114,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
-                    if ( (LA6_0==RULE_ID||LA6_0==23) ) {
+                    if ( (LA6_0==RULE_ID||LA6_0==24) ) {
                         alt6=1;
                     }
                     switch (alt6) {
@@ -1172,7 +1173,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                         int alt4=2;
                                         int LA4_0 = input.LA(1);
 
-                                        if ( (LA4_0==22) ) {
+                                        if ( (LA4_0==23) ) {
                                             alt4=1;
                                         }
 
@@ -1181,7 +1182,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     	case 1 :
                                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:418:4: otherlv_2= ',' ( (lv_extends_3_0= ruleIncluded ) )
                                     	    {
-                                    	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleModBody759); if (state.failed) return current;
+                                    	    otherlv_2=(Token)match(input,23,FOLLOW_23_in_ruleModBody759); if (state.failed) return current;
                                     	    if ( state.backtracking==0 ) {
 
                                     	          	newLeafNode(otherlv_2, grammarAccess.getModBodyAccess().getCommaKeyword_0_1_0_1_0());
@@ -1237,7 +1238,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_4=(Token)match(input,23,FOLLOW_23_in_ruleModBody796); if (state.failed) return current;
+                            otherlv_4=(Token)match(input,24,FOLLOW_24_in_ruleModBody796); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_4, grammarAccess.getModBodyAccess().getAsteriskAsteriskKeyword_0_1_1());
@@ -1253,14 +1254,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
-                    if ( (LA9_0==24) ) {
+                    if ( (LA9_0==25) ) {
                         alt9=1;
                     }
                     switch (alt9) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:444:5: otherlv_5= 'open' ( ( (lv_opens_6_0= ruleOpen ) ) (otherlv_7= ',' ( (lv_opens_8_0= ruleOpen ) ) )* )? otherlv_9= 'in'
                             {
-                            otherlv_5=(Token)match(input,24,FOLLOW_24_in_ruleModBody811); if (state.failed) return current;
+                            otherlv_5=(Token)match(input,25,FOLLOW_25_in_ruleModBody811); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_5, grammarAccess.getModBodyAccess().getOpenKeyword_0_2_0());
@@ -1270,7 +1271,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             int alt8=2;
                             int LA8_0 = input.LA(1);
 
-                            if ( (LA8_0==RULE_ID||LA8_0==29) ) {
+                            if ( (LA8_0==RULE_ID||LA8_0==30) ) {
                                 alt8=1;
                             }
                             switch (alt8) {
@@ -1318,7 +1319,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                         int alt7=2;
                                         int LA7_0 = input.LA(1);
 
-                                        if ( (LA7_0==22) ) {
+                                        if ( (LA7_0==23) ) {
                                             alt7=1;
                                         }
 
@@ -1327,7 +1328,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     	case 1 :
                                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:466:4: otherlv_7= ',' ( (lv_opens_8_0= ruleOpen ) )
                                     	    {
-                                    	    otherlv_7=(Token)match(input,22,FOLLOW_22_in_ruleModBody846); if (state.failed) return current;
+                                    	    otherlv_7=(Token)match(input,23,FOLLOW_23_in_ruleModBody846); if (state.failed) return current;
                                     	    if ( state.backtracking==0 ) {
 
                                     	          	newLeafNode(otherlv_7, grammarAccess.getModBodyAccess().getCommaKeyword_0_2_1_1_0());
@@ -1383,7 +1384,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_9=(Token)match(input,25,FOLLOW_25_in_ruleModBody883); if (state.failed) return current;
+                            otherlv_9=(Token)match(input,26,FOLLOW_26_in_ruleModBody883); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_9, grammarAccess.getModBodyAccess().getInKeyword_0_2_2());
@@ -1395,7 +1396,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_10=(Token)match(input,26,FOLLOW_26_in_ruleModBody897); if (state.failed) return current;
+                    otherlv_10=(Token)match(input,27,FOLLOW_27_in_ruleModBody897); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_10, grammarAccess.getModBodyAccess().getLeftCurlyBracketKeyword_0_3());
@@ -1407,7 +1408,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt10=2;
                         int LA10_0 = input.LA(1);
 
-                        if ( ((LA10_0>=36 && LA10_0<=46)) ) {
+                        if ( ((LA10_0>=37 && LA10_0<=47)) ) {
                             alt10=1;
                         }
 
@@ -1454,7 +1455,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_12=(Token)match(input,27,FOLLOW_27_in_ruleModBody931); if (state.failed) return current;
+                    otherlv_12=(Token)match(input,28,FOLLOW_28_in_ruleModBody931); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_12, grammarAccess.getModBodyAccess().getRightCurlyBracketKeyword_0_5());
@@ -1537,7 +1538,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                 int alt11=2;
                                 int LA11_0 = input.LA(1);
 
-                                if ( (LA11_0==22) ) {
+                                if ( (LA11_0==23) ) {
                                     alt11=1;
                                 }
 
@@ -1546,7 +1547,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	case 1 :
                             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:543:4: otherlv_15= ',' ( (lv_extends_16_0= ruleIncluded ) )
                             	    {
-                            	    otherlv_15=(Token)match(input,22,FOLLOW_22_in_ruleModBody983); if (state.failed) return current;
+                            	    otherlv_15=(Token)match(input,23,FOLLOW_23_in_ruleModBody983); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_15, grammarAccess.getModBodyAccess().getCommaKeyword_1_1_1_0());
@@ -1668,7 +1669,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:591:1: (lv_functorInstantiation_19_0= 'with' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:592:3: lv_functorInstantiation_19_0= 'with'
                     {
-                    lv_functorInstantiation_19_0=(Token)match(input,28,FOLLOW_28_in_ruleModBody1064); if (state.failed) return current;
+                    lv_functorInstantiation_19_0=(Token)match(input,29,FOLLOW_29_in_ruleModBody1064); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_functorInstantiation_19_0, grammarAccess.getModBodyAccess().getFunctorInstantiationWithKeyword_2_2_0());
@@ -1692,7 +1693,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
-                    if ( (LA14_0==RULE_ID||LA14_0==29) ) {
+                    if ( (LA14_0==RULE_ID||LA14_0==30) ) {
                         alt14=1;
                     }
                     switch (alt14) {
@@ -1740,7 +1741,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                 int alt13=2;
                                 int LA13_0 = input.LA(1);
 
-                                if ( (LA13_0==22) ) {
+                                if ( (LA13_0==23) ) {
                                     alt13=1;
                                 }
 
@@ -1749,7 +1750,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	case 1 :
                             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:623:4: otherlv_21= ',' ( (lv_instantiations_22_0= ruleOpen ) )
                             	    {
-                            	    otherlv_21=(Token)match(input,22,FOLLOW_22_in_ruleModBody1112); if (state.failed) return current;
+                            	    otherlv_21=(Token)match(input,23,FOLLOW_23_in_ruleModBody1112); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_21, grammarAccess.getModBodyAccess().getCommaKeyword_2_3_1_0());
@@ -1871,7 +1872,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:671:1: (lv_functorInstantiation_25_0= 'with' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:672:3: lv_functorInstantiation_25_0= 'with'
                     {
-                    lv_functorInstantiation_25_0=(Token)match(input,28,FOLLOW_28_in_ruleModBody1193); if (state.failed) return current;
+                    lv_functorInstantiation_25_0=(Token)match(input,29,FOLLOW_29_in_ruleModBody1193); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_functorInstantiation_25_0, grammarAccess.getModBodyAccess().getFunctorInstantiationWithKeyword_3_2_0());
@@ -1895,7 +1896,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt16=2;
                     int LA16_0 = input.LA(1);
 
-                    if ( (LA16_0==RULE_ID||LA16_0==29) ) {
+                    if ( (LA16_0==RULE_ID||LA16_0==30) ) {
                         alt16=1;
                     }
                     switch (alt16) {
@@ -1943,7 +1944,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                 int alt15=2;
                                 int LA15_0 = input.LA(1);
 
-                                if ( (LA15_0==22) ) {
+                                if ( (LA15_0==23) ) {
                                     alt15=1;
                                 }
 
@@ -1952,7 +1953,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	case 1 :
                             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:703:4: otherlv_27= ',' ( (lv_instantiations_28_0= ruleOpen ) )
                             	    {
-                            	    otherlv_27=(Token)match(input,22,FOLLOW_22_in_ruleModBody1241); if (state.failed) return current;
+                            	    otherlv_27=(Token)match(input,23,FOLLOW_23_in_ruleModBody1241); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_27, grammarAccess.getModBodyAccess().getCommaKeyword_3_3_1_0());
@@ -2008,7 +2009,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_29=(Token)match(input,23,FOLLOW_23_in_ruleModBody1278); if (state.failed) return current;
+                    otherlv_29=(Token)match(input,24,FOLLOW_24_in_ruleModBody1278); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_29, grammarAccess.getModBodyAccess().getAsteriskAsteriskKeyword_3_4());
@@ -2018,14 +2019,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt19=2;
                     int LA19_0 = input.LA(1);
 
-                    if ( (LA19_0==24) ) {
+                    if ( (LA19_0==25) ) {
                         alt19=1;
                     }
                     switch (alt19) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:729:3: otherlv_30= 'open' ( ( (lv_opens_31_0= ruleOpen ) ) (otherlv_32= ',' ( (lv_opens_33_0= ruleOpen ) ) )* )? otherlv_34= 'in'
                             {
-                            otherlv_30=(Token)match(input,24,FOLLOW_24_in_ruleModBody1291); if (state.failed) return current;
+                            otherlv_30=(Token)match(input,25,FOLLOW_25_in_ruleModBody1291); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_30, grammarAccess.getModBodyAccess().getOpenKeyword_3_5_0());
@@ -2035,7 +2036,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             int alt18=2;
                             int LA18_0 = input.LA(1);
 
-                            if ( (LA18_0==RULE_ID||LA18_0==29) ) {
+                            if ( (LA18_0==RULE_ID||LA18_0==30) ) {
                                 alt18=1;
                             }
                             switch (alt18) {
@@ -2083,7 +2084,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                         int alt17=2;
                                         int LA17_0 = input.LA(1);
 
-                                        if ( (LA17_0==22) ) {
+                                        if ( (LA17_0==23) ) {
                                             alt17=1;
                                         }
 
@@ -2092,7 +2093,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     	case 1 :
                                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:751:4: otherlv_32= ',' ( (lv_opens_33_0= ruleOpen ) )
                                     	    {
-                                    	    otherlv_32=(Token)match(input,22,FOLLOW_22_in_ruleModBody1326); if (state.failed) return current;
+                                    	    otherlv_32=(Token)match(input,23,FOLLOW_23_in_ruleModBody1326); if (state.failed) return current;
                                     	    if ( state.backtracking==0 ) {
 
                                     	          	newLeafNode(otherlv_32, grammarAccess.getModBodyAccess().getCommaKeyword_3_5_1_1_0());
@@ -2148,7 +2149,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_34=(Token)match(input,25,FOLLOW_25_in_ruleModBody1363); if (state.failed) return current;
+                            otherlv_34=(Token)match(input,26,FOLLOW_26_in_ruleModBody1363); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_34, grammarAccess.getModBodyAccess().getInKeyword_3_5_2());
@@ -2160,7 +2161,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_35=(Token)match(input,26,FOLLOW_26_in_ruleModBody1377); if (state.failed) return current;
+                    otherlv_35=(Token)match(input,27,FOLLOW_27_in_ruleModBody1377); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_35, grammarAccess.getModBodyAccess().getLeftCurlyBracketKeyword_3_6());
@@ -2172,7 +2173,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt20=2;
                         int LA20_0 = input.LA(1);
 
-                        if ( ((LA20_0>=36 && LA20_0<=46)) ) {
+                        if ( ((LA20_0>=37 && LA20_0<=47)) ) {
                             alt20=1;
                         }
 
@@ -2219,7 +2220,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_37=(Token)match(input,27,FOLLOW_27_in_ruleModBody1411); if (state.failed) return current;
+                    otherlv_37=(Token)match(input,28,FOLLOW_28_in_ruleModBody1411); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_37, grammarAccess.getModBodyAccess().getRightCurlyBracketKeyword_3_8());
@@ -2302,7 +2303,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                 int alt21=2;
                                 int LA21_0 = input.LA(1);
 
-                                if ( (LA21_0==22) ) {
+                                if ( (LA21_0==23) ) {
                                     alt21=1;
                                 }
 
@@ -2311,7 +2312,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	case 1 :
                             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:828:4: otherlv_40= ',' ( (lv_extends_41_0= ruleIncluded ) )
                             	    {
-                            	    otherlv_40=(Token)match(input,22,FOLLOW_22_in_ruleModBody1463); if (state.failed) return current;
+                            	    otherlv_40=(Token)match(input,23,FOLLOW_23_in_ruleModBody1463); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_40, grammarAccess.getModBodyAccess().getCommaKeyword_4_1_1_0());
@@ -2367,7 +2368,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_42=(Token)match(input,23,FOLLOW_23_in_ruleModBody1500); if (state.failed) return current;
+                    otherlv_42=(Token)match(input,24,FOLLOW_24_in_ruleModBody1500); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_42, grammarAccess.getModBodyAccess().getAsteriskAsteriskKeyword_4_2());
@@ -2414,7 +2415,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:873:1: (lv_functorInstantiation_44_0= 'with' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:874:3: lv_functorInstantiation_44_0= 'with'
                     {
-                    lv_functorInstantiation_44_0=(Token)match(input,28,FOLLOW_28_in_ruleModBody1539); if (state.failed) return current;
+                    lv_functorInstantiation_44_0=(Token)match(input,29,FOLLOW_29_in_ruleModBody1539); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_functorInstantiation_44_0, grammarAccess.getModBodyAccess().getFunctorInstantiationWithKeyword_4_4_0());
@@ -2438,7 +2439,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt24=2;
                     int LA24_0 = input.LA(1);
 
-                    if ( (LA24_0==RULE_ID||LA24_0==29) ) {
+                    if ( (LA24_0==RULE_ID||LA24_0==30) ) {
                         alt24=1;
                     }
                     switch (alt24) {
@@ -2486,7 +2487,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                 int alt23=2;
                                 int LA23_0 = input.LA(1);
 
-                                if ( (LA23_0==22) ) {
+                                if ( (LA23_0==23) ) {
                                     alt23=1;
                                 }
 
@@ -2495,7 +2496,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	case 1 :
                             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:905:4: otherlv_46= ',' ( (lv_instantiations_47_0= ruleOpen ) )
                             	    {
-                            	    otherlv_46=(Token)match(input,22,FOLLOW_22_in_ruleModBody1587); if (state.failed) return current;
+                            	    otherlv_46=(Token)match(input,23,FOLLOW_23_in_ruleModBody1587); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_46, grammarAccess.getModBodyAccess().getCommaKeyword_4_5_1_0());
@@ -2628,7 +2629,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                 int alt25=2;
                                 int LA25_0 = input.LA(1);
 
-                                if ( (LA25_0==22) ) {
+                                if ( (LA25_0==23) ) {
                                     alt25=1;
                                 }
 
@@ -2637,7 +2638,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	case 1 :
                             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:952:4: otherlv_50= ',' ( (lv_extends_51_0= ruleIncluded ) )
                             	    {
-                            	    otherlv_50=(Token)match(input,22,FOLLOW_22_in_ruleModBody1664); if (state.failed) return current;
+                            	    otherlv_50=(Token)match(input,23,FOLLOW_23_in_ruleModBody1664); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_50, grammarAccess.getModBodyAccess().getCommaKeyword_5_1_1_0());
@@ -2693,7 +2694,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_52=(Token)match(input,23,FOLLOW_23_in_ruleModBody1701); if (state.failed) return current;
+                    otherlv_52=(Token)match(input,24,FOLLOW_24_in_ruleModBody1701); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_52, grammarAccess.getModBodyAccess().getAsteriskAsteriskKeyword_5_2());
@@ -2740,7 +2741,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:997:1: (lv_functorInstantiation_54_0= 'with' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:998:3: lv_functorInstantiation_54_0= 'with'
                     {
-                    lv_functorInstantiation_54_0=(Token)match(input,28,FOLLOW_28_in_ruleModBody1740); if (state.failed) return current;
+                    lv_functorInstantiation_54_0=(Token)match(input,29,FOLLOW_29_in_ruleModBody1740); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_functorInstantiation_54_0, grammarAccess.getModBodyAccess().getFunctorInstantiationWithKeyword_5_4_0());
@@ -2764,7 +2765,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt28=2;
                     int LA28_0 = input.LA(1);
 
-                    if ( (LA28_0==RULE_ID||LA28_0==29) ) {
+                    if ( (LA28_0==RULE_ID||LA28_0==30) ) {
                         alt28=1;
                     }
                     switch (alt28) {
@@ -2812,7 +2813,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                 int alt27=2;
                                 int LA27_0 = input.LA(1);
 
-                                if ( (LA27_0==22) ) {
+                                if ( (LA27_0==23) ) {
                                     alt27=1;
                                 }
 
@@ -2821,7 +2822,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	case 1 :
                             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1029:4: otherlv_56= ',' ( (lv_instantiations_57_0= ruleOpen ) )
                             	    {
-                            	    otherlv_56=(Token)match(input,22,FOLLOW_22_in_ruleModBody1788); if (state.failed) return current;
+                            	    otherlv_56=(Token)match(input,23,FOLLOW_23_in_ruleModBody1788); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_56, grammarAccess.getModBodyAccess().getCommaKeyword_5_5_1_0());
@@ -2877,7 +2878,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_58=(Token)match(input,23,FOLLOW_23_in_ruleModBody1825); if (state.failed) return current;
+                    otherlv_58=(Token)match(input,24,FOLLOW_24_in_ruleModBody1825); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_58, grammarAccess.getModBodyAccess().getAsteriskAsteriskKeyword_5_6());
@@ -2887,14 +2888,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt31=2;
                     int LA31_0 = input.LA(1);
 
-                    if ( (LA31_0==24) ) {
+                    if ( (LA31_0==25) ) {
                         alt31=1;
                     }
                     switch (alt31) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1055:3: otherlv_59= 'open' ( ( (lv_opens_60_0= ruleOpen ) ) (otherlv_61= ',' ( (lv_opens_62_0= ruleOpen ) ) )* )? otherlv_63= 'in'
                             {
-                            otherlv_59=(Token)match(input,24,FOLLOW_24_in_ruleModBody1838); if (state.failed) return current;
+                            otherlv_59=(Token)match(input,25,FOLLOW_25_in_ruleModBody1838); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_59, grammarAccess.getModBodyAccess().getOpenKeyword_5_7_0());
@@ -2904,7 +2905,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             int alt30=2;
                             int LA30_0 = input.LA(1);
 
-                            if ( (LA30_0==RULE_ID||LA30_0==29) ) {
+                            if ( (LA30_0==RULE_ID||LA30_0==30) ) {
                                 alt30=1;
                             }
                             switch (alt30) {
@@ -2952,7 +2953,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                         int alt29=2;
                                         int LA29_0 = input.LA(1);
 
-                                        if ( (LA29_0==22) ) {
+                                        if ( (LA29_0==23) ) {
                                             alt29=1;
                                         }
 
@@ -2961,7 +2962,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     	case 1 :
                                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1077:4: otherlv_61= ',' ( (lv_opens_62_0= ruleOpen ) )
                                     	    {
-                                    	    otherlv_61=(Token)match(input,22,FOLLOW_22_in_ruleModBody1873); if (state.failed) return current;
+                                    	    otherlv_61=(Token)match(input,23,FOLLOW_23_in_ruleModBody1873); if (state.failed) return current;
                                     	    if ( state.backtracking==0 ) {
 
                                     	          	newLeafNode(otherlv_61, grammarAccess.getModBodyAccess().getCommaKeyword_5_7_1_1_0());
@@ -3017,7 +3018,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_63=(Token)match(input,25,FOLLOW_25_in_ruleModBody1910); if (state.failed) return current;
+                            otherlv_63=(Token)match(input,26,FOLLOW_26_in_ruleModBody1910); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_63, grammarAccess.getModBodyAccess().getInKeyword_5_7_2());
@@ -3029,7 +3030,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_64=(Token)match(input,26,FOLLOW_26_in_ruleModBody1924); if (state.failed) return current;
+                    otherlv_64=(Token)match(input,27,FOLLOW_27_in_ruleModBody1924); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_64, grammarAccess.getModBodyAccess().getLeftCurlyBracketKeyword_5_8());
@@ -3041,7 +3042,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt32=2;
                         int LA32_0 = input.LA(1);
 
-                        if ( ((LA32_0>=36 && LA32_0<=46)) ) {
+                        if ( ((LA32_0>=37 && LA32_0<=47)) ) {
                             alt32=1;
                         }
 
@@ -3088,7 +3089,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_66=(Token)match(input,27,FOLLOW_27_in_ruleModBody1958); if (state.failed) return current;
+                    otherlv_66=(Token)match(input,28,FOLLOW_28_in_ruleModBody1958); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_66, grammarAccess.getModBodyAccess().getRightCurlyBracketKeyword_5_10());
@@ -3194,16 +3195,16 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( (LA34_0==RULE_ID) ) {
                 alt34=1;
             }
-            else if ( (LA34_0==29) ) {
+            else if ( (LA34_0==30) ) {
                 int LA34_2 = input.LA(2);
 
                 if ( (LA34_2==RULE_ID) ) {
                     int LA34_3 = input.LA(3);
 
-                    if ( (LA34_3==30) ) {
+                    if ( (LA34_3==31) ) {
                         alt34=2;
                     }
-                    else if ( (LA34_3==14) ) {
+                    else if ( (LA34_3==15) ) {
                         alt34=3;
                     }
                     else {
@@ -3277,7 +3278,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1169:6: (otherlv_1= '(' ( (lv_name_2_0= ruleIdent ) ) otherlv_3= ')' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1169:8: otherlv_1= '(' ( (lv_name_2_0= ruleIdent ) ) otherlv_3= ')'
                     {
-                    otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleOpen2070); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleOpen2070); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getOpenAccess().getLeftParenthesisKeyword_1_0());
@@ -3318,7 +3319,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleOpen2103); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,31,FOLLOW_31_in_ruleOpen2103); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getOpenAccess().getRightParenthesisKeyword_1_2());
@@ -3336,7 +3337,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1196:6: (otherlv_4= '(' ( (lv_alias_5_0= ruleIdent ) ) otherlv_6= '=' ( (lv_name_7_0= ruleIdent ) ) otherlv_8= ')' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1196:8: otherlv_4= '(' ( (lv_alias_5_0= ruleIdent ) ) otherlv_6= '=' ( (lv_name_7_0= ruleIdent ) ) otherlv_8= ')'
                     {
-                    otherlv_4=(Token)match(input,29,FOLLOW_29_in_ruleOpen2123); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleOpen2123); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getOpenAccess().getLeftParenthesisKeyword_2_0());
@@ -3377,7 +3378,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_6=(Token)match(input,14,FOLLOW_14_in_ruleOpen2156); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,15,FOLLOW_15_in_ruleOpen2156); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getOpenAccess().getEqualsSignKeyword_2_2());
@@ -3418,7 +3419,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_8=(Token)match(input,30,FOLLOW_30_in_ruleOpen2189); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,31,FOLLOW_31_in_ruleOpen2189); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_8, grammarAccess.getOpenAccess().getRightParenthesisKeyword_2_4());
@@ -3532,20 +3533,20 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( (LA37_0==RULE_ID) ) {
                 switch ( input.LA(2) ) {
                 case EOF:
-                case 15:
-                case 22:
+                case 16:
                 case 23:
-                case 28:
+                case 24:
+                case 29:
                     {
                     alt37=1;
                     }
                     break;
-                case 33:
+                case 34:
                     {
                     alt37=3;
                     }
                     break;
-                case 31:
+                case 32:
                     {
                     alt37=2;
                     }
@@ -3655,7 +3656,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1303:1: (lv_inclusive_2_0= '[' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1304:3: lv_inclusive_2_0= '['
                     {
-                    lv_inclusive_2_0=(Token)match(input,31,FOLLOW_31_in_ruleIncluded2328); if (state.failed) return current;
+                    lv_inclusive_2_0=(Token)match(input,32,FOLLOW_32_in_ruleIncluded2328); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_inclusive_2_0, grammarAccess.getIncludedAccess().getInclusiveLeftSquareBracketKeyword_1_1_0());
@@ -3716,7 +3717,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt35=2;
                         int LA35_0 = input.LA(1);
 
-                        if ( (LA35_0==22) ) {
+                        if ( (LA35_0==23) ) {
                             alt35=1;
                         }
 
@@ -3725,7 +3726,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1335:4: otherlv_4= ',' ( (lv_includes_5_0= ruleIdent ) )
                     	    {
-                    	    otherlv_4=(Token)match(input,22,FOLLOW_22_in_ruleIncluded2375); if (state.failed) return current;
+                    	    otherlv_4=(Token)match(input,23,FOLLOW_23_in_ruleIncluded2375); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_4, grammarAccess.getIncludedAccess().getCommaKeyword_1_3_0());
@@ -3775,7 +3776,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_6=(Token)match(input,32,FOLLOW_32_in_ruleIncluded2410); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,33,FOLLOW_33_in_ruleIncluded2410); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getIncludedAccess().getRightSquareBracketKeyword_1_4());
@@ -3834,7 +3835,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1381:1: (lv_exclusive_8_0= '-' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1382:3: lv_exclusive_8_0= '-'
                     {
-                    lv_exclusive_8_0=(Token)match(input,33,FOLLOW_33_in_ruleIncluded2457); if (state.failed) return current;
+                    lv_exclusive_8_0=(Token)match(input,34,FOLLOW_34_in_ruleIncluded2457); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_exclusive_8_0, grammarAccess.getIncludedAccess().getExclusiveHyphenMinusKeyword_2_1_0());
@@ -3854,7 +3855,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,31,FOLLOW_31_in_ruleIncluded2482); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,32,FOLLOW_32_in_ruleIncluded2482); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_9, grammarAccess.getIncludedAccess().getLeftSquareBracketKeyword_2_2());
@@ -3901,7 +3902,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt36=2;
                         int LA36_0 = input.LA(1);
 
-                        if ( (LA36_0==22) ) {
+                        if ( (LA36_0==23) ) {
                             alt36=1;
                         }
 
@@ -3910,7 +3911,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1417:4: otherlv_11= ',' ( (lv_excludes_12_0= ruleIdent ) )
                     	    {
-                    	    otherlv_11=(Token)match(input,22,FOLLOW_22_in_ruleIncluded2516); if (state.failed) return current;
+                    	    otherlv_11=(Token)match(input,23,FOLLOW_23_in_ruleIncluded2516); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_11, grammarAccess.getIncludedAccess().getCommaKeyword_2_4_0());
@@ -3960,7 +3961,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_13=(Token)match(input,32,FOLLOW_32_in_ruleIncluded2551); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,33,FOLLOW_33_in_ruleIncluded2551); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_13, grammarAccess.getIncludedAccess().getRightSquareBracketKeyword_2_5());
@@ -4123,7 +4124,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt38=2;
                         int LA38_0 = input.LA(1);
 
-                        if ( (LA38_0==22) ) {
+                        if ( (LA38_0==23) ) {
                             alt38=1;
                         }
 
@@ -4132,7 +4133,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1482:4: otherlv_1= ',' ( (lv_name_2_0= ruleName ) )
                     	    {
-                    	    otherlv_1=(Token)match(input,22,FOLLOW_22_in_ruleDef2658); if (state.failed) return current;
+                    	    otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleDef2658); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_1, grammarAccess.getDefAccess().getCommaKeyword_0_1_0());
@@ -4182,7 +4183,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleDef2693); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleDef2693); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getDefAccess().getEqualsSignKeyword_0_2());
@@ -4276,7 +4277,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt39=2;
                         int LA39_0 = input.LA(1);
 
-                        if ( (LA39_0==22) ) {
+                        if ( (LA39_0==23) ) {
                             alt39=1;
                         }
 
@@ -4285,7 +4286,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1545:4: otherlv_6= ',' ( (lv_name_7_0= ruleName ) )
                     	    {
-                    	    otherlv_6=(Token)match(input,22,FOLLOW_22_in_ruleDef2756); if (state.failed) return current;
+                    	    otherlv_6=(Token)match(input,23,FOLLOW_23_in_ruleDef2756); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_6, grammarAccess.getDefAccess().getCommaKeyword_1_1_0());
@@ -4335,7 +4336,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_8=(Token)match(input,34,FOLLOW_34_in_ruleDef2791); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,35,FOLLOW_35_in_ruleDef2791); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_8, grammarAccess.getDefAccess().getColonKeyword_1_2());
@@ -4380,14 +4381,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt40=2;
                     int LA40_0 = input.LA(1);
 
-                    if ( (LA40_0==14) ) {
+                    if ( (LA40_0==15) ) {
                         alt40=1;
                     }
                     switch (alt40) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1589:4: otherlv_10= '=' ( (lv_definition_11_0= ruleExp ) )
                             {
-                            otherlv_10=(Token)match(input,14,FOLLOW_14_in_ruleDef2825); if (state.failed) return current;
+                            otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleDef2825); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_10, grammarAccess.getDefAccess().getEqualsSignKeyword_1_4_0());
@@ -4516,7 +4517,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_14=(Token)match(input,14,FOLLOW_14_in_ruleDef2910); if (state.failed) return current;
+                    otherlv_14=(Token)match(input,15,FOLLOW_15_in_ruleDef2910); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_14, grammarAccess.getDefAccess().getEqualsSignKeyword_2_2());
@@ -4747,7 +4748,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt42=2;
                         int LA42_0 = input.LA(1);
 
-                        if ( (LA42_0==22) ) {
+                        if ( (LA42_0==23) ) {
                             alt42=1;
                         }
 
@@ -4756,7 +4757,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1709:4: otherlv_1= ',' ( (lv_name_2_0= ruleName ) )
                     	    {
-                    	    otherlv_1=(Token)match(input,22,FOLLOW_22_in_ruleOperDef3038); if (state.failed) return current;
+                    	    otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleOperDef3038); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_1, grammarAccess.getOperDefAccess().getCommaKeyword_0_1_0());
@@ -4806,7 +4807,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_3=(Token)match(input,14,FOLLOW_14_in_ruleOperDef3073); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,15,FOLLOW_15_in_ruleOperDef3073); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getOperDefAccess().getEqualsSignKeyword_0_2());
@@ -4816,10 +4817,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt45=2;
                     int LA45_0 = input.LA(1);
 
-                    if ( ((LA45_0>=RULE_INTEGER && LA45_0<=RULE_DOUBLE)||LA45_0==26||LA45_0==29||LA45_0==31||LA45_0==38||LA45_0==42||LA45_0==44||(LA45_0>=49 && LA45_0<=50)||(LA45_0>=52 && LA45_0<=55)||LA45_0==58||LA45_0==61||LA45_0==64||(LA45_0>=69 && LA45_0<=77)) ) {
+                    if ( ((LA45_0>=RULE_INTEGER && LA45_0<=RULE_DOUBLE)||LA45_0==27||LA45_0==30||LA45_0==32||LA45_0==39||LA45_0==43||LA45_0==45||(LA45_0>=50 && LA45_0<=51)||(LA45_0>=53 && LA45_0<=56)||LA45_0==59||LA45_0==62||LA45_0==65||(LA45_0>=70 && LA45_0<=78)) ) {
                         alt45=1;
                     }
-                    else if ( (LA45_0==35) ) {
+                    else if ( (LA45_0==36) ) {
                         alt45=2;
                     }
                     else {
@@ -4883,7 +4884,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1755:1: (lv_overload_5_0= 'overload' )
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1756:3: lv_overload_5_0= 'overload'
                             {
-                            lv_overload_5_0=(Token)match(input,35,FOLLOW_35_in_ruleOperDef3120); if (state.failed) return current;
+                            lv_overload_5_0=(Token)match(input,36,FOLLOW_36_in_ruleOperDef3120); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       newLeafNode(lv_overload_5_0, grammarAccess.getOperDefAccess().getOverloadOverloadKeyword_0_3_1_0_0());
@@ -4903,7 +4904,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_6=(Token)match(input,26,FOLLOW_26_in_ruleOperDef3145); if (state.failed) return current;
+                            otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleOperDef3145); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_6, grammarAccess.getOperDefAccess().getLeftCurlyBracketKeyword_0_3_1_1());
@@ -4950,10 +4951,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                 int alt43=2;
                                 int LA43_0 = input.LA(1);
 
-                                if ( (LA43_0==15) ) {
+                                if ( (LA43_0==16) ) {
                                     int LA43_1 = input.LA(2);
 
-                                    if ( (LA43_1==RULE_ID||LA43_1==31) ) {
+                                    if ( (LA43_1==RULE_ID||LA43_1==32) ) {
                                         alt43=1;
                                     }
 
@@ -4965,7 +4966,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	case 1 :
                             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1791:4: otherlv_8= ';' ( (lv_overloads_9_0= ruleDef ) )
                             	    {
-                            	    otherlv_8=(Token)match(input,15,FOLLOW_15_in_ruleOperDef3179); if (state.failed) return current;
+                            	    otherlv_8=(Token)match(input,16,FOLLOW_16_in_ruleOperDef3179); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_8, grammarAccess.getOperDefAccess().getSemicolonKeyword_0_3_1_3_0());
@@ -5019,14 +5020,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             int alt44=2;
                             int LA44_0 = input.LA(1);
 
-                            if ( (LA44_0==15) ) {
+                            if ( (LA44_0==16) ) {
                                 alt44=1;
                             }
                             switch (alt44) {
                                 case 1 :
                                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1813:6: otherlv_10= ';'
                                     {
-                                    otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleOperDef3215); if (state.failed) return current;
+                                    otherlv_10=(Token)match(input,16,FOLLOW_16_in_ruleOperDef3215); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_10, grammarAccess.getOperDefAccess().getSemicolonKeyword_0_3_1_4());
@@ -5038,7 +5039,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_11=(Token)match(input,27,FOLLOW_27_in_ruleOperDef3229); if (state.failed) return current;
+                            otherlv_11=(Token)match(input,28,FOLLOW_28_in_ruleOperDef3229); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_11, grammarAccess.getOperDefAccess().getRightCurlyBracketKeyword_0_3_1_5());
@@ -5106,7 +5107,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt46=2;
                         int LA46_0 = input.LA(1);
 
-                        if ( (LA46_0==22) ) {
+                        if ( (LA46_0==23) ) {
                             alt46=1;
                         }
 
@@ -5115,7 +5116,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1840:4: otherlv_13= ',' ( (lv_name_14_0= ruleName ) )
                     	    {
-                    	    otherlv_13=(Token)match(input,22,FOLLOW_22_in_ruleOperDef3273); if (state.failed) return current;
+                    	    otherlv_13=(Token)match(input,23,FOLLOW_23_in_ruleOperDef3273); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_13, grammarAccess.getOperDefAccess().getCommaKeyword_1_1_0());
@@ -5165,7 +5166,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_15=(Token)match(input,34,FOLLOW_34_in_ruleOperDef3308); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,35,FOLLOW_35_in_ruleOperDef3308); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_15, grammarAccess.getOperDefAccess().getColonKeyword_1_2());
@@ -5210,14 +5211,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt50=2;
                     int LA50_0 = input.LA(1);
 
-                    if ( (LA50_0==14) ) {
+                    if ( (LA50_0==15) ) {
                         alt50=1;
                     }
                     switch (alt50) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1884:4: otherlv_17= '=' ( ( (lv_definition_18_0= ruleExp ) ) | ( ( (lv_overload_19_0= 'overload' ) ) otherlv_20= '{' ( (lv_overloads_21_0= ruleDef ) ) (otherlv_22= ';' ( (lv_overloads_23_0= ruleDef ) ) )* (otherlv_24= ';' )? otherlv_25= '}' ) )
                             {
-                            otherlv_17=(Token)match(input,14,FOLLOW_14_in_ruleOperDef3342); if (state.failed) return current;
+                            otherlv_17=(Token)match(input,15,FOLLOW_15_in_ruleOperDef3342); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_17, grammarAccess.getOperDefAccess().getEqualsSignKeyword_1_4_0());
@@ -5227,10 +5228,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             int alt49=2;
                             int LA49_0 = input.LA(1);
 
-                            if ( ((LA49_0>=RULE_INTEGER && LA49_0<=RULE_DOUBLE)||LA49_0==26||LA49_0==29||LA49_0==31||LA49_0==38||LA49_0==42||LA49_0==44||(LA49_0>=49 && LA49_0<=50)||(LA49_0>=52 && LA49_0<=55)||LA49_0==58||LA49_0==61||LA49_0==64||(LA49_0>=69 && LA49_0<=77)) ) {
+                            if ( ((LA49_0>=RULE_INTEGER && LA49_0<=RULE_DOUBLE)||LA49_0==27||LA49_0==30||LA49_0==32||LA49_0==39||LA49_0==43||LA49_0==45||(LA49_0>=50 && LA49_0<=51)||(LA49_0>=53 && LA49_0<=56)||LA49_0==59||LA49_0==62||LA49_0==65||(LA49_0>=70 && LA49_0<=78)) ) {
                                 alt49=1;
                             }
-                            else if ( (LA49_0==35) ) {
+                            else if ( (LA49_0==36) ) {
                                 alt49=2;
                             }
                             else {
@@ -5294,7 +5295,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1908:1: (lv_overload_19_0= 'overload' )
                                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1909:3: lv_overload_19_0= 'overload'
                                     {
-                                    lv_overload_19_0=(Token)match(input,35,FOLLOW_35_in_ruleOperDef3389); if (state.failed) return current;
+                                    lv_overload_19_0=(Token)match(input,36,FOLLOW_36_in_ruleOperDef3389); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                               newLeafNode(lv_overload_19_0, grammarAccess.getOperDefAccess().getOverloadOverloadKeyword_1_4_1_1_0_0());
@@ -5314,7 +5315,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                                     }
 
-                                    otherlv_20=(Token)match(input,26,FOLLOW_26_in_ruleOperDef3414); if (state.failed) return current;
+                                    otherlv_20=(Token)match(input,27,FOLLOW_27_in_ruleOperDef3414); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_20, grammarAccess.getOperDefAccess().getLeftCurlyBracketKeyword_1_4_1_1_1());
@@ -5361,10 +5362,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                         int alt47=2;
                                         int LA47_0 = input.LA(1);
 
-                                        if ( (LA47_0==15) ) {
+                                        if ( (LA47_0==16) ) {
                                             int LA47_1 = input.LA(2);
 
-                                            if ( (LA47_1==RULE_ID||LA47_1==31) ) {
+                                            if ( (LA47_1==RULE_ID||LA47_1==32) ) {
                                                 alt47=1;
                                             }
 
@@ -5376,7 +5377,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     	case 1 :
                                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1944:4: otherlv_22= ';' ( (lv_overloads_23_0= ruleDef ) )
                                     	    {
-                                    	    otherlv_22=(Token)match(input,15,FOLLOW_15_in_ruleOperDef3448); if (state.failed) return current;
+                                    	    otherlv_22=(Token)match(input,16,FOLLOW_16_in_ruleOperDef3448); if (state.failed) return current;
                                     	    if ( state.backtracking==0 ) {
 
                                     	          	newLeafNode(otherlv_22, grammarAccess.getOperDefAccess().getSemicolonKeyword_1_4_1_1_3_0());
@@ -5430,14 +5431,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     int alt48=2;
                                     int LA48_0 = input.LA(1);
 
-                                    if ( (LA48_0==15) ) {
+                                    if ( (LA48_0==16) ) {
                                         alt48=1;
                                     }
                                     switch (alt48) {
                                         case 1 :
                                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1966:6: otherlv_24= ';'
                                             {
-                                            otherlv_24=(Token)match(input,15,FOLLOW_15_in_ruleOperDef3484); if (state.failed) return current;
+                                            otherlv_24=(Token)match(input,16,FOLLOW_16_in_ruleOperDef3484); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
                                                   	newLeafNode(otherlv_24, grammarAccess.getOperDefAccess().getSemicolonKeyword_1_4_1_1_4());
@@ -5449,7 +5450,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                                     }
 
-                                    otherlv_25=(Token)match(input,27,FOLLOW_27_in_ruleOperDef3498); if (state.failed) return current;
+                                    otherlv_25=(Token)match(input,28,FOLLOW_28_in_ruleOperDef3498); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_25, grammarAccess.getOperDefAccess().getRightCurlyBracketKeyword_1_4_1_1_5());
@@ -5523,7 +5524,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt51=2;
                         int LA51_0 = input.LA(1);
 
-                        if ( (LA51_0==22) ) {
+                        if ( (LA51_0==23) ) {
                             alt51=1;
                         }
 
@@ -5532,7 +5533,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:1993:4: otherlv_27= ',' ( (lv_name_28_0= ruleName ) )
                     	    {
-                    	    otherlv_27=(Token)match(input,22,FOLLOW_22_in_ruleOperDef3544); if (state.failed) return current;
+                    	    otherlv_27=(Token)match(input,23,FOLLOW_23_in_ruleOperDef3544); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_27, grammarAccess.getOperDefAccess().getCommaKeyword_2_1_0());
@@ -5582,7 +5583,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_29=(Token)match(input,34,FOLLOW_34_in_ruleOperDef3579); if (state.failed) return current;
+                    otherlv_29=(Token)match(input,35,FOLLOW_35_in_ruleOperDef3579); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_29, grammarAccess.getOperDefAccess().getColonKeyword_2_2());
@@ -5594,7 +5595,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2020:1: (lv_overload_30_0= 'overload' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2021:3: lv_overload_30_0= 'overload'
                     {
-                    lv_overload_30_0=(Token)match(input,35,FOLLOW_35_in_ruleOperDef3597); if (state.failed) return current;
+                    lv_overload_30_0=(Token)match(input,36,FOLLOW_36_in_ruleOperDef3597); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_overload_30_0, grammarAccess.getOperDefAccess().getOverloadOverloadKeyword_2_3_0());
@@ -5614,7 +5615,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_31=(Token)match(input,26,FOLLOW_26_in_ruleOperDef3622); if (state.failed) return current;
+                    otherlv_31=(Token)match(input,27,FOLLOW_27_in_ruleOperDef3622); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_31, grammarAccess.getOperDefAccess().getLeftCurlyBracketKeyword_2_4());
@@ -5661,10 +5662,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt52=2;
                         int LA52_0 = input.LA(1);
 
-                        if ( (LA52_0==15) ) {
+                        if ( (LA52_0==16) ) {
                             int LA52_1 = input.LA(2);
 
-                            if ( (LA52_1==RULE_ID||LA52_1==31) ) {
+                            if ( (LA52_1==RULE_ID||LA52_1==32) ) {
                                 alt52=1;
                             }
 
@@ -5676,7 +5677,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2056:4: otherlv_33= ';' ( (lv_overloads_34_0= ruleDef ) )
                     	    {
-                    	    otherlv_33=(Token)match(input,15,FOLLOW_15_in_ruleOperDef3656); if (state.failed) return current;
+                    	    otherlv_33=(Token)match(input,16,FOLLOW_16_in_ruleOperDef3656); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_33, grammarAccess.getOperDefAccess().getSemicolonKeyword_2_6_0());
@@ -5730,14 +5731,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt53=2;
                     int LA53_0 = input.LA(1);
 
-                    if ( (LA53_0==15) ) {
+                    if ( (LA53_0==16) ) {
                         alt53=1;
                     }
                     switch (alt53) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2078:6: otherlv_35= ';'
                             {
-                            otherlv_35=(Token)match(input,15,FOLLOW_15_in_ruleOperDef3692); if (state.failed) return current;
+                            otherlv_35=(Token)match(input,16,FOLLOW_16_in_ruleOperDef3692); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_35, grammarAccess.getOperDefAccess().getSemicolonKeyword_2_7());
@@ -5749,7 +5750,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_36=(Token)match(input,27,FOLLOW_27_in_ruleOperDef3706); if (state.failed) return current;
+                    otherlv_36=(Token)match(input,28,FOLLOW_28_in_ruleOperDef3706); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_36, grammarAccess.getOperDefAccess().getRightCurlyBracketKeyword_2_8());
@@ -5837,7 +5838,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_39=(Token)match(input,14,FOLLOW_14_in_ruleOperDef3768); if (state.failed) return current;
+                    otherlv_39=(Token)match(input,15,FOLLOW_15_in_ruleOperDef3768); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_39, grammarAccess.getOperDefAccess().getEqualsSignKeyword_3_2());
@@ -6028,7 +6029,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2167:1: (lv_cat_0_0= 'cat' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2168:3: lv_cat_0_0= 'cat'
                     {
-                    lv_cat_0_0=(Token)match(input,36,FOLLOW_36_in_ruleTopDef3880); if (state.failed) return current;
+                    lv_cat_0_0=(Token)match(input,37,FOLLOW_37_in_ruleTopDef3880); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_cat_0_0, grammarAccess.getTopDefAccess().getCatCatKeyword_0_0_0());
@@ -6055,7 +6056,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt55=2;
                         int LA55_0 = input.LA(1);
 
-                        if ( (LA55_0==RULE_ID||LA55_0==31) ) {
+                        if ( (LA55_0==RULE_ID||LA55_0==32) ) {
                             alt55=1;
                         }
 
@@ -6099,7 +6100,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleTopDef3927); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleTopDef3927); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getTopDefAccess().getSemicolonKeyword_0_1_1());
@@ -6137,7 +6138,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2205:1: (lv_fun_3_0= 'fun' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2206:3: lv_fun_3_0= 'fun'
                     {
-                    lv_fun_3_0=(Token)match(input,37,FOLLOW_37_in_ruleTopDef3955); if (state.failed) return current;
+                    lv_fun_3_0=(Token)match(input,38,FOLLOW_38_in_ruleTopDef3955); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_fun_3_0, grammarAccess.getTopDefAccess().getFunFunKeyword_1_0_0());
@@ -6208,7 +6209,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_5=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4002); if (state.failed) return current;
+                    	    otherlv_5=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4002); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_5, grammarAccess.getTopDefAccess().getSemicolonKeyword_1_1_1());
@@ -6246,7 +6247,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2243:1: (lv_data_6_0= 'data' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2244:3: lv_data_6_0= 'data'
                     {
-                    lv_data_6_0=(Token)match(input,38,FOLLOW_38_in_ruleTopDef4030); if (state.failed) return current;
+                    lv_data_6_0=(Token)match(input,39,FOLLOW_39_in_ruleTopDef4030); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_data_6_0, grammarAccess.getTopDefAccess().getDataDataKeyword_2_0_0());
@@ -6317,7 +6318,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_8=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4077); if (state.failed) return current;
+                    	    otherlv_8=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4077); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_8, grammarAccess.getTopDefAccess().getSemicolonKeyword_2_1_1());
@@ -6355,7 +6356,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2281:1: (lv_def_9_0= 'def' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2282:3: lv_def_9_0= 'def'
                     {
-                    lv_def_9_0=(Token)match(input,39,FOLLOW_39_in_ruleTopDef4105); if (state.failed) return current;
+                    lv_def_9_0=(Token)match(input,40,FOLLOW_40_in_ruleTopDef4105); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_def_9_0, grammarAccess.getTopDefAccess().getDefDefKeyword_3_0_0());
@@ -6382,7 +6383,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt58=2;
                         int LA58_0 = input.LA(1);
 
-                        if ( (LA58_0==RULE_ID||LA58_0==31) ) {
+                        if ( (LA58_0==RULE_ID||LA58_0==32) ) {
                             alt58=1;
                         }
 
@@ -6426,7 +6427,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_11=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4152); if (state.failed) return current;
+                    	    otherlv_11=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4152); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_11, grammarAccess.getTopDefAccess().getSemicolonKeyword_3_1_1());
@@ -6464,7 +6465,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2319:1: (lv_data_12_0= 'data' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2320:3: lv_data_12_0= 'data'
                     {
-                    lv_data_12_0=(Token)match(input,38,FOLLOW_38_in_ruleTopDef4180); if (state.failed) return current;
+                    lv_data_12_0=(Token)match(input,39,FOLLOW_39_in_ruleTopDef4180); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_data_12_0, grammarAccess.getTopDefAccess().getDataDataKeyword_4_0_0());
@@ -6535,7 +6536,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_14=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4227); if (state.failed) return current;
+                    	    otherlv_14=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4227); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_14, grammarAccess.getTopDefAccess().getSemicolonKeyword_4_1_1());
@@ -6573,7 +6574,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2357:1: (lv_param_15_0= 'param' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2358:3: lv_param_15_0= 'param'
                     {
-                    lv_param_15_0=(Token)match(input,40,FOLLOW_40_in_ruleTopDef4255); if (state.failed) return current;
+                    lv_param_15_0=(Token)match(input,41,FOLLOW_41_in_ruleTopDef4255); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_param_15_0, grammarAccess.getTopDefAccess().getParamParamKeyword_5_0_0());
@@ -6644,7 +6645,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_17=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4302); if (state.failed) return current;
+                    	    otherlv_17=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4302); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_17, grammarAccess.getTopDefAccess().getSemicolonKeyword_5_1_1());
@@ -6682,7 +6683,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2395:1: (lv_oper_18_0= 'oper' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2396:3: lv_oper_18_0= 'oper'
                     {
-                    lv_oper_18_0=(Token)match(input,41,FOLLOW_41_in_ruleTopDef4330); if (state.failed) return current;
+                    lv_oper_18_0=(Token)match(input,42,FOLLOW_42_in_ruleTopDef4330); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_oper_18_0, grammarAccess.getTopDefAccess().getOperOperKeyword_6_0_0());
@@ -6709,7 +6710,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt61=2;
                         int LA61_0 = input.LA(1);
 
-                        if ( (LA61_0==RULE_ID||LA61_0==31) ) {
+                        if ( (LA61_0==RULE_ID||LA61_0==32) ) {
                             alt61=1;
                         }
 
@@ -6753,7 +6754,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_20=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4377); if (state.failed) return current;
+                    	    otherlv_20=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4377); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_20, grammarAccess.getTopDefAccess().getSemicolonKeyword_6_1_1());
@@ -6791,7 +6792,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2433:1: (lv_lincat_21_0= 'lincat' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2434:3: lv_lincat_21_0= 'lincat'
                     {
-                    lv_lincat_21_0=(Token)match(input,42,FOLLOW_42_in_ruleTopDef4405); if (state.failed) return current;
+                    lv_lincat_21_0=(Token)match(input,43,FOLLOW_43_in_ruleTopDef4405); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_lincat_21_0, grammarAccess.getTopDefAccess().getLincatLincatKeyword_7_0_0());
@@ -6818,7 +6819,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt62=2;
                         int LA62_0 = input.LA(1);
 
-                        if ( (LA62_0==RULE_ID||LA62_0==31) ) {
+                        if ( (LA62_0==RULE_ID||LA62_0==32) ) {
                             alt62=1;
                         }
 
@@ -6862,7 +6863,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_23=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4452); if (state.failed) return current;
+                    	    otherlv_23=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4452); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_23, grammarAccess.getTopDefAccess().getSemicolonKeyword_7_1_1());
@@ -6900,7 +6901,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2471:1: (lv_lindef_24_0= 'lindef' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2472:3: lv_lindef_24_0= 'lindef'
                     {
-                    lv_lindef_24_0=(Token)match(input,43,FOLLOW_43_in_ruleTopDef4480); if (state.failed) return current;
+                    lv_lindef_24_0=(Token)match(input,44,FOLLOW_44_in_ruleTopDef4480); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_lindef_24_0, grammarAccess.getTopDefAccess().getLindefLindefKeyword_8_0_0());
@@ -6927,7 +6928,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt63=2;
                         int LA63_0 = input.LA(1);
 
-                        if ( (LA63_0==RULE_ID||LA63_0==31) ) {
+                        if ( (LA63_0==RULE_ID||LA63_0==32) ) {
                             alt63=1;
                         }
 
@@ -6971,7 +6972,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_26=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4527); if (state.failed) return current;
+                    	    otherlv_26=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4527); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_26, grammarAccess.getTopDefAccess().getSemicolonKeyword_8_1_1());
@@ -7009,7 +7010,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2509:1: (lv_lin_27_0= 'lin' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2510:3: lv_lin_27_0= 'lin'
                     {
-                    lv_lin_27_0=(Token)match(input,44,FOLLOW_44_in_ruleTopDef4555); if (state.failed) return current;
+                    lv_lin_27_0=(Token)match(input,45,FOLLOW_45_in_ruleTopDef4555); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_lin_27_0, grammarAccess.getTopDefAccess().getLinLinKeyword_9_0_0());
@@ -7036,7 +7037,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt64=2;
                         int LA64_0 = input.LA(1);
 
-                        if ( (LA64_0==RULE_ID||LA64_0==31) ) {
+                        if ( (LA64_0==RULE_ID||LA64_0==32) ) {
                             alt64=1;
                         }
 
@@ -7080,7 +7081,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_29=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4602); if (state.failed) return current;
+                    	    otherlv_29=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4602); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_29, grammarAccess.getTopDefAccess().getSemicolonKeyword_9_1_1());
@@ -7118,7 +7119,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2547:1: (lv_printname_30_0= 'printname' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2548:3: lv_printname_30_0= 'printname'
                     {
-                    lv_printname_30_0=(Token)match(input,45,FOLLOW_45_in_ruleTopDef4630); if (state.failed) return current;
+                    lv_printname_30_0=(Token)match(input,46,FOLLOW_46_in_ruleTopDef4630); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_printname_30_0, grammarAccess.getTopDefAccess().getPrintnamePrintnameKeyword_10_0_0());
@@ -7138,7 +7139,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_31=(Token)match(input,36,FOLLOW_36_in_ruleTopDef4655); if (state.failed) return current;
+                    otherlv_31=(Token)match(input,37,FOLLOW_37_in_ruleTopDef4655); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_31, grammarAccess.getTopDefAccess().getCatKeyword_10_1());
@@ -7151,7 +7152,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt65=2;
                         int LA65_0 = input.LA(1);
 
-                        if ( (LA65_0==RULE_ID||LA65_0==31) ) {
+                        if ( (LA65_0==RULE_ID||LA65_0==32) ) {
                             alt65=1;
                         }
 
@@ -7195,7 +7196,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_33=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4689); if (state.failed) return current;
+                    	    otherlv_33=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4689); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_33, grammarAccess.getTopDefAccess().getSemicolonKeyword_10_2_1());
@@ -7233,7 +7234,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2589:1: (lv_printname_34_0= 'printname' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2590:3: lv_printname_34_0= 'printname'
                     {
-                    lv_printname_34_0=(Token)match(input,45,FOLLOW_45_in_ruleTopDef4717); if (state.failed) return current;
+                    lv_printname_34_0=(Token)match(input,46,FOLLOW_46_in_ruleTopDef4717); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_printname_34_0, grammarAccess.getTopDefAccess().getPrintnamePrintnameKeyword_11_0_0());
@@ -7253,7 +7254,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_35=(Token)match(input,37,FOLLOW_37_in_ruleTopDef4742); if (state.failed) return current;
+                    otherlv_35=(Token)match(input,38,FOLLOW_38_in_ruleTopDef4742); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_35, grammarAccess.getTopDefAccess().getFunKeyword_11_1());
@@ -7266,7 +7267,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt66=2;
                         int LA66_0 = input.LA(1);
 
-                        if ( (LA66_0==RULE_ID||LA66_0==31) ) {
+                        if ( (LA66_0==RULE_ID||LA66_0==32) ) {
                             alt66=1;
                         }
 
@@ -7310,7 +7311,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_37=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4776); if (state.failed) return current;
+                    	    otherlv_37=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4776); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_37, grammarAccess.getTopDefAccess().getSemicolonKeyword_11_2_1());
@@ -7348,7 +7349,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2631:1: (lv_flags_38_0= 'flags' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2632:3: lv_flags_38_0= 'flags'
                     {
-                    lv_flags_38_0=(Token)match(input,46,FOLLOW_46_in_ruleTopDef4804); if (state.failed) return current;
+                    lv_flags_38_0=(Token)match(input,47,FOLLOW_47_in_ruleTopDef4804); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_flags_38_0, grammarAccess.getTopDefAccess().getFlagsFlagsKeyword_12_0_0());
@@ -7419,7 +7420,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     	    }
 
-                    	    otherlv_40=(Token)match(input,15,FOLLOW_15_in_ruleTopDef4851); if (state.failed) return current;
+                    	    otherlv_40=(Token)match(input,16,FOLLOW_16_in_ruleTopDef4851); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_40, grammarAccess.getTopDefAccess().getSemicolonKeyword_12_1_1());
@@ -7539,7 +7540,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( (LA72_0==RULE_ID) ) {
                 alt72=1;
             }
-            else if ( (LA72_0==31) ) {
+            else if ( (LA72_0==32) ) {
                 alt72=2;
             }
             else {
@@ -7597,7 +7598,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt69=2;
                         int LA69_0 = input.LA(1);
 
-                        if ( ((LA69_0>=RULE_INTEGER && LA69_0<=RULE_DOUBLE)||LA69_0==26||LA69_0==29||LA69_0==31||LA69_0==38||(LA69_0>=49 && LA69_0<=50)||(LA69_0>=69 && LA69_0<=77)) ) {
+                        if ( ((LA69_0>=RULE_INTEGER && LA69_0<=RULE_DOUBLE)||LA69_0==27||LA69_0==30||LA69_0==32||LA69_0==39||(LA69_0>=50 && LA69_0<=51)||(LA69_0>=70 && LA69_0<=78)) ) {
                             alt69=1;
                         }
 
@@ -7656,7 +7657,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2725:6: (otherlv_2= '[' ( (lv_name_3_0= ruleIdent ) ) ( (lv_context_4_0= ruleDDecl ) )* otherlv_5= ']' (otherlv_6= '{' ( (lv_size_7_0= RULE_INTEGER ) ) otherlv_8= '}' )? )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2725:8: otherlv_2= '[' ( (lv_name_3_0= ruleIdent ) ) ( (lv_context_4_0= ruleDDecl ) )* otherlv_5= ']' (otherlv_6= '{' ( (lv_size_7_0= RULE_INTEGER ) ) otherlv_8= '}' )?
                     {
-                    otherlv_2=(Token)match(input,31,FOLLOW_31_in_ruleCatDef4989); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleCatDef4989); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getCatDefAccess().getLeftSquareBracketKeyword_1_0());
@@ -7703,7 +7704,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt70=2;
                         int LA70_0 = input.LA(1);
 
-                        if ( ((LA70_0>=RULE_INTEGER && LA70_0<=RULE_DOUBLE)||LA70_0==26||LA70_0==29||LA70_0==31||LA70_0==38||(LA70_0>=49 && LA70_0<=50)||(LA70_0>=69 && LA70_0<=77)) ) {
+                        if ( ((LA70_0>=RULE_INTEGER && LA70_0<=RULE_DOUBLE)||LA70_0==27||LA70_0==30||LA70_0==32||LA70_0==39||(LA70_0>=50 && LA70_0<=51)||(LA70_0>=70 && LA70_0<=78)) ) {
                             alt70=1;
                         }
 
@@ -7750,7 +7751,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_5=(Token)match(input,32,FOLLOW_32_in_ruleCatDef5044); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,33,FOLLOW_33_in_ruleCatDef5044); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getCatDefAccess().getRightSquareBracketKeyword_1_3());
@@ -7760,14 +7761,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt71=2;
                     int LA71_0 = input.LA(1);
 
-                    if ( (LA71_0==26) ) {
+                    if ( (LA71_0==27) ) {
                         alt71=1;
                     }
                     switch (alt71) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2769:3: otherlv_6= '{' ( (lv_size_7_0= RULE_INTEGER ) ) otherlv_8= '}'
                             {
-                            otherlv_6=(Token)match(input,26,FOLLOW_26_in_ruleCatDef5057); if (state.failed) return current;
+                            otherlv_6=(Token)match(input,27,FOLLOW_27_in_ruleCatDef5057); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_6, grammarAccess.getCatDefAccess().getLeftCurlyBracketKeyword_1_4_0());
@@ -7803,7 +7804,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_8=(Token)match(input,27,FOLLOW_27_in_ruleCatDef5091); if (state.failed) return current;
+                            otherlv_8=(Token)match(input,28,FOLLOW_28_in_ruleCatDef5091); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_8, grammarAccess.getCatDefAccess().getRightCurlyBracketKeyword_1_4_2());
@@ -7947,7 +7948,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt73=2;
                 int LA73_0 = input.LA(1);
 
-                if ( (LA73_0==22) ) {
+                if ( (LA73_0==23) ) {
                     alt73=1;
                 }
 
@@ -7956,7 +7957,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2834:4: otherlv_1= ',' ( (lv_name_2_0= ruleIdent ) )
             	    {
-            	    otherlv_1=(Token)match(input,22,FOLLOW_22_in_ruleFunDef5199); if (state.failed) return current;
+            	    otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleFunDef5199); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_1, grammarAccess.getFunDefAccess().getCommaKeyword_1_0());
@@ -8006,7 +8007,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_3=(Token)match(input,34,FOLLOW_34_in_ruleFunDef5234); if (state.failed) return current;
+            otherlv_3=(Token)match(input,35,FOLLOW_35_in_ruleFunDef5234); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getFunDefAccess().getColonKeyword_2());
@@ -8168,7 +8169,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleDataDef5359); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleDataDef5359); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getDataDefAccess().getEqualsSignKeyword_1());
@@ -8226,7 +8227,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt74=2;
                         int LA74_0 = input.LA(1);
 
-                        if ( (LA74_0==47) ) {
+                        if ( (LA74_0==48) ) {
                             int LA74_1 = input.LA(2);
 
                             if ( (LA74_1==RULE_ID) ) {
@@ -8241,7 +8242,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2939:4: otherlv_3= '|' ( (lv_constructors_4_0= ruleDataConstr ) )
                     	    {
-                    	    otherlv_3=(Token)match(input,47,FOLLOW_47_in_ruleDataDef5394); if (state.failed) return current;
+                    	    otherlv_3=(Token)match(input,48,FOLLOW_48_in_ruleDataDef5394); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_3, grammarAccess.getDataDefAccess().getVerticalLineKeyword_2_1_0());
@@ -8295,14 +8296,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt75=2;
                     int LA75_0 = input.LA(1);
 
-                    if ( (LA75_0==47) ) {
+                    if ( (LA75_0==48) ) {
                         alt75=1;
                     }
                     switch (alt75) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:2961:6: otherlv_5= '|'
                             {
-                            otherlv_5=(Token)match(input,47,FOLLOW_47_in_ruleDataDef5430); if (state.failed) return current;
+                            otherlv_5=(Token)match(input,48,FOLLOW_48_in_ruleDataDef5430); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_5, grammarAccess.getDataDefAccess().getVerticalLineKeyword_2_2());
@@ -8408,10 +8409,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( (LA77_0==RULE_ID) ) {
                 int LA77_1 = input.LA(2);
 
-                if ( (LA77_1==EOF||LA77_1==15||LA77_1==47) ) {
+                if ( (LA77_1==EOF||LA77_1==16||LA77_1==48) ) {
                     alt77=1;
                 }
-                else if ( (LA77_1==48) ) {
+                else if ( (LA77_1==49) ) {
                     alt77=2;
                 }
                 else {
@@ -8512,7 +8513,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,48,FOLLOW_48_in_ruleDataConstr5566); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,49,FOLLOW_49_in_ruleDataConstr5566); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getDataConstrAccess().getFullStopKeyword_1_1());
@@ -8659,13 +8660,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( (LA81_0==RULE_ID) ) {
                 int LA81_1 = input.LA(2);
 
-                if ( (LA81_1==14) ) {
+                if ( (LA81_1==15) ) {
                     int LA81_2 = input.LA(3);
 
-                    if ( (LA81_2==EOF||LA81_2==RULE_ID||LA81_2==15) ) {
+                    if ( (LA81_2==EOF||LA81_2==RULE_ID||LA81_2==16) ) {
                         alt81=1;
                     }
-                    else if ( (LA81_2==29) ) {
+                    else if ( (LA81_2==30) ) {
                         alt81=2;
                     }
                     else {
@@ -8676,7 +8677,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         throw nvae;
                     }
                 }
-                else if ( (LA81_1==EOF||LA81_1==15) ) {
+                else if ( (LA81_1==EOF||LA81_1==16) ) {
                     alt81=3;
                 }
                 else {
@@ -8736,7 +8737,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleParDef5693); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleParDef5693); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getParDefAccess().getEqualsSignKeyword_0_1());
@@ -8794,7 +8795,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                 int alt78=2;
                                 int LA78_0 = input.LA(1);
 
-                                if ( (LA78_0==47) ) {
+                                if ( (LA78_0==48) ) {
                                     int LA78_1 = input.LA(2);
 
                                     if ( (LA78_1==RULE_ID) ) {
@@ -8809,7 +8810,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	case 1 :
                             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3106:4: otherlv_3= '|' ( (lv_constructors_4_0= ruleParConstr ) )
                             	    {
-                            	    otherlv_3=(Token)match(input,47,FOLLOW_47_in_ruleParDef5728); if (state.failed) return current;
+                            	    otherlv_3=(Token)match(input,48,FOLLOW_48_in_ruleParDef5728); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_3, grammarAccess.getParDefAccess().getVerticalLineKeyword_0_2_1_0());
@@ -8863,14 +8864,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             int alt79=2;
                             int LA79_0 = input.LA(1);
 
-                            if ( (LA79_0==47) ) {
+                            if ( (LA79_0==48) ) {
                                 alt79=1;
                             }
                             switch (alt79) {
                                 case 1 :
                                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3128:6: otherlv_5= '|'
                                     {
-                                    otherlv_5=(Token)match(input,47,FOLLOW_47_in_ruleParDef5764); if (state.failed) return current;
+                                    otherlv_5=(Token)match(input,48,FOLLOW_48_in_ruleParDef5764); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_5, grammarAccess.getParDefAccess().getVerticalLineKeyword_0_2_2());
@@ -8935,19 +8936,19 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,14,FOLLOW_14_in_ruleParDef5809); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,15,FOLLOW_15_in_ruleParDef5809); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_7, grammarAccess.getParDefAccess().getEqualsSignKeyword_1_1());
                           
                     }
-                    otherlv_8=(Token)match(input,29,FOLLOW_29_in_ruleParDef5821); if (state.failed) return current;
+                    otherlv_8=(Token)match(input,30,FOLLOW_30_in_ruleParDef5821); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_8, grammarAccess.getParDefAccess().getLeftParenthesisKeyword_1_2());
                           
                     }
-                    otherlv_9=(Token)match(input,25,FOLLOW_25_in_ruleParDef5833); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,26,FOLLOW_26_in_ruleParDef5833); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_9, grammarAccess.getParDefAccess().getInKeyword_1_3());
@@ -8988,7 +8989,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_11=(Token)match(input,30,FOLLOW_30_in_ruleParDef5866); if (state.failed) return current;
+                    otherlv_11=(Token)match(input,31,FOLLOW_31_in_ruleParDef5866); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_11, grammarAccess.getParDefAccess().getRightParenthesisKeyword_1_5());
@@ -9163,7 +9164,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt82=2;
                 int LA82_0 = input.LA(1);
 
-                if ( ((LA82_0>=RULE_INTEGER && LA82_0<=RULE_DOUBLE)||LA82_0==26||LA82_0==29||LA82_0==31||LA82_0==38||(LA82_0>=49 && LA82_0<=50)||(LA82_0>=69 && LA82_0<=77)) ) {
+                if ( ((LA82_0>=RULE_INTEGER && LA82_0<=RULE_DOUBLE)||LA82_0==27||LA82_0==30||LA82_0==32||LA82_0==39||(LA82_0>=50 && LA82_0<=51)||(LA82_0>=70 && LA82_0<=78)) ) {
                     alt82=1;
                 }
 
@@ -9336,7 +9337,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt83=2;
                 int LA83_0 = input.LA(1);
 
-                if ( (LA83_0==22) ) {
+                if ( (LA83_0==23) ) {
                     alt83=1;
                 }
 
@@ -9345,7 +9346,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3300:4: otherlv_1= ',' ( (lv_name_2_0= ruleName ) )
             	    {
-            	    otherlv_1=(Token)match(input,22,FOLLOW_22_in_rulePrintDef6113); if (state.failed) return current;
+            	    otherlv_1=(Token)match(input,23,FOLLOW_23_in_rulePrintDef6113); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_1, grammarAccess.getPrintDefAccess().getCommaKeyword_1_0());
@@ -9395,7 +9396,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_3=(Token)match(input,14,FOLLOW_14_in_rulePrintDef6148); if (state.failed) return current;
+            otherlv_3=(Token)match(input,15,FOLLOW_15_in_rulePrintDef6148); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getPrintDefAccess().getEqualsSignKeyword_2());
@@ -9554,7 +9555,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,14,FOLLOW_14_in_ruleFlagDef6273); if (state.failed) return current;
+            otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleFlagDef6273); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getFlagDefAccess().getEqualsSignKeyword_1());
@@ -9721,7 +9722,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( (LA85_0==RULE_ID) ) {
                 alt85=1;
             }
-            else if ( (LA85_0==31) ) {
+            else if ( (LA85_0==32) ) {
                 alt85=2;
             }
             else {
@@ -9779,7 +9780,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3450:6: (otherlv_1= '[' ( (lv_name_2_0= ruleIdent ) ) otherlv_3= ']' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3450:8: otherlv_1= '[' ( (lv_name_2_0= ruleIdent ) ) otherlv_3= ']'
                     {
-                    otherlv_1=(Token)match(input,31,FOLLOW_31_in_ruleName6423); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,32,FOLLOW_32_in_ruleName6423); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getNameAccess().getLeftSquareBracketKeyword_1_0());
@@ -9820,7 +9821,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,32,FOLLOW_32_in_ruleName6456); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,33,FOLLOW_33_in_ruleName6456); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getNameAccess().getRightSquareBracketKeyword_1_2());
@@ -9976,7 +9977,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt86=2;
                         int LA86_0 = input.LA(1);
 
-                        if ( (LA86_0==22) ) {
+                        if ( (LA86_0==23) ) {
                             alt86=1;
                         }
 
@@ -9985,7 +9986,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3515:4: otherlv_1= ',' ( (lv_name_2_0= ruleIdent ) )
                     	    {
-                    	    otherlv_1=(Token)match(input,22,FOLLOW_22_in_ruleLocDef6563); if (state.failed) return current;
+                    	    otherlv_1=(Token)match(input,23,FOLLOW_23_in_ruleLocDef6563); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_1, grammarAccess.getLocDefAccess().getCommaKeyword_0_1_0());
@@ -10035,7 +10036,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_3=(Token)match(input,34,FOLLOW_34_in_ruleLocDef6598); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,35,FOLLOW_35_in_ruleLocDef6598); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getLocDefAccess().getColonKeyword_0_2());
@@ -10080,14 +10081,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt87=2;
                     int LA87_0 = input.LA(1);
 
-                    if ( (LA87_0==14) ) {
+                    if ( (LA87_0==15) ) {
                         alt87=1;
                     }
                     switch (alt87) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3559:4: otherlv_5= '=' ( (lv_value_6_0= ruleExp ) )
                             {
-                            otherlv_5=(Token)match(input,14,FOLLOW_14_in_ruleLocDef6632); if (state.failed) return current;
+                            otherlv_5=(Token)match(input,15,FOLLOW_15_in_ruleLocDef6632); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_5, grammarAccess.getLocDefAccess().getEqualsSignKeyword_0_4_0());
@@ -10187,7 +10188,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt88=2;
                         int LA88_0 = input.LA(1);
 
-                        if ( (LA88_0==22) ) {
+                        if ( (LA88_0==23) ) {
                             alt88=1;
                         }
 
@@ -10196,7 +10197,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3600:4: otherlv_8= ',' ( (lv_name_9_0= ruleIdent ) )
                     	    {
-                    	    otherlv_8=(Token)match(input,22,FOLLOW_22_in_ruleLocDef6697); if (state.failed) return current;
+                    	    otherlv_8=(Token)match(input,23,FOLLOW_23_in_ruleLocDef6697); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_8, grammarAccess.getLocDefAccess().getCommaKeyword_1_1_0());
@@ -10246,7 +10247,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_10=(Token)match(input,14,FOLLOW_14_in_ruleLocDef6732); if (state.failed) return current;
+                    otherlv_10=(Token)match(input,15,FOLLOW_15_in_ruleLocDef6732); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_10, grammarAccess.getLocDefAccess().getEqualsSignKeyword_1_2());
@@ -10441,7 +10442,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt90=2;
                         int LA90_0 = input.LA(1);
 
-                        if ( (LA90_0==15) ) {
+                        if ( (LA90_0==16) ) {
                             int LA90_1 = input.LA(2);
 
                             if ( (LA90_1==RULE_ID) ) {
@@ -10456,7 +10457,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3689:4: otherlv_2= ';' ( (lv_localDefinitions_3_0= ruleLocDef ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleListLocDef6869); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleListLocDef6869); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getListLocDefAccess().getSemicolonKeyword_1_1_0());
@@ -10510,14 +10511,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt91=2;
                     int LA91_0 = input.LA(1);
 
-                    if ( (LA91_0==15) ) {
+                    if ( (LA91_0==16) ) {
                         alt91=1;
                     }
                     switch (alt91) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3711:6: otherlv_4= ';'
                             {
-                            otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleListLocDef6905); if (state.failed) return current;
+                            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleListLocDef6905); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_4, grammarAccess.getListLocDefAccess().getSemicolonKeyword_1_2());
@@ -10884,7 +10885,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3846:1: (lv_meta_6_0= '?' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3847:3: lv_meta_6_0= '?'
                     {
-                    lv_meta_6_0=(Token)match(input,49,FOLLOW_49_in_ruleExp67163); if (state.failed) return current;
+                    lv_meta_6_0=(Token)match(input,50,FOLLOW_50_in_ruleExp67163); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_meta_6_0, grammarAccess.getExp6Access().getMetaQuestionMarkKeyword_6_0_0());
@@ -10949,7 +10950,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3866:1: (lv_emptyString_8_0= '[' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3867:3: lv_emptyString_8_0= '['
                     {
-                    lv_emptyString_8_0=(Token)match(input,31,FOLLOW_31_in_ruleExp67220); if (state.failed) return current;
+                    lv_emptyString_8_0=(Token)match(input,32,FOLLOW_32_in_ruleExp67220); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_emptyString_8_0, grammarAccess.getExp6Access().getEmptyStringLeftSquareBracketKeyword_7_0_0());
@@ -10969,7 +10970,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,32,FOLLOW_32_in_ruleExp67245); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,33,FOLLOW_33_in_ruleExp67245); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_9, grammarAccess.getExp6Access().getRightSquareBracketKeyword_7_1());
@@ -10990,7 +10991,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3886:1: (lv_data_10_0= 'data' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3887:3: lv_data_10_0= 'data'
                     {
-                    lv_data_10_0=(Token)match(input,38,FOLLOW_38_in_ruleExp67270); if (state.failed) return current;
+                    lv_data_10_0=(Token)match(input,39,FOLLOW_39_in_ruleExp67270); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_data_10_0, grammarAccess.getExp6Access().getDataDataKeyword_8_0());
@@ -11025,7 +11026,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3902:1: (lv_listCat_11_0= '[' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3903:3: lv_listCat_11_0= '['
                     {
-                    lv_listCat_11_0=(Token)match(input,31,FOLLOW_31_in_ruleExp67308); if (state.failed) return current;
+                    lv_listCat_11_0=(Token)match(input,32,FOLLOW_32_in_ruleExp67308); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_listCat_11_0, grammarAccess.getExp6Access().getListCatLeftSquareBracketKeyword_9_0_0());
@@ -11105,7 +11106,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_14=(Token)match(input,32,FOLLOW_32_in_ruleExp67374); if (state.failed) return current;
+                    otherlv_14=(Token)match(input,33,FOLLOW_33_in_ruleExp67374); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_14, grammarAccess.getExp6Access().getRightSquareBracketKeyword_9_3());
@@ -11129,7 +11130,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3953:1: (lv_tokenList_15_0= '[' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3954:3: lv_tokenList_15_0= '['
                     {
-                    lv_tokenList_15_0=(Token)match(input,31,FOLLOW_31_in_ruleExp67400); if (state.failed) return current;
+                    lv_tokenList_15_0=(Token)match(input,32,FOLLOW_32_in_ruleExp67400); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_tokenList_15_0, grammarAccess.getExp6Access().getTokenListLeftSquareBracketKeyword_10_0_0());
@@ -11155,7 +11156,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                           newLeafNode(this_String_16, grammarAccess.getExp6Access().getStringTerminalRuleCall_10_1()); 
                           
                     }
-                    otherlv_17=(Token)match(input,32,FOLLOW_32_in_ruleExp67435); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,33,FOLLOW_33_in_ruleExp67435); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_17, grammarAccess.getExp6Access().getRightSquareBracketKeyword_10_2());
@@ -11179,7 +11180,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3977:1: (lv_record_18_0= '{' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:3978:3: lv_record_18_0= '{'
                     {
-                    lv_record_18_0=(Token)match(input,26,FOLLOW_26_in_ruleExp67461); if (state.failed) return current;
+                    lv_record_18_0=(Token)match(input,27,FOLLOW_27_in_ruleExp67461); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_record_18_0, grammarAccess.getExp6Access().getRecordLeftCurlyBracketKeyword_11_0_0());
@@ -11234,7 +11235,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_20=(Token)match(input,27,FOLLOW_27_in_ruleExp67507); if (state.failed) return current;
+                    otherlv_20=(Token)match(input,28,FOLLOW_28_in_ruleExp67507); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_20, grammarAccess.getExp6Access().getRightCurlyBracketKeyword_11_2());
@@ -11258,7 +11259,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4015:1: (lv_tuple_21_0= '<' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4016:3: lv_tuple_21_0= '<'
                     {
-                    lv_tuple_21_0=(Token)match(input,50,FOLLOW_50_in_ruleExp67533); if (state.failed) return current;
+                    lv_tuple_21_0=(Token)match(input,51,FOLLOW_51_in_ruleExp67533); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_tuple_21_0, grammarAccess.getExp6Access().getTupleLessThanSignKeyword_12_0_0());
@@ -11364,7 +11365,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_24=(Token)match(input,34,FOLLOW_34_in_ruleExp67618); if (state.failed) return current;
+                            otherlv_24=(Token)match(input,35,FOLLOW_35_in_ruleExp67618); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_24, grammarAccess.getExp6Access().getColonKeyword_12_1_1_1());
@@ -11414,7 +11415,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_26=(Token)match(input,51,FOLLOW_51_in_ruleExp67653); if (state.failed) return current;
+                    otherlv_26=(Token)match(input,52,FOLLOW_52_in_ruleExp67653); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_26, grammarAccess.getExp6Access().getGreaterThanSignKeyword_12_2());
@@ -11438,7 +11439,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4098:1: (lv_identity_27_0= '(' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4099:3: lv_identity_27_0= '('
                     {
-                    lv_identity_27_0=(Token)match(input,29,FOLLOW_29_in_ruleExp67679); if (state.failed) return current;
+                    lv_identity_27_0=(Token)match(input,30,FOLLOW_30_in_ruleExp67679); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               newLeafNode(lv_identity_27_0, grammarAccess.getExp6Access().getIdentityLeftParenthesisKeyword_13_0_0());
@@ -11493,7 +11494,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_29=(Token)match(input,30,FOLLOW_30_in_ruleExp67725); if (state.failed) return current;
+                    otherlv_29=(Token)match(input,31,FOLLOW_31_in_ruleExp67725); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_29, grammarAccess.getExp6Access().getRightParenthesisKeyword_13_2());
@@ -11628,7 +11629,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt96=2;
                 int LA96_0 = input.LA(1);
 
-                if ( (LA96_0==48) ) {
+                if ( (LA96_0==49) ) {
                     alt96=1;
                 }
 
@@ -11637,7 +11638,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4173:4: otherlv_1= '.' ( (lv_label_2_0= ruleLabel ) )
             	    {
-            	    otherlv_1=(Token)match(input,48,FOLLOW_48_in_ruleExp57831); if (state.failed) return current;
+            	    otherlv_1=(Token)match(input,49,FOLLOW_49_in_ruleExp57831); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_1, grammarAccess.getExp5Access().getFullStopKeyword_1_0());
@@ -11829,13 +11830,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4216:2: (otherlv_0= 'table' otherlv_1= '{' ( (lv_caseList_2_0= ruleListCase ) ) otherlv_3= '}' ( (lv_args_4_0= ruleExp5 ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4216:4: otherlv_0= 'table' otherlv_1= '{' ( (lv_caseList_2_0= ruleListCase ) ) otherlv_3= '}' ( (lv_args_4_0= ruleExp5 ) )*
                     {
-                    otherlv_0=(Token)match(input,52,FOLLOW_52_in_ruleExp47938); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,53,FOLLOW_53_in_ruleExp47938); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_0, grammarAccess.getExp4Access().getTableKeyword_0_0());
                           
                     }
-                    otherlv_1=(Token)match(input,26,FOLLOW_26_in_ruleExp47950); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,27,FOLLOW_27_in_ruleExp47950); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getExp4Access().getLeftCurlyBracketKeyword_0_1());
@@ -11876,7 +11877,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,27,FOLLOW_27_in_ruleExp47983); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleExp47983); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getExp4Access().getRightCurlyBracketKeyword_0_3());
@@ -11888,7 +11889,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt97=2;
                         int LA97_0 = input.LA(1);
 
-                        if ( ((LA97_0>=RULE_INTEGER && LA97_0<=RULE_DOUBLE)||LA97_0==26||LA97_0==29||LA97_0==31||LA97_0==38||(LA97_0>=49 && LA97_0<=50)||(LA97_0>=69 && LA97_0<=77)) ) {
+                        if ( ((LA97_0>=RULE_INTEGER && LA97_0<=RULE_DOUBLE)||LA97_0==27||LA97_0==30||LA97_0==32||LA97_0==39||(LA97_0>=50 && LA97_0<=51)||(LA97_0>=70 && LA97_0<=78)) ) {
                             alt97=1;
                         }
 
@@ -11947,7 +11948,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4265:6: (otherlv_5= 'table' ( (lv_argType_6_0= ruleExp6 ) ) ( (otherlv_7= '{' ( (lv_caseList_8_0= ruleListCase ) ) otherlv_9= '}' ) | (otherlv_10= '[' ( (lv_expList_11_0= ruleListExp ) ) otherlv_12= ']' ) ) ( (lv_args_13_0= ruleExp5 ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4265:8: otherlv_5= 'table' ( (lv_argType_6_0= ruleExp6 ) ) ( (otherlv_7= '{' ( (lv_caseList_8_0= ruleListCase ) ) otherlv_9= '}' ) | (otherlv_10= '[' ( (lv_expList_11_0= ruleListExp ) ) otherlv_12= ']' ) ) ( (lv_args_13_0= ruleExp5 ) )*
                     {
-                    otherlv_5=(Token)match(input,52,FOLLOW_52_in_ruleExp48025); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,53,FOLLOW_53_in_ruleExp48025); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getExp4Access().getTableKeyword_1_0());
@@ -11992,10 +11993,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt98=2;
                     int LA98_0 = input.LA(1);
 
-                    if ( (LA98_0==26) ) {
+                    if ( (LA98_0==27) ) {
                         alt98=1;
                     }
-                    else if ( (LA98_0==31) ) {
+                    else if ( (LA98_0==32) ) {
                         alt98=2;
                     }
                     else {
@@ -12012,7 +12013,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4287:3: (otherlv_7= '{' ( (lv_caseList_8_0= ruleListCase ) ) otherlv_9= '}' )
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4287:5: otherlv_7= '{' ( (lv_caseList_8_0= ruleListCase ) ) otherlv_9= '}'
                             {
-                            otherlv_7=(Token)match(input,26,FOLLOW_26_in_ruleExp48060); if (state.failed) return current;
+                            otherlv_7=(Token)match(input,27,FOLLOW_27_in_ruleExp48060); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_7, grammarAccess.getExp4Access().getLeftCurlyBracketKeyword_1_2_0_0());
@@ -12053,7 +12054,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_9=(Token)match(input,27,FOLLOW_27_in_ruleExp48093); if (state.failed) return current;
+                            otherlv_9=(Token)match(input,28,FOLLOW_28_in_ruleExp48093); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_9, grammarAccess.getExp4Access().getRightCurlyBracketKeyword_1_2_0_2());
@@ -12071,7 +12072,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4314:6: (otherlv_10= '[' ( (lv_expList_11_0= ruleListExp ) ) otherlv_12= ']' )
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4314:8: otherlv_10= '[' ( (lv_expList_11_0= ruleListExp ) ) otherlv_12= ']'
                             {
-                            otherlv_10=(Token)match(input,31,FOLLOW_31_in_ruleExp48113); if (state.failed) return current;
+                            otherlv_10=(Token)match(input,32,FOLLOW_32_in_ruleExp48113); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_10, grammarAccess.getExp4Access().getLeftSquareBracketKeyword_1_2_1_0());
@@ -12112,7 +12113,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_12=(Token)match(input,32,FOLLOW_32_in_ruleExp48146); if (state.failed) return current;
+                            otherlv_12=(Token)match(input,33,FOLLOW_33_in_ruleExp48146); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_12, grammarAccess.getExp4Access().getRightSquareBracketKeyword_1_2_1_2());
@@ -12133,7 +12134,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt99=2;
                         int LA99_0 = input.LA(1);
 
-                        if ( ((LA99_0>=RULE_INTEGER && LA99_0<=RULE_DOUBLE)||LA99_0==26||LA99_0==29||LA99_0==31||LA99_0==38||(LA99_0>=49 && LA99_0<=50)||(LA99_0>=69 && LA99_0<=77)) ) {
+                        if ( ((LA99_0>=RULE_INTEGER && LA99_0<=RULE_DOUBLE)||LA99_0==27||LA99_0==30||LA99_0==32||LA99_0==39||(LA99_0>=50 && LA99_0<=51)||(LA99_0>=70 && LA99_0<=78)) ) {
                             alt99=1;
                         }
 
@@ -12192,7 +12193,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4359:6: (otherlv_14= 'case' ( (lv_caseOf_15_0= ruleExp ) ) otherlv_16= 'of' otherlv_17= '{' ( (lv_caseList_18_0= ruleListCase ) ) otherlv_19= '}' ( (lv_args_20_0= ruleExp5 ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4359:8: otherlv_14= 'case' ( (lv_caseOf_15_0= ruleExp ) ) otherlv_16= 'of' otherlv_17= '{' ( (lv_caseList_18_0= ruleListCase ) ) otherlv_19= '}' ( (lv_args_20_0= ruleExp5 ) )*
                     {
-                    otherlv_14=(Token)match(input,53,FOLLOW_53_in_ruleExp48190); if (state.failed) return current;
+                    otherlv_14=(Token)match(input,54,FOLLOW_54_in_ruleExp48190); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_14, grammarAccess.getExp4Access().getCaseKeyword_2_0());
@@ -12233,13 +12234,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_16=(Token)match(input,20,FOLLOW_20_in_ruleExp48223); if (state.failed) return current;
+                    otherlv_16=(Token)match(input,21,FOLLOW_21_in_ruleExp48223); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_16, grammarAccess.getExp4Access().getOfKeyword_2_2());
                           
                     }
-                    otherlv_17=(Token)match(input,26,FOLLOW_26_in_ruleExp48235); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,27,FOLLOW_27_in_ruleExp48235); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_17, grammarAccess.getExp4Access().getLeftCurlyBracketKeyword_2_3());
@@ -12280,7 +12281,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_19=(Token)match(input,27,FOLLOW_27_in_ruleExp48268); if (state.failed) return current;
+                    otherlv_19=(Token)match(input,28,FOLLOW_28_in_ruleExp48268); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_19, grammarAccess.getExp4Access().getRightCurlyBracketKeyword_2_5());
@@ -12292,7 +12293,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt100=2;
                         int LA100_0 = input.LA(1);
 
-                        if ( ((LA100_0>=RULE_INTEGER && LA100_0<=RULE_DOUBLE)||LA100_0==26||LA100_0==29||LA100_0==31||LA100_0==38||(LA100_0>=49 && LA100_0<=50)||(LA100_0>=69 && LA100_0<=77)) ) {
+                        if ( ((LA100_0>=RULE_INTEGER && LA100_0<=RULE_DOUBLE)||LA100_0==27||LA100_0==30||LA100_0==32||LA100_0==39||(LA100_0>=50 && LA100_0<=51)||(LA100_0>=70 && LA100_0<=78)) ) {
                             alt100=1;
                         }
 
@@ -12351,13 +12352,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4430:6: (otherlv_21= 'variants' otherlv_22= '{' ( (lv_expList_23_0= ruleListExp ) ) otherlv_24= '}' ( (lv_args_25_0= ruleExp5 ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4430:8: otherlv_21= 'variants' otherlv_22= '{' ( (lv_expList_23_0= ruleListExp ) ) otherlv_24= '}' ( (lv_args_25_0= ruleExp5 ) )*
                     {
-                    otherlv_21=(Token)match(input,54,FOLLOW_54_in_ruleExp48310); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,55,FOLLOW_55_in_ruleExp48310); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_21, grammarAccess.getExp4Access().getVariantsKeyword_3_0());
                           
                     }
-                    otherlv_22=(Token)match(input,26,FOLLOW_26_in_ruleExp48322); if (state.failed) return current;
+                    otherlv_22=(Token)match(input,27,FOLLOW_27_in_ruleExp48322); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_22, grammarAccess.getExp4Access().getLeftCurlyBracketKeyword_3_1());
@@ -12398,7 +12399,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_24=(Token)match(input,27,FOLLOW_27_in_ruleExp48355); if (state.failed) return current;
+                    otherlv_24=(Token)match(input,28,FOLLOW_28_in_ruleExp48355); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_24, grammarAccess.getExp4Access().getRightCurlyBracketKeyword_3_3());
@@ -12410,7 +12411,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt101=2;
                         int LA101_0 = input.LA(1);
 
-                        if ( ((LA101_0>=RULE_INTEGER && LA101_0<=RULE_DOUBLE)||LA101_0==26||LA101_0==29||LA101_0==31||LA101_0==38||(LA101_0>=49 && LA101_0<=50)||(LA101_0>=69 && LA101_0<=77)) ) {
+                        if ( ((LA101_0>=RULE_INTEGER && LA101_0<=RULE_DOUBLE)||LA101_0==27||LA101_0==30||LA101_0==32||LA101_0==39||(LA101_0>=50 && LA101_0<=51)||(LA101_0>=70 && LA101_0<=78)) ) {
                             alt101=1;
                         }
 
@@ -12469,13 +12470,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4479:6: (otherlv_26= 'pre' otherlv_27= '{' ( (lv_caseList_28_0= ruleListCase ) ) otherlv_29= '}' ( (lv_args_30_0= ruleExp5 ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4479:8: otherlv_26= 'pre' otherlv_27= '{' ( (lv_caseList_28_0= ruleListCase ) ) otherlv_29= '}' ( (lv_args_30_0= ruleExp5 ) )*
                     {
-                    otherlv_26=(Token)match(input,55,FOLLOW_55_in_ruleExp48397); if (state.failed) return current;
+                    otherlv_26=(Token)match(input,56,FOLLOW_56_in_ruleExp48397); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_26, grammarAccess.getExp4Access().getPreKeyword_4_0());
                           
                     }
-                    otherlv_27=(Token)match(input,26,FOLLOW_26_in_ruleExp48409); if (state.failed) return current;
+                    otherlv_27=(Token)match(input,27,FOLLOW_27_in_ruleExp48409); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_27, grammarAccess.getExp4Access().getLeftCurlyBracketKeyword_4_1());
@@ -12516,7 +12517,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_29=(Token)match(input,27,FOLLOW_27_in_ruleExp48442); if (state.failed) return current;
+                    otherlv_29=(Token)match(input,28,FOLLOW_28_in_ruleExp48442); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_29, grammarAccess.getExp4Access().getRightCurlyBracketKeyword_4_3());
@@ -12528,7 +12529,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt102=2;
                         int LA102_0 = input.LA(1);
 
-                        if ( ((LA102_0>=RULE_INTEGER && LA102_0<=RULE_DOUBLE)||LA102_0==26||LA102_0==29||LA102_0==31||LA102_0==38||(LA102_0>=49 && LA102_0<=50)||(LA102_0>=69 && LA102_0<=77)) ) {
+                        if ( ((LA102_0>=RULE_INTEGER && LA102_0<=RULE_DOUBLE)||LA102_0==27||LA102_0==30||LA102_0==32||LA102_0==39||(LA102_0>=50 && LA102_0<=51)||(LA102_0>=70 && LA102_0<=78)) ) {
                             alt102=1;
                         }
 
@@ -12587,7 +12588,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4528:6: (otherlv_31= 'lincat' ( (otherlv_32= RULE_ID ) ) ( (lv_args_33_0= ruleExp5 ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4528:8: otherlv_31= 'lincat' ( (otherlv_32= RULE_ID ) ) ( (lv_args_33_0= ruleExp5 ) )*
                     {
-                    otherlv_31=(Token)match(input,42,FOLLOW_42_in_ruleExp48484); if (state.failed) return current;
+                    otherlv_31=(Token)match(input,43,FOLLOW_43_in_ruleExp48484); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_31, grammarAccess.getExp4Access().getLincatKeyword_5_0());
@@ -12624,7 +12625,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt103=2;
                         int LA103_0 = input.LA(1);
 
-                        if ( ((LA103_0>=RULE_INTEGER && LA103_0<=RULE_DOUBLE)||LA103_0==26||LA103_0==29||LA103_0==31||LA103_0==38||(LA103_0>=49 && LA103_0<=50)||(LA103_0>=69 && LA103_0<=77)) ) {
+                        if ( ((LA103_0>=RULE_INTEGER && LA103_0<=RULE_DOUBLE)||LA103_0==27||LA103_0==30||LA103_0==32||LA103_0==39||(LA103_0>=50 && LA103_0<=51)||(LA103_0>=70 && LA103_0<=78)) ) {
                             alt103=1;
                         }
 
@@ -12683,7 +12684,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4564:6: (otherlv_34= 'lin' ( (otherlv_35= RULE_ID ) ) ( (lv_inner_36_0= ruleExp6 ) ) ( (lv_args_37_0= ruleExp5 ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4564:8: otherlv_34= 'lin' ( (otherlv_35= RULE_ID ) ) ( (lv_inner_36_0= ruleExp6 ) ) ( (lv_args_37_0= ruleExp5 ) )*
                     {
-                    otherlv_34=(Token)match(input,44,FOLLOW_44_in_ruleExp48546); if (state.failed) return current;
+                    otherlv_34=(Token)match(input,45,FOLLOW_45_in_ruleExp48546); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_34, grammarAccess.getExp4Access().getLinKeyword_6_0());
@@ -12755,7 +12756,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt104=2;
                         int LA104_0 = input.LA(1);
 
-                        if ( ((LA104_0>=RULE_INTEGER && LA104_0<=RULE_DOUBLE)||LA104_0==26||LA104_0==29||LA104_0==31||LA104_0==38||(LA104_0>=49 && LA104_0<=50)||(LA104_0>=69 && LA104_0<=77)) ) {
+                        if ( ((LA104_0>=RULE_INTEGER && LA104_0<=RULE_DOUBLE)||LA104_0==27||LA104_0==30||LA104_0==32||LA104_0==39||(LA104_0>=50 && LA104_0<=51)||(LA104_0>=70 && LA104_0<=78)) ) {
                             alt104=1;
                         }
 
@@ -12855,7 +12856,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt105=2;
                         int LA105_0 = input.LA(1);
 
-                        if ( ((LA105_0>=RULE_INTEGER && LA105_0<=RULE_DOUBLE)||LA105_0==26||LA105_0==29||LA105_0==31||LA105_0==38||(LA105_0>=49 && LA105_0<=50)||(LA105_0>=69 && LA105_0<=77)) ) {
+                        if ( ((LA105_0>=RULE_INTEGER && LA105_0<=RULE_DOUBLE)||LA105_0==27||LA105_0==30||LA105_0==32||LA105_0==39||(LA105_0>=50 && LA105_0<=51)||(LA105_0>=70 && LA105_0<=78)) ) {
                             alt105=1;
                         }
 
@@ -13001,10 +13002,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt111=2;
             int LA111_0 = input.LA(1);
 
-            if ( ((LA111_0>=RULE_INTEGER && LA111_0<=RULE_DOUBLE)||LA111_0==26||LA111_0==29||LA111_0==31||LA111_0==38||LA111_0==42||LA111_0==44||(LA111_0>=49 && LA111_0<=50)||(LA111_0>=52 && LA111_0<=55)||(LA111_0>=69 && LA111_0<=77)) ) {
+            if ( ((LA111_0>=RULE_INTEGER && LA111_0<=RULE_DOUBLE)||LA111_0==27||LA111_0==30||LA111_0==32||LA111_0==39||LA111_0==43||LA111_0==45||(LA111_0>=50 && LA111_0<=51)||(LA111_0>=53 && LA111_0<=56)||(LA111_0>=70 && LA111_0<=78)) ) {
                 alt111=1;
             }
-            else if ( (LA111_0==58) ) {
+            else if ( (LA111_0==59) ) {
                 alt111=2;
             }
             else {
@@ -13062,7 +13063,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt108=2;
                         int LA108_0 = input.LA(1);
 
-                        if ( (LA108_0==23||(LA108_0>=56 && LA108_0<=57)) ) {
+                        if ( (LA108_0==24||(LA108_0>=57 && LA108_0<=58)) ) {
                             alt108=1;
                         }
 
@@ -13074,17 +13075,17 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4693:3: (otherlv_1= '!' | otherlv_2= '*' | otherlv_3= '**' )
                     	    int alt107=3;
                     	    switch ( input.LA(1) ) {
-                    	    case 56:
+                    	    case 57:
                     	        {
                     	        alt107=1;
                     	        }
                     	        break;
-                    	    case 57:
+                    	    case 58:
                     	        {
                     	        alt107=2;
                     	        }
                     	        break;
-                    	    case 23:
+                    	    case 24:
                     	        {
                     	        alt107=3;
                     	        }
@@ -13101,7 +13102,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	        case 1 :
                     	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4693:5: otherlv_1= '!'
                     	            {
-                    	            otherlv_1=(Token)match(input,56,FOLLOW_56_in_ruleExp38768); if (state.failed) return current;
+                    	            otherlv_1=(Token)match(input,57,FOLLOW_57_in_ruleExp38768); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_1, grammarAccess.getExp3Access().getExclamationMarkKeyword_0_1_0_0());
@@ -13113,7 +13114,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	        case 2 :
                     	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4698:7: otherlv_2= '*'
                     	            {
-                    	            otherlv_2=(Token)match(input,57,FOLLOW_57_in_ruleExp38786); if (state.failed) return current;
+                    	            otherlv_2=(Token)match(input,58,FOLLOW_58_in_ruleExp38786); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_2, grammarAccess.getExp3Access().getAsteriskKeyword_0_1_0_1());
@@ -13125,7 +13126,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	        case 3 :
                     	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4703:7: otherlv_3= '**'
                     	            {
-                    	            otherlv_3=(Token)match(input,23,FOLLOW_23_in_ruleExp38804); if (state.failed) return current;
+                    	            otherlv_3=(Token)match(input,24,FOLLOW_24_in_ruleExp38804); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_3, grammarAccess.getExp3Access().getAsteriskAsteriskKeyword_0_1_0_2());
@@ -13193,7 +13194,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4726:6: (otherlv_5= '#' ( (lv_v_6_0= rulePatt2 ) ) ( (otherlv_7= '!' | otherlv_8= '*' | otherlv_9= '**' ) ( (lv_e_10_0= ruleExp4 ) ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4726:8: otherlv_5= '#' ( (lv_v_6_0= rulePatt2 ) ) ( (otherlv_7= '!' | otherlv_8= '*' | otherlv_9= '**' ) ( (lv_e_10_0= ruleExp4 ) ) )*
                     {
-                    otherlv_5=(Token)match(input,58,FOLLOW_58_in_ruleExp38848); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,59,FOLLOW_59_in_ruleExp38848); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_5, grammarAccess.getExp3Access().getNumberSignKeyword_1_0());
@@ -13240,7 +13241,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt110=2;
                         int LA110_0 = input.LA(1);
 
-                        if ( (LA110_0==23||(LA110_0>=56 && LA110_0<=57)) ) {
+                        if ( (LA110_0==24||(LA110_0>=57 && LA110_0<=58)) ) {
                             alt110=1;
                         }
 
@@ -13252,17 +13253,17 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4748:3: (otherlv_7= '!' | otherlv_8= '*' | otherlv_9= '**' )
                     	    int alt109=3;
                     	    switch ( input.LA(1) ) {
-                    	    case 56:
+                    	    case 57:
                     	        {
                     	        alt109=1;
                     	        }
                     	        break;
-                    	    case 57:
+                    	    case 58:
                     	        {
                     	        alt109=2;
                     	        }
                     	        break;
-                    	    case 23:
+                    	    case 24:
                     	        {
                     	        alt109=3;
                     	        }
@@ -13279,7 +13280,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	        case 1 :
                     	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4748:5: otherlv_7= '!'
                     	            {
-                    	            otherlv_7=(Token)match(input,56,FOLLOW_56_in_ruleExp38883); if (state.failed) return current;
+                    	            otherlv_7=(Token)match(input,57,FOLLOW_57_in_ruleExp38883); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_7, grammarAccess.getExp3Access().getExclamationMarkKeyword_1_2_0_0());
@@ -13291,7 +13292,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	        case 2 :
                     	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4753:7: otherlv_8= '*'
                     	            {
-                    	            otherlv_8=(Token)match(input,57,FOLLOW_57_in_ruleExp38901); if (state.failed) return current;
+                    	            otherlv_8=(Token)match(input,58,FOLLOW_58_in_ruleExp38901); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_8, grammarAccess.getExp3Access().getAsteriskKeyword_1_2_0_1());
@@ -13303,7 +13304,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	        case 3 :
                     	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4758:7: otherlv_9= '**'
                     	            {
-                    	            otherlv_9=(Token)match(input,23,FOLLOW_23_in_ruleExp38919); if (state.failed) return current;
+                    	            otherlv_9=(Token)match(input,24,FOLLOW_24_in_ruleExp38919); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_9, grammarAccess.getExp3Access().getAsteriskAsteriskKeyword_1_2_0_2());
@@ -13486,14 +13487,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt112=2;
             int LA112_0 = input.LA(1);
 
-            if ( (LA112_0==59) ) {
+            if ( (LA112_0==60) ) {
                 alt112=1;
             }
             switch (alt112) {
                 case 1 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4819:4: otherlv_1= '+' ( (lv_e_2_0= ruleExp2 ) )
                     {
-                    otherlv_1=(Token)match(input,59,FOLLOW_59_in_ruleExp29049); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,60,FOLLOW_60_in_ruleExp29049); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getExp2Access().getPlusSignKeyword_1_0());
@@ -13661,14 +13662,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt113=2;
             int LA113_0 = input.LA(1);
 
-            if ( (LA113_0==60) ) {
+            if ( (LA113_0==61) ) {
                 alt113=1;
             }
             switch (alt113) {
                 case 1 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4880:4: otherlv_1= '++' ( (lv_e_2_0= ruleExp1 ) )
                     {
-                    otherlv_1=(Token)match(input,60,FOLLOW_60_in_ruleExp19177); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,61,FOLLOW_61_in_ruleExp19177); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getExp1Access().getPlusSignPlusSignKeyword_1_0());
@@ -13903,7 +13904,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4923:2: (otherlv_0= '\\\\' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= '->' ( (lv_v_3_0= ruleExp ) ) ( ( ( '|' )=>otherlv_4= '|' ) ( (lv_e_5_0= ruleExp1 ) ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4923:4: otherlv_0= '\\\\' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= '->' ( (lv_v_3_0= ruleExp ) ) ( ( ( '|' )=>otherlv_4= '|' ) ( (lv_e_5_0= ruleExp1 ) ) )*
                     {
-                    otherlv_0=(Token)match(input,61,FOLLOW_61_in_ruleExp9284); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,62,FOLLOW_62_in_ruleExp9284); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_0, grammarAccess.getExpAccess().getReverseSolidusKeyword_0_0());
@@ -13944,7 +13945,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,62,FOLLOW_62_in_ruleExp9317); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,63,FOLLOW_63_in_ruleExp9317); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getExpAccess().getHyphenMinusGreaterThanSignKeyword_0_2());
@@ -13991,7 +13992,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt114=2;
                         int LA114_0 = input.LA(1);
 
-                        if ( (LA114_0==47) ) {
+                        if ( (LA114_0==48) ) {
                             int LA114_2 = input.LA(2);
 
                             if ( (synpred3_InternalGF()) ) {
@@ -14009,7 +14010,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4967:3: ( ( '|' )=>otherlv_4= '|' )
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4967:4: ( '|' )=>otherlv_4= '|'
                     	    {
-                    	    otherlv_4=(Token)match(input,47,FOLLOW_47_in_ruleExp9359); if (state.failed) return current;
+                    	    otherlv_4=(Token)match(input,48,FOLLOW_48_in_ruleExp9359); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_4, grammarAccess.getExpAccess().getVerticalLineKeyword_0_4_0());
@@ -14074,13 +14075,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4991:6: (otherlv_6= '\\\\' otherlv_7= '\\\\' ( (lv_bindList_8_0= ruleListBind ) ) otherlv_9= '=>' ( (lv_v_10_0= ruleExp ) ) ( ( ( '|' )=>otherlv_11= '|' ) ( (lv_e_12_0= ruleExp1 ) ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4991:8: otherlv_6= '\\\\' otherlv_7= '\\\\' ( (lv_bindList_8_0= ruleListBind ) ) otherlv_9= '=>' ( (lv_v_10_0= ruleExp ) ) ( ( ( '|' )=>otherlv_11= '|' ) ( (lv_e_12_0= ruleExp1 ) ) )*
                     {
-                    otherlv_6=(Token)match(input,61,FOLLOW_61_in_ruleExp9403); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,62,FOLLOW_62_in_ruleExp9403); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getExpAccess().getReverseSolidusKeyword_1_0());
                           
                     }
-                    otherlv_7=(Token)match(input,61,FOLLOW_61_in_ruleExp9415); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,62,FOLLOW_62_in_ruleExp9415); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_7, grammarAccess.getExpAccess().getReverseSolidusKeyword_1_1());
@@ -14121,7 +14122,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,63,FOLLOW_63_in_ruleExp9448); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,64,FOLLOW_64_in_ruleExp9448); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_9, grammarAccess.getExpAccess().getEqualsSignGreaterThanSignKeyword_1_3());
@@ -14168,7 +14169,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt115=2;
                         int LA115_0 = input.LA(1);
 
-                        if ( (LA115_0==47) ) {
+                        if ( (LA115_0==48) ) {
                             int LA115_2 = input.LA(2);
 
                             if ( (synpred4_InternalGF()) ) {
@@ -14186,7 +14187,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5039:3: ( ( '|' )=>otherlv_11= '|' )
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5039:4: ( '|' )=>otherlv_11= '|'
                     	    {
-                    	    otherlv_11=(Token)match(input,47,FOLLOW_47_in_ruleExp9490); if (state.failed) return current;
+                    	    otherlv_11=(Token)match(input,48,FOLLOW_48_in_ruleExp9490); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_11, grammarAccess.getExpAccess().getVerticalLineKeyword_1_5_0());
@@ -14251,13 +14252,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5063:6: (otherlv_13= 'let' otherlv_14= '{' ( (lv_defList_15_0= ruleListLocDef ) ) otherlv_16= '}' otherlv_17= 'in' ( (lv_v_18_0= ruleExp ) ) ( ( ( '|' )=>otherlv_19= '|' ) ( (lv_e_20_0= ruleExp1 ) ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5063:8: otherlv_13= 'let' otherlv_14= '{' ( (lv_defList_15_0= ruleListLocDef ) ) otherlv_16= '}' otherlv_17= 'in' ( (lv_v_18_0= ruleExp ) ) ( ( ( '|' )=>otherlv_19= '|' ) ( (lv_e_20_0= ruleExp1 ) ) )*
                     {
-                    otherlv_13=(Token)match(input,64,FOLLOW_64_in_ruleExp9534); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,65,FOLLOW_65_in_ruleExp9534); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_13, grammarAccess.getExpAccess().getLetKeyword_2_0());
                           
                     }
-                    otherlv_14=(Token)match(input,26,FOLLOW_26_in_ruleExp9546); if (state.failed) return current;
+                    otherlv_14=(Token)match(input,27,FOLLOW_27_in_ruleExp9546); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_14, grammarAccess.getExpAccess().getLeftCurlyBracketKeyword_2_1());
@@ -14298,13 +14299,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_16=(Token)match(input,27,FOLLOW_27_in_ruleExp9579); if (state.failed) return current;
+                    otherlv_16=(Token)match(input,28,FOLLOW_28_in_ruleExp9579); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_16, grammarAccess.getExpAccess().getRightCurlyBracketKeyword_2_3());
                           
                     }
-                    otherlv_17=(Token)match(input,25,FOLLOW_25_in_ruleExp9591); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,26,FOLLOW_26_in_ruleExp9591); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_17, grammarAccess.getExpAccess().getInKeyword_2_4());
@@ -14351,7 +14352,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt116=2;
                         int LA116_0 = input.LA(1);
 
-                        if ( (LA116_0==47) ) {
+                        if ( (LA116_0==48) ) {
                             int LA116_2 = input.LA(2);
 
                             if ( (synpred5_InternalGF()) ) {
@@ -14369,7 +14370,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5115:3: ( ( '|' )=>otherlv_19= '|' )
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5115:4: ( '|' )=>otherlv_19= '|'
                     	    {
-                    	    otherlv_19=(Token)match(input,47,FOLLOW_47_in_ruleExp9633); if (state.failed) return current;
+                    	    otherlv_19=(Token)match(input,48,FOLLOW_48_in_ruleExp9633); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_19, grammarAccess.getExpAccess().getVerticalLineKeyword_2_6_0());
@@ -14434,7 +14435,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5139:6: (otherlv_21= 'let' ( (lv_defList_22_0= ruleListLocDef ) ) otherlv_23= 'in' ( (lv_v_24_0= ruleExp ) ) ( ( ( '|' )=>otherlv_25= '|' ) ( (lv_e_26_0= ruleExp1 ) ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5139:8: otherlv_21= 'let' ( (lv_defList_22_0= ruleListLocDef ) ) otherlv_23= 'in' ( (lv_v_24_0= ruleExp ) ) ( ( ( '|' )=>otherlv_25= '|' ) ( (lv_e_26_0= ruleExp1 ) ) )*
                     {
-                    otherlv_21=(Token)match(input,64,FOLLOW_64_in_ruleExp9677); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,65,FOLLOW_65_in_ruleExp9677); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_21, grammarAccess.getExpAccess().getLetKeyword_3_0());
@@ -14475,7 +14476,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_23=(Token)match(input,25,FOLLOW_25_in_ruleExp9710); if (state.failed) return current;
+                    otherlv_23=(Token)match(input,26,FOLLOW_26_in_ruleExp9710); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_23, grammarAccess.getExpAccess().getInKeyword_3_2());
@@ -14522,7 +14523,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt117=2;
                         int LA117_0 = input.LA(1);
 
-                        if ( (LA117_0==47) ) {
+                        if ( (LA117_0==48) ) {
                             int LA117_2 = input.LA(2);
 
                             if ( (synpred6_InternalGF()) ) {
@@ -14540,7 +14541,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5183:3: ( ( '|' )=>otherlv_25= '|' )
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5183:4: ( '|' )=>otherlv_25= '|'
                     	    {
-                    	    otherlv_25=(Token)match(input,47,FOLLOW_47_in_ruleExp9752); if (state.failed) return current;
+                    	    otherlv_25=(Token)match(input,48,FOLLOW_48_in_ruleExp9752); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_25, grammarAccess.getExpAccess().getVerticalLineKeyword_3_4_0());
@@ -14605,7 +14606,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5207:6: (otherlv_27= '(' ( (lv_bindList_28_0= ruleListBind ) ) otherlv_29= ':' ( (lv_type_30_0= ruleExp ) ) otherlv_31= ')' otherlv_32= '->' ( (lv_v_33_0= ruleExp ) ) ( ( ( '|' )=>otherlv_34= '|' ) ( (lv_e_35_0= ruleExp1 ) ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5207:8: otherlv_27= '(' ( (lv_bindList_28_0= ruleListBind ) ) otherlv_29= ':' ( (lv_type_30_0= ruleExp ) ) otherlv_31= ')' otherlv_32= '->' ( (lv_v_33_0= ruleExp ) ) ( ( ( '|' )=>otherlv_34= '|' ) ( (lv_e_35_0= ruleExp1 ) ) )*
                     {
-                    otherlv_27=(Token)match(input,29,FOLLOW_29_in_ruleExp9796); if (state.failed) return current;
+                    otherlv_27=(Token)match(input,30,FOLLOW_30_in_ruleExp9796); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_27, grammarAccess.getExpAccess().getLeftParenthesisKeyword_4_0());
@@ -14646,7 +14647,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_29=(Token)match(input,34,FOLLOW_34_in_ruleExp9829); if (state.failed) return current;
+                    otherlv_29=(Token)match(input,35,FOLLOW_35_in_ruleExp9829); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_29, grammarAccess.getExpAccess().getColonKeyword_4_2());
@@ -14687,13 +14688,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_31=(Token)match(input,30,FOLLOW_30_in_ruleExp9862); if (state.failed) return current;
+                    otherlv_31=(Token)match(input,31,FOLLOW_31_in_ruleExp9862); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_31, grammarAccess.getExpAccess().getRightParenthesisKeyword_4_4());
                           
                     }
-                    otherlv_32=(Token)match(input,62,FOLLOW_62_in_ruleExp9874); if (state.failed) return current;
+                    otherlv_32=(Token)match(input,63,FOLLOW_63_in_ruleExp9874); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_32, grammarAccess.getExpAccess().getHyphenMinusGreaterThanSignKeyword_4_5());
@@ -14740,7 +14741,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt118=2;
                         int LA118_0 = input.LA(1);
 
-                        if ( (LA118_0==47) ) {
+                        if ( (LA118_0==48) ) {
                             int LA118_2 = input.LA(2);
 
                             if ( (synpred7_InternalGF()) ) {
@@ -14758,7 +14759,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5277:3: ( ( '|' )=>otherlv_34= '|' )
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5277:4: ( '|' )=>otherlv_34= '|'
                     	    {
-                    	    otherlv_34=(Token)match(input,47,FOLLOW_47_in_ruleExp9916); if (state.failed) return current;
+                    	    otherlv_34=(Token)match(input,48,FOLLOW_48_in_ruleExp9916); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_34, grammarAccess.getExpAccess().getVerticalLineKeyword_4_7_0());
@@ -14862,10 +14863,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt124=2;
                     int LA124_0 = input.LA(1);
 
-                    if ( (LA124_0==EOF||(LA124_0>=14 && LA124_0<=15)||LA124_0==20||(LA124_0>=22 && LA124_0<=23)||LA124_0==25||LA124_0==27||LA124_0==30||LA124_0==32||LA124_0==34||LA124_0==47||LA124_0==51||(LA124_0>=56 && LA124_0<=57)||(LA124_0>=59 && LA124_0<=60)||LA124_0==63||LA124_0==65) ) {
+                    if ( (LA124_0==EOF||(LA124_0>=15 && LA124_0<=16)||LA124_0==21||(LA124_0>=23 && LA124_0<=24)||LA124_0==26||LA124_0==28||LA124_0==31||LA124_0==33||LA124_0==35||LA124_0==48||LA124_0==52||(LA124_0>=57 && LA124_0<=58)||(LA124_0>=60 && LA124_0<=61)||LA124_0==64||LA124_0==66) ) {
                         alt124=1;
                     }
-                    else if ( (LA124_0==62) ) {
+                    else if ( (LA124_0==63) ) {
                         alt124=2;
                     }
                     else {
@@ -14888,7 +14889,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                 int alt120=2;
                                 int LA120_0 = input.LA(1);
 
-                                if ( (LA120_0==23||(LA120_0>=56 && LA120_0<=57)) ) {
+                                if ( (LA120_0==24||(LA120_0>=57 && LA120_0<=58)) ) {
                                     alt120=1;
                                 }
 
@@ -14900,17 +14901,17 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5319:5: (otherlv_37= '!' | otherlv_38= '*' | otherlv_39= '**' )
                             	    int alt119=3;
                             	    switch ( input.LA(1) ) {
-                            	    case 56:
+                            	    case 57:
                             	        {
                             	        alt119=1;
                             	        }
                             	        break;
-                            	    case 57:
+                            	    case 58:
                             	        {
                             	        alt119=2;
                             	        }
                             	        break;
-                            	    case 23:
+                            	    case 24:
                             	        {
                             	        alt119=3;
                             	        }
@@ -14927,7 +14928,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	        case 1 :
                             	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5319:7: otherlv_37= '!'
                             	            {
-                            	            otherlv_37=(Token)match(input,56,FOLLOW_56_in_ruleExp9985); if (state.failed) return current;
+                            	            otherlv_37=(Token)match(input,57,FOLLOW_57_in_ruleExp9985); if (state.failed) return current;
                             	            if ( state.backtracking==0 ) {
 
                             	                  	newLeafNode(otherlv_37, grammarAccess.getExpAccess().getExclamationMarkKeyword_5_1_0_0_0_0());
@@ -14939,7 +14940,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	        case 2 :
                             	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5324:7: otherlv_38= '*'
                             	            {
-                            	            otherlv_38=(Token)match(input,57,FOLLOW_57_in_ruleExp10003); if (state.failed) return current;
+                            	            otherlv_38=(Token)match(input,58,FOLLOW_58_in_ruleExp10003); if (state.failed) return current;
                             	            if ( state.backtracking==0 ) {
 
                             	                  	newLeafNode(otherlv_38, grammarAccess.getExpAccess().getAsteriskKeyword_5_1_0_0_0_1());
@@ -14951,7 +14952,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             	        case 3 :
                             	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5329:7: otherlv_39= '**'
                             	            {
-                            	            otherlv_39=(Token)match(input,23,FOLLOW_23_in_ruleExp10021); if (state.failed) return current;
+                            	            otherlv_39=(Token)match(input,24,FOLLOW_24_in_ruleExp10021); if (state.failed) return current;
                             	            if ( state.backtracking==0 ) {
 
                             	                  	newLeafNode(otherlv_39, grammarAccess.getExpAccess().getAsteriskAsteriskKeyword_5_1_0_0_0_2());
@@ -15010,30 +15011,30 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5351:4: ( (otherlv_41= '=>' ( (lv_e_42_0= ruleExp ) ) ) | (otherlv_43= 'where' otherlv_44= '{' ( (lv_defList_45_0= ruleListLocDef ) ) otherlv_46= '}' ) | ( (otherlv_47= '+' ( (lv_e_48_0= ruleExp2 ) ) )? (otherlv_49= '++' ( (lv_e_50_0= ruleExp1 ) ) )? ) )
                             int alt123=3;
                             switch ( input.LA(1) ) {
-                            case 63:
+                            case 64:
                                 {
                                 alt123=1;
                                 }
                                 break;
-                            case 65:
+                            case 66:
                                 {
                                 alt123=2;
                                 }
                                 break;
                             case EOF:
-                            case 14:
                             case 15:
-                            case 20:
-                            case 22:
-                            case 25:
-                            case 27:
-                            case 30:
-                            case 32:
-                            case 34:
-                            case 47:
-                            case 51:
-                            case 59:
+                            case 16:
+                            case 21:
+                            case 23:
+                            case 26:
+                            case 28:
+                            case 31:
+                            case 33:
+                            case 35:
+                            case 48:
+                            case 52:
                             case 60:
+                            case 61:
                                 {
                                 alt123=3;
                                 }
@@ -15053,7 +15054,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5351:5: (otherlv_41= '=>' ( (lv_e_42_0= ruleExp ) ) )
                                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5351:7: otherlv_41= '=>' ( (lv_e_42_0= ruleExp ) )
                                     {
-                                    otherlv_41=(Token)match(input,63,FOLLOW_63_in_ruleExp10059); if (state.failed) return current;
+                                    otherlv_41=(Token)match(input,64,FOLLOW_64_in_ruleExp10059); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_41, grammarAccess.getExpAccess().getEqualsSignGreaterThanSignKeyword_5_1_0_1_0_0());
@@ -15106,13 +15107,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5374:6: (otherlv_43= 'where' otherlv_44= '{' ( (lv_defList_45_0= ruleListLocDef ) ) otherlv_46= '}' )
                                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5374:8: otherlv_43= 'where' otherlv_44= '{' ( (lv_defList_45_0= ruleListLocDef ) ) otherlv_46= '}'
                                     {
-                                    otherlv_43=(Token)match(input,65,FOLLOW_65_in_ruleExp10100); if (state.failed) return current;
+                                    otherlv_43=(Token)match(input,66,FOLLOW_66_in_ruleExp10100); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_43, grammarAccess.getExpAccess().getWhereKeyword_5_1_0_1_1_0());
                                           
                                     }
-                                    otherlv_44=(Token)match(input,26,FOLLOW_26_in_ruleExp10112); if (state.failed) return current;
+                                    otherlv_44=(Token)match(input,27,FOLLOW_27_in_ruleExp10112); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_44, grammarAccess.getExpAccess().getLeftCurlyBracketKeyword_5_1_0_1_1_1());
@@ -15153,7 +15154,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                                     }
 
-                                    otherlv_46=(Token)match(input,27,FOLLOW_27_in_ruleExp10145); if (state.failed) return current;
+                                    otherlv_46=(Token)match(input,28,FOLLOW_28_in_ruleExp10145); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_46, grammarAccess.getExpAccess().getRightCurlyBracketKeyword_5_1_0_1_1_3());
@@ -15175,14 +15176,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     int alt121=2;
                                     int LA121_0 = input.LA(1);
 
-                                    if ( (LA121_0==59) ) {
+                                    if ( (LA121_0==60) ) {
                                         alt121=1;
                                     }
                                     switch (alt121) {
                                         case 1 :
                                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5405:9: otherlv_47= '+' ( (lv_e_48_0= ruleExp2 ) )
                                             {
-                                            otherlv_47=(Token)match(input,59,FOLLOW_59_in_ruleExp10166); if (state.failed) return current;
+                                            otherlv_47=(Token)match(input,60,FOLLOW_60_in_ruleExp10166); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
                                                   	newLeafNode(otherlv_47, grammarAccess.getExpAccess().getPlusSignKeyword_5_1_0_1_2_0_0());
@@ -15233,14 +15234,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                     int alt122=2;
                                     int LA122_0 = input.LA(1);
 
-                                    if ( (LA122_0==60) ) {
+                                    if ( (LA122_0==61) ) {
                                         alt122=1;
                                     }
                                     switch (alt122) {
                                         case 1 :
                                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5427:6: otherlv_49= '++' ( (lv_e_50_0= ruleExp1 ) )
                                             {
-                                            otherlv_49=(Token)match(input,60,FOLLOW_60_in_ruleExp10202); if (state.failed) return current;
+                                            otherlv_49=(Token)match(input,61,FOLLOW_61_in_ruleExp10202); if (state.failed) return current;
                                             if ( state.backtracking==0 ) {
 
                                                   	newLeafNode(otherlv_49, grammarAccess.getExpAccess().getPlusSignPlusSignKeyword_5_1_0_1_2_1_0());
@@ -15308,7 +15309,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5450:6: (otherlv_51= '->' ( (lv_e_52_0= ruleExp ) ) )
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5450:8: otherlv_51= '->' ( (lv_e_52_0= ruleExp ) )
                             {
-                            otherlv_51=(Token)match(input,62,FOLLOW_62_in_ruleExp10247); if (state.failed) return current;
+                            otherlv_51=(Token)match(input,63,FOLLOW_63_in_ruleExp10247); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_51, grammarAccess.getExpAccess().getHyphenMinusGreaterThanSignKeyword_5_1_1_0());
@@ -15364,7 +15365,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt125=2;
                         int LA125_0 = input.LA(1);
 
-                        if ( (LA125_0==47) ) {
+                        if ( (LA125_0==48) ) {
                             int LA125_2 = input.LA(2);
 
                             if ( (synpred8_InternalGF()) ) {
@@ -15382,7 +15383,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5472:5: ( ( '|' )=>otherlv_53= '|' )
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5472:6: ( '|' )=>otherlv_53= '|'
                     	    {
-                    	    otherlv_53=(Token)match(input,47,FOLLOW_47_in_ruleExp10291); if (state.failed) return current;
+                    	    otherlv_53=(Token)match(input,48,FOLLOW_48_in_ruleExp10291); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_53, grammarAccess.getExpAccess().getVerticalLineKeyword_5_2_0());
@@ -15447,7 +15448,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5496:6: (otherlv_55= '#' ( (lv_v_56_0= rulePatt2 ) ) ( (otherlv_57= '!' | otherlv_58= '*' | otherlv_59= '**' ) ( (lv_e_60_0= ruleExp4 ) ) )* ( (otherlv_61= '=>' ( (lv_e_62_0= ruleExp ) ) ) | (otherlv_63= 'where' otherlv_64= '{' ( (lv_defList_65_0= ruleListLocDef ) ) otherlv_66= '}' ) | ( (otherlv_67= '+' ( (lv_e_68_0= ruleExp2 ) ) )? (otherlv_69= '++' ( (lv_e_70_0= ruleExp1 ) ) )? ) ) ( ( ( '|' )=>otherlv_71= '|' ) ( (lv_e_72_0= ruleExp1 ) ) )* )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5496:8: otherlv_55= '#' ( (lv_v_56_0= rulePatt2 ) ) ( (otherlv_57= '!' | otherlv_58= '*' | otherlv_59= '**' ) ( (lv_e_60_0= ruleExp4 ) ) )* ( (otherlv_61= '=>' ( (lv_e_62_0= ruleExp ) ) ) | (otherlv_63= 'where' otherlv_64= '{' ( (lv_defList_65_0= ruleListLocDef ) ) otherlv_66= '}' ) | ( (otherlv_67= '+' ( (lv_e_68_0= ruleExp2 ) ) )? (otherlv_69= '++' ( (lv_e_70_0= ruleExp1 ) ) )? ) ) ( ( ( '|' )=>otherlv_71= '|' ) ( (lv_e_72_0= ruleExp1 ) ) )*
                     {
-                    otherlv_55=(Token)match(input,58,FOLLOW_58_in_ruleExp10335); if (state.failed) return current;
+                    otherlv_55=(Token)match(input,59,FOLLOW_59_in_ruleExp10335); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_55, grammarAccess.getExpAccess().getNumberSignKeyword_6_0());
@@ -15494,7 +15495,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt127=2;
                         int LA127_0 = input.LA(1);
 
-                        if ( (LA127_0==23||(LA127_0>=56 && LA127_0<=57)) ) {
+                        if ( (LA127_0==24||(LA127_0>=57 && LA127_0<=58)) ) {
                             alt127=1;
                         }
 
@@ -15506,17 +15507,17 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5518:3: (otherlv_57= '!' | otherlv_58= '*' | otherlv_59= '**' )
                     	    int alt126=3;
                     	    switch ( input.LA(1) ) {
-                    	    case 56:
+                    	    case 57:
                     	        {
                     	        alt126=1;
                     	        }
                     	        break;
-                    	    case 57:
+                    	    case 58:
                     	        {
                     	        alt126=2;
                     	        }
                     	        break;
-                    	    case 23:
+                    	    case 24:
                     	        {
                     	        alt126=3;
                     	        }
@@ -15533,7 +15534,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	        case 1 :
                     	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5518:5: otherlv_57= '!'
                     	            {
-                    	            otherlv_57=(Token)match(input,56,FOLLOW_56_in_ruleExp10370); if (state.failed) return current;
+                    	            otherlv_57=(Token)match(input,57,FOLLOW_57_in_ruleExp10370); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_57, grammarAccess.getExpAccess().getExclamationMarkKeyword_6_2_0_0());
@@ -15545,7 +15546,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	        case 2 :
                     	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5523:7: otherlv_58= '*'
                     	            {
-                    	            otherlv_58=(Token)match(input,57,FOLLOW_57_in_ruleExp10388); if (state.failed) return current;
+                    	            otherlv_58=(Token)match(input,58,FOLLOW_58_in_ruleExp10388); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_58, grammarAccess.getExpAccess().getAsteriskKeyword_6_2_0_1());
@@ -15557,7 +15558,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	        case 3 :
                     	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5528:7: otherlv_59= '**'
                     	            {
-                    	            otherlv_59=(Token)match(input,23,FOLLOW_23_in_ruleExp10406); if (state.failed) return current;
+                    	            otherlv_59=(Token)match(input,24,FOLLOW_24_in_ruleExp10406); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                  	newLeafNode(otherlv_59, grammarAccess.getExpAccess().getAsteriskAsteriskKeyword_6_2_0_2());
@@ -15616,30 +15617,30 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5550:4: ( (otherlv_61= '=>' ( (lv_e_62_0= ruleExp ) ) ) | (otherlv_63= 'where' otherlv_64= '{' ( (lv_defList_65_0= ruleListLocDef ) ) otherlv_66= '}' ) | ( (otherlv_67= '+' ( (lv_e_68_0= ruleExp2 ) ) )? (otherlv_69= '++' ( (lv_e_70_0= ruleExp1 ) ) )? ) )
                     int alt130=3;
                     switch ( input.LA(1) ) {
-                    case 63:
+                    case 64:
                         {
                         alt130=1;
                         }
                         break;
-                    case 65:
+                    case 66:
                         {
                         alt130=2;
                         }
                         break;
                     case EOF:
-                    case 14:
                     case 15:
-                    case 20:
-                    case 22:
-                    case 25:
-                    case 27:
-                    case 30:
-                    case 32:
-                    case 34:
-                    case 47:
-                    case 51:
-                    case 59:
+                    case 16:
+                    case 21:
+                    case 23:
+                    case 26:
+                    case 28:
+                    case 31:
+                    case 33:
+                    case 35:
+                    case 48:
+                    case 52:
                     case 60:
+                    case 61:
                         {
                         alt130=3;
                         }
@@ -15659,7 +15660,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5550:5: (otherlv_61= '=>' ( (lv_e_62_0= ruleExp ) ) )
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5550:7: otherlv_61= '=>' ( (lv_e_62_0= ruleExp ) )
                             {
-                            otherlv_61=(Token)match(input,63,FOLLOW_63_in_ruleExp10444); if (state.failed) return current;
+                            otherlv_61=(Token)match(input,64,FOLLOW_64_in_ruleExp10444); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_61, grammarAccess.getExpAccess().getEqualsSignGreaterThanSignKeyword_6_3_0_0());
@@ -15712,13 +15713,13 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5573:6: (otherlv_63= 'where' otherlv_64= '{' ( (lv_defList_65_0= ruleListLocDef ) ) otherlv_66= '}' )
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5573:8: otherlv_63= 'where' otherlv_64= '{' ( (lv_defList_65_0= ruleListLocDef ) ) otherlv_66= '}'
                             {
-                            otherlv_63=(Token)match(input,65,FOLLOW_65_in_ruleExp10485); if (state.failed) return current;
+                            otherlv_63=(Token)match(input,66,FOLLOW_66_in_ruleExp10485); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_63, grammarAccess.getExpAccess().getWhereKeyword_6_3_1_0());
                                   
                             }
-                            otherlv_64=(Token)match(input,26,FOLLOW_26_in_ruleExp10497); if (state.failed) return current;
+                            otherlv_64=(Token)match(input,27,FOLLOW_27_in_ruleExp10497); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_64, grammarAccess.getExpAccess().getLeftCurlyBracketKeyword_6_3_1_1());
@@ -15759,7 +15760,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_66=(Token)match(input,27,FOLLOW_27_in_ruleExp10530); if (state.failed) return current;
+                            otherlv_66=(Token)match(input,28,FOLLOW_28_in_ruleExp10530); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_66, grammarAccess.getExpAccess().getRightCurlyBracketKeyword_6_3_1_3());
@@ -15781,14 +15782,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             int alt128=2;
                             int LA128_0 = input.LA(1);
 
-                            if ( (LA128_0==59) ) {
+                            if ( (LA128_0==60) ) {
                                 alt128=1;
                             }
                             switch (alt128) {
                                 case 1 :
                                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5604:9: otherlv_67= '+' ( (lv_e_68_0= ruleExp2 ) )
                                     {
-                                    otherlv_67=(Token)match(input,59,FOLLOW_59_in_ruleExp10551); if (state.failed) return current;
+                                    otherlv_67=(Token)match(input,60,FOLLOW_60_in_ruleExp10551); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_67, grammarAccess.getExpAccess().getPlusSignKeyword_6_3_2_0_0());
@@ -15839,14 +15840,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             int alt129=2;
                             int LA129_0 = input.LA(1);
 
-                            if ( (LA129_0==60) ) {
+                            if ( (LA129_0==61) ) {
                                 alt129=1;
                             }
                             switch (alt129) {
                                 case 1 :
                                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5626:6: otherlv_69= '++' ( (lv_e_70_0= ruleExp1 ) )
                                     {
-                                    otherlv_69=(Token)match(input,60,FOLLOW_60_in_ruleExp10587); if (state.failed) return current;
+                                    otherlv_69=(Token)match(input,61,FOLLOW_61_in_ruleExp10587); if (state.failed) return current;
                                     if ( state.backtracking==0 ) {
 
                                           	newLeafNode(otherlv_69, grammarAccess.getExpAccess().getPlusSignPlusSignKeyword_6_3_2_1_0());
@@ -15908,7 +15909,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt131=2;
                         int LA131_0 = input.LA(1);
 
-                        if ( (LA131_0==47) ) {
+                        if ( (LA131_0==48) ) {
                             int LA131_2 = input.LA(2);
 
                             if ( (synpred9_InternalGF()) ) {
@@ -15926,7 +15927,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5648:7: ( ( '|' )=>otherlv_71= '|' )
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5648:8: ( '|' )=>otherlv_71= '|'
                     	    {
-                    	    otherlv_71=(Token)match(input,47,FOLLOW_47_in_ruleExp10633); if (state.failed) return current;
+                    	    otherlv_71=(Token)match(input,48,FOLLOW_48_in_ruleExp10633); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_71, grammarAccess.getExpAccess().getVerticalLineKeyword_6_4_0());
@@ -16085,7 +16086,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt135=2;
             int LA135_0 = input.LA(1);
 
-            if ( ((LA135_0>=RULE_INTEGER && LA135_0<=RULE_DOUBLE)||LA135_0==26||LA135_0==29||LA135_0==31||LA135_0==38||LA135_0==42||LA135_0==44||(LA135_0>=49 && LA135_0<=50)||(LA135_0>=52 && LA135_0<=55)||LA135_0==58||LA135_0==61||LA135_0==64||(LA135_0>=69 && LA135_0<=77)) ) {
+            if ( ((LA135_0>=RULE_INTEGER && LA135_0<=RULE_DOUBLE)||LA135_0==27||LA135_0==30||LA135_0==32||LA135_0==39||LA135_0==43||LA135_0==45||(LA135_0>=50 && LA135_0<=51)||(LA135_0>=53 && LA135_0<=56)||LA135_0==59||LA135_0==62||LA135_0==65||(LA135_0>=70 && LA135_0<=78)) ) {
                 alt135=1;
             }
             switch (alt135) {
@@ -16133,10 +16134,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt133=2;
                         int LA133_0 = input.LA(1);
 
-                        if ( (LA133_0==15) ) {
+                        if ( (LA133_0==16) ) {
                             int LA133_1 = input.LA(2);
 
-                            if ( ((LA133_1>=RULE_INTEGER && LA133_1<=RULE_DOUBLE)||LA133_1==26||LA133_1==29||LA133_1==31||LA133_1==38||LA133_1==42||LA133_1==44||(LA133_1>=49 && LA133_1<=50)||(LA133_1>=52 && LA133_1<=55)||LA133_1==58||LA133_1==61||LA133_1==64||(LA133_1>=69 && LA133_1<=77)) ) {
+                            if ( ((LA133_1>=RULE_INTEGER && LA133_1<=RULE_DOUBLE)||LA133_1==27||LA133_1==30||LA133_1==32||LA133_1==39||LA133_1==43||LA133_1==45||(LA133_1>=50 && LA133_1<=51)||(LA133_1>=53 && LA133_1<=56)||LA133_1==59||LA133_1==62||LA133_1==65||(LA133_1>=70 && LA133_1<=78)) ) {
                                 alt133=1;
                             }
 
@@ -16148,7 +16149,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5716:4: otherlv_2= ';' ( (lv_expressions_3_0= ruleExp ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleListExp10773); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleListExp10773); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getListExpAccess().getSemicolonKeyword_1_1_0());
@@ -16202,14 +16203,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt134=2;
                     int LA134_0 = input.LA(1);
 
-                    if ( (LA134_0==15) ) {
+                    if ( (LA134_0==16) ) {
                         alt134=1;
                     }
                     switch (alt134) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5738:6: otherlv_4= ';'
                             {
-                            otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleListExp10809); if (state.failed) return current;
+                            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleListExp10809); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_4, grammarAccess.getListExpAccess().getSemicolonKeyword_1_2());
@@ -16325,7 +16326,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt136=2;
                 int LA136_0 = input.LA(1);
 
-                if ( ((LA136_0>=RULE_INTEGER && LA136_0<=RULE_DOUBLE)||LA136_0==26||LA136_0==29||LA136_0==31||LA136_0==38||(LA136_0>=49 && LA136_0<=50)||(LA136_0>=69 && LA136_0<=77)) ) {
+                if ( ((LA136_0>=RULE_INTEGER && LA136_0<=RULE_DOUBLE)||LA136_0==27||LA136_0==30||LA136_0==32||LA136_0==39||(LA136_0>=50 && LA136_0<=51)||(LA136_0>=70 && LA136_0<=78)) ) {
                     alt136=1;
                 }
 
@@ -16496,7 +16497,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_1=(Token)match(input,66,FOLLOW_66_in_rulePatt211008); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,67,FOLLOW_67_in_rulePatt211008); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getPatt2Access().get_Keyword_0_1());
@@ -16622,7 +16623,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_6=(Token)match(input,48,FOLLOW_48_in_rulePatt211096); if (state.failed) return current;
+                    otherlv_6=(Token)match(input,49,FOLLOW_49_in_rulePatt211096); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_6, grammarAccess.getPatt2Access().getFullStopKeyword_2_2());
@@ -16768,7 +16769,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5924:6: (otherlv_14= '{' this_ListPattAss_15= ruleListPattAss otherlv_16= '}' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5924:8: otherlv_14= '{' this_ListPattAss_15= ruleListPattAss otherlv_16= '}'
                     {
-                    otherlv_14=(Token)match(input,26,FOLLOW_26_in_rulePatt211218); if (state.failed) return current;
+                    otherlv_14=(Token)match(input,27,FOLLOW_27_in_rulePatt211218); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_14, grammarAccess.getPatt2Access().getLeftCurlyBracketKeyword_6_0());
@@ -16790,7 +16791,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    otherlv_16=(Token)match(input,27,FOLLOW_27_in_rulePatt211251); if (state.failed) return current;
+                    otherlv_16=(Token)match(input,28,FOLLOW_28_in_rulePatt211251); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_16, grammarAccess.getPatt2Access().getRightCurlyBracketKeyword_6_2());
@@ -16808,7 +16809,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5942:6: (otherlv_17= '<' this_ListPattTupleComp_18= ruleListPattTupleComp otherlv_19= '>' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5942:8: otherlv_17= '<' this_ListPattTupleComp_18= ruleListPattTupleComp otherlv_19= '>'
                     {
-                    otherlv_17=(Token)match(input,50,FOLLOW_50_in_rulePatt211271); if (state.failed) return current;
+                    otherlv_17=(Token)match(input,51,FOLLOW_51_in_rulePatt211271); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_17, grammarAccess.getPatt2Access().getLessThanSignKeyword_7_0());
@@ -16830,7 +16831,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    otherlv_19=(Token)match(input,51,FOLLOW_51_in_rulePatt211304); if (state.failed) return current;
+                    otherlv_19=(Token)match(input,52,FOLLOW_52_in_rulePatt211304); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_19, grammarAccess.getPatt2Access().getGreaterThanSignKeyword_7_2());
@@ -16861,7 +16862,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_21=(Token)match(input,58,FOLLOW_58_in_rulePatt211333); if (state.failed) return current;
+                    otherlv_21=(Token)match(input,59,FOLLOW_59_in_rulePatt211333); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_21, grammarAccess.getPatt2Access().getNumberSignKeyword_8_1());
@@ -16927,7 +16928,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_24=(Token)match(input,49,FOLLOW_49_in_rulePatt211383); if (state.failed) return current;
+                    otherlv_24=(Token)match(input,50,FOLLOW_50_in_rulePatt211383); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_24, grammarAccess.getPatt2Access().getQuestionMarkKeyword_9_1());
@@ -16945,7 +16946,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6000:6: (otherlv_25= '(' this_Patt_26= rulePatt otherlv_27= ')' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6000:8: otherlv_25= '(' this_Patt_26= rulePatt otherlv_27= ')'
                     {
-                    otherlv_25=(Token)match(input,29,FOLLOW_29_in_rulePatt211403); if (state.failed) return current;
+                    otherlv_25=(Token)match(input,30,FOLLOW_30_in_rulePatt211403); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_25, grammarAccess.getPatt2Access().getLeftParenthesisKeyword_10_0());
@@ -16967,7 +16968,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    otherlv_27=(Token)match(input,30,FOLLOW_30_in_rulePatt211436); if (state.failed) return current;
+                    otherlv_27=(Token)match(input,31,FOLLOW_31_in_rulePatt211436); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_27, grammarAccess.getPatt2Access().getRightParenthesisKeyword_10_2());
@@ -17081,17 +17082,17 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             case RULE_ID:
                 {
                 switch ( input.LA(2) ) {
-                case 48:
+                case 49:
                     {
                     int LA139_4 = input.LA(3);
 
                     if ( (LA139_4==RULE_ID) ) {
                         int LA139_7 = input.LA(4);
 
-                        if ( (LA139_7==EOF||LA139_7==15||LA139_7==22||LA139_7==27||LA139_7==30||LA139_7==47||LA139_7==51||LA139_7==57||LA139_7==59||LA139_7==63) ) {
+                        if ( (LA139_7==EOF||LA139_7==16||LA139_7==23||LA139_7==28||LA139_7==31||LA139_7==48||LA139_7==52||LA139_7==58||LA139_7==60||LA139_7==64) ) {
                             alt139=5;
                         }
-                        else if ( ((LA139_7>=RULE_INTEGER && LA139_7<=RULE_DOUBLE)||LA139_7==26||LA139_7==29||(LA139_7>=49 && LA139_7<=50)||LA139_7==58||LA139_7==66) ) {
+                        else if ( ((LA139_7>=RULE_INTEGER && LA139_7<=RULE_DOUBLE)||LA139_7==27||LA139_7==30||(LA139_7>=50 && LA139_7<=51)||LA139_7==59||LA139_7==67) ) {
                             alt139=2;
                         }
                         else {
@@ -17112,20 +17113,20 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case EOF:
-                case 15:
-                case 22:
-                case 27:
-                case 30:
-                case 47:
-                case 51:
-                case 57:
-                case 59:
-                case 63:
+                case 16:
+                case 23:
+                case 28:
+                case 31:
+                case 48:
+                case 52:
+                case 58:
+                case 60:
+                case 64:
                     {
                     alt139=5;
                     }
                     break;
-                case 67:
+                case 68:
                     {
                     alt139=3;
                     }
@@ -17134,12 +17135,12 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case RULE_STRING:
                 case RULE_ID:
                 case RULE_DOUBLE:
-                case 26:
-                case 29:
-                case 49:
+                case 27:
+                case 30:
                 case 50:
-                case 58:
-                case 66:
+                case 51:
+                case 59:
+                case 67:
                     {
                     alt139=1;
                     }
@@ -17154,7 +17155,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                 }
                 break;
-            case 33:
+            case 34:
                 {
                 alt139=4;
                 }
@@ -17162,12 +17163,12 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             case RULE_INTEGER:
             case RULE_STRING:
             case RULE_DOUBLE:
-            case 26:
-            case 29:
-            case 49:
+            case 27:
+            case 30:
             case 50:
-            case 58:
-            case 66:
+            case 51:
+            case 59:
+            case 67:
                 {
                 alt139=5;
                 }
@@ -17304,7 +17305,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_3=(Token)match(input,48,FOLLOW_48_in_rulePatt111592); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,49,FOLLOW_49_in_rulePatt111592); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_3, grammarAccess.getPatt1Access().getFullStopKeyword_1_1());
@@ -17427,7 +17428,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,67,FOLLOW_67_in_rulePatt111675); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,68,FOLLOW_68_in_rulePatt111675); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_7, grammarAccess.getPatt1Access().getCommercialAtKeyword_2_1());
@@ -17480,7 +17481,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6175:6: (otherlv_9= '-' this_Patt2_10= rulePatt2 )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6175:8: otherlv_9= '-' this_Patt2_10= rulePatt2
                     {
-                    otherlv_9=(Token)match(input,33,FOLLOW_33_in_rulePatt111716); if (state.failed) return current;
+                    otherlv_9=(Token)match(input,34,FOLLOW_34_in_rulePatt111716); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_9, grammarAccess.getPatt1Access().getHyphenMinusKeyword_3_0());
@@ -17534,14 +17535,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt138=2;
                     int LA138_0 = input.LA(1);
 
-                    if ( (LA138_0==57) ) {
+                    if ( (LA138_0==58) ) {
                         alt138=1;
                     }
                     switch (alt138) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6198:3: otherlv_12= '*'
                             {
-                            otherlv_12=(Token)match(input,57,FOLLOW_57_in_rulePatt111779); if (state.failed) return current;
+                            otherlv_12=(Token)match(input,58,FOLLOW_58_in_rulePatt111779); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_12, grammarAccess.getPatt1Access().getAsteriskKeyword_4_1());
@@ -17683,7 +17684,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt141=2;
                 int LA141_0 = input.LA(1);
 
-                if ( (LA141_0==47||LA141_0==59) ) {
+                if ( (LA141_0==48||LA141_0==60) ) {
                     alt141=1;
                 }
 
@@ -17696,10 +17697,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             	    int alt140=2;
             	    int LA140_0 = input.LA(1);
 
-            	    if ( (LA140_0==47) ) {
+            	    if ( (LA140_0==48) ) {
             	        alt140=1;
             	    }
-            	    else if ( (LA140_0==59) ) {
+            	    else if ( (LA140_0==60) ) {
             	        alt140=2;
             	    }
             	    else {
@@ -17713,7 +17714,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             	        case 1 :
             	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6241:5: otherlv_1= '|'
             	            {
-            	            otherlv_1=(Token)match(input,47,FOLLOW_47_in_rulePatt11888); if (state.failed) return current;
+            	            otherlv_1=(Token)match(input,48,FOLLOW_48_in_rulePatt11888); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_1, grammarAccess.getPattAccess().getVerticalLineKeyword_1_0_0());
@@ -17725,7 +17726,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             	        case 2 :
             	            // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6246:7: otherlv_2= '+'
             	            {
-            	            otherlv_2=(Token)match(input,59,FOLLOW_59_in_rulePatt11906); if (state.failed) return current;
+            	            otherlv_2=(Token)match(input,60,FOLLOW_60_in_rulePatt11906); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	                  	newLeafNode(otherlv_2, grammarAccess.getPattAccess().getPlusSignKeyword_1_0_1());
@@ -17907,7 +17908,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt142=2;
                 int LA142_0 = input.LA(1);
 
-                if ( (LA142_0==22) ) {
+                if ( (LA142_0==23) ) {
                     alt142=1;
                 }
 
@@ -17916,7 +17917,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6307:4: otherlv_1= ',' ( (lv_name_2_0= ruleIdent ) )
             	    {
-            	    otherlv_1=(Token)match(input,22,FOLLOW_22_in_rulePattAss12035); if (state.failed) return current;
+            	    otherlv_1=(Token)match(input,23,FOLLOW_23_in_rulePattAss12035); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_1, grammarAccess.getPattAssAccess().getCommaKeyword_1_0());
@@ -17966,7 +17967,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_3=(Token)match(input,14,FOLLOW_14_in_rulePattAss12070); if (state.failed) return current;
+            otherlv_3=(Token)match(input,15,FOLLOW_15_in_rulePattAss12070); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_3, grammarAccess.getPattAssAccess().getEqualsSignKeyword_2());
@@ -18092,7 +18093,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( (LA143_0==RULE_ID) ) {
                 alt143=1;
             }
-            else if ( (LA143_0==68) ) {
+            else if ( (LA143_0==69) ) {
                 alt143=2;
             }
             else {
@@ -18150,7 +18151,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6391:6: (otherlv_1= '$' ( (lv_index_2_0= RULE_INTEGER ) ) )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6391:8: otherlv_1= '$' ( (lv_index_2_0= RULE_INTEGER ) )
                     {
-                    otherlv_1=(Token)match(input,68,FOLLOW_68_in_ruleLabel12202); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,69,FOLLOW_69_in_ruleLabel12202); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getLabelAccess().getDollarSignKeyword_1_0());
@@ -18270,22 +18271,22 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6434:1: (kw= 'Type' | kw= 'PType' | kw= 'Str' | kw= 'Strs' )
             int alt144=4;
             switch ( input.LA(1) ) {
-            case 69:
+            case 70:
                 {
                 alt144=1;
                 }
                 break;
-            case 70:
+            case 71:
                 {
                 alt144=2;
                 }
                 break;
-            case 71:
+            case 72:
                 {
                 alt144=3;
                 }
                 break;
-            case 72:
+            case 73:
                 {
                 alt144=4;
                 }
@@ -18302,7 +18303,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6435:2: kw= 'Type'
                     {
-                    kw=(Token)match(input,69,FOLLOW_69_in_ruleSort12311); if (state.failed) return current;
+                    kw=(Token)match(input,70,FOLLOW_70_in_ruleSort12311); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -18315,7 +18316,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6442:2: kw= 'PType'
                     {
-                    kw=(Token)match(input,70,FOLLOW_70_in_ruleSort12330); if (state.failed) return current;
+                    kw=(Token)match(input,71,FOLLOW_71_in_ruleSort12330); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -18328,7 +18329,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 3 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6449:2: kw= 'Str'
                     {
-                    kw=(Token)match(input,71,FOLLOW_71_in_ruleSort12349); if (state.failed) return current;
+                    kw=(Token)match(input,72,FOLLOW_72_in_ruleSort12349); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -18341,7 +18342,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 4 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6456:2: kw= 'Strs'
                     {
-                    kw=(Token)match(input,72,FOLLOW_72_in_ruleSort12368); if (state.failed) return current;
+                    kw=(Token)match(input,73,FOLLOW_73_in_ruleSort12368); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -18429,27 +18430,27 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6482:1: (kw= 'String' | kw= 'Int' | kw= 'Ints' | kw= 'Float' | kw= 'pattern' )
             int alt145=5;
             switch ( input.LA(1) ) {
-            case 73:
+            case 74:
                 {
                 alt145=1;
                 }
                 break;
-            case 74:
+            case 75:
                 {
                 alt145=2;
                 }
                 break;
-            case 75:
+            case 76:
                 {
                 alt145=3;
                 }
                 break;
-            case 76:
+            case 77:
                 {
                 alt145=4;
                 }
                 break;
-            case 77:
+            case 78:
                 {
                 alt145=5;
                 }
@@ -18466,7 +18467,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6483:2: kw= 'String'
                     {
-                    kw=(Token)match(input,73,FOLLOW_73_in_ruleBuiltInCat12458); if (state.failed) return current;
+                    kw=(Token)match(input,74,FOLLOW_74_in_ruleBuiltInCat12458); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -18479,7 +18480,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6490:2: kw= 'Int'
                     {
-                    kw=(Token)match(input,74,FOLLOW_74_in_ruleBuiltInCat12477); if (state.failed) return current;
+                    kw=(Token)match(input,75,FOLLOW_75_in_ruleBuiltInCat12477); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -18492,7 +18493,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 3 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6497:2: kw= 'Ints'
                     {
-                    kw=(Token)match(input,75,FOLLOW_75_in_ruleBuiltInCat12496); if (state.failed) return current;
+                    kw=(Token)match(input,76,FOLLOW_76_in_ruleBuiltInCat12496); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -18505,7 +18506,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 4 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6504:2: kw= 'Float'
                     {
-                    kw=(Token)match(input,76,FOLLOW_76_in_ruleBuiltInCat12515); if (state.failed) return current;
+                    kw=(Token)match(input,77,FOLLOW_77_in_ruleBuiltInCat12515); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -18518,7 +18519,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 5 :
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6511:2: kw= 'pattern'
                     {
-                    kw=(Token)match(input,77,FOLLOW_77_in_ruleBuiltInCat12534); if (state.failed) return current;
+                    kw=(Token)match(input,78,FOLLOW_78_in_ruleBuiltInCat12534); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
@@ -18676,7 +18677,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt146=2;
                         int LA146_0 = input.LA(1);
 
-                        if ( (LA146_0==15) ) {
+                        if ( (LA146_0==16) ) {
                             int LA146_1 = input.LA(2);
 
                             if ( (LA146_1==RULE_ID) ) {
@@ -18691,7 +18692,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6561:4: otherlv_2= ';' ( (lv_assignments_3_0= rulePattAss ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,15,FOLLOW_15_in_ruleListPattAss12653); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleListPattAss12653); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getListPattAssAccess().getSemicolonKeyword_1_1_0());
@@ -18745,14 +18746,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     int alt147=2;
                     int LA147_0 = input.LA(1);
 
-                    if ( (LA147_0==15) ) {
+                    if ( (LA147_0==16) ) {
                         alt147=1;
                     }
                     switch (alt147) {
                         case 1 :
                             // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6583:6: otherlv_4= ';'
                             {
-                            otherlv_4=(Token)match(input,15,FOLLOW_15_in_ruleListPattAss12689); if (state.failed) return current;
+                            otherlv_4=(Token)match(input,16,FOLLOW_16_in_ruleListPattAss12689); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_4, grammarAccess.getListPattAssAccess().getSemicolonKeyword_1_2());
@@ -18853,7 +18854,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt149=2;
                 int LA149_0 = input.LA(1);
 
-                if ( ((LA149_0>=RULE_INTEGER && LA149_0<=RULE_DOUBLE)||LA149_0==26||LA149_0==29||(LA149_0>=49 && LA149_0<=50)||LA149_0==58||LA149_0==66) ) {
+                if ( ((LA149_0>=RULE_INTEGER && LA149_0<=RULE_DOUBLE)||LA149_0==27||LA149_0==30||(LA149_0>=50 && LA149_0<=51)||LA149_0==59||LA149_0==67) ) {
                     alt149=1;
                 }
 
@@ -18986,7 +18987,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             if ( (LA150_0==RULE_ID) ) {
                 alt150=1;
             }
-            else if ( (LA150_0==66) ) {
+            else if ( (LA150_0==67) ) {
                 alt150=2;
             }
             else {
@@ -19057,7 +19058,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,66,FOLLOW_66_in_ruleBind12904); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,67,FOLLOW_67_in_ruleBind12904); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getBindAccess().get_Keyword_1_1());
@@ -19168,7 +19169,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt152=2;
             int LA152_0 = input.LA(1);
 
-            if ( (LA152_0==RULE_ID||LA152_0==66) ) {
+            if ( (LA152_0==RULE_ID||LA152_0==67) ) {
                 alt152=1;
             }
             switch (alt152) {
@@ -19216,7 +19217,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt151=2;
                         int LA151_0 = input.LA(1);
 
-                        if ( (LA151_0==22) ) {
+                        if ( (LA151_0==23) ) {
                             alt151=1;
                         }
 
@@ -19225,7 +19226,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6721:4: otherlv_2= ',' ( (lv_bindings_3_0= ruleBind ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleListBind13020); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,23,FOLLOW_23_in_ruleListBind13020); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getListBindAccess().getCommaKeyword_1_1_0());
@@ -19558,7 +19559,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt154=2;
             int LA154_0 = input.LA(1);
 
-            if ( ((LA154_0>=RULE_INTEGER && LA154_0<=RULE_DOUBLE)||LA154_0==26||LA154_0==29||LA154_0==31||LA154_0==38||LA154_0==42||LA154_0==44||(LA154_0>=49 && LA154_0<=50)||(LA154_0>=52 && LA154_0<=55)||LA154_0==58||LA154_0==61||LA154_0==64||(LA154_0>=69 && LA154_0<=77)) ) {
+            if ( ((LA154_0>=RULE_INTEGER && LA154_0<=RULE_DOUBLE)||LA154_0==27||LA154_0==30||LA154_0==32||LA154_0==39||LA154_0==43||LA154_0==45||(LA154_0>=50 && LA154_0<=51)||(LA154_0>=53 && LA154_0<=56)||LA154_0==59||LA154_0==62||LA154_0==65||(LA154_0>=70 && LA154_0<=78)) ) {
                 alt154=1;
             }
             switch (alt154) {
@@ -19606,7 +19607,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt153=2;
                         int LA153_0 = input.LA(1);
 
-                        if ( (LA153_0==22) ) {
+                        if ( (LA153_0==23) ) {
                             alt153=1;
                         }
 
@@ -19615,7 +19616,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6848:4: otherlv_2= ',' ( (lv_l_3_0= ruleTupleComp ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleListTupleComp13340); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,23,FOLLOW_23_in_ruleListTupleComp13340); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getListTupleCompAccess().getCommaKeyword_1_1_0());
@@ -19770,7 +19771,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt156=2;
             int LA156_0 = input.LA(1);
 
-            if ( ((LA156_0>=RULE_INTEGER && LA156_0<=RULE_DOUBLE)||LA156_0==26||LA156_0==29||LA156_0==33||(LA156_0>=49 && LA156_0<=50)||LA156_0==58||LA156_0==66) ) {
+            if ( ((LA156_0>=RULE_INTEGER && LA156_0<=RULE_DOUBLE)||LA156_0==27||LA156_0==30||LA156_0==34||(LA156_0>=50 && LA156_0<=51)||LA156_0==59||LA156_0==67) ) {
                 alt156=1;
             }
             switch (alt156) {
@@ -19818,7 +19819,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int alt155=2;
                         int LA155_0 = input.LA(1);
 
-                        if ( (LA155_0==22) ) {
+                        if ( (LA155_0==23) ) {
                             alt155=1;
                         }
 
@@ -19827,7 +19828,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     	case 1 :
                     	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:6915:4: otherlv_2= ',' ( (lv_l_3_0= rulePattTupleComp ) )
                     	    {
-                    	    otherlv_2=(Token)match(input,22,FOLLOW_22_in_ruleListPattTupleComp13480); if (state.failed) return current;
+                    	    otherlv_2=(Token)match(input,23,FOLLOW_23_in_ruleListPattTupleComp13480); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	          	newLeafNode(otherlv_2, grammarAccess.getListPattTupleCompAccess().getCommaKeyword_1_1_0());
@@ -20000,7 +20001,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,63,FOLLOW_63_in_ruleCase13609); if (state.failed) return current;
+            otherlv_1=(Token)match(input,64,FOLLOW_64_in_ruleCase13609); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getCaseAccess().getEqualsSignGreaterThanSignKeyword_1());
@@ -20164,7 +20165,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 int alt157=2;
                 int LA157_0 = input.LA(1);
 
-                if ( (LA157_0==15) ) {
+                if ( (LA157_0==16) ) {
                     alt157=1;
                 }
 
@@ -20173,7 +20174,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7037:4: otherlv_1= ';' ( (lv_cases_2_0= ruleCase ) )
             	    {
-            	    otherlv_1=(Token)match(input,15,FOLLOW_15_in_ruleListCase13735); if (state.failed) return current;
+            	    otherlv_1=(Token)match(input,16,FOLLOW_16_in_ruleListCase13735); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	          	newLeafNode(otherlv_1, grammarAccess.getListCaseAccess().getSemicolonKeyword_1_0());
@@ -20310,16 +20311,16 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             int alt158=2;
             int LA158_0 = input.LA(1);
 
-            if ( (LA158_0==29) ) {
+            if ( (LA158_0==30) ) {
                 switch ( input.LA(2) ) {
                 case RULE_ID:
                     {
                     int LA158_3 = input.LA(3);
 
-                    if ( ((LA158_3>=RULE_INTEGER && LA158_3<=RULE_DOUBLE)||LA158_3==23||LA158_3==26||(LA158_3>=29 && LA158_3<=31)||LA158_3==38||(LA158_3>=47 && LA158_3<=50)||(LA158_3>=56 && LA158_3<=57)||(LA158_3>=59 && LA158_3<=60)||(LA158_3>=62 && LA158_3<=63)||LA158_3==65||(LA158_3>=69 && LA158_3<=77)) ) {
+                    if ( ((LA158_3>=RULE_INTEGER && LA158_3<=RULE_DOUBLE)||LA158_3==24||LA158_3==27||(LA158_3>=30 && LA158_3<=32)||LA158_3==39||(LA158_3>=48 && LA158_3<=51)||(LA158_3>=57 && LA158_3<=58)||(LA158_3>=60 && LA158_3<=61)||(LA158_3>=63 && LA158_3<=64)||LA158_3==66||(LA158_3>=70 && LA158_3<=78)) ) {
                         alt158=2;
                     }
-                    else if ( (LA158_3==22||LA158_3==34) ) {
+                    else if ( (LA158_3==23||LA158_3==35) ) {
                         alt158=1;
                     }
                     else {
@@ -20331,8 +20332,8 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     }
                     }
                     break;
-                case 34:
-                case 66:
+                case 35:
+                case 67:
                     {
                     alt158=1;
                     }
@@ -20340,22 +20341,21 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case RULE_INTEGER:
                 case RULE_STRING:
                 case RULE_DOUBLE:
-                case 26:
-                case 29:
-                case 31:
-                case 38:
-                case 42:
-                case 44:
-                case 49:
+                case 27:
+                case 30:
+                case 32:
+                case 39:
+                case 43:
+                case 45:
                 case 50:
-                case 52:
+                case 51:
                 case 53:
                 case 54:
                 case 55:
-                case 58:
-                case 61:
-                case 64:
-                case 69:
+                case 56:
+                case 59:
+                case 62:
+                case 65:
                 case 70:
                 case 71:
                 case 72:
@@ -20364,6 +20364,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 case 75:
                 case 76:
                 case 77:
+                case 78:
                     {
                     alt158=2;
                     }
@@ -20377,7 +20378,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                 }
 
             }
-            else if ( ((LA158_0>=RULE_INTEGER && LA158_0<=RULE_DOUBLE)||LA158_0==26||LA158_0==31||LA158_0==38||(LA158_0>=49 && LA158_0<=50)||(LA158_0>=69 && LA158_0<=77)) ) {
+            else if ( ((LA158_0>=RULE_INTEGER && LA158_0<=RULE_DOUBLE)||LA158_0==27||LA158_0==32||LA158_0==39||(LA158_0>=50 && LA158_0<=51)||(LA158_0>=70 && LA158_0<=78)) ) {
                 alt158=2;
             }
             else {
@@ -20394,7 +20395,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7080:2: (otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')' )
                     // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:7080:4: otherlv_0= '(' ( (lv_bindList_1_0= ruleListBind ) ) otherlv_2= ':' ( (lv_e_3_0= ruleExp ) ) otherlv_4= ')'
                     {
-                    otherlv_0=(Token)match(input,29,FOLLOW_29_in_ruleDDecl13842); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,30,FOLLOW_30_in_ruleDDecl13842); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_0, grammarAccess.getDDeclAccess().getLeftParenthesisKeyword_0_0());
@@ -20435,7 +20436,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,34,FOLLOW_34_in_ruleDDecl13875); if (state.failed) return current;
+                    otherlv_2=(Token)match(input,35,FOLLOW_35_in_ruleDDecl13875); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_2, grammarAccess.getDDeclAccess().getColonKeyword_0_2());
@@ -20476,7 +20477,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,30,FOLLOW_30_in_ruleDDecl13908); if (state.failed) return current;
+                    otherlv_4=(Token)match(input,31,FOLLOW_31_in_ruleDDecl13908); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_4, grammarAccess.getDDeclAccess().getRightParenthesisKeyword_0_4());
@@ -20670,7 +20671,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4967:4: ( '|' )
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:4967:6: '|'
         {
-        match(input,47,FOLLOW_47_in_synpred3_InternalGF9351); if (state.failed) return ;
+        match(input,48,FOLLOW_48_in_synpred3_InternalGF9351); if (state.failed) return ;
 
         }
     }
@@ -20681,7 +20682,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5039:4: ( '|' )
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5039:6: '|'
         {
-        match(input,47,FOLLOW_47_in_synpred4_InternalGF9482); if (state.failed) return ;
+        match(input,48,FOLLOW_48_in_synpred4_InternalGF9482); if (state.failed) return ;
 
         }
     }
@@ -20692,7 +20693,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5115:4: ( '|' )
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5115:6: '|'
         {
-        match(input,47,FOLLOW_47_in_synpred5_InternalGF9625); if (state.failed) return ;
+        match(input,48,FOLLOW_48_in_synpred5_InternalGF9625); if (state.failed) return ;
 
         }
     }
@@ -20703,7 +20704,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5183:4: ( '|' )
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5183:6: '|'
         {
-        match(input,47,FOLLOW_47_in_synpred6_InternalGF9744); if (state.failed) return ;
+        match(input,48,FOLLOW_48_in_synpred6_InternalGF9744); if (state.failed) return ;
 
         }
     }
@@ -20714,7 +20715,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5277:4: ( '|' )
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5277:6: '|'
         {
-        match(input,47,FOLLOW_47_in_synpred7_InternalGF9908); if (state.failed) return ;
+        match(input,48,FOLLOW_48_in_synpred7_InternalGF9908); if (state.failed) return ;
 
         }
     }
@@ -20725,7 +20726,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5472:6: ( '|' )
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5472:8: '|'
         {
-        match(input,47,FOLLOW_47_in_synpred8_InternalGF10283); if (state.failed) return ;
+        match(input,48,FOLLOW_48_in_synpred8_InternalGF10283); if (state.failed) return ;
 
         }
     }
@@ -20736,7 +20737,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5648:8: ( '|' )
         // ../org.grammaticalframework.eclipse/src-gen/org/grammaticalframework/eclipse/parser/antlr/internal/InternalGF.g:5648:10: '|'
         {
-        match(input,47,FOLLOW_47_in_synpred9_InternalGF10625); if (state.failed) return ;
+        match(input,48,FOLLOW_48_in_synpred9_InternalGF10625); if (state.failed) return ;
 
         }
     }
@@ -20890,31 +20891,31 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         "\uffff\1\35\2\uffff\1\35\4\uffff\1\4\2\uffff\2\20\6\uffff\2\35\1"+
         "\20\1\uffff\1\35";
     static final String DFA33_minS =
-        "\1\6\1\17\1\6\2\uffff\2\6\1\37\1\6\1\34\1\26\1\17\1\6\1\17\1\6\2"+
-        "\uffff\2\6\1\37\1\6\1\17\1\37\1\6\1\26\1\6\1\16\1\17\1\6\2\uffff"+
-        "\1\26\1\6\1\26\1\6\1\26\1\6\2\17\1\6\1\17\2\6\1\16\1\6\1\34\2\26"+
-        "\1\6\1\17\1\26\1\16\1\36\1\17\2\6\1\17\1\26\1\6\1\34\1\6\1\17\1"+
-        "\26\1\6\2\17\1\16\1\36\2\26\1\36\1\6\3\17\1\36\1\17";
+        "\1\6\1\20\1\6\2\uffff\2\6\1\40\1\6\1\35\1\27\1\20\1\6\1\20\1\6\2"+
+        "\uffff\2\6\1\40\1\6\1\20\1\40\1\6\1\27\1\6\1\17\1\20\1\6\2\uffff"+
+        "\1\27\1\6\1\27\1\6\1\27\1\6\2\20\1\6\1\20\2\6\1\17\1\6\1\35\2\27"+
+        "\1\6\1\20\1\27\1\17\1\37\1\20\2\6\1\20\1\27\1\6\1\35\1\6\1\20\1"+
+        "\27\1\6\2\20\1\17\1\37\2\27\1\37\1\6\3\20\1\37\1\20";
     static final String DFA33_maxS =
-        "\1\32\1\41\1\32\2\uffff\2\6\1\37\1\35\1\41\1\40\1\41\1\6\1\27\1"+
-        "\6\2\uffff\1\35\1\6\1\37\1\6\1\34\1\37\1\6\1\40\1\35\1\36\1\27\1"+
-        "\6\2\uffff\1\40\1\6\1\40\1\6\1\40\1\6\1\34\1\27\1\6\1\27\1\6\1\35"+
-        "\1\36\1\6\1\34\2\40\1\6\1\27\1\40\2\36\1\27\2\6\1\27\1\40\1\6\1"+
-        "\34\1\6\1\27\1\40\1\6\2\27\2\36\2\40\1\36\1\6\3\27\1\36\1\27";
+        "\1\33\1\42\1\33\2\uffff\2\6\1\40\1\36\1\42\1\41\1\42\1\6\1\30\1"+
+        "\6\2\uffff\1\36\1\6\1\40\1\6\1\35\1\40\1\6\1\41\1\36\1\37\1\30\1"+
+        "\6\2\uffff\1\41\1\6\1\41\1\6\1\41\1\6\1\35\1\30\1\6\1\30\1\6\1\36"+
+        "\1\37\1\6\1\35\2\41\1\6\1\30\1\41\2\37\1\30\2\6\1\30\1\41\1\6\1"+
+        "\35\1\6\1\30\1\41\1\6\2\30\2\37\2\41\1\37\1\6\3\30\1\37\1\30";
     static final String DFA33_acceptS =
         "\3\uffff\1\1\1\2\12\uffff\1\4\1\3\14\uffff\1\5\1\6\56\uffff";
     static final String DFA33_specialS =
         "\115\uffff}>";
     static final String[] DFA33_transitionS = {
-            "\1\1\10\uffff\1\4\7\uffff\1\2\1\3\1\uffff\1\3",
+            "\1\1\11\uffff\1\4\7\uffff\1\2\1\3\1\uffff\1\3",
             "\1\4\6\uffff\1\6\1\2\4\uffff\1\10\2\uffff\1\5\1\uffff\1\7",
-            "\1\11\21\uffff\1\3\1\uffff\1\3",
+            "\1\11\22\uffff\1\3\1\uffff\1\3",
             "",
             "",
             "\1\12",
             "\1\13",
             "\1\14",
-            "\1\15\10\uffff\1\20\7\uffff\1\17\5\uffff\1\16",
+            "\1\15\11\uffff\1\20\7\uffff\1\17\5\uffff\1\16",
             "\1\21\2\uffff\1\22\1\uffff\1\23",
             "\1\24\11\uffff\1\25",
             "\1\4\6\uffff\1\6\1\2\7\uffff\1\27\1\uffff\1\26",
@@ -20923,7 +20924,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "\1\32",
             "",
             "",
-            "\1\33\10\uffff\1\35\7\uffff\1\36\5\uffff\1\34",
+            "\1\33\11\uffff\1\35\7\uffff\1\36\5\uffff\1\34",
             "\1\37",
             "\1\40",
             "\1\41",
@@ -20931,7 +20932,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "\1\42",
             "\1\43",
             "\1\44\11\uffff\1\45",
-            "\1\46\26\uffff\1\47",
+            "\1\46\27\uffff\1\47",
             "\1\51\17\uffff\1\50",
             "\1\35\6\uffff\1\52\1\36",
             "\1\53",
@@ -20948,7 +20949,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "\1\63",
             "\1\20\6\uffff\1\31\1\17",
             "\1\64",
-            "\1\65\26\uffff\1\66",
+            "\1\65\27\uffff\1\66",
             "\1\67\17\uffff\1\70",
             "\1\71",
             "\1\21",
@@ -21023,26 +21024,26 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA41_eofS =
         "\15\uffff";
     static final String DFA41_minS =
-        "\1\6\1\4\2\6\3\uffff\1\40\1\16\1\6\1\4\1\40\1\16";
+        "\1\6\1\4\2\6\3\uffff\1\41\1\17\1\6\1\4\1\41\1\17";
     static final String DFA41_maxS =
-        "\1\37\1\102\1\6\1\37\3\uffff\1\40\1\42\1\6\1\102\1\40\1\42";
+        "\1\40\1\103\1\6\1\40\3\uffff\1\41\1\43\1\6\1\103\1\41\1\43";
     static final String DFA41_acceptS =
         "\4\uffff\1\1\1\3\1\2\6\uffff";
     static final String DFA41_specialS =
         "\15\uffff}>";
     static final String[] DFA41_transitionS = {
-            "\1\1\30\uffff\1\2",
-            "\4\5\6\uffff\1\4\7\uffff\1\3\3\uffff\1\5\2\uffff\1\5\4\uffff"+
+            "\1\1\31\uffff\1\2",
+            "\4\5\7\uffff\1\4\7\uffff\1\3\3\uffff\1\5\2\uffff\1\5\4\uffff"+
             "\1\6\16\uffff\2\5\7\uffff\1\5\7\uffff\1\5",
             "\1\7",
-            "\1\10\30\uffff\1\11",
+            "\1\10\31\uffff\1\11",
             "",
             "",
             "",
             "\1\12",
             "\1\4\7\uffff\1\3\13\uffff\1\6",
             "\1\13",
-            "\4\5\6\uffff\1\4\7\uffff\1\3\3\uffff\1\5\2\uffff\1\5\4\uffff"+
+            "\4\5\7\uffff\1\4\7\uffff\1\3\3\uffff\1\5\2\uffff\1\5\4\uffff"+
             "\1\6\16\uffff\2\5\7\uffff\1\5\7\uffff\1\5",
             "\1\14",
             "\1\4\7\uffff\1\3\13\uffff\1\6"
@@ -21086,24 +21087,24 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA54_eofS =
         "\17\uffff";
     static final String DFA54_minS =
-        "\1\6\1\4\1\6\1\uffff\1\6\1\uffff\1\4\1\40\1\16\1\6\2\uffff\1\4\1"+
-        "\40\1\16";
+        "\1\6\1\4\1\6\1\uffff\1\6\1\uffff\1\4\1\41\1\17\1\6\2\uffff\1\4\1"+
+        "\41\1\17";
     static final String DFA54_maxS =
-        "\1\37\1\102\1\6\1\uffff\1\37\1\uffff\1\115\1\40\1\42\1\6\2\uffff"+
-        "\1\102\1\40\1\42";
+        "\1\40\1\103\1\6\1\uffff\1\40\1\uffff\1\116\1\41\1\43\1\6\2\uffff"+
+        "\1\103\1\41\1\43";
     static final String DFA54_acceptS =
         "\3\uffff\1\4\1\uffff\1\1\4\uffff\1\3\1\2\3\uffff";
     static final String DFA54_specialS =
         "\17\uffff}>";
     static final String[] DFA54_transitionS = {
-            "\1\1\30\uffff\1\2",
-            "\4\3\6\uffff\1\5\7\uffff\1\4\3\uffff\1\3\2\uffff\1\3\4\uffff"+
+            "\1\1\31\uffff\1\2",
+            "\4\3\7\uffff\1\5\7\uffff\1\4\3\uffff\1\3\2\uffff\1\3\4\uffff"+
             "\1\6\16\uffff\2\3\7\uffff\1\3\7\uffff\1\3",
             "\1\7",
             "",
-            "\1\10\30\uffff\1\11",
+            "\1\10\31\uffff\1\11",
             "",
-            "\4\13\22\uffff\1\13\2\uffff\1\13\1\uffff\1\13\3\uffff\1\12"+
+            "\4\13\23\uffff\1\13\2\uffff\1\13\1\uffff\1\13\3\uffff\1\12"+
             "\2\uffff\1\13\3\uffff\1\13\1\uffff\1\13\4\uffff\2\13\1\uffff"+
             "\4\13\2\uffff\1\13\2\uffff\1\13\2\uffff\1\13\4\uffff\11\13",
             "\1\14",
@@ -21111,7 +21112,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "\1\15",
             "",
             "",
-            "\4\3\6\uffff\1\5\7\uffff\1\4\3\uffff\1\3\2\uffff\1\3\4\uffff"+
+            "\4\3\7\uffff\1\5\7\uffff\1\4\3\uffff\1\3\2\uffff\1\3\4\uffff"+
             "\1\6\16\uffff\2\3\7\uffff\1\3\7\uffff\1\3",
             "\1\16",
             "\1\5\7\uffff\1\4\13\uffff\1\6"
@@ -21155,9 +21156,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA68_eofS =
         "\21\uffff";
     static final String DFA68_minS =
-        "\1\44\2\uffff\1\6\6\uffff\1\44\1\uffff\1\16\4\uffff";
+        "\1\45\2\uffff\1\6\6\uffff\1\45\1\uffff\1\17\4\uffff";
     static final String DFA68_maxS =
-        "\1\56\2\uffff\1\6\6\uffff\1\45\1\uffff\1\42\4\uffff";
+        "\1\57\2\uffff\1\6\6\uffff\1\46\1\uffff\1\43\4\uffff";
     static final String DFA68_acceptS =
         "\1\uffff\1\1\1\2\1\uffff\1\4\1\6\1\7\1\10\1\11\1\12\1\uffff\1\15"+
         "\1\uffff\1\14\1\13\1\5\1\3";
@@ -21221,9 +21222,9 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA89_eofS =
         "\6\uffff";
     static final String DFA89_minS =
-        "\1\6\1\16\1\6\2\uffff\1\16";
+        "\1\6\1\17\1\6\2\uffff\1\17";
     static final String DFA89_maxS =
-        "\1\6\1\42\1\6\2\uffff\1\42";
+        "\1\6\1\43\1\6\2\uffff\1\43";
     static final String DFA89_acceptS =
         "\3\uffff\1\2\1\1\1\uffff";
     static final String DFA89_specialS =
@@ -21277,14 +21278,14 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA95_minS =
         "\1\4\7\uffff\1\5\7\uffff";
     static final String DFA95_maxS =
-        "\1\115\7\uffff\1\40\7\uffff";
+        "\1\116\7\uffff\1\41\7\uffff";
     static final String DFA95_acceptS =
         "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\uffff\1\11\1\14\1\15\1\16"+
         "\1\12\1\13\1\10";
     static final String DFA95_specialS =
         "\20\uffff}>";
     static final String[] DFA95_transitionS = {
-            "\1\5\1\4\1\1\1\6\22\uffff\1\12\2\uffff\1\14\1\uffff\1\10\6\uffff"+
+            "\1\5\1\4\1\1\1\6\23\uffff\1\12\2\uffff\1\14\1\uffff\1\10\6\uffff"+
             "\1\11\12\uffff\1\7\1\13\22\uffff\4\2\5\3",
             "",
             "",
@@ -21293,7 +21294,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "",
             "",
             "",
-            "\1\16\1\15\31\uffff\1\17",
+            "\1\16\1\15\32\uffff\1\17",
             "",
             "",
             "",
@@ -21343,7 +21344,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA94_minS =
         "\1\4\34\0\2\uffff";
     static final String DFA94_maxS =
-        "\1\115\34\0\2\uffff";
+        "\1\116\34\0\2\uffff";
     static final String DFA94_acceptS =
         "\35\uffff\1\1\1\2";
     static final String DFA94_specialS =
@@ -21351,7 +21352,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
         "\16\1\17\1\20\1\21\1\22\1\23\1\24\1\25\1\26\1\27\1\30\1\31\1\32"+
         "\1\33\1\34\2\uffff}>";
     static final String[] DFA94_transitionS = {
-            "\1\25\1\24\1\12\1\26\22\uffff\1\32\2\uffff\1\3\1\uffff\1\30"+
+            "\1\25\1\24\1\12\1\26\23\uffff\1\32\2\uffff\1\3\1\uffff\1\30"+
             "\6\uffff\1\31\3\uffff\1\10\1\uffff\1\11\4\uffff\1\27\1\33\1"+
             "\35\1\4\1\5\1\6\1\7\2\uffff\1\34\2\uffff\1\1\2\uffff\1\2\4\uffff"+
             "\1\13\1\14\1\15\1\16\1\17\1\20\1\21\1\22\1\23",
@@ -21430,43 +21431,43 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                         int index94_0 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA94_0==61) ) {s = 1;}
+                        if ( (LA94_0==62) ) {s = 1;}
 
-                        else if ( (LA94_0==64) ) {s = 2;}
+                        else if ( (LA94_0==65) ) {s = 2;}
 
-                        else if ( (LA94_0==29) ) {s = 3;}
+                        else if ( (LA94_0==30) ) {s = 3;}
 
-                        else if ( (LA94_0==52) ) {s = 4;}
+                        else if ( (LA94_0==53) ) {s = 4;}
 
-                        else if ( (LA94_0==53) ) {s = 5;}
+                        else if ( (LA94_0==54) ) {s = 5;}
 
-                        else if ( (LA94_0==54) ) {s = 6;}
+                        else if ( (LA94_0==55) ) {s = 6;}
 
-                        else if ( (LA94_0==55) ) {s = 7;}
+                        else if ( (LA94_0==56) ) {s = 7;}
 
-                        else if ( (LA94_0==42) ) {s = 8;}
+                        else if ( (LA94_0==43) ) {s = 8;}
 
-                        else if ( (LA94_0==44) ) {s = 9;}
+                        else if ( (LA94_0==45) ) {s = 9;}
 
                         else if ( (LA94_0==RULE_ID) ) {s = 10;}
 
-                        else if ( (LA94_0==69) ) {s = 11;}
+                        else if ( (LA94_0==70) ) {s = 11;}
 
-                        else if ( (LA94_0==70) ) {s = 12;}
+                        else if ( (LA94_0==71) ) {s = 12;}
 
-                        else if ( (LA94_0==71) ) {s = 13;}
+                        else if ( (LA94_0==72) ) {s = 13;}
 
-                        else if ( (LA94_0==72) ) {s = 14;}
+                        else if ( (LA94_0==73) ) {s = 14;}
 
-                        else if ( (LA94_0==73) ) {s = 15;}
+                        else if ( (LA94_0==74) ) {s = 15;}
 
-                        else if ( (LA94_0==74) ) {s = 16;}
+                        else if ( (LA94_0==75) ) {s = 16;}
 
-                        else if ( (LA94_0==75) ) {s = 17;}
+                        else if ( (LA94_0==76) ) {s = 17;}
 
-                        else if ( (LA94_0==76) ) {s = 18;}
+                        else if ( (LA94_0==77) ) {s = 18;}
 
-                        else if ( (LA94_0==77) ) {s = 19;}
+                        else if ( (LA94_0==78) ) {s = 19;}
 
                         else if ( (LA94_0==RULE_STRING) ) {s = 20;}
 
@@ -21474,19 +21475,19 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
                         else if ( (LA94_0==RULE_DOUBLE) ) {s = 22;}
 
-                        else if ( (LA94_0==49) ) {s = 23;}
+                        else if ( (LA94_0==50) ) {s = 23;}
 
-                        else if ( (LA94_0==31) ) {s = 24;}
+                        else if ( (LA94_0==32) ) {s = 24;}
 
-                        else if ( (LA94_0==38) ) {s = 25;}
+                        else if ( (LA94_0==39) ) {s = 25;}
 
-                        else if ( (LA94_0==26) ) {s = 26;}
+                        else if ( (LA94_0==27) ) {s = 26;}
 
-                        else if ( (LA94_0==50) ) {s = 27;}
+                        else if ( (LA94_0==51) ) {s = 27;}
 
-                        else if ( (LA94_0==58) ) {s = 28;}
+                        else if ( (LA94_0==59) ) {s = 28;}
 
-                        else if ( (LA94_0==51) && (synpred2_InternalGF())) {s = 29;}
+                        else if ( (LA94_0==52) && (synpred2_InternalGF())) {s = 29;}
 
                          
                         input.seek(index94_0);
@@ -21927,16 +21928,16 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA106_minS =
         "\2\4\6\uffff\1\4\1\uffff\1\4\1\uffff";
     static final String DFA106_maxS =
-        "\2\115\6\uffff\1\102\1\uffff\1\103\1\uffff";
+        "\2\116\6\uffff\1\103\1\uffff\1\104\1\uffff";
     static final String DFA106_acceptS =
         "\2\uffff\1\3\1\4\1\5\1\6\1\7\1\10\1\uffff\1\2\1\uffff\1\1";
     static final String DFA106_specialS =
         "\14\uffff}>";
     static final String[] DFA106_transitionS = {
-            "\4\7\22\uffff\1\7\2\uffff\1\7\1\uffff\1\7\6\uffff\1\7\3\uffff"+
+            "\4\7\23\uffff\1\7\2\uffff\1\7\1\uffff\1\7\6\uffff\1\7\3\uffff"+
             "\1\5\1\uffff\1\6\4\uffff\2\7\1\uffff\1\1\1\2\1\3\1\4\15\uffff"+
             "\11\7",
-            "\4\11\22\uffff\1\10\2\uffff\1\11\1\uffff\1\11\6\uffff\1\11"+
+            "\4\11\23\uffff\1\10\2\uffff\1\11\1\uffff\1\11\6\uffff\1\11"+
             "\12\uffff\2\11\22\uffff\11\11",
             "",
             "",
@@ -21944,10 +21945,10 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "",
             "",
             "",
-            "\2\13\1\12\1\13\22\uffff\1\13\1\11\1\uffff\1\13\3\uffff\1\13"+
+            "\2\13\1\12\1\13\23\uffff\1\13\1\11\1\uffff\1\13\3\uffff\1\13"+
             "\17\uffff\2\13\7\uffff\1\13\7\uffff\1\13",
             "",
-            "\4\13\6\uffff\1\11\7\uffff\1\11\3\uffff\1\13\2\uffff\1\13\4"+
+            "\4\13\7\uffff\1\11\7\uffff\1\11\3\uffff\1\13\2\uffff\1\13\4"+
             "\uffff\1\11\14\uffff\4\13\6\uffff\3\13\3\uffff\1\13\2\uffff"+
             "\2\13",
             ""
@@ -21993,18 +21994,18 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA132_minS =
         "\1\4\2\6\1\4\6\uffff\1\4\1\uffff";
     static final String DFA132_maxS =
-        "\1\115\1\102\1\32\1\115\6\uffff\1\115\1\uffff";
+        "\1\116\1\103\1\33\1\116\6\uffff\1\116\1\uffff";
     static final String DFA132_acceptS =
         "\4\uffff\1\6\1\7\1\2\1\1\1\4\1\3\1\uffff\1\5";
     static final String DFA132_specialS =
         "\14\uffff}>";
     static final String[] DFA132_transitionS = {
-            "\4\4\22\uffff\1\4\2\uffff\1\3\1\uffff\1\4\6\uffff\1\4\3\uffff"+
+            "\4\4\23\uffff\1\4\2\uffff\1\3\1\uffff\1\4\6\uffff\1\4\3\uffff"+
             "\1\4\1\uffff\1\4\4\uffff\2\4\1\uffff\4\4\2\uffff\1\5\2\uffff"+
             "\1\1\2\uffff\1\2\4\uffff\11\4",
-            "\1\7\66\uffff\1\6\1\7\3\uffff\1\7",
-            "\1\10\22\uffff\1\10\1\11",
-            "\2\4\1\12\1\4\22\uffff\1\4\2\uffff\1\4\1\uffff\1\4\2\uffff"+
+            "\1\7\67\uffff\1\6\1\7\3\uffff\1\7",
+            "\1\10\23\uffff\1\10\1\11",
+            "\2\4\1\12\1\4\23\uffff\1\4\2\uffff\1\4\1\uffff\1\4\2\uffff"+
             "\1\13\3\uffff\1\4\3\uffff\1\4\1\uffff\1\4\4\uffff\2\4\1\uffff"+
             "\4\4\2\uffff\1\4\2\uffff\1\4\2\uffff\1\4\1\uffff\1\13\2\uffff"+
             "\11\4",
@@ -22014,7 +22015,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
             "",
             "",
             "",
-            "\4\4\16\uffff\1\13\1\4\2\uffff\1\4\2\uffff\3\4\2\uffff\1\13"+
+            "\4\4\17\uffff\1\13\1\4\2\uffff\1\4\2\uffff\3\4\2\uffff\1\13"+
             "\3\uffff\1\4\10\uffff\4\4\5\uffff\2\4\1\uffff\2\4\1\uffff\2"+
             "\4\1\uffff\1\4\3\uffff\11\4",
             ""
@@ -22060,16 +22061,16 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     static final String DFA137_minS =
         "\1\4\1\uffff\1\4\12\uffff";
     static final String DFA137_maxS =
-        "\1\102\1\uffff\1\102\12\uffff";
+        "\1\103\1\uffff\1\103\12\uffff";
     static final String DFA137_acceptS =
         "\1\uffff\1\1\1\uffff\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\3\1\2";
     static final String DFA137_specialS =
         "\15\uffff}>";
     static final String[] DFA137_transitionS = {
-            "\1\3\1\5\1\2\1\4\22\uffff\1\6\2\uffff\1\12\23\uffff\1\11\1\7"+
+            "\1\3\1\5\1\2\1\4\23\uffff\1\6\2\uffff\1\12\23\uffff\1\11\1\7"+
             "\7\uffff\1\10\7\uffff\1\1",
             "",
-            "\4\14\6\uffff\2\14\4\uffff\1\14\1\uffff\2\14\1\uffff\3\14\1"+
+            "\4\14\7\uffff\2\14\4\uffff\1\14\1\uffff\2\14\1\uffff\3\14\1"+
             "\uffff\2\14\1\uffff\1\14\1\uffff\1\14\14\uffff\1\14\1\13\3\14"+
             "\4\uffff\5\14\2\uffff\1\14\1\uffff\2\14",
             "",
@@ -22121,311 +22122,311 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleModDef_in_entryRuleModDef75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModDef85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleModDef128 = new BitSet(new long[]{0x00000000002F0000L});
-    public static final BitSet FOLLOW_ruleModType_in_ruleModDef163 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleModDef175 = new BitSet(new long[]{0x0000000005808040L});
-    public static final BitSet FOLLOW_ruleModBody_in_ruleModDef196 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleModDef209 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_14_in_ruleModDef128 = new BitSet(new long[]{0x00000000005E0000L});
+    public static final BitSet FOLLOW_ruleModType_in_ruleModDef163 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleModDef175 = new BitSet(new long[]{0x000000000B010040L});
+    public static final BitSet FOLLOW_ruleModBody_in_ruleModDef196 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_ruleModDef209 = new BitSet(new long[]{0x0000000000010002L});
     public static final BitSet FOLLOW_ruleModType_in_entryRuleModType247 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModType257 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_ruleModType301 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_17_in_ruleModType301 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleModType335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleModType361 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_18_in_ruleModType361 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleModType395 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleModType421 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_19_in_ruleModType421 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleModType455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleModType481 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleModType515 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleModType527 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_20_in_ruleModType481 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleModType515 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleModType527 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleModType548 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleModType574 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleModType608 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleModType620 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_22_in_ruleModType574 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleModType608 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleModType620 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleModType641 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleModBody_in_entryRuleModBody678 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModBody688 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody746 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleModBody759 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody780 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_23_in_ruleModBody796 = new BitSet(new long[]{0x0000000005000000L});
-    public static final BitSet FOLLOW_24_in_ruleModBody811 = new BitSet(new long[]{0x0000000022000040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody833 = new BitSet(new long[]{0x0000000002400000L});
-    public static final BitSet FOLLOW_22_in_ruleModBody846 = new BitSet(new long[]{0x0000000020000040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody867 = new BitSet(new long[]{0x0000000002400000L});
-    public static final BitSet FOLLOW_25_in_ruleModBody883 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleModBody897 = new BitSet(new long[]{0x00007FF008000000L});
-    public static final BitSet FOLLOW_ruleTopDef_in_ruleModBody918 = new BitSet(new long[]{0x00007FF008000000L});
-    public static final BitSet FOLLOW_27_in_ruleModBody931 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody970 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleModBody983 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1004 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1046 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleModBody1064 = new BitSet(new long[]{0x0000000020000042L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1099 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleModBody1112 = new BitSet(new long[]{0x0000000020000040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1133 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1175 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleModBody1193 = new BitSet(new long[]{0x0000000020800040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1228 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleModBody1241 = new BitSet(new long[]{0x0000000020000040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1262 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_23_in_ruleModBody1278 = new BitSet(new long[]{0x0000000005000000L});
-    public static final BitSet FOLLOW_24_in_ruleModBody1291 = new BitSet(new long[]{0x0000000022000040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1313 = new BitSet(new long[]{0x0000000002400000L});
-    public static final BitSet FOLLOW_22_in_ruleModBody1326 = new BitSet(new long[]{0x0000000020000040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1347 = new BitSet(new long[]{0x0000000002400000L});
-    public static final BitSet FOLLOW_25_in_ruleModBody1363 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleModBody1377 = new BitSet(new long[]{0x00007FF008000000L});
-    public static final BitSet FOLLOW_ruleTopDef_in_ruleModBody1398 = new BitSet(new long[]{0x00007FF008000000L});
-    public static final BitSet FOLLOW_27_in_ruleModBody1411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1450 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleModBody1463 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1484 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_23_in_ruleModBody1500 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1521 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleModBody1539 = new BitSet(new long[]{0x0000000020000042L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1574 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleModBody1587 = new BitSet(new long[]{0x0000000020000040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1608 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1651 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleModBody1664 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1685 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_23_in_ruleModBody1701 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1722 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleModBody1740 = new BitSet(new long[]{0x0000000020800040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1775 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_22_in_ruleModBody1788 = new BitSet(new long[]{0x0000000020000040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1809 = new BitSet(new long[]{0x0000000000C00000L});
-    public static final BitSet FOLLOW_23_in_ruleModBody1825 = new BitSet(new long[]{0x0000000005000000L});
-    public static final BitSet FOLLOW_24_in_ruleModBody1838 = new BitSet(new long[]{0x0000000022000040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1860 = new BitSet(new long[]{0x0000000002400000L});
-    public static final BitSet FOLLOW_22_in_ruleModBody1873 = new BitSet(new long[]{0x0000000020000040L});
-    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1894 = new BitSet(new long[]{0x0000000002400000L});
-    public static final BitSet FOLLOW_25_in_ruleModBody1910 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleModBody1924 = new BitSet(new long[]{0x00007FF008000000L});
-    public static final BitSet FOLLOW_ruleTopDef_in_ruleModBody1945 = new BitSet(new long[]{0x00007FF008000000L});
-    public static final BitSet FOLLOW_27_in_ruleModBody1958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody746 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_23_in_ruleModBody759 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody780 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_24_in_ruleModBody796 = new BitSet(new long[]{0x000000000A000000L});
+    public static final BitSet FOLLOW_25_in_ruleModBody811 = new BitSet(new long[]{0x0000000044000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody833 = new BitSet(new long[]{0x0000000004800000L});
+    public static final BitSet FOLLOW_23_in_ruleModBody846 = new BitSet(new long[]{0x0000000040000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody867 = new BitSet(new long[]{0x0000000004800000L});
+    public static final BitSet FOLLOW_26_in_ruleModBody883 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleModBody897 = new BitSet(new long[]{0x0000FFE010000000L});
+    public static final BitSet FOLLOW_ruleTopDef_in_ruleModBody918 = new BitSet(new long[]{0x0000FFE010000000L});
+    public static final BitSet FOLLOW_28_in_ruleModBody931 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody970 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_23_in_ruleModBody983 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1004 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1046 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleModBody1064 = new BitSet(new long[]{0x0000000040000042L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1099 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_23_in_ruleModBody1112 = new BitSet(new long[]{0x0000000040000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1133 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1175 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleModBody1193 = new BitSet(new long[]{0x0000000041000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1228 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_23_in_ruleModBody1241 = new BitSet(new long[]{0x0000000040000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1262 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_24_in_ruleModBody1278 = new BitSet(new long[]{0x000000000A000000L});
+    public static final BitSet FOLLOW_25_in_ruleModBody1291 = new BitSet(new long[]{0x0000000044000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1313 = new BitSet(new long[]{0x0000000004800000L});
+    public static final BitSet FOLLOW_23_in_ruleModBody1326 = new BitSet(new long[]{0x0000000040000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1347 = new BitSet(new long[]{0x0000000004800000L});
+    public static final BitSet FOLLOW_26_in_ruleModBody1363 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleModBody1377 = new BitSet(new long[]{0x0000FFE010000000L});
+    public static final BitSet FOLLOW_ruleTopDef_in_ruleModBody1398 = new BitSet(new long[]{0x0000FFE010000000L});
+    public static final BitSet FOLLOW_28_in_ruleModBody1411 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1450 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_23_in_ruleModBody1463 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1484 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_24_in_ruleModBody1500 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1521 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleModBody1539 = new BitSet(new long[]{0x0000000040000042L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1574 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_23_in_ruleModBody1587 = new BitSet(new long[]{0x0000000040000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1608 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1651 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_23_in_ruleModBody1664 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1685 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_24_in_ruleModBody1701 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIncluded_in_ruleModBody1722 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleModBody1740 = new BitSet(new long[]{0x0000000041000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1775 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_23_in_ruleModBody1788 = new BitSet(new long[]{0x0000000040000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1809 = new BitSet(new long[]{0x0000000001800000L});
+    public static final BitSet FOLLOW_24_in_ruleModBody1825 = new BitSet(new long[]{0x000000000A000000L});
+    public static final BitSet FOLLOW_25_in_ruleModBody1838 = new BitSet(new long[]{0x0000000044000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1860 = new BitSet(new long[]{0x0000000004800000L});
+    public static final BitSet FOLLOW_23_in_ruleModBody1873 = new BitSet(new long[]{0x0000000040000040L});
+    public static final BitSet FOLLOW_ruleOpen_in_ruleModBody1894 = new BitSet(new long[]{0x0000000004800000L});
+    public static final BitSet FOLLOW_26_in_ruleModBody1910 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleModBody1924 = new BitSet(new long[]{0x0000FFE010000000L});
+    public static final BitSet FOLLOW_ruleTopDef_in_ruleModBody1945 = new BitSet(new long[]{0x0000FFE010000000L});
+    public static final BitSet FOLLOW_28_in_ruleModBody1958 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleOpen_in_entryRuleOpen1995 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleOpen2005 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleOpen2051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleOpen2070 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleOpen2091 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleOpen2103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleOpen2123 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleOpen2144 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleOpen2156 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleOpen2177 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleOpen2189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleOpen2070 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleOpen2091 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleOpen2103 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleOpen2123 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleOpen2144 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleOpen2156 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleOpen2177 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleOpen2189 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIncluded_in_entryRuleIncluded2226 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleIncluded2236 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2310 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleIncluded2328 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2362 = new BitSet(new long[]{0x0000000100400000L});
-    public static final BitSet FOLLOW_22_in_ruleIncluded2375 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2396 = new BitSet(new long[]{0x0000000100400000L});
-    public static final BitSet FOLLOW_32_in_ruleIncluded2410 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2439 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_33_in_ruleIncluded2457 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleIncluded2482 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2503 = new BitSet(new long[]{0x0000000100400000L});
-    public static final BitSet FOLLOW_22_in_ruleIncluded2516 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2537 = new BitSet(new long[]{0x0000000100400000L});
-    public static final BitSet FOLLOW_32_in_ruleIncluded2551 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2310 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleIncluded2328 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2362 = new BitSet(new long[]{0x0000000200800000L});
+    public static final BitSet FOLLOW_23_in_ruleIncluded2375 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2396 = new BitSet(new long[]{0x0000000200800000L});
+    public static final BitSet FOLLOW_33_in_ruleIncluded2410 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2439 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_ruleIncluded2457 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleIncluded2482 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2503 = new BitSet(new long[]{0x0000000200800000L});
+    public static final BitSet FOLLOW_23_in_ruleIncluded2516 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleIncluded2537 = new BitSet(new long[]{0x0000000200800000L});
+    public static final BitSet FOLLOW_33_in_ruleIncluded2551 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDef_in_entryRuleDef2588 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDef2598 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleName_in_ruleDef2645 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_22_in_ruleDef2658 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleName_in_ruleDef2679 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_14_in_ruleDef2693 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_ruleName_in_ruleDef2645 = new BitSet(new long[]{0x0000000000808000L});
+    public static final BitSet FOLLOW_23_in_ruleDef2658 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleName_in_ruleDef2679 = new BitSet(new long[]{0x0000000000808000L});
+    public static final BitSet FOLLOW_15_in_ruleDef2693 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_ruleDef2714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleName_in_ruleDef2743 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_22_in_ruleDef2756 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleName_in_ruleDef2777 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_34_in_ruleDef2791 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleDef2812 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleDef2825 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_ruleName_in_ruleDef2743 = new BitSet(new long[]{0x0000000800800000L});
+    public static final BitSet FOLLOW_23_in_ruleDef2756 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleName_in_ruleDef2777 = new BitSet(new long[]{0x0000000800800000L});
+    public static final BitSet FOLLOW_35_in_ruleDef2791 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleDef2812 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleDef2825 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_ruleDef2846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleName_in_ruleDef2877 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListPatt_in_ruleDef2898 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleDef2910 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_ruleName_in_ruleDef2877 = new BitSet(new long[]{0x080C0000480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleListPatt_in_ruleDef2898 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleDef2910 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_ruleDef2931 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleOperDef_in_entryRuleOperDef2968 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleOperDef2978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3025 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_22_in_ruleOperDef3038 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3059 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_14_in_ruleOperDef3073 = new BitSet(new long[]{0x24F61448A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3025 = new BitSet(new long[]{0x0000000000808000L});
+    public static final BitSet FOLLOW_23_in_ruleOperDef3038 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3059 = new BitSet(new long[]{0x0000000000808000L});
+    public static final BitSet FOLLOW_15_in_ruleOperDef3073 = new BitSet(new long[]{0x49EC2891480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_ruleOperDef3095 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleOperDef3120 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleOperDef3145 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3166 = new BitSet(new long[]{0x0000000008008000L});
-    public static final BitSet FOLLOW_15_in_ruleOperDef3179 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3200 = new BitSet(new long[]{0x0000000008008000L});
-    public static final BitSet FOLLOW_15_in_ruleOperDef3215 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleOperDef3229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3260 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_22_in_ruleOperDef3273 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3294 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_34_in_ruleOperDef3308 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleOperDef3329 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleOperDef3342 = new BitSet(new long[]{0x24F61448A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_36_in_ruleOperDef3120 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleOperDef3145 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3166 = new BitSet(new long[]{0x0000000010010000L});
+    public static final BitSet FOLLOW_16_in_ruleOperDef3179 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3200 = new BitSet(new long[]{0x0000000010010000L});
+    public static final BitSet FOLLOW_16_in_ruleOperDef3215 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleOperDef3229 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3260 = new BitSet(new long[]{0x0000000800800000L});
+    public static final BitSet FOLLOW_23_in_ruleOperDef3273 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3294 = new BitSet(new long[]{0x0000000800800000L});
+    public static final BitSet FOLLOW_35_in_ruleOperDef3308 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleOperDef3329 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleOperDef3342 = new BitSet(new long[]{0x49EC2891480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_ruleOperDef3364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleOperDef3389 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleOperDef3414 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3435 = new BitSet(new long[]{0x0000000008008000L});
-    public static final BitSet FOLLOW_15_in_ruleOperDef3448 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3469 = new BitSet(new long[]{0x0000000008008000L});
-    public static final BitSet FOLLOW_15_in_ruleOperDef3484 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleOperDef3498 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3531 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_22_in_ruleOperDef3544 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3565 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_34_in_ruleOperDef3579 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleOperDef3597 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleOperDef3622 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3643 = new BitSet(new long[]{0x0000000008008000L});
-    public static final BitSet FOLLOW_15_in_ruleOperDef3656 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3677 = new BitSet(new long[]{0x0000000008008000L});
-    public static final BitSet FOLLOW_15_in_ruleOperDef3692 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleOperDef3706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3735 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListPatt_in_ruleOperDef3756 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleOperDef3768 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_36_in_ruleOperDef3389 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleOperDef3414 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3435 = new BitSet(new long[]{0x0000000010010000L});
+    public static final BitSet FOLLOW_16_in_ruleOperDef3448 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3469 = new BitSet(new long[]{0x0000000010010000L});
+    public static final BitSet FOLLOW_16_in_ruleOperDef3484 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleOperDef3498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3531 = new BitSet(new long[]{0x0000000800800000L});
+    public static final BitSet FOLLOW_23_in_ruleOperDef3544 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3565 = new BitSet(new long[]{0x0000000800800000L});
+    public static final BitSet FOLLOW_35_in_ruleOperDef3579 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleOperDef3597 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleOperDef3622 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3643 = new BitSet(new long[]{0x0000000010010000L});
+    public static final BitSet FOLLOW_16_in_ruleOperDef3656 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleDef_in_ruleOperDef3677 = new BitSet(new long[]{0x0000000010010000L});
+    public static final BitSet FOLLOW_16_in_ruleOperDef3692 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleOperDef3706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleName_in_ruleOperDef3735 = new BitSet(new long[]{0x080C0000480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleListPatt_in_ruleOperDef3756 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleOperDef3768 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_ruleOperDef3789 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleTopDef_in_entryRuleTopDef3826 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTopDef3836 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleTopDef3880 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleCatDef_in_ruleTopDef3915 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef3927 = new BitSet(new long[]{0x0000000080000042L});
-    public static final BitSet FOLLOW_37_in_ruleTopDef3955 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleFunDef_in_ruleTopDef3990 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4002 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_38_in_ruleTopDef4030 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleFunDef_in_ruleTopDef4065 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4077 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_39_in_ruleTopDef4105 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleDef_in_ruleTopDef4140 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4152 = new BitSet(new long[]{0x0000000080000042L});
-    public static final BitSet FOLLOW_38_in_ruleTopDef4180 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleDataDef_in_ruleTopDef4215 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4227 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_40_in_ruleTopDef4255 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleParDef_in_ruleTopDef4290 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4302 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_41_in_ruleTopDef4330 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleOperDef_in_ruleTopDef4365 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4377 = new BitSet(new long[]{0x0000000080000042L});
-    public static final BitSet FOLLOW_42_in_ruleTopDef4405 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_rulePrintDef_in_ruleTopDef4440 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4452 = new BitSet(new long[]{0x0000000080000042L});
-    public static final BitSet FOLLOW_43_in_ruleTopDef4480 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleDef_in_ruleTopDef4515 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4527 = new BitSet(new long[]{0x0000000080000042L});
-    public static final BitSet FOLLOW_44_in_ruleTopDef4555 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleDef_in_ruleTopDef4590 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4602 = new BitSet(new long[]{0x0000000080000042L});
-    public static final BitSet FOLLOW_45_in_ruleTopDef4630 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleTopDef4655 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_rulePrintDef_in_ruleTopDef4677 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4689 = new BitSet(new long[]{0x0000000080000042L});
-    public static final BitSet FOLLOW_45_in_ruleTopDef4717 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleTopDef4742 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_rulePrintDef_in_ruleTopDef4764 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4776 = new BitSet(new long[]{0x0000000080000042L});
-    public static final BitSet FOLLOW_46_in_ruleTopDef4804 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleFlagDef_in_ruleTopDef4839 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_15_in_ruleTopDef4851 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_37_in_ruleTopDef3880 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleCatDef_in_ruleTopDef3915 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef3927 = new BitSet(new long[]{0x0000000100000042L});
+    public static final BitSet FOLLOW_38_in_ruleTopDef3955 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleFunDef_in_ruleTopDef3990 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4002 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_39_in_ruleTopDef4030 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleFunDef_in_ruleTopDef4065 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4077 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_40_in_ruleTopDef4105 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleDef_in_ruleTopDef4140 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4152 = new BitSet(new long[]{0x0000000100000042L});
+    public static final BitSet FOLLOW_39_in_ruleTopDef4180 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleDataDef_in_ruleTopDef4215 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4227 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_41_in_ruleTopDef4255 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleParDef_in_ruleTopDef4290 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4302 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_42_in_ruleTopDef4330 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleOperDef_in_ruleTopDef4365 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4377 = new BitSet(new long[]{0x0000000100000042L});
+    public static final BitSet FOLLOW_43_in_ruleTopDef4405 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_rulePrintDef_in_ruleTopDef4440 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4452 = new BitSet(new long[]{0x0000000100000042L});
+    public static final BitSet FOLLOW_44_in_ruleTopDef4480 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleDef_in_ruleTopDef4515 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4527 = new BitSet(new long[]{0x0000000100000042L});
+    public static final BitSet FOLLOW_45_in_ruleTopDef4555 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleDef_in_ruleTopDef4590 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4602 = new BitSet(new long[]{0x0000000100000042L});
+    public static final BitSet FOLLOW_46_in_ruleTopDef4630 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_37_in_ruleTopDef4655 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_rulePrintDef_in_ruleTopDef4677 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4689 = new BitSet(new long[]{0x0000000100000042L});
+    public static final BitSet FOLLOW_46_in_ruleTopDef4717 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_38_in_ruleTopDef4742 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_rulePrintDef_in_ruleTopDef4764 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4776 = new BitSet(new long[]{0x0000000100000042L});
+    public static final BitSet FOLLOW_47_in_ruleTopDef4804 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleFlagDef_in_ruleTopDef4839 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleTopDef4851 = new BitSet(new long[]{0x0000000000000042L});
     public static final BitSet FOLLOW_ruleCatDef_in_entryRuleCatDef4890 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCatDef4900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleCatDef4947 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleDDecl_in_ruleCatDef4968 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_31_in_ruleCatDef4989 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleCatDef5010 = new BitSet(new long[]{0x00F61441A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleDDecl_in_ruleCatDef5031 = new BitSet(new long[]{0x00F61441A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_32_in_ruleCatDef5044 = new BitSet(new long[]{0x0000000004000002L});
-    public static final BitSet FOLLOW_26_in_ruleCatDef5057 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_INTEGER_in_ruleCatDef5074 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleCatDef5091 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleCatDef4947 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleDDecl_in_ruleCatDef4968 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_32_in_ruleCatDef4989 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleCatDef5010 = new BitSet(new long[]{0x01EC2883480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleDDecl_in_ruleCatDef5031 = new BitSet(new long[]{0x01EC2883480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_33_in_ruleCatDef5044 = new BitSet(new long[]{0x0000000008000002L});
+    public static final BitSet FOLLOW_27_in_ruleCatDef5057 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_INTEGER_in_ruleCatDef5074 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleCatDef5091 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFunDef_in_entryRuleFunDef5130 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFunDef5140 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleFunDef5186 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_22_in_ruleFunDef5199 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleFunDef5220 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_34_in_ruleFunDef5234 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleFunDef5186 = new BitSet(new long[]{0x0000000800800000L});
+    public static final BitSet FOLLOW_23_in_ruleFunDef5199 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleFunDef5220 = new BitSet(new long[]{0x0000000800800000L});
+    public static final BitSet FOLLOW_35_in_ruleFunDef5234 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_ruleFunDef5255 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDataDef_in_entryRuleDataDef5291 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDataDef5301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleDataDef5347 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleDataDef5359 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_ruleDataConstr_in_ruleDataDef5381 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleDataDef5394 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleDataConstr_in_ruleDataDef5415 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleDataDef5430 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleDataDef5347 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleDataDef5359 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_ruleDataConstr_in_ruleDataDef5381 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleDataDef5394 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleDataConstr_in_ruleDataDef5415 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleDataDef5430 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDataConstr_in_entryRuleDataConstr5470 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDataConstr5480 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleDataConstr5526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleDataConstr5554 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_ruleDataConstr5566 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleDataConstr5554 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_ruleDataConstr5566 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleDataConstr5587 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParDef_in_entryRuleParDef5624 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleParDef5634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleParDef5681 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleParDef5693 = new BitSet(new long[]{0x0000000000000042L});
-    public static final BitSet FOLLOW_ruleParConstr_in_ruleParDef5715 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleParDef5728 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleParConstr_in_ruleParDef5749 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleParDef5764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleParDef5797 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleParDef5809 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleParDef5821 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleParDef5833 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleParDef5854 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleParDef5866 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleParDef5681 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleParDef5693 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_ruleParConstr_in_ruleParDef5715 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleParDef5728 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleParConstr_in_ruleParDef5749 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleParDef5764 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleParDef5797 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleParDef5809 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleParDef5821 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleParDef5833 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleParDef5854 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleParDef5866 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleParDef5894 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParConstr_in_entryRuleParConstr5930 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleParConstr5940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleParConstr5986 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleDDecl_in_ruleParConstr6007 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleParConstr5986 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleDDecl_in_ruleParConstr6007 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
     public static final BitSet FOLLOW_rulePrintDef_in_entryRulePrintDef6044 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePrintDef6054 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleName_in_rulePrintDef6100 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_22_in_rulePrintDef6113 = new BitSet(new long[]{0x0000000080000040L});
-    public static final BitSet FOLLOW_ruleName_in_rulePrintDef6134 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_14_in_rulePrintDef6148 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_ruleName_in_rulePrintDef6100 = new BitSet(new long[]{0x0000000000808000L});
+    public static final BitSet FOLLOW_23_in_rulePrintDef6113 = new BitSet(new long[]{0x0000000100000040L});
+    public static final BitSet FOLLOW_ruleName_in_rulePrintDef6134 = new BitSet(new long[]{0x0000000000808000L});
+    public static final BitSet FOLLOW_15_in_rulePrintDef6148 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_rulePrintDef6169 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFlagDef_in_entryRuleFlagDef6205 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleFlagDef6215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleFlagDef6261 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_14_in_ruleFlagDef6273 = new BitSet(new long[]{0x0000000000000060L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleFlagDef6261 = new BitSet(new long[]{0x0000000000008000L});
+    public static final BitSet FOLLOW_15_in_ruleFlagDef6273 = new BitSet(new long[]{0x0000000000000060L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleFlagDef6295 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_ruleFlagDef6312 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleName_in_entryRuleName6348 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleName6358 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleName6404 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleName6423 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleName6444 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleName6456 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleName6423 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleName6444 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_ruleName6456 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLocDef_in_entryRuleLocDef6493 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLocDef6503 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6550 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_22_in_ruleLocDef6563 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6584 = new BitSet(new long[]{0x0000000400400000L});
-    public static final BitSet FOLLOW_34_in_ruleLocDef6598 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleLocDef6619 = new BitSet(new long[]{0x0000000000004002L});
-    public static final BitSet FOLLOW_14_in_ruleLocDef6632 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6550 = new BitSet(new long[]{0x0000000800800000L});
+    public static final BitSet FOLLOW_23_in_ruleLocDef6563 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6584 = new BitSet(new long[]{0x0000000800800000L});
+    public static final BitSet FOLLOW_35_in_ruleLocDef6598 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleLocDef6619 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_15_in_ruleLocDef6632 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_ruleLocDef6653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6684 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_22_in_ruleLocDef6697 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6718 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_14_in_ruleLocDef6732 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6684 = new BitSet(new long[]{0x0000000000808000L});
+    public static final BitSet FOLLOW_23_in_ruleLocDef6697 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_ruleLocDef6718 = new BitSet(new long[]{0x0000000000808000L});
+    public static final BitSet FOLLOW_15_in_ruleLocDef6732 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_ruleLocDef6753 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleListLocDef_in_entryRuleListLocDef6790 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListLocDef6800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLocDef_in_ruleListLocDef6856 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListLocDef6869 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleLocDef_in_ruleListLocDef6890 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListLocDef6905 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleLocDef_in_ruleListLocDef6856 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_ruleListLocDef6869 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleLocDef_in_ruleListLocDef6890 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_ruleListLocDef6905 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp6_in_entryRuleExp66945 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp66955 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleExp67000 = new BitSet(new long[]{0x0000000000000002L});
@@ -22434,270 +22435,270 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_STRING_in_ruleExp67077 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_INTEGER_in_ruleExp67105 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_DOUBLE_in_ruleExp67133 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleExp67163 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_50_in_ruleExp67163 = new BitSet(new long[]{0x0000000000000012L});
     public static final BitSet FOLLOW_RULE_INTEGER_in_ruleExp67193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleExp67220 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleExp67245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleExp67270 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleExp67308 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExp67341 = new BitSet(new long[]{0x00F61441A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExps_in_ruleExp67362 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleExp67374 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleExp67400 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleExp67424 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleExp67435 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleExp67461 = new BitSet(new long[]{0x0000000008000040L});
-    public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp67495 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp67507 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleExp67533 = new BitSet(new long[]{0x24FE1440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleListTupleComp_in_ruleExp67578 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp67606 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleExp67618 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp67639 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_51_in_ruleExp67653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleExp67679 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp67713 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleExp67725 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleExp67220 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_ruleExp67245 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleExp67270 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleExp67308 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExp67341 = new BitSet(new long[]{0x01EC2883480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExps_in_ruleExp67362 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_ruleExp67374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_ruleExp67400 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleExp67424 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_ruleExp67435 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_ruleExp67461 = new BitSet(new long[]{0x0000000010000040L});
+    public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp67495 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleExp67507 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_ruleExp67533 = new BitSet(new long[]{0x49FC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleListTupleComp_in_ruleExp67578 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp67606 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleExp67618 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp67639 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_ruleExp67653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleExp67679 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp67713 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleExp67725 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp5_in_entryRuleExp57762 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp57772 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp6_in_ruleExp57818 = new BitSet(new long[]{0x0001000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleExp57831 = new BitSet(new long[]{0x0000000000000040L,0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleLabel_in_ruleExp57852 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_ruleExp6_in_ruleExp57818 = new BitSet(new long[]{0x0002000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleExp57831 = new BitSet(new long[]{0x0000000000000040L,0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleLabel_in_ruleExp57852 = new BitSet(new long[]{0x0002000000000002L});
     public static final BitSet FOLLOW_ruleExp4_in_entryRuleExp47890 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp47900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleExp47938 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleExp47950 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListCase_in_ruleExp47971 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp47983 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48004 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_52_in_ruleExp48025 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp6_in_ruleExp48046 = new BitSet(new long[]{0x0000000084000000L});
-    public static final BitSet FOLLOW_26_in_ruleExp48060 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListCase_in_ruleExp48081 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp48093 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_31_in_ruleExp48113 = new BitSet(new long[]{0x24F61441A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleListExp_in_ruleExp48134 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleExp48146 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48169 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_53_in_ruleExp48190 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp48211 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleExp48223 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleExp48235 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListCase_in_ruleExp48256 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp48268 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48289 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_54_in_ruleExp48310 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleExp48322 = new BitSet(new long[]{0x24F61440AC0000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleListExp_in_ruleExp48343 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp48355 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48376 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_55_in_ruleExp48397 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleExp48409 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListCase_in_ruleExp48430 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp48442 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48463 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_42_in_ruleExp48484 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExp48504 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48525 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_44_in_ruleExp48546 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleExp48566 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp6_in_ruleExp48587 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48608 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48638 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48659 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
+    public static final BitSet FOLLOW_53_in_ruleExp47938 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleExp47950 = new BitSet(new long[]{0x080C0004480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleListCase_in_ruleExp47971 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleExp47983 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48004 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_53_in_ruleExp48025 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp6_in_ruleExp48046 = new BitSet(new long[]{0x0000000108000000L});
+    public static final BitSet FOLLOW_27_in_ruleExp48060 = new BitSet(new long[]{0x080C0004480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleListCase_in_ruleExp48081 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleExp48093 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_32_in_ruleExp48113 = new BitSet(new long[]{0x49EC2883480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleListExp_in_ruleExp48134 = new BitSet(new long[]{0x0000000200000000L});
+    public static final BitSet FOLLOW_33_in_ruleExp48146 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48169 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_54_in_ruleExp48190 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp48211 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_21_in_ruleExp48223 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleExp48235 = new BitSet(new long[]{0x080C0004480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleListCase_in_ruleExp48256 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleExp48268 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48289 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_55_in_ruleExp48310 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleExp48322 = new BitSet(new long[]{0x49EC2881580000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleListExp_in_ruleExp48343 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleExp48355 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48376 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_56_in_ruleExp48397 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleExp48409 = new BitSet(new long[]{0x080C0004480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleListCase_in_ruleExp48430 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleExp48442 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48463 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_43_in_ruleExp48484 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExp48504 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48525 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_45_in_ruleExp48546 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleExp48566 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp6_in_ruleExp48587 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48608 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48638 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp5_in_ruleExp48659 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
     public static final BitSet FOLLOW_ruleExp3_in_entryRuleExp38697 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp38707 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp4_in_ruleExp38754 = new BitSet(new long[]{0x0300000000800002L});
-    public static final BitSet FOLLOW_56_in_ruleExp38768 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_57_in_ruleExp38786 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_23_in_ruleExp38804 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp4_in_ruleExp38826 = new BitSet(new long[]{0x0300000000800002L});
-    public static final BitSet FOLLOW_58_in_ruleExp38848 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rulePatt2_in_ruleExp38869 = new BitSet(new long[]{0x0300000000800002L});
-    public static final BitSet FOLLOW_56_in_ruleExp38883 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_57_in_ruleExp38901 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_23_in_ruleExp38919 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp4_in_ruleExp38941 = new BitSet(new long[]{0x0300000000800002L});
+    public static final BitSet FOLLOW_ruleExp4_in_ruleExp38754 = new BitSet(new long[]{0x0600000001000002L});
+    public static final BitSet FOLLOW_57_in_ruleExp38768 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_58_in_ruleExp38786 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_24_in_ruleExp38804 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp4_in_ruleExp38826 = new BitSet(new long[]{0x0600000001000002L});
+    public static final BitSet FOLLOW_59_in_ruleExp38848 = new BitSet(new long[]{0x080C0000480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_rulePatt2_in_ruleExp38869 = new BitSet(new long[]{0x0600000001000002L});
+    public static final BitSet FOLLOW_57_in_ruleExp38883 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_58_in_ruleExp38901 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_24_in_ruleExp38919 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp4_in_ruleExp38941 = new BitSet(new long[]{0x0600000001000002L});
     public static final BitSet FOLLOW_ruleExp2_in_entryRuleExp28980 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp28990 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp3_in_ruleExp29036 = new BitSet(new long[]{0x0800000000000002L});
-    public static final BitSet FOLLOW_59_in_ruleExp29049 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
+    public static final BitSet FOLLOW_ruleExp3_in_ruleExp29036 = new BitSet(new long[]{0x1000000000000002L});
+    public static final BitSet FOLLOW_60_in_ruleExp29049 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
     public static final BitSet FOLLOW_ruleExp2_in_ruleExp29070 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp1_in_entryRuleExp19108 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp19118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp2_in_ruleExp19164 = new BitSet(new long[]{0x1000000000000002L});
-    public static final BitSet FOLLOW_60_in_ruleExp19177 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
+    public static final BitSet FOLLOW_ruleExp2_in_ruleExp19164 = new BitSet(new long[]{0x2000000000000002L});
+    public static final BitSet FOLLOW_61_in_ruleExp19177 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
     public static final BitSet FOLLOW_ruleExp1_in_ruleExp19198 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp_in_entryRuleExp9236 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExp9246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_61_in_ruleExp9284 = new BitSet(new long[]{0x4000000000000040L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListBind_in_ruleExp9305 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_62_in_ruleExp9317 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp9338 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp9359 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp1_in_ruleExp9381 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_61_in_ruleExp9403 = new BitSet(new long[]{0x2000000000000000L});
-    public static final BitSet FOLLOW_61_in_ruleExp9415 = new BitSet(new long[]{0x8000000000000040L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListBind_in_ruleExp9436 = new BitSet(new long[]{0x8000000000000000L});
-    public static final BitSet FOLLOW_63_in_ruleExp9448 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp9469 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp9490 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp1_in_ruleExp9512 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_64_in_ruleExp9534 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleExp9546 = new BitSet(new long[]{0x0000000008000040L});
-    public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp9567 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp9579 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleExp9591 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp9612 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp9633 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp1_in_ruleExp9655 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_64_in_ruleExp9677 = new BitSet(new long[]{0x0000000002000040L});
-    public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp9698 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_25_in_ruleExp9710 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp9731 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp9752 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp1_in_ruleExp9774 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_29_in_ruleExp9796 = new BitSet(new long[]{0x0000000400000040L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListBind_in_ruleExp9817 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleExp9829 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp9850 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleExp9862 = new BitSet(new long[]{0x4000000000000000L});
-    public static final BitSet FOLLOW_62_in_ruleExp9874 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp9895 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp9916 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp1_in_ruleExp9938 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_ruleExp4_in_ruleExp9969 = new BitSet(new long[]{0xDB00800000800002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleExp9985 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_57_in_ruleExp10003 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_23_in_ruleExp10021 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp4_in_ruleExp10043 = new BitSet(new long[]{0x9B00800000800002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleExp10059 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp10080 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_65_in_ruleExp10100 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleExp10112 = new BitSet(new long[]{0x0000000008000040L});
-    public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp10133 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp10145 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_59_in_ruleExp10166 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp2_in_ruleExp10187 = new BitSet(new long[]{0x1000800000000002L});
-    public static final BitSet FOLLOW_60_in_ruleExp10202 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp1_in_ruleExp10223 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_62_in_ruleExp10247 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp10268 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp10291 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp1_in_ruleExp10313 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_58_in_ruleExp10335 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rulePatt2_in_ruleExp10356 = new BitSet(new long[]{0x9B00800000800002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleExp10370 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_57_in_ruleExp10388 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_23_in_ruleExp10406 = new BitSet(new long[]{0x00F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp4_in_ruleExp10428 = new BitSet(new long[]{0x9B00800000800002L,0x0000000000000002L});
-    public static final BitSet FOLLOW_63_in_ruleExp10444 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleExp10465 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_65_in_ruleExp10485 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_26_in_ruleExp10497 = new BitSet(new long[]{0x0000000008000040L});
-    public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp10518 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleExp10530 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_59_in_ruleExp10551 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp2_in_ruleExp10572 = new BitSet(new long[]{0x1000800000000002L});
-    public static final BitSet FOLLOW_60_in_ruleExp10587 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp1_in_ruleExp10608 = new BitSet(new long[]{0x0000800000000002L});
-    public static final BitSet FOLLOW_47_in_ruleExp10633 = new BitSet(new long[]{0x04F61440A40000F0L,0x0000000000003FE0L});
-    public static final BitSet FOLLOW_ruleExp1_in_ruleExp10655 = new BitSet(new long[]{0x0000800000000002L});
+    public static final BitSet FOLLOW_62_in_ruleExp9284 = new BitSet(new long[]{0x8000000000000040L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleListBind_in_ruleExp9305 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_63_in_ruleExp9317 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp9338 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleExp9359 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp1_in_ruleExp9381 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_62_in_ruleExp9403 = new BitSet(new long[]{0x4000000000000000L});
+    public static final BitSet FOLLOW_62_in_ruleExp9415 = new BitSet(new long[]{0x0000000000000040L,0x0000000000000009L});
+    public static final BitSet FOLLOW_ruleListBind_in_ruleExp9436 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_ruleExp9448 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp9469 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleExp9490 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp1_in_ruleExp9512 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleExp9534 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleExp9546 = new BitSet(new long[]{0x0000000010000040L});
+    public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp9567 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleExp9579 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleExp9591 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp9612 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleExp9633 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp1_in_ruleExp9655 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleExp9677 = new BitSet(new long[]{0x0000000004000040L});
+    public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp9698 = new BitSet(new long[]{0x0000000004000000L});
+    public static final BitSet FOLLOW_26_in_ruleExp9710 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp9731 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleExp9752 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp1_in_ruleExp9774 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleExp9796 = new BitSet(new long[]{0x0000000800000040L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleListBind_in_ruleExp9817 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleExp9829 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp9850 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleExp9862 = new BitSet(new long[]{0x8000000000000000L});
+    public static final BitSet FOLLOW_63_in_ruleExp9874 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp9895 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleExp9916 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp1_in_ruleExp9938 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_ruleExp4_in_ruleExp9969 = new BitSet(new long[]{0xB601000001000002L,0x0000000000000005L});
+    public static final BitSet FOLLOW_57_in_ruleExp9985 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_58_in_ruleExp10003 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_24_in_ruleExp10021 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp4_in_ruleExp10043 = new BitSet(new long[]{0x3601000001000002L,0x0000000000000005L});
+    public static final BitSet FOLLOW_64_in_ruleExp10059 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp10080 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleExp10100 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleExp10112 = new BitSet(new long[]{0x0000000010000040L});
+    public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp10133 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleExp10145 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_60_in_ruleExp10166 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp2_in_ruleExp10187 = new BitSet(new long[]{0x2001000000000002L});
+    public static final BitSet FOLLOW_61_in_ruleExp10202 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp1_in_ruleExp10223 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_63_in_ruleExp10247 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp10268 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleExp10291 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp1_in_ruleExp10313 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_59_in_ruleExp10335 = new BitSet(new long[]{0x080C0000480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_rulePatt2_in_ruleExp10356 = new BitSet(new long[]{0x3601000001000002L,0x0000000000000005L});
+    public static final BitSet FOLLOW_57_in_ruleExp10370 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_58_in_ruleExp10388 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_24_in_ruleExp10406 = new BitSet(new long[]{0x01EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp4_in_ruleExp10428 = new BitSet(new long[]{0x3601000001000002L,0x0000000000000005L});
+    public static final BitSet FOLLOW_64_in_ruleExp10444 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleExp10465 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleExp10485 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleExp10497 = new BitSet(new long[]{0x0000000010000040L});
+    public static final BitSet FOLLOW_ruleListLocDef_in_ruleExp10518 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleExp10530 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_60_in_ruleExp10551 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp2_in_ruleExp10572 = new BitSet(new long[]{0x2001000000000002L});
+    public static final BitSet FOLLOW_61_in_ruleExp10587 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp1_in_ruleExp10608 = new BitSet(new long[]{0x0001000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleExp10633 = new BitSet(new long[]{0x09EC2881480000F0L,0x0000000000007FC0L});
+    public static final BitSet FOLLOW_ruleExp1_in_ruleExp10655 = new BitSet(new long[]{0x0001000000000002L});
     public static final BitSet FOLLOW_ruleListExp_in_entryRuleListExp10694 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListExp10704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleListExp10760 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListExp10773 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleListExp10794 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListExp10809 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleListExp10760 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_ruleListExp10773 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleListExp10794 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_ruleListExp10809 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExps_in_entryRuleExps10849 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExps10859 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp6_in_ruleExps10914 = new BitSet(new long[]{0x00F61440A40000F2L,0x0000000000003FE0L});
+    public static final BitSet FOLLOW_ruleExp6_in_ruleExps10914 = new BitSet(new long[]{0x01EC2881480000F2L,0x0000000000007FC0L});
     public static final BitSet FOLLOW_rulePatt2_in_entryRulePatt210951 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePatt210961 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_rulePatt211008 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_rulePatt211008 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_rulePatt211046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rulePatt211084 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_rulePatt211096 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_rulePatt211084 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_rulePatt211096 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_rulePatt211117 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_INTEGER_in_rulePatt211145 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_DOUBLE_in_rulePatt211172 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_STRING_in_rulePatt211199 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rulePatt211218 = new BitSet(new long[]{0x0000000008000040L});
-    public static final BitSet FOLLOW_ruleListPattAss_in_rulePatt211240 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_rulePatt211251 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_rulePatt211271 = new BitSet(new long[]{0x040E0002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListPattTupleComp_in_rulePatt211293 = new BitSet(new long[]{0x0008000000000000L});
-    public static final BitSet FOLLOW_51_in_rulePatt211304 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_58_in_rulePatt211333 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_27_in_rulePatt211218 = new BitSet(new long[]{0x0000000010000040L});
+    public static final BitSet FOLLOW_ruleListPattAss_in_rulePatt211240 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_rulePatt211251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_rulePatt211271 = new BitSet(new long[]{0x081C0004480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleListPattTupleComp_in_rulePatt211293 = new BitSet(new long[]{0x0010000000000000L});
+    public static final BitSet FOLLOW_52_in_rulePatt211304 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_59_in_rulePatt211333 = new BitSet(new long[]{0x0000000000000040L});
     public static final BitSet FOLLOW_ruleIdent_in_rulePatt211354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_rulePatt211383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rulePatt211403 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rulePatt_in_rulePatt211425 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_rulePatt211436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_rulePatt211383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rulePatt211403 = new BitSet(new long[]{0x080C0004480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_rulePatt_in_rulePatt211425 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_rulePatt211436 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePatt1_in_entryRulePatt111473 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePatt111483 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rulePatt111530 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
+    public static final BitSet FOLLOW_ruleIdent_in_rulePatt111530 = new BitSet(new long[]{0x080C0000480000F0L,0x0000000000000008L});
     public static final BitSet FOLLOW_ruleListPatt_in_rulePatt111551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rulePatt111580 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_rulePatt111592 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_rulePatt111613 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
+    public static final BitSet FOLLOW_ruleIdent_in_rulePatt111580 = new BitSet(new long[]{0x0002000000000000L});
+    public static final BitSet FOLLOW_49_in_rulePatt111592 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_rulePatt111613 = new BitSet(new long[]{0x080C0000480000F0L,0x0000000000000008L});
     public static final BitSet FOLLOW_ruleListPatt_in_rulePatt111634 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rulePatt111663 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
-    public static final BitSet FOLLOW_67_in_rulePatt111675 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
+    public static final BitSet FOLLOW_ruleIdent_in_rulePatt111663 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000010L});
+    public static final BitSet FOLLOW_68_in_rulePatt111675 = new BitSet(new long[]{0x080C0000480000F0L,0x0000000000000008L});
     public static final BitSet FOLLOW_rulePatt2_in_rulePatt111696 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rulePatt111716 = new BitSet(new long[]{0x04060000240000F0L,0x0000000000000004L});
+    public static final BitSet FOLLOW_34_in_rulePatt111716 = new BitSet(new long[]{0x080C0000480000F0L,0x0000000000000008L});
     public static final BitSet FOLLOW_rulePatt2_in_rulePatt111738 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePatt2_in_rulePatt111767 = new BitSet(new long[]{0x0200000000000002L});
-    public static final BitSet FOLLOW_57_in_rulePatt111779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePatt2_in_rulePatt111767 = new BitSet(new long[]{0x0400000000000002L});
+    public static final BitSet FOLLOW_58_in_rulePatt111779 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePatt_in_entryRulePatt11818 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePatt11828 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePatt1_in_rulePatt11874 = new BitSet(new long[]{0x0800800000000002L});
-    public static final BitSet FOLLOW_47_in_rulePatt11888 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_59_in_rulePatt11906 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rulePatt1_in_rulePatt11928 = new BitSet(new long[]{0x0800800000000002L});
+    public static final BitSet FOLLOW_rulePatt1_in_rulePatt11874 = new BitSet(new long[]{0x1001000000000002L});
+    public static final BitSet FOLLOW_48_in_rulePatt11888 = new BitSet(new long[]{0x080C0004480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_60_in_rulePatt11906 = new BitSet(new long[]{0x080C0004480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_rulePatt1_in_rulePatt11928 = new BitSet(new long[]{0x1001000000000002L});
     public static final BitSet FOLLOW_rulePattAss_in_entryRulePattAss11966 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePattAss11976 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rulePattAss12022 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_22_in_rulePattAss12035 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_ruleIdent_in_rulePattAss12056 = new BitSet(new long[]{0x0000000000404000L});
-    public static final BitSet FOLLOW_14_in_rulePattAss12070 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
+    public static final BitSet FOLLOW_ruleIdent_in_rulePattAss12022 = new BitSet(new long[]{0x0000000000808000L});
+    public static final BitSet FOLLOW_23_in_rulePattAss12035 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_ruleIdent_in_rulePattAss12056 = new BitSet(new long[]{0x0000000000808000L});
+    public static final BitSet FOLLOW_15_in_rulePattAss12070 = new BitSet(new long[]{0x080C0004480000F0L,0x0000000000000008L});
     public static final BitSet FOLLOW_rulePatt_in_rulePattAss12091 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleLabel_in_entryRuleLabel12127 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleLabel12137 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleLabel12183 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleLabel12202 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_69_in_ruleLabel12202 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_INTEGER_in_ruleLabel12219 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleSort_in_entryRuleSort12262 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleSort12273 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_ruleSort12311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleSort12330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleSort12349 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_ruleSort12368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleSort12311 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleSort12330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_ruleSort12349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleSort12368 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBuiltInCat_in_entryRuleBuiltInCat12409 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBuiltInCat12420 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleBuiltInCat12458 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleBuiltInCat12477 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_ruleBuiltInCat12496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleBuiltInCat12515 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_ruleBuiltInCat12534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleBuiltInCat12458 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_ruleBuiltInCat12477 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleBuiltInCat12496 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_77_in_ruleBuiltInCat12515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_78_in_ruleBuiltInCat12534 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleListPattAss_in_entryRuleListPattAss12574 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListPattAss12584 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePattAss_in_ruleListPattAss12640 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListPattAss12653 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_rulePattAss_in_ruleListPattAss12674 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListPattAss12689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePattAss_in_ruleListPattAss12640 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_ruleListPattAss12653 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_rulePattAss_in_ruleListPattAss12674 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_ruleListPattAss12689 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleListPatt_in_entryRuleListPatt12729 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListPatt12739 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePatt2_in_ruleListPatt12784 = new BitSet(new long[]{0x04060000240000F2L,0x0000000000000004L});
+    public static final BitSet FOLLOW_rulePatt2_in_ruleListPatt12784 = new BitSet(new long[]{0x080C0000480000F2L,0x0000000000000008L});
     public static final BitSet FOLLOW_ruleBind_in_entryRuleBind12820 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBind12830 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_ruleBind12876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleBind12904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_ruleBind12904 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleListBind_in_entryRuleListBind12941 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListBind12951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBind_in_ruleListBind13007 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleListBind13020 = new BitSet(new long[]{0x0000000000000040L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleBind_in_ruleListBind13041 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_ruleBind_in_ruleListBind13007 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_23_in_ruleListBind13020 = new BitSet(new long[]{0x0000000000000040L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleBind_in_ruleListBind13041 = new BitSet(new long[]{0x0000000000800002L});
     public static final BitSet FOLLOW_ruleTupleComp_in_entryRuleTupleComp13081 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleTupleComp13091 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp_in_ruleTupleComp13137 = new BitSet(new long[]{0x0000000000000002L});
@@ -22706,43 +22707,43 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_rulePatt_in_rulePattTupleComp13227 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleListTupleComp_in_entryRuleListTupleComp13261 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListTupleComp13271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTupleComp_in_ruleListTupleComp13327 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleListTupleComp13340 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleTupleComp_in_ruleListTupleComp13361 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_ruleTupleComp_in_ruleListTupleComp13327 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_23_in_ruleListTupleComp13340 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleTupleComp_in_ruleListTupleComp13361 = new BitSet(new long[]{0x0000000000800002L});
     public static final BitSet FOLLOW_ruleListPattTupleComp_in_entryRuleListPattTupleComp13401 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListPattTupleComp13411 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13467 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_22_in_ruleListPattTupleComp13480 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13501 = new BitSet(new long[]{0x0000000000400002L});
+    public static final BitSet FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13467 = new BitSet(new long[]{0x0000000000800002L});
+    public static final BitSet FOLLOW_23_in_ruleListPattTupleComp13480 = new BitSet(new long[]{0x080C0004480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_rulePattTupleComp_in_ruleListPattTupleComp13501 = new BitSet(new long[]{0x0000000000800002L});
     public static final BitSet FOLLOW_ruleCase_in_entryRuleCase13541 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCase13551 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePatt_in_ruleCase13597 = new BitSet(new long[]{0x8000000000000000L});
-    public static final BitSet FOLLOW_63_in_ruleCase13609 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
+    public static final BitSet FOLLOW_rulePatt_in_ruleCase13597 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_64_in_ruleCase13609 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
     public static final BitSet FOLLOW_ruleExp_in_ruleCase13630 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleListCase_in_entryRuleListCase13666 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleListCase13676 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCase_in_ruleListCase13722 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_15_in_ruleListCase13735 = new BitSet(new long[]{0x04060002240000F0L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleCase_in_ruleListCase13756 = new BitSet(new long[]{0x0000000000008002L});
+    public static final BitSet FOLLOW_ruleCase_in_ruleListCase13722 = new BitSet(new long[]{0x0000000000010002L});
+    public static final BitSet FOLLOW_16_in_ruleListCase13735 = new BitSet(new long[]{0x080C0004480000F0L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleCase_in_ruleListCase13756 = new BitSet(new long[]{0x0000000000010002L});
     public static final BitSet FOLLOW_ruleDDecl_in_entryRuleDDecl13794 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDDecl13804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_ruleDDecl13842 = new BitSet(new long[]{0x0000000400000040L,0x0000000000000004L});
-    public static final BitSet FOLLOW_ruleListBind_in_ruleDDecl13863 = new BitSet(new long[]{0x0000000400000000L});
-    public static final BitSet FOLLOW_34_in_ruleDDecl13875 = new BitSet(new long[]{0x24F61440A40000F0L,0x0000000000003FE1L});
-    public static final BitSet FOLLOW_ruleExp_in_ruleDDecl13896 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleDDecl13908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_ruleDDecl13842 = new BitSet(new long[]{0x0000000800000040L,0x0000000000000008L});
+    public static final BitSet FOLLOW_ruleListBind_in_ruleDDecl13863 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleDDecl13875 = new BitSet(new long[]{0x49EC2881480000F0L,0x0000000000007FC2L});
+    public static final BitSet FOLLOW_ruleExp_in_ruleDDecl13896 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_31_in_ruleDDecl13908 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleExp6_in_ruleDDecl13937 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_entryRuleIdent13972 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleIdent13982 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleIdent14023 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_INTEGER_in_synpred1_InternalGF7188 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleListTupleComp_in_synpred2_InternalGF7561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_synpred3_InternalGF9351 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_synpred4_InternalGF9482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_synpred5_InternalGF9625 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_synpred6_InternalGF9744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_synpred7_InternalGF9908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_synpred8_InternalGF10283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_synpred9_InternalGF10625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_synpred3_InternalGF9351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_synpred4_InternalGF9482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_synpred5_InternalGF9625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_synpred6_InternalGF9744 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_synpred7_InternalGF9908 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_synpred8_InternalGF10283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_synpred9_InternalGF10625 = new BitSet(new long[]{0x0000000000000002L});
 
 }

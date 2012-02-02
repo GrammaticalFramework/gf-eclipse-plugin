@@ -21,6 +21,7 @@ public class GFHighlightingConfiguration extends DefaultHighlightingConfiguratio
 
 	public static final String ID_ID = "id";
 	public static final String COMPILER_PRAGMA_ID = "compiler pragma";
+	public static final String GF_DOC_ID = "gf-doc";
 	
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.ui.editor.syntaxcoloring.DefaultHighlightingConfiguration#configure(org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfigurationAcceptor)
@@ -30,6 +31,7 @@ public class GFHighlightingConfiguration extends DefaultHighlightingConfiguratio
 		super.configure(acceptor);
 		acceptor.acceptDefaultHighlighting(ID_ID, "Identifier", idTextStyle());
 		acceptor.acceptDefaultHighlighting(COMPILER_PRAGMA_ID, "Compiler pragma", compilerPragmaTextStyle());
+		acceptor.acceptDefaultHighlighting(GF_DOC_ID, "GF-doc", compilerPragmaTextStyle());
 	}
 	
 	/**

@@ -581,7 +581,7 @@ public class GFParser extends AbstractContentAssistParser {
 	
 	@Override
 	protected String[] getInitialHiddenTokens() {
-		return new String[] { "RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_COMPILER_PRAGMA" };
+		return new String[] { "RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_COMPILER_PRAGMA", "RULE_GF_DOC" };
 	}
 	
 	public GFGrammarAccess getGrammarAccess() {

@@ -15,7 +15,7 @@ public class GFParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrParser
 	
 	@Override
 	protected void setInitialHiddenTokens(XtextTokenStream tokenStream) {
-		tokenStream.setInitialHiddenTokens("RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_COMPILER_PRAGMA");
+		tokenStream.setInitialHiddenTokens("RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_COMPILER_PRAGMA", "RULE_GF_DOC");
 	}
 	
 	@Override

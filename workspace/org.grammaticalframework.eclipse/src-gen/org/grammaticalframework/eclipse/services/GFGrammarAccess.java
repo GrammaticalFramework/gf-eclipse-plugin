@@ -4998,6 +4998,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	private TerminalRule tInteger;
 	private TerminalRule tDouble;
 	private TerminalRule tCOMPILER_PRAGMA;
+	private TerminalRule tGF_DOC;
 	private TerminalRule tML_COMMENT;
 	private TerminalRule tSL_COMMENT;
 	private TerminalRule tWS;
@@ -5627,6 +5628,12 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	//	"--#" !("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getCOMPILER_PRAGMARule() {
 		return (tCOMPILER_PRAGMA != null) ? tCOMPILER_PRAGMA : (tCOMPILER_PRAGMA = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "COMPILER_PRAGMA"));
+	} 
+
+	//terminal GF_DOC:
+	//	("--%" | "--:") !("\n" | "\r")* ("\r"? "\n")?;
+	public TerminalRule getGF_DOCRule() {
+		return (tGF_DOC != null) ? tGF_DOC : (tGF_DOC = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "GF_DOC"));
 	} 
 
 	//terminal ML_COMMENT:

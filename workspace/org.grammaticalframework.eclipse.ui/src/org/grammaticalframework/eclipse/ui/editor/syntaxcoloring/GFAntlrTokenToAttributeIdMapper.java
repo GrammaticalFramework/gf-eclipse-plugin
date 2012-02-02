@@ -23,6 +23,9 @@ public class GFAntlrTokenToAttributeIdMapper extends DefaultAntlrTokenToAttribut
 		if("RULE_COMPILER_PRAGMA".equals(tokenName)) {
 			return GFHighlightingConfiguration.COMPILER_PRAGMA_ID;
 		}
+		if("RULE_GF_DOC".equals(tokenName)) {
+			return GFHighlightingConfiguration.GF_DOC_ID;
+		}
 		return super.calculateId(tokenName, tokenType);
 	}
 }
