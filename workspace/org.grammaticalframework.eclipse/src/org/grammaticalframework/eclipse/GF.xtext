@@ -9,8 +9,10 @@
  */
  
 /**
- * GF grammar based on the GF Book (2011), Appendix C.6
+ * GF grammar based on Yacc grammar file src/compiler/GF/Grammar/Parser.y
  * Some (hopefully syntactically-equivalent) modifications have been made to please the compiler.
+ * 
+ * Note: Do not rely on the grammar in the GF book (Appendix C), it is known to contain errors!
  */
 grammar org.grammaticalframework.eclipse.GF
 
@@ -188,36 +190,36 @@ Exp :
  * 	Exp1
  */
 	| '(' bindList=ListBind ':' type=Exp ')'	'->' v=Exp		(=> '|' e+=Exp1)*
-	| v=Exp4
-		(
-			(('!'|'*'|'**') e+=Exp4)*				// That makes Exp3
-			(
-				  '=>' e+=Exp
-				| 'where' '{' defList=ListLocDef '}'
-				| ('+' e+=Exp2)? ('++' e+=Exp1)?
-			)
-
-			| '->' e+=Exp
-		)
-		(=> '|' e+=Exp1)*
-		
-	| '#' v=Patt2
-		(('!'|'*'|'**') e+=Exp4)*				// That makes Exp3
-		(
-			  '=>' e+=Exp
-			| 'where' '{' defList=ListLocDef '}'
-			| ('+' e+=Exp2)? ('++' e+=Exp1)?
-		)
-		(=> '|' e+=Exp1)*
+//	| v=Exp4
+//		(
+//			(('!'|'*'|'**') e+=Exp4)*				// That makes Exp3
+//			(
+//				  '=>' e+=Exp
+//				| 'where' '{' defList=ListLocDef '}'
+//				| ('+' e+=Exp2)? ('++' e+=Exp1)?
+//			)
+//
+//			| '->' e+=Exp
+//		)
+//		(=> '|' e+=Exp1)*
+//		
+//	| '#' v=Patt2
+//		(('!'|'*'|'**') e+=Exp4)*				// That makes Exp3
+//		(
+//			  '=>' e+=Exp
+//			| 'where' '{' defList=ListLocDef '}'
+//			| ('+' e+=Exp2)? ('++' e+=Exp1)?
+//		)
+//		(=> '|' e+=Exp1)*
  
 ;
 
 Exp1 returns Exp :
-	Exp2 ('++' e+=Exp1)*
+	Exp2 ({Exp1.left=current} '++' right=Exp1)*
 ;
 
 Exp2 returns Exp :
-	Exp3 ('+' e+=Exp2)*
+	Exp3 ({Exp2.left=current} '+' right=Exp2)*
 ;
 
 /*
@@ -315,40 +317,47 @@ Exps :
 
 Patt :
 	// Patt '|' Patt1 | Patt '+' Patt1 | Patt1
-	p += Patt1 (('|'|'+') p += Patt1)*
+//	p+=Patt1 (('|'|'+') p+=Patt1)*
+	Patt1 ({Patt.left=current} (or?='|'|and?='+') right=Patt1)*
 ;
 
 Patt1 returns Patt :
 	  name=Ident value=ListPatt
 	| name=Ident '.' label=Ident value=ListPatt
-	| Patt3 '*'
-	| Patt2
+	| Patt3 '*'?
+	| Patt2LF
+//	| Patt2
 ;
 
+// Left-factoring of `Patt1 -> Patt2` above and `Patt2 -> Patt3` below
 Patt2 returns Patt :
+	Patt2LF | Patt3
+;
+
+Patt2LF returns Patt :
 	  name=Ident '@' value=Patt3
 	| '-' Patt3
 	| '~' Exp6
-	| Patt3
+//	| Patt3
 ;
 
 Patt3 returns Patt :
-	  '?'
-	| '[' String ']'
-	| '#' name=Ident
-	| '#' name=Ident '.' label=Ident
-	| '_'
-	| name=Ident
-	| name=Ident '.' label=Ident
-	| Integer
-	| Double
-	| String
+	  meta?='?'
+	| tokenList?='[' String ']'
+//	| '#' name=Ident
+//	| '#' name=Ident '.' label=Ident
+//	| name=Ident
+//	| name=Ident '.' label=Ident
+	| '#'? name=Ident ('.' label=Ident)?
+	| wildcard?='_'
+	| {Integer} Integer
+	| {Double} Double
+	| {String} String
 	| '{' ListPattAss '}'
 	| '<' ListPattTupleComp '>'
 	| '(' Patt ')'
 ;
 
-// "Pattern Assignment"
 PattAss :
 	  name+=Ident (',' name+=Ident)* '=' value=Patt
 ;
@@ -374,11 +383,9 @@ Sort :
 //;
 
 ListPattAss :
-	// ε | PattAss | PattAss ';' ListPattAss
 	{ListPattAss} ( assignments+=PattAss (';' assignments+=PattAss)* ';'? )?
 ;
 
-// WARNING If you refactor this, make sure to update GFScopeProvider::getAllDescriptions(), line 137
 ListPatt :
 	(patterns += PattArg)+
 ;
@@ -390,24 +397,20 @@ PattArg returns Patt:
 
 Arg :
 	  name+=Ident
-	| {Arg} '_'
+	| wildcard?='_'
 	| '{' (name+=Ident)+ '}' // ListIdent2
 ;
 
 Bind :
 	  name+=Ident
-	| {Bind} '_'
+	| wildcard?='_'
 	| '{' name+=Ident (',' name+=Ident)* '}' // ListIdent
 ;
 
-// WARNING If you refactor this, make sure to update GFScopeProvider::getAllDescriptions(), line 142
 ListBind :
-	{ListBind} bindings+=Bind (',' bindings+=Bind)*
+	bindings+=Bind (',' bindings+=Bind)*
 ;
 
-/*
- * This has now been melted down into Exp
- */ 
 Decl :
 	  '(' bindings+=Bind (',' bindings+=Bind)* ':' e=Exp ')'
 	| e=Exp3
@@ -426,7 +429,6 @@ Case :
 ;
 
 ListCase :
-	// Case | Case ';' ListCase
 	cases+=Case (';' cases+=Case)*
 ;
 
