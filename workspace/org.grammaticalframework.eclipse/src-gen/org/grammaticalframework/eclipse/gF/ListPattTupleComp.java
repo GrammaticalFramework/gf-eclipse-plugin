@@ -15,7 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.ListPattTupleComp#getL <em>L</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.ListPattTupleComp#getPatterns <em>Patterns</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,22 +23,22 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ListPattTupleComp extends Patt2
+public interface ListPattTupleComp extends Patt
 {
   /**
-   * Returns the value of the '<em><b>L</b></em>' containment reference list.
-   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.PattTupleComp}.
+   * Returns the value of the '<em><b>Patterns</b></em>' containment reference list.
+   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Patt}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>L</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Patterns</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>L</em>' containment reference list.
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getListPattTupleComp_L()
+   * @return the value of the '<em>Patterns</em>' containment reference list.
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getListPattTupleComp_Patterns()
    * @model containment="true"
    * @generated
    */
-  EList<PattTupleComp> getL();
+  EList<Patt> getPatterns();
 
 } // ListPattTupleComp

@@ -23,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ListPattAss extends Patt2
+public interface ListPattAss extends Patt
 {
   /**
    * Returns the value of the '<em><b>Assignments</b></em>' containment reference list.

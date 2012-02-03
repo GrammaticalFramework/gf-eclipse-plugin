@@ -25,15 +25,22 @@
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//ModBody">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ModBody/extends"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ModBody/opens"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ModBody/judgements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ModBody/content"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ModBody/functor"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//ModBody/functorInstantiation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ModBody/instantiations"/>
     </genClasses>
+    <genClasses ecoreClass="GF.ecore#//ModContent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ModContent/opens"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ModContent/judgements"/>
+    </genClasses>
     <genClasses ecoreClass="GF.ecore#//Open">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Open/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Open/alias"/>
+    </genClasses>
+    <genClasses ecoreClass="GF.ecore#//Inst">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Inst/interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Inst/name"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//Included">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Included/name"/>
@@ -42,20 +49,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Included/exclusive"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Included/excludes"/>
     </genClasses>
-    <genClasses ecoreClass="GF.ecore#//Def">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Def/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Def/definition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Def/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Def/patterns"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Def/overload"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Def/overloads"/>
-    </genClasses>
     <genClasses ecoreClass="GF.ecore#//TopDef">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//TopDef/cat"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//TopDef/definitions"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//TopDef/fun"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//TopDef/data"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//TopDef/def"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//TopDef/data"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//TopDef/param"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//TopDef/oper"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//TopDef/lincat"/>
@@ -73,30 +72,44 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//FunDef/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//FunDef/type"/>
     </genClasses>
+    <genClasses ecoreClass="GF.ecore#//DefDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//DefDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//DefDef/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//DefDef/patterns"/>
+    </genClasses>
     <genClasses ecoreClass="GF.ecore#//DataDef">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//DataDef/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//DataDef/constructors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//DataDef/type"/>
     </genClasses>
-    <genClasses ecoreClass="GF.ecore#//DataConstr">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//DataConstr/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//DataConstr/module"/>
+    <genClasses ecoreClass="GF.ecore#//ParamDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ParamDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ParamDef/constructors"/>
     </genClasses>
-    <genClasses ecoreClass="GF.ecore#//ParDef">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ParDef/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ParDef/constructors"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ParDef/id2"/>
+    <genClasses ecoreClass="GF.ecore#//OperDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/definition"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//OperDef/overload"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/overloads"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/args"/>
     </genClasses>
-    <genClasses ecoreClass="GF.ecore#//ParConstr">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ParConstr/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ParConstr/constructors"/>
+    <genClasses ecoreClass="GF.ecore#//LinDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//LinDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//LinDef/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//LinDef/args"/>
     </genClasses>
-    <genClasses ecoreClass="GF.ecore#//PrintDef">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//PrintDef/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//PrintDef/printname"/>
+    <genClasses ecoreClass="GF.ecore#//TermDef">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//TermDef/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//TermDef/definition"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//FlagDef">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//FlagDef/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//FlagDef/value"/>
+    </genClasses>
+    <genClasses ecoreClass="GF.ecore#//ParConstr">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ParConstr/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ParConstr/constructors"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//Name">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Name/name"/>
@@ -109,60 +122,29 @@
     <genClasses ecoreClass="GF.ecore#//ListLocDef">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ListLocDef/localDefinitions"/>
     </genClasses>
-    <genClasses ecoreClass="GF.ecore#//Exp6">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GF.ecore#//Exp6/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/sort"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/builtInCat"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/string"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/integer"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/double"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/meta"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/emptyString"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/data"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/listCat"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GF.ecore#//Exp6/category"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp6/list"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/tokenList"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/record"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp6/defList"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/tuple"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp6/tupleList"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp6/v"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp6/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp6/identity"/>
-    </genClasses>
-    <genClasses ecoreClass="GF.ecore#//Exp5">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp5/v"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp5/label"/>
-    </genClasses>
-    <genClasses ecoreClass="GF.ecore#//Exp4">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp4/caseList"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp4/args"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp4/argType"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp4/expList"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp4/caseOf"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GF.ecore#//Exp4/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp4/inner"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp4/v"/>
-    </genClasses>
-    <genClasses ecoreClass="GF.ecore#//Exp3">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp3/v"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp3/e"/>
-    </genClasses>
-    <genClasses ecoreClass="GF.ecore#//Exp2">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp2/v"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp2/e"/>
-    </genClasses>
-    <genClasses ecoreClass="GF.ecore#//Exp1">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp1/v"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp1/e"/>
-    </genClasses>
     <genClasses ecoreClass="GF.ecore#//Exp">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/bindList"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/v"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/e"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/defList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/caseList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/argType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/expList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/caseOf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/alts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/pattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/inner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp/sort"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp/string"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp/integer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp/double"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp/emptyString"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp/listCat"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/category"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/list"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp/record"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp/tuple"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/tupleList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/v"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exp/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Exp/identity"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//ListExp">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ListExp/expressions"/>
@@ -170,14 +152,17 @@
     <genClasses ecoreClass="GF.ecore#//Exps">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Exps/expressions"/>
     </genClasses>
-    <genClasses ecoreClass="GF.ecore#//Patt2"/>
-    <genClasses ecoreClass="GF.ecore#//Patt1">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt1/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt1/value"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt1/label"/>
-    </genClasses>
     <genClasses ecoreClass="GF.ecore#//Patt">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt/p"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Patt/or"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Patt/and"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt/right"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Patt/meta"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Patt/tokenList"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Patt/wildcard"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//PattAss">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//PattAss/name"/>
@@ -193,19 +178,23 @@
     <genClasses ecoreClass="GF.ecore#//ListPatt">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ListPatt/patterns"/>
     </genClasses>
+    <genClasses ecoreClass="GF.ecore#//Arg">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Arg/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Arg/wildcard"/>
+    </genClasses>
     <genClasses ecoreClass="GF.ecore#//Bind">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Bind/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Bind/wildcard"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//ListBind">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ListBind/decl"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ListBind/bindings"/>
     </genClasses>
-    <genClasses ecoreClass="GF.ecore#//TupleComp"/>
-    <genClasses ecoreClass="GF.ecore#//PattTupleComp"/>
     <genClasses ecoreClass="GF.ecore#//ListTupleComp">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ListTupleComp/l"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ListTupleComp/elements"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//ListPattTupleComp">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ListPattTupleComp/l"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ListPattTupleComp/patterns"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//Case">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Case/pattern"/>
@@ -214,6 +203,10 @@
     <genClasses ecoreClass="GF.ecore#//ListCase">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//ListCase/cases"/>
     </genClasses>
+    <genClasses ecoreClass="GF.ecore#//Altern">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Altern/alt1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Altern/alt2"/>
+    </genClasses>
     <genClasses ecoreClass="GF.ecore#//DDecl">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//DDecl/bindList"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//DDecl/e"/>
@@ -221,5 +214,13 @@
     <genClasses ecoreClass="GF.ecore#//Ident">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Ident/s"/>
     </genClasses>
+    <genClasses ecoreClass="GF.ecore#//ExpLF13"/>
+    <genClasses ecoreClass="GF.ecore#//Exp1"/>
+    <genClasses ecoreClass="GF.ecore#//Exp2"/>
+    <genClasses ecoreClass="GF.ecore#//Exp3"/>
+    <genClasses ecoreClass="GF.ecore#//Exp4"/>
+    <genClasses ecoreClass="GF.ecore#//Integer"/>
+    <genClasses ecoreClass="GF.ecore#//Double"/>
+    <genClasses ecoreClass="GF.ecore#//String"/>
   </genPackages>
 </genmodel:GenModel>

@@ -21,53 +21,62 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.grammaticalframework.eclipse.gF.Exp5;
-import org.grammaticalframework.eclipse.gF.Exp6;
+import org.grammaticalframework.eclipse.gF.Arg;
 import org.grammaticalframework.eclipse.gF.GFPackage;
-import org.grammaticalframework.eclipse.gF.Label;
+import org.grammaticalframework.eclipse.gF.Ident;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Exp5</b></em>'.
+ * An implementation of the model object '<em><b>Arg</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.Exp5Impl#getV <em>V</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.Exp5Impl#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ArgImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ArgImpl#isWildcard <em>Wildcard</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class Exp5Impl extends MinimalEObjectImpl.Container implements Exp5
+public class ArgImpl extends MinimalEObjectImpl.Container implements Arg
 {
   /**
-   * The cached value of the '{@link #getV() <em>V</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getV()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected Exp6 v;
+  protected EList<Ident> name;
 
   /**
-   * The cached value of the '{@link #getLabel() <em>Label</em>}' containment reference list.
+   * The default value of the '{@link #isWildcard() <em>Wildcard</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getLabel()
+   * @see #isWildcard()
    * @generated
    * @ordered
    */
-  protected EList<Label> label;
+  protected static final boolean WILDCARD_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isWildcard() <em>Wildcard</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isWildcard()
+   * @generated
+   * @ordered
+   */
+  protected boolean wildcard = WILDCARD_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected Exp5Impl()
+  protected ArgImpl()
   {
     super();
   }
@@ -80,7 +89,7 @@ public class Exp5Impl extends MinimalEObjectImpl.Container implements Exp5
   @Override
   protected EClass eStaticClass()
   {
-    return GFPackage.Literals.EXP5;
+    return GFPackage.Literals.ARG;
   }
 
   /**
@@ -88,9 +97,13 @@ public class Exp5Impl extends MinimalEObjectImpl.Container implements Exp5
    * <!-- end-user-doc -->
    * @generated
    */
-  public Exp6 getV()
+  public EList<Ident> getName()
   {
-    return v;
+    if (name == null)
+    {
+      name = new EObjectContainmentEList<Ident>(Ident.class, this, GFPackage.ARG__NAME);
+    }
+    return name;
   }
 
   /**
@@ -98,51 +111,22 @@ public class Exp5Impl extends MinimalEObjectImpl.Container implements Exp5
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetV(Exp6 newV, NotificationChain msgs)
+  public boolean isWildcard()
   {
-    Exp6 oldV = v;
-    v = newV;
+    return wildcard;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setWildcard(boolean newWildcard)
+  {
+    boolean oldWildcard = wildcard;
+    wildcard = newWildcard;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP5__V, oldV, newV);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setV(Exp6 newV)
-  {
-    if (newV != v)
-    {
-      NotificationChain msgs = null;
-      if (v != null)
-        msgs = ((InternalEObject)v).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP5__V, null, msgs);
-      if (newV != null)
-        msgs = ((InternalEObject)newV).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP5__V, null, msgs);
-      msgs = basicSetV(newV, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP5__V, newV, newV));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Label> getLabel()
-  {
-    if (label == null)
-    {
-      label = new EObjectContainmentEList<Label>(Label.class, this, GFPackage.EXP5__LABEL);
-    }
-    return label;
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.ARG__WILDCARD, oldWildcard, wildcard));
   }
 
   /**
@@ -155,10 +139,8 @@ public class Exp5Impl extends MinimalEObjectImpl.Container implements Exp5
   {
     switch (featureID)
     {
-      case GFPackage.EXP5__V:
-        return basicSetV(null, msgs);
-      case GFPackage.EXP5__LABEL:
-        return ((InternalEList<?>)getLabel()).basicRemove(otherEnd, msgs);
+      case GFPackage.ARG__NAME:
+        return ((InternalEList<?>)getName()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -173,10 +155,10 @@ public class Exp5Impl extends MinimalEObjectImpl.Container implements Exp5
   {
     switch (featureID)
     {
-      case GFPackage.EXP5__V:
-        return getV();
-      case GFPackage.EXP5__LABEL:
-        return getLabel();
+      case GFPackage.ARG__NAME:
+        return getName();
+      case GFPackage.ARG__WILDCARD:
+        return isWildcard();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -192,12 +174,12 @@ public class Exp5Impl extends MinimalEObjectImpl.Container implements Exp5
   {
     switch (featureID)
     {
-      case GFPackage.EXP5__V:
-        setV((Exp6)newValue);
+      case GFPackage.ARG__NAME:
+        getName().clear();
+        getName().addAll((Collection<? extends Ident>)newValue);
         return;
-      case GFPackage.EXP5__LABEL:
-        getLabel().clear();
-        getLabel().addAll((Collection<? extends Label>)newValue);
+      case GFPackage.ARG__WILDCARD:
+        setWildcard((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -213,11 +195,11 @@ public class Exp5Impl extends MinimalEObjectImpl.Container implements Exp5
   {
     switch (featureID)
     {
-      case GFPackage.EXP5__V:
-        setV((Exp6)null);
+      case GFPackage.ARG__NAME:
+        getName().clear();
         return;
-      case GFPackage.EXP5__LABEL:
-        getLabel().clear();
+      case GFPackage.ARG__WILDCARD:
+        setWildcard(WILDCARD_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -233,12 +215,29 @@ public class Exp5Impl extends MinimalEObjectImpl.Container implements Exp5
   {
     switch (featureID)
     {
-      case GFPackage.EXP5__V:
-        return v != null;
-      case GFPackage.EXP5__LABEL:
-        return label != null && !label.isEmpty();
+      case GFPackage.ARG__NAME:
+        return name != null && !name.isEmpty();
+      case GFPackage.ARG__WILDCARD:
+        return wildcard != WILDCARD_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
 
-} //Exp5Impl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (wildcard: ");
+    result.append(wildcard);
+    result.append(')');
+    return result.toString();
+  }
+
+} //ArgImpl

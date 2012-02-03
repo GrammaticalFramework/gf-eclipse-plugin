@@ -23,9 +23,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Included;
+import org.grammaticalframework.eclipse.gF.Inst;
 import org.grammaticalframework.eclipse.gF.ModBody;
-import org.grammaticalframework.eclipse.gF.Open;
-import org.grammaticalframework.eclipse.gF.TopDef;
+import org.grammaticalframework.eclipse.gF.ModContent;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,8 +35,7 @@ import org.grammaticalframework.eclipse.gF.TopDef;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getExtends <em>Extends</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getOpens <em>Opens</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getJudgements <em>Judgements</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getContent <em>Content</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getFunctor <em>Functor</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#isFunctorInstantiation <em>Functor Instantiation</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getInstantiations <em>Instantiations</em>}</li>
@@ -58,24 +57,14 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
   protected EList<Included> extends_;
 
   /**
-   * The cached value of the '{@link #getOpens() <em>Opens</em>}' containment reference list.
+   * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOpens()
+   * @see #getContent()
    * @generated
    * @ordered
    */
-  protected EList<Open> opens;
-
-  /**
-   * The cached value of the '{@link #getJudgements() <em>Judgements</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getJudgements()
-   * @generated
-   * @ordered
-   */
-  protected EList<TopDef> judgements;
+  protected ModContent content;
 
   /**
    * The cached value of the '{@link #getFunctor() <em>Functor</em>}' containment reference.
@@ -115,7 +104,7 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * @generated
    * @ordered
    */
-  protected EList<Open> instantiations;
+  protected EList<Inst> instantiations;
 
   /**
    * <!-- begin-user-doc -->
@@ -157,13 +146,9 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Open> getOpens()
+  public ModContent getContent()
   {
-    if (opens == null)
-    {
-      opens = new EObjectContainmentEList<Open>(Open.class, this, GFPackage.MOD_BODY__OPENS);
-    }
-    return opens;
+    return content;
   }
 
   /**
@@ -171,13 +156,37 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<TopDef> getJudgements()
+  public NotificationChain basicSetContent(ModContent newContent, NotificationChain msgs)
   {
-    if (judgements == null)
+    ModContent oldContent = content;
+    content = newContent;
+    if (eNotificationRequired())
     {
-      judgements = new EObjectContainmentEList<TopDef>(TopDef.class, this, GFPackage.MOD_BODY__JUDGEMENTS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__CONTENT, oldContent, newContent);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return judgements;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setContent(ModContent newContent)
+  {
+    if (newContent != content)
+    {
+      NotificationChain msgs = null;
+      if (content != null)
+        msgs = ((InternalEObject)content).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__CONTENT, null, msgs);
+      if (newContent != null)
+        msgs = ((InternalEObject)newContent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__CONTENT, null, msgs);
+      msgs = basicSetContent(newContent, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__CONTENT, newContent, newContent));
   }
 
   /**
@@ -256,11 +265,11 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Open> getInstantiations()
+  public EList<Inst> getInstantiations()
   {
     if (instantiations == null)
     {
-      instantiations = new EObjectContainmentEList<Open>(Open.class, this, GFPackage.MOD_BODY__INSTANTIATIONS);
+      instantiations = new EObjectContainmentEList<Inst>(Inst.class, this, GFPackage.MOD_BODY__INSTANTIATIONS);
     }
     return instantiations;
   }
@@ -277,10 +286,8 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
     {
       case GFPackage.MOD_BODY__EXTENDS:
         return ((InternalEList<?>)getExtends()).basicRemove(otherEnd, msgs);
-      case GFPackage.MOD_BODY__OPENS:
-        return ((InternalEList<?>)getOpens()).basicRemove(otherEnd, msgs);
-      case GFPackage.MOD_BODY__JUDGEMENTS:
-        return ((InternalEList<?>)getJudgements()).basicRemove(otherEnd, msgs);
+      case GFPackage.MOD_BODY__CONTENT:
+        return basicSetContent(null, msgs);
       case GFPackage.MOD_BODY__FUNCTOR:
         return basicSetFunctor(null, msgs);
       case GFPackage.MOD_BODY__INSTANTIATIONS:
@@ -301,10 +308,8 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
     {
       case GFPackage.MOD_BODY__EXTENDS:
         return getExtends();
-      case GFPackage.MOD_BODY__OPENS:
-        return getOpens();
-      case GFPackage.MOD_BODY__JUDGEMENTS:
-        return getJudgements();
+      case GFPackage.MOD_BODY__CONTENT:
+        return getContent();
       case GFPackage.MOD_BODY__FUNCTOR:
         return getFunctor();
       case GFPackage.MOD_BODY__FUNCTOR_INSTANTIATION:
@@ -330,13 +335,8 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
         getExtends().clear();
         getExtends().addAll((Collection<? extends Included>)newValue);
         return;
-      case GFPackage.MOD_BODY__OPENS:
-        getOpens().clear();
-        getOpens().addAll((Collection<? extends Open>)newValue);
-        return;
-      case GFPackage.MOD_BODY__JUDGEMENTS:
-        getJudgements().clear();
-        getJudgements().addAll((Collection<? extends TopDef>)newValue);
+      case GFPackage.MOD_BODY__CONTENT:
+        setContent((ModContent)newValue);
         return;
       case GFPackage.MOD_BODY__FUNCTOR:
         setFunctor((Included)newValue);
@@ -346,7 +346,7 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
         return;
       case GFPackage.MOD_BODY__INSTANTIATIONS:
         getInstantiations().clear();
-        getInstantiations().addAll((Collection<? extends Open>)newValue);
+        getInstantiations().addAll((Collection<? extends Inst>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -365,11 +365,8 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
       case GFPackage.MOD_BODY__EXTENDS:
         getExtends().clear();
         return;
-      case GFPackage.MOD_BODY__OPENS:
-        getOpens().clear();
-        return;
-      case GFPackage.MOD_BODY__JUDGEMENTS:
-        getJudgements().clear();
+      case GFPackage.MOD_BODY__CONTENT:
+        setContent((ModContent)null);
         return;
       case GFPackage.MOD_BODY__FUNCTOR:
         setFunctor((Included)null);
@@ -396,10 +393,8 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
     {
       case GFPackage.MOD_BODY__EXTENDS:
         return extends_ != null && !extends_.isEmpty();
-      case GFPackage.MOD_BODY__OPENS:
-        return opens != null && !opens.isEmpty();
-      case GFPackage.MOD_BODY__JUDGEMENTS:
-        return judgements != null && !judgements.isEmpty();
+      case GFPackage.MOD_BODY__CONTENT:
+        return content != null;
       case GFPackage.MOD_BODY__FUNCTOR:
         return functor != null;
       case GFPackage.MOD_BODY__FUNCTOR_INSTANTIATION:

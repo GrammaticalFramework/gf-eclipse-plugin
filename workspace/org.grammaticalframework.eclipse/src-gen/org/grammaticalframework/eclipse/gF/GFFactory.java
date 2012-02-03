@@ -53,6 +53,15 @@ public interface GFFactory extends EFactory
   ModBody createModBody();
 
   /**
+   * Returns a new object of class '<em>Mod Content</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mod Content</em>'.
+   * @generated
+   */
+  ModContent createModContent();
+
+  /**
    * Returns a new object of class '<em>Open</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -62,6 +71,15 @@ public interface GFFactory extends EFactory
   Open createOpen();
 
   /**
+   * Returns a new object of class '<em>Inst</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Inst</em>'.
+   * @generated
+   */
+  Inst createInst();
+
+  /**
    * Returns a new object of class '<em>Included</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -69,15 +87,6 @@ public interface GFFactory extends EFactory
    * @generated
    */
   Included createIncluded();
-
-  /**
-   * Returns a new object of class '<em>Def</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Def</em>'.
-   * @generated
-   */
-  Def createDef();
 
   /**
    * Returns a new object of class '<em>Top Def</em>'.
@@ -107,6 +116,15 @@ public interface GFFactory extends EFactory
   FunDef createFunDef();
 
   /**
+   * Returns a new object of class '<em>Def Def</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Def Def</em>'.
+   * @generated
+   */
+  DefDef createDefDef();
+
+  /**
    * Returns a new object of class '<em>Data Def</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -116,40 +134,40 @@ public interface GFFactory extends EFactory
   DataDef createDataDef();
 
   /**
-   * Returns a new object of class '<em>Data Constr</em>'.
+   * Returns a new object of class '<em>Param Def</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Data Constr</em>'.
+   * @return a new object of class '<em>Param Def</em>'.
    * @generated
    */
-  DataConstr createDataConstr();
+  ParamDef createParamDef();
 
   /**
-   * Returns a new object of class '<em>Par Def</em>'.
+   * Returns a new object of class '<em>Oper Def</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Par Def</em>'.
+   * @return a new object of class '<em>Oper Def</em>'.
    * @generated
    */
-  ParDef createParDef();
+  OperDef createOperDef();
 
   /**
-   * Returns a new object of class '<em>Par Constr</em>'.
+   * Returns a new object of class '<em>Lin Def</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Par Constr</em>'.
+   * @return a new object of class '<em>Lin Def</em>'.
    * @generated
    */
-  ParConstr createParConstr();
+  LinDef createLinDef();
 
   /**
-   * Returns a new object of class '<em>Print Def</em>'.
+   * Returns a new object of class '<em>Term Def</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Print Def</em>'.
+   * @return a new object of class '<em>Term Def</em>'.
    * @generated
    */
-  PrintDef createPrintDef();
+  TermDef createTermDef();
 
   /**
    * Returns a new object of class '<em>Flag Def</em>'.
@@ -159,6 +177,15 @@ public interface GFFactory extends EFactory
    * @generated
    */
   FlagDef createFlagDef();
+
+  /**
+   * Returns a new object of class '<em>Par Constr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Par Constr</em>'.
+   * @generated
+   */
+  ParConstr createParConstr();
 
   /**
    * Returns a new object of class '<em>Name</em>'.
@@ -188,60 +215,6 @@ public interface GFFactory extends EFactory
   ListLocDef createListLocDef();
 
   /**
-   * Returns a new object of class '<em>Exp6</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exp6</em>'.
-   * @generated
-   */
-  Exp6 createExp6();
-
-  /**
-   * Returns a new object of class '<em>Exp5</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exp5</em>'.
-   * @generated
-   */
-  Exp5 createExp5();
-
-  /**
-   * Returns a new object of class '<em>Exp4</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exp4</em>'.
-   * @generated
-   */
-  Exp4 createExp4();
-
-  /**
-   * Returns a new object of class '<em>Exp3</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exp3</em>'.
-   * @generated
-   */
-  Exp3 createExp3();
-
-  /**
-   * Returns a new object of class '<em>Exp2</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exp2</em>'.
-   * @generated
-   */
-  Exp2 createExp2();
-
-  /**
-   * Returns a new object of class '<em>Exp1</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Exp1</em>'.
-   * @generated
-   */
-  Exp1 createExp1();
-
-  /**
    * Returns a new object of class '<em>Exp</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -267,24 +240,6 @@ public interface GFFactory extends EFactory
    * @generated
    */
   Exps createExps();
-
-  /**
-   * Returns a new object of class '<em>Patt2</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Patt2</em>'.
-   * @generated
-   */
-  Patt2 createPatt2();
-
-  /**
-   * Returns a new object of class '<em>Patt1</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Patt1</em>'.
-   * @generated
-   */
-  Patt1 createPatt1();
 
   /**
    * Returns a new object of class '<em>Patt</em>'.
@@ -332,6 +287,15 @@ public interface GFFactory extends EFactory
   ListPatt createListPatt();
 
   /**
+   * Returns a new object of class '<em>Arg</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Arg</em>'.
+   * @generated
+   */
+  Arg createArg();
+
+  /**
    * Returns a new object of class '<em>Bind</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -348,24 +312,6 @@ public interface GFFactory extends EFactory
    * @generated
    */
   ListBind createListBind();
-
-  /**
-   * Returns a new object of class '<em>Tuple Comp</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Tuple Comp</em>'.
-   * @generated
-   */
-  TupleComp createTupleComp();
-
-  /**
-   * Returns a new object of class '<em>Patt Tuple Comp</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Patt Tuple Comp</em>'.
-   * @generated
-   */
-  PattTupleComp createPattTupleComp();
 
   /**
    * Returns a new object of class '<em>List Tuple Comp</em>'.
@@ -404,6 +350,15 @@ public interface GFFactory extends EFactory
   ListCase createListCase();
 
   /**
+   * Returns a new object of class '<em>Altern</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Altern</em>'.
+   * @generated
+   */
+  Altern createAltern();
+
+  /**
    * Returns a new object of class '<em>DDecl</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -420,6 +375,78 @@ public interface GFFactory extends EFactory
    * @generated
    */
   Ident createIdent();
+
+  /**
+   * Returns a new object of class '<em>Exp LF13</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Exp LF13</em>'.
+   * @generated
+   */
+  ExpLF13 createExpLF13();
+
+  /**
+   * Returns a new object of class '<em>Exp1</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Exp1</em>'.
+   * @generated
+   */
+  Exp1 createExp1();
+
+  /**
+   * Returns a new object of class '<em>Exp2</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Exp2</em>'.
+   * @generated
+   */
+  Exp2 createExp2();
+
+  /**
+   * Returns a new object of class '<em>Exp3</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Exp3</em>'.
+   * @generated
+   */
+  Exp3 createExp3();
+
+  /**
+   * Returns a new object of class '<em>Exp4</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Exp4</em>'.
+   * @generated
+   */
+  Exp4 createExp4();
+
+  /**
+   * Returns a new object of class '<em>Integer</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Integer</em>'.
+   * @generated
+   */
+  Integer createInteger();
+
+  /**
+   * Returns a new object of class '<em>Double</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Double</em>'.
+   * @generated
+   */
+  Double createDouble();
+
+  /**
+   * Returns a new object of class '<em>String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>String</em>'.
+   * @generated
+   */
+  String createString();
 
   /**
    * Returns the package supported by this factory.

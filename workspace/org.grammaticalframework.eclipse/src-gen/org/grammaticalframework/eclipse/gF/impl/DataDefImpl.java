@@ -21,8 +21,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.grammaticalframework.eclipse.gF.DataConstr;
 import org.grammaticalframework.eclipse.gF.DataDef;
+import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
 
@@ -35,6 +35,7 @@ import org.grammaticalframework.eclipse.gF.Ident;
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DataDefImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DataDefImpl#getConstructors <em>Constructors</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DataDefImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,14 +44,14 @@ import org.grammaticalframework.eclipse.gF.Ident;
 public class DataDefImpl extends MinimalEObjectImpl.Container implements DataDef
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getName()
    * @generated
    * @ordered
    */
-  protected Ident name;
+  protected EList<Ident> name;
 
   /**
    * The cached value of the '{@link #getConstructors() <em>Constructors</em>}' containment reference list.
@@ -60,7 +61,17 @@ public class DataDefImpl extends MinimalEObjectImpl.Container implements DataDef
    * @generated
    * @ordered
    */
-  protected EList<DataConstr> constructors;
+  protected EList<Ident> constructors;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected Exp type;
 
   /**
    * <!-- begin-user-doc -->
@@ -88,8 +99,12 @@ public class DataDefImpl extends MinimalEObjectImpl.Container implements DataDef
    * <!-- end-user-doc -->
    * @generated
    */
-  public Ident getName()
+  public EList<Ident> getName()
   {
+    if (name == null)
+    {
+      name = new EObjectContainmentEList<Ident>(Ident.class, this, GFPackage.DATA_DEF__NAME);
+    }
     return name;
   }
 
@@ -98,13 +113,37 @@ public class DataDefImpl extends MinimalEObjectImpl.Container implements DataDef
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(Ident newName, NotificationChain msgs)
+  public EList<Ident> getConstructors()
   {
-    Ident oldName = name;
-    name = newName;
+    if (constructors == null)
+    {
+      constructors = new EObjectContainmentEList<Ident>(Ident.class, this, GFPackage.DATA_DEF__CONSTRUCTORS);
+    }
+    return constructors;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exp getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetType(Exp newType, NotificationChain msgs)
+  {
+    Exp oldType = type;
+    type = newType;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.DATA_DEF__NAME, oldName, newName);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.DATA_DEF__TYPE, oldType, newType);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -115,34 +154,20 @@ public class DataDefImpl extends MinimalEObjectImpl.Container implements DataDef
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(Ident newName)
+  public void setType(Exp newType)
   {
-    if (newName != name)
+    if (newType != type)
     {
       NotificationChain msgs = null;
-      if (name != null)
-        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.DATA_DEF__NAME, null, msgs);
-      if (newName != null)
-        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.DATA_DEF__NAME, null, msgs);
-      msgs = basicSetName(newName, msgs);
+      if (type != null)
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.DATA_DEF__TYPE, null, msgs);
+      if (newType != null)
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.DATA_DEF__TYPE, null, msgs);
+      msgs = basicSetType(newType, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.DATA_DEF__NAME, newName, newName));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<DataConstr> getConstructors()
-  {
-    if (constructors == null)
-    {
-      constructors = new EObjectContainmentEList<DataConstr>(DataConstr.class, this, GFPackage.DATA_DEF__CONSTRUCTORS);
-    }
-    return constructors;
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.DATA_DEF__TYPE, newType, newType));
   }
 
   /**
@@ -156,9 +181,11 @@ public class DataDefImpl extends MinimalEObjectImpl.Container implements DataDef
     switch (featureID)
     {
       case GFPackage.DATA_DEF__NAME:
-        return basicSetName(null, msgs);
+        return ((InternalEList<?>)getName()).basicRemove(otherEnd, msgs);
       case GFPackage.DATA_DEF__CONSTRUCTORS:
         return ((InternalEList<?>)getConstructors()).basicRemove(otherEnd, msgs);
+      case GFPackage.DATA_DEF__TYPE:
+        return basicSetType(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -177,6 +204,8 @@ public class DataDefImpl extends MinimalEObjectImpl.Container implements DataDef
         return getName();
       case GFPackage.DATA_DEF__CONSTRUCTORS:
         return getConstructors();
+      case GFPackage.DATA_DEF__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -193,11 +222,15 @@ public class DataDefImpl extends MinimalEObjectImpl.Container implements DataDef
     switch (featureID)
     {
       case GFPackage.DATA_DEF__NAME:
-        setName((Ident)newValue);
+        getName().clear();
+        getName().addAll((Collection<? extends Ident>)newValue);
         return;
       case GFPackage.DATA_DEF__CONSTRUCTORS:
         getConstructors().clear();
-        getConstructors().addAll((Collection<? extends DataConstr>)newValue);
+        getConstructors().addAll((Collection<? extends Ident>)newValue);
+        return;
+      case GFPackage.DATA_DEF__TYPE:
+        setType((Exp)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -214,10 +247,13 @@ public class DataDefImpl extends MinimalEObjectImpl.Container implements DataDef
     switch (featureID)
     {
       case GFPackage.DATA_DEF__NAME:
-        setName((Ident)null);
+        getName().clear();
         return;
       case GFPackage.DATA_DEF__CONSTRUCTORS:
         getConstructors().clear();
+        return;
+      case GFPackage.DATA_DEF__TYPE:
+        setType((Exp)null);
         return;
     }
     super.eUnset(featureID);
@@ -234,9 +270,11 @@ public class DataDefImpl extends MinimalEObjectImpl.Container implements DataDef
     switch (featureID)
     {
       case GFPackage.DATA_DEF__NAME:
-        return name != null;
+        return name != null && !name.isEmpty();
       case GFPackage.DATA_DEF__CONSTRUCTORS:
         return constructors != null && !constructors.isEmpty();
+      case GFPackage.DATA_DEF__TYPE:
+        return type != null;
     }
     return super.eIsSet(featureID);
   }

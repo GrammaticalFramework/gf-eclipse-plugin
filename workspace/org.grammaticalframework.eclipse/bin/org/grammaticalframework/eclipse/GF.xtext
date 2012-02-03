@@ -9,8 +9,10 @@
  */
  
 /**
- * GF grammar based on the GF Book (2011), Appendix C.6
+ * GF grammar based on Yacc grammar file src/compiler/GF/Grammar/Parser.y
  * Some (hopefully syntactically-equivalent) modifications have been made to please the compiler.
+ * 
+ * Note: Do not rely on the grammar in the GF book (Appendix C), it is known to contain errors!
  */
 grammar org.grammaticalframework.eclipse.GF
 
@@ -43,22 +45,29 @@ ModType :
 	|	resource?='resource'	name=Ident
 	|	interface?='interface'	name=Ident
 	|	concrete?='concrete'	name=Ident 'of' abstractName=Ident
-	|	instance?='instance'	name=Ident 'of' abstractName=Ident
+	|	instance?='instance'	name=Ident 'of' abstractName=Included
 ;
 
 ModBody :
-    {ModBody} ( (extends+=Included (',' extends+=Included)*)? '**')? ('open' (opens+=Open (',' opens+=Open)*)? 'in')? '{' (judgements+=TopDef)* '}'
+    {ModBody} ( (extends+=Included (',' extends+=Included)*)? '**')? content=ModContent
 	| {ModBody} (extends+=Included (',' extends+=Included)*)?
-	| {ModBody} functor=Included functorInstantiation?='with' (instantiations+=Open (',' instantiations+=Open)*)?
-	| {ModBody} functor=Included functorInstantiation?='with' (instantiations+=Open (',' instantiations+=Open)*)? '**' ('open' (opens+=Open (',' opens+=Open)*)? 'in')? '{' (judgements+=TopDef)* '}'
-	| {ModBody} (extends+=Included (',' extends+=Included)*)? '**' functor=Included functorInstantiation?='with' (instantiations+=Open (',' instantiations+=Open)*)?
-	| {ModBody} (extends+=Included (',' extends+=Included)*)? '**' functor=Included functorInstantiation?='with' (instantiations+=Open (',' instantiations+=Open)*)? '**' ('open' (opens+=Open (',' opens+=Open)*)? 'in')? '{' (judgements+=TopDef)* '}'
+	| {ModBody} functor=Included functorInstantiation?='with' (instantiations+=Inst (',' instantiations+=Inst)*)?
+	| {ModBody} functor=Included functorInstantiation?='with' (instantiations+=Inst (',' instantiations+=Inst)*)? '**' content=ModContent
+	| {ModBody} (extends+=Included (',' extends+=Included)*)? '**' functor=Included functorInstantiation?='with' (instantiations+=Inst (',' instantiations+=Inst)*)?
+	| {ModBody} (extends+=Included (',' extends+=Included)*)? '**' functor=Included functorInstantiation?='with' (instantiations+=Inst (',' instantiations+=Inst)*)? '**' content=ModContent
+;
+
+ModContent :
+	{ModContent} ('open' (opens+=Open (',' opens+=Open)*)? 'in')? '{' (judgements+=TopDef)* '}'
 ;
 
 Open :
 	      name=Ident
-	| '(' name=Ident ')'
 	| '(' alias=Ident '=' name=Ident ')'
+;
+
+Inst :
+	  '(' interface=Ident '=' name=Ident ')'
 ;
 
 Included :
@@ -67,37 +76,18 @@ Included :
 	| name=Ident exclusive?='-' '[' excludes+=Ident (',' excludes+=Ident)* ']'
 ;
 
-Def :
-//	  name=ListName '=' definition=Exp
-//	| name=Name patterns=ListPatt '=' definition=Exp
-//	| name=ListName ':' type=Exp ('=' definition=Exp)?
-	  name+=Name (',' name+=Name)*				 '=' definition=Exp
-	| name+=Name (',' name+=Name)* ':' type=Exp ('=' definition=Exp)?
-	| name+=Name patterns=ListPatt				 '=' definition=Exp
-;
-
-// For handling the overload syntax
-OperDef returns Def :
-	  name+=Name (',' name+=Name)*				 '=' ( definition=Exp | overload?='overload' '{' overloads+=Def (';' overloads+=Def )* ';'? '}')
-	| name+=Name (',' name+=Name)* ':' type=Exp	('=' ( definition=Exp | overload?='overload' '{' overloads+=Def (';' overloads+=Def )* ';'? '}'))?
-	| name+=Name (',' name+=Name)* ':' overload?='overload'	'{' overloads+=Def (';' overloads+=Def )* ';'? '}'
-	| name+=Name patterns=ListPatt				 '=' definition=Exp
-;
-
 TopDef :
 	  cat?='cat'		(definitions+=CatDef ';')+
 	| fun?='fun'		(definitions+=FunDef ';')+
-	| data?='data'		(definitions+=FunDef ';')+
-	| def?='def'		(definitions+=Def ';')+
+	| def?='def'		(definitions+=DefDef ';')+
 	| data?='data'		(definitions+=DataDef ';')+
-	| param?='param'	(definitions+=ParDef ';')+		
-//	| oper?='oper'		(definitions+=Def ';')+
+	| param?='param'	(definitions+=ParamDef ';')+		
 	| oper?='oper'		(definitions+=OperDef ';')+
-	| lincat?='lincat'	(definitions+=PrintDef ';')+
-	| lindef?='lindef'	(definitions+=Def ';')+
-	| lin?='lin'		(definitions+=Def ';')+
-	| printname?='printname' 'cat'	(definitions+=PrintDef ';')+
-	| printname?='printname' 'fun'	(definitions+=PrintDef ';')+
+	| lincat?='lincat'	(definitions+=TermDef ';')+
+	| lindef?='lindef'	(definitions+=TermDef ';')+
+	| lin?='lin'		(definitions+=LinDef ';')+
+	| printname?='printname' 'cat'	(definitions+=TermDef ';')+
+	| printname?='printname' 'fun'	(definitions+=TermDef ';')+
 	| flags?='flags'	(definitions+=FlagDef ';')+
 ;
 
@@ -107,35 +97,51 @@ CatDef :
 ;
 
 FunDef :
-	name+=Ident (',' name+=Ident)* ':' type=Exp
+	  name+=Ident (',' name+=Ident)* ':' type=Exp
+;
+
+DefDef :
+	  name+=Name (',' name+=Name)*				 '=' definition=Exp
+	| name+=Name patterns=ListPatt				 '=' definition=Exp
 ;
 
 DataDef :
-	name=Ident '=' (constructors+=DataConstr ('|' constructors+=DataConstr)* '|'? )?
+	  name+=Ident '=' constructors+=Ident ('|' constructors+=Ident)*
+	| name+=Ident (',' name+=Ident)* ':' type=Exp
 ;
 
-DataConstr :
-	  name=Ident
-	| module=Ident '.' name=Ident
+ParamDef :
+	  name=Ident ('=' constructors+=ParConstr ('|' constructors+=ParConstr)* '|'? )?
 ;
 
-ParDef :
-	  name=Ident '=' (constructors+=ParConstr ('|' constructors+=ParConstr)* '|'? )?
-	| name=Ident '=' '(' 'in' id2=Ident ')'
-	| name=Ident
+// For handling the overload syntax
+//OperDef :
+//	  name+=Name (',' name+=Name)*				 '=' ( definition=Exp | overload?='overload' '{' overloads+=DefDef (';' overloads+=DefDef )* ';'? '}')
+//	| name+=Name (',' name+=Name)* ':' type=Exp	('=' ( definition=Exp | overload?='overload' '{' overloads+=DefDef (';' overloads+=DefDef )* ';'? '}'))?
+//	| name+=Name (',' name+=Name)* ':' overload?='overload'	'{' overloads+=DefDef (';' overloads+=DefDef )* ';'? '}'
+//	| name+=Name patterns=ListPatt				 '=' definition=Exp
+//;
+OperDef :
+	  name+=Name (',' name+=Name)* ':' type=Exp	('=' ( definition=Exp | overload?='overload' '{' overloads+=DefDef (';' overloads+=DefDef )* ';'? '}'))?
+	| name+=Name (',' name+=Name)*				 '=' ( definition=Exp | overload?='overload' '{' overloads+=DefDef (';' overloads+=DefDef )* ';'? '}')
+	| name+=Name (args+=Arg)+					 '=' definition=Exp
 ;
 
-ParConstr :
-	name=Ident constructors+=DDecl*
+LinDef:
+	  name+=Name (',' name+=Name)*	'=' definition=Exp
+	| name+=Name (args+=Arg)+		'=' definition=Exp
 ;
 
-PrintDef :
-//	name=ListName '=' printname=Exp
-	name+=Name (',' name+=Name)* '=' printname=Exp
+TermDef:
+	  name+=Name (',' name+=Name)*	'=' definition=Exp
 ;
 
 FlagDef :
 	  name=Ident '=' (value=Ident | String)
+;
+
+ParConstr :
+	name=Ident constructors+=DDecl*
 ;
 
 Name :
@@ -153,137 +159,142 @@ ListLocDef :
 	{ListLocDef} ( localDefinitions+=LocDef (';' localDefinitions+=LocDef)* ';'? )?
 ;
 
-Exp6 :
-//	  {Exp6} Ident
+/*
+Exp
+  : Exp1 '|' Exp 
+  | '\\'   ListBind '->' Exp
+  | '\\\\' ListBind '=>' Exp
+  | Decl '->' Exp
+  | Exp3 '=>' Exp
+  | 'let' '{' ListLocDef '}' 'in' Exp
+  | 'let' ListLocDef 'in' Exp
+  | Exp3 'where' '{' ListLocDef '}'
+  | 'in' Exp5 String
+  | Exp1   
+*/
+
+// JOHN: Check again this refactoring of Exp to see if it's ok, then on to fixing stuff in scoping, formatting etc.
+
+Exp :
+	  ExpLF13
+//	  Exp1 ({Exp.left=current} '|' right=Exp)?
+	| '\\' bindList=ListBind '->' right=Exp
+	| '\\' '\\' bindList=ListBind '=>' right=Exp
+	| '(' ListBind ':' decl=Exp ')' '->' right=Exp // Decl, part 1
+//	| Exp3 {Exp.left=current} right=ExpLF
+	| 'let' '{' defList=ListLocDef '}' 'in' right=Exp
+	| 'let'     defList=ListLocDef     'in' right=Exp
+	| 'in' Exp5 String
+;
+
+ExpLF13 returns Exp : 
+	Exp3 (
+		({ExpLF13.left=current} ('++'|'+') right=Exp3)* ({ExpLF13.left=current} '|' right=Exp)?
+		| {ExpLF13.left=current} right=ExpLF
+	)
+;
+
+ExpLF returns Exp :
+	  '->' Exp // Decl, part2 
+	| '=>' Exp
+	| 'where' '{' ListLocDef '}'
+;
+
+Exp1 returns Exp :
+	Exp2 ({Exp1.left=current} '++' right=Exp2)*
+;
+
+Exp2 returns Exp :
+	Exp3 ({Exp2.left=current} '+' right=Exp3)*
+;
+
+/*
+Exp3
+  : Exp3 '!' Exp4 
+  | 'table' '{' ListCase '}'
+  | 'table' Exp6 '{' ListCase '}'
+  | 'table' Exp6 '[' ListExp ']'
+  | Exp3 '*'  Exp4
+  | Exp3 '**' Exp4
+  | Exp4
+*/
+Exp3 returns Exp :
+	  Exp3LF ({Exp3.left=current} ('!'|'*'|'**') right=Exp4)*
+;
+Exp3LF returns Exp :
+	  'table' '{' caseList=ListCase '}'
+	| 'table' argType=Exp6 ( '{' caseList=ListCase '}' | '[' expList=ListExp ']' )
+	| Exp4
+;
+
+/*
+Exp4
+  : Exp4 Exp5
+  | Exp4 '{' Exp '}' 
+  | 'case' Exp 'of' '{' ListCase '}'
+  | 'variants' '{' ListExp '}'
+  | 'pre' '{' ListCase '}'
+  | 'pre' '{' String ';' ListAltern '}'
+  | 'pre' '{' Ident ';' ListAltern '}'
+  | 'strs' '{' ListExp '}'
+  | '#' Patt3
+  | 'pattern' Exp5
+  | 'lincat' Ident Exp5
+  | 'lin' Ident Exp5
+  | Exp5
+*/
+Exp4 returns Exp :
+	  Exp4LF ({Exp4.left=current} ( right=Exp5 | '{' right=Exp '}' ) )*
+;
+Exp4LF returns Exp :
+	  'case' caseOf=Exp 'of' '{' caseList=ListCase '}'
+	| 'variants' '{' expList=ListExp '}'
+	| 'pre' '{' caseList=ListCase '}'
+	| 'pre' '{' String ';' alts+=Altern (';' alts+=Altern)* '}'
+	| 'pre' '{' Ident  ';' alts+=Altern (';' alts+=Altern)* '}'
+	| 'strs' '{' expList=ListExp '}'
+	| '#' pattern=Patt3
+	| 'pattern' pattern=Exp5
+	| 'lincat' name=[Ident|ID] inner=Exp5
+	| 'lin' name=[Ident|ID] inner=Exp5
+	| Exp5
+;
+
+Exp5 returns Exp :
+	Exp6 ('.' label+=Label)*		// projection or qualification
+;
+
+/*
+Exp6 
+  : Ident 
+  | Sort
+  | String
+  | Integer
+  | Double
+  | '?'
+  | '[' ']'
+  | '[' Ident Exps ']'
+  | '[' String ']'
+  | '{' ListLocDef '}'
+  | '<' ListTupleComp '>'
+  | '<' Exp ':' Exp '>'
+  | LString
+  | '(' Exp ')'
+*/
+Exp6 returns Exp :
 	  name=[Ident|ID]		// constant or variable
-	  
 	| sort?=Sort			// type of types/param types/strings/token lists
-	| builtInCat?=BuiltInCat	// 
 	| string?=String			// string literal
 	| integer?=Integer		// integer literal
 	| double?=Double			// floating point literal
-
-//	| {Exp6} '?' Integer
-//	| {Exp6} '?'
-	| meta?='?' (=>Integer)?		// metavariable
-
+	| meta?='?' 		// metavariable
 	| emptyString?='[' ']'		// empty token list
-	| data?='data'			
-	
-//	| '[' Ident es=Exps ']'
 	| listCat?='[' category=[Ident|ID] list=Exps ']'		// list category
-	
 	| tokenList?='[' String ']'						// token list
 	| record?='{' defList=ListLocDef '}'				// record / record type
-
-//	| '<' ltc=ListTupleComp '>'
-//	| '<' e+=Exp ':' e+=Exp '>'
 	| tuple?='<' (=> tupleList=ListTupleComp | v=Exp ':' type=Exp) '>'		// tuple | type-annotated expression
-
+//  | LString
 	| identity?='(' v=Exp ')'
-;
-
-Exp5 :
-	// Exp5 . Label | Exp6
-	  v=Exp6 ('.' label+=Label)*		// projection or qualification
-;
-
-Exp4 :
-//	  e1=Exp4 e2=Exp5		// function application
-	  'table' '{' caseList=ListCase '}'				(args+=Exp5)*
-	  
-//	| 'table' e+=Exp6 '{' lc=ListCase '}'		(e+=Exp5)*
-//	| 'table' e+=Exp6 '[' le=ListExp ']'		(e+=Exp5)*
-	| 'table' argType=Exp6 ( '{' caseList=ListCase '}' | '[' expList=ListExp ']' )		(args+=Exp5)*			// course-of-values table
-	
-	| 'case' caseOf=Exp 'of' '{' caseList=ListCase '}'	(args+=Exp5)*
-	| 'variants' '{' expList=ListExp '}'			(args+=Exp5)*
-	| 'pre' '{' caseList=ListCase '}'				(args+=Exp5)*
-	| 'lincat' name=[Ident|ID]						(args+=Exp5)*
-	| 'lin' name=[Ident|ID] inner=Exp6				(args+=Exp5)*
-	| v=Exp5										(args+=Exp5)*
-;
-
-Exp3 :
-//	  e1=Exp3 '!' e2=Exp4
-//	| e1=Exp3 '*' e2=Exp4
-//	| e1=Exp3 '**' e2=Exp4
-//	| '#' Patt2
-//	| Exp4
-	  		v=Exp4		(('!'|'*'|'**') e+=Exp4)*
-	| '#'	v=Patt2		(('!'|'*'|'**') e+=Exp4)*
-;
-
-Exp2 :
-//	  e1=Exp3 '+' e2=Exp2
-//	| Exp3
-	  v=Exp3 ('+' e+=Exp2)?
-;
-
-Exp1 :
-//	  e1=Exp2 '++' e2=Exp1
-//	| Exp2
-	  v=Exp2 ('++' e+=Exp1)?
-;
-
-Exp :
-	 '\\' bindList=ListBind '->' v=Exp					(=> '|' e+=Exp1)*
-	| '\\' '\\' bindList=ListBind '=>' v=Exp				(=> '|' e+=Exp1)*
-//-	| d+=Decl '->' e+=Exp							(=> '|' e+=Exp1)*
-//-	| e+=Exp3 '=>' e+=Exp							(=> '|' e+=Exp1)*
-	| 'let' '{' defList=ListLocDef '}' 'in' v=Exp		(=> '|' e+=Exp1)*
-	| 'let' defList=ListLocDef 'in' v=Exp				(=> '|' e+=Exp1)*
-//-	| e+=Exp3 'where' '{' e+=ListLocDef '}'			(=> '|' e+=Exp1)*
-
- /*
- * The following is (hopefully) an amalgamation of:
- *	Decl -> Exp
- *  Exp3 => Exp
- * 	Exp3 where { ListLocDef }
- * 	Exp1
- */
-	| '(' bindList=ListBind ':' type=Exp ')'	'->' v=Exp		(=> '|' e+=Exp1)*
-	| v=Exp4
-		(
-			(('!'|'*'|'**') e+=Exp4)*				// That makes Exp3
-			(
-				  '=>' e+=Exp
-				| 'where' '{' defList=ListLocDef '}'
-				| ('+' e+=Exp2)? ('++' e+=Exp1)?
-			)
-
-			| '->' e+=Exp
-		)
-		(=> '|' e+=Exp1)*
-		
-	| '#' v=Patt2
-		(('!'|'*'|'**') e+=Exp4)*				// That makes Exp3
-		(
-			  '=>' e+=Exp
-			| 'where' '{' defList=ListLocDef '}'
-			| ('+' e+=Exp2)? ('++' e+=Exp1)?
-		)
-		(=> '|' e+=Exp1)*
-
-/*
- * The following is an amalgamation of:
- *  Exp3 => Exp
- * 	Exp3 where { ListLocDef }
- * 	Exp1
- *
-	| e+=Exp3
-		(
-			  '=>' e+=Exp
-			| 'where' '{' e+=ListLocDef '}'
-			| ('+' e+=Exp2)? ('++' e+=Exp1)?
-		)
-		(=> '|' e+=Exp1)*
-
-*/
-
-//-	| e+=Exp '|' e+=Exp1
-//-	| e+=Exp1										(=> '|' e+=Exp1)*
- 
 ;
 
 ListExp :
@@ -296,38 +307,51 @@ Exps :
 	{Exps} (expressions+=Exp6)*
 ;
 
-Patt2 :
-	  {Patt2} '_'
-	| {Patt2} name=Ident
-	| {Patt2} name=Ident '.' label=Ident
-	| {Patt2} Integer
-	| {Patt2} Double
-	| {Patt2} String
-	| '{' ListPattAss '}'
-	| '<' ListPattTupleComp '>'
-	| {Patt2} '#' name=Ident
-	| {Patt2} '?'
-	| '(' Patt ')'
+Patt :
+	// Patt '|' Patt1 | Patt '+' Patt1 | Patt1
+//	p+=Patt1 (('|'|'+') p+=Patt1)*
+	Patt1 ({Patt.left=current} (or?='|'|and?='+') right=Patt1)*
 ;
 
-Patt1 :
+Patt1 returns Patt :
 	  name=Ident value=ListPatt
 	| name=Ident '.' label=Ident value=ListPatt
-//	| Patt2 '*'
-	| name=Ident '@' value=Patt2
-	| '-' Patt2
-	| Patt2 ('*')?
+	| Patt3 '*'?
+	| Patt2LF
 //	| Patt2
 ;
 
-Patt :
-	// Patt '|' Patt1 | Patt '+' Patt1 | Patt1
-	p += Patt1 (('|'|'+') p += Patt1)*
+// Left-factoring of `Patt1 -> Patt2` above and `Patt2 -> Patt3` below
+Patt2 returns Patt :
+	Patt2LF | Patt3
 ;
 
-// "Pattern Assignment"
+Patt2LF returns Patt :
+	  name=Ident '@' value=Patt3
+	| '-' Patt3
+	| '~' Exp6
+//	| Patt3
+;
+
+Patt3 returns Patt :
+	  meta?='?'
+	| tokenList?='[' String ']'
+//	| '#' name=Ident
+//	| '#' name=Ident '.' label=Ident
+//	| name=Ident
+//	| name=Ident '.' label=Ident
+	| '#'? name=Ident ('.' label=Ident)?
+	| wildcard?='_'
+	| {Integer} Integer
+	| {Double} Double
+	| {String} String
+	| '{' ListPattAss '}'
+	| '<' ListPattTupleComp '>'
+	| '(' Patt ')'
+;
+
 PattAss :
-	name+=Ident (',' name+=Ident)* '=' value=Patt
+	  name+=Ident (',' name+=Ident)* '=' value=Patt
 ;
 
 Label :
@@ -338,64 +362,58 @@ Label :
 Sort :
 	  'Type'
 	| 'PType'
+	| 'Tok'
 	| 'Str'
 	| 'Strs'
 ;
 
-BuiltInCat :
-	  'String'
-	| 'Int'
-	| 'Ints'
-	| 'Float'
-	| 'pattern'
-;
+//BuiltInCat :
+//	  'String'
+//	| 'Int'
+//	| 'Ints'
+//	| 'Float'
+//;
 
 ListPattAss :
-	// ε | PattAss | PattAss ';' ListPattAss
 	{ListPattAss} ( assignments+=PattAss (';' assignments+=PattAss)* ';'? )?
 ;
 
-// WARNING If you refactor this, make sure to update GFScopeProvider::getAllDescriptions(), line 137
 ListPatt :
-	// Patt2 | Patt2 ListPatt
-	(patterns += Patt2)+
+	(patterns += PattArg)+
+;
+
+PattArg returns Patt:
+	  Patt2
+	| '{' Patt '}'
+;
+
+Arg :
+	  name+=Ident
+	| wildcard?='_'
+	| '{' (name+=Ident)+ '}' // ListIdent2
 ;
 
 Bind :
-	  name=Ident
-	| {Bind} '_'
+	  name+=Ident
+	| wildcard?='_'
+	| '{' name+=Ident (',' name+=Ident)* '}' // ListIdent
 ;
 
-// WARNING If you refactor this, make sure to update GFScopeProvider::getAllDescriptions(), line 142
 ListBind :
-	// ε | Bind | Bind ',' ListBind
-	{ListBind} ( bindings+=Bind (',' bindings+=Bind)* )?
+	bindings+=Bind (',' bindings+=Bind)*
 ;
 
-/*
- * This has now been melted down into Exp
- */ 
 //Decl :
-//	  '(' lb=ListBind ':' e+=Exp ')'
-//	| e+=Exp4
+//	  '(' bindings+=Bind (',' bindings+=Bind)* ':' e=Exp ')'
+//	| e=Exp3
 //;
- 
-TupleComp :
-	Exp
-;
-
-PattTupleComp :
-	Patt
-;
 
 ListTupleComp :
-	// ε | TupleComp | TupleComp ',' ListTupleComp
-	{ListTupleComp} ( l += TupleComp (',' l += TupleComp)* )?
+	{ListTupleComp} ( elements+=Exp (',' elements+=Exp)* ','? )?
 ;
 
 ListPattTupleComp :
-	// ε | PattTupleComp | PattTupleComp ',' ListPattTupleComp
-	{ListPattTupleComp} ( l += PattTupleComp (',' l += PattTupleComp)* )?
+	{ListPattTupleComp} ( patterns+=Patt (',' patterns+=Patt)* ','? )?
 ;
 
 Case :
@@ -403,8 +421,11 @@ Case :
 ;
 
 ListCase :
-	// Case | Case ';' ListCase
 	cases+=Case (';' cases+=Case)*
+;
+
+Altern :
+	alt1=Exp '/' alt2=Exp
 ;
 
 DDecl :

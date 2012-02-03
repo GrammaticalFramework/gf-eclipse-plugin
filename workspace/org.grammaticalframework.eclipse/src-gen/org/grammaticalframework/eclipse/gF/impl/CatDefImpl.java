@@ -5,6 +5,8 @@
  */
 package org.grammaticalframework.eclipse.gF.impl;
 
+import java.lang.Integer;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

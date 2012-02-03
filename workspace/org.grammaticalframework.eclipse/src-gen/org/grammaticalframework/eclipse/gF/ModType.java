@@ -170,12 +170,12 @@ public interface ModType extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Abstract Name</em>' containment reference.
-   * @see #setAbstractName(Ident)
+   * @see #setAbstractName(EObject)
    * @see org.grammaticalframework.eclipse.gF.GFPackage#getModType_AbstractName()
    * @model containment="true"
    * @generated
    */
-  Ident getAbstractName();
+  EObject getAbstractName();
 
   /**
    * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.ModType#getAbstractName <em>Abstract Name</em>}' containment reference.
@@ -185,7 +185,7 @@ public interface ModType extends EObject
    * @see #getAbstractName()
    * @generated
    */
-  void setAbstractName(Ident value);
+  void setAbstractName(EObject value);
 
   /**
    * Returns the value of the '<em><b>Instance</b></em>' attribute.

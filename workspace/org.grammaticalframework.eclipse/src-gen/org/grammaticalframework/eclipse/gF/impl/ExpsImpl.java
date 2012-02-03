@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.grammaticalframework.eclipse.gF.Exp6;
+import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.Exps;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 
@@ -46,7 +46,7 @@ public class ExpsImpl extends MinimalEObjectImpl.Container implements Exps
    * @generated
    * @ordered
    */
-  protected EList<Exp6> expressions;
+  protected EList<Exp> expressions;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,11 +74,11 @@ public class ExpsImpl extends MinimalEObjectImpl.Container implements Exps
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Exp6> getExpressions()
+  public EList<Exp> getExpressions()
   {
     if (expressions == null)
     {
-      expressions = new EObjectContainmentEList<Exp6>(Exp6.class, this, GFPackage.EXPS__EXPRESSIONS);
+      expressions = new EObjectContainmentEList<Exp>(Exp.class, this, GFPackage.EXPS__EXPRESSIONS);
     }
     return expressions;
   }
@@ -128,7 +128,7 @@ public class ExpsImpl extends MinimalEObjectImpl.Container implements Exps
     {
       case GFPackage.EXPS__EXPRESSIONS:
         getExpressions().clear();
-        getExpressions().addAll((Collection<? extends Exp6>)newValue);
+        getExpressions().addAll((Collection<? extends Exp>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

@@ -12,7 +12,51 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.grammaticalframework.eclipse.gF.*;
+import org.grammaticalframework.eclipse.gF.Altern;
+import org.grammaticalframework.eclipse.gF.Arg;
+import org.grammaticalframework.eclipse.gF.Bind;
+import org.grammaticalframework.eclipse.gF.Case;
+import org.grammaticalframework.eclipse.gF.CatDef;
+import org.grammaticalframework.eclipse.gF.DDecl;
+import org.grammaticalframework.eclipse.gF.DataDef;
+import org.grammaticalframework.eclipse.gF.DefDef;
+import org.grammaticalframework.eclipse.gF.Exp;
+import org.grammaticalframework.eclipse.gF.Exp1;
+import org.grammaticalframework.eclipse.gF.Exp2;
+import org.grammaticalframework.eclipse.gF.Exp3;
+import org.grammaticalframework.eclipse.gF.Exp4;
+import org.grammaticalframework.eclipse.gF.ExpLF13;
+import org.grammaticalframework.eclipse.gF.Exps;
+import org.grammaticalframework.eclipse.gF.FlagDef;
+import org.grammaticalframework.eclipse.gF.FunDef;
+import org.grammaticalframework.eclipse.gF.GFPackage;
+import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Included;
+import org.grammaticalframework.eclipse.gF.Inst;
+import org.grammaticalframework.eclipse.gF.Label;
+import org.grammaticalframework.eclipse.gF.LinDef;
+import org.grammaticalframework.eclipse.gF.ListBind;
+import org.grammaticalframework.eclipse.gF.ListCase;
+import org.grammaticalframework.eclipse.gF.ListExp;
+import org.grammaticalframework.eclipse.gF.ListLocDef;
+import org.grammaticalframework.eclipse.gF.ListPatt;
+import org.grammaticalframework.eclipse.gF.ListPattAss;
+import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
+import org.grammaticalframework.eclipse.gF.ListTupleComp;
+import org.grammaticalframework.eclipse.gF.LocDef;
+import org.grammaticalframework.eclipse.gF.ModBody;
+import org.grammaticalframework.eclipse.gF.ModContent;
+import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.ModType;
+import org.grammaticalframework.eclipse.gF.Name;
+import org.grammaticalframework.eclipse.gF.Open;
+import org.grammaticalframework.eclipse.gF.OperDef;
+import org.grammaticalframework.eclipse.gF.ParConstr;
+import org.grammaticalframework.eclipse.gF.ParamDef;
+import org.grammaticalframework.eclipse.gF.Patt;
+import org.grammaticalframework.eclipse.gF.PattAss;
+import org.grammaticalframework.eclipse.gF.TermDef;
+import org.grammaticalframework.eclipse.gF.TopDef;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,19 +137,24 @@ public class GFAdapterFactory extends AdapterFactoryImpl
         return createModBodyAdapter();
       }
       @Override
+      public Adapter caseModContent(ModContent object)
+      {
+        return createModContentAdapter();
+      }
+      @Override
       public Adapter caseOpen(Open object)
       {
         return createOpenAdapter();
       }
       @Override
+      public Adapter caseInst(Inst object)
+      {
+        return createInstAdapter();
+      }
+      @Override
       public Adapter caseIncluded(Included object)
       {
         return createIncludedAdapter();
-      }
-      @Override
-      public Adapter caseDef(Def object)
-      {
-        return createDefAdapter();
       }
       @Override
       public Adapter caseTopDef(TopDef object)
@@ -123,34 +172,44 @@ public class GFAdapterFactory extends AdapterFactoryImpl
         return createFunDefAdapter();
       }
       @Override
+      public Adapter caseDefDef(DefDef object)
+      {
+        return createDefDefAdapter();
+      }
+      @Override
       public Adapter caseDataDef(DataDef object)
       {
         return createDataDefAdapter();
       }
       @Override
-      public Adapter caseDataConstr(DataConstr object)
+      public Adapter caseParamDef(ParamDef object)
       {
-        return createDataConstrAdapter();
+        return createParamDefAdapter();
       }
       @Override
-      public Adapter caseParDef(ParDef object)
+      public Adapter caseOperDef(OperDef object)
       {
-        return createParDefAdapter();
+        return createOperDefAdapter();
       }
       @Override
-      public Adapter caseParConstr(ParConstr object)
+      public Adapter caseLinDef(LinDef object)
       {
-        return createParConstrAdapter();
+        return createLinDefAdapter();
       }
       @Override
-      public Adapter casePrintDef(PrintDef object)
+      public Adapter caseTermDef(TermDef object)
       {
-        return createPrintDefAdapter();
+        return createTermDefAdapter();
       }
       @Override
       public Adapter caseFlagDef(FlagDef object)
       {
         return createFlagDefAdapter();
+      }
+      @Override
+      public Adapter caseParConstr(ParConstr object)
+      {
+        return createParConstrAdapter();
       }
       @Override
       public Adapter caseName(Name object)
@@ -168,36 +227,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
         return createListLocDefAdapter();
       }
       @Override
-      public Adapter caseExp6(Exp6 object)
-      {
-        return createExp6Adapter();
-      }
-      @Override
-      public Adapter caseExp5(Exp5 object)
-      {
-        return createExp5Adapter();
-      }
-      @Override
-      public Adapter caseExp4(Exp4 object)
-      {
-        return createExp4Adapter();
-      }
-      @Override
-      public Adapter caseExp3(Exp3 object)
-      {
-        return createExp3Adapter();
-      }
-      @Override
-      public Adapter caseExp2(Exp2 object)
-      {
-        return createExp2Adapter();
-      }
-      @Override
-      public Adapter caseExp1(Exp1 object)
-      {
-        return createExp1Adapter();
-      }
-      @Override
       public Adapter caseExp(Exp object)
       {
         return createExpAdapter();
@@ -211,16 +240,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
       public Adapter caseExps(Exps object)
       {
         return createExpsAdapter();
-      }
-      @Override
-      public Adapter casePatt2(Patt2 object)
-      {
-        return createPatt2Adapter();
-      }
-      @Override
-      public Adapter casePatt1(Patt1 object)
-      {
-        return createPatt1Adapter();
       }
       @Override
       public Adapter casePatt(Patt object)
@@ -248,6 +267,11 @@ public class GFAdapterFactory extends AdapterFactoryImpl
         return createListPattAdapter();
       }
       @Override
+      public Adapter caseArg(Arg object)
+      {
+        return createArgAdapter();
+      }
+      @Override
       public Adapter caseBind(Bind object)
       {
         return createBindAdapter();
@@ -256,16 +280,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
       public Adapter caseListBind(ListBind object)
       {
         return createListBindAdapter();
-      }
-      @Override
-      public Adapter caseTupleComp(TupleComp object)
-      {
-        return createTupleCompAdapter();
-      }
-      @Override
-      public Adapter casePattTupleComp(PattTupleComp object)
-      {
-        return createPattTupleCompAdapter();
       }
       @Override
       public Adapter caseListTupleComp(ListTupleComp object)
@@ -288,6 +302,11 @@ public class GFAdapterFactory extends AdapterFactoryImpl
         return createListCaseAdapter();
       }
       @Override
+      public Adapter caseAltern(Altern object)
+      {
+        return createAlternAdapter();
+      }
+      @Override
       public Adapter caseDDecl(DDecl object)
       {
         return createDDeclAdapter();
@@ -296,6 +315,46 @@ public class GFAdapterFactory extends AdapterFactoryImpl
       public Adapter caseIdent(Ident object)
       {
         return createIdentAdapter();
+      }
+      @Override
+      public Adapter caseExpLF13(ExpLF13 object)
+      {
+        return createExpLF13Adapter();
+      }
+      @Override
+      public Adapter caseExp1(Exp1 object)
+      {
+        return createExp1Adapter();
+      }
+      @Override
+      public Adapter caseExp2(Exp2 object)
+      {
+        return createExp2Adapter();
+      }
+      @Override
+      public Adapter caseExp3(Exp3 object)
+      {
+        return createExp3Adapter();
+      }
+      @Override
+      public Adapter caseExp4(Exp4 object)
+      {
+        return createExp4Adapter();
+      }
+      @Override
+      public Adapter caseInteger(org.grammaticalframework.eclipse.gF.Integer object)
+      {
+        return createIntegerAdapter();
+      }
+      @Override
+      public Adapter caseDouble(org.grammaticalframework.eclipse.gF.Double object)
+      {
+        return createDoubleAdapter();
+      }
+      @Override
+      public Adapter caseString(org.grammaticalframework.eclipse.gF.String object)
+      {
+        return createStringAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -365,6 +424,21 @@ public class GFAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ModContent <em>Mod Content</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.ModContent
+   * @generated
+   */
+  public Adapter createModContentAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Open <em>Open</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -380,6 +454,21 @@ public class GFAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Inst <em>Inst</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.Inst
+   * @generated
+   */
+  public Adapter createInstAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Included <em>Included</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -390,21 +479,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createIncludedAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Def <em>Def</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Def
-   * @generated
-   */
-  public Adapter createDefAdapter()
   {
     return null;
   }
@@ -455,6 +529,21 @@ public class GFAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.DefDef <em>Def Def</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.DefDef
+   * @generated
+   */
+  public Adapter createDefDefAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.DataDef <em>Data Def</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -470,61 +559,61 @@ public class GFAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.DataConstr <em>Data Constr</em>}'.
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ParamDef <em>Param Def</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.DataConstr
+   * @see org.grammaticalframework.eclipse.gF.ParamDef
    * @generated
    */
-  public Adapter createDataConstrAdapter()
+  public Adapter createParamDefAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ParDef <em>Par Def</em>}'.
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.OperDef <em>Oper Def</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.ParDef
+   * @see org.grammaticalframework.eclipse.gF.OperDef
    * @generated
    */
-  public Adapter createParDefAdapter()
+  public Adapter createOperDefAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ParConstr <em>Par Constr</em>}'.
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.LinDef <em>Lin Def</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.ParConstr
+   * @see org.grammaticalframework.eclipse.gF.LinDef
    * @generated
    */
-  public Adapter createParConstrAdapter()
+  public Adapter createLinDefAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.PrintDef <em>Print Def</em>}'.
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.TermDef <em>Term Def</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.PrintDef
+   * @see org.grammaticalframework.eclipse.gF.TermDef
    * @generated
    */
-  public Adapter createPrintDefAdapter()
+  public Adapter createTermDefAdapter()
   {
     return null;
   }
@@ -540,6 +629,21 @@ public class GFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFlagDefAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ParConstr <em>Par Constr</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.ParConstr
+   * @generated
+   */
+  public Adapter createParConstrAdapter()
   {
     return null;
   }
@@ -590,96 +694,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp6 <em>Exp6</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Exp6
-   * @generated
-   */
-  public Adapter createExp6Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp5 <em>Exp5</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Exp5
-   * @generated
-   */
-  public Adapter createExp5Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp4 <em>Exp4</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Exp4
-   * @generated
-   */
-  public Adapter createExp4Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp3 <em>Exp3</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Exp3
-   * @generated
-   */
-  public Adapter createExp3Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp2 <em>Exp2</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Exp2
-   * @generated
-   */
-  public Adapter createExp2Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp1 <em>Exp1</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Exp1
-   * @generated
-   */
-  public Adapter createExp1Adapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp <em>Exp</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -720,36 +734,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExpsAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Patt2 <em>Patt2</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Patt2
-   * @generated
-   */
-  public Adapter createPatt2Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Patt1 <em>Patt1</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Patt1
-   * @generated
-   */
-  public Adapter createPatt1Adapter()
   {
     return null;
   }
@@ -830,6 +814,21 @@ public class GFAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Arg <em>Arg</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.Arg
+   * @generated
+   */
+  public Adapter createArgAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Bind <em>Bind</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -855,36 +854,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createListBindAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.TupleComp <em>Tuple Comp</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.TupleComp
-   * @generated
-   */
-  public Adapter createTupleCompAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.PattTupleComp <em>Patt Tuple Comp</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.PattTupleComp
-   * @generated
-   */
-  public Adapter createPattTupleCompAdapter()
   {
     return null;
   }
@@ -950,6 +919,21 @@ public class GFAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Altern <em>Altern</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.Altern
+   * @generated
+   */
+  public Adapter createAlternAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.DDecl <em>DDecl</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -975,6 +959,126 @@ public class GFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createIdentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ExpLF13 <em>Exp LF13</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.ExpLF13
+   * @generated
+   */
+  public Adapter createExpLF13Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp1 <em>Exp1</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.Exp1
+   * @generated
+   */
+  public Adapter createExp1Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp2 <em>Exp2</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.Exp2
+   * @generated
+   */
+  public Adapter createExp2Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp3 <em>Exp3</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.Exp3
+   * @generated
+   */
+  public Adapter createExp3Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Exp4 <em>Exp4</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.Exp4
+   * @generated
+   */
+  public Adapter createExp4Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Integer <em>Integer</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.Integer
+   * @generated
+   */
+  public Adapter createIntegerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Double <em>Double</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.Double
+   * @generated
+   */
+  public Adapter createDoubleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.String <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.String
+   * @generated
+   */
+  public Adapter createStringAdapter()
   {
     return null;
   }

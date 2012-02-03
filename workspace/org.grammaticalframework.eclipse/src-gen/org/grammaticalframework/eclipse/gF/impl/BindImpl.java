@@ -5,14 +5,21 @@
  */
 package org.grammaticalframework.eclipse.gF.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.grammaticalframework.eclipse.gF.Bind;
 import org.grammaticalframework.eclipse.gF.GFPackage;
@@ -26,6 +33,7 @@ import org.grammaticalframework.eclipse.gF.Ident;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.BindImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.BindImpl#isWildcard <em>Wildcard</em>}</li>
  * </ul>
  * </p>
  *
@@ -34,14 +42,34 @@ import org.grammaticalframework.eclipse.gF.Ident;
 public class BindImpl extends MinimalEObjectImpl.Container implements Bind
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getName()
    * @generated
    * @ordered
    */
-  protected Ident name;
+  protected EList<Ident> name;
+
+  /**
+   * The default value of the '{@link #isWildcard() <em>Wildcard</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isWildcard()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean WILDCARD_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isWildcard() <em>Wildcard</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isWildcard()
+   * @generated
+   * @ordered
+   */
+  protected boolean wildcard = WILDCARD_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,8 +97,12 @@ public class BindImpl extends MinimalEObjectImpl.Container implements Bind
    * <!-- end-user-doc -->
    * @generated
    */
-  public Ident getName()
+  public EList<Ident> getName()
   {
+    if (name == null)
+    {
+      name = new EObjectContainmentEList<Ident>(Ident.class, this, GFPackage.BIND__NAME);
+    }
     return name;
   }
 
@@ -79,16 +111,9 @@ public class BindImpl extends MinimalEObjectImpl.Container implements Bind
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(Ident newName, NotificationChain msgs)
+  public boolean isWildcard()
   {
-    Ident oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.BIND__NAME, oldName, newName);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return wildcard;
   }
 
   /**
@@ -96,20 +121,12 @@ public class BindImpl extends MinimalEObjectImpl.Container implements Bind
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(Ident newName)
+  public void setWildcard(boolean newWildcard)
   {
-    if (newName != name)
-    {
-      NotificationChain msgs = null;
-      if (name != null)
-        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.BIND__NAME, null, msgs);
-      if (newName != null)
-        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.BIND__NAME, null, msgs);
-      msgs = basicSetName(newName, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.BIND__NAME, newName, newName));
+    boolean oldWildcard = wildcard;
+    wildcard = newWildcard;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.BIND__WILDCARD, oldWildcard, wildcard));
   }
 
   /**
@@ -123,7 +140,7 @@ public class BindImpl extends MinimalEObjectImpl.Container implements Bind
     switch (featureID)
     {
       case GFPackage.BIND__NAME:
-        return basicSetName(null, msgs);
+        return ((InternalEList<?>)getName()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -140,6 +157,8 @@ public class BindImpl extends MinimalEObjectImpl.Container implements Bind
     {
       case GFPackage.BIND__NAME:
         return getName();
+      case GFPackage.BIND__WILDCARD:
+        return isWildcard();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -149,13 +168,18 @@ public class BindImpl extends MinimalEObjectImpl.Container implements Bind
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case GFPackage.BIND__NAME:
-        setName((Ident)newValue);
+        getName().clear();
+        getName().addAll((Collection<? extends Ident>)newValue);
+        return;
+      case GFPackage.BIND__WILDCARD:
+        setWildcard((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -172,7 +196,10 @@ public class BindImpl extends MinimalEObjectImpl.Container implements Bind
     switch (featureID)
     {
       case GFPackage.BIND__NAME:
-        setName((Ident)null);
+        getName().clear();
+        return;
+      case GFPackage.BIND__WILDCARD:
+        setWildcard(WILDCARD_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -189,9 +216,28 @@ public class BindImpl extends MinimalEObjectImpl.Container implements Bind
     switch (featureID)
     {
       case GFPackage.BIND__NAME:
-        return name != null;
+        return name != null && !name.isEmpty();
+      case GFPackage.BIND__WILDCARD:
+        return wildcard != WILDCARD_EDEFAULT;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (wildcard: ");
+    result.append(wildcard);
+    result.append(')');
+    return result.toString();
   }
 
 } //BindImpl

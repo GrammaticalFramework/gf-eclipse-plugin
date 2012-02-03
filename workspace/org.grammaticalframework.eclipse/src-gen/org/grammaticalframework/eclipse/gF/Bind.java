@@ -5,6 +5,8 @@
  */
 package org.grammaticalframework.eclipse.gF;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Bind#getName <em>Name</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Bind#isWildcard <em>Wildcard</em>}</li>
  * </ul>
  * </p>
  *
@@ -26,29 +29,45 @@ import org.eclipse.emf.ecore.EObject;
 public interface Bind extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' containment reference.
+   * Returns the value of the '<em><b>Name</b></em>' containment reference list.
+   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Ident}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Name</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' containment reference.
-   * @see #setName(Ident)
+   * @return the value of the '<em>Name</em>' containment reference list.
    * @see org.grammaticalframework.eclipse.gF.GFPackage#getBind_Name()
    * @model containment="true"
    * @generated
    */
-  Ident getName();
+  EList<Ident> getName();
 
   /**
-   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Bind#getName <em>Name</em>}' containment reference.
+   * Returns the value of the '<em><b>Wildcard</b></em>' attribute.
    * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Wildcard</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' containment reference.
-   * @see #getName()
+   * @return the value of the '<em>Wildcard</em>' attribute.
+   * @see #setWildcard(boolean)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getBind_Wildcard()
+   * @model
    * @generated
    */
-  void setName(Ident value);
+  boolean isWildcard();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Bind#isWildcard <em>Wildcard</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Wildcard</em>' attribute.
+   * @see #isWildcard()
+   * @generated
+   */
+  void setWildcard(boolean value);
 
 } // Bind

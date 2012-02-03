@@ -13,7 +13,52 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.grammaticalframework.eclipse.gF.*;
+import org.grammaticalframework.eclipse.gF.Altern;
+import org.grammaticalframework.eclipse.gF.Arg;
+import org.grammaticalframework.eclipse.gF.Bind;
+import org.grammaticalframework.eclipse.gF.Case;
+import org.grammaticalframework.eclipse.gF.CatDef;
+import org.grammaticalframework.eclipse.gF.DDecl;
+import org.grammaticalframework.eclipse.gF.DataDef;
+import org.grammaticalframework.eclipse.gF.DefDef;
+import org.grammaticalframework.eclipse.gF.Exp;
+import org.grammaticalframework.eclipse.gF.Exp1;
+import org.grammaticalframework.eclipse.gF.Exp2;
+import org.grammaticalframework.eclipse.gF.Exp3;
+import org.grammaticalframework.eclipse.gF.Exp4;
+import org.grammaticalframework.eclipse.gF.ExpLF13;
+import org.grammaticalframework.eclipse.gF.Exps;
+import org.grammaticalframework.eclipse.gF.FlagDef;
+import org.grammaticalframework.eclipse.gF.FunDef;
+import org.grammaticalframework.eclipse.gF.GFFactory;
+import org.grammaticalframework.eclipse.gF.GFPackage;
+import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Included;
+import org.grammaticalframework.eclipse.gF.Inst;
+import org.grammaticalframework.eclipse.gF.Label;
+import org.grammaticalframework.eclipse.gF.LinDef;
+import org.grammaticalframework.eclipse.gF.ListBind;
+import org.grammaticalframework.eclipse.gF.ListCase;
+import org.grammaticalframework.eclipse.gF.ListExp;
+import org.grammaticalframework.eclipse.gF.ListLocDef;
+import org.grammaticalframework.eclipse.gF.ListPatt;
+import org.grammaticalframework.eclipse.gF.ListPattAss;
+import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
+import org.grammaticalframework.eclipse.gF.ListTupleComp;
+import org.grammaticalframework.eclipse.gF.LocDef;
+import org.grammaticalframework.eclipse.gF.ModBody;
+import org.grammaticalframework.eclipse.gF.ModContent;
+import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.ModType;
+import org.grammaticalframework.eclipse.gF.Name;
+import org.grammaticalframework.eclipse.gF.Open;
+import org.grammaticalframework.eclipse.gF.OperDef;
+import org.grammaticalframework.eclipse.gF.ParConstr;
+import org.grammaticalframework.eclipse.gF.ParamDef;
+import org.grammaticalframework.eclipse.gF.Patt;
+import org.grammaticalframework.eclipse.gF.PattAss;
+import org.grammaticalframework.eclipse.gF.TermDef;
+import org.grammaticalframework.eclipse.gF.TopDef;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,47 +115,50 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
       case GFPackage.MOD_DEF: return createModDef();
       case GFPackage.MOD_TYPE: return createModType();
       case GFPackage.MOD_BODY: return createModBody();
+      case GFPackage.MOD_CONTENT: return createModContent();
       case GFPackage.OPEN: return createOpen();
+      case GFPackage.INST: return createInst();
       case GFPackage.INCLUDED: return createIncluded();
-      case GFPackage.DEF: return createDef();
       case GFPackage.TOP_DEF: return createTopDef();
       case GFPackage.CAT_DEF: return createCatDef();
       case GFPackage.FUN_DEF: return createFunDef();
+      case GFPackage.DEF_DEF: return createDefDef();
       case GFPackage.DATA_DEF: return createDataDef();
-      case GFPackage.DATA_CONSTR: return createDataConstr();
-      case GFPackage.PAR_DEF: return createParDef();
-      case GFPackage.PAR_CONSTR: return createParConstr();
-      case GFPackage.PRINT_DEF: return createPrintDef();
+      case GFPackage.PARAM_DEF: return createParamDef();
+      case GFPackage.OPER_DEF: return createOperDef();
+      case GFPackage.LIN_DEF: return createLinDef();
+      case GFPackage.TERM_DEF: return createTermDef();
       case GFPackage.FLAG_DEF: return createFlagDef();
+      case GFPackage.PAR_CONSTR: return createParConstr();
       case GFPackage.NAME: return createName();
       case GFPackage.LOC_DEF: return createLocDef();
       case GFPackage.LIST_LOC_DEF: return createListLocDef();
-      case GFPackage.EXP6: return createExp6();
-      case GFPackage.EXP5: return createExp5();
-      case GFPackage.EXP4: return createExp4();
-      case GFPackage.EXP3: return createExp3();
-      case GFPackage.EXP2: return createExp2();
-      case GFPackage.EXP1: return createExp1();
       case GFPackage.EXP: return createExp();
       case GFPackage.LIST_EXP: return createListExp();
       case GFPackage.EXPS: return createExps();
-      case GFPackage.PATT2: return createPatt2();
-      case GFPackage.PATT1: return createPatt1();
       case GFPackage.PATT: return createPatt();
       case GFPackage.PATT_ASS: return createPattAss();
       case GFPackage.LABEL: return createLabel();
       case GFPackage.LIST_PATT_ASS: return createListPattAss();
       case GFPackage.LIST_PATT: return createListPatt();
+      case GFPackage.ARG: return createArg();
       case GFPackage.BIND: return createBind();
       case GFPackage.LIST_BIND: return createListBind();
-      case GFPackage.TUPLE_COMP: return createTupleComp();
-      case GFPackage.PATT_TUPLE_COMP: return createPattTupleComp();
       case GFPackage.LIST_TUPLE_COMP: return createListTupleComp();
       case GFPackage.LIST_PATT_TUPLE_COMP: return createListPattTupleComp();
       case GFPackage.CASE: return createCase();
       case GFPackage.LIST_CASE: return createListCase();
+      case GFPackage.ALTERN: return createAltern();
       case GFPackage.DDECL: return createDDecl();
       case GFPackage.IDENT: return createIdent();
+      case GFPackage.EXP_LF13: return createExpLF13();
+      case GFPackage.EXP1: return createExp1();
+      case GFPackage.EXP2: return createExp2();
+      case GFPackage.EXP3: return createExp3();
+      case GFPackage.EXP4: return createExp4();
+      case GFPackage.INTEGER: return createInteger();
+      case GFPackage.DOUBLE: return createDouble();
+      case GFPackage.STRING: return createString();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -154,6 +202,17 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ModContent createModContent()
+  {
+    ModContentImpl modContent = new ModContentImpl();
+    return modContent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Open createOpen()
   {
     OpenImpl open = new OpenImpl();
@@ -165,10 +224,10 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Included createIncluded()
+  public Inst createInst()
   {
-    IncludedImpl included = new IncludedImpl();
-    return included;
+    InstImpl inst = new InstImpl();
+    return inst;
   }
 
   /**
@@ -176,10 +235,10 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Def createDef()
+  public Included createIncluded()
   {
-    DefImpl def = new DefImpl();
-    return def;
+    IncludedImpl included = new IncludedImpl();
+    return included;
   }
 
   /**
@@ -220,6 +279,17 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public DefDef createDefDef()
+  {
+    DefDefImpl defDef = new DefDefImpl();
+    return defDef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public DataDef createDataDef()
   {
     DataDefImpl dataDef = new DataDefImpl();
@@ -231,10 +301,10 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DataConstr createDataConstr()
+  public ParamDef createParamDef()
   {
-    DataConstrImpl dataConstr = new DataConstrImpl();
-    return dataConstr;
+    ParamDefImpl paramDef = new ParamDefImpl();
+    return paramDef;
   }
 
   /**
@@ -242,10 +312,10 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ParDef createParDef()
+  public OperDef createOperDef()
   {
-    ParDefImpl parDef = new ParDefImpl();
-    return parDef;
+    OperDefImpl operDef = new OperDefImpl();
+    return operDef;
   }
 
   /**
@@ -253,10 +323,10 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ParConstr createParConstr()
+  public LinDef createLinDef()
   {
-    ParConstrImpl parConstr = new ParConstrImpl();
-    return parConstr;
+    LinDefImpl linDef = new LinDefImpl();
+    return linDef;
   }
 
   /**
@@ -264,10 +334,10 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public PrintDef createPrintDef()
+  public TermDef createTermDef()
   {
-    PrintDefImpl printDef = new PrintDefImpl();
-    return printDef;
+    TermDefImpl termDef = new TermDefImpl();
+    return termDef;
   }
 
   /**
@@ -279,6 +349,17 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
   {
     FlagDefImpl flagDef = new FlagDefImpl();
     return flagDef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ParConstr createParConstr()
+  {
+    ParConstrImpl parConstr = new ParConstrImpl();
+    return parConstr;
   }
 
   /**
@@ -319,72 +400,6 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Exp6 createExp6()
-  {
-    Exp6Impl exp6 = new Exp6Impl();
-    return exp6;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Exp5 createExp5()
-  {
-    Exp5Impl exp5 = new Exp5Impl();
-    return exp5;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Exp4 createExp4()
-  {
-    Exp4Impl exp4 = new Exp4Impl();
-    return exp4;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Exp3 createExp3()
-  {
-    Exp3Impl exp3 = new Exp3Impl();
-    return exp3;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Exp2 createExp2()
-  {
-    Exp2Impl exp2 = new Exp2Impl();
-    return exp2;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Exp1 createExp1()
-  {
-    Exp1Impl exp1 = new Exp1Impl();
-    return exp1;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public Exp createExp()
   {
     ExpImpl exp = new ExpImpl();
@@ -411,28 +426,6 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
   {
     ExpsImpl exps = new ExpsImpl();
     return exps;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Patt2 createPatt2()
-  {
-    Patt2Impl patt2 = new Patt2Impl();
-    return patt2;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Patt1 createPatt1()
-  {
-    Patt1Impl patt1 = new Patt1Impl();
-    return patt1;
   }
 
   /**
@@ -495,6 +488,17 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Arg createArg()
+  {
+    ArgImpl arg = new ArgImpl();
+    return arg;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Bind createBind()
   {
     BindImpl bind = new BindImpl();
@@ -510,28 +514,6 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
   {
     ListBindImpl listBind = new ListBindImpl();
     return listBind;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public TupleComp createTupleComp()
-  {
-    TupleCompImpl tupleComp = new TupleCompImpl();
-    return tupleComp;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PattTupleComp createPattTupleComp()
-  {
-    PattTupleCompImpl pattTupleComp = new PattTupleCompImpl();
-    return pattTupleComp;
   }
 
   /**
@@ -583,6 +565,17 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public Altern createAltern()
+  {
+    AlternImpl altern = new AlternImpl();
+    return altern;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public DDecl createDDecl()
   {
     DDeclImpl dDecl = new DDeclImpl();
@@ -598,6 +591,94 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
   {
     IdentImpl ident = new IdentImpl();
     return ident;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ExpLF13 createExpLF13()
+  {
+    ExpLF13Impl expLF13 = new ExpLF13Impl();
+    return expLF13;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exp1 createExp1()
+  {
+    Exp1Impl exp1 = new Exp1Impl();
+    return exp1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exp2 createExp2()
+  {
+    Exp2Impl exp2 = new Exp2Impl();
+    return exp2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exp3 createExp3()
+  {
+    Exp3Impl exp3 = new Exp3Impl();
+    return exp3;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exp4 createExp4()
+  {
+    Exp4Impl exp4 = new Exp4Impl();
+    return exp4;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.grammaticalframework.eclipse.gF.Integer createInteger()
+  {
+    IntegerImpl integer = new IntegerImpl();
+    return integer;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.grammaticalframework.eclipse.gF.Double createDouble()
+  {
+    DoubleImpl double_ = new DoubleImpl();
+    return double_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public org.grammaticalframework.eclipse.gF.String createString()
+  {
+    StringImpl string = new StringImpl();
+    return string;
   }
 
   /**

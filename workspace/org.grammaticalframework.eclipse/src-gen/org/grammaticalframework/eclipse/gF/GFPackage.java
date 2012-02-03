@@ -5,6 +5,8 @@
  */
 package org.grammaticalframework.eclipse.gF;
 
+import java.lang.String;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -207,22 +209,13 @@ public interface GFPackage extends EPackage
   int MOD_BODY__EXTENDS = 0;
 
   /**
-   * The feature id for the '<em><b>Opens</b></em>' containment reference list.
+   * The feature id for the '<em><b>Content</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MOD_BODY__OPENS = 1;
-
-  /**
-   * The feature id for the '<em><b>Judgements</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MOD_BODY__JUDGEMENTS = 2;
+  int MOD_BODY__CONTENT = 1;
 
   /**
    * The feature id for the '<em><b>Functor</b></em>' containment reference.
@@ -231,7 +224,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MOD_BODY__FUNCTOR = 3;
+  int MOD_BODY__FUNCTOR = 2;
 
   /**
    * The feature id for the '<em><b>Functor Instantiation</b></em>' attribute.
@@ -240,7 +233,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MOD_BODY__FUNCTOR_INSTANTIATION = 4;
+  int MOD_BODY__FUNCTOR_INSTANTIATION = 3;
 
   /**
    * The feature id for the '<em><b>Instantiations</b></em>' containment reference list.
@@ -249,7 +242,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MOD_BODY__INSTANTIATIONS = 5;
+  int MOD_BODY__INSTANTIATIONS = 4;
 
   /**
    * The number of structural features of the '<em>Mod Body</em>' class.
@@ -258,7 +251,44 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MOD_BODY_FEATURE_COUNT = 6;
+  int MOD_BODY_FEATURE_COUNT = 5;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ModContentImpl <em>Mod Content</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.ModContentImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getModContent()
+   * @generated
+   */
+  int MOD_CONTENT = 3;
+
+  /**
+   * The feature id for the '<em><b>Opens</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOD_CONTENT__OPENS = 0;
+
+  /**
+   * The feature id for the '<em><b>Judgements</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOD_CONTENT__JUDGEMENTS = 1;
+
+  /**
+   * The number of structural features of the '<em>Mod Content</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MOD_CONTENT_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.OpenImpl <em>Open</em>}' class.
@@ -268,7 +298,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getOpen()
    * @generated
    */
-  int OPEN = 3;
+  int OPEN = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -298,6 +328,43 @@ public interface GFPackage extends EPackage
   int OPEN_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.InstImpl <em>Inst</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.InstImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getInst()
+   * @generated
+   */
+  int INST = 5;
+
+  /**
+   * The feature id for the '<em><b>Interface</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INST__INTERFACE = 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INST__NAME = 1;
+
+  /**
+   * The number of structural features of the '<em>Inst</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INST_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.IncludedImpl <em>Included</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -305,7 +372,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getIncluded()
    * @generated
    */
-  int INCLUDED = 4;
+  int INCLUDED = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -362,79 +429,6 @@ public interface GFPackage extends EPackage
   int INCLUDED_FEATURE_COUNT = 5;
 
   /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.DefImpl <em>Def</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.DefImpl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDef()
-   * @generated
-   */
-  int DEF = 5;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DEF__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Definition</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DEF__DEFINITION = 1;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DEF__TYPE = 2;
-
-  /**
-   * The feature id for the '<em><b>Patterns</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DEF__PATTERNS = 3;
-
-  /**
-   * The feature id for the '<em><b>Overload</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DEF__OVERLOAD = 4;
-
-  /**
-   * The feature id for the '<em><b>Overloads</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DEF__OVERLOADS = 5;
-
-  /**
-   * The number of structural features of the '<em>Def</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DEF_FEATURE_COUNT = 6;
-
-  /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl <em>Top Def</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -442,7 +436,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getTopDef()
    * @generated
    */
-  int TOP_DEF = 6;
+  int TOP_DEF = 7;
 
   /**
    * The feature id for the '<em><b>Cat</b></em>' attribute.
@@ -472,22 +466,22 @@ public interface GFPackage extends EPackage
   int TOP_DEF__FUN = 2;
 
   /**
-   * The feature id for the '<em><b>Data</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TOP_DEF__DATA = 3;
-
-  /**
    * The feature id for the '<em><b>Def</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TOP_DEF__DEF = 4;
+  int TOP_DEF__DEF = 3;
+
+  /**
+   * The feature id for the '<em><b>Data</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TOP_DEF__DATA = 4;
 
   /**
    * The feature id for the '<em><b>Param</b></em>' attribute.
@@ -569,7 +563,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getCatDef()
    * @generated
    */
-  int CAT_DEF = 7;
+  int CAT_DEF = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -615,7 +609,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getFunDef()
    * @generated
    */
-  int FUN_DEF = 8;
+  int FUN_DEF = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference list.
@@ -645,6 +639,52 @@ public interface GFPackage extends EPackage
   int FUN_DEF_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.DefDefImpl <em>Def Def</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.DefDefImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDefDef()
+   * @generated
+   */
+  int DEF_DEF = 10;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEF_DEF__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Definition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEF_DEF__DEFINITION = 1;
+
+  /**
+   * The feature id for the '<em><b>Patterns</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEF_DEF__PATTERNS = 2;
+
+  /**
+   * The number of structural features of the '<em>Def Def</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEF_DEF_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.DataDefImpl <em>Data Def</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -652,10 +692,10 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDataDef()
    * @generated
    */
-  int DATA_DEF = 9;
+  int DATA_DEF = 11;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * The feature id for the '<em><b>Name</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -673,60 +713,32 @@ public interface GFPackage extends EPackage
   int DATA_DEF__CONSTRUCTORS = 1;
 
   /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DATA_DEF__TYPE = 2;
+
+  /**
    * The number of structural features of the '<em>Data Def</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DATA_DEF_FEATURE_COUNT = 2;
+  int DATA_DEF_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.DataConstrImpl <em>Data Constr</em>}' class.
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ParamDefImpl <em>Param Def</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.DataConstrImpl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDataConstr()
+   * @see org.grammaticalframework.eclipse.gF.impl.ParamDefImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getParamDef()
    * @generated
    */
-  int DATA_CONSTR = 10;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DATA_CONSTR__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Module</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DATA_CONSTR__MODULE = 1;
-
-  /**
-   * The number of structural features of the '<em>Data Constr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int DATA_CONSTR_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ParDefImpl <em>Par Def</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.ParDefImpl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getParDef()
-   * @generated
-   */
-  int PAR_DEF = 11;
+  int PARAM_DEF = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -735,7 +747,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PAR_DEF__NAME = 0;
+  int PARAM_DEF__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Constructors</b></em>' containment reference list.
@@ -744,72 +756,26 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PAR_DEF__CONSTRUCTORS = 1;
+  int PARAM_DEF__CONSTRUCTORS = 1;
 
   /**
-   * The feature id for the '<em><b>Id2</b></em>' containment reference.
+   * The number of structural features of the '<em>Param Def</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PAR_DEF__ID2 = 2;
+  int PARAM_DEF_FEATURE_COUNT = 2;
 
   /**
-   * The number of structural features of the '<em>Par Def</em>' class.
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl <em>Oper Def</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PAR_DEF_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ParConstrImpl <em>Par Constr</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.ParConstrImpl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getParConstr()
+   * @see org.grammaticalframework.eclipse.gF.impl.OperDefImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getOperDef()
    * @generated
    */
-  int PAR_CONSTR = 12;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PAR_CONSTR__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Constructors</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PAR_CONSTR__CONSTRUCTORS = 1;
-
-  /**
-   * The number of structural features of the '<em>Par Constr</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PAR_CONSTR_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.PrintDefImpl <em>Print Def</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.PrintDefImpl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPrintDef()
-   * @generated
-   */
-  int PRINT_DEF = 13;
+  int OPER_DEF = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference list.
@@ -818,25 +784,144 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PRINT_DEF__NAME = 0;
+  int OPER_DEF__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Printname</b></em>' containment reference.
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRINT_DEF__PRINTNAME = 1;
+  int OPER_DEF__TYPE = 1;
 
   /**
-   * The number of structural features of the '<em>Print Def</em>' class.
+   * The feature id for the '<em><b>Definition</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PRINT_DEF_FEATURE_COUNT = 2;
+  int OPER_DEF__DEFINITION = 2;
+
+  /**
+   * The feature id for the '<em><b>Overload</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPER_DEF__OVERLOAD = 3;
+
+  /**
+   * The feature id for the '<em><b>Overloads</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPER_DEF__OVERLOADS = 4;
+
+  /**
+   * The feature id for the '<em><b>Args</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPER_DEF__ARGS = 5;
+
+  /**
+   * The number of structural features of the '<em>Oper Def</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPER_DEF_FEATURE_COUNT = 6;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.LinDefImpl <em>Lin Def</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.LinDefImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getLinDef()
+   * @generated
+   */
+  int LIN_DEF = 14;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIN_DEF__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Definition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIN_DEF__DEFINITION = 1;
+
+  /**
+   * The feature id for the '<em><b>Args</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIN_DEF__ARGS = 2;
+
+  /**
+   * The number of structural features of the '<em>Lin Def</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIN_DEF_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.TermDefImpl <em>Term Def</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.TermDefImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getTermDef()
+   * @generated
+   */
+  int TERM_DEF = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERM_DEF__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Definition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERM_DEF__DEFINITION = 1;
+
+  /**
+   * The number of structural features of the '<em>Term Def</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TERM_DEF_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.FlagDefImpl <em>Flag Def</em>}' class.
@@ -846,7 +931,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getFlagDef()
    * @generated
    */
-  int FLAG_DEF = 14;
+  int FLAG_DEF = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -876,6 +961,43 @@ public interface GFPackage extends EPackage
   int FLAG_DEF_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ParConstrImpl <em>Par Constr</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.ParConstrImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getParConstr()
+   * @generated
+   */
+  int PAR_CONSTR = 17;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PAR_CONSTR__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Constructors</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PAR_CONSTR__CONSTRUCTORS = 1;
+
+  /**
+   * The number of structural features of the '<em>Par Constr</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PAR_CONSTR_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.NameImpl <em>Name</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -883,7 +1005,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getName_()
    * @generated
    */
-  int NAME = 15;
+  int NAME = 18;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -911,7 +1033,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getLocDef()
    * @generated
    */
-  int LOC_DEF = 16;
+  int LOC_DEF = 19;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference list.
@@ -950,151 +1072,77 @@ public interface GFPackage extends EPackage
   int LOC_DEF_FEATURE_COUNT = 3;
 
   /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ListLocDefImpl <em>List Loc Def</em>}' class.
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.PattImpl <em>Patt</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.ListLocDefImpl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getListLocDef()
+   * @see org.grammaticalframework.eclipse.gF.impl.PattImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPatt()
    * @generated
    */
-  int LIST_LOC_DEF = 17;
+  int PATT = 24;
 
   /**
-   * The feature id for the '<em><b>Local Definitions</b></em>' containment reference list.
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIST_LOC_DEF__LOCAL_DEFINITIONS = 0;
+  int PATT__LEFT = 0;
 
   /**
-   * The number of structural features of the '<em>List Loc Def</em>' class.
+   * The feature id for the '<em><b>Or</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIST_LOC_DEF_FEATURE_COUNT = 1;
+  int PATT__OR = 1;
 
   /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.DDeclImpl <em>DDecl</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.DDeclImpl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDDecl()
-   * @generated
-   */
-  int DDECL = 42;
-
-  /**
-   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * The feature id for the '<em><b>And</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DDECL__BIND_LIST = 0;
+  int PATT__AND = 2;
 
   /**
-   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DDECL__E = 1;
+  int PATT__RIGHT = 3;
 
   /**
-   * The number of structural features of the '<em>DDecl</em>' class.
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DDECL_FEATURE_COUNT = 2;
+  int PATT__NAME = 4;
 
   /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp6Impl <em>Exp6</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.Exp6Impl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp6()
-   * @generated
-   */
-  int EXP6 = 18;
-
-  /**
-   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP6__BIND_LIST = DDECL__BIND_LIST;
+  int PATT__VALUE = 5;
 
   /**
-   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP6__E = DDECL__E;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__NAME = DDECL_FEATURE_COUNT + 0;
-
-  /**
-   * The feature id for the '<em><b>Sort</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__SORT = DDECL_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>Built In Cat</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__BUILT_IN_CAT = DDECL_FEATURE_COUNT + 2;
-
-  /**
-   * The feature id for the '<em><b>String</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__STRING = DDECL_FEATURE_COUNT + 3;
-
-  /**
-   * The feature id for the '<em><b>Integer</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__INTEGER = DDECL_FEATURE_COUNT + 4;
-
-  /**
-   * The feature id for the '<em><b>Double</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__DOUBLE = DDECL_FEATURE_COUNT + 5;
+  int PATT__LABEL = 6;
 
   /**
    * The feature id for the '<em><b>Meta</b></em>' attribute.
@@ -1103,52 +1151,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__META = DDECL_FEATURE_COUNT + 6;
-
-  /**
-   * The feature id for the '<em><b>Empty String</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__EMPTY_STRING = DDECL_FEATURE_COUNT + 7;
-
-  /**
-   * The feature id for the '<em><b>Data</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__DATA = DDECL_FEATURE_COUNT + 8;
-
-  /**
-   * The feature id for the '<em><b>List Cat</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__LIST_CAT = DDECL_FEATURE_COUNT + 9;
-
-  /**
-   * The feature id for the '<em><b>Category</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__CATEGORY = DDECL_FEATURE_COUNT + 10;
-
-  /**
-   * The feature id for the '<em><b>List</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__LIST = DDECL_FEATURE_COUNT + 11;
+  int PATT__META = 7;
 
   /**
    * The feature id for the '<em><b>Token List</b></em>' attribute.
@@ -1157,337 +1160,25 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP6__TOKEN_LIST = DDECL_FEATURE_COUNT + 12;
+  int PATT__TOKEN_LIST = 8;
 
   /**
-   * The feature id for the '<em><b>Record</b></em>' attribute.
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP6__RECORD = DDECL_FEATURE_COUNT + 13;
+  int PATT__WILDCARD = 9;
 
   /**
-   * The feature id for the '<em><b>Def List</b></em>' containment reference.
+   * The number of structural features of the '<em>Patt</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP6__DEF_LIST = DDECL_FEATURE_COUNT + 14;
-
-  /**
-   * The feature id for the '<em><b>Tuple</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__TUPLE = DDECL_FEATURE_COUNT + 15;
-
-  /**
-   * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__TUPLE_LIST = DDECL_FEATURE_COUNT + 16;
-
-  /**
-   * The feature id for the '<em><b>V</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__V = DDECL_FEATURE_COUNT + 17;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__TYPE = DDECL_FEATURE_COUNT + 18;
-
-  /**
-   * The feature id for the '<em><b>Identity</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6__IDENTITY = DDECL_FEATURE_COUNT + 19;
-
-  /**
-   * The number of structural features of the '<em>Exp6</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP6_FEATURE_COUNT = DDECL_FEATURE_COUNT + 20;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp5Impl <em>Exp5</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.Exp5Impl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp5()
-   * @generated
-   */
-  int EXP5 = 19;
-
-  /**
-   * The feature id for the '<em><b>V</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP5__V = 0;
-
-  /**
-   * The feature id for the '<em><b>Label</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP5__LABEL = 1;
-
-  /**
-   * The number of structural features of the '<em>Exp5</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP5_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp4Impl <em>Exp4</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.Exp4Impl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp4()
-   * @generated
-   */
-  int EXP4 = 20;
-
-  /**
-   * The feature id for the '<em><b>Case List</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP4__CASE_LIST = 0;
-
-  /**
-   * The feature id for the '<em><b>Args</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP4__ARGS = 1;
-
-  /**
-   * The feature id for the '<em><b>Arg Type</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP4__ARG_TYPE = 2;
-
-  /**
-   * The feature id for the '<em><b>Exp List</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP4__EXP_LIST = 3;
-
-  /**
-   * The feature id for the '<em><b>Case Of</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP4__CASE_OF = 4;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP4__NAME = 5;
-
-  /**
-   * The feature id for the '<em><b>Inner</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP4__INNER = 6;
-
-  /**
-   * The feature id for the '<em><b>V</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP4__V = 7;
-
-  /**
-   * The number of structural features of the '<em>Exp4</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP4_FEATURE_COUNT = 8;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp3Impl <em>Exp3</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.Exp3Impl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp3()
-   * @generated
-   */
-  int EXP3 = 21;
-
-  /**
-   * The feature id for the '<em><b>V</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP3__V = 0;
-
-  /**
-   * The feature id for the '<em><b>E</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP3__E = 1;
-
-  /**
-   * The number of structural features of the '<em>Exp3</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP3_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp2Impl <em>Exp2</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.Exp2Impl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp2()
-   * @generated
-   */
-  int EXP2 = 22;
-
-  /**
-   * The feature id for the '<em><b>V</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP2__V = 0;
-
-  /**
-   * The feature id for the '<em><b>E</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP2__E = 1;
-
-  /**
-   * The number of structural features of the '<em>Exp2</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP2_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp1Impl <em>Exp1</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.Exp1Impl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp1()
-   * @generated
-   */
-  int EXP1 = 23;
-
-  /**
-   * The feature id for the '<em><b>V</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP1__V = 0;
-
-  /**
-   * The feature id for the '<em><b>E</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP1__E = 1;
-
-  /**
-   * The number of structural features of the '<em>Exp1</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP1_FEATURE_COUNT = 2;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.TupleCompImpl <em>Tuple Comp</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.TupleCompImpl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getTupleComp()
-   * @generated
-   */
-  int TUPLE_COMP = 36;
-
-  /**
-   * The number of structural features of the '<em>Tuple Comp</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TUPLE_COMP_FEATURE_COUNT = 0;
+  int PATT_FEATURE_COUNT = 10;
 
   /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl <em>Exp</em>}' class.
@@ -1497,7 +1188,97 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp()
    * @generated
    */
-  int EXP = 24;
+  int EXP = 21;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__LEFT = PATT__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__OR = PATT__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__AND = PATT__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__RIGHT = PATT__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__NAME = PATT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__VALUE = PATT__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__LABEL = PATT__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__META = PATT__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__TOKEN_LIST = PATT__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__WILDCARD = PATT__WILDCARD;
 
   /**
    * The feature id for the '<em><b>Bind List</b></em>' containment reference.
@@ -1506,25 +1287,16 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP__BIND_LIST = TUPLE_COMP_FEATURE_COUNT + 0;
+  int EXP__BIND_LIST = PATT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * The feature id for the '<em><b>E</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EXP__V = TUPLE_COMP_FEATURE_COUNT + 1;
-
-  /**
-   * The feature id for the '<em><b>E</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EXP__E = TUPLE_COMP_FEATURE_COUNT + 2;
+  int EXP__E = PATT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Def List</b></em>' containment reference.
@@ -1533,7 +1305,178 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP__DEF_LIST = TUPLE_COMP_FEATURE_COUNT + 3;
+  int EXP__DEF_LIST = PATT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Case List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__CASE_LIST = PATT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Arg Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__ARG_TYPE = PATT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Exp List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__EXP_LIST = PATT_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Case Of</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__CASE_OF = PATT_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Alts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__ALTS = PATT_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Pattern</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__PATTERN = PATT_FEATURE_COUNT + 8;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__INNER = PATT_FEATURE_COUNT + 9;
+
+  /**
+   * The feature id for the '<em><b>Sort</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__SORT = PATT_FEATURE_COUNT + 10;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__STRING = PATT_FEATURE_COUNT + 11;
+
+  /**
+   * The feature id for the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__INTEGER = PATT_FEATURE_COUNT + 12;
+
+  /**
+   * The feature id for the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__DOUBLE = PATT_FEATURE_COUNT + 13;
+
+  /**
+   * The feature id for the '<em><b>Empty String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__EMPTY_STRING = PATT_FEATURE_COUNT + 14;
+
+  /**
+   * The feature id for the '<em><b>List Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__LIST_CAT = PATT_FEATURE_COUNT + 15;
+
+  /**
+   * The feature id for the '<em><b>Category</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__CATEGORY = PATT_FEATURE_COUNT + 16;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__LIST = PATT_FEATURE_COUNT + 17;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__RECORD = PATT_FEATURE_COUNT + 18;
+
+  /**
+   * The feature id for the '<em><b>Tuple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__TUPLE = PATT_FEATURE_COUNT + 19;
+
+  /**
+   * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__TUPLE_LIST = PATT_FEATURE_COUNT + 20;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__V = PATT_FEATURE_COUNT + 21;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' containment reference.
@@ -1542,7 +1485,16 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP__TYPE = TUPLE_COMP_FEATURE_COUNT + 4;
+  int EXP__TYPE = PATT_FEATURE_COUNT + 22;
+
+  /**
+   * The feature id for the '<em><b>Identity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP__IDENTITY = PATT_FEATURE_COUNT + 23;
 
   /**
    * The number of structural features of the '<em>Exp</em>' class.
@@ -1551,7 +1503,341 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EXP_FEATURE_COUNT = TUPLE_COMP_FEATURE_COUNT + 5;
+  int EXP_FEATURE_COUNT = PATT_FEATURE_COUNT + 24;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ListLocDefImpl <em>List Loc Def</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.ListLocDefImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getListLocDef()
+   * @generated
+   */
+  int LIST_LOC_DEF = 20;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__LEFT = EXP__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__OR = EXP__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__AND = EXP__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__RIGHT = EXP__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__NAME = EXP__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__VALUE = EXP__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__LABEL = EXP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__META = EXP__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__TOKEN_LIST = EXP__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__WILDCARD = EXP__WILDCARD;
+
+  /**
+   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__BIND_LIST = EXP__BIND_LIST;
+
+  /**
+   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__E = EXP__E;
+
+  /**
+   * The feature id for the '<em><b>Def List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__DEF_LIST = EXP__DEF_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__CASE_LIST = EXP__CASE_LIST;
+
+  /**
+   * The feature id for the '<em><b>Arg Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__ARG_TYPE = EXP__ARG_TYPE;
+
+  /**
+   * The feature id for the '<em><b>Exp List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__EXP_LIST = EXP__EXP_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case Of</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__CASE_OF = EXP__CASE_OF;
+
+  /**
+   * The feature id for the '<em><b>Alts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__ALTS = EXP__ALTS;
+
+  /**
+   * The feature id for the '<em><b>Pattern</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__PATTERN = EXP__PATTERN;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__INNER = EXP__INNER;
+
+  /**
+   * The feature id for the '<em><b>Sort</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__SORT = EXP__SORT;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__STRING = EXP__STRING;
+
+  /**
+   * The feature id for the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__INTEGER = EXP__INTEGER;
+
+  /**
+   * The feature id for the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__DOUBLE = EXP__DOUBLE;
+
+  /**
+   * The feature id for the '<em><b>Empty String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__EMPTY_STRING = EXP__EMPTY_STRING;
+
+  /**
+   * The feature id for the '<em><b>List Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__LIST_CAT = EXP__LIST_CAT;
+
+  /**
+   * The feature id for the '<em><b>Category</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__CATEGORY = EXP__CATEGORY;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__LIST = EXP__LIST;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__RECORD = EXP__RECORD;
+
+  /**
+   * The feature id for the '<em><b>Tuple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__TUPLE = EXP__TUPLE;
+
+  /**
+   * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__TUPLE_LIST = EXP__TUPLE_LIST;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__V = EXP__V;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__TYPE = EXP__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Identity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__IDENTITY = EXP__IDENTITY;
+
+  /**
+   * The feature id for the '<em><b>Local Definitions</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF__LOCAL_DEFINITIONS = EXP_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>List Loc Def</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_LOC_DEF_FEATURE_COUNT = EXP_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ListExpImpl <em>List Exp</em>}' class.
@@ -1561,7 +1847,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getListExp()
    * @generated
    */
-  int LIST_EXP = 25;
+  int LIST_EXP = 22;
 
   /**
    * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -1589,7 +1875,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExps()
    * @generated
    */
-  int EXPS = 26;
+  int EXPS = 23;
 
   /**
    * The feature id for the '<em><b>Expressions</b></em>' containment reference list.
@@ -1610,153 +1896,6 @@ public interface GFPackage extends EPackage
   int EXPS_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Patt1Impl <em>Patt1</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.Patt1Impl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPatt1()
-   * @generated
-   */
-  int PATT1 = 28;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT1__NAME = 0;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT1__VALUE = 1;
-
-  /**
-   * The feature id for the '<em><b>Label</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT1__LABEL = 2;
-
-  /**
-   * The number of structural features of the '<em>Patt1</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT1_FEATURE_COUNT = 3;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Patt2Impl <em>Patt2</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.Patt2Impl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPatt2()
-   * @generated
-   */
-  int PATT2 = 27;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT2__NAME = PATT1__NAME;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT2__VALUE = PATT1__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Label</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT2__LABEL = PATT1__LABEL;
-
-  /**
-   * The number of structural features of the '<em>Patt2</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT2_FEATURE_COUNT = PATT1_FEATURE_COUNT + 0;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.PattImpl <em>Patt</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.PattImpl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPatt()
-   * @generated
-   */
-  int PATT = 29;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT__NAME = PATT2__NAME;
-
-  /**
-   * The feature id for the '<em><b>Value</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT__VALUE = PATT2__VALUE;
-
-  /**
-   * The feature id for the '<em><b>Label</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT__LABEL = PATT2__LABEL;
-
-  /**
-   * The feature id for the '<em><b>P</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT__P = PATT2_FEATURE_COUNT + 0;
-
-  /**
-   * The number of structural features of the '<em>Patt</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT_FEATURE_COUNT = PATT2_FEATURE_COUNT + 1;
-
-  /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.PattAssImpl <em>Patt Ass</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1764,7 +1903,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPattAss()
    * @generated
    */
-  int PATT_ASS = 30;
+  int PATT_ASS = 25;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference list.
@@ -1801,7 +1940,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getLabel()
    * @generated
    */
-  int LABEL = 31;
+  int LABEL = 26;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -1838,7 +1977,43 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getListPattAss()
    * @generated
    */
-  int LIST_PATT_ASS = 32;
+  int LIST_PATT_ASS = 27;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_ASS__LEFT = PATT__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_ASS__OR = PATT__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_ASS__AND = PATT__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_ASS__RIGHT = PATT__RIGHT;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -1847,7 +2022,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_PATT_ASS__NAME = PATT2__NAME;
+  int LIST_PATT_ASS__NAME = PATT__NAME;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -1856,7 +2031,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_PATT_ASS__VALUE = PATT2__VALUE;
+  int LIST_PATT_ASS__VALUE = PATT__VALUE;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' containment reference.
@@ -1865,7 +2040,34 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_PATT_ASS__LABEL = PATT2__LABEL;
+  int LIST_PATT_ASS__LABEL = PATT__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_ASS__META = PATT__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_ASS__TOKEN_LIST = PATT__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_ASS__WILDCARD = PATT__WILDCARD;
 
   /**
    * The feature id for the '<em><b>Assignments</b></em>' containment reference list.
@@ -1874,7 +2076,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_PATT_ASS__ASSIGNMENTS = PATT2_FEATURE_COUNT + 0;
+  int LIST_PATT_ASS__ASSIGNMENTS = PATT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>List Patt Ass</em>' class.
@@ -1883,7 +2085,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_PATT_ASS_FEATURE_COUNT = PATT2_FEATURE_COUNT + 1;
+  int LIST_PATT_ASS_FEATURE_COUNT = PATT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ListPattImpl <em>List Patt</em>}' class.
@@ -1893,7 +2095,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getListPatt()
    * @generated
    */
-  int LIST_PATT = 33;
+  int LIST_PATT = 28;
 
   /**
    * The feature id for the '<em><b>Patterns</b></em>' containment reference list.
@@ -1914,6 +2116,43 @@ public interface GFPackage extends EPackage
   int LIST_PATT_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ArgImpl <em>Arg</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.ArgImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getArg()
+   * @generated
+   */
+  int ARG = 29;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARG__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARG__WILDCARD = 1;
+
+  /**
+   * The number of structural features of the '<em>Arg</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ARG_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.BindImpl <em>Bind</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1921,10 +2160,10 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getBind()
    * @generated
    */
-  int BIND = 34;
+  int BIND = 30;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * The feature id for the '<em><b>Name</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1933,13 +2172,22 @@ public interface GFPackage extends EPackage
   int BIND__NAME = 0;
 
   /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BIND__WILDCARD = 1;
+
+  /**
    * The number of structural features of the '<em>Bind</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BIND_FEATURE_COUNT = 1;
+  int BIND_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ListBindImpl <em>List Bind</em>}' class.
@@ -1949,7 +2197,322 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getListBind()
    * @generated
    */
-  int LIST_BIND = 35;
+  int LIST_BIND = 31;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__LEFT = EXP__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__OR = EXP__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__AND = EXP__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__RIGHT = EXP__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__NAME = EXP__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__VALUE = EXP__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__LABEL = EXP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__META = EXP__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__TOKEN_LIST = EXP__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__WILDCARD = EXP__WILDCARD;
+
+  /**
+   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__BIND_LIST = EXP__BIND_LIST;
+
+  /**
+   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__E = EXP__E;
+
+  /**
+   * The feature id for the '<em><b>Def List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__DEF_LIST = EXP__DEF_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__CASE_LIST = EXP__CASE_LIST;
+
+  /**
+   * The feature id for the '<em><b>Arg Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__ARG_TYPE = EXP__ARG_TYPE;
+
+  /**
+   * The feature id for the '<em><b>Exp List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__EXP_LIST = EXP__EXP_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case Of</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__CASE_OF = EXP__CASE_OF;
+
+  /**
+   * The feature id for the '<em><b>Alts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__ALTS = EXP__ALTS;
+
+  /**
+   * The feature id for the '<em><b>Pattern</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__PATTERN = EXP__PATTERN;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__INNER = EXP__INNER;
+
+  /**
+   * The feature id for the '<em><b>Sort</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__SORT = EXP__SORT;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__STRING = EXP__STRING;
+
+  /**
+   * The feature id for the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__INTEGER = EXP__INTEGER;
+
+  /**
+   * The feature id for the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__DOUBLE = EXP__DOUBLE;
+
+  /**
+   * The feature id for the '<em><b>Empty String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__EMPTY_STRING = EXP__EMPTY_STRING;
+
+  /**
+   * The feature id for the '<em><b>List Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__LIST_CAT = EXP__LIST_CAT;
+
+  /**
+   * The feature id for the '<em><b>Category</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__CATEGORY = EXP__CATEGORY;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__LIST = EXP__LIST;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__RECORD = EXP__RECORD;
+
+  /**
+   * The feature id for the '<em><b>Tuple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__TUPLE = EXP__TUPLE;
+
+  /**
+   * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__TUPLE_LIST = EXP__TUPLE_LIST;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__V = EXP__V;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__TYPE = EXP__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Identity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__IDENTITY = EXP__IDENTITY;
+
+  /**
+   * The feature id for the '<em><b>Decl</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_BIND__DECL = EXP_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Bindings</b></em>' containment reference list.
@@ -1958,7 +2521,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_BIND__BINDINGS = 0;
+  int LIST_BIND__BINDINGS = EXP_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>List Bind</em>' class.
@@ -1967,26 +2530,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_BIND_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.PattTupleCompImpl <em>Patt Tuple Comp</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.grammaticalframework.eclipse.gF.impl.PattTupleCompImpl
-   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPattTupleComp()
-   * @generated
-   */
-  int PATT_TUPLE_COMP = 37;
-
-  /**
-   * The number of structural features of the '<em>Patt Tuple Comp</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PATT_TUPLE_COMP_FEATURE_COUNT = 0;
+  int LIST_BIND_FEATURE_COUNT = EXP_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ListTupleCompImpl <em>List Tuple Comp</em>}' class.
@@ -1996,16 +2540,16 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getListTupleComp()
    * @generated
    */
-  int LIST_TUPLE_COMP = 38;
+  int LIST_TUPLE_COMP = 32;
 
   /**
-   * The feature id for the '<em><b>L</b></em>' containment reference list.
+   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIST_TUPLE_COMP__L = 0;
+  int LIST_TUPLE_COMP__ELEMENTS = 0;
 
   /**
    * The number of structural features of the '<em>List Tuple Comp</em>' class.
@@ -2024,7 +2568,43 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getListPattTupleComp()
    * @generated
    */
-  int LIST_PATT_TUPLE_COMP = 39;
+  int LIST_PATT_TUPLE_COMP = 33;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_TUPLE_COMP__LEFT = PATT__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_TUPLE_COMP__OR = PATT__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_TUPLE_COMP__AND = PATT__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_TUPLE_COMP__RIGHT = PATT__RIGHT;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -2033,7 +2613,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_PATT_TUPLE_COMP__NAME = PATT2__NAME;
+  int LIST_PATT_TUPLE_COMP__NAME = PATT__NAME;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' containment reference.
@@ -2042,7 +2622,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_PATT_TUPLE_COMP__VALUE = PATT2__VALUE;
+  int LIST_PATT_TUPLE_COMP__VALUE = PATT__VALUE;
 
   /**
    * The feature id for the '<em><b>Label</b></em>' containment reference.
@@ -2051,16 +2631,43 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_PATT_TUPLE_COMP__LABEL = PATT2__LABEL;
+  int LIST_PATT_TUPLE_COMP__LABEL = PATT__LABEL;
 
   /**
-   * The feature id for the '<em><b>L</b></em>' containment reference list.
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int LIST_PATT_TUPLE_COMP__L = PATT2_FEATURE_COUNT + 0;
+  int LIST_PATT_TUPLE_COMP__META = PATT__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_TUPLE_COMP__TOKEN_LIST = PATT__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_TUPLE_COMP__WILDCARD = PATT__WILDCARD;
+
+  /**
+   * The feature id for the '<em><b>Patterns</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LIST_PATT_TUPLE_COMP__PATTERNS = PATT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>List Patt Tuple Comp</em>' class.
@@ -2069,7 +2676,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LIST_PATT_TUPLE_COMP_FEATURE_COUNT = PATT2_FEATURE_COUNT + 1;
+  int LIST_PATT_TUPLE_COMP_FEATURE_COUNT = PATT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.CaseImpl <em>Case</em>}' class.
@@ -2079,7 +2686,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getCase()
    * @generated
    */
-  int CASE = 40;
+  int CASE = 34;
 
   /**
    * The feature id for the '<em><b>Pattern</b></em>' containment reference.
@@ -2116,7 +2723,7 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getListCase()
    * @generated
    */
-  int LIST_CASE = 41;
+  int LIST_CASE = 35;
 
   /**
    * The feature id for the '<em><b>Cases</b></em>' containment reference list.
@@ -2137,6 +2744,80 @@ public interface GFPackage extends EPackage
   int LIST_CASE_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.AlternImpl <em>Altern</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.AlternImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getAltern()
+   * @generated
+   */
+  int ALTERN = 36;
+
+  /**
+   * The feature id for the '<em><b>Alt1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALTERN__ALT1 = 0;
+
+  /**
+   * The feature id for the '<em><b>Alt2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALTERN__ALT2 = 1;
+
+  /**
+   * The number of structural features of the '<em>Altern</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALTERN_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.DDeclImpl <em>DDecl</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.DDeclImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDDecl()
+   * @generated
+   */
+  int DDECL = 37;
+
+  /**
+   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DDECL__BIND_LIST = 0;
+
+  /**
+   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DDECL__E = 1;
+
+  /**
+   * The number of structural features of the '<em>DDecl</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DDECL_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.IdentImpl <em>Ident</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2144,7 +2825,313 @@ public interface GFPackage extends EPackage
    * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getIdent()
    * @generated
    */
-  int IDENT = 43;
+  int IDENT = 38;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__LEFT = EXP__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__OR = EXP__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__AND = EXP__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__RIGHT = EXP__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__NAME = EXP__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__VALUE = EXP__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__LABEL = EXP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__META = EXP__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__TOKEN_LIST = EXP__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__WILDCARD = EXP__WILDCARD;
+
+  /**
+   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__BIND_LIST = EXP__BIND_LIST;
+
+  /**
+   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__E = EXP__E;
+
+  /**
+   * The feature id for the '<em><b>Def List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__DEF_LIST = EXP__DEF_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__CASE_LIST = EXP__CASE_LIST;
+
+  /**
+   * The feature id for the '<em><b>Arg Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__ARG_TYPE = EXP__ARG_TYPE;
+
+  /**
+   * The feature id for the '<em><b>Exp List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__EXP_LIST = EXP__EXP_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case Of</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__CASE_OF = EXP__CASE_OF;
+
+  /**
+   * The feature id for the '<em><b>Alts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__ALTS = EXP__ALTS;
+
+  /**
+   * The feature id for the '<em><b>Pattern</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__PATTERN = EXP__PATTERN;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__INNER = EXP__INNER;
+
+  /**
+   * The feature id for the '<em><b>Sort</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__SORT = EXP__SORT;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__STRING = EXP__STRING;
+
+  /**
+   * The feature id for the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__INTEGER = EXP__INTEGER;
+
+  /**
+   * The feature id for the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__DOUBLE = EXP__DOUBLE;
+
+  /**
+   * The feature id for the '<em><b>Empty String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__EMPTY_STRING = EXP__EMPTY_STRING;
+
+  /**
+   * The feature id for the '<em><b>List Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__LIST_CAT = EXP__LIST_CAT;
+
+  /**
+   * The feature id for the '<em><b>Category</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__CATEGORY = EXP__CATEGORY;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__LIST = EXP__LIST;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__RECORD = EXP__RECORD;
+
+  /**
+   * The feature id for the '<em><b>Tuple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__TUPLE = EXP__TUPLE;
+
+  /**
+   * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__TUPLE_LIST = EXP__TUPLE_LIST;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__V = EXP__V;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__TYPE = EXP__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Identity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IDENT__IDENTITY = EXP__IDENTITY;
 
   /**
    * The feature id for the '<em><b>S</b></em>' attribute.
@@ -2153,7 +3140,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IDENT__S = 0;
+  int IDENT__S = EXP_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Ident</em>' class.
@@ -2162,7 +3149,1959 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IDENT_FEATURE_COUNT = 1;
+  int IDENT_FEATURE_COUNT = EXP_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.ExpLF13Impl <em>Exp LF13</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.ExpLF13Impl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExpLF13()
+   * @generated
+   */
+  int EXP_LF13 = 39;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__LEFT = EXP__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__OR = EXP__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__AND = EXP__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__RIGHT = EXP__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__NAME = EXP__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__VALUE = EXP__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__LABEL = EXP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__META = EXP__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__TOKEN_LIST = EXP__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__WILDCARD = EXP__WILDCARD;
+
+  /**
+   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__BIND_LIST = EXP__BIND_LIST;
+
+  /**
+   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__E = EXP__E;
+
+  /**
+   * The feature id for the '<em><b>Def List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__DEF_LIST = EXP__DEF_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__CASE_LIST = EXP__CASE_LIST;
+
+  /**
+   * The feature id for the '<em><b>Arg Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__ARG_TYPE = EXP__ARG_TYPE;
+
+  /**
+   * The feature id for the '<em><b>Exp List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__EXP_LIST = EXP__EXP_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case Of</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__CASE_OF = EXP__CASE_OF;
+
+  /**
+   * The feature id for the '<em><b>Alts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__ALTS = EXP__ALTS;
+
+  /**
+   * The feature id for the '<em><b>Pattern</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__PATTERN = EXP__PATTERN;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__INNER = EXP__INNER;
+
+  /**
+   * The feature id for the '<em><b>Sort</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__SORT = EXP__SORT;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__STRING = EXP__STRING;
+
+  /**
+   * The feature id for the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__INTEGER = EXP__INTEGER;
+
+  /**
+   * The feature id for the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__DOUBLE = EXP__DOUBLE;
+
+  /**
+   * The feature id for the '<em><b>Empty String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__EMPTY_STRING = EXP__EMPTY_STRING;
+
+  /**
+   * The feature id for the '<em><b>List Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__LIST_CAT = EXP__LIST_CAT;
+
+  /**
+   * The feature id for the '<em><b>Category</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__CATEGORY = EXP__CATEGORY;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__LIST = EXP__LIST;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__RECORD = EXP__RECORD;
+
+  /**
+   * The feature id for the '<em><b>Tuple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__TUPLE = EXP__TUPLE;
+
+  /**
+   * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__TUPLE_LIST = EXP__TUPLE_LIST;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__V = EXP__V;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__TYPE = EXP__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Identity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13__IDENTITY = EXP__IDENTITY;
+
+  /**
+   * The number of structural features of the '<em>Exp LF13</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP_LF13_FEATURE_COUNT = EXP_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp1Impl <em>Exp1</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.Exp1Impl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp1()
+   * @generated
+   */
+  int EXP1 = 40;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__LEFT = EXP__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__OR = EXP__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__AND = EXP__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__RIGHT = EXP__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__NAME = EXP__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__VALUE = EXP__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__LABEL = EXP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__META = EXP__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__TOKEN_LIST = EXP__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__WILDCARD = EXP__WILDCARD;
+
+  /**
+   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__BIND_LIST = EXP__BIND_LIST;
+
+  /**
+   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__E = EXP__E;
+
+  /**
+   * The feature id for the '<em><b>Def List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__DEF_LIST = EXP__DEF_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__CASE_LIST = EXP__CASE_LIST;
+
+  /**
+   * The feature id for the '<em><b>Arg Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__ARG_TYPE = EXP__ARG_TYPE;
+
+  /**
+   * The feature id for the '<em><b>Exp List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__EXP_LIST = EXP__EXP_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case Of</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__CASE_OF = EXP__CASE_OF;
+
+  /**
+   * The feature id for the '<em><b>Alts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__ALTS = EXP__ALTS;
+
+  /**
+   * The feature id for the '<em><b>Pattern</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__PATTERN = EXP__PATTERN;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__INNER = EXP__INNER;
+
+  /**
+   * The feature id for the '<em><b>Sort</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__SORT = EXP__SORT;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__STRING = EXP__STRING;
+
+  /**
+   * The feature id for the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__INTEGER = EXP__INTEGER;
+
+  /**
+   * The feature id for the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__DOUBLE = EXP__DOUBLE;
+
+  /**
+   * The feature id for the '<em><b>Empty String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__EMPTY_STRING = EXP__EMPTY_STRING;
+
+  /**
+   * The feature id for the '<em><b>List Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__LIST_CAT = EXP__LIST_CAT;
+
+  /**
+   * The feature id for the '<em><b>Category</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__CATEGORY = EXP__CATEGORY;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__LIST = EXP__LIST;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__RECORD = EXP__RECORD;
+
+  /**
+   * The feature id for the '<em><b>Tuple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__TUPLE = EXP__TUPLE;
+
+  /**
+   * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__TUPLE_LIST = EXP__TUPLE_LIST;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__V = EXP__V;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__TYPE = EXP__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Identity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1__IDENTITY = EXP__IDENTITY;
+
+  /**
+   * The number of structural features of the '<em>Exp1</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP1_FEATURE_COUNT = EXP_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp2Impl <em>Exp2</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.Exp2Impl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp2()
+   * @generated
+   */
+  int EXP2 = 41;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__LEFT = EXP__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__OR = EXP__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__AND = EXP__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__RIGHT = EXP__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__NAME = EXP__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__VALUE = EXP__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__LABEL = EXP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__META = EXP__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__TOKEN_LIST = EXP__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__WILDCARD = EXP__WILDCARD;
+
+  /**
+   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__BIND_LIST = EXP__BIND_LIST;
+
+  /**
+   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__E = EXP__E;
+
+  /**
+   * The feature id for the '<em><b>Def List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__DEF_LIST = EXP__DEF_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__CASE_LIST = EXP__CASE_LIST;
+
+  /**
+   * The feature id for the '<em><b>Arg Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__ARG_TYPE = EXP__ARG_TYPE;
+
+  /**
+   * The feature id for the '<em><b>Exp List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__EXP_LIST = EXP__EXP_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case Of</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__CASE_OF = EXP__CASE_OF;
+
+  /**
+   * The feature id for the '<em><b>Alts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__ALTS = EXP__ALTS;
+
+  /**
+   * The feature id for the '<em><b>Pattern</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__PATTERN = EXP__PATTERN;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__INNER = EXP__INNER;
+
+  /**
+   * The feature id for the '<em><b>Sort</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__SORT = EXP__SORT;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__STRING = EXP__STRING;
+
+  /**
+   * The feature id for the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__INTEGER = EXP__INTEGER;
+
+  /**
+   * The feature id for the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__DOUBLE = EXP__DOUBLE;
+
+  /**
+   * The feature id for the '<em><b>Empty String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__EMPTY_STRING = EXP__EMPTY_STRING;
+
+  /**
+   * The feature id for the '<em><b>List Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__LIST_CAT = EXP__LIST_CAT;
+
+  /**
+   * The feature id for the '<em><b>Category</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__CATEGORY = EXP__CATEGORY;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__LIST = EXP__LIST;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__RECORD = EXP__RECORD;
+
+  /**
+   * The feature id for the '<em><b>Tuple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__TUPLE = EXP__TUPLE;
+
+  /**
+   * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__TUPLE_LIST = EXP__TUPLE_LIST;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__V = EXP__V;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__TYPE = EXP__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Identity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2__IDENTITY = EXP__IDENTITY;
+
+  /**
+   * The number of structural features of the '<em>Exp2</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP2_FEATURE_COUNT = EXP_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp3Impl <em>Exp3</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.Exp3Impl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp3()
+   * @generated
+   */
+  int EXP3 = 42;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__LEFT = EXP__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__OR = EXP__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__AND = EXP__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__RIGHT = EXP__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__NAME = EXP__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__VALUE = EXP__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__LABEL = EXP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__META = EXP__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__TOKEN_LIST = EXP__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__WILDCARD = EXP__WILDCARD;
+
+  /**
+   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__BIND_LIST = EXP__BIND_LIST;
+
+  /**
+   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__E = EXP__E;
+
+  /**
+   * The feature id for the '<em><b>Def List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__DEF_LIST = EXP__DEF_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__CASE_LIST = EXP__CASE_LIST;
+
+  /**
+   * The feature id for the '<em><b>Arg Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__ARG_TYPE = EXP__ARG_TYPE;
+
+  /**
+   * The feature id for the '<em><b>Exp List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__EXP_LIST = EXP__EXP_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case Of</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__CASE_OF = EXP__CASE_OF;
+
+  /**
+   * The feature id for the '<em><b>Alts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__ALTS = EXP__ALTS;
+
+  /**
+   * The feature id for the '<em><b>Pattern</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__PATTERN = EXP__PATTERN;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__INNER = EXP__INNER;
+
+  /**
+   * The feature id for the '<em><b>Sort</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__SORT = EXP__SORT;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__STRING = EXP__STRING;
+
+  /**
+   * The feature id for the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__INTEGER = EXP__INTEGER;
+
+  /**
+   * The feature id for the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__DOUBLE = EXP__DOUBLE;
+
+  /**
+   * The feature id for the '<em><b>Empty String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__EMPTY_STRING = EXP__EMPTY_STRING;
+
+  /**
+   * The feature id for the '<em><b>List Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__LIST_CAT = EXP__LIST_CAT;
+
+  /**
+   * The feature id for the '<em><b>Category</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__CATEGORY = EXP__CATEGORY;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__LIST = EXP__LIST;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__RECORD = EXP__RECORD;
+
+  /**
+   * The feature id for the '<em><b>Tuple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__TUPLE = EXP__TUPLE;
+
+  /**
+   * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__TUPLE_LIST = EXP__TUPLE_LIST;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__V = EXP__V;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__TYPE = EXP__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Identity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3__IDENTITY = EXP__IDENTITY;
+
+  /**
+   * The number of structural features of the '<em>Exp3</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP3_FEATURE_COUNT = EXP_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp4Impl <em>Exp4</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.Exp4Impl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp4()
+   * @generated
+   */
+  int EXP4 = 43;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__LEFT = EXP__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__OR = EXP__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__AND = EXP__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__RIGHT = EXP__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__NAME = EXP__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__VALUE = EXP__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__LABEL = EXP__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__META = EXP__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__TOKEN_LIST = EXP__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__WILDCARD = EXP__WILDCARD;
+
+  /**
+   * The feature id for the '<em><b>Bind List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__BIND_LIST = EXP__BIND_LIST;
+
+  /**
+   * The feature id for the '<em><b>E</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__E = EXP__E;
+
+  /**
+   * The feature id for the '<em><b>Def List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__DEF_LIST = EXP__DEF_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__CASE_LIST = EXP__CASE_LIST;
+
+  /**
+   * The feature id for the '<em><b>Arg Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__ARG_TYPE = EXP__ARG_TYPE;
+
+  /**
+   * The feature id for the '<em><b>Exp List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__EXP_LIST = EXP__EXP_LIST;
+
+  /**
+   * The feature id for the '<em><b>Case Of</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__CASE_OF = EXP__CASE_OF;
+
+  /**
+   * The feature id for the '<em><b>Alts</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__ALTS = EXP__ALTS;
+
+  /**
+   * The feature id for the '<em><b>Pattern</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__PATTERN = EXP__PATTERN;
+
+  /**
+   * The feature id for the '<em><b>Inner</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__INNER = EXP__INNER;
+
+  /**
+   * The feature id for the '<em><b>Sort</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__SORT = EXP__SORT;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__STRING = EXP__STRING;
+
+  /**
+   * The feature id for the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__INTEGER = EXP__INTEGER;
+
+  /**
+   * The feature id for the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__DOUBLE = EXP__DOUBLE;
+
+  /**
+   * The feature id for the '<em><b>Empty String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__EMPTY_STRING = EXP__EMPTY_STRING;
+
+  /**
+   * The feature id for the '<em><b>List Cat</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__LIST_CAT = EXP__LIST_CAT;
+
+  /**
+   * The feature id for the '<em><b>Category</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__CATEGORY = EXP__CATEGORY;
+
+  /**
+   * The feature id for the '<em><b>List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__LIST = EXP__LIST;
+
+  /**
+   * The feature id for the '<em><b>Record</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__RECORD = EXP__RECORD;
+
+  /**
+   * The feature id for the '<em><b>Tuple</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__TUPLE = EXP__TUPLE;
+
+  /**
+   * The feature id for the '<em><b>Tuple List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__TUPLE_LIST = EXP__TUPLE_LIST;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__V = EXP__V;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__TYPE = EXP__TYPE;
+
+  /**
+   * The feature id for the '<em><b>Identity</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4__IDENTITY = EXP__IDENTITY;
+
+  /**
+   * The number of structural features of the '<em>Exp4</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXP4_FEATURE_COUNT = EXP_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.IntegerImpl <em>Integer</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.IntegerImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getInteger()
+   * @generated
+   */
+  int INTEGER = 44;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER__LEFT = PATT__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER__OR = PATT__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER__AND = PATT__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER__RIGHT = PATT__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER__NAME = PATT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER__VALUE = PATT__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER__LABEL = PATT__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER__META = PATT__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER__TOKEN_LIST = PATT__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER__WILDCARD = PATT__WILDCARD;
+
+  /**
+   * The number of structural features of the '<em>Integer</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTEGER_FEATURE_COUNT = PATT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.DoubleImpl <em>Double</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.DoubleImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDouble()
+   * @generated
+   */
+  int DOUBLE = 45;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE__LEFT = PATT__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE__OR = PATT__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE__AND = PATT__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE__RIGHT = PATT__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE__NAME = PATT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE__VALUE = PATT__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE__LABEL = PATT__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE__META = PATT__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE__TOKEN_LIST = PATT__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE__WILDCARD = PATT__WILDCARD;
+
+  /**
+   * The number of structural features of the '<em>Double</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DOUBLE_FEATURE_COUNT = PATT_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.grammaticalframework.eclipse.gF.impl.StringImpl <em>String</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.grammaticalframework.eclipse.gF.impl.StringImpl
+   * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getString()
+   * @generated
+   */
+  int STRING = 46;
+
+  /**
+   * The feature id for the '<em><b>Left</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__LEFT = PATT__LEFT;
+
+  /**
+   * The feature id for the '<em><b>Or</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__OR = PATT__OR;
+
+  /**
+   * The feature id for the '<em><b>And</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__AND = PATT__AND;
+
+  /**
+   * The feature id for the '<em><b>Right</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__RIGHT = PATT__RIGHT;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__NAME = PATT__NAME;
+
+  /**
+   * The feature id for the '<em><b>Value</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__VALUE = PATT__VALUE;
+
+  /**
+   * The feature id for the '<em><b>Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__LABEL = PATT__LABEL;
+
+  /**
+   * The feature id for the '<em><b>Meta</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__META = PATT__META;
+
+  /**
+   * The feature id for the '<em><b>Token List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__TOKEN_LIST = PATT__TOKEN_LIST;
+
+  /**
+   * The feature id for the '<em><b>Wildcard</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING__WILDCARD = PATT__WILDCARD;
+
+  /**
+   * The number of structural features of the '<em>String</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int STRING_FEATURE_COUNT = PATT_FEATURE_COUNT + 0;
 
 
   /**
@@ -2317,26 +5256,15 @@ public interface GFPackage extends EPackage
   EReference getModBody_Extends();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ModBody#getOpens <em>Opens</em>}'.
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.ModBody#getContent <em>Content</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Opens</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ModBody#getOpens()
+   * @return the meta object for the containment reference '<em>Content</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ModBody#getContent()
    * @see #getModBody()
    * @generated
    */
-  EReference getModBody_Opens();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ModBody#getJudgements <em>Judgements</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Judgements</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ModBody#getJudgements()
-   * @see #getModBody()
-   * @generated
-   */
-  EReference getModBody_Judgements();
+  EReference getModBody_Content();
 
   /**
    * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.ModBody#getFunctor <em>Functor</em>}'.
@@ -2372,6 +5300,38 @@ public interface GFPackage extends EPackage
   EReference getModBody_Instantiations();
 
   /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.ModContent <em>Mod Content</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Mod Content</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ModContent
+   * @generated
+   */
+  EClass getModContent();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ModContent#getOpens <em>Opens</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Opens</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ModContent#getOpens()
+   * @see #getModContent()
+   * @generated
+   */
+  EReference getModContent_Opens();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ModContent#getJudgements <em>Judgements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Judgements</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ModContent#getJudgements()
+   * @see #getModContent()
+   * @generated
+   */
+  EReference getModContent_Judgements();
+
+  /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Open <em>Open</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2402,6 +5362,38 @@ public interface GFPackage extends EPackage
    * @generated
    */
   EReference getOpen_Alias();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Inst <em>Inst</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Inst</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Inst
+   * @generated
+   */
+  EClass getInst();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Inst#getInterface <em>Interface</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Interface</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Inst#getInterface()
+   * @see #getInst()
+   * @generated
+   */
+  EReference getInst_Interface();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Inst#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Inst#getName()
+   * @see #getInst()
+   * @generated
+   */
+  EReference getInst_Name();
 
   /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Included <em>Included</em>}'.
@@ -2469,82 +5461,6 @@ public interface GFPackage extends EPackage
   EReference getIncluded_Excludes();
 
   /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Def <em>Def</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Def</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Def
-   * @generated
-   */
-  EClass getDef();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Def#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Name</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Def#getName()
-   * @see #getDef()
-   * @generated
-   */
-  EReference getDef_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Def#getDefinition <em>Definition</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Definition</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Def#getDefinition()
-   * @see #getDef()
-   * @generated
-   */
-  EReference getDef_Definition();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Def#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Type</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Def#getType()
-   * @see #getDef()
-   * @generated
-   */
-  EReference getDef_Type();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Def#getPatterns <em>Patterns</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Patterns</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Def#getPatterns()
-   * @see #getDef()
-   * @generated
-   */
-  EReference getDef_Patterns();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Def#isOverload <em>Overload</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Overload</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Def#isOverload()
-   * @see #getDef()
-   * @generated
-   */
-  EAttribute getDef_Overload();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Def#getOverloads <em>Overloads</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Overloads</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Def#getOverloads()
-   * @see #getDef()
-   * @generated
-   */
-  EReference getDef_Overloads();
-
-  /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.TopDef <em>Top Def</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2588,17 +5504,6 @@ public interface GFPackage extends EPackage
   EAttribute getTopDef_Fun();
 
   /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.TopDef#isData <em>Data</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Data</em>'.
-   * @see org.grammaticalframework.eclipse.gF.TopDef#isData()
-   * @see #getTopDef()
-   * @generated
-   */
-  EAttribute getTopDef_Data();
-
-  /**
    * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.TopDef#isDef <em>Def</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2608,6 +5513,17 @@ public interface GFPackage extends EPackage
    * @generated
    */
   EAttribute getTopDef_Def();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.TopDef#isData <em>Data</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Data</em>'.
+   * @see org.grammaticalframework.eclipse.gF.TopDef#isData()
+   * @see #getTopDef()
+   * @generated
+   */
+  EAttribute getTopDef_Data();
 
   /**
    * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.TopDef#isParam <em>Param</em>}'.
@@ -2762,6 +5678,49 @@ public interface GFPackage extends EPackage
   EReference getFunDef_Type();
 
   /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.DefDef <em>Def Def</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Def Def</em>'.
+   * @see org.grammaticalframework.eclipse.gF.DefDef
+   * @generated
+   */
+  EClass getDefDef();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.DefDef#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Name</em>'.
+   * @see org.grammaticalframework.eclipse.gF.DefDef#getName()
+   * @see #getDefDef()
+   * @generated
+   */
+  EReference getDefDef_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.DefDef#getDefinition <em>Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Definition</em>'.
+   * @see org.grammaticalframework.eclipse.gF.DefDef#getDefinition()
+   * @see #getDefDef()
+   * @generated
+   */
+  EReference getDefDef_Definition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.DefDef#getPatterns <em>Patterns</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Patterns</em>'.
+   * @see org.grammaticalframework.eclipse.gF.DefDef#getPatterns()
+   * @see #getDefDef()
+   * @generated
+   */
+  EReference getDefDef_Patterns();
+
+  /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.DataDef <em>Data Def</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2772,10 +5731,10 @@ public interface GFPackage extends EPackage
   EClass getDataDef();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.DataDef#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.DataDef#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @return the meta object for the containment reference list '<em>Name</em>'.
    * @see org.grammaticalframework.eclipse.gF.DataDef#getName()
    * @see #getDataDef()
    * @generated
@@ -2794,143 +5753,198 @@ public interface GFPackage extends EPackage
   EReference getDataDef_Constructors();
 
   /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.DataConstr <em>Data Constr</em>}'.
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.DataDef#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Data Constr</em>'.
-   * @see org.grammaticalframework.eclipse.gF.DataConstr
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see org.grammaticalframework.eclipse.gF.DataDef#getType()
+   * @see #getDataDef()
    * @generated
    */
-  EClass getDataConstr();
+  EReference getDataDef_Type();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.DataConstr#getName <em>Name</em>}'.
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.ParamDef <em>Param Def</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Name</em>'.
-   * @see org.grammaticalframework.eclipse.gF.DataConstr#getName()
-   * @see #getDataConstr()
+   * @return the meta object for class '<em>Param Def</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ParamDef
    * @generated
    */
-  EReference getDataConstr_Name();
+  EClass getParamDef();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.DataConstr#getModule <em>Module</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Module</em>'.
-   * @see org.grammaticalframework.eclipse.gF.DataConstr#getModule()
-   * @see #getDataConstr()
-   * @generated
-   */
-  EReference getDataConstr_Module();
-
-  /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.ParDef <em>Par Def</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Par Def</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ParDef
-   * @generated
-   */
-  EClass getParDef();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.ParDef#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.ParamDef#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Name</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ParDef#getName()
-   * @see #getParDef()
+   * @see org.grammaticalframework.eclipse.gF.ParamDef#getName()
+   * @see #getParamDef()
    * @generated
    */
-  EReference getParDef_Name();
+  EReference getParamDef_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ParDef#getConstructors <em>Constructors</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ParamDef#getConstructors <em>Constructors</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Constructors</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ParDef#getConstructors()
-   * @see #getParDef()
+   * @see org.grammaticalframework.eclipse.gF.ParamDef#getConstructors()
+   * @see #getParamDef()
    * @generated
    */
-  EReference getParDef_Constructors();
+  EReference getParamDef_Constructors();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.ParDef#getId2 <em>Id2</em>}'.
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.OperDef <em>Oper Def</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Id2</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ParDef#getId2()
-   * @see #getParDef()
+   * @return the meta object for class '<em>Oper Def</em>'.
+   * @see org.grammaticalframework.eclipse.gF.OperDef
    * @generated
    */
-  EReference getParDef_Id2();
+  EClass getOperDef();
 
   /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.ParConstr <em>Par Constr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Par Constr</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ParConstr
-   * @generated
-   */
-  EClass getParConstr();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.ParConstr#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Name</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ParConstr#getName()
-   * @see #getParConstr()
-   * @generated
-   */
-  EReference getParConstr_Name();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ParConstr#getConstructors <em>Constructors</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Constructors</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ParConstr#getConstructors()
-   * @see #getParConstr()
-   * @generated
-   */
-  EReference getParConstr_Constructors();
-
-  /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.PrintDef <em>Print Def</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Print Def</em>'.
-   * @see org.grammaticalframework.eclipse.gF.PrintDef
-   * @generated
-   */
-  EClass getPrintDef();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.PrintDef#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.OperDef#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Name</em>'.
-   * @see org.grammaticalframework.eclipse.gF.PrintDef#getName()
-   * @see #getPrintDef()
+   * @see org.grammaticalframework.eclipse.gF.OperDef#getName()
+   * @see #getOperDef()
    * @generated
    */
-  EReference getPrintDef_Name();
+  EReference getOperDef_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.PrintDef#getPrintname <em>Printname</em>}'.
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.OperDef#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Printname</em>'.
-   * @see org.grammaticalframework.eclipse.gF.PrintDef#getPrintname()
-   * @see #getPrintDef()
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see org.grammaticalframework.eclipse.gF.OperDef#getType()
+   * @see #getOperDef()
    * @generated
    */
-  EReference getPrintDef_Printname();
+  EReference getOperDef_Type();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.OperDef#getDefinition <em>Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Definition</em>'.
+   * @see org.grammaticalframework.eclipse.gF.OperDef#getDefinition()
+   * @see #getOperDef()
+   * @generated
+   */
+  EReference getOperDef_Definition();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.OperDef#isOverload <em>Overload</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Overload</em>'.
+   * @see org.grammaticalframework.eclipse.gF.OperDef#isOverload()
+   * @see #getOperDef()
+   * @generated
+   */
+  EAttribute getOperDef_Overload();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.OperDef#getOverloads <em>Overloads</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Overloads</em>'.
+   * @see org.grammaticalframework.eclipse.gF.OperDef#getOverloads()
+   * @see #getOperDef()
+   * @generated
+   */
+  EReference getOperDef_Overloads();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.OperDef#getArgs <em>Args</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Args</em>'.
+   * @see org.grammaticalframework.eclipse.gF.OperDef#getArgs()
+   * @see #getOperDef()
+   * @generated
+   */
+  EReference getOperDef_Args();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.LinDef <em>Lin Def</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Lin Def</em>'.
+   * @see org.grammaticalframework.eclipse.gF.LinDef
+   * @generated
+   */
+  EClass getLinDef();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.LinDef#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Name</em>'.
+   * @see org.grammaticalframework.eclipse.gF.LinDef#getName()
+   * @see #getLinDef()
+   * @generated
+   */
+  EReference getLinDef_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.LinDef#getDefinition <em>Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Definition</em>'.
+   * @see org.grammaticalframework.eclipse.gF.LinDef#getDefinition()
+   * @see #getLinDef()
+   * @generated
+   */
+  EReference getLinDef_Definition();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.LinDef#getArgs <em>Args</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Args</em>'.
+   * @see org.grammaticalframework.eclipse.gF.LinDef#getArgs()
+   * @see #getLinDef()
+   * @generated
+   */
+  EReference getLinDef_Args();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.TermDef <em>Term Def</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Term Def</em>'.
+   * @see org.grammaticalframework.eclipse.gF.TermDef
+   * @generated
+   */
+  EClass getTermDef();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.TermDef#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Name</em>'.
+   * @see org.grammaticalframework.eclipse.gF.TermDef#getName()
+   * @see #getTermDef()
+   * @generated
+   */
+  EReference getTermDef_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.TermDef#getDefinition <em>Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Definition</em>'.
+   * @see org.grammaticalframework.eclipse.gF.TermDef#getDefinition()
+   * @see #getTermDef()
+   * @generated
+   */
+  EReference getTermDef_Definition();
 
   /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.FlagDef <em>Flag Def</em>}'.
@@ -2963,6 +5977,38 @@ public interface GFPackage extends EPackage
    * @generated
    */
   EReference getFlagDef_Value();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.ParConstr <em>Par Constr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Par Constr</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ParConstr
+   * @generated
+   */
+  EClass getParConstr();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.ParConstr#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ParConstr#getName()
+   * @see #getParConstr()
+   * @generated
+   */
+  EReference getParConstr_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ParConstr#getConstructors <em>Constructors</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Constructors</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ParConstr#getConstructors()
+   * @see #getParConstr()
+   * @generated
+   */
+  EReference getParConstr_Constructors();
 
   /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Name <em>Name</em>}'.
@@ -3050,462 +6096,6 @@ public interface GFPackage extends EPackage
   EReference getListLocDef_LocalDefinitions();
 
   /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp6 <em>Exp6</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Exp6</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6
-   * @generated
-   */
-  EClass getExp6();
-
-  /**
-   * Returns the meta object for the reference '{@link org.grammaticalframework.eclipse.gF.Exp6#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Name</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#getName()
-   * @see #getExp6()
-   * @generated
-   */
-  EReference getExp6_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isSort <em>Sort</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Sort</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isSort()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_Sort();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isBuiltInCat <em>Built In Cat</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Built In Cat</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isBuiltInCat()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_BuiltInCat();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isString <em>String</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>String</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isString()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_String();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isInteger <em>Integer</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Integer</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isInteger()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_Integer();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isDouble <em>Double</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Double</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isDouble()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_Double();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isMeta <em>Meta</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Meta</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isMeta()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_Meta();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isEmptyString <em>Empty String</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Empty String</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isEmptyString()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_EmptyString();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isData <em>Data</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Data</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isData()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_Data();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isListCat <em>List Cat</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>List Cat</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isListCat()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_ListCat();
-
-  /**
-   * Returns the meta object for the reference '{@link org.grammaticalframework.eclipse.gF.Exp6#getCategory <em>Category</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Category</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#getCategory()
-   * @see #getExp6()
-   * @generated
-   */
-  EReference getExp6_Category();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp6#getList <em>List</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>List</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#getList()
-   * @see #getExp6()
-   * @generated
-   */
-  EReference getExp6_List();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isTokenList <em>Token List</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Token List</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isTokenList()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_TokenList();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isRecord <em>Record</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Record</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isRecord()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_Record();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp6#getDefList <em>Def List</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Def List</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#getDefList()
-   * @see #getExp6()
-   * @generated
-   */
-  EReference getExp6_DefList();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isTuple <em>Tuple</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Tuple</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isTuple()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_Tuple();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp6#getTupleList <em>Tuple List</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Tuple List</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#getTupleList()
-   * @see #getExp6()
-   * @generated
-   */
-  EReference getExp6_TupleList();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp6#getV <em>V</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>V</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#getV()
-   * @see #getExp6()
-   * @generated
-   */
-  EReference getExp6_V();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp6#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Type</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#getType()
-   * @see #getExp6()
-   * @generated
-   */
-  EReference getExp6_Type();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp6#isIdentity <em>Identity</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Identity</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp6#isIdentity()
-   * @see #getExp6()
-   * @generated
-   */
-  EAttribute getExp6_Identity();
-
-  /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp5 <em>Exp5</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Exp5</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp5
-   * @generated
-   */
-  EClass getExp5();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp5#getV <em>V</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>V</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp5#getV()
-   * @see #getExp5()
-   * @generated
-   */
-  EReference getExp5_V();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Exp5#getLabel <em>Label</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Label</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp5#getLabel()
-   * @see #getExp5()
-   * @generated
-   */
-  EReference getExp5_Label();
-
-  /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp4 <em>Exp4</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Exp4</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp4
-   * @generated
-   */
-  EClass getExp4();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp4#getCaseList <em>Case List</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Case List</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp4#getCaseList()
-   * @see #getExp4()
-   * @generated
-   */
-  EReference getExp4_CaseList();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Exp4#getArgs <em>Args</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Args</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp4#getArgs()
-   * @see #getExp4()
-   * @generated
-   */
-  EReference getExp4_Args();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp4#getArgType <em>Arg Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Arg Type</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp4#getArgType()
-   * @see #getExp4()
-   * @generated
-   */
-  EReference getExp4_ArgType();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp4#getExpList <em>Exp List</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exp List</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp4#getExpList()
-   * @see #getExp4()
-   * @generated
-   */
-  EReference getExp4_ExpList();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp4#getCaseOf <em>Case Of</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Case Of</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp4#getCaseOf()
-   * @see #getExp4()
-   * @generated
-   */
-  EReference getExp4_CaseOf();
-
-  /**
-   * Returns the meta object for the reference '{@link org.grammaticalframework.eclipse.gF.Exp4#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Name</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp4#getName()
-   * @see #getExp4()
-   * @generated
-   */
-  EReference getExp4_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp4#getInner <em>Inner</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Inner</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp4#getInner()
-   * @see #getExp4()
-   * @generated
-   */
-  EReference getExp4_Inner();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp4#getV <em>V</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>V</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp4#getV()
-   * @see #getExp4()
-   * @generated
-   */
-  EReference getExp4_V();
-
-  /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp3 <em>Exp3</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Exp3</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp3
-   * @generated
-   */
-  EClass getExp3();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp3#getV <em>V</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>V</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp3#getV()
-   * @see #getExp3()
-   * @generated
-   */
-  EReference getExp3_V();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Exp3#getE <em>E</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>E</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp3#getE()
-   * @see #getExp3()
-   * @generated
-   */
-  EReference getExp3_E();
-
-  /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp2 <em>Exp2</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Exp2</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp2
-   * @generated
-   */
-  EClass getExp2();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp2#getV <em>V</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>V</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp2#getV()
-   * @see #getExp2()
-   * @generated
-   */
-  EReference getExp2_V();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Exp2#getE <em>E</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>E</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp2#getE()
-   * @see #getExp2()
-   * @generated
-   */
-  EReference getExp2_E();
-
-  /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp1 <em>Exp1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Exp1</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp1
-   * @generated
-   */
-  EClass getExp1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp1#getV <em>V</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>V</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp1#getV()
-   * @see #getExp1()
-   * @generated
-   */
-  EReference getExp1_V();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Exp1#getE <em>E</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>E</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp1#getE()
-   * @see #getExp1()
-   * @generated
-   */
-  EReference getExp1_E();
-
-  /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp <em>Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3514,39 +6104,6 @@ public interface GFPackage extends EPackage
    * @generated
    */
   EClass getExp();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getBindList <em>Bind List</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Bind List</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp#getBindList()
-   * @see #getExp()
-   * @generated
-   */
-  EReference getExp_BindList();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getV <em>V</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>V</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp#getV()
-   * @see #getExp()
-   * @generated
-   */
-  EReference getExp_V();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Exp#getE <em>E</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>E</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Exp#getE()
-   * @see #getExp()
-   * @generated
-   */
-  EReference getExp_E();
 
   /**
    * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getDefList <em>Def List</em>}'.
@@ -3560,6 +6117,215 @@ public interface GFPackage extends EPackage
   EReference getExp_DefList();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getCaseList <em>Case List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Case List</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getCaseList()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_CaseList();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getArgType <em>Arg Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Arg Type</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getArgType()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_ArgType();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getExpList <em>Exp List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Exp List</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getExpList()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_ExpList();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getCaseOf <em>Case Of</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Case Of</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getCaseOf()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_CaseOf();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Exp#getAlts <em>Alts</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Alts</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getAlts()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_Alts();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getPattern <em>Pattern</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Pattern</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getPattern()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_Pattern();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getInner <em>Inner</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Inner</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getInner()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_Inner();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp#isSort <em>Sort</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Sort</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#isSort()
+   * @see #getExp()
+   * @generated
+   */
+  EAttribute getExp_Sort();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp#isString <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>String</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#isString()
+   * @see #getExp()
+   * @generated
+   */
+  EAttribute getExp_String();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp#isInteger <em>Integer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Integer</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#isInteger()
+   * @see #getExp()
+   * @generated
+   */
+  EAttribute getExp_Integer();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp#isDouble <em>Double</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Double</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#isDouble()
+   * @see #getExp()
+   * @generated
+   */
+  EAttribute getExp_Double();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp#isEmptyString <em>Empty String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Empty String</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#isEmptyString()
+   * @see #getExp()
+   * @generated
+   */
+  EAttribute getExp_EmptyString();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp#isListCat <em>List Cat</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>List Cat</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#isListCat()
+   * @see #getExp()
+   * @generated
+   */
+  EAttribute getExp_ListCat();
+
+  /**
+   * Returns the meta object for the reference '{@link org.grammaticalframework.eclipse.gF.Exp#getCategory <em>Category</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Category</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getCategory()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_Category();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getList <em>List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>List</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getList()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_List();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp#isRecord <em>Record</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Record</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#isRecord()
+   * @see #getExp()
+   * @generated
+   */
+  EAttribute getExp_Record();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp#isTuple <em>Tuple</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Tuple</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#isTuple()
+   * @see #getExp()
+   * @generated
+   */
+  EAttribute getExp_Tuple();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getTupleList <em>Tuple List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Tuple List</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getTupleList()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_TupleList();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getV <em>V</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>V</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#getV()
+   * @see #getExp()
+   * @generated
+   */
+  EReference getExp_V();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Exp#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3569,6 +6335,17 @@ public interface GFPackage extends EPackage
    * @generated
    */
   EReference getExp_Type();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Exp#isIdentity <em>Identity</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Identity</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp#isIdentity()
+   * @see #getExp()
+   * @generated
+   */
+  EAttribute getExp_Identity();
 
   /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.ListExp <em>List Exp</em>}'.
@@ -3613,59 +6390,6 @@ public interface GFPackage extends EPackage
   EReference getExps_Expressions();
 
   /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Patt2 <em>Patt2</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Patt2</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Patt2
-   * @generated
-   */
-  EClass getPatt2();
-
-  /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Patt1 <em>Patt1</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Patt1</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Patt1
-   * @generated
-   */
-  EClass getPatt1();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Patt1#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Name</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Patt1#getName()
-   * @see #getPatt1()
-   * @generated
-   */
-  EReference getPatt1_Name();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Patt1#getValue <em>Value</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Value</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Patt1#getValue()
-   * @see #getPatt1()
-   * @generated
-   */
-  EReference getPatt1_Value();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Patt1#getLabel <em>Label</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Label</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Patt1#getLabel()
-   * @see #getPatt1()
-   * @generated
-   */
-  EReference getPatt1_Label();
-
-  /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Patt <em>Patt</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3676,15 +6400,114 @@ public interface GFPackage extends EPackage
   EClass getPatt();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Patt#getP <em>P</em>}'.
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Patt#getLeft <em>Left</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>P</em>'.
-   * @see org.grammaticalframework.eclipse.gF.Patt#getP()
+   * @return the meta object for the containment reference '<em>Left</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Patt#getLeft()
    * @see #getPatt()
    * @generated
    */
-  EReference getPatt_P();
+  EReference getPatt_Left();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Patt#isOr <em>Or</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Or</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Patt#isOr()
+   * @see #getPatt()
+   * @generated
+   */
+  EAttribute getPatt_Or();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Patt#isAnd <em>And</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>And</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Patt#isAnd()
+   * @see #getPatt()
+   * @generated
+   */
+  EAttribute getPatt_And();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Patt#getRight <em>Right</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Right</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Patt#getRight()
+   * @see #getPatt()
+   * @generated
+   */
+  EReference getPatt_Right();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Patt#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Patt#getName()
+   * @see #getPatt()
+   * @generated
+   */
+  EReference getPatt_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Patt#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Value</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Patt#getValue()
+   * @see #getPatt()
+   * @generated
+   */
+  EReference getPatt_Value();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Patt#getLabel <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Label</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Patt#getLabel()
+   * @see #getPatt()
+   * @generated
+   */
+  EReference getPatt_Label();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Patt#isMeta <em>Meta</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Meta</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Patt#isMeta()
+   * @see #getPatt()
+   * @generated
+   */
+  EAttribute getPatt_Meta();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Patt#isTokenList <em>Token List</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Token List</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Patt#isTokenList()
+   * @see #getPatt()
+   * @generated
+   */
+  EAttribute getPatt_TokenList();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Patt#isWildcard <em>Wildcard</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Wildcard</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Patt#isWildcard()
+   * @see #getPatt()
+   * @generated
+   */
+  EAttribute getPatt_Wildcard();
 
   /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.PattAss <em>Patt Ass</em>}'.
@@ -3793,6 +6616,38 @@ public interface GFPackage extends EPackage
   EReference getListPatt_Patterns();
 
   /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Arg <em>Arg</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Arg</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Arg
+   * @generated
+   */
+  EClass getArg();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Arg#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Name</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Arg#getName()
+   * @see #getArg()
+   * @generated
+   */
+  EReference getArg_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Arg#isWildcard <em>Wildcard</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Wildcard</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Arg#isWildcard()
+   * @see #getArg()
+   * @generated
+   */
+  EAttribute getArg_Wildcard();
+
+  /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Bind <em>Bind</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3803,15 +6658,26 @@ public interface GFPackage extends EPackage
   EClass getBind();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Bind#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.Bind#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @return the meta object for the containment reference list '<em>Name</em>'.
    * @see org.grammaticalframework.eclipse.gF.Bind#getName()
    * @see #getBind()
    * @generated
    */
   EReference getBind_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.Bind#isWildcard <em>Wildcard</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Wildcard</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Bind#isWildcard()
+   * @see #getBind()
+   * @generated
+   */
+  EAttribute getBind_Wildcard();
 
   /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.ListBind <em>List Bind</em>}'.
@@ -3822,6 +6688,17 @@ public interface GFPackage extends EPackage
    * @generated
    */
   EClass getListBind();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.ListBind#getDecl <em>Decl</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Decl</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ListBind#getDecl()
+   * @see #getListBind()
+   * @generated
+   */
+  EReference getListBind_Decl();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ListBind#getBindings <em>Bindings</em>}'.
@@ -3835,26 +6712,6 @@ public interface GFPackage extends EPackage
   EReference getListBind_Bindings();
 
   /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.TupleComp <em>Tuple Comp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Tuple Comp</em>'.
-   * @see org.grammaticalframework.eclipse.gF.TupleComp
-   * @generated
-   */
-  EClass getTupleComp();
-
-  /**
-   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.PattTupleComp <em>Patt Tuple Comp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Patt Tuple Comp</em>'.
-   * @see org.grammaticalframework.eclipse.gF.PattTupleComp
-   * @generated
-   */
-  EClass getPattTupleComp();
-
-  /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.ListTupleComp <em>List Tuple Comp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3865,15 +6722,15 @@ public interface GFPackage extends EPackage
   EClass getListTupleComp();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ListTupleComp#getL <em>L</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ListTupleComp#getElements <em>Elements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>L</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ListTupleComp#getL()
+   * @return the meta object for the containment reference list '<em>Elements</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ListTupleComp#getElements()
    * @see #getListTupleComp()
    * @generated
    */
-  EReference getListTupleComp_L();
+  EReference getListTupleComp_Elements();
 
   /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.ListPattTupleComp <em>List Patt Tuple Comp</em>}'.
@@ -3886,15 +6743,15 @@ public interface GFPackage extends EPackage
   EClass getListPattTupleComp();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ListPattTupleComp#getL <em>L</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.ListPattTupleComp#getPatterns <em>Patterns</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>L</em>'.
-   * @see org.grammaticalframework.eclipse.gF.ListPattTupleComp#getL()
+   * @return the meta object for the containment reference list '<em>Patterns</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ListPattTupleComp#getPatterns()
    * @see #getListPattTupleComp()
    * @generated
    */
-  EReference getListPattTupleComp_L();
+  EReference getListPattTupleComp_Patterns();
 
   /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Case <em>Case</em>}'.
@@ -3950,6 +6807,38 @@ public interface GFPackage extends EPackage
   EReference getListCase_Cases();
 
   /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Altern <em>Altern</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Altern</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Altern
+   * @generated
+   */
+  EClass getAltern();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Altern#getAlt1 <em>Alt1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Alt1</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Altern#getAlt1()
+   * @see #getAltern()
+   * @generated
+   */
+  EReference getAltern_Alt1();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Altern#getAlt2 <em>Alt2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Alt2</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Altern#getAlt2()
+   * @see #getAltern()
+   * @generated
+   */
+  EReference getAltern_Alt2();
+
+  /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.DDecl <em>DDecl</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4001,6 +6890,86 @@ public interface GFPackage extends EPackage
    * @generated
    */
   EAttribute getIdent_S();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.ExpLF13 <em>Exp LF13</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Exp LF13</em>'.
+   * @see org.grammaticalframework.eclipse.gF.ExpLF13
+   * @generated
+   */
+  EClass getExpLF13();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp1 <em>Exp1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Exp1</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp1
+   * @generated
+   */
+  EClass getExp1();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp2 <em>Exp2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Exp2</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp2
+   * @generated
+   */
+  EClass getExp2();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp3 <em>Exp3</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Exp3</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp3
+   * @generated
+   */
+  EClass getExp3();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Exp4 <em>Exp4</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Exp4</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Exp4
+   * @generated
+   */
+  EClass getExp4();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Integer <em>Integer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Integer</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Integer
+   * @generated
+   */
+  EClass getInteger();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.Double <em>Double</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Double</em>'.
+   * @see org.grammaticalframework.eclipse.gF.Double
+   * @generated
+   */
+  EClass getDouble();
+
+  /**
+   * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.String <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>String</em>'.
+   * @see org.grammaticalframework.eclipse.gF.String
+   * @generated
+   */
+  EClass getString();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -4144,20 +7113,12 @@ public interface GFPackage extends EPackage
     EReference MOD_BODY__EXTENDS = eINSTANCE.getModBody_Extends();
 
     /**
-     * The meta object literal for the '<em><b>Opens</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MOD_BODY__OPENS = eINSTANCE.getModBody_Opens();
-
-    /**
-     * The meta object literal for the '<em><b>Judgements</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MOD_BODY__JUDGEMENTS = eINSTANCE.getModBody_Judgements();
+    EReference MOD_BODY__CONTENT = eINSTANCE.getModBody_Content();
 
     /**
      * The meta object literal for the '<em><b>Functor</b></em>' containment reference feature.
@@ -4184,6 +7145,32 @@ public interface GFPackage extends EPackage
     EReference MOD_BODY__INSTANTIATIONS = eINSTANCE.getModBody_Instantiations();
 
     /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ModContentImpl <em>Mod Content</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.ModContentImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getModContent()
+     * @generated
+     */
+    EClass MOD_CONTENT = eINSTANCE.getModContent();
+
+    /**
+     * The meta object literal for the '<em><b>Opens</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MOD_CONTENT__OPENS = eINSTANCE.getModContent_Opens();
+
+    /**
+     * The meta object literal for the '<em><b>Judgements</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MOD_CONTENT__JUDGEMENTS = eINSTANCE.getModContent_Judgements();
+
+    /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.OpenImpl <em>Open</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4208,6 +7195,32 @@ public interface GFPackage extends EPackage
      * @generated
      */
     EReference OPEN__ALIAS = eINSTANCE.getOpen_Alias();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.InstImpl <em>Inst</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.InstImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getInst()
+     * @generated
+     */
+    EClass INST = eINSTANCE.getInst();
+
+    /**
+     * The meta object literal for the '<em><b>Interface</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INST__INTERFACE = eINSTANCE.getInst_Interface();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INST__NAME = eINSTANCE.getInst_Name();
 
     /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.IncludedImpl <em>Included</em>}' class.
@@ -4260,64 +7273,6 @@ public interface GFPackage extends EPackage
     EReference INCLUDED__EXCLUDES = eINSTANCE.getIncluded_Excludes();
 
     /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.DefImpl <em>Def</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.DefImpl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDef()
-     * @generated
-     */
-    EClass DEF = eINSTANCE.getDef();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DEF__NAME = eINSTANCE.getDef_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Definition</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DEF__DEFINITION = eINSTANCE.getDef_Definition();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DEF__TYPE = eINSTANCE.getDef_Type();
-
-    /**
-     * The meta object literal for the '<em><b>Patterns</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DEF__PATTERNS = eINSTANCE.getDef_Patterns();
-
-    /**
-     * The meta object literal for the '<em><b>Overload</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute DEF__OVERLOAD = eINSTANCE.getDef_Overload();
-
-    /**
-     * The meta object literal for the '<em><b>Overloads</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DEF__OVERLOADS = eINSTANCE.getDef_Overloads();
-
-    /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl <em>Top Def</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4352,20 +7307,20 @@ public interface GFPackage extends EPackage
     EAttribute TOP_DEF__FUN = eINSTANCE.getTopDef_Fun();
 
     /**
-     * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute TOP_DEF__DATA = eINSTANCE.getTopDef_Data();
-
-    /**
      * The meta object literal for the '<em><b>Def</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute TOP_DEF__DEF = eINSTANCE.getTopDef_Def();
+
+    /**
+     * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TOP_DEF__DATA = eINSTANCE.getTopDef_Data();
 
     /**
      * The meta object literal for the '<em><b>Param</b></em>' attribute feature.
@@ -4484,6 +7439,40 @@ public interface GFPackage extends EPackage
     EReference FUN_DEF__TYPE = eINSTANCE.getFunDef_Type();
 
     /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.DefDefImpl <em>Def Def</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.DefDefImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDefDef()
+     * @generated
+     */
+    EClass DEF_DEF = eINSTANCE.getDefDef();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEF_DEF__NAME = eINSTANCE.getDefDef_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Definition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEF_DEF__DEFINITION = eINSTANCE.getDefDef_Definition();
+
+    /**
+     * The meta object literal for the '<em><b>Patterns</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEF_DEF__PATTERNS = eINSTANCE.getDefDef_Patterns();
+
+    /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.DataDefImpl <em>Data Def</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -4494,7 +7483,7 @@ public interface GFPackage extends EPackage
     EClass DATA_DEF = eINSTANCE.getDataDef();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -4510,14 +7499,22 @@ public interface GFPackage extends EPackage
     EReference DATA_DEF__CONSTRUCTORS = eINSTANCE.getDataDef_Constructors();
 
     /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.DataConstrImpl <em>Data Constr</em>}' class.
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.DataConstrImpl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDataConstr()
      * @generated
      */
-    EClass DATA_CONSTR = eINSTANCE.getDataConstr();
+    EReference DATA_DEF__TYPE = eINSTANCE.getDataDef_Type();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ParamDefImpl <em>Param Def</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.ParamDefImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getParamDef()
+     * @generated
+     */
+    EClass PARAM_DEF = eINSTANCE.getParamDef();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
@@ -4525,33 +7522,7 @@ public interface GFPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference DATA_CONSTR__NAME = eINSTANCE.getDataConstr_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Module</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference DATA_CONSTR__MODULE = eINSTANCE.getDataConstr_Module();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ParDefImpl <em>Par Def</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.ParDefImpl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getParDef()
-     * @generated
-     */
-    EClass PAR_DEF = eINSTANCE.getParDef();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PAR_DEF__NAME = eINSTANCE.getParDef_Name();
+    EReference PARAM_DEF__NAME = eINSTANCE.getParamDef_Name();
 
     /**
      * The meta object literal for the '<em><b>Constructors</b></em>' containment reference list feature.
@@ -4559,51 +7530,17 @@ public interface GFPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PAR_DEF__CONSTRUCTORS = eINSTANCE.getParDef_Constructors();
+    EReference PARAM_DEF__CONSTRUCTORS = eINSTANCE.getParamDef_Constructors();
 
     /**
-     * The meta object literal for the '<em><b>Id2</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl <em>Oper Def</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.OperDefImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getOperDef()
      * @generated
      */
-    EReference PAR_DEF__ID2 = eINSTANCE.getParDef_Id2();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ParConstrImpl <em>Par Constr</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.ParConstrImpl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getParConstr()
-     * @generated
-     */
-    EClass PAR_CONSTR = eINSTANCE.getParConstr();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PAR_CONSTR__NAME = eINSTANCE.getParConstr_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Constructors</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PAR_CONSTR__CONSTRUCTORS = eINSTANCE.getParConstr_Constructors();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.PrintDefImpl <em>Print Def</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.PrintDefImpl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPrintDef()
-     * @generated
-     */
-    EClass PRINT_DEF = eINSTANCE.getPrintDef();
+    EClass OPER_DEF = eINSTANCE.getOperDef();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' containment reference list feature.
@@ -4611,15 +7548,107 @@ public interface GFPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PRINT_DEF__NAME = eINSTANCE.getPrintDef_Name();
+    EReference OPER_DEF__NAME = eINSTANCE.getOperDef_Name();
 
     /**
-     * The meta object literal for the '<em><b>Printname</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PRINT_DEF__PRINTNAME = eINSTANCE.getPrintDef_Printname();
+    EReference OPER_DEF__TYPE = eINSTANCE.getOperDef_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Definition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPER_DEF__DEFINITION = eINSTANCE.getOperDef_Definition();
+
+    /**
+     * The meta object literal for the '<em><b>Overload</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OPER_DEF__OVERLOAD = eINSTANCE.getOperDef_Overload();
+
+    /**
+     * The meta object literal for the '<em><b>Overloads</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPER_DEF__OVERLOADS = eINSTANCE.getOperDef_Overloads();
+
+    /**
+     * The meta object literal for the '<em><b>Args</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPER_DEF__ARGS = eINSTANCE.getOperDef_Args();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.LinDefImpl <em>Lin Def</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.LinDefImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getLinDef()
+     * @generated
+     */
+    EClass LIN_DEF = eINSTANCE.getLinDef();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIN_DEF__NAME = eINSTANCE.getLinDef_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Definition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIN_DEF__DEFINITION = eINSTANCE.getLinDef_Definition();
+
+    /**
+     * The meta object literal for the '<em><b>Args</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIN_DEF__ARGS = eINSTANCE.getLinDef_Args();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.TermDefImpl <em>Term Def</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.TermDefImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getTermDef()
+     * @generated
+     */
+    EClass TERM_DEF = eINSTANCE.getTermDef();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TERM_DEF__NAME = eINSTANCE.getTermDef_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Definition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TERM_DEF__DEFINITION = eINSTANCE.getTermDef_Definition();
 
     /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.FlagDefImpl <em>Flag Def</em>}' class.
@@ -4646,6 +7675,32 @@ public interface GFPackage extends EPackage
      * @generated
      */
     EReference FLAG_DEF__VALUE = eINSTANCE.getFlagDef_Value();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ParConstrImpl <em>Par Constr</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.ParConstrImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getParConstr()
+     * @generated
+     */
+    EClass PAR_CONSTR = eINSTANCE.getParConstr();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PAR_CONSTR__NAME = eINSTANCE.getParConstr_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Constructors</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PAR_CONSTR__CONSTRUCTORS = eINSTANCE.getParConstr_Constructors();
 
     /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.NameImpl <em>Name</em>}' class.
@@ -4718,354 +7773,6 @@ public interface GFPackage extends EPackage
     EReference LIST_LOC_DEF__LOCAL_DEFINITIONS = eINSTANCE.getListLocDef_LocalDefinitions();
 
     /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp6Impl <em>Exp6</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.Exp6Impl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp6()
-     * @generated
-     */
-    EClass EXP6 = eINSTANCE.getExp6();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP6__NAME = eINSTANCE.getExp6_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Sort</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__SORT = eINSTANCE.getExp6_Sort();
-
-    /**
-     * The meta object literal for the '<em><b>Built In Cat</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__BUILT_IN_CAT = eINSTANCE.getExp6_BuiltInCat();
-
-    /**
-     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__STRING = eINSTANCE.getExp6_String();
-
-    /**
-     * The meta object literal for the '<em><b>Integer</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__INTEGER = eINSTANCE.getExp6_Integer();
-
-    /**
-     * The meta object literal for the '<em><b>Double</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__DOUBLE = eINSTANCE.getExp6_Double();
-
-    /**
-     * The meta object literal for the '<em><b>Meta</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__META = eINSTANCE.getExp6_Meta();
-
-    /**
-     * The meta object literal for the '<em><b>Empty String</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__EMPTY_STRING = eINSTANCE.getExp6_EmptyString();
-
-    /**
-     * The meta object literal for the '<em><b>Data</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__DATA = eINSTANCE.getExp6_Data();
-
-    /**
-     * The meta object literal for the '<em><b>List Cat</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__LIST_CAT = eINSTANCE.getExp6_ListCat();
-
-    /**
-     * The meta object literal for the '<em><b>Category</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP6__CATEGORY = eINSTANCE.getExp6_Category();
-
-    /**
-     * The meta object literal for the '<em><b>List</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP6__LIST = eINSTANCE.getExp6_List();
-
-    /**
-     * The meta object literal for the '<em><b>Token List</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__TOKEN_LIST = eINSTANCE.getExp6_TokenList();
-
-    /**
-     * The meta object literal for the '<em><b>Record</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__RECORD = eINSTANCE.getExp6_Record();
-
-    /**
-     * The meta object literal for the '<em><b>Def List</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP6__DEF_LIST = eINSTANCE.getExp6_DefList();
-
-    /**
-     * The meta object literal for the '<em><b>Tuple</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__TUPLE = eINSTANCE.getExp6_Tuple();
-
-    /**
-     * The meta object literal for the '<em><b>Tuple List</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP6__TUPLE_LIST = eINSTANCE.getExp6_TupleList();
-
-    /**
-     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP6__V = eINSTANCE.getExp6_V();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP6__TYPE = eINSTANCE.getExp6_Type();
-
-    /**
-     * The meta object literal for the '<em><b>Identity</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EXP6__IDENTITY = eINSTANCE.getExp6_Identity();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp5Impl <em>Exp5</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.Exp5Impl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp5()
-     * @generated
-     */
-    EClass EXP5 = eINSTANCE.getExp5();
-
-    /**
-     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP5__V = eINSTANCE.getExp5_V();
-
-    /**
-     * The meta object literal for the '<em><b>Label</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP5__LABEL = eINSTANCE.getExp5_Label();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp4Impl <em>Exp4</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.Exp4Impl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp4()
-     * @generated
-     */
-    EClass EXP4 = eINSTANCE.getExp4();
-
-    /**
-     * The meta object literal for the '<em><b>Case List</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP4__CASE_LIST = eINSTANCE.getExp4_CaseList();
-
-    /**
-     * The meta object literal for the '<em><b>Args</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP4__ARGS = eINSTANCE.getExp4_Args();
-
-    /**
-     * The meta object literal for the '<em><b>Arg Type</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP4__ARG_TYPE = eINSTANCE.getExp4_ArgType();
-
-    /**
-     * The meta object literal for the '<em><b>Exp List</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP4__EXP_LIST = eINSTANCE.getExp4_ExpList();
-
-    /**
-     * The meta object literal for the '<em><b>Case Of</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP4__CASE_OF = eINSTANCE.getExp4_CaseOf();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP4__NAME = eINSTANCE.getExp4_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Inner</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP4__INNER = eINSTANCE.getExp4_Inner();
-
-    /**
-     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP4__V = eINSTANCE.getExp4_V();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp3Impl <em>Exp3</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.Exp3Impl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp3()
-     * @generated
-     */
-    EClass EXP3 = eINSTANCE.getExp3();
-
-    /**
-     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP3__V = eINSTANCE.getExp3_V();
-
-    /**
-     * The meta object literal for the '<em><b>E</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP3__E = eINSTANCE.getExp3_E();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp2Impl <em>Exp2</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.Exp2Impl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp2()
-     * @generated
-     */
-    EClass EXP2 = eINSTANCE.getExp2();
-
-    /**
-     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP2__V = eINSTANCE.getExp2_V();
-
-    /**
-     * The meta object literal for the '<em><b>E</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP2__E = eINSTANCE.getExp2_E();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp1Impl <em>Exp1</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.Exp1Impl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp1()
-     * @generated
-     */
-    EClass EXP1 = eINSTANCE.getExp1();
-
-    /**
-     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP1__V = eINSTANCE.getExp1_V();
-
-    /**
-     * The meta object literal for the '<em><b>E</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP1__E = eINSTANCE.getExp1_E();
-
-    /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl <em>Exp</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5076,12 +7783,156 @@ public interface GFPackage extends EPackage
     EClass EXP = eINSTANCE.getExp();
 
     /**
-     * The meta object literal for the '<em><b>Bind List</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Def List</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference EXP__BIND_LIST = eINSTANCE.getExp_BindList();
+    EReference EXP__DEF_LIST = eINSTANCE.getExp_DefList();
+
+    /**
+     * The meta object literal for the '<em><b>Case List</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP__CASE_LIST = eINSTANCE.getExp_CaseList();
+
+    /**
+     * The meta object literal for the '<em><b>Arg Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP__ARG_TYPE = eINSTANCE.getExp_ArgType();
+
+    /**
+     * The meta object literal for the '<em><b>Exp List</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP__EXP_LIST = eINSTANCE.getExp_ExpList();
+
+    /**
+     * The meta object literal for the '<em><b>Case Of</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP__CASE_OF = eINSTANCE.getExp_CaseOf();
+
+    /**
+     * The meta object literal for the '<em><b>Alts</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP__ALTS = eINSTANCE.getExp_Alts();
+
+    /**
+     * The meta object literal for the '<em><b>Pattern</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP__PATTERN = eINSTANCE.getExp_Pattern();
+
+    /**
+     * The meta object literal for the '<em><b>Inner</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP__INNER = eINSTANCE.getExp_Inner();
+
+    /**
+     * The meta object literal for the '<em><b>Sort</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP__SORT = eINSTANCE.getExp_Sort();
+
+    /**
+     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP__STRING = eINSTANCE.getExp_String();
+
+    /**
+     * The meta object literal for the '<em><b>Integer</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP__INTEGER = eINSTANCE.getExp_Integer();
+
+    /**
+     * The meta object literal for the '<em><b>Double</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP__DOUBLE = eINSTANCE.getExp_Double();
+
+    /**
+     * The meta object literal for the '<em><b>Empty String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP__EMPTY_STRING = eINSTANCE.getExp_EmptyString();
+
+    /**
+     * The meta object literal for the '<em><b>List Cat</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP__LIST_CAT = eINSTANCE.getExp_ListCat();
+
+    /**
+     * The meta object literal for the '<em><b>Category</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP__CATEGORY = eINSTANCE.getExp_Category();
+
+    /**
+     * The meta object literal for the '<em><b>List</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP__LIST = eINSTANCE.getExp_List();
+
+    /**
+     * The meta object literal for the '<em><b>Record</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP__RECORD = eINSTANCE.getExp_Record();
+
+    /**
+     * The meta object literal for the '<em><b>Tuple</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP__TUPLE = eINSTANCE.getExp_Tuple();
+
+    /**
+     * The meta object literal for the '<em><b>Tuple List</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXP__TUPLE_LIST = eINSTANCE.getExp_TupleList();
 
     /**
      * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
@@ -5092,28 +7943,20 @@ public interface GFPackage extends EPackage
     EReference EXP__V = eINSTANCE.getExp_V();
 
     /**
-     * The meta object literal for the '<em><b>E</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP__E = eINSTANCE.getExp_E();
-
-    /**
-     * The meta object literal for the '<em><b>Def List</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference EXP__DEF_LIST = eINSTANCE.getExp_DefList();
-
-    /**
      * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference EXP__TYPE = eINSTANCE.getExp_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Identity</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXP__IDENTITY = eINSTANCE.getExp_Identity();
 
     /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ListExpImpl <em>List Exp</em>}' class.
@@ -5152,50 +7995,6 @@ public interface GFPackage extends EPackage
     EReference EXPS__EXPRESSIONS = eINSTANCE.getExps_Expressions();
 
     /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Patt2Impl <em>Patt2</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.Patt2Impl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPatt2()
-     * @generated
-     */
-    EClass PATT2 = eINSTANCE.getPatt2();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Patt1Impl <em>Patt1</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.Patt1Impl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPatt1()
-     * @generated
-     */
-    EClass PATT1 = eINSTANCE.getPatt1();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PATT1__NAME = eINSTANCE.getPatt1_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PATT1__VALUE = eINSTANCE.getPatt1_Value();
-
-    /**
-     * The meta object literal for the '<em><b>Label</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PATT1__LABEL = eINSTANCE.getPatt1_Label();
-
-    /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.PattImpl <em>Patt</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5206,12 +8005,84 @@ public interface GFPackage extends EPackage
     EClass PATT = eINSTANCE.getPatt();
 
     /**
-     * The meta object literal for the '<em><b>P</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Left</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PATT__P = eINSTANCE.getPatt_P();
+    EReference PATT__LEFT = eINSTANCE.getPatt_Left();
+
+    /**
+     * The meta object literal for the '<em><b>Or</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PATT__OR = eINSTANCE.getPatt_Or();
+
+    /**
+     * The meta object literal for the '<em><b>And</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PATT__AND = eINSTANCE.getPatt_And();
+
+    /**
+     * The meta object literal for the '<em><b>Right</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PATT__RIGHT = eINSTANCE.getPatt_Right();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PATT__NAME = eINSTANCE.getPatt_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PATT__VALUE = eINSTANCE.getPatt_Value();
+
+    /**
+     * The meta object literal for the '<em><b>Label</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PATT__LABEL = eINSTANCE.getPatt_Label();
+
+    /**
+     * The meta object literal for the '<em><b>Meta</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PATT__META = eINSTANCE.getPatt_Meta();
+
+    /**
+     * The meta object literal for the '<em><b>Token List</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PATT__TOKEN_LIST = eINSTANCE.getPatt_TokenList();
+
+    /**
+     * The meta object literal for the '<em><b>Wildcard</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PATT__WILDCARD = eINSTANCE.getPatt_Wildcard();
 
     /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.PattAssImpl <em>Patt Ass</em>}' class.
@@ -5302,6 +8173,32 @@ public interface GFPackage extends EPackage
     EReference LIST_PATT__PATTERNS = eINSTANCE.getListPatt_Patterns();
 
     /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ArgImpl <em>Arg</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.ArgImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getArg()
+     * @generated
+     */
+    EClass ARG = eINSTANCE.getArg();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ARG__NAME = eINSTANCE.getArg_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Wildcard</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ARG__WILDCARD = eINSTANCE.getArg_Wildcard();
+
+    /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.BindImpl <em>Bind</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5312,12 +8209,20 @@ public interface GFPackage extends EPackage
     EClass BIND = eINSTANCE.getBind();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference BIND__NAME = eINSTANCE.getBind_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Wildcard</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute BIND__WILDCARD = eINSTANCE.getBind_Wildcard();
 
     /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ListBindImpl <em>List Bind</em>}' class.
@@ -5330,32 +8235,20 @@ public interface GFPackage extends EPackage
     EClass LIST_BIND = eINSTANCE.getListBind();
 
     /**
+     * The meta object literal for the '<em><b>Decl</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference LIST_BIND__DECL = eINSTANCE.getListBind_Decl();
+
+    /**
      * The meta object literal for the '<em><b>Bindings</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference LIST_BIND__BINDINGS = eINSTANCE.getListBind_Bindings();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.TupleCompImpl <em>Tuple Comp</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.TupleCompImpl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getTupleComp()
-     * @generated
-     */
-    EClass TUPLE_COMP = eINSTANCE.getTupleComp();
-
-    /**
-     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.PattTupleCompImpl <em>Patt Tuple Comp</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.grammaticalframework.eclipse.gF.impl.PattTupleCompImpl
-     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getPattTupleComp()
-     * @generated
-     */
-    EClass PATT_TUPLE_COMP = eINSTANCE.getPattTupleComp();
 
     /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ListTupleCompImpl <em>List Tuple Comp</em>}' class.
@@ -5368,12 +8261,12 @@ public interface GFPackage extends EPackage
     EClass LIST_TUPLE_COMP = eINSTANCE.getListTupleComp();
 
     /**
-     * The meta object literal for the '<em><b>L</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LIST_TUPLE_COMP__L = eINSTANCE.getListTupleComp_L();
+    EReference LIST_TUPLE_COMP__ELEMENTS = eINSTANCE.getListTupleComp_Elements();
 
     /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ListPattTupleCompImpl <em>List Patt Tuple Comp</em>}' class.
@@ -5386,12 +8279,12 @@ public interface GFPackage extends EPackage
     EClass LIST_PATT_TUPLE_COMP = eINSTANCE.getListPattTupleComp();
 
     /**
-     * The meta object literal for the '<em><b>L</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Patterns</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LIST_PATT_TUPLE_COMP__L = eINSTANCE.getListPattTupleComp_L();
+    EReference LIST_PATT_TUPLE_COMP__PATTERNS = eINSTANCE.getListPattTupleComp_Patterns();
 
     /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.CaseImpl <em>Case</em>}' class.
@@ -5438,6 +8331,32 @@ public interface GFPackage extends EPackage
     EReference LIST_CASE__CASES = eINSTANCE.getListCase_Cases();
 
     /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.AlternImpl <em>Altern</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.AlternImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getAltern()
+     * @generated
+     */
+    EClass ALTERN = eINSTANCE.getAltern();
+
+    /**
+     * The meta object literal for the '<em><b>Alt1</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ALTERN__ALT1 = eINSTANCE.getAltern_Alt1();
+
+    /**
+     * The meta object literal for the '<em><b>Alt2</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ALTERN__ALT2 = eINSTANCE.getAltern_Alt2();
+
+    /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.DDeclImpl <em>DDecl</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5480,6 +8399,86 @@ public interface GFPackage extends EPackage
      * @generated
      */
     EAttribute IDENT__S = eINSTANCE.getIdent_S();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.ExpLF13Impl <em>Exp LF13</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.ExpLF13Impl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExpLF13()
+     * @generated
+     */
+    EClass EXP_LF13 = eINSTANCE.getExpLF13();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp1Impl <em>Exp1</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.Exp1Impl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp1()
+     * @generated
+     */
+    EClass EXP1 = eINSTANCE.getExp1();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp2Impl <em>Exp2</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.Exp2Impl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp2()
+     * @generated
+     */
+    EClass EXP2 = eINSTANCE.getExp2();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp3Impl <em>Exp3</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.Exp3Impl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp3()
+     * @generated
+     */
+    EClass EXP3 = eINSTANCE.getExp3();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.Exp4Impl <em>Exp4</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.Exp4Impl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getExp4()
+     * @generated
+     */
+    EClass EXP4 = eINSTANCE.getExp4();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.IntegerImpl <em>Integer</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.IntegerImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getInteger()
+     * @generated
+     */
+    EClass INTEGER = eINSTANCE.getInteger();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.DoubleImpl <em>Double</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.DoubleImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getDouble()
+     * @generated
+     */
+    EClass DOUBLE = eINSTANCE.getDouble();
+
+    /**
+     * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.StringImpl <em>String</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.grammaticalframework.eclipse.gF.impl.StringImpl
+     * @see org.grammaticalframework.eclipse.gF.impl.GFPackageImpl#getString()
+     * @generated
+     */
+    EClass STRING = eINSTANCE.getString();
 
   }
 

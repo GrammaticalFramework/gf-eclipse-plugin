@@ -10,7 +10,51 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.grammaticalframework.eclipse.gF.*;
+import org.grammaticalframework.eclipse.gF.Altern;
+import org.grammaticalframework.eclipse.gF.Arg;
+import org.grammaticalframework.eclipse.gF.Bind;
+import org.grammaticalframework.eclipse.gF.Case;
+import org.grammaticalframework.eclipse.gF.CatDef;
+import org.grammaticalframework.eclipse.gF.DDecl;
+import org.grammaticalframework.eclipse.gF.DataDef;
+import org.grammaticalframework.eclipse.gF.DefDef;
+import org.grammaticalframework.eclipse.gF.Exp;
+import org.grammaticalframework.eclipse.gF.Exp1;
+import org.grammaticalframework.eclipse.gF.Exp2;
+import org.grammaticalframework.eclipse.gF.Exp3;
+import org.grammaticalframework.eclipse.gF.Exp4;
+import org.grammaticalframework.eclipse.gF.ExpLF13;
+import org.grammaticalframework.eclipse.gF.Exps;
+import org.grammaticalframework.eclipse.gF.FlagDef;
+import org.grammaticalframework.eclipse.gF.FunDef;
+import org.grammaticalframework.eclipse.gF.GFPackage;
+import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Included;
+import org.grammaticalframework.eclipse.gF.Inst;
+import org.grammaticalframework.eclipse.gF.Label;
+import org.grammaticalframework.eclipse.gF.LinDef;
+import org.grammaticalframework.eclipse.gF.ListBind;
+import org.grammaticalframework.eclipse.gF.ListCase;
+import org.grammaticalframework.eclipse.gF.ListExp;
+import org.grammaticalframework.eclipse.gF.ListLocDef;
+import org.grammaticalframework.eclipse.gF.ListPatt;
+import org.grammaticalframework.eclipse.gF.ListPattAss;
+import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
+import org.grammaticalframework.eclipse.gF.ListTupleComp;
+import org.grammaticalframework.eclipse.gF.LocDef;
+import org.grammaticalframework.eclipse.gF.ModBody;
+import org.grammaticalframework.eclipse.gF.ModContent;
+import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.ModType;
+import org.grammaticalframework.eclipse.gF.Name;
+import org.grammaticalframework.eclipse.gF.Open;
+import org.grammaticalframework.eclipse.gF.OperDef;
+import org.grammaticalframework.eclipse.gF.ParConstr;
+import org.grammaticalframework.eclipse.gF.ParamDef;
+import org.grammaticalframework.eclipse.gF.Patt;
+import org.grammaticalframework.eclipse.gF.PattAss;
+import org.grammaticalframework.eclipse.gF.TermDef;
+import org.grammaticalframework.eclipse.gF.TopDef;
 
 /**
  * <!-- begin-user-doc -->
@@ -96,6 +140,13 @@ public class GFSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GFPackage.MOD_CONTENT:
+      {
+        ModContent modContent = (ModContent)theEObject;
+        T result = caseModContent(modContent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GFPackage.OPEN:
       {
         Open open = (Open)theEObject;
@@ -103,17 +154,17 @@ public class GFSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GFPackage.INST:
+      {
+        Inst inst = (Inst)theEObject;
+        T result = caseInst(inst);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GFPackage.INCLUDED:
       {
         Included included = (Included)theEObject;
         T result = caseIncluded(included);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.DEF:
-      {
-        Def def = (Def)theEObject;
-        T result = caseDef(def);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -138,6 +189,13 @@ public class GFSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GFPackage.DEF_DEF:
+      {
+        DefDef defDef = (DefDef)theEObject;
+        T result = caseDefDef(defDef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GFPackage.DATA_DEF:
       {
         DataDef dataDef = (DataDef)theEObject;
@@ -145,31 +203,31 @@ public class GFSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GFPackage.DATA_CONSTR:
+      case GFPackage.PARAM_DEF:
       {
-        DataConstr dataConstr = (DataConstr)theEObject;
-        T result = caseDataConstr(dataConstr);
+        ParamDef paramDef = (ParamDef)theEObject;
+        T result = caseParamDef(paramDef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GFPackage.PAR_DEF:
+      case GFPackage.OPER_DEF:
       {
-        ParDef parDef = (ParDef)theEObject;
-        T result = caseParDef(parDef);
+        OperDef operDef = (OperDef)theEObject;
+        T result = caseOperDef(operDef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GFPackage.PAR_CONSTR:
+      case GFPackage.LIN_DEF:
       {
-        ParConstr parConstr = (ParConstr)theEObject;
-        T result = caseParConstr(parConstr);
+        LinDef linDef = (LinDef)theEObject;
+        T result = caseLinDef(linDef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GFPackage.PRINT_DEF:
+      case GFPackage.TERM_DEF:
       {
-        PrintDef printDef = (PrintDef)theEObject;
-        T result = casePrintDef(printDef);
+        TermDef termDef = (TermDef)theEObject;
+        T result = caseTermDef(termDef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -177,6 +235,13 @@ public class GFSwitch<T> extends Switch<T>
       {
         FlagDef flagDef = (FlagDef)theEObject;
         T result = caseFlagDef(flagDef);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.PAR_CONSTR:
+      {
+        ParConstr parConstr = (ParConstr)theEObject;
+        T result = caseParConstr(parConstr);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -198,49 +263,9 @@ public class GFSwitch<T> extends Switch<T>
       {
         ListLocDef listLocDef = (ListLocDef)theEObject;
         T result = caseListLocDef(listLocDef);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.EXP6:
-      {
-        Exp6 exp6 = (Exp6)theEObject;
-        T result = caseExp6(exp6);
-        if (result == null) result = caseDDecl(exp6);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.EXP5:
-      {
-        Exp5 exp5 = (Exp5)theEObject;
-        T result = caseExp5(exp5);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.EXP4:
-      {
-        Exp4 exp4 = (Exp4)theEObject;
-        T result = caseExp4(exp4);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.EXP3:
-      {
-        Exp3 exp3 = (Exp3)theEObject;
-        T result = caseExp3(exp3);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.EXP2:
-      {
-        Exp2 exp2 = (Exp2)theEObject;
-        T result = caseExp2(exp2);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.EXP1:
-      {
-        Exp1 exp1 = (Exp1)theEObject;
-        T result = caseExp1(exp1);
+        if (result == null) result = caseExp(listLocDef);
+        if (result == null) result = casePatt(listLocDef);
+        if (result == null) result = caseDDecl(listLocDef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -248,7 +273,8 @@ public class GFSwitch<T> extends Switch<T>
       {
         Exp exp = (Exp)theEObject;
         T result = caseExp(exp);
-        if (result == null) result = caseTupleComp(exp);
+        if (result == null) result = casePatt(exp);
+        if (result == null) result = caseDDecl(exp);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -266,28 +292,10 @@ public class GFSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case GFPackage.PATT2:
-      {
-        Patt2 patt2 = (Patt2)theEObject;
-        T result = casePatt2(patt2);
-        if (result == null) result = casePatt1(patt2);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.PATT1:
-      {
-        Patt1 patt1 = (Patt1)theEObject;
-        T result = casePatt1(patt1);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case GFPackage.PATT:
       {
         Patt patt = (Patt)theEObject;
         T result = casePatt(patt);
-        if (result == null) result = casePatt2(patt);
-        if (result == null) result = casePattTupleComp(patt);
-        if (result == null) result = casePatt1(patt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -309,8 +317,7 @@ public class GFSwitch<T> extends Switch<T>
       {
         ListPattAss listPattAss = (ListPattAss)theEObject;
         T result = caseListPattAss(listPattAss);
-        if (result == null) result = casePatt2(listPattAss);
-        if (result == null) result = casePatt1(listPattAss);
+        if (result == null) result = casePatt(listPattAss);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -318,6 +325,13 @@ public class GFSwitch<T> extends Switch<T>
       {
         ListPatt listPatt = (ListPatt)theEObject;
         T result = caseListPatt(listPatt);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.ARG:
+      {
+        Arg arg = (Arg)theEObject;
+        T result = caseArg(arg);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -332,20 +346,9 @@ public class GFSwitch<T> extends Switch<T>
       {
         ListBind listBind = (ListBind)theEObject;
         T result = caseListBind(listBind);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.TUPLE_COMP:
-      {
-        TupleComp tupleComp = (TupleComp)theEObject;
-        T result = caseTupleComp(tupleComp);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.PATT_TUPLE_COMP:
-      {
-        PattTupleComp pattTupleComp = (PattTupleComp)theEObject;
-        T result = casePattTupleComp(pattTupleComp);
+        if (result == null) result = caseExp(listBind);
+        if (result == null) result = casePatt(listBind);
+        if (result == null) result = caseDDecl(listBind);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -360,8 +363,7 @@ public class GFSwitch<T> extends Switch<T>
       {
         ListPattTupleComp listPattTupleComp = (ListPattTupleComp)theEObject;
         T result = caseListPattTupleComp(listPattTupleComp);
-        if (result == null) result = casePatt2(listPattTupleComp);
-        if (result == null) result = casePatt1(listPattTupleComp);
+        if (result == null) result = casePatt(listPattTupleComp);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -379,6 +381,13 @@ public class GFSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GFPackage.ALTERN:
+      {
+        Altern altern = (Altern)theEObject;
+        T result = caseAltern(altern);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GFPackage.DDECL:
       {
         DDecl dDecl = (DDecl)theEObject;
@@ -390,6 +399,83 @@ public class GFSwitch<T> extends Switch<T>
       {
         Ident ident = (Ident)theEObject;
         T result = caseIdent(ident);
+        if (result == null) result = caseExp(ident);
+        if (result == null) result = casePatt(ident);
+        if (result == null) result = caseDDecl(ident);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.EXP_LF13:
+      {
+        ExpLF13 expLF13 = (ExpLF13)theEObject;
+        T result = caseExpLF13(expLF13);
+        if (result == null) result = caseExp(expLF13);
+        if (result == null) result = casePatt(expLF13);
+        if (result == null) result = caseDDecl(expLF13);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.EXP1:
+      {
+        Exp1 exp1 = (Exp1)theEObject;
+        T result = caseExp1(exp1);
+        if (result == null) result = caseExp(exp1);
+        if (result == null) result = casePatt(exp1);
+        if (result == null) result = caseDDecl(exp1);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.EXP2:
+      {
+        Exp2 exp2 = (Exp2)theEObject;
+        T result = caseExp2(exp2);
+        if (result == null) result = caseExp(exp2);
+        if (result == null) result = casePatt(exp2);
+        if (result == null) result = caseDDecl(exp2);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.EXP3:
+      {
+        Exp3 exp3 = (Exp3)theEObject;
+        T result = caseExp3(exp3);
+        if (result == null) result = caseExp(exp3);
+        if (result == null) result = casePatt(exp3);
+        if (result == null) result = caseDDecl(exp3);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.EXP4:
+      {
+        Exp4 exp4 = (Exp4)theEObject;
+        T result = caseExp4(exp4);
+        if (result == null) result = caseExp(exp4);
+        if (result == null) result = casePatt(exp4);
+        if (result == null) result = caseDDecl(exp4);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.INTEGER:
+      {
+        org.grammaticalframework.eclipse.gF.Integer integer = (org.grammaticalframework.eclipse.gF.Integer)theEObject;
+        T result = caseInteger(integer);
+        if (result == null) result = casePatt(integer);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.DOUBLE:
+      {
+        org.grammaticalframework.eclipse.gF.Double double_ = (org.grammaticalframework.eclipse.gF.Double)theEObject;
+        T result = caseDouble(double_);
+        if (result == null) result = casePatt(double_);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.STRING:
+      {
+        org.grammaticalframework.eclipse.gF.String string = (org.grammaticalframework.eclipse.gF.String)theEObject;
+        T result = caseString(string);
+        if (result == null) result = casePatt(string);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -446,6 +532,22 @@ public class GFSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Mod Content</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mod Content</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseModContent(ModContent object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Open</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -462,6 +564,22 @@ public class GFSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Inst</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Inst</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInst(Inst object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Included</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -473,22 +591,6 @@ public class GFSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseIncluded(Included object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Def</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Def</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDef(Def object)
   {
     return null;
   }
@@ -542,6 +644,22 @@ public class GFSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Def Def</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Def Def</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDefDef(DefDef object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Data Def</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -558,65 +676,65 @@ public class GFSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Data Constr</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Param Def</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Data Constr</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Param Def</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDataConstr(DataConstr object)
+  public T caseParamDef(ParamDef object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Par Def</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Oper Def</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Par Def</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Oper Def</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseParDef(ParDef object)
+  public T caseOperDef(OperDef object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Par Constr</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Lin Def</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Par Constr</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Lin Def</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseParConstr(ParConstr object)
+  public T caseLinDef(LinDef object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Print Def</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Term Def</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Print Def</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Term Def</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casePrintDef(PrintDef object)
+  public T caseTermDef(TermDef object)
   {
     return null;
   }
@@ -633,6 +751,22 @@ public class GFSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFlagDef(FlagDef object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Par Constr</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Par Constr</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParConstr(ParConstr object)
   {
     return null;
   }
@@ -686,102 +820,6 @@ public class GFSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Exp6</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Exp6</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExp6(Exp6 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Exp5</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Exp5</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExp5(Exp5 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Exp4</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Exp4</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExp4(Exp4 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Exp3</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Exp3</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExp3(Exp3 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Exp2</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Exp2</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExp2(Exp2 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Exp1</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Exp1</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExp1(Exp1 object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Exp</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -825,38 +863,6 @@ public class GFSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExps(Exps object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Patt2</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Patt2</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePatt2(Patt2 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Patt1</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Patt1</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePatt1(Patt1 object)
   {
     return null;
   }
@@ -942,6 +948,22 @@ public class GFSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Arg</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Arg</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseArg(Arg object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Bind</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -969,38 +991,6 @@ public class GFSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseListBind(ListBind object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Tuple Comp</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Tuple Comp</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseTupleComp(TupleComp object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Patt Tuple Comp</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Patt Tuple Comp</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePattTupleComp(PattTupleComp object)
   {
     return null;
   }
@@ -1070,6 +1060,22 @@ public class GFSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Altern</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Altern</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAltern(Altern object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>DDecl</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1097,6 +1103,134 @@ public class GFSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseIdent(Ident object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exp LF13</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exp LF13</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpLF13(ExpLF13 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exp1</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exp1</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExp1(Exp1 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exp2</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exp2</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExp2(Exp2 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exp3</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exp3</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExp3(Exp3 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exp4</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exp4</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExp4(Exp4 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Integer</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Integer</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInteger(org.grammaticalframework.eclipse.gF.Integer object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Double</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Double</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDouble(org.grammaticalframework.eclipse.gF.Double object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>String</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>String</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseString(org.grammaticalframework.eclipse.gF.String object)
   {
     return null;
   }

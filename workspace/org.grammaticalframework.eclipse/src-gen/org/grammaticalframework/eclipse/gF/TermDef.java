@@ -11,22 +11,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Print Def</b></em>'.
+ * A representation of the model object '<em><b>Term Def</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.PrintDef#getName <em>Name</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.PrintDef#getPrintname <em>Printname</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.TermDef#getName <em>Name</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.TermDef#getDefinition <em>Definition</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.grammaticalframework.eclipse.gF.GFPackage#getPrintDef()
+ * @see org.grammaticalframework.eclipse.gF.GFPackage#getTermDef()
  * @model
  * @generated
  */
-public interface PrintDef extends EObject
+public interface TermDef extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' containment reference list.
@@ -38,36 +38,36 @@ public interface PrintDef extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' containment reference list.
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPrintDef_Name()
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getTermDef_Name()
    * @model containment="true"
    * @generated
    */
   EList<Name> getName();
 
   /**
-   * Returns the value of the '<em><b>Printname</b></em>' containment reference.
+   * Returns the value of the '<em><b>Definition</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Printname</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Definition</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Printname</em>' containment reference.
-   * @see #setPrintname(Exp)
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPrintDef_Printname()
+   * @return the value of the '<em>Definition</em>' containment reference.
+   * @see #setDefinition(Exp)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getTermDef_Definition()
    * @model containment="true"
    * @generated
    */
-  Exp getPrintname();
+  Exp getDefinition();
 
   /**
-   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.PrintDef#getPrintname <em>Printname</em>}' containment reference.
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.TermDef#getDefinition <em>Definition</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Printname</em>' containment reference.
-   * @see #getPrintname()
+   * @param value the new value of the '<em>Definition</em>' containment reference.
+   * @see #getDefinition()
    * @generated
    */
-  void setPrintname(Exp value);
+  void setDefinition(Exp value);
 
-} // PrintDef
+} // TermDef

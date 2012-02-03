@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.ListTupleComp;
-import org.grammaticalframework.eclipse.gF.TupleComp;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import org.grammaticalframework.eclipse.gF.TupleComp;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ListTupleCompImpl#getL <em>L</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ListTupleCompImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,14 +39,14 @@ import org.grammaticalframework.eclipse.gF.TupleComp;
 public class ListTupleCompImpl extends MinimalEObjectImpl.Container implements ListTupleComp
 {
   /**
-   * The cached value of the '{@link #getL() <em>L</em>}' containment reference list.
+   * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getL()
+   * @see #getElements()
    * @generated
    * @ordered
    */
-  protected EList<TupleComp> l;
+  protected EList<Exp> elements;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,13 +74,13 @@ public class ListTupleCompImpl extends MinimalEObjectImpl.Container implements L
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<TupleComp> getL()
+  public EList<Exp> getElements()
   {
-    if (l == null)
+    if (elements == null)
     {
-      l = new EObjectContainmentEList<TupleComp>(TupleComp.class, this, GFPackage.LIST_TUPLE_COMP__L);
+      elements = new EObjectContainmentEList<Exp>(Exp.class, this, GFPackage.LIST_TUPLE_COMP__ELEMENTS);
     }
-    return l;
+    return elements;
   }
 
   /**
@@ -93,8 +93,8 @@ public class ListTupleCompImpl extends MinimalEObjectImpl.Container implements L
   {
     switch (featureID)
     {
-      case GFPackage.LIST_TUPLE_COMP__L:
-        return ((InternalEList<?>)getL()).basicRemove(otherEnd, msgs);
+      case GFPackage.LIST_TUPLE_COMP__ELEMENTS:
+        return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -109,8 +109,8 @@ public class ListTupleCompImpl extends MinimalEObjectImpl.Container implements L
   {
     switch (featureID)
     {
-      case GFPackage.LIST_TUPLE_COMP__L:
-        return getL();
+      case GFPackage.LIST_TUPLE_COMP__ELEMENTS:
+        return getElements();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -126,9 +126,9 @@ public class ListTupleCompImpl extends MinimalEObjectImpl.Container implements L
   {
     switch (featureID)
     {
-      case GFPackage.LIST_TUPLE_COMP__L:
-        getL().clear();
-        getL().addAll((Collection<? extends TupleComp>)newValue);
+      case GFPackage.LIST_TUPLE_COMP__ELEMENTS:
+        getElements().clear();
+        getElements().addAll((Collection<? extends Exp>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -144,8 +144,8 @@ public class ListTupleCompImpl extends MinimalEObjectImpl.Container implements L
   {
     switch (featureID)
     {
-      case GFPackage.LIST_TUPLE_COMP__L:
-        getL().clear();
+      case GFPackage.LIST_TUPLE_COMP__ELEMENTS:
+        getElements().clear();
         return;
     }
     super.eUnset(featureID);
@@ -161,8 +161,8 @@ public class ListTupleCompImpl extends MinimalEObjectImpl.Container implements L
   {
     switch (featureID)
     {
-      case GFPackage.LIST_TUPLE_COMP__L:
-        return l != null && !l.isEmpty();
+      case GFPackage.LIST_TUPLE_COMP__ELEMENTS:
+        return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
   }

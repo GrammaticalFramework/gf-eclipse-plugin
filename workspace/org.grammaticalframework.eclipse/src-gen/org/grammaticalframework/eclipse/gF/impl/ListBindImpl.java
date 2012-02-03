@@ -7,6 +7,7 @@ package org.grammaticalframework.eclipse.gF.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -14,12 +15,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.grammaticalframework.eclipse.gF.Bind;
+import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.ListBind;
 
@@ -30,14 +32,25 @@ import org.grammaticalframework.eclipse.gF.ListBind;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ListBindImpl#getDecl <em>Decl</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ListBindImpl#getBindings <em>Bindings</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBind
+public class ListBindImpl extends ExpImpl implements ListBind
 {
+  /**
+   * The cached value of the '{@link #getDecl() <em>Decl</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDecl()
+   * @generated
+   * @ordered
+   */
+  protected Exp decl;
+
   /**
    * The cached value of the '{@link #getBindings() <em>Bindings</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -74,6 +87,54 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
    * <!-- end-user-doc -->
    * @generated
    */
+  public Exp getDecl()
+  {
+    return decl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDecl(Exp newDecl, NotificationChain msgs)
+  {
+    Exp oldDecl = decl;
+    decl = newDecl;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.LIST_BIND__DECL, oldDecl, newDecl);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDecl(Exp newDecl)
+  {
+    if (newDecl != decl)
+    {
+      NotificationChain msgs = null;
+      if (decl != null)
+        msgs = ((InternalEObject)decl).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.LIST_BIND__DECL, null, msgs);
+      if (newDecl != null)
+        msgs = ((InternalEObject)newDecl).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.LIST_BIND__DECL, null, msgs);
+      msgs = basicSetDecl(newDecl, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.LIST_BIND__DECL, newDecl, newDecl));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Bind> getBindings()
   {
     if (bindings == null)
@@ -93,6 +154,8 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
+      case GFPackage.LIST_BIND__DECL:
+        return basicSetDecl(null, msgs);
       case GFPackage.LIST_BIND__BINDINGS:
         return ((InternalEList<?>)getBindings()).basicRemove(otherEnd, msgs);
     }
@@ -109,6 +172,8 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
+      case GFPackage.LIST_BIND__DECL:
+        return getDecl();
       case GFPackage.LIST_BIND__BINDINGS:
         return getBindings();
     }
@@ -126,6 +191,9 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
+      case GFPackage.LIST_BIND__DECL:
+        setDecl((Exp)newValue);
+        return;
       case GFPackage.LIST_BIND__BINDINGS:
         getBindings().clear();
         getBindings().addAll((Collection<? extends Bind>)newValue);
@@ -144,6 +212,9 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
+      case GFPackage.LIST_BIND__DECL:
+        setDecl((Exp)null);
+        return;
       case GFPackage.LIST_BIND__BINDINGS:
         getBindings().clear();
         return;
@@ -161,6 +232,8 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
+      case GFPackage.LIST_BIND__DECL:
+        return decl != null;
       case GFPackage.LIST_BIND__BINDINGS:
         return bindings != null && !bindings.isEmpty();
     }

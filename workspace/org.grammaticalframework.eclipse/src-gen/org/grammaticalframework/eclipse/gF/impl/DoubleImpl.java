@@ -7,28 +7,25 @@ package org.grammaticalframework.eclipse.gF.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.grammaticalframework.eclipse.gF.GFPackage;
-import org.grammaticalframework.eclipse.gF.TupleComp;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Tuple Comp</b></em>'.
+ * An implementation of the model object '<em><b>Double</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class TupleCompImpl extends MinimalEObjectImpl.Container implements TupleComp
+public class DoubleImpl extends PattImpl implements org.grammaticalframework.eclipse.gF.Double
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TupleCompImpl()
+  protected DoubleImpl()
   {
     super();
   }
@@ -41,7 +38,7 @@ public class TupleCompImpl extends MinimalEObjectImpl.Container implements Tuple
   @Override
   protected EClass eStaticClass()
   {
-    return GFPackage.Literals.TUPLE_COMP;
+    return GFPackage.Literals.DOUBLE;
   }
 
-} //TupleCompImpl
+} //DoubleImpl

@@ -14,8 +14,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -36,7 +34,7 @@ import org.grammaticalframework.eclipse.gF.LocDef;
  *
  * @generated
  */
-public class ListLocDefImpl extends MinimalEObjectImpl.Container implements ListLocDef
+public class ListLocDefImpl extends ExpImpl implements ListLocDef
 {
   /**
    * The cached value of the '{@link #getLocalDefinitions() <em>Local Definitions</em>}' containment reference list.

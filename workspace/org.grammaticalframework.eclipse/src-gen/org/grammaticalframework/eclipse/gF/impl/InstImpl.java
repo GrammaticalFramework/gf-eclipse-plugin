@@ -14,26 +14,36 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.grammaticalframework.eclipse.gF.DataConstr;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Inst;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Data Constr</b></em>'.
+ * An implementation of the model object '<em><b>Inst</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DataConstrImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DataConstrImpl#getModule <em>Module</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.InstImpl#getInterface <em>Interface</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.InstImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DataConstrImpl extends MinimalEObjectImpl.Container implements DataConstr
+public class InstImpl extends MinimalEObjectImpl.Container implements Inst
 {
+  /**
+   * The cached value of the '{@link #getInterface() <em>Interface</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInterface()
+   * @generated
+   * @ordered
+   */
+  protected Ident interface_;
+
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -45,21 +55,11 @@ public class DataConstrImpl extends MinimalEObjectImpl.Container implements Data
   protected Ident name;
 
   /**
-   * The cached value of the '{@link #getModule() <em>Module</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getModule()
-   * @generated
-   * @ordered
-   */
-  protected Ident module;
-
-  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DataConstrImpl()
+  protected InstImpl()
   {
     super();
   }
@@ -72,7 +72,55 @@ public class DataConstrImpl extends MinimalEObjectImpl.Container implements Data
   @Override
   protected EClass eStaticClass()
   {
-    return GFPackage.Literals.DATA_CONSTR;
+    return GFPackage.Literals.INST;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ident getInterface()
+  {
+    return interface_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetInterface(Ident newInterface, NotificationChain msgs)
+  {
+    Ident oldInterface = interface_;
+    interface_ = newInterface;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.INST__INTERFACE, oldInterface, newInterface);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInterface(Ident newInterface)
+  {
+    if (newInterface != interface_)
+    {
+      NotificationChain msgs = null;
+      if (interface_ != null)
+        msgs = ((InternalEObject)interface_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.INST__INTERFACE, null, msgs);
+      if (newInterface != null)
+        msgs = ((InternalEObject)newInterface).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.INST__INTERFACE, null, msgs);
+      msgs = basicSetInterface(newInterface, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.INST__INTERFACE, newInterface, newInterface));
   }
 
   /**
@@ -96,7 +144,7 @@ public class DataConstrImpl extends MinimalEObjectImpl.Container implements Data
     name = newName;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.DATA_CONSTR__NAME, oldName, newName);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.INST__NAME, oldName, newName);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -113,62 +161,14 @@ public class DataConstrImpl extends MinimalEObjectImpl.Container implements Data
     {
       NotificationChain msgs = null;
       if (name != null)
-        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.DATA_CONSTR__NAME, null, msgs);
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.INST__NAME, null, msgs);
       if (newName != null)
-        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.DATA_CONSTR__NAME, null, msgs);
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.INST__NAME, null, msgs);
       msgs = basicSetName(newName, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.DATA_CONSTR__NAME, newName, newName));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Ident getModule()
-  {
-    return module;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetModule(Ident newModule, NotificationChain msgs)
-  {
-    Ident oldModule = module;
-    module = newModule;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.DATA_CONSTR__MODULE, oldModule, newModule);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setModule(Ident newModule)
-  {
-    if (newModule != module)
-    {
-      NotificationChain msgs = null;
-      if (module != null)
-        msgs = ((InternalEObject)module).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.DATA_CONSTR__MODULE, null, msgs);
-      if (newModule != null)
-        msgs = ((InternalEObject)newModule).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.DATA_CONSTR__MODULE, null, msgs);
-      msgs = basicSetModule(newModule, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.DATA_CONSTR__MODULE, newModule, newModule));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.INST__NAME, newName, newName));
   }
 
   /**
@@ -181,10 +181,10 @@ public class DataConstrImpl extends MinimalEObjectImpl.Container implements Data
   {
     switch (featureID)
     {
-      case GFPackage.DATA_CONSTR__NAME:
+      case GFPackage.INST__INTERFACE:
+        return basicSetInterface(null, msgs);
+      case GFPackage.INST__NAME:
         return basicSetName(null, msgs);
-      case GFPackage.DATA_CONSTR__MODULE:
-        return basicSetModule(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -199,10 +199,10 @@ public class DataConstrImpl extends MinimalEObjectImpl.Container implements Data
   {
     switch (featureID)
     {
-      case GFPackage.DATA_CONSTR__NAME:
+      case GFPackage.INST__INTERFACE:
+        return getInterface();
+      case GFPackage.INST__NAME:
         return getName();
-      case GFPackage.DATA_CONSTR__MODULE:
-        return getModule();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -217,11 +217,11 @@ public class DataConstrImpl extends MinimalEObjectImpl.Container implements Data
   {
     switch (featureID)
     {
-      case GFPackage.DATA_CONSTR__NAME:
-        setName((Ident)newValue);
+      case GFPackage.INST__INTERFACE:
+        setInterface((Ident)newValue);
         return;
-      case GFPackage.DATA_CONSTR__MODULE:
-        setModule((Ident)newValue);
+      case GFPackage.INST__NAME:
+        setName((Ident)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -237,11 +237,11 @@ public class DataConstrImpl extends MinimalEObjectImpl.Container implements Data
   {
     switch (featureID)
     {
-      case GFPackage.DATA_CONSTR__NAME:
-        setName((Ident)null);
+      case GFPackage.INST__INTERFACE:
+        setInterface((Ident)null);
         return;
-      case GFPackage.DATA_CONSTR__MODULE:
-        setModule((Ident)null);
+      case GFPackage.INST__NAME:
+        setName((Ident)null);
         return;
     }
     super.eUnset(featureID);
@@ -257,12 +257,12 @@ public class DataConstrImpl extends MinimalEObjectImpl.Container implements Data
   {
     switch (featureID)
     {
-      case GFPackage.DATA_CONSTR__NAME:
+      case GFPackage.INST__INTERFACE:
+        return interface_ != null;
+      case GFPackage.INST__NAME:
         return name != null;
-      case GFPackage.DATA_CONSTR__MODULE:
-        return module != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //DataConstrImpl
+} //InstImpl

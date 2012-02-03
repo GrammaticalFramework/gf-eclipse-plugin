@@ -21,7 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.ListPatt;
-import org.grammaticalframework.eclipse.gF.Patt2;
+import org.grammaticalframework.eclipse.gF.Patt;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +46,7 @@ public class ListPattImpl extends MinimalEObjectImpl.Container implements ListPa
    * @generated
    * @ordered
    */
-  protected EList<Patt2> patterns;
+  protected EList<Patt> patterns;
 
   /**
    * <!-- begin-user-doc -->
@@ -74,11 +74,11 @@ public class ListPattImpl extends MinimalEObjectImpl.Container implements ListPa
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Patt2> getPatterns()
+  public EList<Patt> getPatterns()
   {
     if (patterns == null)
     {
-      patterns = new EObjectContainmentEList<Patt2>(Patt2.class, this, GFPackage.LIST_PATT__PATTERNS);
+      patterns = new EObjectContainmentEList<Patt>(Patt.class, this, GFPackage.LIST_PATT__PATTERNS);
     }
     return patterns;
   }
@@ -128,7 +128,7 @@ public class ListPattImpl extends MinimalEObjectImpl.Container implements ListPa
     {
       case GFPackage.LIST_PATT__PATTERNS:
         getPatterns().clear();
-        getPatterns().addAll((Collection<? extends Patt2>)newValue);
+        getPatterns().addAll((Collection<? extends Patt>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

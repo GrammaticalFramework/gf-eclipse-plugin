@@ -172,6 +172,9 @@ Exp
   | 'in' Exp5 String
   | Exp1   
 */
+
+// JOHN: Check again this refactoring of Exp to see if it's ok, then on to fixing stuff in scoping, formatting etc.
+
 Exp :
 	  ExpLF13
 //	  Exp1 ({Exp.left=current} '|' right=Exp)?

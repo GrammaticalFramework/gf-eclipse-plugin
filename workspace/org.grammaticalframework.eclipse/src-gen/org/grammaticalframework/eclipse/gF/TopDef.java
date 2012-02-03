@@ -20,8 +20,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.grammaticalframework.eclipse.gF.TopDef#isCat <em>Cat</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.TopDef#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.TopDef#isFun <em>Fun</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.TopDef#isData <em>Data</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.TopDef#isDef <em>Def</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.TopDef#isData <em>Data</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.TopDef#isParam <em>Param</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.TopDef#isOper <em>Oper</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.TopDef#isLincat <em>Lincat</em>}</li>
@@ -107,32 +107,6 @@ public interface TopDef extends EObject
   void setFun(boolean value);
 
   /**
-   * Returns the value of the '<em><b>Data</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Data</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Data</em>' attribute.
-   * @see #setData(boolean)
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getTopDef_Data()
-   * @model
-   * @generated
-   */
-  boolean isData();
-
-  /**
-   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.TopDef#isData <em>Data</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Data</em>' attribute.
-   * @see #isData()
-   * @generated
-   */
-  void setData(boolean value);
-
-  /**
    * Returns the value of the '<em><b>Def</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
@@ -157,6 +131,32 @@ public interface TopDef extends EObject
    * @generated
    */
   void setDef(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Data</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Data</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Data</em>' attribute.
+   * @see #setData(boolean)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getTopDef_Data()
+   * @model
+   * @generated
+   */
+  boolean isData();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.TopDef#isData <em>Data</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Data</em>' attribute.
+   * @see #isData()
+   * @generated
+   */
+  void setData(boolean value);
 
   /**
    * Returns the value of the '<em><b>Param</b></em>' attribute.

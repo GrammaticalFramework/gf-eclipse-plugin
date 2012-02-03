@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -137,7 +138,7 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
    * @generated
    * @ordered
    */
-  protected Ident abstractName;
+  protected EObject abstractName;
 
   /**
    * The default value of the '{@link #isInstance() <em>Instance</em>}' attribute.
@@ -325,7 +326,7 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
    * <!-- end-user-doc -->
    * @generated
    */
-  public Ident getAbstractName()
+  public EObject getAbstractName()
   {
     return abstractName;
   }
@@ -335,9 +336,9 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAbstractName(Ident newAbstractName, NotificationChain msgs)
+  public NotificationChain basicSetAbstractName(EObject newAbstractName, NotificationChain msgs)
   {
-    Ident oldAbstractName = abstractName;
+    EObject oldAbstractName = abstractName;
     abstractName = newAbstractName;
     if (eNotificationRequired())
     {
@@ -352,7 +353,7 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAbstractName(Ident newAbstractName)
+  public void setAbstractName(EObject newAbstractName)
   {
     if (newAbstractName != abstractName)
     {
@@ -463,7 +464,7 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
         setConcrete((Boolean)newValue);
         return;
       case GFPackage.MOD_TYPE__ABSTRACT_NAME:
-        setAbstractName((Ident)newValue);
+        setAbstractName((EObject)newValue);
         return;
       case GFPackage.MOD_TYPE__INSTANCE:
         setInstance((Boolean)newValue);
@@ -498,7 +499,7 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
         setConcrete(CONCRETE_EDEFAULT);
         return;
       case GFPackage.MOD_TYPE__ABSTRACT_NAME:
-        setAbstractName((Ident)null);
+        setAbstractName((EObject)null);
         return;
       case GFPackage.MOD_TYPE__INSTANCE:
         setInstance(INSTANCE_EDEFAULT);

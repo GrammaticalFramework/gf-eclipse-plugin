@@ -34,7 +34,7 @@ import org.grammaticalframework.eclipse.gF.PattAss;
  *
  * @generated
  */
-public class ListPattAssImpl extends Patt2Impl implements ListPattAss
+public class ListPattAssImpl extends PattImpl implements ListPattAss
 {
   /**
    * The cached value of the '{@link #getAssignments() <em>Assignments</em>}' containment reference list.

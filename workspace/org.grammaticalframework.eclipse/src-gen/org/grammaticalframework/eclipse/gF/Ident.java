@@ -5,7 +5,7 @@
  */
 package org.grammaticalframework.eclipse.gF;
 
-import org.eclipse.emf.ecore.EObject;
+import java.lang.String;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Ident extends EObject
+public interface Ident extends Exp
 {
   /**
    * Returns the value of the '<em><b>S</b></em>' attribute.

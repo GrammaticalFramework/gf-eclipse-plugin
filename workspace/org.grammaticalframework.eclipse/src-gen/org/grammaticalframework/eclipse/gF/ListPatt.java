@@ -29,7 +29,7 @@ public interface ListPatt extends EObject
 {
   /**
    * Returns the value of the '<em><b>Patterns</b></em>' containment reference list.
-   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Patt2}.
+   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Patt}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Patterns</em>' containment reference list isn't clear,
@@ -41,6 +41,6 @@ public interface ListPatt extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Patt2> getPatterns();
+  EList<Patt> getPatterns();
 
 } // ListPatt

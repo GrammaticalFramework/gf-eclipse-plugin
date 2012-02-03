@@ -8,14 +8,14 @@ package org.grammaticalframework.eclipse.gF;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Patt2</b></em>'.
+ * A representation of the model object '<em><b>String</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt2()
+ * @see org.grammaticalframework.eclipse.gF.GFPackage#getString()
  * @model
  * @generated
  */
-public interface Patt2 extends Patt1
+public interface String extends Patt
 {
-} // Patt2
+} // String

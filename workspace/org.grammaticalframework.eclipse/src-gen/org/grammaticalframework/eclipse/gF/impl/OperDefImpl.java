@@ -21,31 +21,32 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.grammaticalframework.eclipse.gF.Def;
+import org.grammaticalframework.eclipse.gF.Arg;
+import org.grammaticalframework.eclipse.gF.DefDef;
 import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.GFPackage;
-import org.grammaticalframework.eclipse.gF.ListPatt;
 import org.grammaticalframework.eclipse.gF.Name;
+import org.grammaticalframework.eclipse.gF.OperDef;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Def</b></em>'.
+ * An implementation of the model object '<em><b>Oper Def</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DefImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DefImpl#getDefinition <em>Definition</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DefImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DefImpl#getPatterns <em>Patterns</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DefImpl#isOverload <em>Overload</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DefImpl#getOverloads <em>Overloads</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getDefinition <em>Definition</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#isOverload <em>Overload</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getOverloads <em>Overloads</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getArgs <em>Args</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class DefImpl extends MinimalEObjectImpl.Container implements Def
+public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
 {
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' containment reference list.
@@ -58,16 +59,6 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
   protected EList<Name> name;
 
   /**
-   * The cached value of the '{@link #getDefinition() <em>Definition</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getDefinition()
-   * @generated
-   * @ordered
-   */
-  protected Exp definition;
-
-  /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -78,14 +69,14 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
   protected Exp type;
 
   /**
-   * The cached value of the '{@link #getPatterns() <em>Patterns</em>}' containment reference.
+   * The cached value of the '{@link #getDefinition() <em>Definition</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPatterns()
+   * @see #getDefinition()
    * @generated
    * @ordered
    */
-  protected ListPatt patterns;
+  protected Exp definition;
 
   /**
    * The default value of the '{@link #isOverload() <em>Overload</em>}' attribute.
@@ -115,14 +106,24 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
    * @generated
    * @ordered
    */
-  protected EList<Def> overloads;
+  protected EList<DefDef> overloads;
+
+  /**
+   * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getArgs()
+   * @generated
+   * @ordered
+   */
+  protected EList<Arg> args;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DefImpl()
+  protected OperDefImpl()
   {
     super();
   }
@@ -135,7 +136,7 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
   @Override
   protected EClass eStaticClass()
   {
-    return GFPackage.Literals.DEF;
+    return GFPackage.Literals.OPER_DEF;
   }
 
   /**
@@ -147,57 +148,9 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
   {
     if (name == null)
     {
-      name = new EObjectContainmentEList<Name>(Name.class, this, GFPackage.DEF__NAME);
+      name = new EObjectContainmentEList<Name>(Name.class, this, GFPackage.OPER_DEF__NAME);
     }
     return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Exp getDefinition()
-  {
-    return definition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetDefinition(Exp newDefinition, NotificationChain msgs)
-  {
-    Exp oldDefinition = definition;
-    definition = newDefinition;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.DEF__DEFINITION, oldDefinition, newDefinition);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDefinition(Exp newDefinition)
-  {
-    if (newDefinition != definition)
-    {
-      NotificationChain msgs = null;
-      if (definition != null)
-        msgs = ((InternalEObject)definition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.DEF__DEFINITION, null, msgs);
-      if (newDefinition != null)
-        msgs = ((InternalEObject)newDefinition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.DEF__DEFINITION, null, msgs);
-      msgs = basicSetDefinition(newDefinition, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.DEF__DEFINITION, newDefinition, newDefinition));
   }
 
   /**
@@ -221,7 +174,7 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
     type = newType;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.DEF__TYPE, oldType, newType);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.OPER_DEF__TYPE, oldType, newType);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -238,14 +191,14 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
     {
       NotificationChain msgs = null;
       if (type != null)
-        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.DEF__TYPE, null, msgs);
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.OPER_DEF__TYPE, null, msgs);
       if (newType != null)
-        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.DEF__TYPE, null, msgs);
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.OPER_DEF__TYPE, null, msgs);
       msgs = basicSetType(newType, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.DEF__TYPE, newType, newType));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.OPER_DEF__TYPE, newType, newType));
   }
 
   /**
@@ -253,9 +206,9 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
    * <!-- end-user-doc -->
    * @generated
    */
-  public ListPatt getPatterns()
+  public Exp getDefinition()
   {
-    return patterns;
+    return definition;
   }
 
   /**
@@ -263,13 +216,13 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPatterns(ListPatt newPatterns, NotificationChain msgs)
+  public NotificationChain basicSetDefinition(Exp newDefinition, NotificationChain msgs)
   {
-    ListPatt oldPatterns = patterns;
-    patterns = newPatterns;
+    Exp oldDefinition = definition;
+    definition = newDefinition;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.DEF__PATTERNS, oldPatterns, newPatterns);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.OPER_DEF__DEFINITION, oldDefinition, newDefinition);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -280,20 +233,20 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPatterns(ListPatt newPatterns)
+  public void setDefinition(Exp newDefinition)
   {
-    if (newPatterns != patterns)
+    if (newDefinition != definition)
     {
       NotificationChain msgs = null;
-      if (patterns != null)
-        msgs = ((InternalEObject)patterns).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.DEF__PATTERNS, null, msgs);
-      if (newPatterns != null)
-        msgs = ((InternalEObject)newPatterns).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.DEF__PATTERNS, null, msgs);
-      msgs = basicSetPatterns(newPatterns, msgs);
+      if (definition != null)
+        msgs = ((InternalEObject)definition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.OPER_DEF__DEFINITION, null, msgs);
+      if (newDefinition != null)
+        msgs = ((InternalEObject)newDefinition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.OPER_DEF__DEFINITION, null, msgs);
+      msgs = basicSetDefinition(newDefinition, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.DEF__PATTERNS, newPatterns, newPatterns));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.OPER_DEF__DEFINITION, newDefinition, newDefinition));
   }
 
   /**
@@ -316,7 +269,7 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
     boolean oldOverload = overload;
     overload = newOverload;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.DEF__OVERLOAD, oldOverload, overload));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.OPER_DEF__OVERLOAD, oldOverload, overload));
   }
 
   /**
@@ -324,13 +277,27 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Def> getOverloads()
+  public EList<DefDef> getOverloads()
   {
     if (overloads == null)
     {
-      overloads = new EObjectContainmentEList<Def>(Def.class, this, GFPackage.DEF__OVERLOADS);
+      overloads = new EObjectContainmentEList<DefDef>(DefDef.class, this, GFPackage.OPER_DEF__OVERLOADS);
     }
     return overloads;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Arg> getArgs()
+  {
+    if (args == null)
+    {
+      args = new EObjectContainmentEList<Arg>(Arg.class, this, GFPackage.OPER_DEF__ARGS);
+    }
+    return args;
   }
 
   /**
@@ -343,16 +310,16 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
   {
     switch (featureID)
     {
-      case GFPackage.DEF__NAME:
+      case GFPackage.OPER_DEF__NAME:
         return ((InternalEList<?>)getName()).basicRemove(otherEnd, msgs);
-      case GFPackage.DEF__DEFINITION:
-        return basicSetDefinition(null, msgs);
-      case GFPackage.DEF__TYPE:
+      case GFPackage.OPER_DEF__TYPE:
         return basicSetType(null, msgs);
-      case GFPackage.DEF__PATTERNS:
-        return basicSetPatterns(null, msgs);
-      case GFPackage.DEF__OVERLOADS:
+      case GFPackage.OPER_DEF__DEFINITION:
+        return basicSetDefinition(null, msgs);
+      case GFPackage.OPER_DEF__OVERLOADS:
         return ((InternalEList<?>)getOverloads()).basicRemove(otherEnd, msgs);
+      case GFPackage.OPER_DEF__ARGS:
+        return ((InternalEList<?>)getArgs()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -367,18 +334,18 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
   {
     switch (featureID)
     {
-      case GFPackage.DEF__NAME:
+      case GFPackage.OPER_DEF__NAME:
         return getName();
-      case GFPackage.DEF__DEFINITION:
-        return getDefinition();
-      case GFPackage.DEF__TYPE:
+      case GFPackage.OPER_DEF__TYPE:
         return getType();
-      case GFPackage.DEF__PATTERNS:
-        return getPatterns();
-      case GFPackage.DEF__OVERLOAD:
+      case GFPackage.OPER_DEF__DEFINITION:
+        return getDefinition();
+      case GFPackage.OPER_DEF__OVERLOAD:
         return isOverload();
-      case GFPackage.DEF__OVERLOADS:
+      case GFPackage.OPER_DEF__OVERLOADS:
         return getOverloads();
+      case GFPackage.OPER_DEF__ARGS:
+        return getArgs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -394,25 +361,26 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
   {
     switch (featureID)
     {
-      case GFPackage.DEF__NAME:
+      case GFPackage.OPER_DEF__NAME:
         getName().clear();
         getName().addAll((Collection<? extends Name>)newValue);
         return;
-      case GFPackage.DEF__DEFINITION:
-        setDefinition((Exp)newValue);
-        return;
-      case GFPackage.DEF__TYPE:
+      case GFPackage.OPER_DEF__TYPE:
         setType((Exp)newValue);
         return;
-      case GFPackage.DEF__PATTERNS:
-        setPatterns((ListPatt)newValue);
+      case GFPackage.OPER_DEF__DEFINITION:
+        setDefinition((Exp)newValue);
         return;
-      case GFPackage.DEF__OVERLOAD:
+      case GFPackage.OPER_DEF__OVERLOAD:
         setOverload((Boolean)newValue);
         return;
-      case GFPackage.DEF__OVERLOADS:
+      case GFPackage.OPER_DEF__OVERLOADS:
         getOverloads().clear();
-        getOverloads().addAll((Collection<? extends Def>)newValue);
+        getOverloads().addAll((Collection<? extends DefDef>)newValue);
+        return;
+      case GFPackage.OPER_DEF__ARGS:
+        getArgs().clear();
+        getArgs().addAll((Collection<? extends Arg>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -428,23 +396,23 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
   {
     switch (featureID)
     {
-      case GFPackage.DEF__NAME:
+      case GFPackage.OPER_DEF__NAME:
         getName().clear();
         return;
-      case GFPackage.DEF__DEFINITION:
-        setDefinition((Exp)null);
-        return;
-      case GFPackage.DEF__TYPE:
+      case GFPackage.OPER_DEF__TYPE:
         setType((Exp)null);
         return;
-      case GFPackage.DEF__PATTERNS:
-        setPatterns((ListPatt)null);
+      case GFPackage.OPER_DEF__DEFINITION:
+        setDefinition((Exp)null);
         return;
-      case GFPackage.DEF__OVERLOAD:
+      case GFPackage.OPER_DEF__OVERLOAD:
         setOverload(OVERLOAD_EDEFAULT);
         return;
-      case GFPackage.DEF__OVERLOADS:
+      case GFPackage.OPER_DEF__OVERLOADS:
         getOverloads().clear();
+        return;
+      case GFPackage.OPER_DEF__ARGS:
+        getArgs().clear();
         return;
     }
     super.eUnset(featureID);
@@ -460,18 +428,18 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
   {
     switch (featureID)
     {
-      case GFPackage.DEF__NAME:
+      case GFPackage.OPER_DEF__NAME:
         return name != null && !name.isEmpty();
-      case GFPackage.DEF__DEFINITION:
-        return definition != null;
-      case GFPackage.DEF__TYPE:
+      case GFPackage.OPER_DEF__TYPE:
         return type != null;
-      case GFPackage.DEF__PATTERNS:
-        return patterns != null;
-      case GFPackage.DEF__OVERLOAD:
+      case GFPackage.OPER_DEF__DEFINITION:
+        return definition != null;
+      case GFPackage.OPER_DEF__OVERLOAD:
         return overload != OVERLOAD_EDEFAULT;
-      case GFPackage.DEF__OVERLOADS:
+      case GFPackage.OPER_DEF__OVERLOADS:
         return overloads != null && !overloads.isEmpty();
+      case GFPackage.OPER_DEF__ARGS:
+        return args != null && !args.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -493,4 +461,4 @@ public class DefImpl extends MinimalEObjectImpl.Container implements Def
     return result.toString();
   }
 
-} //DefImpl
+} //OperDefImpl

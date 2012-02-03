@@ -18,8 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#getExtends <em>Extends</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#getOpens <em>Opens</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#getJudgements <em>Judgements</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#getContent <em>Content</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#getFunctor <em>Functor</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#isFunctorInstantiation <em>Functor Instantiation</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#getInstantiations <em>Instantiations</em>}</li>
@@ -49,36 +48,30 @@ public interface ModBody extends EObject
   EList<Included> getExtends();
 
   /**
-   * Returns the value of the '<em><b>Opens</b></em>' containment reference list.
-   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Open}.
+   * Returns the value of the '<em><b>Content</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Opens</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Content</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Opens</em>' containment reference list.
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getModBody_Opens()
+   * @return the value of the '<em>Content</em>' containment reference.
+   * @see #setContent(ModContent)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getModBody_Content()
    * @model containment="true"
    * @generated
    */
-  EList<Open> getOpens();
+  ModContent getContent();
 
   /**
-   * Returns the value of the '<em><b>Judgements</b></em>' containment reference list.
-   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.TopDef}.
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.ModBody#getContent <em>Content</em>}' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Judgements</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Judgements</em>' containment reference list.
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getModBody_Judgements()
-   * @model containment="true"
+   * @param value the new value of the '<em>Content</em>' containment reference.
+   * @see #getContent()
    * @generated
    */
-  EList<TopDef> getJudgements();
+  void setContent(ModContent value);
 
   /**
    * Returns the value of the '<em><b>Functor</b></em>' containment reference.
@@ -134,7 +127,7 @@ public interface ModBody extends EObject
 
   /**
    * Returns the value of the '<em><b>Instantiations</b></em>' containment reference list.
-   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Open}.
+   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Inst}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Instantiations</em>' containment reference list isn't clear,
@@ -146,6 +139,6 @@ public interface ModBody extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Open> getInstantiations();
+  EList<Inst> getInstantiations();
 
 } // ModBody

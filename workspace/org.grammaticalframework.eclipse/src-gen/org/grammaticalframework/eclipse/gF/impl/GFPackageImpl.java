@@ -12,20 +12,20 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.grammaticalframework.eclipse.gF.Altern;
+import org.grammaticalframework.eclipse.gF.Arg;
 import org.grammaticalframework.eclipse.gF.Bind;
 import org.grammaticalframework.eclipse.gF.Case;
 import org.grammaticalframework.eclipse.gF.CatDef;
 import org.grammaticalframework.eclipse.gF.DDecl;
-import org.grammaticalframework.eclipse.gF.DataConstr;
 import org.grammaticalframework.eclipse.gF.DataDef;
-import org.grammaticalframework.eclipse.gF.Def;
+import org.grammaticalframework.eclipse.gF.DefDef;
 import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.Exp1;
 import org.grammaticalframework.eclipse.gF.Exp2;
 import org.grammaticalframework.eclipse.gF.Exp3;
 import org.grammaticalframework.eclipse.gF.Exp4;
-import org.grammaticalframework.eclipse.gF.Exp5;
-import org.grammaticalframework.eclipse.gF.Exp6;
+import org.grammaticalframework.eclipse.gF.ExpLF13;
 import org.grammaticalframework.eclipse.gF.Exps;
 import org.grammaticalframework.eclipse.gF.FlagDef;
 import org.grammaticalframework.eclipse.gF.FunDef;
@@ -33,7 +33,9 @@ import org.grammaticalframework.eclipse.gF.GFFactory;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.Included;
+import org.grammaticalframework.eclipse.gF.Inst;
 import org.grammaticalframework.eclipse.gF.Label;
+import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListCase;
 import org.grammaticalframework.eclipse.gF.ListExp;
@@ -44,20 +46,18 @@ import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
 import org.grammaticalframework.eclipse.gF.ListTupleComp;
 import org.grammaticalframework.eclipse.gF.LocDef;
 import org.grammaticalframework.eclipse.gF.ModBody;
+import org.grammaticalframework.eclipse.gF.ModContent;
 import org.grammaticalframework.eclipse.gF.ModDef;
 import org.grammaticalframework.eclipse.gF.ModType;
 import org.grammaticalframework.eclipse.gF.Name;
 import org.grammaticalframework.eclipse.gF.Open;
+import org.grammaticalframework.eclipse.gF.OperDef;
 import org.grammaticalframework.eclipse.gF.ParConstr;
-import org.grammaticalframework.eclipse.gF.ParDef;
+import org.grammaticalframework.eclipse.gF.ParamDef;
 import org.grammaticalframework.eclipse.gF.Patt;
-import org.grammaticalframework.eclipse.gF.Patt1;
-import org.grammaticalframework.eclipse.gF.Patt2;
 import org.grammaticalframework.eclipse.gF.PattAss;
-import org.grammaticalframework.eclipse.gF.PattTupleComp;
-import org.grammaticalframework.eclipse.gF.PrintDef;
+import org.grammaticalframework.eclipse.gF.TermDef;
 import org.grammaticalframework.eclipse.gF.TopDef;
-import org.grammaticalframework.eclipse.gF.TupleComp;
 
 /**
  * <!-- begin-user-doc -->
@@ -93,6 +93,13 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass modContentEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass openEClass = null;
 
   /**
@@ -100,14 +107,14 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass includedEClass = null;
+  private EClass instEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass defEClass = null;
+  private EClass includedEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -135,6 +142,13 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass defDefEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass dataDefEClass = null;
 
   /**
@@ -142,28 +156,28 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass dataConstrEClass = null;
+  private EClass paramDefEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass parDefEClass = null;
+  private EClass operDefEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass parConstrEClass = null;
+  private EClass linDefEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass printDefEClass = null;
+  private EClass termDefEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -171,6 +185,13 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * @generated
    */
   private EClass flagDefEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass parConstrEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -198,48 +219,6 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass exp6EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass exp5EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass exp4EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass exp3EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass exp2EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass exp1EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass expEClass = null;
 
   /**
@@ -255,20 +234,6 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * @generated
    */
   private EClass expsEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass patt2EClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass patt1EClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -310,6 +275,13 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass argEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass bindEClass = null;
 
   /**
@@ -318,20 +290,6 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * @generated
    */
   private EClass listBindEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass tupleCompEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass pattTupleCompEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -366,6 +324,13 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass alternEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass dDeclEClass = null;
 
   /**
@@ -374,6 +339,62 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * @generated
    */
   private EClass identEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass expLF13EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass exp1EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass exp2EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass exp3EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass exp4EClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass integerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass doubleEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stringEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -583,7 +604,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModBody_Opens()
+  public EReference getModBody_Content()
   {
     return (EReference)modBodyEClass.getEStructuralFeatures().get(1);
   }
@@ -593,7 +614,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModBody_Judgements()
+  public EReference getModBody_Functor()
   {
     return (EReference)modBodyEClass.getEStructuralFeatures().get(2);
   }
@@ -603,19 +624,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getModBody_Functor()
-  {
-    return (EReference)modBodyEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getModBody_FunctorInstantiation()
   {
-    return (EAttribute)modBodyEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)modBodyEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -625,7 +636,37 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    */
   public EReference getModBody_Instantiations()
   {
-    return (EReference)modBodyEClass.getEStructuralFeatures().get(5);
+    return (EReference)modBodyEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getModContent()
+  {
+    return modContentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getModContent_Opens()
+  {
+    return (EReference)modContentEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getModContent_Judgements()
+  {
+    return (EReference)modContentEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -656,6 +697,36 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
   public EReference getOpen_Alias()
   {
     return (EReference)openEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInst()
+  {
+    return instEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInst_Interface()
+  {
+    return (EReference)instEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInst_Name()
+  {
+    return (EReference)instEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -723,76 +794,6 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDef()
-  {
-    return defEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDef_Name()
-  {
-    return (EReference)defEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDef_Definition()
-  {
-    return (EReference)defEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDef_Type()
-  {
-    return (EReference)defEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDef_Patterns()
-  {
-    return (EReference)defEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getDef_Overload()
-  {
-    return (EAttribute)defEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getDef_Overloads()
-  {
-    return (EReference)defEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getTopDef()
   {
     return topDefEClass;
@@ -833,7 +834,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTopDef_Data()
+  public EAttribute getTopDef_Def()
   {
     return (EAttribute)topDefEClass.getEStructuralFeatures().get(3);
   }
@@ -843,7 +844,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTopDef_Def()
+  public EAttribute getTopDef_Data()
   {
     return (EAttribute)topDefEClass.getEStructuralFeatures().get(4);
   }
@@ -993,6 +994,46 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getDefDef()
+  {
+    return defDefEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDefDef_Name()
+  {
+    return (EReference)defDefEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDefDef_Definition()
+  {
+    return (EReference)defDefEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getDefDef_Patterns()
+  {
+    return (EReference)defDefEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getDataDef()
   {
     return dataDefEClass;
@@ -1023,9 +1064,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDataConstr()
+  public EReference getDataDef_Type()
   {
-    return dataConstrEClass;
+    return (EReference)dataDefEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1033,9 +1074,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDataConstr_Name()
+  public EClass getParamDef()
   {
-    return (EReference)dataConstrEClass.getEStructuralFeatures().get(0);
+    return paramDefEClass;
   }
 
   /**
@@ -1043,9 +1084,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getDataConstr_Module()
+  public EReference getParamDef_Name()
   {
-    return (EReference)dataConstrEClass.getEStructuralFeatures().get(1);
+    return (EReference)paramDefEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1053,9 +1094,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getParDef()
+  public EReference getParamDef_Constructors()
   {
-    return parDefEClass;
+    return (EReference)paramDefEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1063,9 +1104,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getParDef_Name()
+  public EClass getOperDef()
   {
-    return (EReference)parDefEClass.getEStructuralFeatures().get(0);
+    return operDefEClass;
   }
 
   /**
@@ -1073,9 +1114,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getParDef_Constructors()
+  public EReference getOperDef_Name()
   {
-    return (EReference)parDefEClass.getEStructuralFeatures().get(1);
+    return (EReference)operDefEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1083,9 +1124,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getParDef_Id2()
+  public EReference getOperDef_Type()
   {
-    return (EReference)parDefEClass.getEStructuralFeatures().get(2);
+    return (EReference)operDefEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1093,9 +1134,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getParConstr()
+  public EReference getOperDef_Definition()
   {
-    return parConstrEClass;
+    return (EReference)operDefEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1103,9 +1144,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getParConstr_Name()
+  public EAttribute getOperDef_Overload()
   {
-    return (EReference)parConstrEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)operDefEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1113,9 +1154,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getParConstr_Constructors()
+  public EReference getOperDef_Overloads()
   {
-    return (EReference)parConstrEClass.getEStructuralFeatures().get(1);
+    return (EReference)operDefEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1123,9 +1164,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPrintDef()
+  public EReference getOperDef_Args()
   {
-    return printDefEClass;
+    return (EReference)operDefEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1133,9 +1174,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPrintDef_Name()
+  public EClass getLinDef()
   {
-    return (EReference)printDefEClass.getEStructuralFeatures().get(0);
+    return linDefEClass;
   }
 
   /**
@@ -1143,9 +1184,59 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPrintDef_Printname()
+  public EReference getLinDef_Name()
   {
-    return (EReference)printDefEClass.getEStructuralFeatures().get(1);
+    return (EReference)linDefEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLinDef_Definition()
+  {
+    return (EReference)linDefEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLinDef_Args()
+  {
+    return (EReference)linDefEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getTermDef()
+  {
+    return termDefEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTermDef_Name()
+  {
+    return (EReference)termDefEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getTermDef_Definition()
+  {
+    return (EReference)termDefEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1176,6 +1267,36 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
   public EReference getFlagDef_Value()
   {
     return (EReference)flagDefEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getParConstr()
+  {
+    return parConstrEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParConstr_Name()
+  {
+    return (EReference)parConstrEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getParConstr_Constructors()
+  {
+    return (EReference)parConstrEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1263,426 +1384,6 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getExp6()
-  {
-    return exp6EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp6_Name()
-  {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_Sort()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_BuiltInCat()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_String()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_Integer()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_Double()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_Meta()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_EmptyString()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_Data()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(8);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_ListCat()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(9);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp6_Category()
-  {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(10);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp6_List()
-  {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(11);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_TokenList()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(12);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_Record()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(13);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp6_DefList()
-  {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(14);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_Tuple()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(15);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp6_TupleList()
-  {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(16);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp6_V()
-  {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(17);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp6_Type()
-  {
-    return (EReference)exp6EClass.getEStructuralFeatures().get(18);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExp6_Identity()
-  {
-    return (EAttribute)exp6EClass.getEStructuralFeatures().get(19);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getExp5()
-  {
-    return exp5EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp5_V()
-  {
-    return (EReference)exp5EClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp5_Label()
-  {
-    return (EReference)exp5EClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getExp4()
-  {
-    return exp4EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp4_CaseList()
-  {
-    return (EReference)exp4EClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp4_Args()
-  {
-    return (EReference)exp4EClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp4_ArgType()
-  {
-    return (EReference)exp4EClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp4_ExpList()
-  {
-    return (EReference)exp4EClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp4_CaseOf()
-  {
-    return (EReference)exp4EClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp4_Name()
-  {
-    return (EReference)exp4EClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp4_Inner()
-  {
-    return (EReference)exp4EClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp4_V()
-  {
-    return (EReference)exp4EClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getExp3()
-  {
-    return exp3EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp3_V()
-  {
-    return (EReference)exp3EClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp3_E()
-  {
-    return (EReference)exp3EClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getExp2()
-  {
-    return exp2EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp2_V()
-  {
-    return (EReference)exp2EClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp2_E()
-  {
-    return (EReference)exp2EClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getExp1()
-  {
-    return exp1EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp1_V()
-  {
-    return (EReference)exp1EClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExp1_E()
-  {
-    return (EReference)exp1EClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getExp()
   {
     return expEClass;
@@ -1693,7 +1394,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExp_BindList()
+  public EReference getExp_DefList()
   {
     return (EReference)expEClass.getEStructuralFeatures().get(0);
   }
@@ -1703,7 +1404,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExp_V()
+  public EReference getExp_CaseList()
   {
     return (EReference)expEClass.getEStructuralFeatures().get(1);
   }
@@ -1713,7 +1414,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExp_E()
+  public EReference getExp_ArgType()
   {
     return (EReference)expEClass.getEStructuralFeatures().get(2);
   }
@@ -1723,7 +1424,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExp_DefList()
+  public EReference getExp_ExpList()
   {
     return (EReference)expEClass.getEStructuralFeatures().get(3);
   }
@@ -1733,9 +1434,179 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getExp_Type()
+  public EReference getExp_CaseOf()
   {
     return (EReference)expEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExp_Alts()
+  {
+    return (EReference)expEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExp_Pattern()
+  {
+    return (EReference)expEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExp_Inner()
+  {
+    return (EReference)expEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExp_Sort()
+  {
+    return (EAttribute)expEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExp_String()
+  {
+    return (EAttribute)expEClass.getEStructuralFeatures().get(9);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExp_Integer()
+  {
+    return (EAttribute)expEClass.getEStructuralFeatures().get(10);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExp_Double()
+  {
+    return (EAttribute)expEClass.getEStructuralFeatures().get(11);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExp_EmptyString()
+  {
+    return (EAttribute)expEClass.getEStructuralFeatures().get(12);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExp_ListCat()
+  {
+    return (EAttribute)expEClass.getEStructuralFeatures().get(13);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExp_Category()
+  {
+    return (EReference)expEClass.getEStructuralFeatures().get(14);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExp_List()
+  {
+    return (EReference)expEClass.getEStructuralFeatures().get(15);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExp_Record()
+  {
+    return (EAttribute)expEClass.getEStructuralFeatures().get(16);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExp_Tuple()
+  {
+    return (EAttribute)expEClass.getEStructuralFeatures().get(17);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExp_TupleList()
+  {
+    return (EReference)expEClass.getEStructuralFeatures().get(18);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExp_V()
+  {
+    return (EReference)expEClass.getEStructuralFeatures().get(19);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExp_Type()
+  {
+    return (EReference)expEClass.getEStructuralFeatures().get(20);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExp_Identity()
+  {
+    return (EAttribute)expEClass.getEStructuralFeatures().get(21);
   }
 
   /**
@@ -1783,56 +1654,6 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getPatt2()
-  {
-    return patt2EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPatt1()
-  {
-    return patt1EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatt1_Name()
-  {
-    return (EReference)patt1EClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatt1_Value()
-  {
-    return (EReference)patt1EClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getPatt1_Label()
-  {
-    return (EReference)patt1EClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getPatt()
   {
     return pattEClass;
@@ -1843,9 +1664,99 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getPatt_P()
+  public EReference getPatt_Left()
   {
     return (EReference)pattEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPatt_Or()
+  {
+    return (EAttribute)pattEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPatt_And()
+  {
+    return (EAttribute)pattEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPatt_Right()
+  {
+    return (EReference)pattEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPatt_Name()
+  {
+    return (EReference)pattEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPatt_Value()
+  {
+    return (EReference)pattEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getPatt_Label()
+  {
+    return (EReference)pattEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPatt_Meta()
+  {
+    return (EAttribute)pattEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPatt_TokenList()
+  {
+    return (EAttribute)pattEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getPatt_Wildcard()
+  {
+    return (EAttribute)pattEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -1953,6 +1864,36 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getArg()
+  {
+    return argEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getArg_Name()
+  {
+    return (EReference)argEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getArg_Wildcard()
+  {
+    return (EAttribute)argEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getBind()
   {
     return bindEClass;
@@ -1973,6 +1914,16 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getBind_Wildcard()
+  {
+    return (EAttribute)bindEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getListBind()
   {
     return listBindEClass;
@@ -1983,7 +1934,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getListBind_Bindings()
+  public EReference getListBind_Decl()
   {
     return (EReference)listBindEClass.getEStructuralFeatures().get(0);
   }
@@ -1993,19 +1944,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getTupleComp()
+  public EReference getListBind_Bindings()
   {
-    return tupleCompEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getPattTupleComp()
-  {
-    return pattTupleCompEClass;
+    return (EReference)listBindEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2023,7 +1964,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getListTupleComp_L()
+  public EReference getListTupleComp_Elements()
   {
     return (EReference)listTupleCompEClass.getEStructuralFeatures().get(0);
   }
@@ -2043,7 +1984,7 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getListPattTupleComp_L()
+  public EReference getListPattTupleComp_Patterns()
   {
     return (EReference)listPattTupleCompEClass.getEStructuralFeatures().get(0);
   }
@@ -2103,6 +2044,36 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getAltern()
+  {
+    return alternEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAltern_Alt1()
+  {
+    return (EReference)alternEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getAltern_Alt2()
+  {
+    return (EReference)alternEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getDDecl()
   {
     return dDeclEClass;
@@ -2153,6 +2124,86 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getExpLF13()
+  {
+    return expLF13EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getExp1()
+  {
+    return exp1EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getExp2()
+  {
+    return exp2EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getExp3()
+  {
+    return exp3EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getExp4()
+  {
+    return exp4EClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInteger()
+  {
+    return integerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getDouble()
+  {
+    return doubleEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getString()
+  {
+    return stringEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public GFFactory getGFFactory()
   {
     return (GFFactory)getEFactoryInstance();
@@ -2194,15 +2245,22 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
 
     modBodyEClass = createEClass(MOD_BODY);
     createEReference(modBodyEClass, MOD_BODY__EXTENDS);
-    createEReference(modBodyEClass, MOD_BODY__OPENS);
-    createEReference(modBodyEClass, MOD_BODY__JUDGEMENTS);
+    createEReference(modBodyEClass, MOD_BODY__CONTENT);
     createEReference(modBodyEClass, MOD_BODY__FUNCTOR);
     createEAttribute(modBodyEClass, MOD_BODY__FUNCTOR_INSTANTIATION);
     createEReference(modBodyEClass, MOD_BODY__INSTANTIATIONS);
 
+    modContentEClass = createEClass(MOD_CONTENT);
+    createEReference(modContentEClass, MOD_CONTENT__OPENS);
+    createEReference(modContentEClass, MOD_CONTENT__JUDGEMENTS);
+
     openEClass = createEClass(OPEN);
     createEReference(openEClass, OPEN__NAME);
     createEReference(openEClass, OPEN__ALIAS);
+
+    instEClass = createEClass(INST);
+    createEReference(instEClass, INST__INTERFACE);
+    createEReference(instEClass, INST__NAME);
 
     includedEClass = createEClass(INCLUDED);
     createEReference(includedEClass, INCLUDED__NAME);
@@ -2211,20 +2269,12 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     createEAttribute(includedEClass, INCLUDED__EXCLUSIVE);
     createEReference(includedEClass, INCLUDED__EXCLUDES);
 
-    defEClass = createEClass(DEF);
-    createEReference(defEClass, DEF__NAME);
-    createEReference(defEClass, DEF__DEFINITION);
-    createEReference(defEClass, DEF__TYPE);
-    createEReference(defEClass, DEF__PATTERNS);
-    createEAttribute(defEClass, DEF__OVERLOAD);
-    createEReference(defEClass, DEF__OVERLOADS);
-
     topDefEClass = createEClass(TOP_DEF);
     createEAttribute(topDefEClass, TOP_DEF__CAT);
     createEReference(topDefEClass, TOP_DEF__DEFINITIONS);
     createEAttribute(topDefEClass, TOP_DEF__FUN);
-    createEAttribute(topDefEClass, TOP_DEF__DATA);
     createEAttribute(topDefEClass, TOP_DEF__DEF);
+    createEAttribute(topDefEClass, TOP_DEF__DATA);
     createEAttribute(topDefEClass, TOP_DEF__PARAM);
     createEAttribute(topDefEClass, TOP_DEF__OPER);
     createEAttribute(topDefEClass, TOP_DEF__LINCAT);
@@ -2242,30 +2292,44 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     createEReference(funDefEClass, FUN_DEF__NAME);
     createEReference(funDefEClass, FUN_DEF__TYPE);
 
+    defDefEClass = createEClass(DEF_DEF);
+    createEReference(defDefEClass, DEF_DEF__NAME);
+    createEReference(defDefEClass, DEF_DEF__DEFINITION);
+    createEReference(defDefEClass, DEF_DEF__PATTERNS);
+
     dataDefEClass = createEClass(DATA_DEF);
     createEReference(dataDefEClass, DATA_DEF__NAME);
     createEReference(dataDefEClass, DATA_DEF__CONSTRUCTORS);
+    createEReference(dataDefEClass, DATA_DEF__TYPE);
 
-    dataConstrEClass = createEClass(DATA_CONSTR);
-    createEReference(dataConstrEClass, DATA_CONSTR__NAME);
-    createEReference(dataConstrEClass, DATA_CONSTR__MODULE);
+    paramDefEClass = createEClass(PARAM_DEF);
+    createEReference(paramDefEClass, PARAM_DEF__NAME);
+    createEReference(paramDefEClass, PARAM_DEF__CONSTRUCTORS);
 
-    parDefEClass = createEClass(PAR_DEF);
-    createEReference(parDefEClass, PAR_DEF__NAME);
-    createEReference(parDefEClass, PAR_DEF__CONSTRUCTORS);
-    createEReference(parDefEClass, PAR_DEF__ID2);
+    operDefEClass = createEClass(OPER_DEF);
+    createEReference(operDefEClass, OPER_DEF__NAME);
+    createEReference(operDefEClass, OPER_DEF__TYPE);
+    createEReference(operDefEClass, OPER_DEF__DEFINITION);
+    createEAttribute(operDefEClass, OPER_DEF__OVERLOAD);
+    createEReference(operDefEClass, OPER_DEF__OVERLOADS);
+    createEReference(operDefEClass, OPER_DEF__ARGS);
 
-    parConstrEClass = createEClass(PAR_CONSTR);
-    createEReference(parConstrEClass, PAR_CONSTR__NAME);
-    createEReference(parConstrEClass, PAR_CONSTR__CONSTRUCTORS);
+    linDefEClass = createEClass(LIN_DEF);
+    createEReference(linDefEClass, LIN_DEF__NAME);
+    createEReference(linDefEClass, LIN_DEF__DEFINITION);
+    createEReference(linDefEClass, LIN_DEF__ARGS);
 
-    printDefEClass = createEClass(PRINT_DEF);
-    createEReference(printDefEClass, PRINT_DEF__NAME);
-    createEReference(printDefEClass, PRINT_DEF__PRINTNAME);
+    termDefEClass = createEClass(TERM_DEF);
+    createEReference(termDefEClass, TERM_DEF__NAME);
+    createEReference(termDefEClass, TERM_DEF__DEFINITION);
 
     flagDefEClass = createEClass(FLAG_DEF);
     createEReference(flagDefEClass, FLAG_DEF__NAME);
     createEReference(flagDefEClass, FLAG_DEF__VALUE);
+
+    parConstrEClass = createEClass(PAR_CONSTR);
+    createEReference(parConstrEClass, PAR_CONSTR__NAME);
+    createEReference(parConstrEClass, PAR_CONSTR__CONSTRUCTORS);
 
     nameEClass = createEClass(NAME);
     createEReference(nameEClass, NAME__NAME);
@@ -2278,60 +2342,29 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     listLocDefEClass = createEClass(LIST_LOC_DEF);
     createEReference(listLocDefEClass, LIST_LOC_DEF__LOCAL_DEFINITIONS);
 
-    exp6EClass = createEClass(EXP6);
-    createEReference(exp6EClass, EXP6__NAME);
-    createEAttribute(exp6EClass, EXP6__SORT);
-    createEAttribute(exp6EClass, EXP6__BUILT_IN_CAT);
-    createEAttribute(exp6EClass, EXP6__STRING);
-    createEAttribute(exp6EClass, EXP6__INTEGER);
-    createEAttribute(exp6EClass, EXP6__DOUBLE);
-    createEAttribute(exp6EClass, EXP6__META);
-    createEAttribute(exp6EClass, EXP6__EMPTY_STRING);
-    createEAttribute(exp6EClass, EXP6__DATA);
-    createEAttribute(exp6EClass, EXP6__LIST_CAT);
-    createEReference(exp6EClass, EXP6__CATEGORY);
-    createEReference(exp6EClass, EXP6__LIST);
-    createEAttribute(exp6EClass, EXP6__TOKEN_LIST);
-    createEAttribute(exp6EClass, EXP6__RECORD);
-    createEReference(exp6EClass, EXP6__DEF_LIST);
-    createEAttribute(exp6EClass, EXP6__TUPLE);
-    createEReference(exp6EClass, EXP6__TUPLE_LIST);
-    createEReference(exp6EClass, EXP6__V);
-    createEReference(exp6EClass, EXP6__TYPE);
-    createEAttribute(exp6EClass, EXP6__IDENTITY);
-
-    exp5EClass = createEClass(EXP5);
-    createEReference(exp5EClass, EXP5__V);
-    createEReference(exp5EClass, EXP5__LABEL);
-
-    exp4EClass = createEClass(EXP4);
-    createEReference(exp4EClass, EXP4__CASE_LIST);
-    createEReference(exp4EClass, EXP4__ARGS);
-    createEReference(exp4EClass, EXP4__ARG_TYPE);
-    createEReference(exp4EClass, EXP4__EXP_LIST);
-    createEReference(exp4EClass, EXP4__CASE_OF);
-    createEReference(exp4EClass, EXP4__NAME);
-    createEReference(exp4EClass, EXP4__INNER);
-    createEReference(exp4EClass, EXP4__V);
-
-    exp3EClass = createEClass(EXP3);
-    createEReference(exp3EClass, EXP3__V);
-    createEReference(exp3EClass, EXP3__E);
-
-    exp2EClass = createEClass(EXP2);
-    createEReference(exp2EClass, EXP2__V);
-    createEReference(exp2EClass, EXP2__E);
-
-    exp1EClass = createEClass(EXP1);
-    createEReference(exp1EClass, EXP1__V);
-    createEReference(exp1EClass, EXP1__E);
-
     expEClass = createEClass(EXP);
-    createEReference(expEClass, EXP__BIND_LIST);
-    createEReference(expEClass, EXP__V);
-    createEReference(expEClass, EXP__E);
     createEReference(expEClass, EXP__DEF_LIST);
+    createEReference(expEClass, EXP__CASE_LIST);
+    createEReference(expEClass, EXP__ARG_TYPE);
+    createEReference(expEClass, EXP__EXP_LIST);
+    createEReference(expEClass, EXP__CASE_OF);
+    createEReference(expEClass, EXP__ALTS);
+    createEReference(expEClass, EXP__PATTERN);
+    createEReference(expEClass, EXP__INNER);
+    createEAttribute(expEClass, EXP__SORT);
+    createEAttribute(expEClass, EXP__STRING);
+    createEAttribute(expEClass, EXP__INTEGER);
+    createEAttribute(expEClass, EXP__DOUBLE);
+    createEAttribute(expEClass, EXP__EMPTY_STRING);
+    createEAttribute(expEClass, EXP__LIST_CAT);
+    createEReference(expEClass, EXP__CATEGORY);
+    createEReference(expEClass, EXP__LIST);
+    createEAttribute(expEClass, EXP__RECORD);
+    createEAttribute(expEClass, EXP__TUPLE);
+    createEReference(expEClass, EXP__TUPLE_LIST);
+    createEReference(expEClass, EXP__V);
     createEReference(expEClass, EXP__TYPE);
+    createEAttribute(expEClass, EXP__IDENTITY);
 
     listExpEClass = createEClass(LIST_EXP);
     createEReference(listExpEClass, LIST_EXP__EXPRESSIONS);
@@ -2339,15 +2372,17 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     expsEClass = createEClass(EXPS);
     createEReference(expsEClass, EXPS__EXPRESSIONS);
 
-    patt2EClass = createEClass(PATT2);
-
-    patt1EClass = createEClass(PATT1);
-    createEReference(patt1EClass, PATT1__NAME);
-    createEReference(patt1EClass, PATT1__VALUE);
-    createEReference(patt1EClass, PATT1__LABEL);
-
     pattEClass = createEClass(PATT);
-    createEReference(pattEClass, PATT__P);
+    createEReference(pattEClass, PATT__LEFT);
+    createEAttribute(pattEClass, PATT__OR);
+    createEAttribute(pattEClass, PATT__AND);
+    createEReference(pattEClass, PATT__RIGHT);
+    createEReference(pattEClass, PATT__NAME);
+    createEReference(pattEClass, PATT__VALUE);
+    createEReference(pattEClass, PATT__LABEL);
+    createEAttribute(pattEClass, PATT__META);
+    createEAttribute(pattEClass, PATT__TOKEN_LIST);
+    createEAttribute(pattEClass, PATT__WILDCARD);
 
     pattAssEClass = createEClass(PATT_ASS);
     createEReference(pattAssEClass, PATT_ASS__NAME);
@@ -2363,21 +2398,23 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     listPattEClass = createEClass(LIST_PATT);
     createEReference(listPattEClass, LIST_PATT__PATTERNS);
 
+    argEClass = createEClass(ARG);
+    createEReference(argEClass, ARG__NAME);
+    createEAttribute(argEClass, ARG__WILDCARD);
+
     bindEClass = createEClass(BIND);
     createEReference(bindEClass, BIND__NAME);
+    createEAttribute(bindEClass, BIND__WILDCARD);
 
     listBindEClass = createEClass(LIST_BIND);
+    createEReference(listBindEClass, LIST_BIND__DECL);
     createEReference(listBindEClass, LIST_BIND__BINDINGS);
 
-    tupleCompEClass = createEClass(TUPLE_COMP);
-
-    pattTupleCompEClass = createEClass(PATT_TUPLE_COMP);
-
     listTupleCompEClass = createEClass(LIST_TUPLE_COMP);
-    createEReference(listTupleCompEClass, LIST_TUPLE_COMP__L);
+    createEReference(listTupleCompEClass, LIST_TUPLE_COMP__ELEMENTS);
 
     listPattTupleCompEClass = createEClass(LIST_PATT_TUPLE_COMP);
-    createEReference(listPattTupleCompEClass, LIST_PATT_TUPLE_COMP__L);
+    createEReference(listPattTupleCompEClass, LIST_PATT_TUPLE_COMP__PATTERNS);
 
     caseEClass = createEClass(CASE);
     createEReference(caseEClass, CASE__PATTERN);
@@ -2386,12 +2423,32 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     listCaseEClass = createEClass(LIST_CASE);
     createEReference(listCaseEClass, LIST_CASE__CASES);
 
+    alternEClass = createEClass(ALTERN);
+    createEReference(alternEClass, ALTERN__ALT1);
+    createEReference(alternEClass, ALTERN__ALT2);
+
     dDeclEClass = createEClass(DDECL);
     createEReference(dDeclEClass, DDECL__BIND_LIST);
     createEReference(dDeclEClass, DDECL__E);
 
     identEClass = createEClass(IDENT);
     createEAttribute(identEClass, IDENT__S);
+
+    expLF13EClass = createEClass(EXP_LF13);
+
+    exp1EClass = createEClass(EXP1);
+
+    exp2EClass = createEClass(EXP2);
+
+    exp3EClass = createEClass(EXP3);
+
+    exp4EClass = createEClass(EXP4);
+
+    integerEClass = createEClass(INTEGER);
+
+    doubleEClass = createEClass(DOUBLE);
+
+    stringEClass = createEClass(STRING);
   }
 
   /**
@@ -2423,13 +2480,21 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    exp6EClass.getESuperTypes().add(this.getDDecl());
-    expEClass.getESuperTypes().add(this.getTupleComp());
-    patt2EClass.getESuperTypes().add(this.getPatt1());
-    pattEClass.getESuperTypes().add(this.getPatt2());
-    pattEClass.getESuperTypes().add(this.getPattTupleComp());
-    listPattAssEClass.getESuperTypes().add(this.getPatt2());
-    listPattTupleCompEClass.getESuperTypes().add(this.getPatt2());
+    listLocDefEClass.getESuperTypes().add(this.getExp());
+    expEClass.getESuperTypes().add(this.getPatt());
+    expEClass.getESuperTypes().add(this.getDDecl());
+    listPattAssEClass.getESuperTypes().add(this.getPatt());
+    listBindEClass.getESuperTypes().add(this.getExp());
+    listPattTupleCompEClass.getESuperTypes().add(this.getPatt());
+    identEClass.getESuperTypes().add(this.getExp());
+    expLF13EClass.getESuperTypes().add(this.getExp());
+    exp1EClass.getESuperTypes().add(this.getExp());
+    exp2EClass.getESuperTypes().add(this.getExp());
+    exp3EClass.getESuperTypes().add(this.getExp());
+    exp4EClass.getESuperTypes().add(this.getExp());
+    integerEClass.getESuperTypes().add(this.getPatt());
+    doubleEClass.getESuperTypes().add(this.getPatt());
+    stringEClass.getESuperTypes().add(this.getPatt());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modDefEClass, ModDef.class, "ModDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2443,20 +2508,27 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     initEAttribute(getModType_Resource(), ecorePackage.getEBoolean(), "resource", null, 0, 1, ModType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getModType_Interface(), ecorePackage.getEBoolean(), "interface", null, 0, 1, ModType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getModType_Concrete(), ecorePackage.getEBoolean(), "concrete", null, 0, 1, ModType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModType_AbstractName(), this.getIdent(), null, "abstractName", null, 0, 1, ModType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModType_AbstractName(), ecorePackage.getEObject(), null, "abstractName", null, 0, 1, ModType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getModType_Instance(), ecorePackage.getEBoolean(), "instance", null, 0, 1, ModType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(modBodyEClass, ModBody.class, "ModBody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getModBody_Extends(), this.getIncluded(), null, "extends", null, 0, -1, ModBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModBody_Opens(), this.getOpen(), null, "opens", null, 0, -1, ModBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModBody_Judgements(), this.getTopDef(), null, "judgements", null, 0, -1, ModBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModBody_Content(), this.getModContent(), null, "content", null, 0, 1, ModBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModBody_Functor(), this.getIncluded(), null, "functor", null, 0, 1, ModBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getModBody_FunctorInstantiation(), ecorePackage.getEBoolean(), "functorInstantiation", null, 0, 1, ModBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getModBody_Instantiations(), this.getOpen(), null, "instantiations", null, 0, -1, ModBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModBody_Instantiations(), this.getInst(), null, "instantiations", null, 0, -1, ModBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(modContentEClass, ModContent.class, "ModContent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getModContent_Opens(), this.getOpen(), null, "opens", null, 0, -1, ModContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModContent_Judgements(), this.getTopDef(), null, "judgements", null, 0, -1, ModContent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(openEClass, Open.class, "Open", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getOpen_Name(), this.getIdent(), null, "name", null, 0, 1, Open.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOpen_Alias(), this.getIdent(), null, "alias", null, 0, 1, Open.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(instEClass, Inst.class, "Inst", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInst_Interface(), this.getIdent(), null, "interface", null, 0, 1, Inst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInst_Name(), this.getIdent(), null, "name", null, 0, 1, Inst.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(includedEClass, Included.class, "Included", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getIncluded_Name(), this.getIdent(), null, "name", null, 0, 1, Included.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2465,20 +2537,12 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     initEAttribute(getIncluded_Exclusive(), ecorePackage.getEBoolean(), "exclusive", null, 0, 1, Included.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getIncluded_Excludes(), this.getIdent(), null, "excludes", null, 0, -1, Included.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(defEClass, Def.class, "Def", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDef_Name(), this.getName_(), null, "name", null, 0, -1, Def.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDef_Definition(), this.getExp(), null, "definition", null, 0, 1, Def.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDef_Type(), this.getExp(), null, "type", null, 0, 1, Def.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDef_Patterns(), this.getListPatt(), null, "patterns", null, 0, 1, Def.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDef_Overload(), ecorePackage.getEBoolean(), "overload", null, 0, 1, Def.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDef_Overloads(), this.getDef(), null, "overloads", null, 0, -1, Def.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(topDefEClass, TopDef.class, "TopDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTopDef_Cat(), ecorePackage.getEBoolean(), "cat", null, 0, 1, TopDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTopDef_Definitions(), ecorePackage.getEObject(), null, "definitions", null, 0, -1, TopDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTopDef_Fun(), ecorePackage.getEBoolean(), "fun", null, 0, 1, TopDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTopDef_Data(), ecorePackage.getEBoolean(), "data", null, 0, 1, TopDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTopDef_Def(), ecorePackage.getEBoolean(), "def", null, 0, 1, TopDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTopDef_Data(), ecorePackage.getEBoolean(), "data", null, 0, 1, TopDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTopDef_Param(), ecorePackage.getEBoolean(), "param", null, 0, 1, TopDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTopDef_Oper(), ecorePackage.getEBoolean(), "oper", null, 0, 1, TopDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTopDef_Lincat(), ecorePackage.getEBoolean(), "lincat", null, 0, 1, TopDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2496,30 +2560,44 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     initEReference(getFunDef_Name(), this.getIdent(), null, "name", null, 0, -1, FunDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFunDef_Type(), this.getExp(), null, "type", null, 0, 1, FunDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(defDefEClass, DefDef.class, "DefDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDefDef_Name(), this.getName_(), null, "name", null, 0, -1, DefDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDefDef_Definition(), this.getExp(), null, "definition", null, 0, 1, DefDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDefDef_Patterns(), this.getListPatt(), null, "patterns", null, 0, 1, DefDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(dataDefEClass, DataDef.class, "DataDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDataDef_Name(), this.getIdent(), null, "name", null, 0, 1, DataDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDataDef_Constructors(), this.getDataConstr(), null, "constructors", null, 0, -1, DataDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDataDef_Name(), this.getIdent(), null, "name", null, 0, -1, DataDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDataDef_Constructors(), this.getIdent(), null, "constructors", null, 0, -1, DataDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDataDef_Type(), this.getExp(), null, "type", null, 0, 1, DataDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(dataConstrEClass, DataConstr.class, "DataConstr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getDataConstr_Name(), this.getIdent(), null, "name", null, 0, 1, DataConstr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDataConstr_Module(), this.getIdent(), null, "module", null, 0, 1, DataConstr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(paramDefEClass, ParamDef.class, "ParamDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getParamDef_Name(), this.getIdent(), null, "name", null, 0, 1, ParamDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParamDef_Constructors(), this.getParConstr(), null, "constructors", null, 0, -1, ParamDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(parDefEClass, ParDef.class, "ParDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getParDef_Name(), this.getIdent(), null, "name", null, 0, 1, ParDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParDef_Constructors(), this.getParConstr(), null, "constructors", null, 0, -1, ParDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParDef_Id2(), this.getIdent(), null, "id2", null, 0, 1, ParDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(operDefEClass, OperDef.class, "OperDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getOperDef_Name(), this.getName_(), null, "name", null, 0, -1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOperDef_Type(), this.getExp(), null, "type", null, 0, 1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOperDef_Definition(), this.getExp(), null, "definition", null, 0, 1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getOperDef_Overload(), ecorePackage.getEBoolean(), "overload", null, 0, 1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOperDef_Overloads(), this.getDefDef(), null, "overloads", null, 0, -1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOperDef_Args(), this.getArg(), null, "args", null, 0, -1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(parConstrEClass, ParConstr.class, "ParConstr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getParConstr_Name(), this.getIdent(), null, "name", null, 0, 1, ParConstr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getParConstr_Constructors(), this.getDDecl(), null, "constructors", null, 0, -1, ParConstr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(linDefEClass, LinDef.class, "LinDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLinDef_Name(), this.getName_(), null, "name", null, 0, -1, LinDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLinDef_Definition(), this.getExp(), null, "definition", null, 0, 1, LinDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLinDef_Args(), this.getArg(), null, "args", null, 0, -1, LinDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(printDefEClass, PrintDef.class, "PrintDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPrintDef_Name(), this.getName_(), null, "name", null, 0, -1, PrintDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPrintDef_Printname(), this.getExp(), null, "printname", null, 0, 1, PrintDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(termDefEClass, TermDef.class, "TermDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTermDef_Name(), this.getName_(), null, "name", null, 0, -1, TermDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTermDef_Definition(), this.getExp(), null, "definition", null, 0, 1, TermDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(flagDefEClass, FlagDef.class, "FlagDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFlagDef_Name(), this.getIdent(), null, "name", null, 0, 1, FlagDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFlagDef_Value(), this.getIdent(), null, "value", null, 0, 1, FlagDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(parConstrEClass, ParConstr.class, "ParConstr", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getParConstr_Name(), this.getIdent(), null, "name", null, 0, 1, ParConstr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getParConstr_Constructors(), this.getDDecl(), null, "constructors", null, 0, -1, ParConstr.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(nameEClass, Name.class, "Name", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getName_Name(), this.getIdent(), null, "name", null, 0, 1, Name.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2532,76 +2610,47 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     initEClass(listLocDefEClass, ListLocDef.class, "ListLocDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getListLocDef_LocalDefinitions(), this.getLocDef(), null, "localDefinitions", null, 0, -1, ListLocDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(exp6EClass, Exp6.class, "Exp6", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExp6_Name(), this.getIdent(), null, "name", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_Sort(), ecorePackage.getEBoolean(), "sort", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_BuiltInCat(), ecorePackage.getEBoolean(), "builtInCat", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_String(), ecorePackage.getEBoolean(), "string", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_Integer(), ecorePackage.getEBoolean(), "integer", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_Double(), ecorePackage.getEBoolean(), "double", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_Meta(), ecorePackage.getEBoolean(), "meta", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_EmptyString(), ecorePackage.getEBoolean(), "emptyString", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_Data(), ecorePackage.getEBoolean(), "data", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_ListCat(), ecorePackage.getEBoolean(), "listCat", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp6_Category(), this.getIdent(), null, "category", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp6_List(), this.getExps(), null, "list", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_TokenList(), ecorePackage.getEBoolean(), "tokenList", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_Record(), ecorePackage.getEBoolean(), "record", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp6_DefList(), this.getListLocDef(), null, "defList", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_Tuple(), ecorePackage.getEBoolean(), "tuple", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp6_TupleList(), this.getListTupleComp(), null, "tupleList", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp6_V(), this.getExp(), null, "v", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp6_Type(), this.getExp(), null, "type", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExp6_Identity(), ecorePackage.getEBoolean(), "identity", null, 0, 1, Exp6.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(exp5EClass, Exp5.class, "Exp5", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExp5_V(), this.getExp6(), null, "v", null, 0, 1, Exp5.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp5_Label(), this.getLabel(), null, "label", null, 0, -1, Exp5.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(exp4EClass, Exp4.class, "Exp4", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExp4_CaseList(), this.getListCase(), null, "caseList", null, 0, 1, Exp4.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp4_Args(), this.getExp5(), null, "args", null, 0, -1, Exp4.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp4_ArgType(), this.getExp6(), null, "argType", null, 0, 1, Exp4.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp4_ExpList(), this.getListExp(), null, "expList", null, 0, 1, Exp4.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp4_CaseOf(), this.getExp(), null, "caseOf", null, 0, 1, Exp4.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp4_Name(), this.getIdent(), null, "name", null, 0, 1, Exp4.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp4_Inner(), this.getExp6(), null, "inner", null, 0, 1, Exp4.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp4_V(), this.getExp5(), null, "v", null, 0, 1, Exp4.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(exp3EClass, Exp3.class, "Exp3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExp3_V(), ecorePackage.getEObject(), null, "v", null, 0, 1, Exp3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp3_E(), this.getExp4(), null, "e", null, 0, -1, Exp3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(exp2EClass, Exp2.class, "Exp2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExp2_V(), this.getExp3(), null, "v", null, 0, 1, Exp2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp2_E(), this.getExp2(), null, "e", null, 0, -1, Exp2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(exp1EClass, Exp1.class, "Exp1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExp1_V(), this.getExp2(), null, "v", null, 0, 1, Exp1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp1_E(), this.getExp1(), null, "e", null, 0, -1, Exp1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(expEClass, Exp.class, "Exp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExp_BindList(), this.getListBind(), null, "bindList", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp_V(), ecorePackage.getEObject(), null, "v", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExp_E(), ecorePackage.getEObject(), null, "e", null, 0, -1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExp_DefList(), this.getListLocDef(), null, "defList", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_CaseList(), this.getListCase(), null, "caseList", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_ArgType(), this.getExp(), null, "argType", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_ExpList(), this.getListExp(), null, "expList", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_CaseOf(), this.getExp(), null, "caseOf", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_Alts(), this.getAltern(), null, "alts", null, 0, -1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_Pattern(), this.getPatt(), null, "pattern", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_Inner(), this.getExp(), null, "inner", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExp_Sort(), ecorePackage.getEBoolean(), "sort", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExp_String(), ecorePackage.getEBoolean(), "string", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExp_Integer(), ecorePackage.getEBoolean(), "integer", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExp_Double(), ecorePackage.getEBoolean(), "double", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExp_EmptyString(), ecorePackage.getEBoolean(), "emptyString", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExp_ListCat(), ecorePackage.getEBoolean(), "listCat", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_Category(), this.getIdent(), null, "category", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_List(), this.getExps(), null, "list", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExp_Record(), ecorePackage.getEBoolean(), "record", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExp_Tuple(), ecorePackage.getEBoolean(), "tuple", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_TupleList(), this.getListTupleComp(), null, "tupleList", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExp_V(), this.getExp(), null, "v", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getExp_Type(), this.getExp(), null, "type", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExp_Identity(), ecorePackage.getEBoolean(), "identity", null, 0, 1, Exp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(listExpEClass, ListExp.class, "ListExp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getListExp_Expressions(), this.getExp(), null, "expressions", null, 0, -1, ListExp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(expsEClass, Exps.class, "Exps", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExps_Expressions(), this.getExp6(), null, "expressions", null, 0, -1, Exps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(patt2EClass, Patt2.class, "Patt2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(patt1EClass, Patt1.class, "Patt1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPatt1_Name(), this.getIdent(), null, "name", null, 0, 1, Patt1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPatt1_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, Patt1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPatt1_Label(), this.getIdent(), null, "label", null, 0, 1, Patt1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExps_Expressions(), this.getExp(), null, "expressions", null, 0, -1, Exps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pattEClass, Patt.class, "Patt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPatt_P(), this.getPatt1(), null, "p", null, 0, -1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPatt_Left(), this.getPatt(), null, "left", null, 0, 1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPatt_Or(), ecorePackage.getEBoolean(), "or", null, 0, 1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPatt_And(), ecorePackage.getEBoolean(), "and", null, 0, 1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPatt_Right(), this.getPatt(), null, "right", null, 0, 1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPatt_Name(), this.getIdent(), null, "name", null, 0, 1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPatt_Value(), ecorePackage.getEObject(), null, "value", null, 0, 1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPatt_Label(), ecorePackage.getEObject(), null, "label", null, 0, 1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPatt_Meta(), ecorePackage.getEBoolean(), "meta", null, 0, 1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPatt_TokenList(), ecorePackage.getEBoolean(), "tokenList", null, 0, 1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getPatt_Wildcard(), ecorePackage.getEBoolean(), "wildcard", null, 0, 1, Patt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(pattAssEClass, PattAss.class, "PattAss", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getPattAss_Name(), this.getIdent(), null, "name", null, 0, -1, PattAss.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2615,23 +2664,25 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     initEReference(getListPattAss_Assignments(), this.getPattAss(), null, "assignments", null, 0, -1, ListPattAss.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(listPattEClass, ListPatt.class, "ListPatt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getListPatt_Patterns(), this.getPatt2(), null, "patterns", null, 0, -1, ListPatt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getListPatt_Patterns(), this.getPatt(), null, "patterns", null, 0, -1, ListPatt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(argEClass, Arg.class, "Arg", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getArg_Name(), this.getIdent(), null, "name", null, 0, -1, Arg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getArg_Wildcard(), ecorePackage.getEBoolean(), "wildcard", null, 0, 1, Arg.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(bindEClass, Bind.class, "Bind", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getBind_Name(), this.getIdent(), null, "name", null, 0, 1, Bind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getBind_Name(), this.getIdent(), null, "name", null, 0, -1, Bind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getBind_Wildcard(), ecorePackage.getEBoolean(), "wildcard", null, 0, 1, Bind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(listBindEClass, ListBind.class, "ListBind", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getListBind_Decl(), this.getExp(), null, "decl", null, 0, 1, ListBind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getListBind_Bindings(), this.getBind(), null, "bindings", null, 0, -1, ListBind.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(tupleCompEClass, TupleComp.class, "TupleComp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-    initEClass(pattTupleCompEClass, PattTupleComp.class, "PattTupleComp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
     initEClass(listTupleCompEClass, ListTupleComp.class, "ListTupleComp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getListTupleComp_L(), this.getTupleComp(), null, "l", null, 0, -1, ListTupleComp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getListTupleComp_Elements(), this.getExp(), null, "elements", null, 0, -1, ListTupleComp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(listPattTupleCompEClass, ListPattTupleComp.class, "ListPattTupleComp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getListPattTupleComp_L(), this.getPattTupleComp(), null, "l", null, 0, -1, ListPattTupleComp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getListPattTupleComp_Patterns(), this.getPatt(), null, "patterns", null, 0, -1, ListPattTupleComp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(caseEClass, Case.class, "Case", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCase_Pattern(), this.getPatt(), null, "pattern", null, 0, 1, Case.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2640,12 +2691,32 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     initEClass(listCaseEClass, ListCase.class, "ListCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getListCase_Cases(), this.getCase(), null, "cases", null, 0, -1, ListCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(alternEClass, Altern.class, "Altern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAltern_Alt1(), this.getExp(), null, "alt1", null, 0, 1, Altern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAltern_Alt2(), this.getExp(), null, "alt2", null, 0, 1, Altern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(dDeclEClass, DDecl.class, "DDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDDecl_BindList(), this.getListBind(), null, "bindList", null, 0, 1, DDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDDecl_E(), this.getExp(), null, "e", null, 0, 1, DDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(identEClass, Ident.class, "Ident", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getIdent_S(), ecorePackage.getEString(), "s", null, 0, 1, Ident.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(expLF13EClass, ExpLF13.class, "ExpLF13", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(exp1EClass, Exp1.class, "Exp1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(exp2EClass, Exp2.class, "Exp2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(exp3EClass, Exp3.class, "Exp3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(exp4EClass, Exp4.class, "Exp4", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(integerEClass, org.grammaticalframework.eclipse.gF.Integer.class, "Integer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(doubleEClass, org.grammaticalframework.eclipse.gF.Double.class, "Double", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(stringEClass, org.grammaticalframework.eclipse.gF.String.class, "String", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     // Create resource
     createResource(eNS_URI);

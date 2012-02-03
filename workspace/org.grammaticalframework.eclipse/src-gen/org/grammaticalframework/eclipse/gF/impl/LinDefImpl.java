@@ -21,26 +21,28 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.grammaticalframework.eclipse.gF.Arg;
 import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.GFPackage;
+import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.Name;
-import org.grammaticalframework.eclipse.gF.PrintDef;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Print Def</b></em>'.
+ * An implementation of the model object '<em><b>Lin Def</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PrintDefImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PrintDefImpl#getPrintname <em>Printname</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.LinDefImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.LinDefImpl#getDefinition <em>Definition</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.LinDefImpl#getArgs <em>Args</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintDef
+public class LinDefImpl extends MinimalEObjectImpl.Container implements LinDef
 {
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' containment reference list.
@@ -53,21 +55,31 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
   protected EList<Name> name;
 
   /**
-   * The cached value of the '{@link #getPrintname() <em>Printname</em>}' containment reference.
+   * The cached value of the '{@link #getDefinition() <em>Definition</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPrintname()
+   * @see #getDefinition()
    * @generated
    * @ordered
    */
-  protected Exp printname;
+  protected Exp definition;
+
+  /**
+   * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getArgs()
+   * @generated
+   * @ordered
+   */
+  protected EList<Arg> args;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected PrintDefImpl()
+  protected LinDefImpl()
   {
     super();
   }
@@ -80,7 +92,7 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
   @Override
   protected EClass eStaticClass()
   {
-    return GFPackage.Literals.PRINT_DEF;
+    return GFPackage.Literals.LIN_DEF;
   }
 
   /**
@@ -92,7 +104,7 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
   {
     if (name == null)
     {
-      name = new EObjectContainmentEList<Name>(Name.class, this, GFPackage.PRINT_DEF__NAME);
+      name = new EObjectContainmentEList<Name>(Name.class, this, GFPackage.LIN_DEF__NAME);
     }
     return name;
   }
@@ -102,9 +114,9 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
    * <!-- end-user-doc -->
    * @generated
    */
-  public Exp getPrintname()
+  public Exp getDefinition()
   {
-    return printname;
+    return definition;
   }
 
   /**
@@ -112,13 +124,13 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPrintname(Exp newPrintname, NotificationChain msgs)
+  public NotificationChain basicSetDefinition(Exp newDefinition, NotificationChain msgs)
   {
-    Exp oldPrintname = printname;
-    printname = newPrintname;
+    Exp oldDefinition = definition;
+    definition = newDefinition;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.PRINT_DEF__PRINTNAME, oldPrintname, newPrintname);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.LIN_DEF__DEFINITION, oldDefinition, newDefinition);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -129,20 +141,34 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPrintname(Exp newPrintname)
+  public void setDefinition(Exp newDefinition)
   {
-    if (newPrintname != printname)
+    if (newDefinition != definition)
     {
       NotificationChain msgs = null;
-      if (printname != null)
-        msgs = ((InternalEObject)printname).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.PRINT_DEF__PRINTNAME, null, msgs);
-      if (newPrintname != null)
-        msgs = ((InternalEObject)newPrintname).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.PRINT_DEF__PRINTNAME, null, msgs);
-      msgs = basicSetPrintname(newPrintname, msgs);
+      if (definition != null)
+        msgs = ((InternalEObject)definition).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.LIN_DEF__DEFINITION, null, msgs);
+      if (newDefinition != null)
+        msgs = ((InternalEObject)newDefinition).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.LIN_DEF__DEFINITION, null, msgs);
+      msgs = basicSetDefinition(newDefinition, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PRINT_DEF__PRINTNAME, newPrintname, newPrintname));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.LIN_DEF__DEFINITION, newDefinition, newDefinition));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Arg> getArgs()
+  {
+    if (args == null)
+    {
+      args = new EObjectContainmentEList<Arg>(Arg.class, this, GFPackage.LIN_DEF__ARGS);
+    }
+    return args;
   }
 
   /**
@@ -155,10 +181,12 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
   {
     switch (featureID)
     {
-      case GFPackage.PRINT_DEF__NAME:
+      case GFPackage.LIN_DEF__NAME:
         return ((InternalEList<?>)getName()).basicRemove(otherEnd, msgs);
-      case GFPackage.PRINT_DEF__PRINTNAME:
-        return basicSetPrintname(null, msgs);
+      case GFPackage.LIN_DEF__DEFINITION:
+        return basicSetDefinition(null, msgs);
+      case GFPackage.LIN_DEF__ARGS:
+        return ((InternalEList<?>)getArgs()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -173,10 +201,12 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
   {
     switch (featureID)
     {
-      case GFPackage.PRINT_DEF__NAME:
+      case GFPackage.LIN_DEF__NAME:
         return getName();
-      case GFPackage.PRINT_DEF__PRINTNAME:
-        return getPrintname();
+      case GFPackage.LIN_DEF__DEFINITION:
+        return getDefinition();
+      case GFPackage.LIN_DEF__ARGS:
+        return getArgs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -192,12 +222,16 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
   {
     switch (featureID)
     {
-      case GFPackage.PRINT_DEF__NAME:
+      case GFPackage.LIN_DEF__NAME:
         getName().clear();
         getName().addAll((Collection<? extends Name>)newValue);
         return;
-      case GFPackage.PRINT_DEF__PRINTNAME:
-        setPrintname((Exp)newValue);
+      case GFPackage.LIN_DEF__DEFINITION:
+        setDefinition((Exp)newValue);
+        return;
+      case GFPackage.LIN_DEF__ARGS:
+        getArgs().clear();
+        getArgs().addAll((Collection<? extends Arg>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -213,11 +247,14 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
   {
     switch (featureID)
     {
-      case GFPackage.PRINT_DEF__NAME:
+      case GFPackage.LIN_DEF__NAME:
         getName().clear();
         return;
-      case GFPackage.PRINT_DEF__PRINTNAME:
-        setPrintname((Exp)null);
+      case GFPackage.LIN_DEF__DEFINITION:
+        setDefinition((Exp)null);
+        return;
+      case GFPackage.LIN_DEF__ARGS:
+        getArgs().clear();
         return;
     }
     super.eUnset(featureID);
@@ -233,12 +270,14 @@ public class PrintDefImpl extends MinimalEObjectImpl.Container implements PrintD
   {
     switch (featureID)
     {
-      case GFPackage.PRINT_DEF__NAME:
+      case GFPackage.LIN_DEF__NAME:
         return name != null && !name.isEmpty();
-      case GFPackage.PRINT_DEF__PRINTNAME:
-        return printname != null;
+      case GFPackage.LIN_DEF__DEFINITION:
+        return definition != null;
+      case GFPackage.LIN_DEF__ARGS:
+        return args != null && !args.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //PrintDefImpl
+} //LinDefImpl

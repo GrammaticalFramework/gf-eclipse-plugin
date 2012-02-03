@@ -35,8 +35,8 @@ import org.grammaticalframework.eclipse.gF.TopDef;
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl#isCat <em>Cat</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl#getDefinitions <em>Definitions</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl#isFun <em>Fun</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl#isData <em>Data</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl#isDef <em>Def</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl#isData <em>Data</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl#isParam <em>Param</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl#isOper <em>Oper</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.TopDefImpl#isLincat <em>Lincat</em>}</li>
@@ -102,26 +102,6 @@ public class TopDefImpl extends MinimalEObjectImpl.Container implements TopDef
   protected boolean fun = FUN_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isData() <em>Data</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isData()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean DATA_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isData() <em>Data</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isData()
-   * @generated
-   * @ordered
-   */
-  protected boolean data = DATA_EDEFAULT;
-
-  /**
    * The default value of the '{@link #isDef() <em>Def</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -140,6 +120,26 @@ public class TopDefImpl extends MinimalEObjectImpl.Container implements TopDef
    * @ordered
    */
   protected boolean def = DEF_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isData() <em>Data</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isData()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean DATA_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isData() <em>Data</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isData()
+   * @generated
+   * @ordered
+   */
+  protected boolean data = DATA_EDEFAULT;
 
   /**
    * The default value of the '{@link #isParam() <em>Param</em>}' attribute.
@@ -367,29 +367,6 @@ public class TopDefImpl extends MinimalEObjectImpl.Container implements TopDef
    * <!-- end-user-doc -->
    * @generated
    */
-  public boolean isData()
-  {
-    return data;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setData(boolean newData)
-  {
-    boolean oldData = data;
-    data = newData;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.TOP_DEF__DATA, oldData, data));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public boolean isDef()
   {
     return def;
@@ -406,6 +383,29 @@ public class TopDefImpl extends MinimalEObjectImpl.Container implements TopDef
     def = newDef;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.TOP_DEF__DEF, oldDef, def));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isData()
+  {
+    return data;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setData(boolean newData)
+  {
+    boolean oldData = data;
+    data = newData;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.TOP_DEF__DATA, oldData, data));
   }
 
   /**
@@ -601,10 +601,10 @@ public class TopDefImpl extends MinimalEObjectImpl.Container implements TopDef
         return getDefinitions();
       case GFPackage.TOP_DEF__FUN:
         return isFun();
-      case GFPackage.TOP_DEF__DATA:
-        return isData();
       case GFPackage.TOP_DEF__DEF:
         return isDef();
+      case GFPackage.TOP_DEF__DATA:
+        return isData();
       case GFPackage.TOP_DEF__PARAM:
         return isParam();
       case GFPackage.TOP_DEF__OPER:
@@ -644,11 +644,11 @@ public class TopDefImpl extends MinimalEObjectImpl.Container implements TopDef
       case GFPackage.TOP_DEF__FUN:
         setFun((Boolean)newValue);
         return;
-      case GFPackage.TOP_DEF__DATA:
-        setData((Boolean)newValue);
-        return;
       case GFPackage.TOP_DEF__DEF:
         setDef((Boolean)newValue);
+        return;
+      case GFPackage.TOP_DEF__DATA:
+        setData((Boolean)newValue);
         return;
       case GFPackage.TOP_DEF__PARAM:
         setParam((Boolean)newValue);
@@ -694,11 +694,11 @@ public class TopDefImpl extends MinimalEObjectImpl.Container implements TopDef
       case GFPackage.TOP_DEF__FUN:
         setFun(FUN_EDEFAULT);
         return;
-      case GFPackage.TOP_DEF__DATA:
-        setData(DATA_EDEFAULT);
-        return;
       case GFPackage.TOP_DEF__DEF:
         setDef(DEF_EDEFAULT);
+        return;
+      case GFPackage.TOP_DEF__DATA:
+        setData(DATA_EDEFAULT);
         return;
       case GFPackage.TOP_DEF__PARAM:
         setParam(PARAM_EDEFAULT);
@@ -741,10 +741,10 @@ public class TopDefImpl extends MinimalEObjectImpl.Container implements TopDef
         return definitions != null && !definitions.isEmpty();
       case GFPackage.TOP_DEF__FUN:
         return fun != FUN_EDEFAULT;
-      case GFPackage.TOP_DEF__DATA:
-        return data != DATA_EDEFAULT;
       case GFPackage.TOP_DEF__DEF:
         return def != DEF_EDEFAULT;
+      case GFPackage.TOP_DEF__DATA:
+        return data != DATA_EDEFAULT;
       case GFPackage.TOP_DEF__PARAM:
         return param != PARAM_EDEFAULT;
       case GFPackage.TOP_DEF__OPER:
@@ -778,10 +778,10 @@ public class TopDefImpl extends MinimalEObjectImpl.Container implements TopDef
     result.append(cat);
     result.append(", fun: ");
     result.append(fun);
-    result.append(", data: ");
-    result.append(data);
     result.append(", def: ");
     result.append(def);
+    result.append(", data: ");
+    result.append(data);
     result.append(", param: ");
     result.append(param);
     result.append(", oper: ");

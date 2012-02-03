@@ -7,28 +7,26 @@ package org.grammaticalframework.eclipse.gF.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import org.grammaticalframework.eclipse.gF.ExpLF13;
 import org.grammaticalframework.eclipse.gF.GFPackage;
-import org.grammaticalframework.eclipse.gF.PattTupleComp;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Patt Tuple Comp</b></em>'.
+ * An implementation of the model object '<em><b>Exp LF13</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class PattTupleCompImpl extends MinimalEObjectImpl.Container implements PattTupleComp
+public class ExpLF13Impl extends ExpImpl implements ExpLF13
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected PattTupleCompImpl()
+  protected ExpLF13Impl()
   {
     super();
   }
@@ -41,7 +39,7 @@ public class PattTupleCompImpl extends MinimalEObjectImpl.Container implements P
   @Override
   protected EClass eStaticClass()
   {
-    return GFPackage.Literals.PATT_TUPLE_COMP;
+    return GFPackage.Literals.EXP_LF13;
   }
 
-} //PattTupleCompImpl
+} //ExpLF13Impl

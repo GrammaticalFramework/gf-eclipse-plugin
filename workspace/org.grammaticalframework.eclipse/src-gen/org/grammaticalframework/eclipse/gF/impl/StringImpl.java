@@ -8,25 +8,24 @@ package org.grammaticalframework.eclipse.gF.impl;
 import org.eclipse.emf.ecore.EClass;
 
 import org.grammaticalframework.eclipse.gF.GFPackage;
-import org.grammaticalframework.eclipse.gF.Patt2;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Patt2</b></em>'.
+ * An implementation of the model object '<em><b>String</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class Patt2Impl extends Patt1Impl implements Patt2
+public class StringImpl extends PattImpl implements org.grammaticalframework.eclipse.gF.String
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected Patt2Impl()
+  protected StringImpl()
   {
     super();
   }
@@ -39,7 +38,7 @@ public class Patt2Impl extends Patt1Impl implements Patt2
   @Override
   protected EClass eStaticClass()
   {
-    return GFPackage.Literals.PATT2;
+    return GFPackage.Literals.STRING;
   }
 
-} //Patt2Impl
+} //StringImpl

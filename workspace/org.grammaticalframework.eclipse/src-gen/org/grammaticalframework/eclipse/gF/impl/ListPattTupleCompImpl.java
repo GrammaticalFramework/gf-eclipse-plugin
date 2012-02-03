@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
-import org.grammaticalframework.eclipse.gF.PattTupleComp;
+import org.grammaticalframework.eclipse.gF.Patt;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,23 +28,23 @@ import org.grammaticalframework.eclipse.gF.PattTupleComp;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ListPattTupleCompImpl#getL <em>L</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ListPattTupleCompImpl#getPatterns <em>Patterns</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ListPattTupleCompImpl extends Patt2Impl implements ListPattTupleComp
+public class ListPattTupleCompImpl extends PattImpl implements ListPattTupleComp
 {
   /**
-   * The cached value of the '{@link #getL() <em>L</em>}' containment reference list.
+   * The cached value of the '{@link #getPatterns() <em>Patterns</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getL()
+   * @see #getPatterns()
    * @generated
    * @ordered
    */
-  protected EList<PattTupleComp> l;
+  protected EList<Patt> patterns;
 
   /**
    * <!-- begin-user-doc -->
@@ -72,13 +72,13 @@ public class ListPattTupleCompImpl extends Patt2Impl implements ListPattTupleCom
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<PattTupleComp> getL()
+  public EList<Patt> getPatterns()
   {
-    if (l == null)
+    if (patterns == null)
     {
-      l = new EObjectContainmentEList<PattTupleComp>(PattTupleComp.class, this, GFPackage.LIST_PATT_TUPLE_COMP__L);
+      patterns = new EObjectContainmentEList<Patt>(Patt.class, this, GFPackage.LIST_PATT_TUPLE_COMP__PATTERNS);
     }
-    return l;
+    return patterns;
   }
 
   /**
@@ -91,8 +91,8 @@ public class ListPattTupleCompImpl extends Patt2Impl implements ListPattTupleCom
   {
     switch (featureID)
     {
-      case GFPackage.LIST_PATT_TUPLE_COMP__L:
-        return ((InternalEList<?>)getL()).basicRemove(otherEnd, msgs);
+      case GFPackage.LIST_PATT_TUPLE_COMP__PATTERNS:
+        return ((InternalEList<?>)getPatterns()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -107,8 +107,8 @@ public class ListPattTupleCompImpl extends Patt2Impl implements ListPattTupleCom
   {
     switch (featureID)
     {
-      case GFPackage.LIST_PATT_TUPLE_COMP__L:
-        return getL();
+      case GFPackage.LIST_PATT_TUPLE_COMP__PATTERNS:
+        return getPatterns();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -124,9 +124,9 @@ public class ListPattTupleCompImpl extends Patt2Impl implements ListPattTupleCom
   {
     switch (featureID)
     {
-      case GFPackage.LIST_PATT_TUPLE_COMP__L:
-        getL().clear();
-        getL().addAll((Collection<? extends PattTupleComp>)newValue);
+      case GFPackage.LIST_PATT_TUPLE_COMP__PATTERNS:
+        getPatterns().clear();
+        getPatterns().addAll((Collection<? extends Patt>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -142,8 +142,8 @@ public class ListPattTupleCompImpl extends Patt2Impl implements ListPattTupleCom
   {
     switch (featureID)
     {
-      case GFPackage.LIST_PATT_TUPLE_COMP__L:
-        getL().clear();
+      case GFPackage.LIST_PATT_TUPLE_COMP__PATTERNS:
+        getPatterns().clear();
         return;
     }
     super.eUnset(featureID);
@@ -159,8 +159,8 @@ public class ListPattTupleCompImpl extends Patt2Impl implements ListPattTupleCom
   {
     switch (featureID)
     {
-      case GFPackage.LIST_PATT_TUPLE_COMP__L:
-        return l != null && !l.isEmpty();
+      case GFPackage.LIST_PATT_TUPLE_COMP__PATTERNS:
+        return patterns != null && !patterns.isEmpty();
     }
     return super.eIsSet(featureID);
   }
