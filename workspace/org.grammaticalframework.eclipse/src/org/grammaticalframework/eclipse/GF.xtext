@@ -173,53 +173,28 @@ Exp
   | Exp1   
 */
 Exp :
-	 '\\' bindList=ListBind '->' v=Exp				(=> '|' e+=Exp1)*
-	| '\\' '\\' bindList=ListBind '=>' v=Exp		(=> '|' e+=Exp1)*
-//-	| d+=Decl '->' e+=Exp							(=> '|' e+=Exp1)*
-//-	| e+=Exp3 '=>' e+=Exp							(=> '|' e+=Exp1)*
-	| 'let' '{' defList=ListLocDef '}' 'in' v=Exp	(=> '|' e+=Exp1)*
-	| 'let' defList=ListLocDef 'in' v=Exp			(=> '|' e+=Exp1)*
-	| 'in' Exp5 String								(=> '|' e+=Exp1)*
-//-	| e+=Exp3 'where' '{' e+=ListLocDef '}'			(=> '|' e+=Exp1)*
+//	  Exp1 ({Exp.left=current} '|' right=Exp)?
+	 '\\' bindList=ListBind '->' right=Exp
+	| '\\' '\\' bindList=ListBind '=>' right=Exp
+	| '(' ListBind ':' decl=Exp ')' '->' right=Exp // Decl, part 1
+	| Exp3 {Exp.left=current} right=ExpLF
+	| 'let' '{' defList=ListLocDef '}' 'in' right=Exp
+	| 'let'     defList=ListLocDef     'in' right=Exp
+	| 'in' Exp5 String
+;
 
- /*
- * The following is (hopefully) an amalgamation of:
- *	Decl -> Exp
- *  Exp3 => Exp
- * 	Exp3 where { ListLocDef }
- * 	Exp1
- */
-	| '(' bindList=ListBind ':' type=Exp ')'	'->' v=Exp		(=> '|' e+=Exp1)*
-//	| v=Exp4
-//		(
-//			(('!'|'*'|'**') e+=Exp4)*				// That makes Exp3
-//			(
-//				  '=>' e+=Exp
-//				| 'where' '{' defList=ListLocDef '}'
-//				| ('+' e+=Exp2)? ('++' e+=Exp1)?
-//			)
-//
-//			| '->' e+=Exp
-//		)
-//		(=> '|' e+=Exp1)*
-//		
-//	| '#' v=Patt2
-//		(('!'|'*'|'**') e+=Exp4)*				// That makes Exp3
-//		(
-//			  '=>' e+=Exp
-//			| 'where' '{' defList=ListLocDef '}'
-//			| ('+' e+=Exp2)? ('++' e+=Exp1)?
-//		)
-//		(=> '|' e+=Exp1)*
- 
+ExpLF returns Exp :
+	  '->' Exp // Decl, part2 
+	| '=>' Exp
+	| 'where' '{' ListLocDef '}'
 ;
 
 Exp1 returns Exp :
-	Exp2 ({Exp1.left=current} '++' right=Exp1)*
+	Exp2 ({Exp1.left=current} '++' right=Exp2)*
 ;
 
 Exp2 returns Exp :
-	Exp3 ({Exp2.left=current} '+' right=Exp2)*
+	Exp3 ({Exp2.left=current} '+' right=Exp3)*
 ;
 
 /*
@@ -233,9 +208,12 @@ Exp3
   | Exp4
 */
 Exp3 returns Exp :
-	  Exp4											(('!'|'*'|'**') e+=Exp4)*
-	| 'table' '{' caseList=ListCase '}'				(('!'|'*'|'**') e+=Exp4)*
-	| 'table' argType=Exp6 ( '{' caseList=ListCase '}' | '[' expList=ListExp ']' )		(('!'|'*'|'**') e+=Exp4)*			// course-of-values table
+	  Exp3LF ({Exp3.left=current} ('!'|'*'|'**') right=Exp4)*
+;
+Exp3LF returns Exp :
+	  'table' '{' caseList=ListCase '}'
+	| 'table' argType=Exp6 ( '{' caseList=ListCase '}' | '[' expList=ListExp ']' )
+	| Exp4
 ;
 
 /*
@@ -255,17 +233,20 @@ Exp4
   | Exp5
 */
 Exp4 returns Exp :
-	  'case' caseOf=Exp 'of' '{' caseList=ListCase '}'	(e+=Exp5 | '{'e+=Exp'}')*
-	| 'variants' '{' expList=ListExp '}'				(e+=Exp5 | '{'e+=Exp'}')*
-	| 'pre' '{' caseList=ListCase '}'					(e+=Exp5 | '{'e+=Exp'}')*
-	| 'pre' '{' String ';' alts+=Altern (';' alts+=Altern)* '}'		(e+=Exp5 | '{'e+=Exp'}')*
-	| 'pre' '{' Ident  ';' alts+=Altern (';' alts+=Altern)* '}'		(e+=Exp5 | '{'e+=Exp'}')*
-	| 'strs' '{' expList=ListExp '}'					(e+=Exp5 | '{'e+=Exp'}')*
-	| '#' pattern=Patt3									(e+=Exp5 | '{'e+=Exp'}')*
-	| 'pattern' pattern=Exp5							(e+=Exp5 | '{'e+=Exp'}')*
-	| 'lincat' name=[Ident|ID] inner=Exp5				(e+=Exp5 | '{'e+=Exp'}')*
-	| 'lin' name=[Ident|ID] inner=Exp5					(e+=Exp5 | '{'e+=Exp'}')*
-	| Exp5												(e+=Exp5 | '{'e+=Exp'}')*
+	  Exp4LF ({Exp4.left=current} ( right=Exp5 | '{' right=Exp '}' ) )*
+;
+Exp4LF returns Exp :
+	  'case' caseOf=Exp 'of' '{' caseList=ListCase '}'
+	| 'variants' '{' expList=ListExp '}'
+	| 'pre' '{' caseList=ListCase '}'
+	| 'pre' '{' String ';' alts+=Altern (';' alts+=Altern)* '}'
+	| 'pre' '{' Ident  ';' alts+=Altern (';' alts+=Altern)* '}'
+	| 'strs' '{' expList=ListExp '}'
+	| '#' pattern=Patt3
+	| 'pattern' pattern=Exp5
+	| 'lincat' name=[Ident|ID] inner=Exp5
+	| 'lin' name=[Ident|ID] inner=Exp5
+	| Exp5
 ;
 
 Exp5 returns Exp :
@@ -411,10 +392,10 @@ ListBind :
 	bindings+=Bind (',' bindings+=Bind)*
 ;
 
-Decl :
-	  '(' bindings+=Bind (',' bindings+=Bind)* ':' e=Exp ')'
-	| e=Exp3
-;
+//Decl :
+//	  '(' bindings+=Bind (',' bindings+=Bind)* ':' e=Exp ')'
+//	| e=Exp3
+//;
 
 ListTupleComp :
 	{ListTupleComp} ( elements+=Exp (',' elements+=Exp)* ','? )?
