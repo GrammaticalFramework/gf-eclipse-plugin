@@ -173,14 +173,22 @@ Exp
   | Exp1   
 */
 Exp :
+	  ExpLF13
 //	  Exp1 ({Exp.left=current} '|' right=Exp)?
-	 '\\' bindList=ListBind '->' right=Exp
+	| '\\' bindList=ListBind '->' right=Exp
 	| '\\' '\\' bindList=ListBind '=>' right=Exp
 	| '(' ListBind ':' decl=Exp ')' '->' right=Exp // Decl, part 1
-	| Exp3 {Exp.left=current} right=ExpLF
+//	| Exp3 {Exp.left=current} right=ExpLF
 	| 'let' '{' defList=ListLocDef '}' 'in' right=Exp
 	| 'let'     defList=ListLocDef     'in' right=Exp
 	| 'in' Exp5 String
+;
+
+ExpLF13 returns Exp : 
+	Exp3 (
+		({ExpLF13.left=current} ('++'|'+') right=Exp3)* ({ExpLF13.left=current} '|' right=Exp)?
+		| {ExpLF13.left=current} right=ExpLF
+	)
 ;
 
 ExpLF returns Exp :
