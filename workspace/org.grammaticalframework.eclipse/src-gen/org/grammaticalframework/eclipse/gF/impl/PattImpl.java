@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.Patt;
@@ -33,9 +34,19 @@ import org.grammaticalframework.eclipse.gF.Patt;
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#getValue <em>Value</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#getBindTo <em>Bind To</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#isNegative <em>Negative</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#isInaccessible <em>Inaccessible</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#getPattern <em>Pattern</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#isMeta <em>Meta</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#isTokenList <em>Token List</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#getStr <em>Str</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#getPatternName <em>Pattern Name</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#getRef <em>Ref</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#isWildcard <em>Wildcard</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#isInteger <em>Integer</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#isDouble <em>Double</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.PattImpl#isString <em>String</em>}</li>
  * </ul>
  * </p>
  *
@@ -134,6 +145,66 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
   protected Ident label;
 
   /**
+   * The cached value of the '{@link #getBindTo() <em>Bind To</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getBindTo()
+   * @generated
+   * @ordered
+   */
+  protected Ident bindTo;
+
+  /**
+   * The default value of the '{@link #isNegative() <em>Negative</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isNegative()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean NEGATIVE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isNegative() <em>Negative</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isNegative()
+   * @generated
+   * @ordered
+   */
+  protected boolean negative = NEGATIVE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isInaccessible() <em>Inaccessible</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isInaccessible()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean INACCESSIBLE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isInaccessible() <em>Inaccessible</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isInaccessible()
+   * @generated
+   * @ordered
+   */
+  protected boolean inaccessible = INACCESSIBLE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getPattern() <em>Pattern</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPattern()
+   * @generated
+   * @ordered
+   */
+  protected Exp pattern;
+
+  /**
    * The default value of the '{@link #isMeta() <em>Meta</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -174,6 +245,46 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
   protected boolean tokenList = TOKEN_LIST_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getStr() <em>Str</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStr()
+   * @generated
+   * @ordered
+   */
+  protected static final String STR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStr() <em>Str</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStr()
+   * @generated
+   * @ordered
+   */
+  protected String str = STR_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getPatternName() <em>Pattern Name</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPatternName()
+   * @generated
+   * @ordered
+   */
+  protected Ident patternName;
+
+  /**
+   * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRef()
+   * @generated
+   * @ordered
+   */
+  protected Ident ref;
+
+  /**
    * The default value of the '{@link #isWildcard() <em>Wildcard</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -192,6 +303,66 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    * @ordered
    */
   protected boolean wildcard = WILDCARD_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isInteger() <em>Integer</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isInteger()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean INTEGER_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isInteger() <em>Integer</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isInteger()
+   * @generated
+   * @ordered
+   */
+  protected boolean integer = INTEGER_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isDouble() <em>Double</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isDouble()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean DOUBLE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isDouble() <em>Double</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isDouble()
+   * @generated
+   * @ordered
+   */
+  protected boolean double_ = DOUBLE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isString() <em>String</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isString()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean STRING_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isString() <em>String</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isString()
+   * @generated
+   * @ordered
+   */
+  protected boolean string = STRING_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -505,6 +676,148 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    * <!-- end-user-doc -->
    * @generated
    */
+  public Ident getBindTo()
+  {
+    return bindTo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetBindTo(Ident newBindTo, NotificationChain msgs)
+  {
+    Ident oldBindTo = bindTo;
+    bindTo = newBindTo;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.PATT__BIND_TO, oldBindTo, newBindTo);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setBindTo(Ident newBindTo)
+  {
+    if (newBindTo != bindTo)
+    {
+      NotificationChain msgs = null;
+      if (bindTo != null)
+        msgs = ((InternalEObject)bindTo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.PATT__BIND_TO, null, msgs);
+      if (newBindTo != null)
+        msgs = ((InternalEObject)newBindTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.PATT__BIND_TO, null, msgs);
+      msgs = basicSetBindTo(newBindTo, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__BIND_TO, newBindTo, newBindTo));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isNegative()
+  {
+    return negative;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setNegative(boolean newNegative)
+  {
+    boolean oldNegative = negative;
+    negative = newNegative;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__NEGATIVE, oldNegative, negative));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isInaccessible()
+  {
+    return inaccessible;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInaccessible(boolean newInaccessible)
+  {
+    boolean oldInaccessible = inaccessible;
+    inaccessible = newInaccessible;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__INACCESSIBLE, oldInaccessible, inaccessible));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exp getPattern()
+  {
+    return pattern;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPattern(Exp newPattern, NotificationChain msgs)
+  {
+    Exp oldPattern = pattern;
+    pattern = newPattern;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.PATT__PATTERN, oldPattern, newPattern);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPattern(Exp newPattern)
+  {
+    if (newPattern != pattern)
+    {
+      NotificationChain msgs = null;
+      if (pattern != null)
+        msgs = ((InternalEObject)pattern).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.PATT__PATTERN, null, msgs);
+      if (newPattern != null)
+        msgs = ((InternalEObject)newPattern).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.PATT__PATTERN, null, msgs);
+      msgs = basicSetPattern(newPattern, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__PATTERN, newPattern, newPattern));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public boolean isMeta()
   {
     return meta;
@@ -551,6 +864,120 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getStr()
+  {
+    return str;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStr(String newStr)
+  {
+    String oldStr = str;
+    str = newStr;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__STR, oldStr, str));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ident getPatternName()
+  {
+    return patternName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPatternName(Ident newPatternName, NotificationChain msgs)
+  {
+    Ident oldPatternName = patternName;
+    patternName = newPatternName;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.PATT__PATTERN_NAME, oldPatternName, newPatternName);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPatternName(Ident newPatternName)
+  {
+    if (newPatternName != patternName)
+    {
+      NotificationChain msgs = null;
+      if (patternName != null)
+        msgs = ((InternalEObject)patternName).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.PATT__PATTERN_NAME, null, msgs);
+      if (newPatternName != null)
+        msgs = ((InternalEObject)newPatternName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.PATT__PATTERN_NAME, null, msgs);
+      msgs = basicSetPatternName(newPatternName, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__PATTERN_NAME, newPatternName, newPatternName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ident getRef()
+  {
+    if (ref != null && ref.eIsProxy())
+    {
+      InternalEObject oldRef = (InternalEObject)ref;
+      ref = (Ident)eResolveProxy(oldRef);
+      if (ref != oldRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GFPackage.PATT__REF, oldRef, ref));
+      }
+    }
+    return ref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ident basicGetRef()
+  {
+    return ref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRef(Ident newRef)
+  {
+    Ident oldRef = ref;
+    ref = newRef;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__REF, oldRef, ref));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public boolean isWildcard()
   {
     return wildcard;
@@ -574,6 +1001,75 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isInteger()
+  {
+    return integer;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInteger(boolean newInteger)
+  {
+    boolean oldInteger = integer;
+    integer = newInteger;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__INTEGER, oldInteger, integer));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isDouble()
+  {
+    return double_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDouble(boolean newDouble)
+  {
+    boolean oldDouble = double_;
+    double_ = newDouble;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__DOUBLE, oldDouble, double_));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isString()
+  {
+    return string;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setString(boolean newString)
+  {
+    boolean oldString = string;
+    string = newString;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__STRING, oldString, string));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -589,6 +1085,12 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
         return basicSetValue(null, msgs);
       case GFPackage.PATT__LABEL:
         return basicSetLabel(null, msgs);
+      case GFPackage.PATT__BIND_TO:
+        return basicSetBindTo(null, msgs);
+      case GFPackage.PATT__PATTERN:
+        return basicSetPattern(null, msgs);
+      case GFPackage.PATT__PATTERN_NAME:
+        return basicSetPatternName(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -617,12 +1119,33 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
         return getValue();
       case GFPackage.PATT__LABEL:
         return getLabel();
+      case GFPackage.PATT__BIND_TO:
+        return getBindTo();
+      case GFPackage.PATT__NEGATIVE:
+        return isNegative();
+      case GFPackage.PATT__INACCESSIBLE:
+        return isInaccessible();
+      case GFPackage.PATT__PATTERN:
+        return getPattern();
       case GFPackage.PATT__META:
         return isMeta();
       case GFPackage.PATT__TOKEN_LIST:
         return isTokenList();
+      case GFPackage.PATT__STR:
+        return getStr();
+      case GFPackage.PATT__PATTERN_NAME:
+        return getPatternName();
+      case GFPackage.PATT__REF:
+        if (resolve) return getRef();
+        return basicGetRef();
       case GFPackage.PATT__WILDCARD:
         return isWildcard();
+      case GFPackage.PATT__INTEGER:
+        return isInteger();
+      case GFPackage.PATT__DOUBLE:
+        return isDouble();
+      case GFPackage.PATT__STRING:
+        return isString();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -658,14 +1181,44 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
       case GFPackage.PATT__LABEL:
         setLabel((Ident)newValue);
         return;
+      case GFPackage.PATT__BIND_TO:
+        setBindTo((Ident)newValue);
+        return;
+      case GFPackage.PATT__NEGATIVE:
+        setNegative((Boolean)newValue);
+        return;
+      case GFPackage.PATT__INACCESSIBLE:
+        setInaccessible((Boolean)newValue);
+        return;
+      case GFPackage.PATT__PATTERN:
+        setPattern((Exp)newValue);
+        return;
       case GFPackage.PATT__META:
         setMeta((Boolean)newValue);
         return;
       case GFPackage.PATT__TOKEN_LIST:
         setTokenList((Boolean)newValue);
         return;
+      case GFPackage.PATT__STR:
+        setStr((String)newValue);
+        return;
+      case GFPackage.PATT__PATTERN_NAME:
+        setPatternName((Ident)newValue);
+        return;
+      case GFPackage.PATT__REF:
+        setRef((Ident)newValue);
+        return;
       case GFPackage.PATT__WILDCARD:
         setWildcard((Boolean)newValue);
+        return;
+      case GFPackage.PATT__INTEGER:
+        setInteger((Boolean)newValue);
+        return;
+      case GFPackage.PATT__DOUBLE:
+        setDouble((Boolean)newValue);
+        return;
+      case GFPackage.PATT__STRING:
+        setString((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -702,14 +1255,44 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
       case GFPackage.PATT__LABEL:
         setLabel((Ident)null);
         return;
+      case GFPackage.PATT__BIND_TO:
+        setBindTo((Ident)null);
+        return;
+      case GFPackage.PATT__NEGATIVE:
+        setNegative(NEGATIVE_EDEFAULT);
+        return;
+      case GFPackage.PATT__INACCESSIBLE:
+        setInaccessible(INACCESSIBLE_EDEFAULT);
+        return;
+      case GFPackage.PATT__PATTERN:
+        setPattern((Exp)null);
+        return;
       case GFPackage.PATT__META:
         setMeta(META_EDEFAULT);
         return;
       case GFPackage.PATT__TOKEN_LIST:
         setTokenList(TOKEN_LIST_EDEFAULT);
         return;
+      case GFPackage.PATT__STR:
+        setStr(STR_EDEFAULT);
+        return;
+      case GFPackage.PATT__PATTERN_NAME:
+        setPatternName((Ident)null);
+        return;
+      case GFPackage.PATT__REF:
+        setRef((Ident)null);
+        return;
       case GFPackage.PATT__WILDCARD:
         setWildcard(WILDCARD_EDEFAULT);
+        return;
+      case GFPackage.PATT__INTEGER:
+        setInteger(INTEGER_EDEFAULT);
+        return;
+      case GFPackage.PATT__DOUBLE:
+        setDouble(DOUBLE_EDEFAULT);
+        return;
+      case GFPackage.PATT__STRING:
+        setString(STRING_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -739,12 +1322,32 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
         return value != null;
       case GFPackage.PATT__LABEL:
         return label != null;
+      case GFPackage.PATT__BIND_TO:
+        return bindTo != null;
+      case GFPackage.PATT__NEGATIVE:
+        return negative != NEGATIVE_EDEFAULT;
+      case GFPackage.PATT__INACCESSIBLE:
+        return inaccessible != INACCESSIBLE_EDEFAULT;
+      case GFPackage.PATT__PATTERN:
+        return pattern != null;
       case GFPackage.PATT__META:
         return meta != META_EDEFAULT;
       case GFPackage.PATT__TOKEN_LIST:
         return tokenList != TOKEN_LIST_EDEFAULT;
+      case GFPackage.PATT__STR:
+        return STR_EDEFAULT == null ? str != null : !STR_EDEFAULT.equals(str);
+      case GFPackage.PATT__PATTERN_NAME:
+        return patternName != null;
+      case GFPackage.PATT__REF:
+        return ref != null;
       case GFPackage.PATT__WILDCARD:
         return wildcard != WILDCARD_EDEFAULT;
+      case GFPackage.PATT__INTEGER:
+        return integer != INTEGER_EDEFAULT;
+      case GFPackage.PATT__DOUBLE:
+        return double_ != DOUBLE_EDEFAULT;
+      case GFPackage.PATT__STRING:
+        return string != STRING_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -764,12 +1367,24 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
     result.append(or);
     result.append(", and: ");
     result.append(and);
+    result.append(", negative: ");
+    result.append(negative);
+    result.append(", inaccessible: ");
+    result.append(inaccessible);
     result.append(", meta: ");
     result.append(meta);
     result.append(", tokenList: ");
     result.append(tokenList);
+    result.append(", str: ");
+    result.append(str);
     result.append(", wildcard: ");
     result.append(wildcard);
+    result.append(", integer: ");
+    result.append(integer);
+    result.append(", double: ");
+    result.append(double_);
+    result.append(", string: ");
+    result.append(string);
     result.append(')');
     return result.toString();
   }

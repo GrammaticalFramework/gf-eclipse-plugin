@@ -128,7 +128,7 @@ public interface OperDef extends EObject
 
   /**
    * Returns the value of the '<em><b>Overloads</b></em>' containment reference list.
-   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.DefDef}.
+   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.OperDef}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Overloads</em>' containment reference list isn't clear,
@@ -140,7 +140,7 @@ public interface OperDef extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<DefDef> getOverloads();
+  EList<OperDef> getOverloads();
 
   /**
    * Returns the value of the '<em><b>Args</b></em>' containment reference list.

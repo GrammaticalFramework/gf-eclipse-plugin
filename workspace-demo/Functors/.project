@@ -26,6 +26,11 @@
 			<location>/home/john/repositories/GF-readonly/lib/src/english/CatEng.gf</location>
 		</link>
 		<link>
+			<name>.gfexternal/CatGer.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/german/CatGer.gf</location>
+		</link>
+		<link>
 			<name>.gfexternal/Combinators.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF-readonly/lib/src/api/Combinators.gf</location>
@@ -51,6 +56,11 @@
 			<location>/home/john/repositories/GF-readonly/lib/src/english/ParadigmsEng.gf</location>
 		</link>
 		<link>
+			<name>.gfexternal/ParadigmsGer.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/german/ParadigmsGer.gf</location>
+		</link>
+		<link>
 			<name>.gfexternal/Structural.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF-readonly/lib/src/abstract/Structural.gf</location>
@@ -59,6 +69,11 @@
 			<name>.gfexternal/StructuralEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF-readonly/lib/src/english/StructuralEng.gf</location>
+		</link>
+		<link>
+			<name>.gfexternal/StructuralGer.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/german/StructuralGer.gf</location>
 		</link>
 	</linkedResources>
 </projectDescription>

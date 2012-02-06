@@ -22,10 +22,10 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 	
 generate gF "http://www.grammaticalframework.org/eclipse/GF"
 
-SourceModule
-	: ModDef
+//SourceModule
+//	: ModDef
 //	| ModHeader
-;
+//;
 
 ModDef returns SourceModule
 	: (incomplete?='incomplete')? type=ModType '=' body=ModBody (';')*
@@ -144,10 +144,21 @@ ParamDef
 ;
 
 // Modified to handle "overload" syntax
+//OperDef
+//  : ListName ':' Exp 
+//  | ListName ':' Exp	'=' Exp
+//  | ListName 			'=' Exp
+//  | Name ListArg 		'=' Exp
+
 OperDef 
-	: name+=Name (',' name+=Name)* ':' type=Exp	('=' ( definition=Exp | overload?='overload' '{' overloads+=DefDef (';' overloads+=DefDef )* ';'? '}'))?
-	| name+=Name (',' name+=Name)*				 '=' ( definition=Exp | overload?='overload' '{' overloads+=DefDef (';' overloads+=DefDef )* ';'? '}')
+	: name+=Name (',' name+=Name)* ':' type=Exp	('=' ( definition=Exp | overload?='overload' '{' overloads+=OperDefInner (';' overloads+=OperDefInner )* ';'? '}'))?
+	| name+=Name (',' name+=Name)*				 '=' ( definition=Exp | overload?='overload' '{' overloads+=OperDefInner (';' overloads+=OperDefInner )* ';'? '}')
 	| name+=Name (args+=Arg)+					 '=' definition=Exp
+;
+OperDefInner returns OperDef
+	: name+=Name (',' name+=Name)* ':' type=Exp	'=' definition=Exp?
+	| name+=Name (',' name+=Name)*				'=' definition=Exp
+	| name+=Name (args+=Arg)+					'=' definition=Exp
 ;
 
 LinDef
@@ -160,7 +171,7 @@ TermDef
 ;
 
 FlagDef 
-	: name=Ident '=' (value=Ident | String)
+	: name=Ident '=' (value=Ident | strValue=String)
 ;
 
 ParConstr
@@ -197,34 +208,34 @@ Exp
 Exp 
 	: ExpLF_Exp1or3
 //	  Exp1 ({Exp.left=current} '|' right=Exp)?
-	| '\\' bindList=ListBind '->' right=Exp
-	| '\\\\' bindList=ListBind '=>' right=Exp
+	| funAbstraction?='\\' bindList=ListBind '->' right=Exp		// function abstraction (Lamba)
+	| tableAbstracttion?='\\\\' bindList=ListBind '=>' right=Exp	// table abstraction
 	| '(' bindList=ListBind ':' decl=Exp ')' '->' right=Exp // Decl, part 1
 //	| Exp3 {Exp.left=current} right=ExpLF
 	| 'let' '{' defList=ListLocDef '}' 'in' right=Exp
 	| 'let'     defList=ListLocDef     'in' right=Exp
-	| 'in' Exp5 String
+	| 'in' left=Exp5 str=String // rule by example
 ;
 
 ExpLF_Exp1or3 returns Exp
 	: Exp3 (
-		({ExpLF13.left=current} ('++'|'+') right=Exp3)* ({ExpLF13.left=current} '|' right=Exp)? // NOTE precedence of +/++ is lost here.
+		({ExpLF13.left=current} (tokenListCat?='++'|tokenGlue?='+') right=Exp3)* ({ExpLF13.left=current} '|' right=Exp)? // NOTE precedence of +/++ is lost here.
 		| {ExpLF13.left=current} right=ExpLF_AfterExp3
 	)
 ;
 
 ExpLF_AfterExp3 returns Exp 
-	: '->' Exp // Decl, part2 
-	| '=>' Exp
-	| 'where' '{' ListLocDef '}'
+	: '->' right=Exp // Decl, part2 
+	| '=>' right=Exp
+	| 'where' '{' defList=ListLocDef '}'
 ;
 
 Exp1 returns Exp
-	: Exp2 ({Exp1.left=current} '++' right=Exp2)*
+	: Exp2 ({Exp1.left=current} tokenListCat?='++' right=Exp2)*
 ;
 
 Exp2 returns Exp
-	: Exp3 ({Exp2.left=current} '+' right=Exp3)*
+	: Exp3 ({Exp2.left=current} tokenGlue?='+' right=Exp3)*
 ;
 
 /*
@@ -237,10 +248,10 @@ Exp3
   | Exp3 '**' Exp4
   | Exp4
 */
-Exp3 returns Exp 
+Exp3 returns Exp
 	: Exp3LF ({Exp3.left=current} ('!'|'*'|'**') right=Exp4)*
 ;
-Exp3LF returns Exp 
+Exp3LF returns Exp
 	: 'table' '{' caseList=ListCase '}'
 	| 'table' argType=Exp6 ( '{' caseList=ListCase '}' | '[' expList=ListExp ']' )
 	| Exp4
@@ -266,16 +277,16 @@ Exp4 returns Exp
 	: Exp4LF ({Exp4.left=current} ( right=Exp5 | '{' right=Exp '}' ) )*
 ;
 Exp4LF returns Exp 
-	: 'case' caseOf=Exp 'of' '{' caseList=ListCase '}'
-	| 'variants' '{' expList=ListExp '}'
-	| 'pre' '{' caseList=ListCase '}'
-	| 'pre' '{' String ';' alts+=Altern (';' alts+=Altern)* '}'
-	| 'pre' '{' Ident  ';' alts+=Altern (';' alts+=Altern)* '}'
+	: case?='case' caseOf=Exp 'of' '{' caseList=ListCase '}'
+	| variants?='variants' '{' expList=ListExp '}'
+	| pre?='pre' '{' caseList=ListCase '}'
+	| pre?='pre' '{' str=String  ';' alts+=Altern (';' alts+=Altern)* '}'
+	| pre?='pre' '{' ident=Ident ';' alts+=Altern (';' alts+=Altern)* '}'
 	| 'strs' '{' expList=ListExp '}'
 	| '#' pattern=Patt3
 	| 'pattern' pattern=Exp5
-	| 'lincat' name=[Ident|ID] inner=Exp5
-	| 'lin' name=[Ident|ID] inner=Exp5
+	| linwrap?='lincat' linName=[Ident|ID] inner=Exp5
+	| linwrap?='lin' linName=[Ident|ID] inner=Exp5
 	| Exp5
 ;
 
@@ -301,19 +312,18 @@ Exp6
   | '(' Exp ')'
 */
 Exp6 returns Exp 
-	: name=[Ident|ID]		// constant or variable
-	| sort?=Sort			// type of types/param types/strings/token lists
+	: ref=[Ident|ID]			// constant or variable
+	| sort?=Sort				// type of types/param types/strings/token lists
 	| string?=String			// string literal
-	| integer?=Integer		// integer literal
+	| integer?=Integer			// integer literal
 	| double?=Double			// floating point literal
-	| meta?='?' 		// metavariable
+	| meta?='?' 				// metavariable
 	| emptyString?='[' ']'		// empty token list
-	| listCat?='[' category=[Ident|ID] list=Exps ']'		// list category
-	| tokenList?='[' String ']'						// token list
+	| listCat?='[' category=[Ident|ID] context=Exps ']'	// list category
+	| tokenList?='[' str=String ']'						// token list
 	| record?='{' defList=ListLocDef '}'				// record / record type
-	| tuple?='<' (=> tupleList=ListTupleComp | v=Exp ':' type=Exp) '>'		// tuple | type-annotated expression
-//  | LString
-	| identity?='(' v=Exp ')'
+	| '<' (=> (tupleList=ListTupleComp) | (expression=Exp ':' type=Exp)) '>'		// tuple | type-annotated expression
+	| identity?='(' inner=Exp ')'
 ;
 
 ListExp
@@ -343,24 +353,21 @@ Patt2 returns Patt
 ;
 
 Patt2LF returns Patt 
-	: name=Ident '@' value=Patt3
-	| '-' Patt3
-	| '~' Exp6
+	: bindTo=Ident '@' value=Patt3
+	| negative?='-' value=Patt3
+	| inaccessible?='~' pattern=Exp6
 //	| Patt3
 ;
 
 Patt3 returns Patt 
 	: meta?='?'
-	| tokenList?='[' String ']'
-//	| '#' name=Ident
-//	| '#' name=Ident '.' label=Ident
-//	| name=Ident
-//	| name=Ident '.' label=Ident
-	| '#'? name=Ident ('.' label=Ident)?
+	| tokenList?='[' str=String ']'
+	| '#' patternName=Ident ('.' label=Ident)?
+	| ref=[Ident|ID] ('.' label=Ident)?
 	| wildcard?='_'
-	| {Integer} Integer
-	| {Double} Double
-	| {String} String
+	| integer?=Integer
+	| double?=Double
+	| string?=String
 	| '{' ListPattAss '}'
 	| '<' ListPattTupleComp '>'
 	| '(' Patt ')'

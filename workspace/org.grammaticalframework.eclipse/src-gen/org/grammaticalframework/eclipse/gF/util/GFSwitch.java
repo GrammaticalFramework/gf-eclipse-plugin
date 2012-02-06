@@ -10,55 +10,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.grammaticalframework.eclipse.gF.Altern;
-import org.grammaticalframework.eclipse.gF.Arg;
-import org.grammaticalframework.eclipse.gF.Bind;
-import org.grammaticalframework.eclipse.gF.Case;
-import org.grammaticalframework.eclipse.gF.CatDef;
-import org.grammaticalframework.eclipse.gF.DDecl;
-import org.grammaticalframework.eclipse.gF.DataDef;
-import org.grammaticalframework.eclipse.gF.DefDef;
-import org.grammaticalframework.eclipse.gF.Exp;
-import org.grammaticalframework.eclipse.gF.Exp1;
-import org.grammaticalframework.eclipse.gF.Exp2;
-import org.grammaticalframework.eclipse.gF.Exp3;
-import org.grammaticalframework.eclipse.gF.Exp4;
-import org.grammaticalframework.eclipse.gF.ExpLF13;
-import org.grammaticalframework.eclipse.gF.Exps;
-import org.grammaticalframework.eclipse.gF.FlagDef;
-import org.grammaticalframework.eclipse.gF.FunDef;
-import org.grammaticalframework.eclipse.gF.GFPackage;
-import org.grammaticalframework.eclipse.gF.Ident;
-import org.grammaticalframework.eclipse.gF.Included;
-import org.grammaticalframework.eclipse.gF.Inst;
-import org.grammaticalframework.eclipse.gF.Label;
-import org.grammaticalframework.eclipse.gF.LinDef;
-import org.grammaticalframework.eclipse.gF.ListBind;
-import org.grammaticalframework.eclipse.gF.ListCase;
-import org.grammaticalframework.eclipse.gF.ListExp;
-import org.grammaticalframework.eclipse.gF.ListIncluded;
-import org.grammaticalframework.eclipse.gF.ListInst;
-import org.grammaticalframework.eclipse.gF.ListLocDef;
-import org.grammaticalframework.eclipse.gF.ListOpen;
-import org.grammaticalframework.eclipse.gF.ListPatt;
-import org.grammaticalframework.eclipse.gF.ListPattAss;
-import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
-import org.grammaticalframework.eclipse.gF.ListTupleComp;
-import org.grammaticalframework.eclipse.gF.LocDef;
-import org.grammaticalframework.eclipse.gF.ModBody;
-import org.grammaticalframework.eclipse.gF.ModContent;
-import org.grammaticalframework.eclipse.gF.ModOpen;
-import org.grammaticalframework.eclipse.gF.ModType;
-import org.grammaticalframework.eclipse.gF.Name;
-import org.grammaticalframework.eclipse.gF.Open;
-import org.grammaticalframework.eclipse.gF.OperDef;
-import org.grammaticalframework.eclipse.gF.ParConstr;
-import org.grammaticalframework.eclipse.gF.ParamDef;
-import org.grammaticalframework.eclipse.gF.Patt;
-import org.grammaticalframework.eclipse.gF.PattAss;
-import org.grammaticalframework.eclipse.gF.SourceModule;
-import org.grammaticalframework.eclipse.gF.TermDef;
-import org.grammaticalframework.eclipse.gF.TopDef;
+import org.grammaticalframework.eclipse.gF.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -141,13 +93,6 @@ public class GFSwitch<T> extends Switch<T>
       {
         ModBody modBody = (ModBody)theEObject;
         T result = caseModBody(modBody);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.MOD_OPEN:
-      {
-        ModOpen modOpen = (ModOpen)theEObject;
-        T result = caseModOpen(modOpen);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -295,9 +240,6 @@ public class GFSwitch<T> extends Switch<T>
       {
         ListLocDef listLocDef = (ListLocDef)theEObject;
         T result = caseListLocDef(listLocDef);
-        if (result == null) result = caseExp(listLocDef);
-        if (result == null) result = casePatt(listLocDef);
-        if (result == null) result = caseDDecl(listLocDef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -305,7 +247,6 @@ public class GFSwitch<T> extends Switch<T>
       {
         Exp exp = (Exp)theEObject;
         T result = caseExp(exp);
-        if (result == null) result = casePatt(exp);
         if (result == null) result = caseDDecl(exp);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -428,9 +369,6 @@ public class GFSwitch<T> extends Switch<T>
       {
         Ident ident = (Ident)theEObject;
         T result = caseIdent(ident);
-        if (result == null) result = caseExp(ident);
-        if (result == null) result = casePatt(ident);
-        if (result == null) result = caseDDecl(ident);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -439,7 +377,6 @@ public class GFSwitch<T> extends Switch<T>
         ExpLF13 expLF13 = (ExpLF13)theEObject;
         T result = caseExpLF13(expLF13);
         if (result == null) result = caseExp(expLF13);
-        if (result == null) result = casePatt(expLF13);
         if (result == null) result = caseDDecl(expLF13);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -449,7 +386,6 @@ public class GFSwitch<T> extends Switch<T>
         Exp1 exp1 = (Exp1)theEObject;
         T result = caseExp1(exp1);
         if (result == null) result = caseExp(exp1);
-        if (result == null) result = casePatt(exp1);
         if (result == null) result = caseDDecl(exp1);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -459,7 +395,6 @@ public class GFSwitch<T> extends Switch<T>
         Exp2 exp2 = (Exp2)theEObject;
         T result = caseExp2(exp2);
         if (result == null) result = caseExp(exp2);
-        if (result == null) result = casePatt(exp2);
         if (result == null) result = caseDDecl(exp2);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -469,7 +404,6 @@ public class GFSwitch<T> extends Switch<T>
         Exp3 exp3 = (Exp3)theEObject;
         T result = caseExp3(exp3);
         if (result == null) result = caseExp(exp3);
-        if (result == null) result = casePatt(exp3);
         if (result == null) result = caseDDecl(exp3);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -479,32 +413,7 @@ public class GFSwitch<T> extends Switch<T>
         Exp4 exp4 = (Exp4)theEObject;
         T result = caseExp4(exp4);
         if (result == null) result = caseExp(exp4);
-        if (result == null) result = casePatt(exp4);
         if (result == null) result = caseDDecl(exp4);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.INTEGER:
-      {
-        org.grammaticalframework.eclipse.gF.Integer integer = (org.grammaticalframework.eclipse.gF.Integer)theEObject;
-        T result = caseInteger(integer);
-        if (result == null) result = casePatt(integer);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.DOUBLE:
-      {
-        org.grammaticalframework.eclipse.gF.Double double_ = (org.grammaticalframework.eclipse.gF.Double)theEObject;
-        T result = caseDouble(double_);
-        if (result == null) result = casePatt(double_);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case GFPackage.STRING:
-      {
-        org.grammaticalframework.eclipse.gF.String string = (org.grammaticalframework.eclipse.gF.String)theEObject;
-        T result = caseString(string);
-        if (result == null) result = casePatt(string);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -556,22 +465,6 @@ public class GFSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseModBody(ModBody object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Mod Open</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Mod Open</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseModOpen(ModOpen object)
   {
     return null;
   }
@@ -1276,54 +1169,6 @@ public class GFSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExp4(Exp4 object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Integer</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Integer</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInteger(org.grammaticalframework.eclipse.gF.Integer object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Double</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Double</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDouble(org.grammaticalframework.eclipse.gF.Double object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>String</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>String</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseString(org.grammaticalframework.eclipse.gF.String object)
   {
     return null;
   }

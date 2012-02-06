@@ -9,7 +9,7 @@ resource ResEng = {
 			{ s = \\_ => "super" ++ s } ;
  
 		mega = overload {
-			mega : Str -> {s : Gender => Str} = \s ->
+			mega : Str -> {s : Gender => Str} = \s -> 
 				{ s = \\_ => "mega" ++ s } ;
 				
 			mega : Str -> Str -> {s : Gender => Str} = \s,r ->

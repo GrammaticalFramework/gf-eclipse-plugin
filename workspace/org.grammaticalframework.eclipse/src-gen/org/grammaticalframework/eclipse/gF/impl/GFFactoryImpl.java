@@ -13,56 +13,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.grammaticalframework.eclipse.gF.Altern;
-import org.grammaticalframework.eclipse.gF.Arg;
-import org.grammaticalframework.eclipse.gF.Bind;
-import org.grammaticalframework.eclipse.gF.Case;
-import org.grammaticalframework.eclipse.gF.CatDef;
-import org.grammaticalframework.eclipse.gF.DDecl;
-import org.grammaticalframework.eclipse.gF.DataDef;
-import org.grammaticalframework.eclipse.gF.DefDef;
-import org.grammaticalframework.eclipse.gF.Exp;
-import org.grammaticalframework.eclipse.gF.Exp1;
-import org.grammaticalframework.eclipse.gF.Exp2;
-import org.grammaticalframework.eclipse.gF.Exp3;
-import org.grammaticalframework.eclipse.gF.Exp4;
-import org.grammaticalframework.eclipse.gF.ExpLF13;
-import org.grammaticalframework.eclipse.gF.Exps;
-import org.grammaticalframework.eclipse.gF.FlagDef;
-import org.grammaticalframework.eclipse.gF.FunDef;
-import org.grammaticalframework.eclipse.gF.GFFactory;
-import org.grammaticalframework.eclipse.gF.GFPackage;
-import org.grammaticalframework.eclipse.gF.Ident;
-import org.grammaticalframework.eclipse.gF.Included;
-import org.grammaticalframework.eclipse.gF.Inst;
-import org.grammaticalframework.eclipse.gF.Label;
-import org.grammaticalframework.eclipse.gF.LinDef;
-import org.grammaticalframework.eclipse.gF.ListBind;
-import org.grammaticalframework.eclipse.gF.ListCase;
-import org.grammaticalframework.eclipse.gF.ListExp;
-import org.grammaticalframework.eclipse.gF.ListIncluded;
-import org.grammaticalframework.eclipse.gF.ListInst;
-import org.grammaticalframework.eclipse.gF.ListLocDef;
-import org.grammaticalframework.eclipse.gF.ListOpen;
-import org.grammaticalframework.eclipse.gF.ListPatt;
-import org.grammaticalframework.eclipse.gF.ListPattAss;
-import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
-import org.grammaticalframework.eclipse.gF.ListTupleComp;
-import org.grammaticalframework.eclipse.gF.LocDef;
-import org.grammaticalframework.eclipse.gF.ModBody;
-import org.grammaticalframework.eclipse.gF.ModContent;
-import org.grammaticalframework.eclipse.gF.ModOpen;
-import org.grammaticalframework.eclipse.gF.ModType;
-import org.grammaticalframework.eclipse.gF.Name;
-import org.grammaticalframework.eclipse.gF.Open;
-import org.grammaticalframework.eclipse.gF.OperDef;
-import org.grammaticalframework.eclipse.gF.ParConstr;
-import org.grammaticalframework.eclipse.gF.ParamDef;
-import org.grammaticalframework.eclipse.gF.Patt;
-import org.grammaticalframework.eclipse.gF.PattAss;
-import org.grammaticalframework.eclipse.gF.SourceModule;
-import org.grammaticalframework.eclipse.gF.TermDef;
-import org.grammaticalframework.eclipse.gF.TopDef;
+import org.grammaticalframework.eclipse.gF.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -119,7 +70,6 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
       case GFPackage.SOURCE_MODULE: return createSourceModule();
       case GFPackage.MOD_TYPE: return createModType();
       case GFPackage.MOD_BODY: return createModBody();
-      case GFPackage.MOD_OPEN: return createModOpen();
       case GFPackage.MOD_CONTENT: return createModContent();
       case GFPackage.LIST_OPEN: return createListOpen();
       case GFPackage.OPEN: return createOpen();
@@ -164,9 +114,6 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
       case GFPackage.EXP2: return createExp2();
       case GFPackage.EXP3: return createExp3();
       case GFPackage.EXP4: return createExp4();
-      case GFPackage.INTEGER: return createInteger();
-      case GFPackage.DOUBLE: return createDouble();
-      case GFPackage.STRING: return createString();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -203,17 +150,6 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
   {
     ModBodyImpl modBody = new ModBodyImpl();
     return modBody;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ModOpen createModOpen()
-  {
-    ModOpenImpl modOpen = new ModOpenImpl();
-    return modOpen;
   }
 
   /**
@@ -698,39 +634,6 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
   {
     Exp4Impl exp4 = new Exp4Impl();
     return exp4;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public org.grammaticalframework.eclipse.gF.Integer createInteger()
-  {
-    IntegerImpl integer = new IntegerImpl();
-    return integer;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public org.grammaticalframework.eclipse.gF.Double createDouble()
-  {
-    DoubleImpl double_ = new DoubleImpl();
-    return double_;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public org.grammaticalframework.eclipse.gF.String createString()
-  {
-    StringImpl string = new StringImpl();
-    return string;
   }
 
   /**

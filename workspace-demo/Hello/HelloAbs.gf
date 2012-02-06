@@ -1,13 +1,14 @@
 abstract HelloAbs = AbsCat [Greeting, Recipient] ** {
 
-	flags startcat = Greeting ;
-	
-	cat Farewell ;
+  flags
+    startcat = Greeting ;
 
-	fun
-		Hello : Recipient -> Greeting ;
-	data
-		Goodbye : Recipient -> Farewell ;
-		World, Parent, Friends : Recipient ;
+  cat
+    Farewell ;
 
+  fun
+    Hello : Recipient -> Greeting ;
+  data
+    Goodbye : Recipient -> Farewell ;
+    World, Parent, Friends : Recipient ;
 }

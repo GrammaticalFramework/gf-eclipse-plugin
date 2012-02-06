@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.FlagDef#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.FlagDef#getValue <em>Value</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.FlagDef#getStrValue <em>Str Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -77,5 +78,31 @@ public interface FlagDef extends EObject
    * @generated
    */
   void setValue(Ident value);
+
+  /**
+   * Returns the value of the '<em><b>Str Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Str Value</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Str Value</em>' attribute.
+   * @see #setStrValue(String)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getFlagDef_StrValue()
+   * @model
+   * @generated
+   */
+  String getStrValue();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.FlagDef#getStrValue <em>Str Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Str Value</em>' attribute.
+   * @see #getStrValue()
+   * @generated
+   */
+  void setStrValue(String value);
 
 } // FlagDef

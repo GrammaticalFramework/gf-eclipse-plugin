@@ -7,6 +7,8 @@ package org.grammaticalframework.eclipse.gF;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>List Loc Def</b></em>'.
@@ -23,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ListLocDef extends Exp
+public interface ListLocDef extends EObject
 {
   /**
    * Returns the value of the '<em><b>Local Definitions</b></em>' containment reference list.

@@ -27,6 +27,7 @@ import org.grammaticalframework.eclipse.gF.Ident;
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.FlagDefImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.FlagDefImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.FlagDefImpl#getStrValue <em>Str Value</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,6 +54,26 @@ public class FlagDefImpl extends MinimalEObjectImpl.Container implements FlagDef
    * @ordered
    */
   protected Ident value;
+
+  /**
+   * The default value of the '{@link #getStrValue() <em>Str Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStrValue()
+   * @generated
+   * @ordered
+   */
+  protected static final String STR_VALUE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStrValue() <em>Str Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStrValue()
+   * @generated
+   * @ordered
+   */
+  protected String strValue = STR_VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -176,6 +197,29 @@ public class FlagDefImpl extends MinimalEObjectImpl.Container implements FlagDef
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getStrValue()
+  {
+    return strValue;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStrValue(String newStrValue)
+  {
+    String oldStrValue = strValue;
+    strValue = newStrValue;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.FLAG_DEF__STR_VALUE, oldStrValue, strValue));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -203,6 +247,8 @@ public class FlagDefImpl extends MinimalEObjectImpl.Container implements FlagDef
         return getName();
       case GFPackage.FLAG_DEF__VALUE:
         return getValue();
+      case GFPackage.FLAG_DEF__STR_VALUE:
+        return getStrValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -222,6 +268,9 @@ public class FlagDefImpl extends MinimalEObjectImpl.Container implements FlagDef
         return;
       case GFPackage.FLAG_DEF__VALUE:
         setValue((Ident)newValue);
+        return;
+      case GFPackage.FLAG_DEF__STR_VALUE:
+        setStrValue((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -243,6 +292,9 @@ public class FlagDefImpl extends MinimalEObjectImpl.Container implements FlagDef
       case GFPackage.FLAG_DEF__VALUE:
         setValue((Ident)null);
         return;
+      case GFPackage.FLAG_DEF__STR_VALUE:
+        setStrValue(STR_VALUE_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -261,8 +313,27 @@ public class FlagDefImpl extends MinimalEObjectImpl.Container implements FlagDef
         return name != null;
       case GFPackage.FLAG_DEF__VALUE:
         return value != null;
+      case GFPackage.FLAG_DEF__STR_VALUE:
+        return STR_VALUE_EDEFAULT == null ? strValue != null : !STR_VALUE_EDEFAULT.equals(strValue);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (strValue: ");
+    result.append(strValue);
+    result.append(')');
+    return result.toString();
   }
 
 } //FlagDefImpl

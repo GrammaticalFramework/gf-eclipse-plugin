@@ -13,6 +13,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -21,18 +22,15 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.grammaticalframework.eclipse.gF.Altern;
-import org.grammaticalframework.eclipse.gF.DDecl;
 import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.Exps;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.Label;
-import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListCase;
 import org.grammaticalframework.eclipse.gF.ListExp;
 import org.grammaticalframework.eclipse.gF.ListLocDef;
 import org.grammaticalframework.eclipse.gF.ListTupleComp;
-import org.grammaticalframework.eclipse.gF.Patt;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,30 +39,41 @@ import org.grammaticalframework.eclipse.gF.Patt;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getBindList <em>Bind List</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getE <em>E</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isFunAbstraction <em>Fun Abstraction</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getRight <em>Right</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isTableAbstracttion <em>Table Abstracttion</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getDecl <em>Decl</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getDefList <em>Def List</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getLeft <em>Left</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getStr <em>Str</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getCaseList <em>Case List</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getArgType <em>Arg Type</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getExpList <em>Exp List</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isCase <em>Case</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getCaseOf <em>Case Of</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isVariants <em>Variants</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isPre <em>Pre</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getAlts <em>Alts</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getIdent <em>Ident</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getPattern <em>Pattern</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isLinwrap <em>Linwrap</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getLinName <em>Lin Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getInner <em>Inner</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getLabels <em>Labels</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getRef <em>Ref</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isSort <em>Sort</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isString <em>String</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isInteger <em>Integer</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isDouble <em>Double</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isMeta <em>Meta</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isEmptyString <em>Empty String</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isListCat <em>List Cat</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getCategory <em>Category</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getList <em>List</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getContext <em>Context</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isTokenList <em>Token List</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isRecord <em>Record</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isTuple <em>Tuple</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getTupleList <em>Tuple List</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getV <em>V</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getExpression <em>Expression</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isIdentity <em>Identity</em>}</li>
  * </ul>
@@ -72,27 +81,57 @@ import org.grammaticalframework.eclipse.gF.Patt;
  *
  * @generated
  */
-public class ExpImpl extends PattImpl implements Exp
+public class ExpImpl extends DDeclImpl implements Exp
 {
   /**
-   * The cached value of the '{@link #getBindList() <em>Bind List</em>}' containment reference.
+   * The default value of the '{@link #isFunAbstraction() <em>Fun Abstraction</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBindList()
+   * @see #isFunAbstraction()
    * @generated
    * @ordered
    */
-  protected ListBind bindList;
+  protected static final boolean FUN_ABSTRACTION_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
+   * The cached value of the '{@link #isFunAbstraction() <em>Fun Abstraction</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #isFunAbstraction()
    * @generated
    * @ordered
    */
-  protected Exp e;
+  protected boolean funAbstraction = FUN_ABSTRACTION_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRight()
+   * @generated
+   * @ordered
+   */
+  protected Exp right;
+
+  /**
+   * The default value of the '{@link #isTableAbstracttion() <em>Table Abstracttion</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isTableAbstracttion()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean TABLE_ABSTRACTTION_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isTableAbstracttion() <em>Table Abstracttion</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isTableAbstracttion()
+   * @generated
+   * @ordered
+   */
+  protected boolean tableAbstracttion = TABLE_ABSTRACTTION_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getDecl() <em>Decl</em>}' containment reference.
@@ -113,6 +152,36 @@ public class ExpImpl extends PattImpl implements Exp
    * @ordered
    */
   protected ListLocDef defList;
+
+  /**
+   * The cached value of the '{@link #getLeft() <em>Left</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLeft()
+   * @generated
+   * @ordered
+   */
+  protected Exp left;
+
+  /**
+   * The default value of the '{@link #getStr() <em>Str</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStr()
+   * @generated
+   * @ordered
+   */
+  protected static final String STR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getStr() <em>Str</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getStr()
+   * @generated
+   * @ordered
+   */
+  protected String str = STR_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getCaseList() <em>Case List</em>}' containment reference.
@@ -145,6 +214,26 @@ public class ExpImpl extends PattImpl implements Exp
   protected ListExp expList;
 
   /**
+   * The default value of the '{@link #isCase() <em>Case</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isCase()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean CASE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isCase() <em>Case</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isCase()
+   * @generated
+   * @ordered
+   */
+  protected boolean case_ = CASE_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getCaseOf() <em>Case Of</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -153,6 +242,46 @@ public class ExpImpl extends PattImpl implements Exp
    * @ordered
    */
   protected Exp caseOf;
+
+  /**
+   * The default value of the '{@link #isVariants() <em>Variants</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isVariants()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean VARIANTS_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isVariants() <em>Variants</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isVariants()
+   * @generated
+   * @ordered
+   */
+  protected boolean variants = VARIANTS_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isPre() <em>Pre</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isPre()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean PRE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isPre() <em>Pre</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isPre()
+   * @generated
+   * @ordered
+   */
+  protected boolean pre = PRE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getAlts() <em>Alts</em>}' containment reference list.
@@ -165,6 +294,16 @@ public class ExpImpl extends PattImpl implements Exp
   protected EList<Altern> alts;
 
   /**
+   * The cached value of the '{@link #getIdent() <em>Ident</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIdent()
+   * @generated
+   * @ordered
+   */
+  protected Ident ident;
+
+  /**
    * The cached value of the '{@link #getPattern() <em>Pattern</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -172,7 +311,37 @@ public class ExpImpl extends PattImpl implements Exp
    * @generated
    * @ordered
    */
-  protected Patt pattern;
+  protected EObject pattern;
+
+  /**
+   * The default value of the '{@link #isLinwrap() <em>Linwrap</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isLinwrap()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean LINWRAP_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isLinwrap() <em>Linwrap</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isLinwrap()
+   * @generated
+   * @ordered
+   */
+  protected boolean linwrap = LINWRAP_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getLinName() <em>Lin Name</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLinName()
+   * @generated
+   * @ordered
+   */
+  protected Ident linName;
 
   /**
    * The cached value of the '{@link #getInner() <em>Inner</em>}' containment reference.
@@ -193,6 +362,16 @@ public class ExpImpl extends PattImpl implements Exp
    * @ordered
    */
   protected EList<Label> labels;
+
+  /**
+   * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRef()
+   * @generated
+   * @ordered
+   */
+  protected Ident ref;
 
   /**
    * The default value of the '{@link #isSort() <em>Sort</em>}' attribute.
@@ -275,6 +454,26 @@ public class ExpImpl extends PattImpl implements Exp
   protected boolean double_ = DOUBLE_EDEFAULT;
 
   /**
+   * The default value of the '{@link #isMeta() <em>Meta</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isMeta()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean META_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isMeta() <em>Meta</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isMeta()
+   * @generated
+   * @ordered
+   */
+  protected boolean meta = META_EDEFAULT;
+
+  /**
    * The default value of the '{@link #isEmptyString() <em>Empty String</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -325,14 +524,34 @@ public class ExpImpl extends PattImpl implements Exp
   protected Ident category;
 
   /**
-   * The cached value of the '{@link #getList() <em>List</em>}' containment reference.
+   * The cached value of the '{@link #getContext() <em>Context</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getList()
+   * @see #getContext()
    * @generated
    * @ordered
    */
-  protected Exps list;
+  protected Exps context;
+
+  /**
+   * The default value of the '{@link #isTokenList() <em>Token List</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isTokenList()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean TOKEN_LIST_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isTokenList() <em>Token List</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isTokenList()
+   * @generated
+   * @ordered
+   */
+  protected boolean tokenList = TOKEN_LIST_EDEFAULT;
 
   /**
    * The default value of the '{@link #isRecord() <em>Record</em>}' attribute.
@@ -355,26 +574,6 @@ public class ExpImpl extends PattImpl implements Exp
   protected boolean record = RECORD_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isTuple() <em>Tuple</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isTuple()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean TUPLE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isTuple() <em>Tuple</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isTuple()
-   * @generated
-   * @ordered
-   */
-  protected boolean tuple = TUPLE_EDEFAULT;
-
-  /**
    * The cached value of the '{@link #getTupleList() <em>Tuple List</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -385,14 +584,14 @@ public class ExpImpl extends PattImpl implements Exp
   protected ListTupleComp tupleList;
 
   /**
-   * The cached value of the '{@link #getV() <em>V</em>}' containment reference.
+   * The cached value of the '{@link #getExpression() <em>Expression</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getV()
+   * @see #getExpression()
    * @generated
    * @ordered
    */
-  protected Exp v;
+  protected Exp expression;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
@@ -450,9 +649,9 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public ListBind getBindList()
+  public boolean isFunAbstraction()
   {
-    return bindList;
+    return funAbstraction;
   }
 
   /**
@@ -460,13 +659,36 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetBindList(ListBind newBindList, NotificationChain msgs)
+  public void setFunAbstraction(boolean newFunAbstraction)
   {
-    ListBind oldBindList = bindList;
-    bindList = newBindList;
+    boolean oldFunAbstraction = funAbstraction;
+    funAbstraction = newFunAbstraction;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__FUN_ABSTRACTION, oldFunAbstraction, funAbstraction));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exp getRight()
+  {
+    return right;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetRight(Exp newRight, NotificationChain msgs)
+  {
+    Exp oldRight = right;
+    right = newRight;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP__BIND_LIST, oldBindList, newBindList);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP__RIGHT, oldRight, newRight);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -477,20 +699,20 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setBindList(ListBind newBindList)
+  public void setRight(Exp newRight)
   {
-    if (newBindList != bindList)
+    if (newRight != right)
     {
       NotificationChain msgs = null;
-      if (bindList != null)
-        msgs = ((InternalEObject)bindList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__BIND_LIST, null, msgs);
-      if (newBindList != null)
-        msgs = ((InternalEObject)newBindList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__BIND_LIST, null, msgs);
-      msgs = basicSetBindList(newBindList, msgs);
+      if (right != null)
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__RIGHT, null, msgs);
+      if (newRight != null)
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__RIGHT, null, msgs);
+      msgs = basicSetRight(newRight, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__BIND_LIST, newBindList, newBindList));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__RIGHT, newRight, newRight));
   }
 
   /**
@@ -498,9 +720,9 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public Exp getE()
+  public boolean isTableAbstracttion()
   {
-    return e;
+    return tableAbstracttion;
   }
 
   /**
@@ -508,37 +730,12 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetE(Exp newE, NotificationChain msgs)
+  public void setTableAbstracttion(boolean newTableAbstracttion)
   {
-    Exp oldE = e;
-    e = newE;
+    boolean oldTableAbstracttion = tableAbstracttion;
+    tableAbstracttion = newTableAbstracttion;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP__E, oldE, newE);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setE(Exp newE)
-  {
-    if (newE != e)
-    {
-      NotificationChain msgs = null;
-      if (e != null)
-        msgs = ((InternalEObject)e).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__E, null, msgs);
-      if (newE != null)
-        msgs = ((InternalEObject)newE).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__E, null, msgs);
-      msgs = basicSetE(newE, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__E, newE, newE));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__TABLE_ABSTRACTTION, oldTableAbstracttion, tableAbstracttion));
   }
 
   /**
@@ -635,6 +832,77 @@ public class ExpImpl extends PattImpl implements Exp
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__DEF_LIST, newDefList, newDefList));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exp getLeft()
+  {
+    return left;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLeft(Exp newLeft, NotificationChain msgs)
+  {
+    Exp oldLeft = left;
+    left = newLeft;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP__LEFT, oldLeft, newLeft);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLeft(Exp newLeft)
+  {
+    if (newLeft != left)
+    {
+      NotificationChain msgs = null;
+      if (left != null)
+        msgs = ((InternalEObject)left).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__LEFT, null, msgs);
+      if (newLeft != null)
+        msgs = ((InternalEObject)newLeft).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__LEFT, null, msgs);
+      msgs = basicSetLeft(newLeft, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__LEFT, newLeft, newLeft));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getStr()
+  {
+    return str;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStr(String newStr)
+  {
+    String oldStr = str;
+    str = newStr;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__STR, oldStr, str));
   }
 
   /**
@@ -786,6 +1054,29 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isCase()
+  {
+    return case_;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCase(boolean newCase)
+  {
+    boolean oldCase = case_;
+    case_ = newCase;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__CASE, oldCase, case_));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Exp getCaseOf()
   {
     return caseOf;
@@ -834,6 +1125,52 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isVariants()
+  {
+    return variants;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVariants(boolean newVariants)
+  {
+    boolean oldVariants = variants;
+    variants = newVariants;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__VARIANTS, oldVariants, variants));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isPre()
+  {
+    return pre;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPre(boolean newPre)
+  {
+    boolean oldPre = pre;
+    pre = newPre;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__PRE, oldPre, pre));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Altern> getAlts()
   {
     if (alts == null)
@@ -848,7 +1185,55 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public Patt getPattern()
+  public Ident getIdent()
+  {
+    return ident;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetIdent(Ident newIdent, NotificationChain msgs)
+  {
+    Ident oldIdent = ident;
+    ident = newIdent;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP__IDENT, oldIdent, newIdent);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setIdent(Ident newIdent)
+  {
+    if (newIdent != ident)
+    {
+      NotificationChain msgs = null;
+      if (ident != null)
+        msgs = ((InternalEObject)ident).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__IDENT, null, msgs);
+      if (newIdent != null)
+        msgs = ((InternalEObject)newIdent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__IDENT, null, msgs);
+      msgs = basicSetIdent(newIdent, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__IDENT, newIdent, newIdent));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EObject getPattern()
   {
     return pattern;
   }
@@ -858,9 +1243,9 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPattern(Patt newPattern, NotificationChain msgs)
+  public NotificationChain basicSetPattern(EObject newPattern, NotificationChain msgs)
   {
-    Patt oldPattern = pattern;
+    EObject oldPattern = pattern;
     pattern = newPattern;
     if (eNotificationRequired())
     {
@@ -875,7 +1260,7 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPattern(Patt newPattern)
+  public void setPattern(EObject newPattern)
   {
     if (newPattern != pattern)
     {
@@ -889,6 +1274,72 @@ public class ExpImpl extends PattImpl implements Exp
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__PATTERN, newPattern, newPattern));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isLinwrap()
+  {
+    return linwrap;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLinwrap(boolean newLinwrap)
+  {
+    boolean oldLinwrap = linwrap;
+    linwrap = newLinwrap;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__LINWRAP, oldLinwrap, linwrap));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ident getLinName()
+  {
+    if (linName != null && linName.eIsProxy())
+    {
+      InternalEObject oldLinName = (InternalEObject)linName;
+      linName = (Ident)eResolveProxy(oldLinName);
+      if (linName != oldLinName)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GFPackage.EXP__LIN_NAME, oldLinName, linName));
+      }
+    }
+    return linName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ident basicGetLinName()
+  {
+    return linName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLinName(Ident newLinName)
+  {
+    Ident oldLinName = linName;
+    linName = newLinName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__LIN_NAME, oldLinName, linName));
   }
 
   /**
@@ -951,6 +1402,49 @@ public class ExpImpl extends PattImpl implements Exp
       labels = new EObjectContainmentEList<Label>(Label.class, this, GFPackage.EXP__LABELS);
     }
     return labels;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ident getRef()
+  {
+    if (ref != null && ref.eIsProxy())
+    {
+      InternalEObject oldRef = (InternalEObject)ref;
+      ref = (Ident)eResolveProxy(oldRef);
+      if (ref != oldRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GFPackage.EXP__REF, oldRef, ref));
+      }
+    }
+    return ref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Ident basicGetRef()
+  {
+    return ref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRef(Ident newRef)
+  {
+    Ident oldRef = ref;
+    ref = newRef;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__REF, oldRef, ref));
   }
 
   /**
@@ -1050,6 +1544,29 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isMeta()
+  {
+    return meta;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMeta(boolean newMeta)
+  {
+    boolean oldMeta = meta;
+    meta = newMeta;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__META, oldMeta, meta));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public boolean isEmptyString()
   {
     return emptyString;
@@ -1139,9 +1656,9 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public Exps getList()
+  public Exps getContext()
   {
-    return list;
+    return context;
   }
 
   /**
@@ -1149,13 +1666,13 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetList(Exps newList, NotificationChain msgs)
+  public NotificationChain basicSetContext(Exps newContext, NotificationChain msgs)
   {
-    Exps oldList = list;
-    list = newList;
+    Exps oldContext = context;
+    context = newContext;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP__LIST, oldList, newList);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP__CONTEXT, oldContext, newContext);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -1166,20 +1683,43 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setList(Exps newList)
+  public void setContext(Exps newContext)
   {
-    if (newList != list)
+    if (newContext != context)
     {
       NotificationChain msgs = null;
-      if (list != null)
-        msgs = ((InternalEObject)list).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__LIST, null, msgs);
-      if (newList != null)
-        msgs = ((InternalEObject)newList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__LIST, null, msgs);
-      msgs = basicSetList(newList, msgs);
+      if (context != null)
+        msgs = ((InternalEObject)context).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__CONTEXT, null, msgs);
+      if (newContext != null)
+        msgs = ((InternalEObject)newContext).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__CONTEXT, null, msgs);
+      msgs = basicSetContext(newContext, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__LIST, newList, newList));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__CONTEXT, newContext, newContext));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isTokenList()
+  {
+    return tokenList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setTokenList(boolean newTokenList)
+  {
+    boolean oldTokenList = tokenList;
+    tokenList = newTokenList;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__TOKEN_LIST, oldTokenList, tokenList));
   }
 
   /**
@@ -1203,29 +1743,6 @@ public class ExpImpl extends PattImpl implements Exp
     record = newRecord;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__RECORD, oldRecord, record));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public boolean isTuple()
-  {
-    return tuple;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTuple(boolean newTuple)
-  {
-    boolean oldTuple = tuple;
-    tuple = newTuple;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__TUPLE, oldTuple, tuple));
   }
 
   /**
@@ -1281,9 +1798,9 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public Exp getV()
+  public Exp getExpression()
   {
-    return v;
+    return expression;
   }
 
   /**
@@ -1291,13 +1808,13 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetV(Exp newV, NotificationChain msgs)
+  public NotificationChain basicSetExpression(Exp newExpression, NotificationChain msgs)
   {
-    Exp oldV = v;
-    v = newV;
+    Exp oldExpression = expression;
+    expression = newExpression;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP__V, oldV, newV);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP__EXPRESSION, oldExpression, newExpression);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -1308,20 +1825,20 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setV(Exp newV)
+  public void setExpression(Exp newExpression)
   {
-    if (newV != v)
+    if (newExpression != expression)
     {
       NotificationChain msgs = null;
-      if (v != null)
-        msgs = ((InternalEObject)v).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__V, null, msgs);
-      if (newV != null)
-        msgs = ((InternalEObject)newV).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__V, null, msgs);
-      msgs = basicSetV(newV, msgs);
+      if (expression != null)
+        msgs = ((InternalEObject)expression).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__EXPRESSION, null, msgs);
+      if (newExpression != null)
+        msgs = ((InternalEObject)newExpression).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__EXPRESSION, null, msgs);
+      msgs = basicSetExpression(newExpression, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__V, newV, newV));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__EXPRESSION, newExpression, newExpression));
   }
 
   /**
@@ -1405,14 +1922,14 @@ public class ExpImpl extends PattImpl implements Exp
   {
     switch (featureID)
     {
-      case GFPackage.EXP__BIND_LIST:
-        return basicSetBindList(null, msgs);
-      case GFPackage.EXP__E:
-        return basicSetE(null, msgs);
+      case GFPackage.EXP__RIGHT:
+        return basicSetRight(null, msgs);
       case GFPackage.EXP__DECL:
         return basicSetDecl(null, msgs);
       case GFPackage.EXP__DEF_LIST:
         return basicSetDefList(null, msgs);
+      case GFPackage.EXP__LEFT:
+        return basicSetLeft(null, msgs);
       case GFPackage.EXP__CASE_LIST:
         return basicSetCaseList(null, msgs);
       case GFPackage.EXP__ARG_TYPE:
@@ -1423,18 +1940,20 @@ public class ExpImpl extends PattImpl implements Exp
         return basicSetCaseOf(null, msgs);
       case GFPackage.EXP__ALTS:
         return ((InternalEList<?>)getAlts()).basicRemove(otherEnd, msgs);
+      case GFPackage.EXP__IDENT:
+        return basicSetIdent(null, msgs);
       case GFPackage.EXP__PATTERN:
         return basicSetPattern(null, msgs);
       case GFPackage.EXP__INNER:
         return basicSetInner(null, msgs);
       case GFPackage.EXP__LABELS:
         return ((InternalEList<?>)getLabels()).basicRemove(otherEnd, msgs);
-      case GFPackage.EXP__LIST:
-        return basicSetList(null, msgs);
+      case GFPackage.EXP__CONTEXT:
+        return basicSetContext(null, msgs);
       case GFPackage.EXP__TUPLE_LIST:
         return basicSetTupleList(null, msgs);
-      case GFPackage.EXP__V:
-        return basicSetV(null, msgs);
+      case GFPackage.EXP__EXPRESSION:
+        return basicSetExpression(null, msgs);
       case GFPackage.EXP__TYPE:
         return basicSetType(null, msgs);
     }
@@ -1451,30 +1970,52 @@ public class ExpImpl extends PattImpl implements Exp
   {
     switch (featureID)
     {
-      case GFPackage.EXP__BIND_LIST:
-        return getBindList();
-      case GFPackage.EXP__E:
-        return getE();
+      case GFPackage.EXP__FUN_ABSTRACTION:
+        return isFunAbstraction();
+      case GFPackage.EXP__RIGHT:
+        return getRight();
+      case GFPackage.EXP__TABLE_ABSTRACTTION:
+        return isTableAbstracttion();
       case GFPackage.EXP__DECL:
         return getDecl();
       case GFPackage.EXP__DEF_LIST:
         return getDefList();
+      case GFPackage.EXP__LEFT:
+        return getLeft();
+      case GFPackage.EXP__STR:
+        return getStr();
       case GFPackage.EXP__CASE_LIST:
         return getCaseList();
       case GFPackage.EXP__ARG_TYPE:
         return getArgType();
       case GFPackage.EXP__EXP_LIST:
         return getExpList();
+      case GFPackage.EXP__CASE:
+        return isCase();
       case GFPackage.EXP__CASE_OF:
         return getCaseOf();
+      case GFPackage.EXP__VARIANTS:
+        return isVariants();
+      case GFPackage.EXP__PRE:
+        return isPre();
       case GFPackage.EXP__ALTS:
         return getAlts();
+      case GFPackage.EXP__IDENT:
+        return getIdent();
       case GFPackage.EXP__PATTERN:
         return getPattern();
+      case GFPackage.EXP__LINWRAP:
+        return isLinwrap();
+      case GFPackage.EXP__LIN_NAME:
+        if (resolve) return getLinName();
+        return basicGetLinName();
       case GFPackage.EXP__INNER:
         return getInner();
       case GFPackage.EXP__LABELS:
         return getLabels();
+      case GFPackage.EXP__REF:
+        if (resolve) return getRef();
+        return basicGetRef();
       case GFPackage.EXP__SORT:
         return isSort();
       case GFPackage.EXP__STRING:
@@ -1483,6 +2024,8 @@ public class ExpImpl extends PattImpl implements Exp
         return isInteger();
       case GFPackage.EXP__DOUBLE:
         return isDouble();
+      case GFPackage.EXP__META:
+        return isMeta();
       case GFPackage.EXP__EMPTY_STRING:
         return isEmptyString();
       case GFPackage.EXP__LIST_CAT:
@@ -1490,16 +2033,16 @@ public class ExpImpl extends PattImpl implements Exp
       case GFPackage.EXP__CATEGORY:
         if (resolve) return getCategory();
         return basicGetCategory();
-      case GFPackage.EXP__LIST:
-        return getList();
+      case GFPackage.EXP__CONTEXT:
+        return getContext();
+      case GFPackage.EXP__TOKEN_LIST:
+        return isTokenList();
       case GFPackage.EXP__RECORD:
         return isRecord();
-      case GFPackage.EXP__TUPLE:
-        return isTuple();
       case GFPackage.EXP__TUPLE_LIST:
         return getTupleList();
-      case GFPackage.EXP__V:
-        return getV();
+      case GFPackage.EXP__EXPRESSION:
+        return getExpression();
       case GFPackage.EXP__TYPE:
         return getType();
       case GFPackage.EXP__IDENTITY:
@@ -1519,17 +2062,26 @@ public class ExpImpl extends PattImpl implements Exp
   {
     switch (featureID)
     {
-      case GFPackage.EXP__BIND_LIST:
-        setBindList((ListBind)newValue);
+      case GFPackage.EXP__FUN_ABSTRACTION:
+        setFunAbstraction((Boolean)newValue);
         return;
-      case GFPackage.EXP__E:
-        setE((Exp)newValue);
+      case GFPackage.EXP__RIGHT:
+        setRight((Exp)newValue);
+        return;
+      case GFPackage.EXP__TABLE_ABSTRACTTION:
+        setTableAbstracttion((Boolean)newValue);
         return;
       case GFPackage.EXP__DECL:
         setDecl((Exp)newValue);
         return;
       case GFPackage.EXP__DEF_LIST:
         setDefList((ListLocDef)newValue);
+        return;
+      case GFPackage.EXP__LEFT:
+        setLeft((Exp)newValue);
+        return;
+      case GFPackage.EXP__STR:
+        setStr((String)newValue);
         return;
       case GFPackage.EXP__CASE_LIST:
         setCaseList((ListCase)newValue);
@@ -1540,15 +2092,33 @@ public class ExpImpl extends PattImpl implements Exp
       case GFPackage.EXP__EXP_LIST:
         setExpList((ListExp)newValue);
         return;
+      case GFPackage.EXP__CASE:
+        setCase((Boolean)newValue);
+        return;
       case GFPackage.EXP__CASE_OF:
         setCaseOf((Exp)newValue);
+        return;
+      case GFPackage.EXP__VARIANTS:
+        setVariants((Boolean)newValue);
+        return;
+      case GFPackage.EXP__PRE:
+        setPre((Boolean)newValue);
         return;
       case GFPackage.EXP__ALTS:
         getAlts().clear();
         getAlts().addAll((Collection<? extends Altern>)newValue);
         return;
+      case GFPackage.EXP__IDENT:
+        setIdent((Ident)newValue);
+        return;
       case GFPackage.EXP__PATTERN:
-        setPattern((Patt)newValue);
+        setPattern((EObject)newValue);
+        return;
+      case GFPackage.EXP__LINWRAP:
+        setLinwrap((Boolean)newValue);
+        return;
+      case GFPackage.EXP__LIN_NAME:
+        setLinName((Ident)newValue);
         return;
       case GFPackage.EXP__INNER:
         setInner((Exp)newValue);
@@ -1556,6 +2126,9 @@ public class ExpImpl extends PattImpl implements Exp
       case GFPackage.EXP__LABELS:
         getLabels().clear();
         getLabels().addAll((Collection<? extends Label>)newValue);
+        return;
+      case GFPackage.EXP__REF:
+        setRef((Ident)newValue);
         return;
       case GFPackage.EXP__SORT:
         setSort((Boolean)newValue);
@@ -1569,6 +2142,9 @@ public class ExpImpl extends PattImpl implements Exp
       case GFPackage.EXP__DOUBLE:
         setDouble((Boolean)newValue);
         return;
+      case GFPackage.EXP__META:
+        setMeta((Boolean)newValue);
+        return;
       case GFPackage.EXP__EMPTY_STRING:
         setEmptyString((Boolean)newValue);
         return;
@@ -1578,20 +2154,20 @@ public class ExpImpl extends PattImpl implements Exp
       case GFPackage.EXP__CATEGORY:
         setCategory((Ident)newValue);
         return;
-      case GFPackage.EXP__LIST:
-        setList((Exps)newValue);
+      case GFPackage.EXP__CONTEXT:
+        setContext((Exps)newValue);
+        return;
+      case GFPackage.EXP__TOKEN_LIST:
+        setTokenList((Boolean)newValue);
         return;
       case GFPackage.EXP__RECORD:
         setRecord((Boolean)newValue);
         return;
-      case GFPackage.EXP__TUPLE:
-        setTuple((Boolean)newValue);
-        return;
       case GFPackage.EXP__TUPLE_LIST:
         setTupleList((ListTupleComp)newValue);
         return;
-      case GFPackage.EXP__V:
-        setV((Exp)newValue);
+      case GFPackage.EXP__EXPRESSION:
+        setExpression((Exp)newValue);
         return;
       case GFPackage.EXP__TYPE:
         setType((Exp)newValue);
@@ -1613,17 +2189,26 @@ public class ExpImpl extends PattImpl implements Exp
   {
     switch (featureID)
     {
-      case GFPackage.EXP__BIND_LIST:
-        setBindList((ListBind)null);
+      case GFPackage.EXP__FUN_ABSTRACTION:
+        setFunAbstraction(FUN_ABSTRACTION_EDEFAULT);
         return;
-      case GFPackage.EXP__E:
-        setE((Exp)null);
+      case GFPackage.EXP__RIGHT:
+        setRight((Exp)null);
+        return;
+      case GFPackage.EXP__TABLE_ABSTRACTTION:
+        setTableAbstracttion(TABLE_ABSTRACTTION_EDEFAULT);
         return;
       case GFPackage.EXP__DECL:
         setDecl((Exp)null);
         return;
       case GFPackage.EXP__DEF_LIST:
         setDefList((ListLocDef)null);
+        return;
+      case GFPackage.EXP__LEFT:
+        setLeft((Exp)null);
+        return;
+      case GFPackage.EXP__STR:
+        setStr(STR_EDEFAULT);
         return;
       case GFPackage.EXP__CASE_LIST:
         setCaseList((ListCase)null);
@@ -1634,20 +2219,41 @@ public class ExpImpl extends PattImpl implements Exp
       case GFPackage.EXP__EXP_LIST:
         setExpList((ListExp)null);
         return;
+      case GFPackage.EXP__CASE:
+        setCase(CASE_EDEFAULT);
+        return;
       case GFPackage.EXP__CASE_OF:
         setCaseOf((Exp)null);
+        return;
+      case GFPackage.EXP__VARIANTS:
+        setVariants(VARIANTS_EDEFAULT);
+        return;
+      case GFPackage.EXP__PRE:
+        setPre(PRE_EDEFAULT);
         return;
       case GFPackage.EXP__ALTS:
         getAlts().clear();
         return;
+      case GFPackage.EXP__IDENT:
+        setIdent((Ident)null);
+        return;
       case GFPackage.EXP__PATTERN:
-        setPattern((Patt)null);
+        setPattern((EObject)null);
+        return;
+      case GFPackage.EXP__LINWRAP:
+        setLinwrap(LINWRAP_EDEFAULT);
+        return;
+      case GFPackage.EXP__LIN_NAME:
+        setLinName((Ident)null);
         return;
       case GFPackage.EXP__INNER:
         setInner((Exp)null);
         return;
       case GFPackage.EXP__LABELS:
         getLabels().clear();
+        return;
+      case GFPackage.EXP__REF:
+        setRef((Ident)null);
         return;
       case GFPackage.EXP__SORT:
         setSort(SORT_EDEFAULT);
@@ -1661,6 +2267,9 @@ public class ExpImpl extends PattImpl implements Exp
       case GFPackage.EXP__DOUBLE:
         setDouble(DOUBLE_EDEFAULT);
         return;
+      case GFPackage.EXP__META:
+        setMeta(META_EDEFAULT);
+        return;
       case GFPackage.EXP__EMPTY_STRING:
         setEmptyString(EMPTY_STRING_EDEFAULT);
         return;
@@ -1670,20 +2279,20 @@ public class ExpImpl extends PattImpl implements Exp
       case GFPackage.EXP__CATEGORY:
         setCategory((Ident)null);
         return;
-      case GFPackage.EXP__LIST:
-        setList((Exps)null);
+      case GFPackage.EXP__CONTEXT:
+        setContext((Exps)null);
+        return;
+      case GFPackage.EXP__TOKEN_LIST:
+        setTokenList(TOKEN_LIST_EDEFAULT);
         return;
       case GFPackage.EXP__RECORD:
         setRecord(RECORD_EDEFAULT);
         return;
-      case GFPackage.EXP__TUPLE:
-        setTuple(TUPLE_EDEFAULT);
-        return;
       case GFPackage.EXP__TUPLE_LIST:
         setTupleList((ListTupleComp)null);
         return;
-      case GFPackage.EXP__V:
-        setV((Exp)null);
+      case GFPackage.EXP__EXPRESSION:
+        setExpression((Exp)null);
         return;
       case GFPackage.EXP__TYPE:
         setType((Exp)null);
@@ -1705,30 +2314,50 @@ public class ExpImpl extends PattImpl implements Exp
   {
     switch (featureID)
     {
-      case GFPackage.EXP__BIND_LIST:
-        return bindList != null;
-      case GFPackage.EXP__E:
-        return e != null;
+      case GFPackage.EXP__FUN_ABSTRACTION:
+        return funAbstraction != FUN_ABSTRACTION_EDEFAULT;
+      case GFPackage.EXP__RIGHT:
+        return right != null;
+      case GFPackage.EXP__TABLE_ABSTRACTTION:
+        return tableAbstracttion != TABLE_ABSTRACTTION_EDEFAULT;
       case GFPackage.EXP__DECL:
         return decl != null;
       case GFPackage.EXP__DEF_LIST:
         return defList != null;
+      case GFPackage.EXP__LEFT:
+        return left != null;
+      case GFPackage.EXP__STR:
+        return STR_EDEFAULT == null ? str != null : !STR_EDEFAULT.equals(str);
       case GFPackage.EXP__CASE_LIST:
         return caseList != null;
       case GFPackage.EXP__ARG_TYPE:
         return argType != null;
       case GFPackage.EXP__EXP_LIST:
         return expList != null;
+      case GFPackage.EXP__CASE:
+        return case_ != CASE_EDEFAULT;
       case GFPackage.EXP__CASE_OF:
         return caseOf != null;
+      case GFPackage.EXP__VARIANTS:
+        return variants != VARIANTS_EDEFAULT;
+      case GFPackage.EXP__PRE:
+        return pre != PRE_EDEFAULT;
       case GFPackage.EXP__ALTS:
         return alts != null && !alts.isEmpty();
+      case GFPackage.EXP__IDENT:
+        return ident != null;
       case GFPackage.EXP__PATTERN:
         return pattern != null;
+      case GFPackage.EXP__LINWRAP:
+        return linwrap != LINWRAP_EDEFAULT;
+      case GFPackage.EXP__LIN_NAME:
+        return linName != null;
       case GFPackage.EXP__INNER:
         return inner != null;
       case GFPackage.EXP__LABELS:
         return labels != null && !labels.isEmpty();
+      case GFPackage.EXP__REF:
+        return ref != null;
       case GFPackage.EXP__SORT:
         return sort != SORT_EDEFAULT;
       case GFPackage.EXP__STRING:
@@ -1737,22 +2366,24 @@ public class ExpImpl extends PattImpl implements Exp
         return integer != INTEGER_EDEFAULT;
       case GFPackage.EXP__DOUBLE:
         return double_ != DOUBLE_EDEFAULT;
+      case GFPackage.EXP__META:
+        return meta != META_EDEFAULT;
       case GFPackage.EXP__EMPTY_STRING:
         return emptyString != EMPTY_STRING_EDEFAULT;
       case GFPackage.EXP__LIST_CAT:
         return listCat != LIST_CAT_EDEFAULT;
       case GFPackage.EXP__CATEGORY:
         return category != null;
-      case GFPackage.EXP__LIST:
-        return list != null;
+      case GFPackage.EXP__CONTEXT:
+        return context != null;
+      case GFPackage.EXP__TOKEN_LIST:
+        return tokenList != TOKEN_LIST_EDEFAULT;
       case GFPackage.EXP__RECORD:
         return record != RECORD_EDEFAULT;
-      case GFPackage.EXP__TUPLE:
-        return tuple != TUPLE_EDEFAULT;
       case GFPackage.EXP__TUPLE_LIST:
         return tupleList != null;
-      case GFPackage.EXP__V:
-        return v != null;
+      case GFPackage.EXP__EXPRESSION:
+        return expression != null;
       case GFPackage.EXP__TYPE:
         return type != null;
       case GFPackage.EXP__IDENTITY:
@@ -1767,52 +2398,26 @@ public class ExpImpl extends PattImpl implements Exp
    * @generated
    */
   @Override
-  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == DDecl.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case GFPackage.EXP__BIND_LIST: return GFPackage.DDECL__BIND_LIST;
-        case GFPackage.EXP__E: return GFPackage.DDECL__E;
-        default: return -1;
-      }
-    }
-    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == DDecl.class)
-    {
-      switch (baseFeatureID)
-      {
-        case GFPackage.DDECL__BIND_LIST: return GFPackage.EXP__BIND_LIST;
-        case GFPackage.DDECL__E: return GFPackage.EXP__E;
-        default: return -1;
-      }
-    }
-    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public String toString()
   {
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (sort: ");
+    result.append(" (funAbstraction: ");
+    result.append(funAbstraction);
+    result.append(", tableAbstracttion: ");
+    result.append(tableAbstracttion);
+    result.append(", str: ");
+    result.append(str);
+    result.append(", case: ");
+    result.append(case_);
+    result.append(", variants: ");
+    result.append(variants);
+    result.append(", pre: ");
+    result.append(pre);
+    result.append(", linwrap: ");
+    result.append(linwrap);
+    result.append(", sort: ");
     result.append(sort);
     result.append(", string: ");
     result.append(string);
@@ -1820,14 +2425,16 @@ public class ExpImpl extends PattImpl implements Exp
     result.append(integer);
     result.append(", double: ");
     result.append(double_);
+    result.append(", meta: ");
+    result.append(meta);
     result.append(", emptyString: ");
     result.append(emptyString);
     result.append(", listCat: ");
     result.append(listCat);
+    result.append(", tokenList: ");
+    result.append(tokenList);
     result.append(", record: ");
     result.append(record);
-    result.append(", tuple: ");
-    result.append(tuple);
     result.append(", identity: ");
     result.append(identity);
     result.append(')');

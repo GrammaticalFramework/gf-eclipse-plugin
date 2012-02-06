@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#getFunctor <em>Functor</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#isFunctorInstantiation <em>Functor Instantiation</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#getInstantiationList <em>Instantiation List</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#getModOpen <em>Mod Open</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModBody#getModContent <em>Mod Content</em>}</li>
  * </ul>
  * </p>
@@ -133,32 +132,6 @@ public interface ModBody extends EObject
    * @generated
    */
   void setInstantiationList(ListInst value);
-
-  /**
-   * Returns the value of the '<em><b>Mod Open</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Mod Open</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Mod Open</em>' containment reference.
-   * @see #setModOpen(ModOpen)
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getModBody_ModOpen()
-   * @model containment="true"
-   * @generated
-   */
-  ModOpen getModOpen();
-
-  /**
-   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.ModBody#getModOpen <em>Mod Open</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Mod Open</em>' containment reference.
-   * @see #getModOpen()
-   * @generated
-   */
-  void setModOpen(ModOpen value);
 
   /**
    * Returns the value of the '<em><b>Mod Content</b></em>' containment reference.

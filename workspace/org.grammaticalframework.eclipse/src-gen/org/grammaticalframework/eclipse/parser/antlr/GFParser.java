@@ -25,7 +25,7 @@ public class GFParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrParser
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "SourceModule";
+		return "ModDef";
 	}
 	
 	public GFGrammarAccess getGrammarAccess() {

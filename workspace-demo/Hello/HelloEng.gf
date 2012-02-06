@@ -17,4 +17,4 @@ concrete HelloEng of HelloAbs = ResEng ** {
 			Masc => "dad" ; Fem => "mum"
 		} } ;
 		Friends = ResEng.mega "friends" "loved ones" ;
-} ;
+} ; 

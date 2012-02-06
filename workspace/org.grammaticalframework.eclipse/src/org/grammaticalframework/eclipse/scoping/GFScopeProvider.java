@@ -26,10 +26,15 @@ import org.eclipse.xtext.scoping.impl.MultimapBasedSelectable;
 import org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider;
 import org.eclipse.xtext.util.OnChangeEvictingCache;
 import org.eclipse.xtext.util.Tuples;
+import org.grammaticalframework.eclipse.gF.Arg;
+import org.grammaticalframework.eclipse.gF.DefDef;
+import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListLocDef;
 import org.grammaticalframework.eclipse.gF.ListPatt;
+import org.grammaticalframework.eclipse.gF.OperDef;
 import org.grammaticalframework.eclipse.gF.TopDef;
 import org.grammaticalframework.eclipse.naming.GFQualifiedNameProvider;
 
@@ -173,11 +178,20 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 					public QualifiedName apply(EObject from) {
 						EObject parent = from.eContainer();
 						EObject grandparent = parent.eContainer();
+						EObject greatgrandparent = grandparent.eContainer();
 						if (from instanceof Ident) {
 							Ident ident = ((Ident)from);
 							
+							// Explicitly avoid record fields
+							if (greatgrandparent instanceof Exp && ((Exp)greatgrandparent).isRecord()) {
+								return null;
+							}
+							
 							// Local variables
-							if (grandparent instanceof ListPatt) {
+							if (grandparent instanceof ListPatt && greatgrandparent instanceof DefDef) {
+								return getConverter().toQualifiedName(ident.getS());
+							}
+							if (parent instanceof Arg && (grandparent instanceof OperDef || grandparent instanceof LinDef )) {
 								return getConverter().toQualifiedName(ident.getS());
 							}
 							

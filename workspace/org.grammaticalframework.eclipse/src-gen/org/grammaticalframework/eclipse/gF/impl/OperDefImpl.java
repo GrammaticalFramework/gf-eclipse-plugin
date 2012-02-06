@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.grammaticalframework.eclipse.gF.Arg;
-import org.grammaticalframework.eclipse.gF.DefDef;
 import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Name;
@@ -106,7 +105,7 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
    * @generated
    * @ordered
    */
-  protected EList<DefDef> overloads;
+  protected EList<OperDef> overloads;
 
   /**
    * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
@@ -277,11 +276,11 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<DefDef> getOverloads()
+  public EList<OperDef> getOverloads()
   {
     if (overloads == null)
     {
-      overloads = new EObjectContainmentEList<DefDef>(DefDef.class, this, GFPackage.OPER_DEF__OVERLOADS);
+      overloads = new EObjectContainmentEList<OperDef>(OperDef.class, this, GFPackage.OPER_DEF__OVERLOADS);
     }
     return overloads;
   }
@@ -376,7 +375,7 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
         return;
       case GFPackage.OPER_DEF__OVERLOADS:
         getOverloads().clear();
-        getOverloads().addAll((Collection<? extends DefDef>)newValue);
+        getOverloads().addAll((Collection<? extends OperDef>)newValue);
         return;
       case GFPackage.OPER_DEF__ARGS:
         getArgs().clear();

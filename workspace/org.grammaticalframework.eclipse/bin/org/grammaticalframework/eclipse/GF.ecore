@@ -31,13 +31,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="functorInstantiation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="instantiationList" eType="#//ListInst"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="modOpen" eType="#//ModOpen"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modContent" eType="#//ModContent"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModOpen">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="openList" eType="#//ListOpen"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModContent">
@@ -137,7 +131,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="overload" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="overloads" upperBound="-1"
-        eType="#//DefDef" containment="true"/>
+        eType="#//OperDef" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//Arg"
         containment="true"/>
   </eClassifiers>
@@ -160,6 +154,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Ident"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="strValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ParConstr">
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Ident"
@@ -177,42 +172,58 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Exp" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="#//Exp" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ListLocDef" eSuperTypes="#//Exp">
+  <eClassifiers xsi:type="ecore:EClass" name="ListLocDef">
     <eStructuralFeatures xsi:type="ecore:EReference" name="localDefinitions" upperBound="-1"
         eType="#//LocDef" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Exp" eSuperTypes="#//Patt #//DDecl">
+  <eClassifiers xsi:type="ecore:EClass" name="Exp" eSuperTypes="#//DDecl">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="funAbstraction" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Exp" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tableAbstracttion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="decl" eType="#//Exp" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defList" eType="#//ListLocDef"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Exp" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="str" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="caseList" eType="#//ListCase"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="argType" eType="#//Exp"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expList" eType="#//ListExp"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="case" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="caseOf" eType="#//Exp"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="variants" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="alts" upperBound="-1" eType="#//Altern"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" eType="#//Patt"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ident" eType="#//Ident"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linwrap" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linName" eType="#//Ident"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inner" eType="#//Exp" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="labels" upperBound="-1"
         eType="#//Label" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//Ident"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="integer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="double" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="meta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="emptyString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="listCat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="category" eType="#//Ident"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="list" eType="#//Exps" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="context" eType="#//Exps"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokenList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="record" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tuple" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tupleList" eType="#//ListTupleComp"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//Exp" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//Exp"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Exp" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="identity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
@@ -236,9 +247,22 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//Ident"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindTo" eType="#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="negative" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="inaccessible" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" eType="#//Exp"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="meta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokenList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="str" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patternName" eType="#//Ident"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//Ident"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="wildcard" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="integer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="double" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PattAss">
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" upperBound="-1" eType="#//Ident"
@@ -299,15 +323,19 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//Exp" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Ident" eSuperTypes="#//Exp">
+  <eClassifiers xsi:type="ecore:EClass" name="Ident">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="s" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExpLF13" eSuperTypes="#//Exp"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Exp1" eSuperTypes="#//Exp"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Exp2" eSuperTypes="#//Exp"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExpLF13" eSuperTypes="#//Exp">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokenListCat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokenGlue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exp1" eSuperTypes="#//Exp">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokenListCat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Exp2" eSuperTypes="#//Exp">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokenGlue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Exp3" eSuperTypes="#//Exp"/>
   <eClassifiers xsi:type="ecore:EClass" name="Exp4" eSuperTypes="#//Exp"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Integer" eSuperTypes="#//Patt"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Double" eSuperTypes="#//Patt"/>
-  <eClassifiers xsi:type="ecore:EClass" name="String" eSuperTypes="#//Patt"/>
 </ecore:EPackage>

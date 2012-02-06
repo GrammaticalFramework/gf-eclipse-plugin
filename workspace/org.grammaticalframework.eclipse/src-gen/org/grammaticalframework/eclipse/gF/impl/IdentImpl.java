@@ -5,13 +5,12 @@
  */
 package org.grammaticalframework.eclipse.gF.impl;
 
-import java.lang.String;
-
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
@@ -29,7 +28,7 @@ import org.grammaticalframework.eclipse.gF.Ident;
  *
  * @generated
  */
-public class IdentImpl extends ExpImpl implements Ident
+public class IdentImpl extends MinimalEObjectImpl.Container implements Ident
 {
   /**
    * The default value of the '{@link #getS() <em>S</em>}' attribute.

@@ -93,7 +93,6 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		// open
 		for (Keyword k : new Keyword[] {
 				f.getModContentAccess().getOpenKeyword_1_0(),
-				f.getModOpenAccess().getOpenKeyword_1_0()
 		}) {
 			c.setLinewrap().before(k);
 			c.setIndentationIncrement().before(k);
@@ -125,8 +124,8 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		for (Keyword k : new Keyword[] {
 				f.getTopDefAccess().getCatCatKeyword_0_0_0(),
 				f.getTopDefAccess().getFunFunKeyword_1_0_0(),
-				f.getTopDefAccess().getDataDataKeyword_3_0_0(),
 				f.getTopDefAccess().getDefDefKeyword_2_0_0(),
+				f.getTopDefAccess().getDataDataKeyword_3_0_0(),
 				f.getTopDefAccess().getParamParamKeyword_4_0_0(),
 				f.getTopDefAccess().getOperOperKeyword_5_0_0(),
 				f.getTopDefAccess().getLincatLincatKeyword_6_0_0(),
@@ -136,7 +135,7 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 				f.getTopDefAccess().getPrintnamePrintnameKeyword_10_0_0(),
 				f.getTopDefAccess().getFlagsFlagsKeyword_11_0_0(),
 		}) {
-			c.setLinewrap(1, 1, 2).before(k);
+			c.setLinewrap(2).before(k);
 			c.setLinewrap().after(k);
 			c.setIndentationIncrement().after(k);
 		}

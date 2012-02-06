@@ -53,15 +53,6 @@ public interface GFFactory extends EFactory
   ModBody createModBody();
 
   /**
-   * Returns a new object of class '<em>Mod Open</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Mod Open</em>'.
-   * @generated
-   */
-  ModOpen createModOpen();
-
-  /**
    * Returns a new object of class '<em>Mod Content</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -456,33 +447,6 @@ public interface GFFactory extends EFactory
    * @generated
    */
   Exp4 createExp4();
-
-  /**
-   * Returns a new object of class '<em>Integer</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Integer</em>'.
-   * @generated
-   */
-  Integer createInteger();
-
-  /**
-   * Returns a new object of class '<em>Double</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Double</em>'.
-   * @generated
-   */
-  Double createDouble();
-
-  /**
-   * Returns a new object of class '<em>String</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>String</em>'.
-   * @generated
-   */
-  String createString();
 
   /**
    * Returns the package supported by this factory.

@@ -22,9 +22,19 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#getValue <em>Value</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#getLabel <em>Label</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#getBindTo <em>Bind To</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#isNegative <em>Negative</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#isInaccessible <em>Inaccessible</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#getPattern <em>Pattern</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#isMeta <em>Meta</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#isTokenList <em>Token List</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#getStr <em>Str</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#getPatternName <em>Pattern Name</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#getRef <em>Ref</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#isWildcard <em>Wildcard</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#isInteger <em>Integer</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#isDouble <em>Double</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Patt#isString <em>String</em>}</li>
  * </ul>
  * </p>
  *
@@ -217,6 +227,110 @@ public interface Patt extends EObject
   void setLabel(Ident value);
 
   /**
+   * Returns the value of the '<em><b>Bind To</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Bind To</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Bind To</em>' containment reference.
+   * @see #setBindTo(Ident)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_BindTo()
+   * @model containment="true"
+   * @generated
+   */
+  Ident getBindTo();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#getBindTo <em>Bind To</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Bind To</em>' containment reference.
+   * @see #getBindTo()
+   * @generated
+   */
+  void setBindTo(Ident value);
+
+  /**
+   * Returns the value of the '<em><b>Negative</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Negative</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Negative</em>' attribute.
+   * @see #setNegative(boolean)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_Negative()
+   * @model
+   * @generated
+   */
+  boolean isNegative();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#isNegative <em>Negative</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Negative</em>' attribute.
+   * @see #isNegative()
+   * @generated
+   */
+  void setNegative(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Inaccessible</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Inaccessible</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Inaccessible</em>' attribute.
+   * @see #setInaccessible(boolean)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_Inaccessible()
+   * @model
+   * @generated
+   */
+  boolean isInaccessible();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#isInaccessible <em>Inaccessible</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Inaccessible</em>' attribute.
+   * @see #isInaccessible()
+   * @generated
+   */
+  void setInaccessible(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Pattern</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Pattern</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Pattern</em>' containment reference.
+   * @see #setPattern(Exp)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_Pattern()
+   * @model containment="true"
+   * @generated
+   */
+  Exp getPattern();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#getPattern <em>Pattern</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Pattern</em>' containment reference.
+   * @see #getPattern()
+   * @generated
+   */
+  void setPattern(Exp value);
+
+  /**
    * Returns the value of the '<em><b>Meta</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
@@ -269,6 +383,84 @@ public interface Patt extends EObject
   void setTokenList(boolean value);
 
   /**
+   * Returns the value of the '<em><b>Str</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Str</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Str</em>' attribute.
+   * @see #setStr(String)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_Str()
+   * @model
+   * @generated
+   */
+  String getStr();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#getStr <em>Str</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Str</em>' attribute.
+   * @see #getStr()
+   * @generated
+   */
+  void setStr(String value);
+
+  /**
+   * Returns the value of the '<em><b>Pattern Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Pattern Name</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Pattern Name</em>' containment reference.
+   * @see #setPatternName(Ident)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_PatternName()
+   * @model containment="true"
+   * @generated
+   */
+  Ident getPatternName();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#getPatternName <em>Pattern Name</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Pattern Name</em>' containment reference.
+   * @see #getPatternName()
+   * @generated
+   */
+  void setPatternName(Ident value);
+
+  /**
+   * Returns the value of the '<em><b>Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Ref</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Ref</em>' reference.
+   * @see #setRef(Ident)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_Ref()
+   * @model
+   * @generated
+   */
+  Ident getRef();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#getRef <em>Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Ref</em>' reference.
+   * @see #getRef()
+   * @generated
+   */
+  void setRef(Ident value);
+
+  /**
    * Returns the value of the '<em><b>Wildcard</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
@@ -293,5 +485,83 @@ public interface Patt extends EObject
    * @generated
    */
   void setWildcard(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Integer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Integer</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Integer</em>' attribute.
+   * @see #setInteger(boolean)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_Integer()
+   * @model
+   * @generated
+   */
+  boolean isInteger();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#isInteger <em>Integer</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Integer</em>' attribute.
+   * @see #isInteger()
+   * @generated
+   */
+  void setInteger(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Double</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Double</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Double</em>' attribute.
+   * @see #setDouble(boolean)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_Double()
+   * @model
+   * @generated
+   */
+  boolean isDouble();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#isDouble <em>Double</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Double</em>' attribute.
+   * @see #isDouble()
+   * @generated
+   */
+  void setDouble(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>String</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>String</em>' attribute.
+   * @see #setString(boolean)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_String()
+   * @model
+   * @generated
+   */
+  boolean isString();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#isString <em>String</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>String</em>' attribute.
+   * @see #isString()
+   * @generated
+   */
+  void setString(boolean value);
 
 } // Patt

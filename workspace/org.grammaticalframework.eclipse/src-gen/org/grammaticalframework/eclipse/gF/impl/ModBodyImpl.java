@@ -20,7 +20,6 @@ import org.grammaticalframework.eclipse.gF.ListIncluded;
 import org.grammaticalframework.eclipse.gF.ListInst;
 import org.grammaticalframework.eclipse.gF.ModBody;
 import org.grammaticalframework.eclipse.gF.ModContent;
-import org.grammaticalframework.eclipse.gF.ModOpen;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +32,6 @@ import org.grammaticalframework.eclipse.gF.ModOpen;
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getFunctor <em>Functor</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#isFunctorInstantiation <em>Functor Instantiation</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getInstantiationList <em>Instantiation List</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getModOpen <em>Mod Open</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getModContent <em>Mod Content</em>}</li>
  * </ul>
  * </p>
@@ -91,16 +89,6 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * @ordered
    */
   protected ListInst instantiationList;
-
-  /**
-   * The cached value of the '{@link #getModOpen() <em>Mod Open</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getModOpen()
-   * @generated
-   * @ordered
-   */
-  protected ModOpen modOpen;
 
   /**
    * The cached value of the '{@link #getModContent() <em>Mod Content</em>}' containment reference.
@@ -305,54 +293,6 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * <!-- end-user-doc -->
    * @generated
    */
-  public ModOpen getModOpen()
-  {
-    return modOpen;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetModOpen(ModOpen newModOpen, NotificationChain msgs)
-  {
-    ModOpen oldModOpen = modOpen;
-    modOpen = newModOpen;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__MOD_OPEN, oldModOpen, newModOpen);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setModOpen(ModOpen newModOpen)
-  {
-    if (newModOpen != modOpen)
-    {
-      NotificationChain msgs = null;
-      if (modOpen != null)
-        msgs = ((InternalEObject)modOpen).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__MOD_OPEN, null, msgs);
-      if (newModOpen != null)
-        msgs = ((InternalEObject)newModOpen).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__MOD_OPEN, null, msgs);
-      msgs = basicSetModOpen(newModOpen, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__MOD_OPEN, newModOpen, newModOpen));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public ModContent getModContent()
   {
     return modContent;
@@ -412,8 +352,6 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
         return basicSetFunctor(null, msgs);
       case GFPackage.MOD_BODY__INSTANTIATION_LIST:
         return basicSetInstantiationList(null, msgs);
-      case GFPackage.MOD_BODY__MOD_OPEN:
-        return basicSetModOpen(null, msgs);
       case GFPackage.MOD_BODY__MOD_CONTENT:
         return basicSetModContent(null, msgs);
     }
@@ -438,8 +376,6 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
         return isFunctorInstantiation();
       case GFPackage.MOD_BODY__INSTANTIATION_LIST:
         return getInstantiationList();
-      case GFPackage.MOD_BODY__MOD_OPEN:
-        return getModOpen();
       case GFPackage.MOD_BODY__MOD_CONTENT:
         return getModContent();
     }
@@ -467,9 +403,6 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
         return;
       case GFPackage.MOD_BODY__INSTANTIATION_LIST:
         setInstantiationList((ListInst)newValue);
-        return;
-      case GFPackage.MOD_BODY__MOD_OPEN:
-        setModOpen((ModOpen)newValue);
         return;
       case GFPackage.MOD_BODY__MOD_CONTENT:
         setModContent((ModContent)newValue);
@@ -500,9 +433,6 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
       case GFPackage.MOD_BODY__INSTANTIATION_LIST:
         setInstantiationList((ListInst)null);
         return;
-      case GFPackage.MOD_BODY__MOD_OPEN:
-        setModOpen((ModOpen)null);
-        return;
       case GFPackage.MOD_BODY__MOD_CONTENT:
         setModContent((ModContent)null);
         return;
@@ -528,8 +458,6 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
         return functorInstantiation != FUNCTOR_INSTANTIATION_EDEFAULT;
       case GFPackage.MOD_BODY__INSTANTIATION_LIST:
         return instantiationList != null;
-      case GFPackage.MOD_BODY__MOD_OPEN:
-        return modOpen != null;
       case GFPackage.MOD_BODY__MOD_CONTENT:
         return modContent != null;
     }

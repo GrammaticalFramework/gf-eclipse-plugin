@@ -12,55 +12,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.grammaticalframework.eclipse.gF.Altern;
-import org.grammaticalframework.eclipse.gF.Arg;
-import org.grammaticalframework.eclipse.gF.Bind;
-import org.grammaticalframework.eclipse.gF.Case;
-import org.grammaticalframework.eclipse.gF.CatDef;
-import org.grammaticalframework.eclipse.gF.DDecl;
-import org.grammaticalframework.eclipse.gF.DataDef;
-import org.grammaticalframework.eclipse.gF.DefDef;
-import org.grammaticalframework.eclipse.gF.Exp;
-import org.grammaticalframework.eclipse.gF.Exp1;
-import org.grammaticalframework.eclipse.gF.Exp2;
-import org.grammaticalframework.eclipse.gF.Exp3;
-import org.grammaticalframework.eclipse.gF.Exp4;
-import org.grammaticalframework.eclipse.gF.ExpLF13;
-import org.grammaticalframework.eclipse.gF.Exps;
-import org.grammaticalframework.eclipse.gF.FlagDef;
-import org.grammaticalframework.eclipse.gF.FunDef;
-import org.grammaticalframework.eclipse.gF.GFPackage;
-import org.grammaticalframework.eclipse.gF.Ident;
-import org.grammaticalframework.eclipse.gF.Included;
-import org.grammaticalframework.eclipse.gF.Inst;
-import org.grammaticalframework.eclipse.gF.Label;
-import org.grammaticalframework.eclipse.gF.LinDef;
-import org.grammaticalframework.eclipse.gF.ListBind;
-import org.grammaticalframework.eclipse.gF.ListCase;
-import org.grammaticalframework.eclipse.gF.ListExp;
-import org.grammaticalframework.eclipse.gF.ListIncluded;
-import org.grammaticalframework.eclipse.gF.ListInst;
-import org.grammaticalframework.eclipse.gF.ListLocDef;
-import org.grammaticalframework.eclipse.gF.ListOpen;
-import org.grammaticalframework.eclipse.gF.ListPatt;
-import org.grammaticalframework.eclipse.gF.ListPattAss;
-import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
-import org.grammaticalframework.eclipse.gF.ListTupleComp;
-import org.grammaticalframework.eclipse.gF.LocDef;
-import org.grammaticalframework.eclipse.gF.ModBody;
-import org.grammaticalframework.eclipse.gF.ModContent;
-import org.grammaticalframework.eclipse.gF.ModOpen;
-import org.grammaticalframework.eclipse.gF.ModType;
-import org.grammaticalframework.eclipse.gF.Name;
-import org.grammaticalframework.eclipse.gF.Open;
-import org.grammaticalframework.eclipse.gF.OperDef;
-import org.grammaticalframework.eclipse.gF.ParConstr;
-import org.grammaticalframework.eclipse.gF.ParamDef;
-import org.grammaticalframework.eclipse.gF.Patt;
-import org.grammaticalframework.eclipse.gF.PattAss;
-import org.grammaticalframework.eclipse.gF.SourceModule;
-import org.grammaticalframework.eclipse.gF.TermDef;
-import org.grammaticalframework.eclipse.gF.TopDef;
+import org.grammaticalframework.eclipse.gF.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -139,11 +91,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
       public Adapter caseModBody(ModBody object)
       {
         return createModBodyAdapter();
-      }
-      @Override
-      public Adapter caseModOpen(ModOpen object)
-      {
-        return createModOpenAdapter();
       }
       @Override
       public Adapter caseModContent(ModContent object)
@@ -366,21 +313,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
         return createExp4Adapter();
       }
       @Override
-      public Adapter caseInteger(org.grammaticalframework.eclipse.gF.Integer object)
-      {
-        return createIntegerAdapter();
-      }
-      @Override
-      public Adapter caseDouble(org.grammaticalframework.eclipse.gF.Double object)
-      {
-        return createDoubleAdapter();
-      }
-      @Override
-      public Adapter caseString(org.grammaticalframework.eclipse.gF.String object)
-      {
-        return createStringAdapter();
-      }
-      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -443,21 +375,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createModBodyAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ModOpen <em>Mod Open</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.ModOpen
-   * @generated
-   */
-  public Adapter createModOpenAdapter()
   {
     return null;
   }
@@ -1118,51 +1035,6 @@ public class GFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExp4Adapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Integer <em>Integer</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Integer
-   * @generated
-   */
-  public Adapter createIntegerAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Double <em>Double</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.Double
-   * @generated
-   */
-  public Adapter createDoubleAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.String <em>String</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.String
-   * @generated
-   */
-  public Adapter createStringAdapter()
   {
     return null;
   }

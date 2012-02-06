@@ -20,9 +20,6 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected GFGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_Exp3_AsteriskAsteriskKeyword_1_1_2_or_AsteriskKeyword_1_1_1_or_ExclamationMarkKeyword_1_1_0;
-	protected AbstractElementAlias match_ExpLF_AfterExp3_EqualsSignGreaterThanSignKeyword_1_0_or_HyphenMinusGreaterThanSignKeyword_0_0;
-	protected AbstractElementAlias match_ExpLF_Exp1or3_PlusSignKeyword_1_0_0_1_1_or_PlusSignPlusSignKeyword_1_0_0_1_0;
-	protected AbstractElementAlias match_Exp_InKeyword_6_0_q;
 	protected AbstractElementAlias match_ListExp_SemicolonKeyword_1_2_q;
 	protected AbstractElementAlias match_ListLocDef_SemicolonKeyword_1_2_q;
 	protected AbstractElementAlias match_ListPattAss_SemicolonKeyword_1_2_q;
@@ -34,25 +31,15 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_OperDef_SemicolonKeyword_0_4_1_1_4_q;
 	protected AbstractElementAlias match_OperDef_SemicolonKeyword_1_3_1_4_q;
 	protected AbstractElementAlias match_Patt1_AsteriskKeyword_2_1_q;
-	protected AbstractElementAlias match_Patt2LF_HyphenMinusKeyword_1_0_q;
-	protected AbstractElementAlias match_Patt2LF_Patt3_PattArg_LeftCurlyBracketKeyword_1_0_q_or___LeftCurlyBracketKeyword_1_0_q___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__p__;
-	protected AbstractElementAlias match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_LeftParenthesisKeyword_9_0_p__a;
-	protected AbstractElementAlias match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_LeftParenthesisKeyword_9_0_p__p;
-	protected AbstractElementAlias match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__a;
-	protected AbstractElementAlias match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__p;
-	protected AbstractElementAlias match_Patt2LF_Patt3___LeftParenthesisKeyword_9_0_HyphenMinusKeyword_1_0_q__a;
-	protected AbstractElementAlias match_Patt2LF_Patt3___LeftParenthesisKeyword_9_0_a_HyphenMinusKeyword_1_0__a;
-	protected AbstractElementAlias match_Patt3_LeftParenthesisKeyword_9_0_a;
-	protected AbstractElementAlias match_Patt3_NumberSignKeyword_2_0_q;
+	protected AbstractElementAlias match_Patt3_LeftParenthesisKeyword_10_0_a;
+	protected AbstractElementAlias match_Patt3_LeftParenthesisKeyword_10_0_p;
+	protected AbstractElementAlias match_Patt3_PattArg_LeftParenthesisKeyword_10_0_a_or___LeftCurlyBracketKeyword_1_0_LeftParenthesisKeyword_10_0_a__;
 	protected AbstractElementAlias match_PattArg_LeftCurlyBracketKeyword_1_0_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (GFGrammarAccess) access;
 		match_Exp3_AsteriskAsteriskKeyword_1_1_2_or_AsteriskKeyword_1_1_1_or_ExclamationMarkKeyword_1_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExp3Access().getAsteriskAsteriskKeyword_1_1_2()), new TokenAlias(false, false, grammarAccess.getExp3Access().getAsteriskKeyword_1_1_1()), new TokenAlias(false, false, grammarAccess.getExp3Access().getExclamationMarkKeyword_1_1_0()));
-		match_ExpLF_AfterExp3_EqualsSignGreaterThanSignKeyword_1_0_or_HyphenMinusGreaterThanSignKeyword_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpLF_AfterExp3Access().getEqualsSignGreaterThanSignKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getExpLF_AfterExp3Access().getHyphenMinusGreaterThanSignKeyword_0_0()));
-		match_ExpLF_Exp1or3_PlusSignKeyword_1_0_0_1_1_or_PlusSignPlusSignKeyword_1_0_0_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExpLF_Exp1or3Access().getPlusSignKeyword_1_0_0_1_1()), new TokenAlias(false, false, grammarAccess.getExpLF_Exp1or3Access().getPlusSignPlusSignKeyword_1_0_0_1_0()));
-		match_Exp_InKeyword_6_0_q = new TokenAlias(true, false, grammarAccess.getExpAccess().getInKeyword_6_0());
 		match_ListExp_SemicolonKeyword_1_2_q = new TokenAlias(true, false, grammarAccess.getListExpAccess().getSemicolonKeyword_1_2());
 		match_ListLocDef_SemicolonKeyword_1_2_q = new TokenAlias(true, false, grammarAccess.getListLocDefAccess().getSemicolonKeyword_1_2());
 		match_ListPattAss_SemicolonKeyword_1_2_q = new TokenAlias(true, false, grammarAccess.getListPattAssAccess().getSemicolonKeyword_1_2());
@@ -64,45 +51,17 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_OperDef_SemicolonKeyword_0_4_1_1_4_q = new TokenAlias(true, false, grammarAccess.getOperDefAccess().getSemicolonKeyword_0_4_1_1_4());
 		match_OperDef_SemicolonKeyword_1_3_1_4_q = new TokenAlias(true, false, grammarAccess.getOperDefAccess().getSemicolonKeyword_1_3_1_4());
 		match_Patt1_AsteriskKeyword_2_1_q = new TokenAlias(true, false, grammarAccess.getPatt1Access().getAsteriskKeyword_2_1());
-		match_Patt2LF_HyphenMinusKeyword_1_0_q = new TokenAlias(true, false, grammarAccess.getPatt2LFAccess().getHyphenMinusKeyword_1_0());
-		match_Patt2LF_Patt3_PattArg_LeftCurlyBracketKeyword_1_0_q_or___LeftCurlyBracketKeyword_1_0_q___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__p__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(true, false, grammarAccess.getPattArgAccess().getLeftCurlyBracketKeyword_1_0()), new GroupAlias(false, true, new TokenAlias(true, false, grammarAccess.getPatt2LFAccess().getHyphenMinusKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_9_0()))), new TokenAlias(true, false, grammarAccess.getPattArgAccess().getLeftCurlyBracketKeyword_1_0()));
-		match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_LeftParenthesisKeyword_9_0_p__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getPatt2LFAccess().getHyphenMinusKeyword_1_0()), new TokenAlias(false, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_9_0()));
-		match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_LeftParenthesisKeyword_9_0_p__p = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getPatt2LFAccess().getHyphenMinusKeyword_1_0()), new TokenAlias(false, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_9_0()));
-		match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__a = new GroupAlias(true, true, new TokenAlias(true, false, grammarAccess.getPatt2LFAccess().getHyphenMinusKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_9_0()));
-		match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__p = new GroupAlias(false, true, new TokenAlias(true, false, grammarAccess.getPatt2LFAccess().getHyphenMinusKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_9_0()));
-		match_Patt2LF_Patt3___LeftParenthesisKeyword_9_0_HyphenMinusKeyword_1_0_q__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_9_0()), new TokenAlias(true, false, grammarAccess.getPatt2LFAccess().getHyphenMinusKeyword_1_0()));
-		match_Patt2LF_Patt3___LeftParenthesisKeyword_9_0_a_HyphenMinusKeyword_1_0__a = new GroupAlias(true, true, new TokenAlias(true, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_9_0()), new TokenAlias(false, false, grammarAccess.getPatt2LFAccess().getHyphenMinusKeyword_1_0()));
-		match_Patt3_LeftParenthesisKeyword_9_0_a = new TokenAlias(true, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_9_0());
-		match_Patt3_NumberSignKeyword_2_0_q = new TokenAlias(true, false, grammarAccess.getPatt3Access().getNumberSignKeyword_2_0());
+		match_Patt3_LeftParenthesisKeyword_10_0_a = new TokenAlias(true, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0());
+		match_Patt3_LeftParenthesisKeyword_10_0_p = new TokenAlias(false, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0());
+		match_Patt3_PattArg_LeftParenthesisKeyword_10_0_a_or___LeftCurlyBracketKeyword_1_0_LeftParenthesisKeyword_10_0_a__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getPattArgAccess().getLeftCurlyBracketKeyword_1_0()), new TokenAlias(true, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0())), new TokenAlias(true, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0()));
 		match_PattArg_LeftCurlyBracketKeyword_1_0_q = new TokenAlias(true, false, grammarAccess.getPattArgAccess().getLeftCurlyBracketKeyword_1_0());
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getDoubleRule())
-			return getDoubleToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getIntegerRule())
-			return getIntegerToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getStringRule())
-			return getStringToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
-	protected String getDoubleToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return ".";
-	}
-	protected String getIntegerToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "";
-	}
-	protected String getStringToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "\"\"";
-	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -112,12 +71,6 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
 			if(match_Exp3_AsteriskAsteriskKeyword_1_1_2_or_AsteriskKeyword_1_1_1_or_ExclamationMarkKeyword_1_1_0.equals(syntax))
 				emit_Exp3_AsteriskAsteriskKeyword_1_1_2_or_AsteriskKeyword_1_1_1_or_ExclamationMarkKeyword_1_1_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ExpLF_AfterExp3_EqualsSignGreaterThanSignKeyword_1_0_or_HyphenMinusGreaterThanSignKeyword_0_0.equals(syntax))
-				emit_ExpLF_AfterExp3_EqualsSignGreaterThanSignKeyword_1_0_or_HyphenMinusGreaterThanSignKeyword_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_ExpLF_Exp1or3_PlusSignKeyword_1_0_0_1_1_or_PlusSignPlusSignKeyword_1_0_0_1_0.equals(syntax))
-				emit_ExpLF_Exp1or3_PlusSignKeyword_1_0_0_1_1_or_PlusSignPlusSignKeyword_1_0_0_1_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Exp_InKeyword_6_0_q.equals(syntax))
-				emit_Exp_InKeyword_6_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_ListExp_SemicolonKeyword_1_2_q.equals(syntax))
 				emit_ListExp_SemicolonKeyword_1_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_ListLocDef_SemicolonKeyword_1_2_q.equals(syntax))
@@ -140,26 +93,12 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_OperDef_SemicolonKeyword_1_3_1_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Patt1_AsteriskKeyword_2_1_q.equals(syntax))
 				emit_Patt1_AsteriskKeyword_2_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Patt2LF_HyphenMinusKeyword_1_0_q.equals(syntax))
-				emit_Patt2LF_HyphenMinusKeyword_1_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Patt2LF_Patt3_PattArg_LeftCurlyBracketKeyword_1_0_q_or___LeftCurlyBracketKeyword_1_0_q___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__p__.equals(syntax))
-				emit_Patt2LF_Patt3_PattArg_LeftCurlyBracketKeyword_1_0_q_or___LeftCurlyBracketKeyword_1_0_q___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__p__(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_LeftParenthesisKeyword_9_0_p__a.equals(syntax))
-				emit_Patt2LF_Patt3___HyphenMinusKeyword_1_0_LeftParenthesisKeyword_9_0_p__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_LeftParenthesisKeyword_9_0_p__p.equals(syntax))
-				emit_Patt2LF_Patt3___HyphenMinusKeyword_1_0_LeftParenthesisKeyword_9_0_p__p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__a.equals(syntax))
-				emit_Patt2LF_Patt3___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Patt2LF_Patt3___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__p.equals(syntax))
-				emit_Patt2LF_Patt3___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Patt2LF_Patt3___LeftParenthesisKeyword_9_0_HyphenMinusKeyword_1_0_q__a.equals(syntax))
-				emit_Patt2LF_Patt3___LeftParenthesisKeyword_9_0_HyphenMinusKeyword_1_0_q__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Patt2LF_Patt3___LeftParenthesisKeyword_9_0_a_HyphenMinusKeyword_1_0__a.equals(syntax))
-				emit_Patt2LF_Patt3___LeftParenthesisKeyword_9_0_a_HyphenMinusKeyword_1_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Patt3_LeftParenthesisKeyword_9_0_a.equals(syntax))
-				emit_Patt3_LeftParenthesisKeyword_9_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Patt3_NumberSignKeyword_2_0_q.equals(syntax))
-				emit_Patt3_NumberSignKeyword_2_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Patt3_LeftParenthesisKeyword_10_0_a.equals(syntax))
+				emit_Patt3_LeftParenthesisKeyword_10_0_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Patt3_LeftParenthesisKeyword_10_0_p.equals(syntax))
+				emit_Patt3_LeftParenthesisKeyword_10_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Patt3_PattArg_LeftParenthesisKeyword_10_0_a_or___LeftCurlyBracketKeyword_1_0_LeftParenthesisKeyword_10_0_a__.equals(syntax))
+				emit_Patt3_PattArg_LeftParenthesisKeyword_10_0_a_or___LeftCurlyBracketKeyword_1_0_LeftParenthesisKeyword_10_0_a__(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_PattArg_LeftCurlyBracketKeyword_1_0_q.equals(syntax))
 				emit_PattArg_LeftCurlyBracketKeyword_1_0_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
@@ -171,30 +110,6 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '**' | '*' | '!'
 	 */
 	protected void emit_Exp3_AsteriskAsteriskKeyword_1_1_2_or_AsteriskKeyword_1_1_1_or_ExclamationMarkKeyword_1_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     '->' | '=>'
-	 */
-	protected void emit_ExpLF_AfterExp3_EqualsSignGreaterThanSignKeyword_1_0_or_HyphenMinusGreaterThanSignKeyword_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     '+' | '++'
-	 */
-	protected void emit_ExpLF_Exp1or3_PlusSignKeyword_1_0_0_1_1_or_PlusSignPlusSignKeyword_1_0_0_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     'in'?
-	 */
-	protected void emit_Exp_InKeyword_6_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -288,81 +203,25 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '-'?
-	 */
-	protected void emit_Patt2LF_HyphenMinusKeyword_1_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     '{'? | ('{'? ('-'? '(')+)
-	 */
-	protected void emit_Patt2LF_Patt3_PattArg_LeftCurlyBracketKeyword_1_0_q_or___LeftCurlyBracketKeyword_1_0_q___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__p__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('-' '('+)*
-	 */
-	protected void emit_Patt2LF_Patt3___HyphenMinusKeyword_1_0_LeftParenthesisKeyword_9_0_p__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('-' '('+)+
-	 */
-	protected void emit_Patt2LF_Patt3___HyphenMinusKeyword_1_0_LeftParenthesisKeyword_9_0_p__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('-'? '(')*
-	 */
-	protected void emit_Patt2LF_Patt3___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('-'? '(')+
-	 */
-	protected void emit_Patt2LF_Patt3___HyphenMinusKeyword_1_0_q_LeftParenthesisKeyword_9_0__p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('(' '-'?)*
-	 */
-	protected void emit_Patt2LF_Patt3___LeftParenthesisKeyword_9_0_HyphenMinusKeyword_1_0_q__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
-	 *     ('('* '-')*
-	 */
-	protected void emit_Patt2LF_Patt3___LeftParenthesisKeyword_9_0_a_HyphenMinusKeyword_1_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Syntax:
 	 *     '('*
 	 */
-	protected void emit_Patt3_LeftParenthesisKeyword_9_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Patt3_LeftParenthesisKeyword_10_0_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Syntax:
-	 *     '#'?
+	 *     '('+
 	 */
-	protected void emit_Patt3_NumberSignKeyword_2_0_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Patt3_LeftParenthesisKeyword_10_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Syntax:
+	 *     '('* | ('{' '('*)
+	 */
+	protected void emit_Patt3_PattArg_LeftParenthesisKeyword_10_0_a_or___LeftCurlyBracketKeyword_1_0_LeftParenthesisKeyword_10_0_a__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
