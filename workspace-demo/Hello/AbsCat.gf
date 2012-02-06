@@ -1,5 +1,6 @@
 abstract AbsCat = {
 
-	cat Greeting ; Recipient ;
-
-};
+  cat
+    Greeting ;
+    Recipient ;
+} ;

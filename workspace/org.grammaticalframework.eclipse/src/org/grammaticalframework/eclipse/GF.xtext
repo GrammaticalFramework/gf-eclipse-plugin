@@ -31,9 +31,9 @@ ModDef returns SourceModule
 	: (incomplete?='incomplete')? type=ModType '=' body=ModBody (';')*
 ;
 
-ModHeader returns SourceModule
-	: (incomplete?='incomplete')? type=ModType '=' body=ModHeaderBody
-;
+//ModHeader returns SourceModule
+//	: (incomplete?='incomplete')? type=ModType '=' body=ModHeaderBody
+//;
 
 // Cross-ref checking of module names is done by Validation, not via grammar
 ModType
@@ -44,29 +44,23 @@ ModType
 	| instance?='instance'		name=Ident 'of' interfaceInclude=Included
 ;
 
-ModHeaderBody returns ModBody :
-	extendList=ListIncluded
-	('**' functor=Included functorInstantiation?='with' instantiationList=ListInst)?
-	('**' modOpen=ModOpen)?
-|
-	functor=Included
-	functorInstantiation?='with' instantiationList=ListInst
-	('**' modOpen=ModOpen)?
-|
-	modOpen=ModOpen
-;
-
-ModOpen
-	: {ModOpen} ('open' openList=ListOpen)?
-;
+//ModHeaderBody returns ModBody :
+//	extendList=ListIncluded
+//	('**' functor=Included functorInstantiation?='with' instantiationList=ListInst)?
+//	('**' modOpen=ModOpen)?
+//|
+//	functor=Included
+//	functorInstantiation?='with' instantiationList=ListInst
+//	('**' modOpen=ModOpen)?
+//|
+//	modOpen=ModOpen
+//;
+//
+//ModOpen
+//	: {ModOpen} ('open' openList=ListOpen)?
+//;
 
 ModBody :
-//    {ModBody} ( (extends+=Included (',' extends+=Included)*)? '**')? content=ModContent
-//	| {ModBody} (extends+=Included (',' extends+=Included)*)?
-//	| {ModBody} functor=Included functorInstantiation?='with' (instantiations+=Inst (',' instantiations+=Inst)*)?
-//	| {ModBody} functor=Included functorInstantiation?='with' (instantiations+=Inst (',' instantiations+=Inst)*)? '**' content=ModContent
-//	| {ModBody} (extends+=Included (',' extends+=Included)*)? '**' functor=Included functorInstantiation?='with' (instantiations+=Inst (',' instantiations+=Inst)*)?
-//	| {ModBody} (extends+=Included (',' extends+=Included)*)? '**' functor=Included functorInstantiation?='with' (instantiations+=Inst (',' instantiations+=Inst)*)? '**' content=ModContent
 	extendList=ListIncluded
 	('**' functor=Included functorInstantiation?='with' instantiationList=ListInst)?
 	('**' modContent=ModContent)?

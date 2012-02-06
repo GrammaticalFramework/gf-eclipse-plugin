@@ -112,6 +112,7 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 			
 		// Indentation within the ModContent's body
 		blockIndent(c, new Keyword[][] {
+				{ f.getModContentAccess().getLeftCurlyBracketKeyword_0_1_0(), f.getModContentAccess().getRightCurlyBracketKeyword_0_1_2() },
 				{ f.getModContentAccess().getLeftCurlyBracketKeyword_1_2_1(), f.getModContentAccess().getRightCurlyBracketKeyword_1_2_3() },
 		});
 //		for (Keyword[] k : new Keyword[][] {

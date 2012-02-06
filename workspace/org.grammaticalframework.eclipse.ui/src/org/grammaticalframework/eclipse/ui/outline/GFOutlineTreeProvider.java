@@ -66,7 +66,7 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	protected void _createChildren(IOutlineNode parentNode, ModBody modBody) {
 
 		// Opens
-		if (!modBody.getModContent().getOpenList().getOpens().isEmpty()) {
+		if (modBody.getModContent().getOpenList()!=null && !modBody.getModContent().getOpenList().getOpens().isEmpty()) {
 			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_CONTENT__OPEN_LIST, images.forOpen(), "Opens", false);
 			for (Open o : modBody.getModContent().getOpenList().getOpens()) {
 				EObjectNode subnode = createEObjectNode(node, o.getName());
@@ -78,7 +78,7 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		}
 		
 		// Extends
-		if (!modBody.getExtendList().getIncluded().isEmpty()) {
+		if (modBody.getExtendList()!=null && !modBody.getExtendList().getIncluded().isEmpty()) {
 			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_BODY__EXTEND_LIST, images.forExtend(), "Extends", false);
 			for (Included i : modBody.getExtendList().getIncluded()) {
 //				createNode(node, i.getName());
@@ -97,13 +97,13 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		}
 		
 		// Functor
-		if (modBody.getFunctor() != null) {
+		if (modBody.getFunctor()!=null) {
 			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_BODY__FUNCTOR, images.forFunctor(), "Functor", false);
 			createNode(node, modBody.getFunctor().getName());
 		}
 		
 		// Instantiations
-		if (!modBody.getInstantiationList().getInstantiations().isEmpty()) {
+		if (modBody.getInstantiationList()!=null && !modBody.getInstantiationList().getInstantiations().isEmpty()) {
 			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_BODY__INSTANTIATION_LIST, images.forInstantiate(), "Instantiates", false);
 			for (Inst i : modBody.getInstantiationList().getInstantiations()) {
 				EObjectNode subnode = createEObjectNode(node, i.getName());
