@@ -26,6 +26,7 @@ import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.Exps;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Label;
 import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListCase;
 import org.grammaticalframework.eclipse.gF.ListExp;
@@ -42,6 +43,7 @@ import org.grammaticalframework.eclipse.gF.Patt;
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getBindList <em>Bind List</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getE <em>E</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getDecl <em>Decl</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getDefList <em>Def List</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getCaseList <em>Case List</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getArgType <em>Arg Type</em>}</li>
@@ -50,6 +52,7 @@ import org.grammaticalframework.eclipse.gF.Patt;
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getAlts <em>Alts</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getPattern <em>Pattern</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getInner <em>Inner</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#getLabels <em>Labels</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isSort <em>Sort</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isString <em>String</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ExpImpl#isInteger <em>Integer</em>}</li>
@@ -90,6 +93,16 @@ public class ExpImpl extends PattImpl implements Exp
    * @ordered
    */
   protected Exp e;
+
+  /**
+   * The cached value of the '{@link #getDecl() <em>Decl</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDecl()
+   * @generated
+   * @ordered
+   */
+  protected Exp decl;
 
   /**
    * The cached value of the '{@link #getDefList() <em>Def List</em>}' containment reference.
@@ -170,6 +183,16 @@ public class ExpImpl extends PattImpl implements Exp
    * @ordered
    */
   protected Exp inner;
+
+  /**
+   * The cached value of the '{@link #getLabels() <em>Labels</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLabels()
+   * @generated
+   * @ordered
+   */
+  protected EList<Label> labels;
 
   /**
    * The default value of the '{@link #isSort() <em>Sort</em>}' attribute.
@@ -523,6 +546,54 @@ public class ExpImpl extends PattImpl implements Exp
    * <!-- end-user-doc -->
    * @generated
    */
+  public Exp getDecl()
+  {
+    return decl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDecl(Exp newDecl, NotificationChain msgs)
+  {
+    Exp oldDecl = decl;
+    decl = newDecl;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.EXP__DECL, oldDecl, newDecl);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDecl(Exp newDecl)
+  {
+    if (newDecl != decl)
+    {
+      NotificationChain msgs = null;
+      if (decl != null)
+        msgs = ((InternalEObject)decl).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__DECL, null, msgs);
+      if (newDecl != null)
+        msgs = ((InternalEObject)newDecl).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.EXP__DECL, null, msgs);
+      msgs = basicSetDecl(newDecl, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__DECL, newDecl, newDecl));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ListLocDef getDefList()
   {
     return defList;
@@ -866,6 +937,20 @@ public class ExpImpl extends PattImpl implements Exp
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.EXP__INNER, newInner, newInner));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<Label> getLabels()
+  {
+    if (labels == null)
+    {
+      labels = new EObjectContainmentEList<Label>(Label.class, this, GFPackage.EXP__LABELS);
+    }
+    return labels;
   }
 
   /**
@@ -1324,6 +1409,8 @@ public class ExpImpl extends PattImpl implements Exp
         return basicSetBindList(null, msgs);
       case GFPackage.EXP__E:
         return basicSetE(null, msgs);
+      case GFPackage.EXP__DECL:
+        return basicSetDecl(null, msgs);
       case GFPackage.EXP__DEF_LIST:
         return basicSetDefList(null, msgs);
       case GFPackage.EXP__CASE_LIST:
@@ -1340,6 +1427,8 @@ public class ExpImpl extends PattImpl implements Exp
         return basicSetPattern(null, msgs);
       case GFPackage.EXP__INNER:
         return basicSetInner(null, msgs);
+      case GFPackage.EXP__LABELS:
+        return ((InternalEList<?>)getLabels()).basicRemove(otherEnd, msgs);
       case GFPackage.EXP__LIST:
         return basicSetList(null, msgs);
       case GFPackage.EXP__TUPLE_LIST:
@@ -1366,6 +1455,8 @@ public class ExpImpl extends PattImpl implements Exp
         return getBindList();
       case GFPackage.EXP__E:
         return getE();
+      case GFPackage.EXP__DECL:
+        return getDecl();
       case GFPackage.EXP__DEF_LIST:
         return getDefList();
       case GFPackage.EXP__CASE_LIST:
@@ -1382,6 +1473,8 @@ public class ExpImpl extends PattImpl implements Exp
         return getPattern();
       case GFPackage.EXP__INNER:
         return getInner();
+      case GFPackage.EXP__LABELS:
+        return getLabels();
       case GFPackage.EXP__SORT:
         return isSort();
       case GFPackage.EXP__STRING:
@@ -1432,6 +1525,9 @@ public class ExpImpl extends PattImpl implements Exp
       case GFPackage.EXP__E:
         setE((Exp)newValue);
         return;
+      case GFPackage.EXP__DECL:
+        setDecl((Exp)newValue);
+        return;
       case GFPackage.EXP__DEF_LIST:
         setDefList((ListLocDef)newValue);
         return;
@@ -1456,6 +1552,10 @@ public class ExpImpl extends PattImpl implements Exp
         return;
       case GFPackage.EXP__INNER:
         setInner((Exp)newValue);
+        return;
+      case GFPackage.EXP__LABELS:
+        getLabels().clear();
+        getLabels().addAll((Collection<? extends Label>)newValue);
         return;
       case GFPackage.EXP__SORT:
         setSort((Boolean)newValue);
@@ -1519,6 +1619,9 @@ public class ExpImpl extends PattImpl implements Exp
       case GFPackage.EXP__E:
         setE((Exp)null);
         return;
+      case GFPackage.EXP__DECL:
+        setDecl((Exp)null);
+        return;
       case GFPackage.EXP__DEF_LIST:
         setDefList((ListLocDef)null);
         return;
@@ -1542,6 +1645,9 @@ public class ExpImpl extends PattImpl implements Exp
         return;
       case GFPackage.EXP__INNER:
         setInner((Exp)null);
+        return;
+      case GFPackage.EXP__LABELS:
+        getLabels().clear();
         return;
       case GFPackage.EXP__SORT:
         setSort(SORT_EDEFAULT);
@@ -1603,6 +1709,8 @@ public class ExpImpl extends PattImpl implements Exp
         return bindList != null;
       case GFPackage.EXP__E:
         return e != null;
+      case GFPackage.EXP__DECL:
+        return decl != null;
       case GFPackage.EXP__DEF_LIST:
         return defList != null;
       case GFPackage.EXP__CASE_LIST:
@@ -1619,6 +1727,8 @@ public class ExpImpl extends PattImpl implements Exp
         return pattern != null;
       case GFPackage.EXP__INNER:
         return inner != null;
+      case GFPackage.EXP__LABELS:
+        return labels != null && !labels.isEmpty();
       case GFPackage.EXP__SORT:
         return sort != SORT_EDEFAULT;
       case GFPackage.EXP__STRING:

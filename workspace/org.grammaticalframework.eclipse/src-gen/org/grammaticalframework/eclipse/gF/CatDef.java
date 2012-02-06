@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.CatDef#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.CatDef#getContext <em>Context</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.CatDef#isList <em>List</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.CatDef#getSize <em>Size</em>}</li>
  * </ul>
  * </p>
@@ -70,6 +71,32 @@ public interface CatDef extends EObject
    * @generated
    */
   EList<DDecl> getContext();
+
+  /**
+   * Returns the value of the '<em><b>List</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>List</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>List</em>' attribute.
+   * @see #setList(boolean)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getCatDef_List()
+   * @model
+   * @generated
+   */
+  boolean isList();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.CatDef#isList <em>List</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>List</em>' attribute.
+   * @see #isList()
+   * @generated
+   */
+  void setList(boolean value);
 
   /**
    * Returns the value of the '<em><b>Size</b></em>' attribute.

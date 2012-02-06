@@ -92,9 +92,8 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 
 		// open
 		for (Keyword k : new Keyword[] {
-				f.getModBodyAccess().getOpenKeyword_0_2_0(),
-				f.getModBodyAccess().getOpenKeyword_3_5_0(),
-				f.getModBodyAccess().getOpenKeyword_5_7_0(),
+				f.getModContentAccess().getOpenKeyword_1_0(),
+				f.getModOpenAccess().getOpenKeyword_1_0()
 		}) {
 			c.setLinewrap().before(k);
 			c.setIndentationIncrement().before(k);
@@ -103,37 +102,38 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 
 		// Special case when using `open (Alias = Name)`
 		for (Keyword k : new Keyword[] {
-			f.getOpenAccess().getLeftParenthesisKeyword_2_0()
+			f.getOpenAccess().getLeftParenthesisKeyword_1_0(),
+			f.getInstAccess().getLeftParenthesisKeyword_0()
 		}) {
 			c.setLinewrap().before(k);
 			c.setIndentationIncrement().before(k);
 			c.setIndentationDecrement().after(k);
 		}
 			
-		// Indentation within the ModDef's body
-		for (Keyword[] k : new Keyword[][] {
-				{ f.getModBodyAccess().getLeftCurlyBracketKeyword_0_3(), f.getModBodyAccess().getRightCurlyBracketKeyword_0_5() },
-				{ f.getModBodyAccess().getLeftCurlyBracketKeyword_3_6(), f.getModBodyAccess().getRightCurlyBracketKeyword_3_8() },
-				{ f.getModBodyAccess().getLeftCurlyBracketKeyword_5_8(), f.getModBodyAccess().getRightCurlyBracketKeyword_5_10() },
-		}) {
-			c.setIndentation(k[0], k[1]);
-		}		
+		// Indentation within the ModContent's body
+		blockIndent(c, new Keyword[][] {
+				{ f.getModContentAccess().getLeftCurlyBracketKeyword_1_2_1(), f.getModContentAccess().getRightCurlyBracketKeyword_1_2_3() },
+		});
+//		for (Keyword[] k : new Keyword[][] {
+//				{ f.getModContentAccess().getLeftCurlyBracketKeyword_1_2_1(), f.getModContentAccess().getRightCurlyBracketKeyword_1_2_3() },
+//		}) {
+//			c.setIndentation(k[0], k[1]);
+//		}		
 
 		// Top def groupings (`cat`, `fun`, `lin` ...)
 		for (Keyword k : new Keyword[] {
 				f.getTopDefAccess().getCatCatKeyword_0_0_0(),
 				f.getTopDefAccess().getFunFunKeyword_1_0_0(),
-				f.getTopDefAccess().getDataDataKeyword_2_0_0(),
-				f.getTopDefAccess().getDefDefKeyword_3_0_0(),
-				f.getTopDefAccess().getDataDataKeyword_4_0_0(),
-				f.getTopDefAccess().getParamParamKeyword_5_0_0(),
-				f.getTopDefAccess().getOperOperKeyword_6_0_0(),
-				f.getTopDefAccess().getLincatLincatKeyword_7_0_0(),
-				f.getTopDefAccess().getLindefLindefKeyword_8_0_0(),
-				f.getTopDefAccess().getLinLinKeyword_9_0_0(),
+				f.getTopDefAccess().getDataDataKeyword_3_0_0(),
+				f.getTopDefAccess().getDefDefKeyword_2_0_0(),
+				f.getTopDefAccess().getParamParamKeyword_4_0_0(),
+				f.getTopDefAccess().getOperOperKeyword_5_0_0(),
+				f.getTopDefAccess().getLincatLincatKeyword_6_0_0(),
+				f.getTopDefAccess().getLindefLindefKeyword_7_0_0(),
+				f.getTopDefAccess().getLinLinKeyword_8_0_0(),
+				f.getTopDefAccess().getPrintnamePrintnameKeyword_9_0_0(),
 				f.getTopDefAccess().getPrintnamePrintnameKeyword_10_0_0(),
-				f.getTopDefAccess().getPrintnamePrintnameKeyword_11_0_0(),
-				f.getTopDefAccess().getFlagsFlagsKeyword_12_0_0(),
+				f.getTopDefAccess().getFlagsFlagsKeyword_11_0_0(),
 		}) {
 			c.setLinewrap(1, 1, 2).before(k);
 			c.setLinewrap().after(k);
@@ -157,10 +157,9 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 				f.getTopDefAccess().getSemicolonKeyword_6_1_1(),
 				f.getTopDefAccess().getSemicolonKeyword_7_1_1(),
 				f.getTopDefAccess().getSemicolonKeyword_8_1_1(),
-				f.getTopDefAccess().getSemicolonKeyword_9_1_1(),
+				f.getTopDefAccess().getSemicolonKeyword_9_2_1(),
 				f.getTopDefAccess().getSemicolonKeyword_10_2_1(),
-				f.getTopDefAccess().getSemicolonKeyword_11_2_1(),
-				f.getTopDefAccess().getSemicolonKeyword_12_1_1(),
+				f.getTopDefAccess().getSemicolonKeyword_11_1_1(),
 		}) {
 			c.setLinewrap().after(k);
 		}
@@ -171,7 +170,7 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 				f.getCatDefAccess().getRightCurlyBracketKeyword_1_4_2());
 
 		// Comma in lincat judgements, e.g.: `Cat1,\nCat2 : SS ;`
-		c.setLinewrap().after(f.getPrintDefAccess().getCommaKeyword_1_0());
+		c.setLinewrap().after(f.getTermDefAccess().getCommaKeyword_1_0());
 
 //		for (ParserRule r : new ParserRule[]{
 //		 f.getCatDefRule(),
@@ -186,20 +185,17 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		
 		// overload
 		blockIndent(c, new Keyword[][] {
-				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_0_3_1_1(), f.getOperDefAccess().getRightCurlyBracketKeyword_0_3_1_5() },
-				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_1_4_1_1_1(), f.getOperDefAccess().getRightCurlyBracketKeyword_1_4_1_1_5() },
-				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_2_4(), f.getOperDefAccess().getRightCurlyBracketKeyword_2_8() },
+				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_0_4_1_1_1(), f.getOperDefAccess().getRightCurlyBracketKeyword_0_4_1_1_5() },
+				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_1_3_1_1(), f.getOperDefAccess().getRightCurlyBracketKeyword_1_3_1_5() },
 		});	
 
 		// case, table
 		// c.setLinewrap().before(f.getListCaseRule());
 		c.setLinewrap().after(f.getListCaseAccess().getSemicolonKeyword_1_0());
 		blockIndent(c, new Keyword[][] {
-				{ f.getExp4Access().getLeftCurlyBracketKeyword_0_1(), f.getExp4Access().getRightCurlyBracketKeyword_0_3() },
-				{ f.getExp4Access().getLeftCurlyBracketKeyword_1_2_0_0(), f.getExp4Access().getRightCurlyBracketKeyword_1_2_0_2() },
-				{ f.getExp4Access().getLeftCurlyBracketKeyword_2_3(), f.getExp4Access().getRightCurlyBracketKeyword_2_5() },
-				{ f.getExp4Access().getLeftCurlyBracketKeyword_3_1(), f.getExp4Access().getRightCurlyBracketKeyword_3_3() },
-				{ f.getExp4Access().getLeftCurlyBracketKeyword_4_1(), f.getExp4Access().getRightCurlyBracketKeyword_4_3() },
+				{ f.getExp3LFAccess().getLeftCurlyBracketKeyword_0_1(), f.getExp3LFAccess().getRightCurlyBracketKeyword_0_3() },
+				{ f.getExp3LFAccess().getLeftCurlyBracketKeyword_1_2_0_0(), f.getExp3LFAccess().getRightCurlyBracketKeyword_1_2_0_2() },
+				{ f.getExp4LFAccess().getLeftCurlyBracketKeyword_0_3(), f.getExp4LFAccess().getRightCurlyBracketKeyword_0_5() },
 		});
 		
 		// let ... in ...
@@ -207,15 +203,15 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		// See: https://bugs.eclipse.org/bugs/show_bug.cgi?id=369795
 		// and: http://www.eclipse.org/forums/index.php/t/279480/
 		for (Keyword[] k : new Keyword[][] {
-				{ f.getExpAccess().getLetKeyword_2_0(), f.getExpAccess().getInKeyword_2_4() },
-				{ f.getExpAccess().getLetKeyword_3_0(), f.getExpAccess().getInKeyword_3_2() },
+				{ f.getExpAccess().getLetKeyword_4_0(), f.getExpAccess().getInKeyword_4_4() },
+				{ f.getExpAccess().getLetKeyword_5_0(), f.getExpAccess().getInKeyword_5_2() },
 		}) {
 			c.setLinewrap().before(k[0]);
 			c.setIndentationIncrement().before(k[0]);
 		}
 		for (Keyword[] k : new Keyword[][] {
-				{ f.getExpAccess().getLeftCurlyBracketKeyword_2_1(), f.getExpAccess().getRightCurlyBracketKeyword_2_3() },
-				{ f.getExpAccess().getLetKeyword_3_0(), f.getExpAccess().getInKeyword_3_2() },
+				{ f.getExpAccess().getLeftCurlyBracketKeyword_4_1(), f.getExpAccess().getRightCurlyBracketKeyword_4_3() },
+				{ f.getExpAccess().getLetKeyword_5_0(), f.getExpAccess().getInKeyword_5_2() },
 		}) {
 			c.setLinewrap().after(k[0]);
 			c.setIndentationIncrement().after(k[0]);
@@ -247,13 +243,13 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		// Record fields
 		blockIndent(c, new Keyword[][] {
 				// { f.getPatt2Access().getLeftCurlyBracketKeyword_6_0(), f.getPatt2Access().getLeftCurlyBracketKeyword_6_0() },
-				{ f.getExp6Access().getRecordLeftCurlyBracketKeyword_11_0_0(), f.getExp6Access().getRightCurlyBracketKeyword_11_2() },
+				{ f.getExp6Access().getRecordLeftCurlyBracketKeyword_9_0_0(), f.getExp6Access().getRightCurlyBracketKeyword_9_2() },
 		});
 		c.setLinewrap().after(f.getListLocDefAccess().getSemicolonKeyword_1_1_0());
 		c.setLinewrap().after(f.getListLocDefAccess().getSemicolonKeyword_1_2());
 		
 		// Commas in local bindings
-		c.setNoSpace().after(f.getListBindAccess().getCommaKeyword_1_1_0());
+		c.setNoSpace().after(f.getListBindAccess().getCommaKeyword_1_0());
 
 		// Find common keywords and specify formatting for them
 		for (Pair<Keyword, Keyword> pair : f.findKeywordPairs("(", ")")) {

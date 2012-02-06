@@ -6,7 +6,7 @@ import org.eclipse.xtext.junit4.XtextRunner;
 import org.eclipse.xtext.junit4.util.ParseHelper;
 import org.eclipse.xtext.junit4.validation.ValidatorTester;
 import org.grammaticalframework.eclipse.GFInjectorProvider;
-import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.SourceModule;
 import org.grammaticalframework.eclipse.validation.GFJavaValidator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,7 +25,7 @@ public class ValidatorTest extends AbstractXtextTests {
 	Injector injector;
 
 	@Inject
-	ParseHelper<ModDef> parser;
+	ParseHelper<SourceModule> parser;
 
 	@Test
 	public void TestIt() throws Exception {

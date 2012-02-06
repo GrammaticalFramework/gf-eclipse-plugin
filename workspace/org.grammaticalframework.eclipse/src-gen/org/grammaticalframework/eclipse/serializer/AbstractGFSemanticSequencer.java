@@ -39,7 +39,10 @@ import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListCase;
 import org.grammaticalframework.eclipse.gF.ListExp;
+import org.grammaticalframework.eclipse.gF.ListIncluded;
+import org.grammaticalframework.eclipse.gF.ListInst;
 import org.grammaticalframework.eclipse.gF.ListLocDef;
+import org.grammaticalframework.eclipse.gF.ListOpen;
 import org.grammaticalframework.eclipse.gF.ListPatt;
 import org.grammaticalframework.eclipse.gF.ListPattAss;
 import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
@@ -47,7 +50,7 @@ import org.grammaticalframework.eclipse.gF.ListTupleComp;
 import org.grammaticalframework.eclipse.gF.LocDef;
 import org.grammaticalframework.eclipse.gF.ModBody;
 import org.grammaticalframework.eclipse.gF.ModContent;
-import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.ModOpen;
 import org.grammaticalframework.eclipse.gF.ModType;
 import org.grammaticalframework.eclipse.gF.Name;
 import org.grammaticalframework.eclipse.gF.Open;
@@ -56,6 +59,7 @@ import org.grammaticalframework.eclipse.gF.ParConstr;
 import org.grammaticalframework.eclipse.gF.ParamDef;
 import org.grammaticalframework.eclipse.gF.Patt;
 import org.grammaticalframework.eclipse.gF.PattAss;
+import org.grammaticalframework.eclipse.gF.SourceModule;
 import org.grammaticalframework.eclipse.gF.TermDef;
 import org.grammaticalframework.eclipse.gF.TopDef;
 import org.grammaticalframework.eclipse.services.GFGrammarAccess;
@@ -161,11 +165,11 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 				   context == grammarAccess.getExp4LFRule() ||
 				   context == grammarAccess.getExp4Access().getExp4LeftAction_1_0() ||
 				   context == grammarAccess.getExp5Rule() ||
-				   context == grammarAccess.getExpLFRule() ||
-				   context == grammarAccess.getExpLF13Rule() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_0_0_0() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_0_1_0() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_1_0()) {
+				   context == grammarAccess.getExpLF_AfterExp3Rule() ||
+				   context == grammarAccess.getExpLF_Exp1or3Rule() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_1_0() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_1_0()) {
 					sequence_Exp5(context, (Exp) semanticObject); 
 					return; 
 				}
@@ -206,11 +210,11 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 				   context == grammarAccess.getExp2Access().getExp2LeftAction_1_0() ||
 				   context == grammarAccess.getExp3Rule() ||
 				   context == grammarAccess.getExp3Access().getExp3LeftAction_1_0() ||
-				   context == grammarAccess.getExpLFRule() ||
-				   context == grammarAccess.getExpLF13Rule() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_0_0_0() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_0_1_0() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_1_0()) {
+				   context == grammarAccess.getExpLF_AfterExp3Rule() ||
+				   context == grammarAccess.getExpLF_Exp1or3Rule() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_1_0() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_1_0()) {
 					sequence_Exp3(context, (Exp3) semanticObject); 
 					return; 
 				}
@@ -226,25 +230,25 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 				   context == grammarAccess.getExp3Access().getExp3LeftAction_1_0() ||
 				   context == grammarAccess.getExp4Rule() ||
 				   context == grammarAccess.getExp4Access().getExp4LeftAction_1_0() ||
-				   context == grammarAccess.getExpLFRule() ||
-				   context == grammarAccess.getExpLF13Rule() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_0_0_0() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_0_1_0() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_1_0()) {
+				   context == grammarAccess.getExpLF_AfterExp3Rule() ||
+				   context == grammarAccess.getExpLF_Exp1or3Rule() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_1_0() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_1_0()) {
 					sequence_Exp4(context, (Exp4) semanticObject); 
 					return; 
 				}
 				else break;
 			case GFPackage.EXP_LF13:
 				if(context == grammarAccess.getExpRule() ||
-				   context == grammarAccess.getExpLFRule() ||
-				   context == grammarAccess.getExpLF13Rule()) {
-					sequence_ExpLF13(context, (ExpLF13) semanticObject); 
+				   context == grammarAccess.getExpLF_AfterExp3Rule() ||
+				   context == grammarAccess.getExpLF_Exp1or3Rule()) {
+					sequence_ExpLF_Exp1or3(context, (ExpLF13) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_0_0_0() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_0_1_0()) {
-					sequence_ExpLF13_ExpLF13_1_0_0_0_ExpLF13_1_0_1_0(context, (ExpLF13) semanticObject); 
+				else if(context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_1_0()) {
+					sequence_ExpLF_Exp1or3_ExpLF13_1_0_0_0_ExpLF13_1_0_1_0(context, (ExpLF13) semanticObject); 
 					return; 
 				}
 				else break;
@@ -278,11 +282,11 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 				   context == grammarAccess.getExp4Rule() ||
 				   context == grammarAccess.getExp4LFRule() ||
 				   context == grammarAccess.getExp4Access().getExp4LeftAction_1_0() ||
-				   context == grammarAccess.getExpLFRule() ||
-				   context == grammarAccess.getExpLF13Rule() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_0_0_0() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_0_1_0() ||
-				   context == grammarAccess.getExpLF13Access().getExpLF13LeftAction_1_1_0()) {
+				   context == grammarAccess.getExpLF_AfterExp3Rule() ||
+				   context == grammarAccess.getExpLF_Exp1or3Rule() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_0_0() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_1_0() ||
+				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_1_0()) {
 					sequence_Exp4LF(context, (Ident) semanticObject); 
 					return; 
 				}
@@ -328,12 +332,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case GFPackage.LIST_BIND:
-				if(context == grammarAccess.getExpRule() ||
-				   context == grammarAccess.getExpLFRule()) {
-					sequence_Exp(context, (ListBind) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getListBindRule()) {
+				if(context == grammarAccess.getListBindRule()) {
 					sequence_ListBind(context, (ListBind) semanticObject); 
 					return; 
 				}
@@ -350,10 +349,28 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 					return; 
 				}
 				else break;
+			case GFPackage.LIST_INCLUDED:
+				if(context == grammarAccess.getListIncludedRule()) {
+					sequence_ListIncluded(context, (ListIncluded) semanticObject); 
+					return; 
+				}
+				else break;
+			case GFPackage.LIST_INST:
+				if(context == grammarAccess.getListInstRule()) {
+					sequence_ListInst(context, (ListInst) semanticObject); 
+					return; 
+				}
+				else break;
 			case GFPackage.LIST_LOC_DEF:
-				if(context == grammarAccess.getExpLFRule() ||
+				if(context == grammarAccess.getExpLF_AfterExp3Rule() ||
 				   context == grammarAccess.getListLocDefRule()) {
 					sequence_ListLocDef(context, (ListLocDef) semanticObject); 
+					return; 
+				}
+				else break;
+			case GFPackage.LIST_OPEN:
+				if(context == grammarAccess.getListOpenRule()) {
+					sequence_ListOpen(context, (ListOpen) semanticObject); 
 					return; 
 				}
 				else break;
@@ -406,6 +423,10 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 					sequence_ModBody(context, (ModBody) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getModHeaderBodyRule()) {
+					sequence_ModHeaderBody(context, (ModBody) semanticObject); 
+					return; 
+				}
 				else break;
 			case GFPackage.MOD_CONTENT:
 				if(context == grammarAccess.getModContentRule()) {
@@ -413,9 +434,9 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 					return; 
 				}
 				else break;
-			case GFPackage.MOD_DEF:
-				if(context == grammarAccess.getModDefRule()) {
-					sequence_ModDef(context, (ModDef) semanticObject); 
+			case GFPackage.MOD_OPEN:
+				if(context == grammarAccess.getModOpenRule()) {
+					sequence_ModOpen(context, (ModOpen) semanticObject); 
 					return; 
 				}
 				else break;
@@ -479,6 +500,17 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 			case GFPackage.PATT_ASS:
 				if(context == grammarAccess.getPattAssRule()) {
 					sequence_PattAss(context, (PattAss) semanticObject); 
+					return; 
+				}
+				else break;
+			case GFPackage.SOURCE_MODULE:
+				if(context == grammarAccess.getModDefRule() ||
+				   context == grammarAccess.getSourceModuleRule()) {
+					sequence_ModDef(context, (SourceModule) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getModHeaderRule()) {
+					sequence_ModHeader(context, (SourceModule) semanticObject); 
 					return; 
 				}
 				else break;
@@ -549,26 +581,26 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (pattern=Patt e=Exp)
+	 *     (pattern=Patt right=Exp)
 	 */
 	protected void sequence_Case(EObject context, Case semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, GFPackage.Literals.CASE__PATTERN) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GFPackage.Literals.CASE__PATTERN));
-			if(transientValues.isValueTransient(semanticObject, GFPackage.Literals.CASE__E) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GFPackage.Literals.CASE__E));
+			if(transientValues.isValueTransient(semanticObject, GFPackage.Literals.CASE__RIGHT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GFPackage.Literals.CASE__RIGHT));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getCaseAccess().getPatternPattParserRuleCall_0_0(), semanticObject.getPattern());
-		feeder.accept(grammarAccess.getCaseAccess().getEExpParserRuleCall_2_0(), semanticObject.getE());
+		feeder.accept(grammarAccess.getCaseAccess().getRightExpParserRuleCall_2_0(), semanticObject.getRight());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     ((name=Ident context+=DDecl*) | (name=Ident context+=DDecl* size=Integer?))
+	 *     ((name=Ident context+=DDecl*) | (list?='[' name=Ident context+=DDecl* size=Integer?))
 	 */
 	protected void sequence_CatDef(EObject context, CatDef semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -605,7 +637,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((name+=Name name+=Name* definition=Exp) | (name+=Name patterns=ListPatt definition=Exp))
+	 *     ((name+=Name name+=Name* definition=Exp) | (name+=Name patternList=ListPatt definition=Exp))
 	 */
 	protected void sequence_DefDef(EObject context, DefDef semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -674,7 +706,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *             (tuple?='<' (tupleList=ListTupleComp | (v=Exp type=Exp))) | 
 	 *             (identity?='(' v=Exp)
 	 *         ) 
-	 *         label+=Label*
+	 *         labels+=Label*
 	 *     )
 	 */
 	protected void sequence_Exp5(EObject context, Exp semanticObject) {
@@ -706,27 +738,22 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((left=ExpLF13_ExpLF13_1_0_1_0 right=Exp) | (left=ExpLF13_ExpLF13_1_0_0_0 right=Exp3) | (left=ExpLF13_ExpLF13_1_1_0 right=ExpLF))
+	 *     (
+	 *         (left=ExpLF_Exp1or3_ExpLF13_1_0_1_0 right=Exp) | 
+	 *         (left=ExpLF_Exp1or3_ExpLF13_1_0_0_0 right=Exp3) | 
+	 *         (left=ExpLF_Exp1or3_ExpLF13_1_1_0 right=ExpLF_AfterExp3)
+	 *     )
 	 */
-	protected void sequence_ExpLF13(EObject context, ExpLF13 semanticObject) {
+	protected void sequence_ExpLF_Exp1or3(EObject context, ExpLF13 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (left=ExpLF13_ExpLF13_1_0_0_0 right=Exp3)
+	 *     (left=ExpLF_Exp1or3_ExpLF13_1_0_0_0 right=Exp3)
 	 */
-	protected void sequence_ExpLF13_ExpLF13_1_0_0_0_ExpLF13_1_0_1_0(EObject context, ExpLF13 semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (bindings+=Bind bindings+=Bind* decl=Exp right=Exp)
-	 */
-	protected void sequence_Exp(EObject context, ListBind semanticObject) {
+	protected void sequence_ExpLF_Exp1or3_ExpLF13_1_0_0_0_ExpLF13_1_0_1_0(EObject context, ExpLF13 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -842,9 +869,36 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (included+=Included included+=Included*)
+	 */
+	protected void sequence_ListIncluded(EObject context, ListIncluded semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (instantiations+=Inst instantiations+=Inst*)
+	 */
+	protected void sequence_ListInst(EObject context, ListInst semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     ((localDefinitions+=LocDef localDefinitions+=LocDef*)?)
 	 */
 	protected void sequence_ListLocDef(EObject context, ListLocDef semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (opens+=Open opens+=Open*)
+	 */
+	protected void sequence_ListOpen(EObject context, ListOpen semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -897,18 +951,9 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
-	 *         ((extends+=Included extends+=Included*)? content=ModContent) | 
-	 *         ((extends+=Included extends+=Included*)?) | 
-	 *         (functor=Included functorInstantiation?='with' (instantiations+=Inst instantiations+=Inst*)?) | 
-	 *         (functor=Included functorInstantiation?='with' (instantiations+=Inst instantiations+=Inst*)? content=ModContent) | 
-	 *         ((extends+=Included extends+=Included*)? functor=Included functorInstantiation?='with' (instantiations+=Inst instantiations+=Inst*)?) | 
-	 *         (
-	 *             (extends+=Included extends+=Included*)? 
-	 *             functor=Included 
-	 *             functorInstantiation?='with' 
-	 *             (instantiations+=Inst instantiations+=Inst*)? 
-	 *             content=ModContent
-	 *         )
+	 *         (extendList=ListIncluded (functor=Included functorInstantiation?='with' instantiationList=ListInst)? modContent=ModContent?) | 
+	 *         (functor=Included functorInstantiation?='with' instantiationList=ListInst modContent=ModContent?) | 
+	 *         modContent=ModContent
 	 *     )
 	 */
 	protected void sequence_ModBody(EObject context, ModBody semanticObject) {
@@ -918,7 +963,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((opens+=Open opens+=Open*)? judgements+=TopDef*)
+	 *     (judgements+=TopDef*)
 	 */
 	protected void sequence_ModContent(EObject context, ModContent semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -929,7 +974,38 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 * Constraint:
 	 *     (incomplete?='incomplete'? type=ModType body=ModBody)
 	 */
-	protected void sequence_ModDef(EObject context, ModDef semanticObject) {
+	protected void sequence_ModDef(EObject context, SourceModule semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         (extendList=ListIncluded (functor=Included functorInstantiation?='with' instantiationList=ListInst)? modOpen=ModOpen?) | 
+	 *         (functor=Included functorInstantiation?='with' instantiationList=ListInst modOpen=ModOpen?) | 
+	 *         modOpen=ModOpen
+	 *     )
+	 */
+	protected void sequence_ModHeaderBody(EObject context, ModBody semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (incomplete?='incomplete'? type=ModType body=ModHeaderBody)
+	 */
+	protected void sequence_ModHeader(EObject context, SourceModule semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (openList=ListOpen?)
+	 */
+	protected void sequence_ModOpen(EObject context, ModOpen semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -941,7 +1017,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         (resource?='resource' name=Ident) | 
 	 *         (interface?='interface' name=Ident) | 
 	 *         (concrete?='concrete' name=Ident abstractName=Ident) | 
-	 *         (instance?='instance' name=Ident abstractName=Included)
+	 *         (instance?='instance' name=Ident interfaceInclude=Included)
 	 *     )
 	 */
 	protected void sequence_ModType(EObject context, ModType semanticObject) {

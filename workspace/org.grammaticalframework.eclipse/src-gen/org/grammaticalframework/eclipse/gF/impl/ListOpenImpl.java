@@ -19,41 +19,41 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.grammaticalframework.eclipse.gF.Bind;
 import org.grammaticalframework.eclipse.gF.GFPackage;
-import org.grammaticalframework.eclipse.gF.ListBind;
+import org.grammaticalframework.eclipse.gF.ListOpen;
+import org.grammaticalframework.eclipse.gF.Open;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>List Bind</b></em>'.
+ * An implementation of the model object '<em><b>List Open</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ListBindImpl#getBindings <em>Bindings</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ListOpenImpl#getOpens <em>Opens</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBind
+public class ListOpenImpl extends MinimalEObjectImpl.Container implements ListOpen
 {
   /**
-   * The cached value of the '{@link #getBindings() <em>Bindings</em>}' containment reference list.
+   * The cached value of the '{@link #getOpens() <em>Opens</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBindings()
+   * @see #getOpens()
    * @generated
    * @ordered
    */
-  protected EList<Bind> bindings;
+  protected EList<Open> opens;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ListBindImpl()
+  protected ListOpenImpl()
   {
     super();
   }
@@ -66,7 +66,7 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   @Override
   protected EClass eStaticClass()
   {
-    return GFPackage.Literals.LIST_BIND;
+    return GFPackage.Literals.LIST_OPEN;
   }
 
   /**
@@ -74,13 +74,13 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Bind> getBindings()
+  public EList<Open> getOpens()
   {
-    if (bindings == null)
+    if (opens == null)
     {
-      bindings = new EObjectContainmentEList<Bind>(Bind.class, this, GFPackage.LIST_BIND__BINDINGS);
+      opens = new EObjectContainmentEList<Open>(Open.class, this, GFPackage.LIST_OPEN__OPENS);
     }
-    return bindings;
+    return opens;
   }
 
   /**
@@ -93,8 +93,8 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
-      case GFPackage.LIST_BIND__BINDINGS:
-        return ((InternalEList<?>)getBindings()).basicRemove(otherEnd, msgs);
+      case GFPackage.LIST_OPEN__OPENS:
+        return ((InternalEList<?>)getOpens()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -109,8 +109,8 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
-      case GFPackage.LIST_BIND__BINDINGS:
-        return getBindings();
+      case GFPackage.LIST_OPEN__OPENS:
+        return getOpens();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -126,9 +126,9 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
-      case GFPackage.LIST_BIND__BINDINGS:
-        getBindings().clear();
-        getBindings().addAll((Collection<? extends Bind>)newValue);
+      case GFPackage.LIST_OPEN__OPENS:
+        getOpens().clear();
+        getOpens().addAll((Collection<? extends Open>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -144,8 +144,8 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
-      case GFPackage.LIST_BIND__BINDINGS:
-        getBindings().clear();
+      case GFPackage.LIST_OPEN__OPENS:
+        getOpens().clear();
         return;
     }
     super.eUnset(featureID);
@@ -161,10 +161,10 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
-      case GFPackage.LIST_BIND__BINDINGS:
-        return bindings != null && !bindings.isEmpty();
+      case GFPackage.LIST_OPEN__OPENS:
+        return opens != null && !opens.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ListBindImpl
+} //ListOpenImpl

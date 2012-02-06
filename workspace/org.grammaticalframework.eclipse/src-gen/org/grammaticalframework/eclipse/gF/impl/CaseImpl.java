@@ -27,7 +27,7 @@ import org.grammaticalframework.eclipse.gF.Patt;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.CaseImpl#getPattern <em>Pattern</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.CaseImpl#getE <em>E</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.CaseImpl#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,14 +46,14 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
   protected Patt pattern;
 
   /**
-   * The cached value of the '{@link #getE() <em>E</em>}' containment reference.
+   * The cached value of the '{@link #getRight() <em>Right</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getE()
+   * @see #getRight()
    * @generated
    * @ordered
    */
-  protected Exp e;
+  protected Exp right;
 
   /**
    * <!-- begin-user-doc -->
@@ -129,9 +129,9 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
    * <!-- end-user-doc -->
    * @generated
    */
-  public Exp getE()
+  public Exp getRight()
   {
-    return e;
+    return right;
   }
 
   /**
@@ -139,13 +139,13 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetE(Exp newE, NotificationChain msgs)
+  public NotificationChain basicSetRight(Exp newRight, NotificationChain msgs)
   {
-    Exp oldE = e;
-    e = newE;
+    Exp oldRight = right;
+    right = newRight;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.CASE__E, oldE, newE);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.CASE__RIGHT, oldRight, newRight);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -156,20 +156,20 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setE(Exp newE)
+  public void setRight(Exp newRight)
   {
-    if (newE != e)
+    if (newRight != right)
     {
       NotificationChain msgs = null;
-      if (e != null)
-        msgs = ((InternalEObject)e).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.CASE__E, null, msgs);
-      if (newE != null)
-        msgs = ((InternalEObject)newE).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.CASE__E, null, msgs);
-      msgs = basicSetE(newE, msgs);
+      if (right != null)
+        msgs = ((InternalEObject)right).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.CASE__RIGHT, null, msgs);
+      if (newRight != null)
+        msgs = ((InternalEObject)newRight).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.CASE__RIGHT, null, msgs);
+      msgs = basicSetRight(newRight, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.CASE__E, newE, newE));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.CASE__RIGHT, newRight, newRight));
   }
 
   /**
@@ -184,8 +184,8 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
     {
       case GFPackage.CASE__PATTERN:
         return basicSetPattern(null, msgs);
-      case GFPackage.CASE__E:
-        return basicSetE(null, msgs);
+      case GFPackage.CASE__RIGHT:
+        return basicSetRight(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -202,8 +202,8 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
     {
       case GFPackage.CASE__PATTERN:
         return getPattern();
-      case GFPackage.CASE__E:
-        return getE();
+      case GFPackage.CASE__RIGHT:
+        return getRight();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -221,8 +221,8 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
       case GFPackage.CASE__PATTERN:
         setPattern((Patt)newValue);
         return;
-      case GFPackage.CASE__E:
-        setE((Exp)newValue);
+      case GFPackage.CASE__RIGHT:
+        setRight((Exp)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -241,8 +241,8 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
       case GFPackage.CASE__PATTERN:
         setPattern((Patt)null);
         return;
-      case GFPackage.CASE__E:
-        setE((Exp)null);
+      case GFPackage.CASE__RIGHT:
+        setRight((Exp)null);
         return;
     }
     super.eUnset(featureID);
@@ -260,8 +260,8 @@ public class CaseImpl extends MinimalEObjectImpl.Container implements Case
     {
       case GFPackage.CASE__PATTERN:
         return pattern != null;
-      case GFPackage.CASE__E:
-        return e != null;
+      case GFPackage.CASE__RIGHT:
+        return right != null;
     }
     return super.eIsSet(featureID);
   }

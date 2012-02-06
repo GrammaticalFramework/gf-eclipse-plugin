@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModType#isConcrete <em>Concrete</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModType#getAbstractName <em>Abstract Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModType#isInstance <em>Instance</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.ModType#getInterfaceInclude <em>Interface Include</em>}</li>
  * </ul>
  * </p>
  *
@@ -170,12 +171,12 @@ public interface ModType extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Abstract Name</em>' containment reference.
-   * @see #setAbstractName(EObject)
+   * @see #setAbstractName(Ident)
    * @see org.grammaticalframework.eclipse.gF.GFPackage#getModType_AbstractName()
    * @model containment="true"
    * @generated
    */
-  EObject getAbstractName();
+  Ident getAbstractName();
 
   /**
    * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.ModType#getAbstractName <em>Abstract Name</em>}' containment reference.
@@ -185,7 +186,7 @@ public interface ModType extends EObject
    * @see #getAbstractName()
    * @generated
    */
-  void setAbstractName(EObject value);
+  void setAbstractName(Ident value);
 
   /**
    * Returns the value of the '<em><b>Instance</b></em>' attribute.
@@ -212,5 +213,31 @@ public interface ModType extends EObject
    * @generated
    */
   void setInstance(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Interface Include</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Interface Include</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Interface Include</em>' containment reference.
+   * @see #setInterfaceInclude(Included)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getModType_InterfaceInclude()
+   * @model containment="true"
+   * @generated
+   */
+  Included getInterfaceInclude();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.ModType#getInterfaceInclude <em>Interface Include</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Interface Include</em>' containment reference.
+   * @see #getInterfaceInclude()
+   * @generated
+   */
+  void setInterfaceInclude(Included value);
 
 } // ModType

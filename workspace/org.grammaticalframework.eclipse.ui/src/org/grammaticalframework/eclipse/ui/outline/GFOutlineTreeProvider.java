@@ -16,35 +16,49 @@ import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import org.eclipse.xtext.ui.editor.outline.impl.EObjectNode;
 import org.eclipse.xtext.ui.editor.outline.impl.EStructuralFeatureNode;
 import org.grammaticalframework.eclipse.GFException;
-import org.grammaticalframework.eclipse.gF.*;
+import org.grammaticalframework.eclipse.gF.CatDef;
+import org.grammaticalframework.eclipse.gF.DefDef;
+import org.grammaticalframework.eclipse.gF.FlagDef;
+import org.grammaticalframework.eclipse.gF.FunDef;
+import org.grammaticalframework.eclipse.gF.GFPackage;
+import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Included;
+import org.grammaticalframework.eclipse.gF.Inst;
+import org.grammaticalframework.eclipse.gF.ModBody;
+import org.grammaticalframework.eclipse.gF.Name;
+import org.grammaticalframework.eclipse.gF.Open;
+import org.grammaticalframework.eclipse.gF.ParConstr;
+import org.grammaticalframework.eclipse.gF.ParamDef;
+import org.grammaticalframework.eclipse.gF.SourceModule;
+import org.grammaticalframework.eclipse.gF.TermDef;
+import org.grammaticalframework.eclipse.gF.TopDef;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 
 import com.google.inject.Inject;
 
-// TODO: Auto-generated Javadoc
 /**
  * customization of the default outline structure.
  */
 public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	
 	/**
-	 * The images.
+	 * Image helper
 	 */
 	@Inject
 	private GFImages images;
 	
 	/**
-	 * _create children.
+	 * Top-most node
 	 *
 	 * @param parentNode the parent node
 	 * @param modDef the mod def
 	 */
-	protected void _createChildren(IOutlineNode parentNode, ModDef modDef) {
+	protected void _createChildren(IOutlineNode parentNode, SourceModule modDef) {
 		createChildren(parentNode, modDef.getBody());
 	}
 
 	/**
-	 * _create children.
+	 * Handle opens, extends etc.
 	 *
 	 * @param parentNode the parent node
 	 * @param modBody the mod body
@@ -52,9 +66,9 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	protected void _createChildren(IOutlineNode parentNode, ModBody modBody) {
 
 		// Opens
-		if (!modBody.getOpens().isEmpty()) {
-			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_BODY__OPENS, images.forOpen(), "Opens", false);
-			for (Open o : modBody.getOpens()) {
+		if (!modBody.getModContent().getOpenList().getOpens().isEmpty()) {
+			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_CONTENT__OPEN_LIST, images.forOpen(), "Opens", false);
+			for (Open o : modBody.getModContent().getOpenList().getOpens()) {
 				EObjectNode subnode = createEObjectNode(node, o.getName());
 				if (o.getAlias() != null) {
 					String text = String.format("%s (as \"%s\")", subnode.getText(), o.getAlias().getS());
@@ -64,9 +78,9 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		}
 		
 		// Extends
-		if (!modBody.getExtends().isEmpty()) {
-			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_BODY__EXTENDS, images.forExtend(), "Extends", false);
-			for (Included i : modBody.getExtends()) {
+		if (!modBody.getExtendList().getIncluded().isEmpty()) {
+			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_BODY__EXTEND_LIST, images.forExtend(), "Extends", false);
+			for (Included i : modBody.getExtendList().getIncluded()) {
 //				createNode(node, i.getName());
 				EObjectNode subnode = createEObjectNode(node, i.getName());
 				if (i.isInclusive()) {
@@ -89,17 +103,17 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		}
 		
 		// Instantiations
-		if (!modBody.getInstantiations().isEmpty()) {
-			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_BODY__INSTANTIATIONS, images.forInstantiate(), "Instantiates", false);
-			for (Open i : modBody.getInstantiations()) {
+		if (!modBody.getInstantiationList().getInstantiations().isEmpty()) {
+			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_BODY__INSTANTIATION_LIST, images.forInstantiate(), "Instantiates", false);
+			for (Inst i : modBody.getInstantiationList().getInstantiations()) {
 				EObjectNode subnode = createEObjectNode(node, i.getName());
-				String text = String.format("%s = %s", i.getAlias().getS(), subnode.getText());
+				String text = String.format("%s = %s", i.getInterface().getS(), subnode.getText());
 				subnode.setText(text);
 			}
 		}
 		
 		// Judgements
-		for (TopDef t : modBody.getJudgements()) {
+		for (TopDef t : modBody.getModContent().getJudgements()) {
 			createNode(parentNode, t);
 		}
 		
@@ -107,7 +121,7 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
 	
 	/**
-	 * _create children.
+	 * Handle top-level judgements
 	 *
 	 * @param parentNode the parent node
 	 * @param topDef the top def
@@ -136,7 +150,7 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		// Def, Oper, Lindef, Lin
 		else if (topDef.isDef() || topDef.isOper() || topDef.isLindef() || topDef.isLin()) {
 			for (EObject e : topDef.getDefinitions()) {
-				Def d = (Def)e;
+				DefDef d = (DefDef)e;
 				for (Name n : d.getName()) { 
 					createNode(parentNode, n.getName());
 				}
@@ -146,7 +160,7 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		// Param
 		else if (topDef.isParam()) {
 			for (EObject e : topDef.getDefinitions()) {
-				ParDef p = (ParDef)e;
+				ParamDef p = (ParamDef)e;
 				EObjectNode node = createEObjectNode(parentNode, p.getName());
 				node.setImage(images.forParam());
 				
@@ -159,7 +173,7 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		// Lincat, printnane
 		else if (topDef.isLincat() || topDef.isPrintname()) {
 			for (EObject e : topDef.getDefinitions()) {
-				PrintDef p = (PrintDef)e;
+				TermDef p = (TermDef)e;
 				for (Name n : p.getName()) { 
 					createNode(parentNode, n.getName());
 				}

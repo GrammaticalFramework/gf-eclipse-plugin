@@ -40,7 +40,10 @@ import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListCase;
 import org.grammaticalframework.eclipse.gF.ListExp;
+import org.grammaticalframework.eclipse.gF.ListIncluded;
+import org.grammaticalframework.eclipse.gF.ListInst;
 import org.grammaticalframework.eclipse.gF.ListLocDef;
+import org.grammaticalframework.eclipse.gF.ListOpen;
 import org.grammaticalframework.eclipse.gF.ListPatt;
 import org.grammaticalframework.eclipse.gF.ListPattAss;
 import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
@@ -48,7 +51,7 @@ import org.grammaticalframework.eclipse.gF.ListTupleComp;
 import org.grammaticalframework.eclipse.gF.LocDef;
 import org.grammaticalframework.eclipse.gF.ModBody;
 import org.grammaticalframework.eclipse.gF.ModContent;
-import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.ModOpen;
 import org.grammaticalframework.eclipse.gF.ModType;
 import org.grammaticalframework.eclipse.gF.Name;
 import org.grammaticalframework.eclipse.gF.Open;
@@ -57,6 +60,7 @@ import org.grammaticalframework.eclipse.gF.ParConstr;
 import org.grammaticalframework.eclipse.gF.ParamDef;
 import org.grammaticalframework.eclipse.gF.Patt;
 import org.grammaticalframework.eclipse.gF.PattAss;
+import org.grammaticalframework.eclipse.gF.SourceModule;
 import org.grammaticalframework.eclipse.gF.TermDef;
 import org.grammaticalframework.eclipse.gF.TopDef;
 
@@ -112,12 +116,16 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
   {
     switch (eClass.getClassifierID())
     {
-      case GFPackage.MOD_DEF: return createModDef();
+      case GFPackage.SOURCE_MODULE: return createSourceModule();
       case GFPackage.MOD_TYPE: return createModType();
       case GFPackage.MOD_BODY: return createModBody();
+      case GFPackage.MOD_OPEN: return createModOpen();
       case GFPackage.MOD_CONTENT: return createModContent();
+      case GFPackage.LIST_OPEN: return createListOpen();
       case GFPackage.OPEN: return createOpen();
+      case GFPackage.LIST_INST: return createListInst();
       case GFPackage.INST: return createInst();
+      case GFPackage.LIST_INCLUDED: return createListIncluded();
       case GFPackage.INCLUDED: return createIncluded();
       case GFPackage.TOP_DEF: return createTopDef();
       case GFPackage.CAT_DEF: return createCatDef();
@@ -169,10 +177,10 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ModDef createModDef()
+  public SourceModule createSourceModule()
   {
-    ModDefImpl modDef = new ModDefImpl();
-    return modDef;
+    SourceModuleImpl sourceModule = new SourceModuleImpl();
+    return sourceModule;
   }
 
   /**
@@ -202,10 +210,32 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ModOpen createModOpen()
+  {
+    ModOpenImpl modOpen = new ModOpenImpl();
+    return modOpen;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ModContent createModContent()
   {
     ModContentImpl modContent = new ModContentImpl();
     return modContent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListOpen createListOpen()
+  {
+    ListOpenImpl listOpen = new ListOpenImpl();
+    return listOpen;
   }
 
   /**
@@ -224,10 +254,32 @@ public class GFFactoryImpl extends EFactoryImpl implements GFFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public ListInst createListInst()
+  {
+    ListInstImpl listInst = new ListInstImpl();
+    return listInst;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Inst createInst()
   {
     InstImpl inst = new InstImpl();
     return inst;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ListIncluded createListIncluded()
+  {
+    ListIncludedImpl listIncluded = new ListIncludedImpl();
+    return listIncluded;
   }
 
   /**

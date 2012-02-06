@@ -199,12 +199,12 @@ public interface Patt extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Label</em>' containment reference.
-   * @see #setLabel(EObject)
+   * @see #setLabel(Ident)
    * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_Label()
    * @model containment="true"
    * @generated
    */
-  EObject getLabel();
+  Ident getLabel();
 
   /**
    * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#getLabel <em>Label</em>}' containment reference.
@@ -214,7 +214,7 @@ public interface Patt extends EObject
    * @see #getLabel()
    * @generated
    */
-  void setLabel(EObject value);
+  void setLabel(Ident value);
 
   /**
    * Returns the value of the '<em><b>Meta</b></em>' attribute.

@@ -85,6 +85,7 @@ public class InternalGFLexer extends Lexer {
     public static final int T__75=75;
     public static final int T__74=74;
     public static final int T__73=73;
+    public static final int T__79=79;
     public static final int RULE_INTEGER=5;
     public static final int T__78=78;
     public static final int T__77=77;
@@ -375,10 +376,11 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24:7: ( ',' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24:9: ','
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24:7: ( 'open' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24:9: 'open'
             {
-            match(','); 
+            match("open"); 
+
 
             }
 
@@ -435,10 +437,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:27:7: ( 'open' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:27:9: 'open'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:27:7: ( 'in' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:27:9: 'in'
             {
-            match("open"); 
+            match("in"); 
 
 
             }
@@ -456,11 +458,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:28:7: ( 'in' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:28:9: 'in'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:28:7: ( ',' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:28:9: ','
             {
-            match("in"); 
-
+            match(','); 
 
             }
 
@@ -680,10 +681,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:39:7: ( '=>' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:39:9: '=>'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:39:7: ( '\\\\\\\\' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:39:9: '\\\\\\\\'
             {
-            match("=>"); 
+            match("\\\\"); 
 
 
             }
@@ -701,10 +702,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:40:7: ( 'let' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:40:9: 'let'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:40:7: ( '=>' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:40:9: '=>'
             {
-            match("let"); 
+            match("=>"); 
 
 
             }
@@ -722,10 +723,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:41:7: ( 'where' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:41:9: 'where'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:41:7: ( 'let' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:41:9: 'let'
             {
-            match("where"); 
+            match("let"); 
 
 
             }
@@ -743,10 +744,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:42:7: ( 'table' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:42:9: 'table'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:42:7: ( 'where' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:42:9: 'where'
             {
-            match("table"); 
+            match("where"); 
 
 
             }
@@ -764,10 +765,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:43:7: ( 'case' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:43:9: 'case'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:43:7: ( 'table' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:43:9: 'table'
             {
-            match("case"); 
+            match("table"); 
 
 
             }
@@ -785,10 +786,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__47;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:44:7: ( 'variants' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:44:9: 'variants'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:44:7: ( 'case' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:44:9: 'case'
             {
-            match("variants"); 
+            match("case"); 
 
 
             }
@@ -806,10 +807,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__48;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:45:7: ( 'pre' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:45:9: 'pre'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:45:7: ( 'variants' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:45:9: 'variants'
             {
-            match("pre"); 
+            match("variants"); 
 
 
             }
@@ -827,10 +828,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:46:7: ( 'strs' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:46:9: 'strs'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:46:7: ( 'pre' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:46:9: 'pre'
             {
-            match("strs"); 
+            match("pre"); 
 
 
             }
@@ -848,10 +849,11 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:47:7: ( '#' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:47:9: '#'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:47:7: ( 'strs' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:47:9: 'strs'
             {
-            match('#'); 
+            match("strs"); 
+
 
             }
 
@@ -868,11 +870,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:48:7: ( 'pattern' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:48:9: 'pattern'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:48:7: ( '#' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:48:9: '#'
             {
-            match("pattern"); 
-
+            match('#'); 
 
             }
 
@@ -889,10 +890,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:49:7: ( 'lincat' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:49:9: 'lincat'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:49:7: ( 'pattern' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:49:9: 'pattern'
             {
-            match("lincat"); 
+            match("pattern"); 
 
 
             }
@@ -910,10 +911,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:50:7: ( 'lin' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:50:9: 'lin'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:50:7: ( 'lincat' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:50:9: 'lincat'
             {
-            match("lin"); 
+            match("lincat"); 
 
 
             }
@@ -931,10 +932,11 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:51:7: ( '.' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:51:9: '.'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:51:7: ( 'lin' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:51:9: 'lin'
             {
-            match('.'); 
+            match("lin"); 
+
 
             }
 
@@ -951,10 +953,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:52:7: ( '>' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:52:9: '>'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:52:7: ( '.' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:52:9: '.'
             {
-            match('>'); 
+            match('.'); 
 
             }
 
@@ -971,10 +973,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:53:7: ( '@' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:53:9: '@'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:53:7: ( '>' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:53:9: '>'
             {
-            match('@'); 
+            match('>'); 
 
             }
 
@@ -991,10 +993,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:54:7: ( '-' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:54:9: '-'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:54:7: ( '@' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:54:9: '@'
             {
-            match('-'); 
+            match('@'); 
 
             }
 
@@ -1011,10 +1013,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:55:7: ( '~' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:55:9: '~'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:55:7: ( '-' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:55:9: '-'
             {
-            match('~'); 
+            match('-'); 
 
             }
 
@@ -1031,10 +1033,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:56:7: ( '<' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:56:9: '<'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:56:7: ( '~' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:56:9: '~'
             {
-            match('<'); 
+            match('~'); 
 
             }
 
@@ -1051,10 +1053,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:57:7: ( '$' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:57:9: '$'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:57:7: ( '<' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:57:9: '<'
             {
-            match('$'); 
+            match('<'); 
 
             }
 
@@ -1071,10 +1073,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:58:7: ( '/' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:58:9: '/'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:58:7: ( '$' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:58:9: '$'
             {
-            match('/'); 
+            match('$'); 
 
             }
 
@@ -1091,11 +1093,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:59:7: ( 'incomplete' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:59:9: 'incomplete'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:59:7: ( '/' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:59:9: '/'
             {
-            match("incomplete"); 
-
+            match('/'); 
 
             }
 
@@ -1112,10 +1113,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:60:7: ( 'abstract' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:60:9: 'abstract'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:60:7: ( 'incomplete' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:60:9: 'incomplete'
             {
-            match("abstract"); 
+            match("incomplete"); 
 
 
             }
@@ -1133,10 +1134,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:61:7: ( 'resource' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:61:9: 'resource'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:61:7: ( 'abstract' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:61:9: 'abstract'
             {
-            match("resource"); 
+            match("abstract"); 
 
 
             }
@@ -1154,10 +1155,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:62:7: ( 'interface' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:62:9: 'interface'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:62:7: ( 'resource' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:62:9: 'resource'
             {
-            match("interface"); 
+            match("resource"); 
 
 
             }
@@ -1175,10 +1176,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:63:7: ( 'concrete' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:63:9: 'concrete'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:63:7: ( 'interface' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:63:9: 'interface'
             {
-            match("concrete"); 
+            match("interface"); 
 
 
             }
@@ -1196,10 +1197,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:64:7: ( 'instance' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:64:9: 'instance'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:64:7: ( 'concrete' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:64:9: 'concrete'
             {
-            match("instance"); 
+            match("concrete"); 
 
 
             }
@@ -1217,10 +1218,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:65:7: ( 'with' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:65:9: 'with'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:65:7: ( 'instance' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:65:9: 'instance'
             {
-            match("with"); 
+            match("instance"); 
 
 
             }
@@ -1238,10 +1239,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:66:7: ( 'def' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:66:9: 'def'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:66:7: ( 'with' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:66:9: 'with'
             {
-            match("def"); 
+            match("with"); 
 
 
             }
@@ -1259,10 +1260,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:67:7: ( 'data' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:67:9: 'data'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:67:7: ( 'def' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:67:9: 'def'
             {
-            match("data"); 
+            match("def"); 
 
 
             }
@@ -1280,10 +1281,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:68:7: ( 'param' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:68:9: 'param'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:68:7: ( 'data' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:68:9: 'data'
             {
-            match("param"); 
+            match("data"); 
 
 
             }
@@ -1301,10 +1302,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:69:7: ( 'oper' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:69:9: 'oper'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:69:7: ( 'param' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:69:9: 'param'
             {
-            match("oper"); 
+            match("param"); 
 
 
             }
@@ -1322,10 +1323,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:70:7: ( 'lindef' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:70:9: 'lindef'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:70:7: ( 'oper' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:70:9: 'oper'
             {
-            match("lindef"); 
+            match("oper"); 
 
 
             }
@@ -1343,10 +1344,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:71:7: ( 'printname' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:71:9: 'printname'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:71:7: ( 'lindef' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:71:9: 'lindef'
             {
-            match("printname"); 
+            match("lindef"); 
 
 
             }
@@ -1364,10 +1365,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:72:7: ( 'flags' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:72:9: 'flags'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:72:7: ( 'printname' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:72:9: 'printname'
             {
-            match("flags"); 
+            match("printname"); 
 
 
             }
@@ -1385,10 +1386,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:73:7: ( 'overload' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:73:9: 'overload'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:73:7: ( 'flags' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:73:9: 'flags'
             {
-            match("overload"); 
+            match("flags"); 
 
 
             }
@@ -1406,10 +1407,11 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:74:7: ( '?' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:74:9: '?'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:74:7: ( 'overload' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:74:9: 'overload'
             {
-            match('?'); 
+            match("overload"); 
+
 
             }
 
@@ -1426,10 +1428,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:75:7: ( '_' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:75:9: '_'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:75:7: ( '?' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:75:9: '?'
             {
-            match('_'); 
+            match('?'); 
 
             }
 
@@ -1441,13 +1443,33 @@ public class InternalGFLexer extends Lexer {
     }
     // $ANTLR end "T__78"
 
+    // $ANTLR start "T__79"
+    public final void mT__79() throws RecognitionException {
+        try {
+            int _type = T__79;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:76:7: ( '_' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:76:9: '_'
+            {
+            match('_'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__79"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24534:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\'' )* )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24534:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\'' )*
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24174:9: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\'' )* )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24174:11: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\'' )*
             {
             if ( (input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                 input.consume();
@@ -1458,7 +1480,7 @@ public class InternalGFLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24534:35: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\'' )*
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24174:35: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | '\\'' )*
             loop1:
             do {
                 int alt1=2;
@@ -1507,11 +1529,11 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24536:13: ( '\"' ( '\\\\' ( '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24536:15: '\"' ( '\\\\' ( '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24176:13: ( '\"' ( '\\\\' ( '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24176:15: '\"' ( '\\\\' ( '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
             {
             match('\"'); 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24536:19: ( '\\\\' ( '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24176:19: ( '\\\\' ( '\"' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
             loop2:
             do {
                 int alt2=3;
@@ -1527,7 +1549,7 @@ public class InternalGFLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24536:20: '\\\\' ( '\"' | '\\\\' )
+            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24176:20: '\\\\' ( '\"' | '\\\\' )
             	    {
             	    match('\\'); 
             	    if ( input.LA(1)=='\"'||input.LA(1)=='\\' ) {
@@ -1543,7 +1565,7 @@ public class InternalGFLexer extends Lexer {
             	    }
             	    break;
             	case 2 :
-            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24536:36: ~ ( ( '\\\\' | '\"' ) )
+            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24176:36: ~ ( ( '\\\\' | '\"' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1580,10 +1602,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = RULE_INTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24538:14: ( ( '0' .. '9' )+ )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24538:16: ( '0' .. '9' )+
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24178:14: ( ( '0' .. '9' )+ )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24178:16: ( '0' .. '9' )+
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24538:16: ( '0' .. '9' )+
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24178:16: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -1597,7 +1619,7 @@ public class InternalGFLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24538:17: '0' .. '9'
+            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24178:17: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1629,10 +1651,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = RULE_DOUBLE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:13: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ( 'e' ( '-' )? ( '0' .. '9' )+ )? )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:15: ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ( 'e' ( '-' )? ( '0' .. '9' )+ )?
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:13: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ( 'e' ( '-' )? ( '0' .. '9' )+ )? )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:15: ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ( 'e' ( '-' )? ( '0' .. '9' )+ )?
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:15: ( '0' .. '9' )+
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:15: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -1646,7 +1668,7 @@ public class InternalGFLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:16: '0' .. '9'
+            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:16: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1663,7 +1685,7 @@ public class InternalGFLexer extends Lexer {
             } while (true);
 
             match('.'); 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:31: ( '0' .. '9' )+
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:31: ( '0' .. '9' )+
             int cnt5=0;
             loop5:
             do {
@@ -1677,7 +1699,7 @@ public class InternalGFLexer extends Lexer {
 
                 switch (alt5) {
             	case 1 :
-            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:32: '0' .. '9'
+            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:32: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1693,7 +1715,7 @@ public class InternalGFLexer extends Lexer {
                 cnt5++;
             } while (true);
 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:43: ( 'e' ( '-' )? ( '0' .. '9' )+ )?
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:43: ( 'e' ( '-' )? ( '0' .. '9' )+ )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1702,10 +1724,10 @@ public class InternalGFLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:44: 'e' ( '-' )? ( '0' .. '9' )+
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:44: 'e' ( '-' )? ( '0' .. '9' )+
                     {
                     match('e'); 
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:48: ( '-' )?
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:48: ( '-' )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -1714,7 +1736,7 @@ public class InternalGFLexer extends Lexer {
                     }
                     switch (alt6) {
                         case 1 :
-                            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:48: '-'
+                            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:48: '-'
                             {
                             match('-'); 
 
@@ -1723,7 +1745,7 @@ public class InternalGFLexer extends Lexer {
 
                     }
 
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:53: ( '0' .. '9' )+
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:53: ( '0' .. '9' )+
                     int cnt7=0;
                     loop7:
                     do {
@@ -1737,7 +1759,7 @@ public class InternalGFLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:54: '0' .. '9'
+                    	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24180:54: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1775,12 +1797,12 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = RULE_COMPILER_PRAGMA;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24542:22: ( '--#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24542:24: '--#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24182:22: ( '--#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24182:24: '--#' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("--#"); 
 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24542:30: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24182:30: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1793,7 +1815,7 @@ public class InternalGFLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24542:30: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24182:30: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1813,7 +1835,7 @@ public class InternalGFLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24542:46: ( ( '\\r' )? '\\n' )?
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24182:46: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1822,9 +1844,9 @@ public class InternalGFLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24542:47: ( '\\r' )? '\\n'
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24182:47: ( '\\r' )? '\\n'
                     {
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24542:47: ( '\\r' )?
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24182:47: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1833,7 +1855,7 @@ public class InternalGFLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24542:47: '\\r'
+                            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24182:47: '\\r'
                             {
                             match('\r'); 
 
@@ -1865,10 +1887,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = RULE_GF_DOC;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:13: ( ( '--%' | '--:' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:15: ( '--%' | '--:' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:13: ( ( '--%' | '--:' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:15: ( '--%' | '--:' ) (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:15: ( '--%' | '--:' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:15: ( '--%' | '--:' )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1906,7 +1928,7 @@ public class InternalGFLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:16: '--%'
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:16: '--%'
                     {
                     match("--%"); 
 
@@ -1914,7 +1936,7 @@ public class InternalGFLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:22: '--:'
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:22: '--:'
                     {
                     match("--:"); 
 
@@ -1924,7 +1946,7 @@ public class InternalGFLexer extends Lexer {
 
             }
 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:29: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:29: (~ ( ( '\\n' | '\\r' ) ) )*
             loop13:
             do {
                 int alt13=2;
@@ -1937,7 +1959,7 @@ public class InternalGFLexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:29: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:29: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1957,7 +1979,7 @@ public class InternalGFLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:45: ( ( '\\r' )? '\\n' )?
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:45: ( ( '\\r' )? '\\n' )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -1966,9 +1988,9 @@ public class InternalGFLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:46: ( '\\r' )? '\\n'
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:46: ( '\\r' )? '\\n'
                     {
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:46: ( '\\r' )?
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:46: ( '\\r' )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -1977,7 +1999,7 @@ public class InternalGFLexer extends Lexer {
                     }
                     switch (alt14) {
                         case 1 :
-                            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:46: '\\r'
+                            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24184:46: '\\r'
                             {
                             match('\r'); 
 
@@ -2009,12 +2031,12 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24546:17: ( '{-' ( options {greedy=false; } : . )* '-}' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24546:19: '{-' ( options {greedy=false; } : . )* '-}'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24186:17: ( '{-' ( options {greedy=false; } : . )* '-}' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24186:19: '{-' ( options {greedy=false; } : . )* '-}'
             {
             match("{-"); 
 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24546:24: ( options {greedy=false; } : . )*
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24186:24: ( options {greedy=false; } : . )*
             loop16:
             do {
                 int alt16=2;
@@ -2039,7 +2061,7 @@ public class InternalGFLexer extends Lexer {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24546:52: .
+            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24186:52: .
             	    {
             	    matchAny(); 
 
@@ -2069,12 +2091,12 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24548:17: ( '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24548:19: '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24188:17: ( '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24188:19: '--' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("--"); 
 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24548:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24188:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop17:
             do {
                 int alt17=2;
@@ -2087,7 +2109,7 @@ public class InternalGFLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24548:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24188:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2107,7 +2129,7 @@ public class InternalGFLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24548:40: ( ( '\\r' )? '\\n' )?
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24188:40: ( ( '\\r' )? '\\n' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -2116,9 +2138,9 @@ public class InternalGFLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24548:41: ( '\\r' )? '\\n'
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24188:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24548:41: ( '\\r' )?
+                    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24188:41: ( '\\r' )?
                     int alt18=2;
                     int LA18_0 = input.LA(1);
 
@@ -2127,7 +2149,7 @@ public class InternalGFLexer extends Lexer {
                     }
                     switch (alt18) {
                         case 1 :
-                            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24548:41: '\\r'
+                            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24188:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2159,10 +2181,10 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24550:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24550:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24190:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24190:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24550:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24190:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt20=0;
             loop20:
             do {
@@ -2216,8 +2238,8 @@ public class InternalGFLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24552:16: ( . )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24552:18: .
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24192:16: ( . )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24192:18: .
             {
             matchAny(); 
 
@@ -2232,8 +2254,8 @@ public class InternalGFLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | RULE_ID | RULE_STRING | RULE_INTEGER | RULE_DOUBLE | RULE_COMPILER_PRAGMA | RULE_GF_DOC | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt21=75;
+        // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:8: ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | RULE_ID | RULE_STRING | RULE_INTEGER | RULE_DOUBLE | RULE_COMPILER_PRAGMA | RULE_GF_DOC | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt21=76;
         alt21 = dfa21.predict(input);
         switch (alt21) {
             case 1 :
@@ -2692,70 +2714,77 @@ public class InternalGFLexer extends Lexer {
                 }
                 break;
             case 66 :
-                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:400: RULE_ID
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:400: T__79
+                {
+                mT__79(); 
+
+                }
+                break;
+            case 67 :
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:406: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 67 :
-                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:408: RULE_STRING
+            case 68 :
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:414: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 68 :
-                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:420: RULE_INTEGER
+            case 69 :
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:426: RULE_INTEGER
                 {
                 mRULE_INTEGER(); 
 
                 }
                 break;
-            case 69 :
-                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:433: RULE_DOUBLE
+            case 70 :
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:439: RULE_DOUBLE
                 {
                 mRULE_DOUBLE(); 
 
                 }
                 break;
-            case 70 :
-                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:445: RULE_COMPILER_PRAGMA
+            case 71 :
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:451: RULE_COMPILER_PRAGMA
                 {
                 mRULE_COMPILER_PRAGMA(); 
 
                 }
                 break;
-            case 71 :
-                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:466: RULE_GF_DOC
+            case 72 :
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:472: RULE_GF_DOC
                 {
                 mRULE_GF_DOC(); 
 
                 }
                 break;
-            case 72 :
-                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:478: RULE_ML_COMMENT
+            case 73 :
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:484: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 73 :
-                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:494: RULE_SL_COMMENT
+            case 74 :
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:500: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 74 :
-                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:510: RULE_WS
+            case 75 :
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:516: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 75 :
-                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:518: RULE_ANY_OTHER
+            case 76 :
+                // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:1:524: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2769,29 +2798,29 @@ public class InternalGFLexer extends Lexer {
 
     protected DFA21 dfa21 = new DFA21(this);
     static final String DFA21_eotS =
-        "\1\uffff\1\61\1\uffff\1\64\3\67\1\73\1\uffff\1\67\1\uffff\1\102"+
-        "\1\uffff\1\67\4\uffff\2\67\3\uffff\1\122\6\67\10\uffff\3\67\1\uffff"+
-        "\1\151\1\uffff\1\57\1\155\7\uffff\2\67\1\uffff\2\67\3\uffff\1\163"+
-        "\2\67\4\uffff\1\171\4\uffff\4\67\4\uffff\1\u0082\1\uffff\11\67\10"+
-        "\uffff\4\67\4\uffff\1\155\2\uffff\1\67\1\u0093\1\67\1\u0096\1\uffff"+
-        "\5\67\1\uffff\1\u009d\2\67\1\u00a0\1\67\1\u00a5\2\u00a9\1\uffff"+
-        "\1\u00aa\1\u00ad\4\67\1\u00b2\6\67\1\u00b9\1\67\1\u00bb\1\uffff"+
-        "\1\67\1\u00bd\1\uffff\1\u00be\1\u00bf\4\67\1\uffff\1\u00c4\1\67"+
-        "\1\uffff\1\67\1\u00a5\3\uffff\1\u00a9\4\uffff\2\67\1\uffff\1\67"+
-        "\1\u00ca\2\67\1\uffff\3\67\1\u00d0\2\67\1\uffff\1\u00d3\1\uffff"+
-        "\1\u00d4\3\uffff\4\67\1\uffff\1\67\1\u00da\2\67\1\u00dd\1\uffff"+
-        "\1\u00de\3\67\1\u00e2\1\uffff\2\67\2\uffff\5\67\1\uffff\1\u00ea"+
-        "\1\u00eb\2\uffff\3\67\1\uffff\7\67\2\uffff\2\67\1\u00f8\2\67\1\u00fb"+
-        "\2\67\1\u00fe\1\u00ff\1\u0100\1\67\1\uffff\1\u0102\1\u0103\1\uffff"+
-        "\1\67\1\u0105\3\uffff\1\u0106\2\uffff\1\u0107\3\uffff";
+        "\1\uffff\1\61\1\uffff\1\64\3\67\1\73\1\uffff\1\67\1\101\1\uffff"+
+        "\1\67\5\uffff\2\67\2\uffff\1\120\1\123\6\67\10\uffff\3\67\1\uffff"+
+        "\1\152\1\uffff\1\57\1\154\7\uffff\2\67\1\uffff\2\67\3\uffff\1\164"+
+        "\2\67\3\uffff\1\172\5\uffff\4\67\5\uffff\1\u0083\1\uffff\11\67\10"+
+        "\uffff\4\67\4\uffff\1\154\2\uffff\1\67\1\u0094\1\67\1\u0097\1\uffff"+
+        "\5\67\1\uffff\1\u009e\2\67\1\u00a1\1\67\1\u00a6\2\u00aa\1\uffff"+
+        "\1\u00ab\1\u00ae\4\67\1\u00b3\6\67\1\u00ba\1\67\1\u00bc\1\uffff"+
+        "\1\67\1\u00be\1\uffff\1\u00bf\1\u00c0\4\67\1\uffff\1\u00c5\1\67"+
+        "\1\uffff\1\67\1\u00a6\3\uffff\1\u00aa\4\uffff\2\67\1\uffff\1\67"+
+        "\1\u00cb\2\67\1\uffff\3\67\1\u00d1\2\67\1\uffff\1\u00d4\1\uffff"+
+        "\1\u00d5\3\uffff\4\67\1\uffff\1\67\1\u00db\2\67\1\u00de\1\uffff"+
+        "\1\u00df\3\67\1\u00e3\1\uffff\2\67\2\uffff\5\67\1\uffff\1\u00eb"+
+        "\1\u00ec\2\uffff\3\67\1\uffff\7\67\2\uffff\2\67\1\u00f9\2\67\1\u00fc"+
+        "\2\67\1\u00ff\1\u0100\1\u0101\1\67\1\uffff\1\u0103\1\u0104\1\uffff"+
+        "\1\67\1\u0106\3\uffff\1\u0107\2\uffff\1\u0108\3\uffff";
     static final String DFA21_eofS =
-        "\u0108\uffff";
+        "\u0109\uffff";
     static final String DFA21_minS =
-        "\1\0\1\53\1\uffff\1\52\1\157\1\124\1\164\1\76\1\uffff\1\146\1\uffff"+
-        "\1\55\1\uffff\1\156\4\uffff\1\141\1\154\3\uffff\1\55\1\145\1\150"+
+        "\1\0\1\53\1\uffff\1\52\1\157\1\124\1\164\1\76\1\uffff\1\146\1\55"+
+        "\1\uffff\1\156\5\uffff\1\141\1\154\2\uffff\1\134\1\55\1\145\1\150"+
         "\3\141\1\164\10\uffff\1\142\1\145\1\141\1\uffff\1\47\1\uffff\1\0"+
         "\1\56\7\uffff\1\160\1\153\1\uffff\1\171\1\162\3\uffff\1\47\2\145"+
-        "\4\uffff\1\47\4\uffff\1\163\2\156\1\141\4\uffff\1\43\1\uffff\1\164"+
+        "\3\uffff\1\47\5\uffff\1\163\2\156\1\141\5\uffff\1\43\1\uffff\1\164"+
         "\1\156\1\145\1\164\1\142\1\162\1\145\2\162\10\uffff\2\163\1\146"+
         "\1\164\4\uffff\1\56\2\uffff\1\145\1\47\1\160\1\47\1\uffff\1\156"+
         "\1\162\1\157\1\145\1\164\1\uffff\1\47\1\145\1\143\1\47\1\147\3\0"+
@@ -2808,10 +2837,10 @@ public class InternalGFLexer extends Lexer {
         "\1\145\1\47\3\uffff\1\47\2\uffff\1\47\3\uffff";
     static final String DFA21_maxS =
         "\1\uffff\1\53\1\uffff\1\52\1\171\1\124\1\164\1\76\1\uffff\1\166"+
-        "\1\uffff\1\55\1\uffff\1\156\4\uffff\1\157\1\165\3\uffff\1\76\2\151"+
+        "\1\55\1\uffff\1\156\5\uffff\1\157\1\165\2\uffff\1\134\1\76\2\151"+
         "\2\141\1\162\1\164\10\uffff\1\142\2\145\1\uffff\1\172\1\uffff\1"+
         "\uffff\1\71\7\uffff\1\160\1\153\1\uffff\1\171\1\162\3\uffff\1\172"+
-        "\2\145\4\uffff\1\172\4\uffff\1\164\2\156\1\141\4\uffff\1\72\1\uffff"+
+        "\2\145\3\uffff\1\172\5\uffff\1\164\2\156\1\141\5\uffff\1\72\1\uffff"+
         "\1\164\1\156\1\145\1\164\1\142\1\162\1\151\1\164\1\162\10\uffff"+
         "\2\163\1\146\1\164\4\uffff\1\71\2\uffff\1\145\1\172\1\160\1\172"+
         "\1\uffff\2\162\1\157\1\145\1\164\1\uffff\1\172\1\145\1\143\1\172"+
@@ -2828,30 +2857,30 @@ public class InternalGFLexer extends Lexer {
         "\164\1\145\3\172\1\145\1\uffff\2\172\1\uffff\1\145\1\172\3\uffff"+
         "\1\172\2\uffff\1\172\3\uffff";
     static final String DFA21_acceptS =
-        "\2\uffff\1\3\5\uffff\1\14\1\uffff\1\16\1\uffff\1\20\1\uffff\1\23"+
-        "\1\24\1\25\1\26\2\uffff\1\31\1\32\1\33\7\uffff\1\45\1\51\1\52\1"+
-        "\53\1\55\1\56\1\57\1\60\3\uffff\1\100\1\uffff\1\102\2\uffff\1\112"+
-        "\1\113\1\1\1\2\1\3\1\5\1\4\2\uffff\1\102\2\uffff\1\35\1\13\1\14"+
-        "\3\uffff\1\16\1\110\1\17\1\20\1\uffff\1\23\1\24\1\25\1\26\4\uffff"+
-        "\1\31\1\32\1\33\1\34\1\uffff\1\54\11\uffff\1\45\1\51\1\52\1\53\1"+
-        "\55\1\56\1\57\1\60\4\uffff\1\100\1\101\1\103\1\105\1\uffff\1\104"+
-        "\1\112\4\uffff\1\15\5\uffff\1\22\10\uffff\1\111\20\uffff\1\10\2"+
-        "\uffff\1\11\6\uffff\1\27\2\uffff\1\30\3\uffff\2\106\2\uffff\2\107"+
-        "\1\36\2\uffff\1\50\4\uffff\1\43\6\uffff\1\70\1\uffff\1\6\1\uffff"+
-        "\1\12\1\21\1\73\4\uffff\1\41\5\uffff\1\67\5\uffff\1\44\2\uffff\1"+
-        "\71\1\7\5\uffff\1\76\2\uffff\1\37\1\40\3\uffff\1\72\7\uffff\1\47"+
-        "\1\74\14\uffff\1\46\2\uffff\1\77\2\uffff\1\66\1\65\1\42\1\uffff"+
-        "\1\62\1\63\1\uffff\1\64\1\75\1\61";
+        "\2\uffff\1\3\5\uffff\1\14\2\uffff\1\20\1\uffff\1\22\1\23\1\24\1"+
+        "\25\1\26\2\uffff\1\31\1\32\10\uffff\1\46\1\52\1\53\1\54\1\56\1\57"+
+        "\1\60\1\61\3\uffff\1\101\1\uffff\1\103\2\uffff\1\113\1\114\1\1\1"+
+        "\2\1\3\1\5\1\4\2\uffff\1\103\2\uffff\1\36\1\13\1\14\3\uffff\1\111"+
+        "\1\17\1\20\1\uffff\1\22\1\23\1\24\1\25\1\26\4\uffff\1\31\1\32\1"+
+        "\35\1\33\1\34\1\uffff\1\55\11\uffff\1\46\1\52\1\53\1\54\1\56\1\57"+
+        "\1\60\1\61\4\uffff\1\101\1\102\1\104\1\105\1\uffff\1\106\1\113\4"+
+        "\uffff\1\15\5\uffff\1\21\10\uffff\1\112\20\uffff\1\10\2\uffff\1"+
+        "\11\6\uffff\1\27\2\uffff\1\30\3\uffff\2\107\2\uffff\2\110\1\37\2"+
+        "\uffff\1\51\4\uffff\1\44\6\uffff\1\71\1\uffff\1\6\1\uffff\1\12\1"+
+        "\16\1\74\4\uffff\1\42\5\uffff\1\70\5\uffff\1\45\2\uffff\1\72\1\7"+
+        "\5\uffff\1\77\2\uffff\1\40\1\41\3\uffff\1\73\7\uffff\1\50\1\75\14"+
+        "\uffff\1\47\2\uffff\1\100\2\uffff\1\67\1\66\1\43\1\uffff\1\63\1"+
+        "\64\1\uffff\1\65\1\76\1\62";
     static final String DFA21_specialS =
-        "\1\5\53\uffff\1\0\122\uffff\1\2\1\3\1\1\40\uffff\1\6\3\uffff\1\4"+
+        "\1\4\53\uffff\1\6\123\uffff\1\2\1\1\1\0\40\uffff\1\3\3\uffff\1\5"+
         "\141\uffff}>";
     static final String[] DFA21_transitionS = {
             "\11\57\2\56\2\57\1\56\22\57\1\56\1\2\1\54\1\36\1\44\3\57\1\16"+
-            "\1\17\1\3\1\1\1\12\1\27\1\37\1\45\12\55\1\24\1\10\1\43\1\7\1"+
+            "\1\17\1\3\1\1\1\15\1\27\1\37\1\45\12\55\1\24\1\10\1\43\1\7\1"+
             "\40\1\51\1\41\17\53\1\5\2\53\1\6\1\4\6\53\1\21\1\26\1\20\1\57"+
-            "\1\52\1\57\1\46\1\53\1\22\1\50\1\53\1\23\2\53\1\15\2\53\1\30"+
-            "\2\53\1\11\1\34\1\53\1\47\1\35\1\32\1\53\1\33\1\31\3\53\1\13"+
-            "\1\25\1\14\1\42\uff81\57",
+            "\1\52\1\57\1\46\1\53\1\22\1\50\1\53\1\23\2\53\1\14\2\53\1\30"+
+            "\2\53\1\11\1\34\1\53\1\47\1\35\1\32\1\53\1\33\1\31\3\53\1\12"+
+            "\1\25\1\13\1\42\uff81\57",
             "\1\60",
             "",
             "\1\63",
@@ -2861,10 +2890,10 @@ public class InternalGFLexer extends Lexer {
             "\1\72",
             "",
             "\1\75\11\uffff\1\76\5\uffff\1\77",
+            "\1\100",
             "",
-            "\1\101",
+            "\1\103",
             "",
-            "\1\104",
             "",
             "",
             "",
@@ -2873,14 +2902,14 @@ public class InternalGFLexer extends Lexer {
             "\1\114\10\uffff\1\113",
             "",
             "",
-            "",
-            "\1\121\20\uffff\1\120",
-            "\1\123\3\uffff\1\124",
-            "\1\125\1\126",
-            "\1\127",
+            "\1\117",
+            "\1\122\20\uffff\1\121",
+            "\1\124\3\uffff\1\125",
+            "\1\126\1\127",
             "\1\130",
-            "\1\132\20\uffff\1\131",
-            "\1\133",
+            "\1\131",
+            "\1\133\20\uffff\1\132",
+            "\1\134",
             "",
             "",
             "",
@@ -2889,15 +2918,15 @@ public class InternalGFLexer extends Lexer {
             "",
             "",
             "",
-            "\1\144",
             "\1\145",
-            "\1\147\3\uffff\1\146",
+            "\1\146",
+            "\1\150\3\uffff\1\147",
             "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "",
-            "\0\152",
-            "\1\153\1\uffff\12\154",
+            "\0\153",
+            "\1\156\1\uffff\12\155",
             "",
             "",
             "",
@@ -2905,155 +2934,156 @@ public class InternalGFLexer extends Lexer {
             "",
             "",
             "",
-            "\1\157",
             "\1\160",
-            "",
             "\1\161",
+            "",
             "\1\162",
+            "\1\163",
             "",
             "",
             "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\164",
             "\1\165",
-            "",
+            "\1\166",
             "",
             "",
             "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\2\67"+
-            "\1\166\17\67\1\170\1\167\6\67",
+            "\1\167\17\67\1\171\1\170\6\67",
             "",
             "",
             "",
             "",
-            "\1\173\1\172",
-            "\1\174",
+            "",
+            "\1\174\1\173",
             "\1\175",
             "\1\176",
+            "\1\177",
             "",
             "",
             "",
             "",
-            "\1\177\1\uffff\1\u0080\24\uffff\1\u0081",
             "",
-            "\1\u0083",
+            "\1\u0080\1\uffff\1\u0081\24\uffff\1\u0082",
+            "",
             "\1\u0084",
             "\1\u0085",
             "\1\u0086",
             "\1\u0087",
             "\1\u0088",
-            "\1\u0089\3\uffff\1\u008a",
-            "\1\u008c\1\uffff\1\u008b",
-            "\1\u008d",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
+            "\1\u0089",
+            "\1\u008a\3\uffff\1\u008b",
+            "\1\u008d\1\uffff\1\u008c",
             "\1\u008e",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\u008f",
             "\1\u0090",
             "\1\u0091",
-            "",
-            "",
-            "",
-            "",
-            "\1\153\1\uffff\12\154",
-            "",
-            "",
             "\1\u0092",
+            "",
+            "",
+            "",
+            "",
+            "\1\156\1\uffff\12\155",
+            "",
+            "",
+            "\1\u0093",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u0094",
+            "\1\u0095",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\22"+
-            "\67\1\u0095\7\67",
+            "\67\1\u0096\7\67",
             "",
-            "\1\u0097\3\uffff\1\u0098",
-            "\1\u0099",
+            "\1\u0098\3\uffff\1\u0099",
             "\1\u009a",
             "\1\u009b",
             "\1\u009c",
+            "\1\u009d",
             "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u009e",
             "\1\u009f",
+            "\1\u00a0",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00a1",
-            "\12\u00a2\1\u00a4\2\u00a2\1\u00a3\ufff2\u00a2",
-            "\12\u00a6\1\u00a8\2\u00a6\1\u00a7\ufff2\u00a6",
-            "\12\u00a6\1\u00a8\2\u00a6\1\u00a7\ufff2\u00a6",
+            "\1\u00a2",
+            "\12\u00a3\1\u00a5\2\u00a3\1\u00a4\ufff2\u00a3",
+            "\12\u00a7\1\u00a9\2\u00a7\1\u00a8\ufff2\u00a7",
+            "\12\u00a7\1\u00a9\2\u00a7\1\u00a8\ufff2\u00a7",
             "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\2\67"+
-            "\1\u00ab\1\u00ac\26\67",
-            "\1\u00ae",
+            "\1\u00ac\1\u00ad\26\67",
             "\1\u00af",
             "\1\u00b0",
             "\1\u00b1",
+            "\1\u00b2",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00b3",
             "\1\u00b4",
             "\1\u00b5",
             "\1\u00b6",
             "\1\u00b7",
             "\1\u00b8",
+            "\1\u00b9",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00ba",
-            "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "",
-            "\1\u00bc",
+            "\1\u00bb",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "",
+            "\1\u00bd",
+            "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
+            "\67",
+            "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00c0",
             "\1\u00c1",
             "\1\u00c2",
             "\1\u00c3",
+            "\1\u00c4",
             "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00c5",
-            "",
             "\1\u00c6",
-            "\12\u00a2\1\u00a4\2\u00a2\1\u00a3\ufff2\u00a2",
-            "\1\u00a4",
-            "",
-            "",
-            "\12\u00a6\1\u00a8\2\u00a6\1\u00a7\ufff2\u00a6",
-            "\1\u00a8",
-            "",
-            "",
             "",
             "\1\u00c7",
-            "\1\u00c8",
+            "\12\u00a3\1\u00a5\2\u00a3\1\u00a4\ufff2\u00a3",
+            "\1\u00a5",
             "",
+            "",
+            "\12\u00a7\1\u00a9\2\u00a7\1\u00a8\ufff2\u00a7",
+            "\1\u00a9",
+            "",
+            "",
+            "",
+            "\1\u00c8",
             "\1\u00c9",
+            "",
+            "\1\u00ca",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00cb",
             "\1\u00cc",
-            "",
             "\1\u00cd",
+            "",
             "\1\u00ce",
             "\1\u00cf",
+            "\1\u00d0",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00d1",
             "\1\u00d2",
+            "\1\u00d3",
             "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
@@ -3063,36 +3093,36 @@ public class InternalGFLexer extends Lexer {
             "",
             "",
             "",
-            "\1\u00d5",
             "\1\u00d6",
             "\1\u00d7",
             "\1\u00d8",
-            "",
             "\1\u00d9",
+            "",
+            "\1\u00da",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00db",
             "\1\u00dc",
+            "\1\u00dd",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00df",
             "\1\u00e0",
             "\1\u00e1",
+            "\1\u00e2",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "",
-            "\1\u00e3",
             "\1\u00e4",
-            "",
-            "",
             "\1\u00e5",
+            "",
+            "",
             "\1\u00e6",
             "\1\u00e7",
             "\1\u00e8",
             "\1\u00e9",
+            "\1\u00ea",
             "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
@@ -3100,43 +3130,43 @@ public class InternalGFLexer extends Lexer {
             "\67",
             "",
             "",
-            "\1\u00ec",
             "\1\u00ed",
             "\1\u00ee",
-            "",
             "\1\u00ef",
+            "",
             "\1\u00f0",
             "\1\u00f1",
             "\1\u00f2",
             "\1\u00f3",
             "\1\u00f4",
             "\1\u00f5",
-            "",
-            "",
             "\1\u00f6",
+            "",
+            "",
             "\1\u00f7",
+            "\1\u00f8",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00f9",
             "\1\u00fa",
+            "\1\u00fb",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u00fc",
             "\1\u00fd",
+            "\1\u00fe",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
-            "\1\u0101",
+            "\1\u0102",
             "",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "",
-            "\1\u0104",
+            "\1\u0105",
             "\1\67\10\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
             "\67",
             "",
@@ -3183,19 +3213,23 @@ public class InternalGFLexer extends Lexer {
             this.transition = DFA21_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | RULE_ID | RULE_STRING | RULE_INTEGER | RULE_DOUBLE | RULE_COMPILER_PRAGMA | RULE_GF_DOC | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | RULE_ID | RULE_STRING | RULE_INTEGER | RULE_DOUBLE | RULE_COMPILER_PRAGMA | RULE_GF_DOC | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA21_44 = input.LA(1);
+                        int LA21_130 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA21_44>='\u0000' && LA21_44<='\uFFFF')) ) {s = 106;}
+                        if ( (LA21_130=='\r') ) {s = 168;}
 
-                        else s = 47;
+                        else if ( (LA21_130=='\n') ) {s = 169;}
+
+                        else if ( ((LA21_130>='\u0000' && LA21_130<='\t')||(LA21_130>='\u000B' && LA21_130<='\f')||(LA21_130>='\u000E' && LA21_130<='\uFFFF')) ) {s = 167;}
+
+                        else s = 170;
 
                         if ( s>=0 ) return s;
                         break;
@@ -3203,59 +3237,45 @@ public class InternalGFLexer extends Lexer {
                         int LA21_129 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA21_129>='\u0000' && LA21_129<='\t')||(LA21_129>='\u000B' && LA21_129<='\f')||(LA21_129>='\u000E' && LA21_129<='\uFFFF')) ) {s = 166;}
+                        if ( ((LA21_129>='\u0000' && LA21_129<='\t')||(LA21_129>='\u000B' && LA21_129<='\f')||(LA21_129>='\u000E' && LA21_129<='\uFFFF')) ) {s = 167;}
 
-                        else if ( (LA21_129=='\r') ) {s = 167;}
+                        else if ( (LA21_129=='\r') ) {s = 168;}
 
-                        else if ( (LA21_129=='\n') ) {s = 168;}
+                        else if ( (LA21_129=='\n') ) {s = 169;}
 
-                        else s = 169;
+                        else s = 170;
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA21_127 = input.LA(1);
+                        int LA21_128 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA21_127>='\u0000' && LA21_127<='\t')||(LA21_127>='\u000B' && LA21_127<='\f')||(LA21_127>='\u000E' && LA21_127<='\uFFFF')) ) {s = 162;}
+                        if ( ((LA21_128>='\u0000' && LA21_128<='\t')||(LA21_128>='\u000B' && LA21_128<='\f')||(LA21_128>='\u000E' && LA21_128<='\uFFFF')) ) {s = 163;}
 
-                        else if ( (LA21_127=='\r') ) {s = 163;}
+                        else if ( (LA21_128=='\r') ) {s = 164;}
 
-                        else if ( (LA21_127=='\n') ) {s = 164;}
+                        else if ( (LA21_128=='\n') ) {s = 165;}
 
-                        else s = 165;
+                        else s = 166;
 
                         if ( s>=0 ) return s;
                         break;
                     case 3 : 
-                        int LA21_128 = input.LA(1);
+                        int LA21_163 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA21_128>='\u0000' && LA21_128<='\t')||(LA21_128>='\u000B' && LA21_128<='\f')||(LA21_128>='\u000E' && LA21_128<='\uFFFF')) ) {s = 166;}
+                        if ( (LA21_163=='\r') ) {s = 164;}
 
-                        else if ( (LA21_128=='\r') ) {s = 167;}
+                        else if ( (LA21_163=='\n') ) {s = 165;}
 
-                        else if ( (LA21_128=='\n') ) {s = 168;}
+                        else if ( ((LA21_163>='\u0000' && LA21_163<='\t')||(LA21_163>='\u000B' && LA21_163<='\f')||(LA21_163>='\u000E' && LA21_163<='\uFFFF')) ) {s = 163;}
 
-                        else s = 169;
+                        else s = 166;
 
                         if ( s>=0 ) return s;
                         break;
                     case 4 : 
-                        int LA21_166 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA21_166=='\r') ) {s = 167;}
-
-                        else if ( (LA21_166=='\n') ) {s = 168;}
-
-                        else if ( ((LA21_166>='\u0000' && LA21_166<='\t')||(LA21_166>='\u000B' && LA21_166<='\f')||(LA21_166>='\u000E' && LA21_166<='\uFFFF')) ) {s = 166;}
-
-                        else s = 169;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 5 : 
                         int LA21_0 = input.LA(1);
 
                         s = -1;
@@ -3277,13 +3297,13 @@ public class InternalGFLexer extends Lexer {
 
                         else if ( (LA21_0=='o') ) {s = 9;}
 
-                        else if ( (LA21_0==',') ) {s = 10;}
+                        else if ( (LA21_0=='{') ) {s = 10;}
 
-                        else if ( (LA21_0=='{') ) {s = 11;}
+                        else if ( (LA21_0=='}') ) {s = 11;}
 
-                        else if ( (LA21_0=='}') ) {s = 12;}
+                        else if ( (LA21_0=='i') ) {s = 12;}
 
-                        else if ( (LA21_0=='i') ) {s = 13;}
+                        else if ( (LA21_0==',') ) {s = 13;}
 
                         else if ( (LA21_0=='(') ) {s = 14;}
 
@@ -3355,17 +3375,27 @@ public class InternalGFLexer extends Lexer {
 
                         if ( s>=0 ) return s;
                         break;
-                    case 6 : 
-                        int LA21_162 = input.LA(1);
+                    case 5 : 
+                        int LA21_167 = input.LA(1);
 
                         s = -1;
-                        if ( (LA21_162=='\r') ) {s = 163;}
+                        if ( (LA21_167=='\r') ) {s = 168;}
 
-                        else if ( (LA21_162=='\n') ) {s = 164;}
+                        else if ( (LA21_167=='\n') ) {s = 169;}
 
-                        else if ( ((LA21_162>='\u0000' && LA21_162<='\t')||(LA21_162>='\u000B' && LA21_162<='\f')||(LA21_162>='\u000E' && LA21_162<='\uFFFF')) ) {s = 162;}
+                        else if ( ((LA21_167>='\u0000' && LA21_167<='\t')||(LA21_167>='\u000B' && LA21_167<='\f')||(LA21_167>='\u000E' && LA21_167<='\uFFFF')) ) {s = 167;}
 
-                        else s = 165;
+                        else s = 170;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 6 : 
+                        int LA21_44 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA21_44>='\u0000' && LA21_44<='\uFFFF')) ) {s = 107;}
+
+                        else s = 47;
 
                         if ( s>=0 ) return s;
                         break;

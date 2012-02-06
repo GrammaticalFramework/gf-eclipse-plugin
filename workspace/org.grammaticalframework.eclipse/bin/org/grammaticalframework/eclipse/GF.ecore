@@ -3,7 +3,7 @@
     xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gF"
     nsURI="http://www.grammaticalframework.org/eclipse/GF" nsPrefix="gF">
-  <eClassifiers xsi:type="ecore:EClass" name="ModDef">
+  <eClassifiers xsi:type="ecore:EClass" name="SourceModule">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="incomplete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//ModType"
         containment="true"/>
@@ -17,26 +17,38 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interface" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="concrete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractName" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abstractName" eType="#//Ident"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="instance" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceInclude" eType="#//Included"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModBody">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="extends" upperBound="-1"
-        eType="#//Included" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="content" eType="#//ModContent"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendList" eType="#//ListIncluded"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="functor" eType="#//Included"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="functorInstantiation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="instantiations" upperBound="-1"
-        eType="#//Inst" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instantiationList" eType="#//ListInst"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modOpen" eType="#//ModOpen"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modContent" eType="#//ModContent"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModOpen">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="openList" eType="#//ListOpen"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModContent">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="opens" upperBound="-1"
-        eType="#//Open" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="judgements" upperBound="-1"
         eType="#//TopDef" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="openList" eType="#//ListOpen"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListOpen">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="opens" upperBound="-1"
+        eType="#//Open" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Open">
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Ident"
@@ -44,11 +56,19 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="alias" eType="#//Ident"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListInst">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instantiations" upperBound="-1"
+        eType="#//Inst" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Inst">
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" eType="#//Ident"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Ident"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ListIncluded">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="included" upperBound="-1"
+        eType="#//Included" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Included">
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Ident"
@@ -80,6 +100,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="context" upperBound="-1"
         eType="#//DDecl" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="list" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FunDef">
@@ -92,7 +113,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="definition" eType="#//Exp"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="patterns" eType="#//ListPatt"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="patternList" eType="#//ListPatt"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataDef">
@@ -161,6 +182,7 @@
         eType="#//LocDef" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Exp" eSuperTypes="#//Patt #//DDecl">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="decl" eType="#//Exp" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="defList" eType="#//ListLocDef"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="caseList" eType="#//ListCase"
@@ -176,6 +198,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" eType="#//Patt"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inner" eType="#//Exp" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="labels" upperBound="-1"
+        eType="#//Label" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sort" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="integer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -210,7 +234,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="value" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="label" eType="#//Ident"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="meta" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tokenList" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -245,8 +269,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="wildcard" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ListBind" eSuperTypes="#//Exp">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="decl" eType="#//Exp" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ListBind">
     <eStructuralFeatures xsi:type="ecore:EReference" name="bindings" upperBound="-1"
         eType="#//Bind" containment="true"/>
   </eClassifiers>
@@ -261,7 +284,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Case">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" eType="#//Patt"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="e" eType="#//Exp" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Exp" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ListCase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="cases" upperBound="-1"

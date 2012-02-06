@@ -9,7 +9,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -17,6 +16,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Included;
 import org.grammaticalframework.eclipse.gF.ModType;
 
 /**
@@ -33,6 +33,7 @@ import org.grammaticalframework.eclipse.gF.ModType;
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModTypeImpl#isConcrete <em>Concrete</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModTypeImpl#getAbstractName <em>Abstract Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModTypeImpl#isInstance <em>Instance</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModTypeImpl#getInterfaceInclude <em>Interface Include</em>}</li>
  * </ul>
  * </p>
  *
@@ -138,7 +139,7 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
    * @generated
    * @ordered
    */
-  protected EObject abstractName;
+  protected Ident abstractName;
 
   /**
    * The default value of the '{@link #isInstance() <em>Instance</em>}' attribute.
@@ -159,6 +160,16 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
    * @ordered
    */
   protected boolean instance = INSTANCE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getInterfaceInclude() <em>Interface Include</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInterfaceInclude()
+   * @generated
+   * @ordered
+   */
+  protected Included interfaceInclude;
 
   /**
    * <!-- begin-user-doc -->
@@ -326,7 +337,7 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getAbstractName()
+  public Ident getAbstractName()
   {
     return abstractName;
   }
@@ -336,9 +347,9 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAbstractName(EObject newAbstractName, NotificationChain msgs)
+  public NotificationChain basicSetAbstractName(Ident newAbstractName, NotificationChain msgs)
   {
-    EObject oldAbstractName = abstractName;
+    Ident oldAbstractName = abstractName;
     abstractName = newAbstractName;
     if (eNotificationRequired())
     {
@@ -353,7 +364,7 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAbstractName(EObject newAbstractName)
+  public void setAbstractName(Ident newAbstractName)
   {
     if (newAbstractName != abstractName)
     {
@@ -397,6 +408,54 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
    * <!-- end-user-doc -->
    * @generated
    */
+  public Included getInterfaceInclude()
+  {
+    return interfaceInclude;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetInterfaceInclude(Included newInterfaceInclude, NotificationChain msgs)
+  {
+    Included oldInterfaceInclude = interfaceInclude;
+    interfaceInclude = newInterfaceInclude;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.MOD_TYPE__INTERFACE_INCLUDE, oldInterfaceInclude, newInterfaceInclude);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInterfaceInclude(Included newInterfaceInclude)
+  {
+    if (newInterfaceInclude != interfaceInclude)
+    {
+      NotificationChain msgs = null;
+      if (interfaceInclude != null)
+        msgs = ((InternalEObject)interfaceInclude).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_TYPE__INTERFACE_INCLUDE, null, msgs);
+      if (newInterfaceInclude != null)
+        msgs = ((InternalEObject)newInterfaceInclude).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_TYPE__INTERFACE_INCLUDE, null, msgs);
+      msgs = basicSetInterfaceInclude(newInterfaceInclude, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_TYPE__INTERFACE_INCLUDE, newInterfaceInclude, newInterfaceInclude));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -406,6 +465,8 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
         return basicSetName(null, msgs);
       case GFPackage.MOD_TYPE__ABSTRACT_NAME:
         return basicSetAbstractName(null, msgs);
+      case GFPackage.MOD_TYPE__INTERFACE_INCLUDE:
+        return basicSetInterfaceInclude(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -434,6 +495,8 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
         return getAbstractName();
       case GFPackage.MOD_TYPE__INSTANCE:
         return isInstance();
+      case GFPackage.MOD_TYPE__INTERFACE_INCLUDE:
+        return getInterfaceInclude();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -464,10 +527,13 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
         setConcrete((Boolean)newValue);
         return;
       case GFPackage.MOD_TYPE__ABSTRACT_NAME:
-        setAbstractName((EObject)newValue);
+        setAbstractName((Ident)newValue);
         return;
       case GFPackage.MOD_TYPE__INSTANCE:
         setInstance((Boolean)newValue);
+        return;
+      case GFPackage.MOD_TYPE__INTERFACE_INCLUDE:
+        setInterfaceInclude((Included)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -499,10 +565,13 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
         setConcrete(CONCRETE_EDEFAULT);
         return;
       case GFPackage.MOD_TYPE__ABSTRACT_NAME:
-        setAbstractName((EObject)null);
+        setAbstractName((Ident)null);
         return;
       case GFPackage.MOD_TYPE__INSTANCE:
         setInstance(INSTANCE_EDEFAULT);
+        return;
+      case GFPackage.MOD_TYPE__INTERFACE_INCLUDE:
+        setInterfaceInclude((Included)null);
         return;
     }
     super.eUnset(featureID);
@@ -532,6 +601,8 @@ public class ModTypeImpl extends MinimalEObjectImpl.Container implements ModType
         return abstractName != null;
       case GFPackage.MOD_TYPE__INSTANCE:
         return instance != INSTANCE_EDEFAULT;
+      case GFPackage.MOD_TYPE__INTERFACE_INCLUDE:
+        return interfaceInclude != null;
     }
     return super.eIsSet(featureID);
   }

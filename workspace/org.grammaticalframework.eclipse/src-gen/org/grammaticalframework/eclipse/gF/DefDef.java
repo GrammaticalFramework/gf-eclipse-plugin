@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.DefDef#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.DefDef#getDefinition <em>Definition</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.DefDef#getPatterns <em>Patterns</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.DefDef#getPatternList <em>Pattern List</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,29 +72,29 @@ public interface DefDef extends EObject
   void setDefinition(Exp value);
 
   /**
-   * Returns the value of the '<em><b>Patterns</b></em>' containment reference.
+   * Returns the value of the '<em><b>Pattern List</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Patterns</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Pattern List</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Patterns</em>' containment reference.
-   * @see #setPatterns(ListPatt)
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getDefDef_Patterns()
+   * @return the value of the '<em>Pattern List</em>' containment reference.
+   * @see #setPatternList(ListPatt)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getDefDef_PatternList()
    * @model containment="true"
    * @generated
    */
-  ListPatt getPatterns();
+  ListPatt getPatternList();
 
   /**
-   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.DefDef#getPatterns <em>Patterns</em>}' containment reference.
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.DefDef#getPatternList <em>Pattern List</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Patterns</em>' containment reference.
-   * @see #getPatterns()
+   * @param value the new value of the '<em>Pattern List</em>' containment reference.
+   * @see #getPatternList()
    * @generated
    */
-  void setPatterns(ListPatt value);
+  void setPatternList(ListPatt value);
 
 } // DefDef

@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.ModContent#getOpens <em>Opens</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.ModContent#getJudgements <em>Judgements</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.ModContent#getOpenList <em>Open List</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,22 +28,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ModContent extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Opens</b></em>' containment reference list.
-   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Open}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Opens</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Opens</em>' containment reference list.
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getModContent_Opens()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Open> getOpens();
-
   /**
    * Returns the value of the '<em><b>Judgements</b></em>' containment reference list.
    * The list contents are of type {@link org.grammaticalframework.eclipse.gF.TopDef}.
@@ -59,5 +43,31 @@ public interface ModContent extends EObject
    * @generated
    */
   EList<TopDef> getJudgements();
+
+  /**
+   * Returns the value of the '<em><b>Open List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Open List</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Open List</em>' containment reference.
+   * @see #setOpenList(ListOpen)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getModContent_OpenList()
+   * @model containment="true"
+   * @generated
+   */
+  ListOpen getOpenList();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.ModContent#getOpenList <em>Open List</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Open List</em>' containment reference.
+   * @see #getOpenList()
+   * @generated
+   */
+  void setOpenList(ListOpen value);
 
 } // ModContent

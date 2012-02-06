@@ -36,7 +36,7 @@ import org.grammaticalframework.eclipse.gF.Name;
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DefDefImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DefDefImpl#getDefinition <em>Definition</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DefDefImpl#getPatterns <em>Patterns</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.DefDefImpl#getPatternList <em>Pattern List</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,14 +65,14 @@ public class DefDefImpl extends MinimalEObjectImpl.Container implements DefDef
   protected Exp definition;
 
   /**
-   * The cached value of the '{@link #getPatterns() <em>Patterns</em>}' containment reference.
+   * The cached value of the '{@link #getPatternList() <em>Pattern List</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPatterns()
+   * @see #getPatternList()
    * @generated
    * @ordered
    */
-  protected ListPatt patterns;
+  protected ListPatt patternList;
 
   /**
    * <!-- begin-user-doc -->
@@ -162,9 +162,9 @@ public class DefDefImpl extends MinimalEObjectImpl.Container implements DefDef
    * <!-- end-user-doc -->
    * @generated
    */
-  public ListPatt getPatterns()
+  public ListPatt getPatternList()
   {
-    return patterns;
+    return patternList;
   }
 
   /**
@@ -172,13 +172,13 @@ public class DefDefImpl extends MinimalEObjectImpl.Container implements DefDef
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetPatterns(ListPatt newPatterns, NotificationChain msgs)
+  public NotificationChain basicSetPatternList(ListPatt newPatternList, NotificationChain msgs)
   {
-    ListPatt oldPatterns = patterns;
-    patterns = newPatterns;
+    ListPatt oldPatternList = patternList;
+    patternList = newPatternList;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.DEF_DEF__PATTERNS, oldPatterns, newPatterns);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.DEF_DEF__PATTERN_LIST, oldPatternList, newPatternList);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -189,20 +189,20 @@ public class DefDefImpl extends MinimalEObjectImpl.Container implements DefDef
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setPatterns(ListPatt newPatterns)
+  public void setPatternList(ListPatt newPatternList)
   {
-    if (newPatterns != patterns)
+    if (newPatternList != patternList)
     {
       NotificationChain msgs = null;
-      if (patterns != null)
-        msgs = ((InternalEObject)patterns).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.DEF_DEF__PATTERNS, null, msgs);
-      if (newPatterns != null)
-        msgs = ((InternalEObject)newPatterns).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.DEF_DEF__PATTERNS, null, msgs);
-      msgs = basicSetPatterns(newPatterns, msgs);
+      if (patternList != null)
+        msgs = ((InternalEObject)patternList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.DEF_DEF__PATTERN_LIST, null, msgs);
+      if (newPatternList != null)
+        msgs = ((InternalEObject)newPatternList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.DEF_DEF__PATTERN_LIST, null, msgs);
+      msgs = basicSetPatternList(newPatternList, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.DEF_DEF__PATTERNS, newPatterns, newPatterns));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.DEF_DEF__PATTERN_LIST, newPatternList, newPatternList));
   }
 
   /**
@@ -219,8 +219,8 @@ public class DefDefImpl extends MinimalEObjectImpl.Container implements DefDef
         return ((InternalEList<?>)getName()).basicRemove(otherEnd, msgs);
       case GFPackage.DEF_DEF__DEFINITION:
         return basicSetDefinition(null, msgs);
-      case GFPackage.DEF_DEF__PATTERNS:
-        return basicSetPatterns(null, msgs);
+      case GFPackage.DEF_DEF__PATTERN_LIST:
+        return basicSetPatternList(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -239,8 +239,8 @@ public class DefDefImpl extends MinimalEObjectImpl.Container implements DefDef
         return getName();
       case GFPackage.DEF_DEF__DEFINITION:
         return getDefinition();
-      case GFPackage.DEF_DEF__PATTERNS:
-        return getPatterns();
+      case GFPackage.DEF_DEF__PATTERN_LIST:
+        return getPatternList();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -263,8 +263,8 @@ public class DefDefImpl extends MinimalEObjectImpl.Container implements DefDef
       case GFPackage.DEF_DEF__DEFINITION:
         setDefinition((Exp)newValue);
         return;
-      case GFPackage.DEF_DEF__PATTERNS:
-        setPatterns((ListPatt)newValue);
+      case GFPackage.DEF_DEF__PATTERN_LIST:
+        setPatternList((ListPatt)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -286,8 +286,8 @@ public class DefDefImpl extends MinimalEObjectImpl.Container implements DefDef
       case GFPackage.DEF_DEF__DEFINITION:
         setDefinition((Exp)null);
         return;
-      case GFPackage.DEF_DEF__PATTERNS:
-        setPatterns((ListPatt)null);
+      case GFPackage.DEF_DEF__PATTERN_LIST:
+        setPatternList((ListPatt)null);
         return;
     }
     super.eUnset(featureID);
@@ -307,8 +307,8 @@ public class DefDefImpl extends MinimalEObjectImpl.Container implements DefDef
         return name != null && !name.isEmpty();
       case GFPackage.DEF_DEF__DEFINITION:
         return definition != null;
-      case GFPackage.DEF_DEF__PATTERNS:
-        return patterns != null;
+      case GFPackage.DEF_DEF__PATTERN_LIST:
+        return patternList != null;
     }
     return super.eIsSet(featureID);
   }

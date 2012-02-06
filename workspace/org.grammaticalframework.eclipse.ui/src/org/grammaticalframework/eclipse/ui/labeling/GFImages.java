@@ -11,7 +11,7 @@ package org.grammaticalframework.eclipse.ui.labeling;
 
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.xtext.ui.IImageHelper;
-import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.SourceModule;
 
 import com.google.inject.Inject;
 
@@ -48,7 +48,7 @@ public class GFImages {
 	 * @param module the module
 	 * @return the image
 	 */
-	public Image forModule(ModDef module) {
+	public Image forModule(SourceModule module) {
 		return imageHelper.getImage( filenameForModule(module) );
 	}
 	
@@ -58,7 +58,7 @@ public class GFImages {
 	 * @param module the module
 	 * @return the string
 	 */
-	public String filenameForModule(ModDef module) {
+	public String filenameForModule(SourceModule module) {
 		if (module.getType().isAbstract()) {
 			return "module-abstract.png";
 		}

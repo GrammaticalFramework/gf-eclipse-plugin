@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#getDecl <em>Decl</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#getDefList <em>Def List</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#getCaseList <em>Case List</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#getArgType <em>Arg Type</em>}</li>
@@ -23,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#getAlts <em>Alts</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#getPattern <em>Pattern</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#getInner <em>Inner</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#getLabels <em>Labels</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#isSort <em>Sort</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#isString <em>String</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Exp#isInteger <em>Integer</em>}</li>
@@ -46,6 +48,32 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Exp extends Patt, DDecl
 {
+  /**
+   * Returns the value of the '<em><b>Decl</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Decl</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Decl</em>' containment reference.
+   * @see #setDecl(Exp)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getExp_Decl()
+   * @model containment="true"
+   * @generated
+   */
+  Exp getDecl();
+
+  /**
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Exp#getDecl <em>Decl</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Decl</em>' containment reference.
+   * @see #getDecl()
+   * @generated
+   */
+  void setDecl(Exp value);
+
   /**
    * Returns the value of the '<em><b>Def List</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -243,6 +271,22 @@ public interface Exp extends Patt, DDecl
    * @generated
    */
   void setInner(Exp value);
+
+  /**
+   * Returns the value of the '<em><b>Labels</b></em>' containment reference list.
+   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Label}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Labels</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Labels</em>' containment reference list.
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getExp_Labels()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Label> getLabels();
 
   /**
    * Returns the value of the '<em><b>Sort</b></em>' attribute.

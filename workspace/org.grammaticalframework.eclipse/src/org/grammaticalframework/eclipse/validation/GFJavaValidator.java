@@ -18,7 +18,18 @@ import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.IScopeProvider;
 import org.eclipse.xtext.validation.Check;
-import org.grammaticalframework.eclipse.gF.*;
+import org.grammaticalframework.eclipse.gF.DefDef;
+import org.grammaticalframework.eclipse.gF.FlagDef;
+import org.grammaticalframework.eclipse.gF.GFPackage;
+import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Label;
+import org.grammaticalframework.eclipse.gF.ModType;
+import org.grammaticalframework.eclipse.gF.Name;
+import org.grammaticalframework.eclipse.gF.OperDef;
+import org.grammaticalframework.eclipse.gF.SourceModule;
+import org.grammaticalframework.eclipse.gF.TopDef;
+import org.grammaticalframework.eclipse.gF.Exp;
+
 import com.google.inject.Inject;
  
 
@@ -171,10 +182,10 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	public void checkDefsAreInCorrectModuleTypes(TopDef topdef) {
 		// Ascend to module
 		EObject temp = topdef;
-		while (!(temp  instanceof ModDef) && temp.eContainer() != null) {
+		while (!(temp  instanceof SourceModule) && temp.eContainer() != null) {
 			temp = temp.eContainer();
 		}
-		ModType modtype = ((ModDef)temp).getType();
+		ModType modtype = ((SourceModule)temp).getType();
 		
 		// Flags are always ok
 		if (topdef.isFlags()) return;
@@ -231,8 +242,8 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	@Check
 	public void checkOperatorOverloadsNamesMatch(Name name) {
 		
-		if (name.eContainer() instanceof Def && name.eContainer().eContainer() instanceof Def) {
-			Def parent = (Def) name.eContainer().eContainer();
+		if (name.eContainer() instanceof DefDef && name.eContainer().eContainer() instanceof OperDef) {
+			OperDef parent = (OperDef) name.eContainer().eContainer();
 			if (parent.isOverload()) {
 				// Convert to list of strings to be able to make comparison
 				ArrayList<String> parentNames = new ArrayList<String>();
@@ -268,7 +279,7 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 		
 		// Try get first bit of qualified name, i.e. "ResEng". Labels do no necessarily follow Idents, but ANY type of Exp6.
 		try {
-			Ident qualifier = ((Exp5)label.eContainer()).getV().getName();
+			Ident qualifier = ((Exp)label.eContainer()).getName();
 			QualifiedName unQualifiedName = getConverter().toQualifiedName(label.getName().getS());
 			QualifiedName fullyQualifiedName = getConverter().toQualifiedName(qualifier.getS() + "." + label.getName().getS());
 			
@@ -278,7 +289,7 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 				temp = temp.eContainer();
 			}
 			TopDef topDef = (TopDef)temp;
-			String moduleName = ((ModDef)topDef.eContainer().eContainer()).getType().getName().getS();
+			String moduleName = ((SourceModule)topDef.eContainer().eContainer()).getType().getName().getS();
 			IScope scope = getScopeProvider().getScope(topDef, GFPackage.Literals.TOP_DEF__DEFINITIONS);
 			if (scope.getSingleElement(qualifier) != null) {
 				

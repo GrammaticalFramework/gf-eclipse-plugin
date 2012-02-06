@@ -45,7 +45,7 @@ import org.eclipse.xtext.scoping.impl.*;
 import org.eclipse.xtext.util.OnChangeEvictingCache;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
-import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.SourceModule;
 
 import com.google.common.base.Predicate;
 import com.google.inject.Inject;
@@ -167,10 +167,10 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	private Hashtable<URI, Collection<TagEntry>> parseTagsFile(final Resource resource) throws GFTagsFileException {
 		
 		// Get module definition
-		ModDef moduleDef;
+		SourceModule moduleDef;
 		String moduleName;
 		try {
-			moduleDef = (ModDef)resource.getContents().get(0);
+			moduleDef = (SourceModule)resource.getContents().get(0);
 			moduleName = moduleDef.getType().getName().getS();
 		} catch (Exception _) {
 			// This means there's a mother syntax error (mid-way during editing). Just return quietly.

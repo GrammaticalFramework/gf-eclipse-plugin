@@ -20,7 +20,18 @@ import org.eclipse.xtext.util.PolymorphicDispatcher;
 import org.eclipse.xtext.util.SimpleAttributeResolver;
 import org.eclipse.xtext.util.Strings;
 import org.eclipse.xtext.util.Tuples;
-import org.grammaticalframework.eclipse.gF.*;
+import org.grammaticalframework.eclipse.gF.CatDef;
+import org.grammaticalframework.eclipse.gF.DataDef;
+import org.grammaticalframework.eclipse.gF.DefDef;
+import org.grammaticalframework.eclipse.gF.FunDef;
+import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Included;
+import org.grammaticalframework.eclipse.gF.ModType;
+import org.grammaticalframework.eclipse.gF.Open;
+import org.grammaticalframework.eclipse.gF.OperDef;
+import org.grammaticalframework.eclipse.gF.ParConstr;
+import org.grammaticalframework.eclipse.gF.ParamDef;
+import org.grammaticalframework.eclipse.gF.SourceModule;
 
 import com.google.common.base.Function;
 import com.google.inject.Inject;
@@ -120,10 +131,10 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 			return null;
 		// Get module name
 		EObject temp = id;
-		while (!(temp  instanceof ModDef) && temp.eContainer() != null) {
+		while (!(temp  instanceof SourceModule) && temp.eContainer() != null) {
 			temp = temp.eContainer();
 		}
-		String qualifiedName = ((ModDef)temp).getType().getName().getS() + "." + id.getS();
+		String qualifiedName = ((SourceModule)temp).getType().getName().getS() + "." + id.getS();
 //		String qualifiedName = id.getS();
 		return getConverter().toQualifiedName( qualifiedName );
 	}
@@ -144,9 +155,9 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 			return true;
 		}
 		
-		if (grandParent instanceof Def) {
+		if (grandParent instanceof DefDef) {
 			// don't export the Def's defined WITHIN an overload
-			if (greatGrandParent instanceof Def && ((Def) greatGrandParent).isOverload())
+			if (greatGrandParent instanceof OperDef && ((OperDef) greatGrandParent).isOverload())
 				return false;
 			else
 				return true;
@@ -154,11 +165,12 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 		
 		// General case for top level judgements
 		return (
-			parent instanceof CatDef || 
-			parent instanceof FunDef || 
-			parent instanceof DataDef || parent instanceof DataConstr ||
-			parent instanceof ParDef || parent instanceof ParConstr ||
-			grandParent instanceof PrintDef);
+			   parent instanceof CatDef // cat
+			|| parent instanceof FunDef // fun
+			|| parent instanceof DataDef // data
+			|| parent instanceof ParamDef || parent instanceof ParConstr// param
+//			|| grandParent instanceof TermDef
+		);
 	}
 	
 	

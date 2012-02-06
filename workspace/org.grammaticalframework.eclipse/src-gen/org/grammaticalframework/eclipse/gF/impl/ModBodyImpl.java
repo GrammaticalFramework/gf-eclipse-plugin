@@ -5,12 +5,8 @@
  */
 package org.grammaticalframework.eclipse.gF.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -18,14 +14,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Included;
-import org.grammaticalframework.eclipse.gF.Inst;
+import org.grammaticalframework.eclipse.gF.ListIncluded;
+import org.grammaticalframework.eclipse.gF.ListInst;
 import org.grammaticalframework.eclipse.gF.ModBody;
 import org.grammaticalframework.eclipse.gF.ModContent;
+import org.grammaticalframework.eclipse.gF.ModOpen;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,11 +29,12 @@ import org.grammaticalframework.eclipse.gF.ModContent;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getExtends <em>Extends</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getContent <em>Content</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getExtendList <em>Extend List</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getFunctor <em>Functor</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#isFunctorInstantiation <em>Functor Instantiation</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getInstantiations <em>Instantiations</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getInstantiationList <em>Instantiation List</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getModOpen <em>Mod Open</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModBodyImpl#getModContent <em>Mod Content</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,24 +43,14 @@ import org.grammaticalframework.eclipse.gF.ModContent;
 public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
 {
   /**
-   * The cached value of the '{@link #getExtends() <em>Extends</em>}' containment reference list.
+   * The cached value of the '{@link #getExtendList() <em>Extend List</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExtends()
+   * @see #getExtendList()
    * @generated
    * @ordered
    */
-  protected EList<Included> extends_;
-
-  /**
-   * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getContent()
-   * @generated
-   * @ordered
-   */
-  protected ModContent content;
+  protected ListIncluded extendList;
 
   /**
    * The cached value of the '{@link #getFunctor() <em>Functor</em>}' containment reference.
@@ -97,14 +83,34 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
   protected boolean functorInstantiation = FUNCTOR_INSTANTIATION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getInstantiations() <em>Instantiations</em>}' containment reference list.
+   * The cached value of the '{@link #getInstantiationList() <em>Instantiation List</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getInstantiations()
+   * @see #getInstantiationList()
    * @generated
    * @ordered
    */
-  protected EList<Inst> instantiations;
+  protected ListInst instantiationList;
+
+  /**
+   * The cached value of the '{@link #getModOpen() <em>Mod Open</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getModOpen()
+   * @generated
+   * @ordered
+   */
+  protected ModOpen modOpen;
+
+  /**
+   * The cached value of the '{@link #getModContent() <em>Mod Content</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getModContent()
+   * @generated
+   * @ordered
+   */
+  protected ModContent modContent;
 
   /**
    * <!-- begin-user-doc -->
@@ -132,13 +138,9 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Included> getExtends()
+  public ListIncluded getExtendList()
   {
-    if (extends_ == null)
-    {
-      extends_ = new EObjectContainmentEList<Included>(Included.class, this, GFPackage.MOD_BODY__EXTENDS);
-    }
-    return extends_;
+    return extendList;
   }
 
   /**
@@ -146,23 +148,13 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * <!-- end-user-doc -->
    * @generated
    */
-  public ModContent getContent()
+  public NotificationChain basicSetExtendList(ListIncluded newExtendList, NotificationChain msgs)
   {
-    return content;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetContent(ModContent newContent, NotificationChain msgs)
-  {
-    ModContent oldContent = content;
-    content = newContent;
+    ListIncluded oldExtendList = extendList;
+    extendList = newExtendList;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__CONTENT, oldContent, newContent);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__EXTEND_LIST, oldExtendList, newExtendList);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -173,20 +165,20 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setContent(ModContent newContent)
+  public void setExtendList(ListIncluded newExtendList)
   {
-    if (newContent != content)
+    if (newExtendList != extendList)
     {
       NotificationChain msgs = null;
-      if (content != null)
-        msgs = ((InternalEObject)content).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__CONTENT, null, msgs);
-      if (newContent != null)
-        msgs = ((InternalEObject)newContent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__CONTENT, null, msgs);
-      msgs = basicSetContent(newContent, msgs);
+      if (extendList != null)
+        msgs = ((InternalEObject)extendList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__EXTEND_LIST, null, msgs);
+      if (newExtendList != null)
+        msgs = ((InternalEObject)newExtendList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__EXTEND_LIST, null, msgs);
+      msgs = basicSetExtendList(newExtendList, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__CONTENT, newContent, newContent));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__EXTEND_LIST, newExtendList, newExtendList));
   }
 
   /**
@@ -265,13 +257,143 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Inst> getInstantiations()
+  public ListInst getInstantiationList()
   {
-    if (instantiations == null)
+    return instantiationList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetInstantiationList(ListInst newInstantiationList, NotificationChain msgs)
+  {
+    ListInst oldInstantiationList = instantiationList;
+    instantiationList = newInstantiationList;
+    if (eNotificationRequired())
     {
-      instantiations = new EObjectContainmentEList<Inst>(Inst.class, this, GFPackage.MOD_BODY__INSTANTIATIONS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__INSTANTIATION_LIST, oldInstantiationList, newInstantiationList);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return instantiations;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInstantiationList(ListInst newInstantiationList)
+  {
+    if (newInstantiationList != instantiationList)
+    {
+      NotificationChain msgs = null;
+      if (instantiationList != null)
+        msgs = ((InternalEObject)instantiationList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__INSTANTIATION_LIST, null, msgs);
+      if (newInstantiationList != null)
+        msgs = ((InternalEObject)newInstantiationList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__INSTANTIATION_LIST, null, msgs);
+      msgs = basicSetInstantiationList(newInstantiationList, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__INSTANTIATION_LIST, newInstantiationList, newInstantiationList));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ModOpen getModOpen()
+  {
+    return modOpen;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetModOpen(ModOpen newModOpen, NotificationChain msgs)
+  {
+    ModOpen oldModOpen = modOpen;
+    modOpen = newModOpen;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__MOD_OPEN, oldModOpen, newModOpen);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setModOpen(ModOpen newModOpen)
+  {
+    if (newModOpen != modOpen)
+    {
+      NotificationChain msgs = null;
+      if (modOpen != null)
+        msgs = ((InternalEObject)modOpen).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__MOD_OPEN, null, msgs);
+      if (newModOpen != null)
+        msgs = ((InternalEObject)newModOpen).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__MOD_OPEN, null, msgs);
+      msgs = basicSetModOpen(newModOpen, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__MOD_OPEN, newModOpen, newModOpen));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ModContent getModContent()
+  {
+    return modContent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetModContent(ModContent newModContent, NotificationChain msgs)
+  {
+    ModContent oldModContent = modContent;
+    modContent = newModContent;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__MOD_CONTENT, oldModContent, newModContent);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setModContent(ModContent newModContent)
+  {
+    if (newModContent != modContent)
+    {
+      NotificationChain msgs = null;
+      if (modContent != null)
+        msgs = ((InternalEObject)modContent).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__MOD_CONTENT, null, msgs);
+      if (newModContent != null)
+        msgs = ((InternalEObject)newModContent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_BODY__MOD_CONTENT, null, msgs);
+      msgs = basicSetModContent(newModContent, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_BODY__MOD_CONTENT, newModContent, newModContent));
   }
 
   /**
@@ -284,14 +406,16 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
   {
     switch (featureID)
     {
-      case GFPackage.MOD_BODY__EXTENDS:
-        return ((InternalEList<?>)getExtends()).basicRemove(otherEnd, msgs);
-      case GFPackage.MOD_BODY__CONTENT:
-        return basicSetContent(null, msgs);
+      case GFPackage.MOD_BODY__EXTEND_LIST:
+        return basicSetExtendList(null, msgs);
       case GFPackage.MOD_BODY__FUNCTOR:
         return basicSetFunctor(null, msgs);
-      case GFPackage.MOD_BODY__INSTANTIATIONS:
-        return ((InternalEList<?>)getInstantiations()).basicRemove(otherEnd, msgs);
+      case GFPackage.MOD_BODY__INSTANTIATION_LIST:
+        return basicSetInstantiationList(null, msgs);
+      case GFPackage.MOD_BODY__MOD_OPEN:
+        return basicSetModOpen(null, msgs);
+      case GFPackage.MOD_BODY__MOD_CONTENT:
+        return basicSetModContent(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -306,16 +430,18 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
   {
     switch (featureID)
     {
-      case GFPackage.MOD_BODY__EXTENDS:
-        return getExtends();
-      case GFPackage.MOD_BODY__CONTENT:
-        return getContent();
+      case GFPackage.MOD_BODY__EXTEND_LIST:
+        return getExtendList();
       case GFPackage.MOD_BODY__FUNCTOR:
         return getFunctor();
       case GFPackage.MOD_BODY__FUNCTOR_INSTANTIATION:
         return isFunctorInstantiation();
-      case GFPackage.MOD_BODY__INSTANTIATIONS:
-        return getInstantiations();
+      case GFPackage.MOD_BODY__INSTANTIATION_LIST:
+        return getInstantiationList();
+      case GFPackage.MOD_BODY__MOD_OPEN:
+        return getModOpen();
+      case GFPackage.MOD_BODY__MOD_CONTENT:
+        return getModContent();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -325,18 +451,13 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case GFPackage.MOD_BODY__EXTENDS:
-        getExtends().clear();
-        getExtends().addAll((Collection<? extends Included>)newValue);
-        return;
-      case GFPackage.MOD_BODY__CONTENT:
-        setContent((ModContent)newValue);
+      case GFPackage.MOD_BODY__EXTEND_LIST:
+        setExtendList((ListIncluded)newValue);
         return;
       case GFPackage.MOD_BODY__FUNCTOR:
         setFunctor((Included)newValue);
@@ -344,9 +465,14 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
       case GFPackage.MOD_BODY__FUNCTOR_INSTANTIATION:
         setFunctorInstantiation((Boolean)newValue);
         return;
-      case GFPackage.MOD_BODY__INSTANTIATIONS:
-        getInstantiations().clear();
-        getInstantiations().addAll((Collection<? extends Inst>)newValue);
+      case GFPackage.MOD_BODY__INSTANTIATION_LIST:
+        setInstantiationList((ListInst)newValue);
+        return;
+      case GFPackage.MOD_BODY__MOD_OPEN:
+        setModOpen((ModOpen)newValue);
+        return;
+      case GFPackage.MOD_BODY__MOD_CONTENT:
+        setModContent((ModContent)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -362,11 +488,8 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
   {
     switch (featureID)
     {
-      case GFPackage.MOD_BODY__EXTENDS:
-        getExtends().clear();
-        return;
-      case GFPackage.MOD_BODY__CONTENT:
-        setContent((ModContent)null);
+      case GFPackage.MOD_BODY__EXTEND_LIST:
+        setExtendList((ListIncluded)null);
         return;
       case GFPackage.MOD_BODY__FUNCTOR:
         setFunctor((Included)null);
@@ -374,8 +497,14 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
       case GFPackage.MOD_BODY__FUNCTOR_INSTANTIATION:
         setFunctorInstantiation(FUNCTOR_INSTANTIATION_EDEFAULT);
         return;
-      case GFPackage.MOD_BODY__INSTANTIATIONS:
-        getInstantiations().clear();
+      case GFPackage.MOD_BODY__INSTANTIATION_LIST:
+        setInstantiationList((ListInst)null);
+        return;
+      case GFPackage.MOD_BODY__MOD_OPEN:
+        setModOpen((ModOpen)null);
+        return;
+      case GFPackage.MOD_BODY__MOD_CONTENT:
+        setModContent((ModContent)null);
         return;
     }
     super.eUnset(featureID);
@@ -391,16 +520,18 @@ public class ModBodyImpl extends MinimalEObjectImpl.Container implements ModBody
   {
     switch (featureID)
     {
-      case GFPackage.MOD_BODY__EXTENDS:
-        return extends_ != null && !extends_.isEmpty();
-      case GFPackage.MOD_BODY__CONTENT:
-        return content != null;
+      case GFPackage.MOD_BODY__EXTEND_LIST:
+        return extendList != null;
       case GFPackage.MOD_BODY__FUNCTOR:
         return functor != null;
       case GFPackage.MOD_BODY__FUNCTOR_INSTANTIATION:
         return functorInstantiation != FUNCTOR_INSTANTIATION_EDEFAULT;
-      case GFPackage.MOD_BODY__INSTANTIATIONS:
-        return instantiations != null && !instantiations.isEmpty();
+      case GFPackage.MOD_BODY__INSTANTIATION_LIST:
+        return instantiationList != null;
+      case GFPackage.MOD_BODY__MOD_OPEN:
+        return modOpen != null;
+      case GFPackage.MOD_BODY__MOD_CONTENT:
+        return modContent != null;
     }
     return super.eIsSet(featureID);
   }

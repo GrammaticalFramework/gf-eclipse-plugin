@@ -26,13 +26,13 @@ public interface GFFactory extends EFactory
   GFFactory eINSTANCE = org.grammaticalframework.eclipse.gF.impl.GFFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Mod Def</em>'.
+   * Returns a new object of class '<em>Source Module</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Mod Def</em>'.
+   * @return a new object of class '<em>Source Module</em>'.
    * @generated
    */
-  ModDef createModDef();
+  SourceModule createSourceModule();
 
   /**
    * Returns a new object of class '<em>Mod Type</em>'.
@@ -53,6 +53,15 @@ public interface GFFactory extends EFactory
   ModBody createModBody();
 
   /**
+   * Returns a new object of class '<em>Mod Open</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Mod Open</em>'.
+   * @generated
+   */
+  ModOpen createModOpen();
+
+  /**
    * Returns a new object of class '<em>Mod Content</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -60,6 +69,15 @@ public interface GFFactory extends EFactory
    * @generated
    */
   ModContent createModContent();
+
+  /**
+   * Returns a new object of class '<em>List Open</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Open</em>'.
+   * @generated
+   */
+  ListOpen createListOpen();
 
   /**
    * Returns a new object of class '<em>Open</em>'.
@@ -71,6 +89,15 @@ public interface GFFactory extends EFactory
   Open createOpen();
 
   /**
+   * Returns a new object of class '<em>List Inst</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Inst</em>'.
+   * @generated
+   */
+  ListInst createListInst();
+
+  /**
    * Returns a new object of class '<em>Inst</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -78,6 +105,15 @@ public interface GFFactory extends EFactory
    * @generated
    */
   Inst createInst();
+
+  /**
+   * Returns a new object of class '<em>List Included</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>List Included</em>'.
+   * @generated
+   */
+  ListIncluded createListIncluded();
 
   /**
    * Returns a new object of class '<em>Included</em>'.

@@ -131,7 +131,7 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    * @generated
    * @ordered
    */
-  protected EObject label;
+  protected Ident label;
 
   /**
    * The default value of the '{@link #isMeta() <em>Meta</em>}' attribute.
@@ -457,7 +457,7 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getLabel()
+  public Ident getLabel()
   {
     return label;
   }
@@ -467,9 +467,9 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLabel(EObject newLabel, NotificationChain msgs)
+  public NotificationChain basicSetLabel(Ident newLabel, NotificationChain msgs)
   {
-    EObject oldLabel = label;
+    Ident oldLabel = label;
     label = newLabel;
     if (eNotificationRequired())
     {
@@ -484,7 +484,7 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLabel(EObject newLabel)
+  public void setLabel(Ident newLabel)
   {
     if (newLabel != label)
     {
@@ -656,7 +656,7 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
         setValue((EObject)newValue);
         return;
       case GFPackage.PATT__LABEL:
-        setLabel((EObject)newValue);
+        setLabel((Ident)newValue);
         return;
       case GFPackage.PATT__META:
         setMeta((Boolean)newValue);
@@ -700,7 +700,7 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
         setValue((EObject)null);
         return;
       case GFPackage.PATT__LABEL:
-        setLabel((EObject)null);
+        setLabel((Ident)null);
         return;
       case GFPackage.PATT__META:
         setMeta(META_EDEFAULT);

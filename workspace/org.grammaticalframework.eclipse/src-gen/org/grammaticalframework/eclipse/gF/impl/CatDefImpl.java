@@ -37,6 +37,7 @@ import org.grammaticalframework.eclipse.gF.Ident;
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.CatDefImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.CatDefImpl#getContext <em>Context</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.CatDefImpl#isList <em>List</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.CatDefImpl#getSize <em>Size</em>}</li>
  * </ul>
  * </p>
@@ -64,6 +65,26 @@ public class CatDefImpl extends MinimalEObjectImpl.Container implements CatDef
    * @ordered
    */
   protected EList<DDecl> context;
+
+  /**
+   * The default value of the '{@link #isList() <em>List</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isList()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean LIST_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isList() <em>List</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isList()
+   * @generated
+   * @ordered
+   */
+  protected boolean list = LIST_EDEFAULT;
 
   /**
    * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
@@ -173,6 +194,29 @@ public class CatDefImpl extends MinimalEObjectImpl.Container implements CatDef
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isList()
+  {
+    return list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setList(boolean newList)
+  {
+    boolean oldList = list;
+    list = newList;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.CAT_DEF__LIST, oldList, list));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public int getSize()
   {
     return size;
@@ -223,6 +267,8 @@ public class CatDefImpl extends MinimalEObjectImpl.Container implements CatDef
         return getName();
       case GFPackage.CAT_DEF__CONTEXT:
         return getContext();
+      case GFPackage.CAT_DEF__LIST:
+        return isList();
       case GFPackage.CAT_DEF__SIZE:
         return getSize();
     }
@@ -247,6 +293,9 @@ public class CatDefImpl extends MinimalEObjectImpl.Container implements CatDef
         getContext().clear();
         getContext().addAll((Collection<? extends DDecl>)newValue);
         return;
+      case GFPackage.CAT_DEF__LIST:
+        setList((Boolean)newValue);
+        return;
       case GFPackage.CAT_DEF__SIZE:
         setSize((Integer)newValue);
         return;
@@ -270,6 +319,9 @@ public class CatDefImpl extends MinimalEObjectImpl.Container implements CatDef
       case GFPackage.CAT_DEF__CONTEXT:
         getContext().clear();
         return;
+      case GFPackage.CAT_DEF__LIST:
+        setList(LIST_EDEFAULT);
+        return;
       case GFPackage.CAT_DEF__SIZE:
         setSize(SIZE_EDEFAULT);
         return;
@@ -291,6 +343,8 @@ public class CatDefImpl extends MinimalEObjectImpl.Container implements CatDef
         return name != null;
       case GFPackage.CAT_DEF__CONTEXT:
         return context != null && !context.isEmpty();
+      case GFPackage.CAT_DEF__LIST:
+        return list != LIST_EDEFAULT;
       case GFPackage.CAT_DEF__SIZE:
         return size != SIZE_EDEFAULT;
     }
@@ -308,7 +362,9 @@ public class CatDefImpl extends MinimalEObjectImpl.Container implements CatDef
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (size: ");
+    result.append(" (list: ");
+    result.append(list);
+    result.append(", size: ");
     result.append(size);
     result.append(')');
     return result.toString();

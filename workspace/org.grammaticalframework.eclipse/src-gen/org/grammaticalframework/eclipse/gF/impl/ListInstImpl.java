@@ -19,41 +19,41 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.grammaticalframework.eclipse.gF.Bind;
 import org.grammaticalframework.eclipse.gF.GFPackage;
-import org.grammaticalframework.eclipse.gF.ListBind;
+import org.grammaticalframework.eclipse.gF.Inst;
+import org.grammaticalframework.eclipse.gF.ListInst;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>List Bind</b></em>'.
+ * An implementation of the model object '<em><b>List Inst</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ListBindImpl#getBindings <em>Bindings</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ListInstImpl#getInstantiations <em>Instantiations</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBind
+public class ListInstImpl extends MinimalEObjectImpl.Container implements ListInst
 {
   /**
-   * The cached value of the '{@link #getBindings() <em>Bindings</em>}' containment reference list.
+   * The cached value of the '{@link #getInstantiations() <em>Instantiations</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getBindings()
+   * @see #getInstantiations()
    * @generated
    * @ordered
    */
-  protected EList<Bind> bindings;
+  protected EList<Inst> instantiations;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ListBindImpl()
+  protected ListInstImpl()
   {
     super();
   }
@@ -66,7 +66,7 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   @Override
   protected EClass eStaticClass()
   {
-    return GFPackage.Literals.LIST_BIND;
+    return GFPackage.Literals.LIST_INST;
   }
 
   /**
@@ -74,13 +74,13 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Bind> getBindings()
+  public EList<Inst> getInstantiations()
   {
-    if (bindings == null)
+    if (instantiations == null)
     {
-      bindings = new EObjectContainmentEList<Bind>(Bind.class, this, GFPackage.LIST_BIND__BINDINGS);
+      instantiations = new EObjectContainmentEList<Inst>(Inst.class, this, GFPackage.LIST_INST__INSTANTIATIONS);
     }
-    return bindings;
+    return instantiations;
   }
 
   /**
@@ -93,8 +93,8 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
-      case GFPackage.LIST_BIND__BINDINGS:
-        return ((InternalEList<?>)getBindings()).basicRemove(otherEnd, msgs);
+      case GFPackage.LIST_INST__INSTANTIATIONS:
+        return ((InternalEList<?>)getInstantiations()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -109,8 +109,8 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
-      case GFPackage.LIST_BIND__BINDINGS:
-        return getBindings();
+      case GFPackage.LIST_INST__INSTANTIATIONS:
+        return getInstantiations();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -126,9 +126,9 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
-      case GFPackage.LIST_BIND__BINDINGS:
-        getBindings().clear();
-        getBindings().addAll((Collection<? extends Bind>)newValue);
+      case GFPackage.LIST_INST__INSTANTIATIONS:
+        getInstantiations().clear();
+        getInstantiations().addAll((Collection<? extends Inst>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -144,8 +144,8 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
-      case GFPackage.LIST_BIND__BINDINGS:
-        getBindings().clear();
+      case GFPackage.LIST_INST__INSTANTIATIONS:
+        getInstantiations().clear();
         return;
     }
     super.eUnset(featureID);
@@ -161,10 +161,10 @@ public class ListBindImpl extends MinimalEObjectImpl.Container implements ListBi
   {
     switch (featureID)
     {
-      case GFPackage.LIST_BIND__BINDINGS:
-        return bindings != null && !bindings.isEmpty();
+      case GFPackage.LIST_INST__INSTANTIATIONS:
+        return instantiations != null && !instantiations.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //ListBindImpl
+} //ListInstImpl

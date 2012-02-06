@@ -11,7 +11,9 @@ package org.grammaticalframework.eclipse.ui.labeling;
 
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
-import org.grammaticalframework.eclipse.gF.*;
+import org.grammaticalframework.eclipse.gF.ModType;
+import org.grammaticalframework.eclipse.gF.SourceModule;
+import org.grammaticalframework.eclipse.gF.TopDef;
 
 import com.google.inject.Inject;
 
@@ -47,7 +49,7 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 	 * @param ele the ele
 	 * @return the string
 	 */
-	public String text(ModDef ele) {
+	public String text(SourceModule ele) {
 		StringBuilder sb = new StringBuilder();
 		sb.append( ele.getType().getName().getS() );
 		if (ele.getType().isConcrete() || ele.getType().isInstance()) {
@@ -96,7 +98,7 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 	 * @param ele the ele
 	 * @return the string
 	 */
-	public String image(ModDef ele) {
+	public String image(SourceModule ele) {
 		return images.filenameForModule(ele);
 	}
 	

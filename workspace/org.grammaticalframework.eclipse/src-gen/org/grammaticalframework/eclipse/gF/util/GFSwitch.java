@@ -36,7 +36,10 @@ import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListCase;
 import org.grammaticalframework.eclipse.gF.ListExp;
+import org.grammaticalframework.eclipse.gF.ListIncluded;
+import org.grammaticalframework.eclipse.gF.ListInst;
 import org.grammaticalframework.eclipse.gF.ListLocDef;
+import org.grammaticalframework.eclipse.gF.ListOpen;
 import org.grammaticalframework.eclipse.gF.ListPatt;
 import org.grammaticalframework.eclipse.gF.ListPattAss;
 import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
@@ -44,7 +47,7 @@ import org.grammaticalframework.eclipse.gF.ListTupleComp;
 import org.grammaticalframework.eclipse.gF.LocDef;
 import org.grammaticalframework.eclipse.gF.ModBody;
 import org.grammaticalframework.eclipse.gF.ModContent;
-import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.ModOpen;
 import org.grammaticalframework.eclipse.gF.ModType;
 import org.grammaticalframework.eclipse.gF.Name;
 import org.grammaticalframework.eclipse.gF.Open;
@@ -53,6 +56,7 @@ import org.grammaticalframework.eclipse.gF.ParConstr;
 import org.grammaticalframework.eclipse.gF.ParamDef;
 import org.grammaticalframework.eclipse.gF.Patt;
 import org.grammaticalframework.eclipse.gF.PattAss;
+import org.grammaticalframework.eclipse.gF.SourceModule;
 import org.grammaticalframework.eclipse.gF.TermDef;
 import org.grammaticalframework.eclipse.gF.TopDef;
 
@@ -119,10 +123,10 @@ public class GFSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case GFPackage.MOD_DEF:
+      case GFPackage.SOURCE_MODULE:
       {
-        ModDef modDef = (ModDef)theEObject;
-        T result = caseModDef(modDef);
+        SourceModule sourceModule = (SourceModule)theEObject;
+        T result = caseSourceModule(sourceModule);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -140,10 +144,24 @@ public class GFSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GFPackage.MOD_OPEN:
+      {
+        ModOpen modOpen = (ModOpen)theEObject;
+        T result = caseModOpen(modOpen);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GFPackage.MOD_CONTENT:
       {
         ModContent modContent = (ModContent)theEObject;
         T result = caseModContent(modContent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.LIST_OPEN:
+      {
+        ListOpen listOpen = (ListOpen)theEObject;
+        T result = caseListOpen(listOpen);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -154,10 +172,24 @@ public class GFSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GFPackage.LIST_INST:
+      {
+        ListInst listInst = (ListInst)theEObject;
+        T result = caseListInst(listInst);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GFPackage.INST:
       {
         Inst inst = (Inst)theEObject;
         T result = caseInst(inst);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case GFPackage.LIST_INCLUDED:
+      {
+        ListIncluded listIncluded = (ListIncluded)theEObject;
+        T result = caseListIncluded(listIncluded);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -346,9 +378,6 @@ public class GFSwitch<T> extends Switch<T>
       {
         ListBind listBind = (ListBind)theEObject;
         T result = caseListBind(listBind);
-        if (result == null) result = caseExp(listBind);
-        if (result == null) result = casePatt(listBind);
-        if (result == null) result = caseDDecl(listBind);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -484,17 +513,17 @@ public class GFSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Mod Def</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Source Module</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Mod Def</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Source Module</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseModDef(ModDef object)
+  public T caseSourceModule(SourceModule object)
   {
     return null;
   }
@@ -532,6 +561,22 @@ public class GFSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Mod Open</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Mod Open</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseModOpen(ModOpen object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Mod Content</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -543,6 +588,22 @@ public class GFSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseModContent(ModContent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Open</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Open</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListOpen(ListOpen object)
   {
     return null;
   }
@@ -564,6 +625,22 @@ public class GFSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>List Inst</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Inst</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListInst(ListInst object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Inst</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -575,6 +652,22 @@ public class GFSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseInst(Inst object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>List Included</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>List Included</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseListIncluded(ListIncluded object)
   {
     return null;
   }

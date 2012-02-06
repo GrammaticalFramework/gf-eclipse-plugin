@@ -16,25 +16,25 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.ModBody;
-import org.grammaticalframework.eclipse.gF.ModDef;
 import org.grammaticalframework.eclipse.gF.ModType;
+import org.grammaticalframework.eclipse.gF.SourceModule;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Mod Def</b></em>'.
+ * An implementation of the model object '<em><b>Source Module</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModDefImpl#isIncomplete <em>Incomplete</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModDefImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.ModDefImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.SourceModuleImpl#isIncomplete <em>Incomplete</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.SourceModuleImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.SourceModuleImpl#getBody <em>Body</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
+public class SourceModuleImpl extends MinimalEObjectImpl.Container implements SourceModule
 {
   /**
    * The default value of the '{@link #isIncomplete() <em>Incomplete</em>}' attribute.
@@ -81,7 +81,7 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModDefImpl()
+  protected SourceModuleImpl()
   {
     super();
   }
@@ -94,7 +94,7 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
   @Override
   protected EClass eStaticClass()
   {
-    return GFPackage.Literals.MOD_DEF;
+    return GFPackage.Literals.SOURCE_MODULE;
   }
 
   /**
@@ -117,7 +117,7 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
     boolean oldIncomplete = incomplete;
     incomplete = newIncomplete;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_DEF__INCOMPLETE, oldIncomplete, incomplete));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.SOURCE_MODULE__INCOMPLETE, oldIncomplete, incomplete));
   }
 
   /**
@@ -141,7 +141,7 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
     type = newType;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.MOD_DEF__TYPE, oldType, newType);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.SOURCE_MODULE__TYPE, oldType, newType);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -158,14 +158,14 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
     {
       NotificationChain msgs = null;
       if (type != null)
-        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_DEF__TYPE, null, msgs);
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.SOURCE_MODULE__TYPE, null, msgs);
       if (newType != null)
-        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_DEF__TYPE, null, msgs);
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.SOURCE_MODULE__TYPE, null, msgs);
       msgs = basicSetType(newType, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_DEF__TYPE, newType, newType));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.SOURCE_MODULE__TYPE, newType, newType));
   }
 
   /**
@@ -189,7 +189,7 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
     body = newBody;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.MOD_DEF__BODY, oldBody, newBody);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.SOURCE_MODULE__BODY, oldBody, newBody);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -206,14 +206,14 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
     {
       NotificationChain msgs = null;
       if (body != null)
-        msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_DEF__BODY, null, msgs);
+        msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.SOURCE_MODULE__BODY, null, msgs);
       if (newBody != null)
-        msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.MOD_DEF__BODY, null, msgs);
+        msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.SOURCE_MODULE__BODY, null, msgs);
       msgs = basicSetBody(newBody, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.MOD_DEF__BODY, newBody, newBody));
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.SOURCE_MODULE__BODY, newBody, newBody));
   }
 
   /**
@@ -226,9 +226,9 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
   {
     switch (featureID)
     {
-      case GFPackage.MOD_DEF__TYPE:
+      case GFPackage.SOURCE_MODULE__TYPE:
         return basicSetType(null, msgs);
-      case GFPackage.MOD_DEF__BODY:
+      case GFPackage.SOURCE_MODULE__BODY:
         return basicSetBody(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -244,11 +244,11 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
   {
     switch (featureID)
     {
-      case GFPackage.MOD_DEF__INCOMPLETE:
+      case GFPackage.SOURCE_MODULE__INCOMPLETE:
         return isIncomplete();
-      case GFPackage.MOD_DEF__TYPE:
+      case GFPackage.SOURCE_MODULE__TYPE:
         return getType();
-      case GFPackage.MOD_DEF__BODY:
+      case GFPackage.SOURCE_MODULE__BODY:
         return getBody();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -264,13 +264,13 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
   {
     switch (featureID)
     {
-      case GFPackage.MOD_DEF__INCOMPLETE:
+      case GFPackage.SOURCE_MODULE__INCOMPLETE:
         setIncomplete((Boolean)newValue);
         return;
-      case GFPackage.MOD_DEF__TYPE:
+      case GFPackage.SOURCE_MODULE__TYPE:
         setType((ModType)newValue);
         return;
-      case GFPackage.MOD_DEF__BODY:
+      case GFPackage.SOURCE_MODULE__BODY:
         setBody((ModBody)newValue);
         return;
     }
@@ -287,13 +287,13 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
   {
     switch (featureID)
     {
-      case GFPackage.MOD_DEF__INCOMPLETE:
+      case GFPackage.SOURCE_MODULE__INCOMPLETE:
         setIncomplete(INCOMPLETE_EDEFAULT);
         return;
-      case GFPackage.MOD_DEF__TYPE:
+      case GFPackage.SOURCE_MODULE__TYPE:
         setType((ModType)null);
         return;
-      case GFPackage.MOD_DEF__BODY:
+      case GFPackage.SOURCE_MODULE__BODY:
         setBody((ModBody)null);
         return;
     }
@@ -310,11 +310,11 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
   {
     switch (featureID)
     {
-      case GFPackage.MOD_DEF__INCOMPLETE:
+      case GFPackage.SOURCE_MODULE__INCOMPLETE:
         return incomplete != INCOMPLETE_EDEFAULT;
-      case GFPackage.MOD_DEF__TYPE:
+      case GFPackage.SOURCE_MODULE__TYPE:
         return type != null;
-      case GFPackage.MOD_DEF__BODY:
+      case GFPackage.SOURCE_MODULE__BODY:
         return body != null;
     }
     return super.eIsSet(featureID);
@@ -337,4 +337,4 @@ public class ModDefImpl extends MinimalEObjectImpl.Container implements ModDef
     return result.toString();
   }
 
-} //ModDefImpl
+} //SourceModuleImpl

@@ -38,7 +38,10 @@ import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListCase;
 import org.grammaticalframework.eclipse.gF.ListExp;
+import org.grammaticalframework.eclipse.gF.ListIncluded;
+import org.grammaticalframework.eclipse.gF.ListInst;
 import org.grammaticalframework.eclipse.gF.ListLocDef;
+import org.grammaticalframework.eclipse.gF.ListOpen;
 import org.grammaticalframework.eclipse.gF.ListPatt;
 import org.grammaticalframework.eclipse.gF.ListPattAss;
 import org.grammaticalframework.eclipse.gF.ListPattTupleComp;
@@ -46,7 +49,7 @@ import org.grammaticalframework.eclipse.gF.ListTupleComp;
 import org.grammaticalframework.eclipse.gF.LocDef;
 import org.grammaticalframework.eclipse.gF.ModBody;
 import org.grammaticalframework.eclipse.gF.ModContent;
-import org.grammaticalframework.eclipse.gF.ModDef;
+import org.grammaticalframework.eclipse.gF.ModOpen;
 import org.grammaticalframework.eclipse.gF.ModType;
 import org.grammaticalframework.eclipse.gF.Name;
 import org.grammaticalframework.eclipse.gF.Open;
@@ -55,6 +58,7 @@ import org.grammaticalframework.eclipse.gF.ParConstr;
 import org.grammaticalframework.eclipse.gF.ParamDef;
 import org.grammaticalframework.eclipse.gF.Patt;
 import org.grammaticalframework.eclipse.gF.PattAss;
+import org.grammaticalframework.eclipse.gF.SourceModule;
 import org.grammaticalframework.eclipse.gF.TermDef;
 import org.grammaticalframework.eclipse.gF.TopDef;
 
@@ -122,9 +126,9 @@ public class GFAdapterFactory extends AdapterFactoryImpl
     new GFSwitch<Adapter>()
     {
       @Override
-      public Adapter caseModDef(ModDef object)
+      public Adapter caseSourceModule(SourceModule object)
       {
-        return createModDefAdapter();
+        return createSourceModuleAdapter();
       }
       @Override
       public Adapter caseModType(ModType object)
@@ -137,9 +141,19 @@ public class GFAdapterFactory extends AdapterFactoryImpl
         return createModBodyAdapter();
       }
       @Override
+      public Adapter caseModOpen(ModOpen object)
+      {
+        return createModOpenAdapter();
+      }
+      @Override
       public Adapter caseModContent(ModContent object)
       {
         return createModContentAdapter();
+      }
+      @Override
+      public Adapter caseListOpen(ListOpen object)
+      {
+        return createListOpenAdapter();
       }
       @Override
       public Adapter caseOpen(Open object)
@@ -147,9 +161,19 @@ public class GFAdapterFactory extends AdapterFactoryImpl
         return createOpenAdapter();
       }
       @Override
+      public Adapter caseListInst(ListInst object)
+      {
+        return createListInstAdapter();
+      }
+      @Override
       public Adapter caseInst(Inst object)
       {
         return createInstAdapter();
+      }
+      @Override
+      public Adapter caseListIncluded(ListIncluded object)
+      {
+        return createListIncludedAdapter();
       }
       @Override
       public Adapter caseIncluded(Included object)
@@ -379,16 +403,16 @@ public class GFAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ModDef <em>Mod Def</em>}'.
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.SourceModule <em>Source Module</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.grammaticalframework.eclipse.gF.ModDef
+   * @see org.grammaticalframework.eclipse.gF.SourceModule
    * @generated
    */
-  public Adapter createModDefAdapter()
+  public Adapter createSourceModuleAdapter()
   {
     return null;
   }
@@ -424,6 +448,21 @@ public class GFAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ModOpen <em>Mod Open</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.ModOpen
+   * @generated
+   */
+  public Adapter createModOpenAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ModContent <em>Mod Content</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -434,6 +473,21 @@ public class GFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createModContentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ListOpen <em>List Open</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.ListOpen
+   * @generated
+   */
+  public Adapter createListOpenAdapter()
   {
     return null;
   }
@@ -454,6 +508,21 @@ public class GFAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ListInst <em>List Inst</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.ListInst
+   * @generated
+   */
+  public Adapter createListInstAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.Inst <em>Inst</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -464,6 +533,21 @@ public class GFAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createInstAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.grammaticalframework.eclipse.gF.ListIncluded <em>List Included</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.grammaticalframework.eclipse.gF.ListIncluded
+   * @generated
+   */
+  public Adapter createListIncludedAdapter()
   {
     return null;
   }

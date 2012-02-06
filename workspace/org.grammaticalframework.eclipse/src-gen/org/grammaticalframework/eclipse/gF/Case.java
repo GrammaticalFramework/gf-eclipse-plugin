@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.grammaticalframework.eclipse.gF.Case#getPattern <em>Pattern</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.Case#getE <em>E</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.Case#getRight <em>Right</em>}</li>
  * </ul>
  * </p>
  *
@@ -53,29 +53,29 @@ public interface Case extends EObject
   void setPattern(Patt value);
 
   /**
-   * Returns the value of the '<em><b>E</b></em>' containment reference.
+   * Returns the value of the '<em><b>Right</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>E</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Right</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>E</em>' containment reference.
-   * @see #setE(Exp)
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getCase_E()
+   * @return the value of the '<em>Right</em>' containment reference.
+   * @see #setRight(Exp)
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getCase_Right()
    * @model containment="true"
    * @generated
    */
-  Exp getE();
+  Exp getRight();
 
   /**
-   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Case#getE <em>E</em>}' containment reference.
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Case#getRight <em>Right</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>E</em>' containment reference.
-   * @see #getE()
+   * @param value the new value of the '<em>Right</em>' containment reference.
+   * @see #getRight()
    * @generated
    */
-  void setE(Exp value);
+  void setRight(Exp value);
 
 } // Case
