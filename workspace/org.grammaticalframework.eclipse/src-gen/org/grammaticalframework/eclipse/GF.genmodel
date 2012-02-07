@@ -101,9 +101,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/args"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//OperDef/overload"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/overloads"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//OperDef/args"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//LinDef">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//LinDef/name"/>

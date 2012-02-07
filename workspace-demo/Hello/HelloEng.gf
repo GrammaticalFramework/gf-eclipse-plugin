@@ -18,3 +18,4 @@ concrete HelloEng of HelloAbs = ResEng ** {
 		} } ;
 		Friends = ResEng.mega "friends" "loved ones" ;
 } ; 
+ 

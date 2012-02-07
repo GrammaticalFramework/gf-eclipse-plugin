@@ -28,8 +28,8 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_ModContent___InKeyword_1_2_0_LeftCurlyBracketKeyword_1_2_1_RightCurlyBracketKeyword_1_2_3__q;
 	protected AbstractElementAlias match_ModContent___LeftCurlyBracketKeyword_0_1_0_RightCurlyBracketKeyword_0_1_2__q;
 	protected AbstractElementAlias match_ModDef_SemicolonKeyword_4_a;
-	protected AbstractElementAlias match_OperDef_SemicolonKeyword_0_4_1_1_4_q;
-	protected AbstractElementAlias match_OperDef_SemicolonKeyword_1_3_1_4_q;
+	protected AbstractElementAlias match_OperDef_SemicolonKeyword_3_7_q;
+	protected AbstractElementAlias match_OperDef_SemicolonKeyword_4_7_q;
 	protected AbstractElementAlias match_Patt1_AsteriskKeyword_2_1_q;
 	protected AbstractElementAlias match_Patt3_LeftParenthesisKeyword_10_0_a;
 	protected AbstractElementAlias match_Patt3_LeftParenthesisKeyword_10_0_p;
@@ -48,8 +48,8 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_ModContent___InKeyword_1_2_0_LeftCurlyBracketKeyword_1_2_1_RightCurlyBracketKeyword_1_2_3__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getModContentAccess().getInKeyword_1_2_0()), new TokenAlias(false, false, grammarAccess.getModContentAccess().getLeftCurlyBracketKeyword_1_2_1()), new TokenAlias(false, false, grammarAccess.getModContentAccess().getRightCurlyBracketKeyword_1_2_3()));
 		match_ModContent___LeftCurlyBracketKeyword_0_1_0_RightCurlyBracketKeyword_0_1_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getModContentAccess().getLeftCurlyBracketKeyword_0_1_0()), new TokenAlias(false, false, grammarAccess.getModContentAccess().getRightCurlyBracketKeyword_0_1_2()));
 		match_ModDef_SemicolonKeyword_4_a = new TokenAlias(true, true, grammarAccess.getModDefAccess().getSemicolonKeyword_4());
-		match_OperDef_SemicolonKeyword_0_4_1_1_4_q = new TokenAlias(true, false, grammarAccess.getOperDefAccess().getSemicolonKeyword_0_4_1_1_4());
-		match_OperDef_SemicolonKeyword_1_3_1_4_q = new TokenAlias(true, false, grammarAccess.getOperDefAccess().getSemicolonKeyword_1_3_1_4());
+		match_OperDef_SemicolonKeyword_3_7_q = new TokenAlias(true, false, grammarAccess.getOperDefAccess().getSemicolonKeyword_3_7());
+		match_OperDef_SemicolonKeyword_4_7_q = new TokenAlias(true, false, grammarAccess.getOperDefAccess().getSemicolonKeyword_4_7());
 		match_Patt1_AsteriskKeyword_2_1_q = new TokenAlias(true, false, grammarAccess.getPatt1Access().getAsteriskKeyword_2_1());
 		match_Patt3_LeftParenthesisKeyword_10_0_a = new TokenAlias(true, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0());
 		match_Patt3_LeftParenthesisKeyword_10_0_p = new TokenAlias(false, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0());
@@ -87,10 +87,10 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_ModContent___LeftCurlyBracketKeyword_0_1_0_RightCurlyBracketKeyword_0_1_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_ModDef_SemicolonKeyword_4_a.equals(syntax))
 				emit_ModDef_SemicolonKeyword_4_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_OperDef_SemicolonKeyword_0_4_1_1_4_q.equals(syntax))
-				emit_OperDef_SemicolonKeyword_0_4_1_1_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_OperDef_SemicolonKeyword_1_3_1_4_q.equals(syntax))
-				emit_OperDef_SemicolonKeyword_1_3_1_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_OperDef_SemicolonKeyword_3_7_q.equals(syntax))
+				emit_OperDef_SemicolonKeyword_3_7_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_OperDef_SemicolonKeyword_4_7_q.equals(syntax))
+				emit_OperDef_SemicolonKeyword_4_7_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Patt1_AsteriskKeyword_2_1_q.equals(syntax))
 				emit_Patt1_AsteriskKeyword_2_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Patt3_LeftParenthesisKeyword_10_0_a.equals(syntax))
@@ -107,7 +107,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Syntax:
-	 *     '**' | '*' | '!'
+	 *     '*' | '**' | '!'
 	 */
 	protected void emit_Exp3_AsteriskAsteriskKeyword_1_1_2_or_AsteriskKeyword_1_1_1_or_ExclamationMarkKeyword_1_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -181,7 +181,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ';'?
 	 */
-	protected void emit_OperDef_SemicolonKeyword_0_4_1_1_4_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_OperDef_SemicolonKeyword_3_7_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -189,7 +189,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * Syntax:
 	 *     ';'?
 	 */
-	protected void emit_OperDef_SemicolonKeyword_1_3_1_4_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_OperDef_SemicolonKeyword_4_7_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

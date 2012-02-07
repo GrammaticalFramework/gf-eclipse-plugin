@@ -395,8 +395,12 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case GFPackage.OPER_DEF:
-				if(context == grammarAccess.getOperDefInnerRule()) {
-					sequence_OperDefInner(context, (OperDef) semanticObject); 
+				if(context == grammarAccess.getOperDefInnerDefRule()) {
+					sequence_OperDefInnerDef(context, (OperDef) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getOperDefInnerTypeRule()) {
+					sequence_OperDefInnerType(context, (OperDef) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getOperDefRule()) {
@@ -949,9 +953,18 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((name+=Name name+=Name* type=Exp definition=Exp?) | (name+=Name name+=Name* definition=Exp) | (name+=Name args+=Arg+ definition=Exp))
+	 *     (name+=Name name+=Name* type=Exp definition=Exp)
 	 */
-	protected void sequence_OperDefInner(EObject context, OperDef semanticObject) {
+	protected void sequence_OperDefInnerDef(EObject context, OperDef semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name+=Name name+=Name* type=Exp)
+	 */
+	protected void sequence_OperDefInnerType(EObject context, OperDef semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -959,9 +972,11 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
-	 *         (name+=Name name+=Name* type=Exp (definition=Exp | (overload?='overload' overloads+=OperDefInner overloads+=OperDefInner*))?) | 
-	 *         (name+=Name name+=Name* (definition=Exp | (overload?='overload' overloads+=OperDefInner overloads+=OperDefInner*))) | 
-	 *         (name+=Name args+=Arg+ definition=Exp)
+	 *         (name+=Name name+=Name* type=Exp definition=Exp?) | 
+	 *         (name+=Name name+=Name* definition=Exp) | 
+	 *         (name+=Name args+=Arg+ definition=Exp) | 
+	 *         (name+=Name name+=Name* overload?='overload' overloads+=OperDefInnerType overloads+=OperDefInnerType*) | 
+	 *         (name+=Name name+=Name* overload?='overload' overloads+=OperDefInnerDef overloads+=OperDefInnerDef*)
 	 *     )
 	 */
 	protected void sequence_OperDef(EObject context, OperDef semanticObject) {

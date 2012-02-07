@@ -155,9 +155,9 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	 */
 	protected Iterable<IEObjectDescription> getJudgementLevelDescriptions(final EObject context, final EReference reference) {
 		
-		// Attempt to find the TopDef for context
+		// Attempt to find the TopDef OR OperDefInnerDef for context
 		EObject temp = context;
-		while (temp.eContainer() != null && !(temp.eContainer() instanceof TopDef)) {
+		while (temp.eContainer() != null && !(temp.eContainer() instanceof TopDef) && !(temp.eContainer() instanceof OperDef)) {
 			temp = temp.eContainer();
 		}
 		if (temp.eContainer() == null) {

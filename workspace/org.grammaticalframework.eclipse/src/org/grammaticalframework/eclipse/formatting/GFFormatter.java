@@ -185,8 +185,8 @@ public class GFFormatter extends AbstractDeclarativeFormatter {
 		
 		// overload
 		blockIndent(c, new Keyword[][] {
-				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_0_4_1_1_1(), f.getOperDefAccess().getRightCurlyBracketKeyword_0_4_1_1_5() },
-				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_1_3_1_1(), f.getOperDefAccess().getRightCurlyBracketKeyword_1_3_1_5() },
+				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_3_4(), f.getOperDefAccess().getRightCurlyBracketKeyword_3_8() },
+				{ f.getOperDefAccess().getLeftCurlyBracketKeyword_4_4(), f.getOperDefAccess().getRightCurlyBracketKeyword_4_8() },
 		});	
 
 		// case, table

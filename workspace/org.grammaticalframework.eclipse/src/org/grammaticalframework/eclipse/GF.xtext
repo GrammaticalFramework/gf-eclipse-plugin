@@ -143,22 +143,29 @@ ParamDef
 	: name=Ident ('=' constructors+=ParConstr ('|' constructors+=ParConstr)* )?
 ;
 
-// Modified to handle "overload" syntax
-//OperDef
-//  : ListName ':' Exp 
-//  | ListName ':' Exp	'=' Exp
-//  | ListName 			'=' Exp
-//  | Name ListArg 		'=' Exp
-
+/* OperDef is modified to handle "overload" syntax
+ * Possibilities:
+ * 
+ * ListName : Exp
+ * ListName : Exp = Exp
+ * ListName = Exp
+ * Name ListArg = Exp
+ * 
+ * ListName : overload { ListName : Exp ; ... }
+ * ListName = overload { ListName : Exp = Exp ; ... }
+ */
 OperDef 
-	: name+=Name (',' name+=Name)* ':' type=Exp	('=' ( definition=Exp | overload?='overload' '{' overloads+=OperDefInner (';' overloads+=OperDefInner )* ';'? '}'))?
-	| name+=Name (',' name+=Name)*				 '=' ( definition=Exp | overload?='overload' '{' overloads+=OperDefInner (';' overloads+=OperDefInner )* ';'? '}')
-	| name+=Name (args+=Arg)+					 '=' definition=Exp
-;
-OperDefInner returns OperDef
-	: name+=Name (',' name+=Name)* ':' type=Exp	'=' definition=Exp?
+	: name+=Name (',' name+=Name)* ':' type=Exp	('=' definition=Exp)?
 	| name+=Name (',' name+=Name)*				'=' definition=Exp
 	| name+=Name (args+=Arg)+					'=' definition=Exp
+	| name+=Name (',' name+=Name)* ':' overload?='overload' '{' overloads+=OperDefInnerType (';' overloads+=OperDefInnerType )* ';'? '}'
+	| name+=Name (',' name+=Name)* '=' overload?='overload' '{' overloads+=OperDefInnerDef  (';' overloads+=OperDefInnerDef  )* ';'? '}'
+;
+OperDefInnerType returns OperDef
+	: name+=Name (',' name+=Name)* ':' type=Exp
+;
+OperDefInnerDef returns OperDef
+	: name+=Name (',' name+=Name)* ':' type=Exp	'=' definition=Exp
 ;
 
 LinDef

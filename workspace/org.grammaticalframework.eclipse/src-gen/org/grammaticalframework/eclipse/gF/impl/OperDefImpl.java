@@ -37,9 +37,9 @@ import org.grammaticalframework.eclipse.gF.OperDef;
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getDefinition <em>Definition</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getArgs <em>Args</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#isOverload <em>Overload</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getOverloads <em>Overloads</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.impl.OperDefImpl#getArgs <em>Args</em>}</li>
  * </ul>
  * </p>
  *
@@ -78,6 +78,16 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
   protected Exp definition;
 
   /**
+   * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getArgs()
+   * @generated
+   * @ordered
+   */
+  protected EList<Arg> args;
+
+  /**
    * The default value of the '{@link #isOverload() <em>Overload</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -106,16 +116,6 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
    * @ordered
    */
   protected EList<OperDef> overloads;
-
-  /**
-   * The cached value of the '{@link #getArgs() <em>Args</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getArgs()
-   * @generated
-   * @ordered
-   */
-  protected EList<Arg> args;
 
   /**
    * <!-- begin-user-doc -->
@@ -253,6 +253,20 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Arg> getArgs()
+  {
+    if (args == null)
+    {
+      args = new EObjectContainmentEList<Arg>(Arg.class, this, GFPackage.OPER_DEF__ARGS);
+    }
+    return args;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public boolean isOverload()
   {
     return overload;
@@ -290,20 +304,6 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Arg> getArgs()
-  {
-    if (args == null)
-    {
-      args = new EObjectContainmentEList<Arg>(Arg.class, this, GFPackage.OPER_DEF__ARGS);
-    }
-    return args;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -315,10 +315,10 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
         return basicSetType(null, msgs);
       case GFPackage.OPER_DEF__DEFINITION:
         return basicSetDefinition(null, msgs);
-      case GFPackage.OPER_DEF__OVERLOADS:
-        return ((InternalEList<?>)getOverloads()).basicRemove(otherEnd, msgs);
       case GFPackage.OPER_DEF__ARGS:
         return ((InternalEList<?>)getArgs()).basicRemove(otherEnd, msgs);
+      case GFPackage.OPER_DEF__OVERLOADS:
+        return ((InternalEList<?>)getOverloads()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -339,12 +339,12 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
         return getType();
       case GFPackage.OPER_DEF__DEFINITION:
         return getDefinition();
+      case GFPackage.OPER_DEF__ARGS:
+        return getArgs();
       case GFPackage.OPER_DEF__OVERLOAD:
         return isOverload();
       case GFPackage.OPER_DEF__OVERLOADS:
         return getOverloads();
-      case GFPackage.OPER_DEF__ARGS:
-        return getArgs();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -370,16 +370,16 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
       case GFPackage.OPER_DEF__DEFINITION:
         setDefinition((Exp)newValue);
         return;
+      case GFPackage.OPER_DEF__ARGS:
+        getArgs().clear();
+        getArgs().addAll((Collection<? extends Arg>)newValue);
+        return;
       case GFPackage.OPER_DEF__OVERLOAD:
         setOverload((Boolean)newValue);
         return;
       case GFPackage.OPER_DEF__OVERLOADS:
         getOverloads().clear();
         getOverloads().addAll((Collection<? extends OperDef>)newValue);
-        return;
-      case GFPackage.OPER_DEF__ARGS:
-        getArgs().clear();
-        getArgs().addAll((Collection<? extends Arg>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -404,14 +404,14 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
       case GFPackage.OPER_DEF__DEFINITION:
         setDefinition((Exp)null);
         return;
+      case GFPackage.OPER_DEF__ARGS:
+        getArgs().clear();
+        return;
       case GFPackage.OPER_DEF__OVERLOAD:
         setOverload(OVERLOAD_EDEFAULT);
         return;
       case GFPackage.OPER_DEF__OVERLOADS:
         getOverloads().clear();
-        return;
-      case GFPackage.OPER_DEF__ARGS:
-        getArgs().clear();
         return;
     }
     super.eUnset(featureID);
@@ -433,12 +433,12 @@ public class OperDefImpl extends MinimalEObjectImpl.Container implements OperDef
         return type != null;
       case GFPackage.OPER_DEF__DEFINITION:
         return definition != null;
+      case GFPackage.OPER_DEF__ARGS:
+        return args != null && !args.isEmpty();
       case GFPackage.OPER_DEF__OVERLOAD:
         return overload != OVERLOAD_EDEFAULT;
       case GFPackage.OPER_DEF__OVERLOADS:
         return overloads != null && !overloads.isEmpty();
-      case GFPackage.OPER_DEF__ARGS:
-        return args != null && !args.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -905,13 +905,22 @@ public interface GFPackage extends EPackage
   int OPER_DEF__DEFINITION = 2;
 
   /**
+   * The feature id for the '<em><b>Args</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OPER_DEF__ARGS = 3;
+
+  /**
    * The feature id for the '<em><b>Overload</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OPER_DEF__OVERLOAD = 3;
+  int OPER_DEF__OVERLOAD = 4;
 
   /**
    * The feature id for the '<em><b>Overloads</b></em>' containment reference list.
@@ -920,16 +929,7 @@ public interface GFPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OPER_DEF__OVERLOADS = 4;
-
-  /**
-   * The feature id for the '<em><b>Args</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OPER_DEF__ARGS = 5;
+  int OPER_DEF__OVERLOADS = 5;
 
   /**
    * The number of structural features of the '<em>Oper Def</em>' class.
@@ -5355,6 +5355,17 @@ public interface GFPackage extends EPackage
   EReference getOperDef_Definition();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.OperDef#getArgs <em>Args</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Args</em>'.
+   * @see org.grammaticalframework.eclipse.gF.OperDef#getArgs()
+   * @see #getOperDef()
+   * @generated
+   */
+  EReference getOperDef_Args();
+
+  /**
    * Returns the meta object for the attribute '{@link org.grammaticalframework.eclipse.gF.OperDef#isOverload <em>Overload</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5375,17 +5386,6 @@ public interface GFPackage extends EPackage
    * @generated
    */
   EReference getOperDef_Overloads();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.grammaticalframework.eclipse.gF.OperDef#getArgs <em>Args</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Args</em>'.
-   * @see org.grammaticalframework.eclipse.gF.OperDef#getArgs()
-   * @see #getOperDef()
-   * @generated
-   */
-  EReference getOperDef_Args();
 
   /**
    * Returns the meta object for class '{@link org.grammaticalframework.eclipse.gF.LinDef <em>Lin Def</em>}'.
@@ -7442,6 +7442,14 @@ public interface GFPackage extends EPackage
     EReference OPER_DEF__DEFINITION = eINSTANCE.getOperDef_Definition();
 
     /**
+     * The meta object literal for the '<em><b>Args</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OPER_DEF__ARGS = eINSTANCE.getOperDef_Args();
+
+    /**
      * The meta object literal for the '<em><b>Overload</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7456,14 +7464,6 @@ public interface GFPackage extends EPackage
      * @generated
      */
     EReference OPER_DEF__OVERLOADS = eINSTANCE.getOperDef_Overloads();
-
-    /**
-     * The meta object literal for the '<em><b>Args</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OPER_DEF__ARGS = eINSTANCE.getOperDef_Args();
 
     /**
      * The meta object literal for the '{@link org.grammaticalframework.eclipse.gF.impl.LinDefImpl <em>Lin Def</em>}' class.

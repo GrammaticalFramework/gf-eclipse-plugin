@@ -32,6 +32,7 @@ import org.grammaticalframework.eclipse.gF.OperDef;
 import org.grammaticalframework.eclipse.gF.ParConstr;
 import org.grammaticalframework.eclipse.gF.ParamDef;
 import org.grammaticalframework.eclipse.gF.SourceModule;
+import org.grammaticalframework.eclipse.gF.TopDef;
 
 import com.google.common.base.Function;
 import com.google.inject.Inject;
@@ -140,13 +141,13 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 	}
 	
 	/**
-	 * Should be exported.
+	 * Should the given Ident be exported to the top-level of this module?
 	 *
-	 * @param id the id
-	 * @return true, if successful
+	 * @param ident The Ident object
+	 * @return true, if this Ident should be exported
 	 */
-	public static boolean shouldBeExported(Ident id) {
-		EObject parent = id.eContainer();
+	public static boolean shouldBeExported(Ident ident) {
+		EObject parent = ident.eContainer();
 		EObject grandParent = parent.eContainer();
 		EObject greatGrandParent = grandParent.eContainer();
 		
@@ -155,22 +156,17 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 			return true;
 		}
 		
-		if (grandParent instanceof DefDef) {
-			// don't export the Def's defined WITHIN an overload
-			if (greatGrandParent instanceof OperDef && ((OperDef) greatGrandParent).isOverload())
-				return false;
-			else
-				return true;
-		}
-		
 		// General case for top level judgements
-		return (
+		boolean ans = (
 			   parent instanceof CatDef // cat
 			|| parent instanceof FunDef // fun
+			|| parent instanceof DefDef // def
 			|| parent instanceof DataDef // data
-			|| parent instanceof ParamDef || parent instanceof ParConstr// param
+			|| parent instanceof ParamDef || parent instanceof ParConstr // param
+			|| (grandParent instanceof OperDef && greatGrandParent instanceof TopDef) // oper (outer)
 //			|| grandParent instanceof TermDef
 		);
+		return ans;
 	}
 	
 	

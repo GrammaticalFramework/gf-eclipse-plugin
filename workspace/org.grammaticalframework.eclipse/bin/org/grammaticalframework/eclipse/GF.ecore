@@ -129,11 +129,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Exp" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="definition" eType="#//Exp"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//Arg"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="overload" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="overloads" upperBound="-1"
         eType="#//OperDef" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="args" upperBound="-1" eType="#//Arg"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="LinDef">
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" upperBound="-1" eType="#//Name"

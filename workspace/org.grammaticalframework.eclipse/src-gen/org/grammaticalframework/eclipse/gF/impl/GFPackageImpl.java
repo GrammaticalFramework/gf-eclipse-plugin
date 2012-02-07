@@ -1227,9 +1227,19 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getOperDef_Args()
+  {
+    return (EReference)operDefEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getOperDef_Overload()
   {
-    return (EAttribute)operDefEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)operDefEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1238,16 +1248,6 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
    * @generated
    */
   public EReference getOperDef_Overloads()
-  {
-    return (EReference)operDefEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getOperDef_Args()
   {
     return (EReference)operDefEClass.getEStructuralFeatures().get(5);
   }
@@ -2664,9 +2664,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     createEReference(operDefEClass, OPER_DEF__NAME);
     createEReference(operDefEClass, OPER_DEF__TYPE);
     createEReference(operDefEClass, OPER_DEF__DEFINITION);
+    createEReference(operDefEClass, OPER_DEF__ARGS);
     createEAttribute(operDefEClass, OPER_DEF__OVERLOAD);
     createEReference(operDefEClass, OPER_DEF__OVERLOADS);
-    createEReference(operDefEClass, OPER_DEF__ARGS);
 
     linDefEClass = createEClass(LIN_DEF);
     createEReference(linDefEClass, LIN_DEF__NAME);
@@ -2959,9 +2959,9 @@ public class GFPackageImpl extends EPackageImpl implements GFPackage
     initEReference(getOperDef_Name(), this.getName_(), null, "name", null, 0, -1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperDef_Type(), this.getExp(), null, "type", null, 0, 1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperDef_Definition(), this.getExp(), null, "definition", null, 0, 1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOperDef_Args(), this.getArg(), null, "args", null, 0, -1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getOperDef_Overload(), ecorePackage.getEBoolean(), "overload", null, 0, 1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOperDef_Overloads(), this.getOperDef(), null, "overloads", null, 0, -1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getOperDef_Args(), this.getArg(), null, "args", null, 0, -1, OperDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(linDefEClass, LinDef.class, "LinDef", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLinDef_Name(), this.getName_(), null, "name", null, 0, -1, LinDef.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

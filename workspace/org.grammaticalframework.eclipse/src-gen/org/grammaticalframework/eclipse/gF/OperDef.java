@@ -20,9 +20,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.grammaticalframework.eclipse.gF.OperDef#getName <em>Name</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.OperDef#getType <em>Type</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.OperDef#getDefinition <em>Definition</em>}</li>
+ *   <li>{@link org.grammaticalframework.eclipse.gF.OperDef#getArgs <em>Args</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.OperDef#isOverload <em>Overload</em>}</li>
  *   <li>{@link org.grammaticalframework.eclipse.gF.OperDef#getOverloads <em>Overloads</em>}</li>
- *   <li>{@link org.grammaticalframework.eclipse.gF.OperDef#getArgs <em>Args</em>}</li>
  * </ul>
  * </p>
  *
@@ -101,6 +101,22 @@ public interface OperDef extends EObject
   void setDefinition(Exp value);
 
   /**
+   * Returns the value of the '<em><b>Args</b></em>' containment reference list.
+   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Arg}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Args</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Args</em>' containment reference list.
+   * @see org.grammaticalframework.eclipse.gF.GFPackage#getOperDef_Args()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Arg> getArgs();
+
+  /**
    * Returns the value of the '<em><b>Overload</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
@@ -141,21 +157,5 @@ public interface OperDef extends EObject
    * @generated
    */
   EList<OperDef> getOverloads();
-
-  /**
-   * Returns the value of the '<em><b>Args</b></em>' containment reference list.
-   * The list contents are of type {@link org.grammaticalframework.eclipse.gF.Arg}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Args</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Args</em>' containment reference list.
-   * @see org.grammaticalframework.eclipse.gF.GFPackage#getOperDef_Args()
-   * @model containment="true"
-   * @generated
-   */
-  EList<Arg> getArgs();
 
 } // OperDef
