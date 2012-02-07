@@ -10,7 +10,7 @@
               contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
               default="true"
               extensions="gf,gfh"
-              icon="icons/gf-source.png"
+              icon="icons/gf-module.png"
               id="org.grammaticalframework.eclipse.GF"
               name="GF Editor">
         </editor>
@@ -270,7 +270,7 @@
            class="org.grammaticalframework.eclipse.ui.wizards.GFNewFileWizard"
            finalPerspective="org.grammaticalframework.eclipse.ui.gfperspective"
            hasPages="true"
-           icon="icons/gf-source.png"
+           icon="icons/gf-module-new.png"
            id="org.grammaticalframework.eclipse.ui.wizards.GFNewFileWizard"
            name="GF Module"
            project="false">
@@ -280,7 +280,7 @@
            class="org.grammaticalframework.eclipse.ui.wizards.GFCloneModuleWizard"
            finalPerspective="org.grammaticalframework.eclipse.ui.gfperspective"
            hasPages="true"
-           icon="icons/gf-source.png"
+           icon="icons/gf-module-new.png"
            id="org.grammaticalframework.eclipse.ui.wizards.GFCloneModuleWizard"
            name="Clone GF Module"
            project="false">

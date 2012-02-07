@@ -25,7 +25,7 @@ class TreeLabelProvider extends LabelProvider {
 	// TODO This never seems to work :(
 	public Image getImage(Object element) {
 		if (imageHelper != null)
-			return imageHelper.getImage("library-reference.gif");
+			return imageHelper.getImage("library-reference.png");
 		else
 			return super.getImage(element);
 	}

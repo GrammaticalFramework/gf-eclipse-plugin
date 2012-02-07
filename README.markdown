@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 2 Feb 2012
+Updated: 7 Feb 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
@@ -61,6 +61,9 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 
 ## Major release history
 
+**07/02/12**
+: (1.3.0.x) Re-written underlying GF grammar.
+
 **02/02/12**
 : (1.2.5.x) Hugely improved scoping performance. New "Clone to new language" wizard. Improved code formatting. More efficient builder. Removed library path preference. GF runtime is now automatically found.
 
@@ -90,6 +93,7 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 ### System requirements
 
 1. The plugin makes use of the newest GF features, and **requires the latest developer version of GF** to be installed on your system (instructions [here](http://www.grammaticalframework.org/download/index.html)).
+_Specifically, you need a version of GF which supports the "--tags" flag, added in November 2011._
 1. Paths to GF must be set within the plugin (see below). This means:
     - you don't necessarily need to have GF in your `PATH` environment variable
     - you can use a separate GF installation for GFEP if you wish

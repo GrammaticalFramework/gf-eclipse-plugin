@@ -167,7 +167,7 @@ public class GFImages {
 	 * @return the image
 	 */
 	public Image forLibraryReference() {
-		return imageHelper.getImage("library-reference.gif");
+		return imageHelper.getImage("library-reference.png");
 	}
 
 
