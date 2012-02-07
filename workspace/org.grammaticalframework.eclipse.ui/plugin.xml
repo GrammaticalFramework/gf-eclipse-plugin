@@ -260,7 +260,7 @@
            class="org.grammaticalframework.eclipse.ui.wizards.GFNewProjectWizard"
            finalPerspective="org.grammaticalframework.eclipse.ui.gfperspective"
            hasPages="true"
-           icon="icons/gf-logo.png"
+           icon="icons/gf-project-new.png"
            id="org.grammaticalframework.eclipse.ui.wizards.GFNewProjectWizard"
            name="GF Project"
            project="true">
@@ -280,7 +280,7 @@
            class="org.grammaticalframework.eclipse.ui.wizards.GFCloneModuleWizard"
            finalPerspective="org.grammaticalframework.eclipse.ui.gfperspective"
            hasPages="true"
-           icon="icons/gf-module-new.png"
+           icon="icons/gf-module-clone.png"
            id="org.grammaticalframework.eclipse.ui.wizards.GFCloneModuleWizard"
            name="Clone GF Module"
            project="false">
