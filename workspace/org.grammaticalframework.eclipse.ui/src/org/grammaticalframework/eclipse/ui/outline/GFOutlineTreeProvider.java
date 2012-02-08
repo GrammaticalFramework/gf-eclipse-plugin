@@ -74,6 +74,10 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 */
 	protected void _createChildren(IOutlineNode parentNode, ModBody modBody) {
 
+		// This happens with functor instantiations!
+		if (modBody.getModContent() == null)
+			return;
+		
 		// Opens
 		if (modBody.getModContent().getOpenList()!=null && !modBody.getModContent().getOpenList().getOpens().isEmpty()) {
 			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_CONTENT__OPEN_LIST, images.forOpenList(), "Opens", false);

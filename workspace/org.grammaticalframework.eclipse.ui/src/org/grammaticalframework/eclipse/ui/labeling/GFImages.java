@@ -94,10 +94,12 @@ public class GFImages {
 		return imageHelper.getImage("extends-list.png");
 	}
 
+	// TODO cannot use same icons as module! 
 	public Image forInstantiate() {
 		return imageHelper.getImage("module-instance.png");
 	}
 	
+	// TODO cannot use same icons as module!
 	public Image forFunctor() {
 		return imageHelper.getImage("module-functor.png");
 	}
