@@ -33,21 +33,10 @@ public class GFImages {
 	
 	/* --------- */
 	
-	/**
-	 * Logo.
-	 *
-	 * @return the image
-	 */
 	public Image logo() {
 		return imageHelper.getImage("gf-logo.png");
 	}
 	
-	/**
-	 * For module.
-	 *
-	 * @param module the module
-	 * @return the image
-	 */
 	public Image forModule(SourceModule module) {
 		return imageHelper.getImage( filenameForModule(module) );
 	}
@@ -75,7 +64,7 @@ public class GFImages {
 			}
 			else if (module.getBody().isFunctorInstantiation()) {
 				// Functor instantiation
-				return "module-instance.png";
+				return "module-functor-instantiation.png";
 			}
 			else {
 				// regular Concrete module
@@ -89,83 +78,46 @@ public class GFImages {
 		}
 	}
 	
-	/**
-	 * For open.
-	 *
-	 * @return the image
-	 */
 	public Image forOpen() {
-		return imageHelper.getImage("module-open.gif");
+		return imageHelper.getImage("extends-item.png");
 	}
 	
-	/**
-	 * For extend.
-	 *
-	 * @return the image
-	 */
+	public Image forOpenList() {
+		return imageHelper.getImage("extends-list.png");
+	}
+	
 	public Image forExtend() {
-		return imageHelper.getImage("module-extend.gif");
-	}
-
-	/**
-	 * For instantiate.
-	 *
-	 * @return the image
-	 */
-	public Image forInstantiate() {
-		return imageHelper.getImage("module-instance.gif");
+		return imageHelper.getImage("extends-item.png");
 	}
 	
-	/**
-	 * For functor.
-	 *
-	 * @return the image
-	 */
-	public Image forFunctor() {
-		return imageHelper.getImage("module-functor.gif");
+	public Image forExtendList() {
+		return imageHelper.getImage("extends-list.png");
 	}
 
-	/**
-	 * For extend include.
-	 *
-	 * @return the image
-	 */
+	public Image forInstantiate() {
+		return imageHelper.getImage("module-instance.png");
+	}
+	
+	public Image forFunctor() {
+		return imageHelper.getImage("module-functor.png");
+	}
+
 	public Image forExtendInclude() {
 		return imageHelper.getImage("extend-include.png");
 	}
 
-	/**
-	 * For extend exclude.
-	 *
-	 * @return the image
-	 */
 	public Image forExtendExclude() {
 		return imageHelper.getImage("extend-exclude.png");
 	}
 
-	/**
-	 * For flag.
-	 *
-	 * @return the image
-	 */
 	public Image forFlag() {
 		return imageHelper.getImage("flag.png");
 	}
 
-	/**
-	 * For param.
-	 *
-	 * @return the image
-	 */
 	public Image forParam() {
 		return imageHelper.getImage("parameter.gif");
 	}
-	
-	/**
-	 * For library reference.
-	 *
-	 * @return the image
-	 */
+
 	public Image forLibraryReference() {
 		return imageHelper.getImage("library-reference.png");
 	}

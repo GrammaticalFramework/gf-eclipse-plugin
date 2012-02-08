@@ -76,9 +76,9 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 
 		// Opens
 		if (modBody.getModContent().getOpenList()!=null && !modBody.getModContent().getOpenList().getOpens().isEmpty()) {
-			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_CONTENT__OPEN_LIST, images.forOpen(), "Opens", false);
+			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_CONTENT__OPEN_LIST, images.forOpenList(), "Opens", false);
 			for (Open o : modBody.getModContent().getOpenList().getOpens()) {
-				EObjectNode subnode = createEObjectNode(node, o.getName());
+				EObjectNode subnode = createEObjectNode(node, o.getName(), images.forOpen(), o.getName().getS(), true);
 				if (o.getAlias() != null) {
 					String text = String.format("%s (as \"%s\")", subnode.getText(), o.getAlias().getS());
 					subnode.setText(text);
@@ -88,10 +88,10 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		
 		// Extends
 		if (modBody.getExtendList()!=null && !modBody.getExtendList().getIncluded().isEmpty()) {
-			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_BODY__EXTEND_LIST, images.forExtend(), "Extends", false);
+			EStructuralFeatureNode node = createEStructuralFeatureNode(parentNode, modBody, GFPackage.Literals.MOD_BODY__EXTEND_LIST, images.forExtendList(), "Extends", false);
 			for (Included i : modBody.getExtendList().getIncluded()) {
 //				createNode(node, i.getName());
-				EObjectNode subnode = createEObjectNode(node, i.getName());
+				EObjectNode subnode = createEObjectNode(node, i.getName(), images.forExtend(), i.getName().getS(), true);
 				if (i.isInclusive()) {
 					for (Ident id : i.getIncludes()) {
 						createEStructuralFeatureNode(subnode, i, GFPackage.Literals.IDENT__S, images.forExtendInclude(), id.getS(), true);

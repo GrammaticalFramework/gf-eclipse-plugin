@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 7 Feb 2012
+Updated: 8 Feb 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
 
