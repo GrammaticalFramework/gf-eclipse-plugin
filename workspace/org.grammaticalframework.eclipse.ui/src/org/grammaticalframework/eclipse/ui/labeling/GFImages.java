@@ -124,6 +124,40 @@ public class GFImages {
 		return imageHelper.getImage("library-reference.png");
 	}
 
+	public Image forTopDef() {
+		return imageHelper.getImage("library-reference.png");
+	}
+	public Image forAnyJudgement() {
+		return imageHelper.getImage("judgement.png");
+	}
+	public Image forCatDef() {
+		return forAnyJudgement();
+	}
+	public Image forFunDef() {
+		return forAnyJudgement();
+	}
+	public Image forDefDef() {
+		return forAnyJudgement();
+	}
+	public Image forDataDef() {
+		return forAnyJudgement();
+	}
+	public Image forParamDef() {
+		return forAnyJudgement();
+	}
+	public Image forOperDef() {
+		return forAnyJudgement();
+	}
+	public Image forLinDef() {
+		return forAnyJudgement();
+	}
+	public Image forTermDef() {
+		return forAnyJudgement();
+	}
+	public Image forFlagDef() {
+		return forAnyJudgement();
+	}
+
 
 
 }

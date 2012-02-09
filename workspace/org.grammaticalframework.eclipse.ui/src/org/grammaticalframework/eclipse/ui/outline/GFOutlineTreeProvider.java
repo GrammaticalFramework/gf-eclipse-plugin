@@ -131,11 +131,6 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		}
 		
 	}
-
-	protected void _createChildren(IOutlineNode parentNode, CatDef topDef) {
-		createNode(parentNode, topDef.getName());
-	}
-
 	
 	/**
 	 * Handle top-level judgements
@@ -149,27 +144,31 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		for (EObject e : topDef.getDefinitions()) {
 			// cat
 			if (topDef.isCat()) {
-				createNode(parentNode, ((CatDef)e).getName());
+//				createNode(parentNode, ((CatDef)e).getName());
+				createEObjectNode(parentNode, ((CatDef)e).getName(), images.forCatDef(), ((CatDef)e).getName().getS(), true);
 			}
 			// fun
 			else if (topDef.isFun()) {
 				for (Ident i : ((FunDef)e).getName()) { 
-					createNode(parentNode, i);
+//					createNode(parentNode, i);
+					createEObjectNode(parentNode, i, images.forFunDef(), i.getS(), true);
 				}
 			}
 			// def
 			else if (topDef.isDef()) {
 				for (Name n : ((DefDef)e).getName()) { 
-					createNode(parentNode, n.getName());
+//					createNode(parentNode, n.getName());
+					createEObjectNode(parentNode, n.getName(), images.forDefDef(), n.getName().getS(), true);
 				}
 			}
 			// data
 			else if (topDef.isData()) {
 				DataDef d = (DataDef)e;
 				for (Ident i : d.getName()) { 
-					EObjectNode node = createEObjectNode(parentNode, i);
+					EObjectNode node = createEObjectNode(parentNode, i, images.forDataDef(), i.getS(), false);
 					node.setImage(images.forParam());
 					for (Ident cons : d.getConstructors()) {
+						// TODO icon
 						createNode(node, cons);
 					}
 				}
@@ -177,9 +176,10 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 			// param
 			else if (topDef.isParam()) {
 				ParamDef p = (ParamDef)e;
-				EObjectNode node = createEObjectNode(parentNode, p.getName());
+				EObjectNode node = createEObjectNode(parentNode, p.getName(), images.forParamDef(), p.getName().getS(), false);
 				node.setImage(images.forParam());
 				for (ParConstr pc : p.getConstructors()) {
+					// TODO icon
 					createNode(node, pc.getName());
 				}
 			}
@@ -187,10 +187,11 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 			else if (topDef.isOper()) {
 				OperDef o = (OperDef)e;
 				for (Name n : o.getName()) {
-					EObjectNode node = createEObjectNode(parentNode, n.getName());
+					EObjectNode node = createEObjectNode(parentNode, n.getName(), images.forOperDef(), n.getName().getS(), false);
 					if (o.isOverload()) {
 						for (OperDef overload : o.getOverloads()) {
 							for (Name n2 : overload.getName()) {
+								// TODO icon
 								createNode(node, n2.getName());
 							}
 						}
@@ -200,13 +201,15 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 			// lincat, lindef, printname
 			else if (topDef.isLincat() || topDef.isLindef() || topDef.isPrintname()) {
 				for (Name n : ((TermDef)e).getName()) { 
-					createNode(parentNode, n.getName());
+					//createNode(parentNode, n.getName());
+					createEObjectNode(parentNode, n.getName(), images.forTermDef(), n.getName().getS(), true);
 				}
 			}
 			// lin
 			else if (topDef.isLin()) {
 				for (Name n : ((LinDef)e).getName()) { 
-					createNode(parentNode, n.getName());
+//					createNode(parentNode, n.getName());
+					createEObjectNode(parentNode, n.getName(), images.forLinDef(), n.getName().getS(), true);
 				}
 			}
 			// flags
