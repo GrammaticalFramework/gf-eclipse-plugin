@@ -12,7 +12,8 @@ package org.grammaticalframework.eclipse.ui.outline;
 import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.StyledString;
-import org.eclipse.xtext.serializer.impl.Serializer;
+import org.eclipse.xtext.nodemodel.ICompositeNode;
+import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
 import org.eclipse.xtext.ui.editor.outline.IOutlineNode;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import org.eclipse.xtext.ui.editor.outline.impl.EObjectNode;
@@ -78,19 +79,14 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		return ((GFLabelProvider)labelProvider).twoPartLabel(name, type);
 	}
 	
-	@SuppressWarnings("restriction")
-	@Inject
-	protected Serializer serializer;
-	
 	protected String getTokens(EObject eobj) {
 		return getTokens(eobj, (String)null);
 	}
-	@SuppressWarnings("restriction")
 	protected String getTokens(EObject eobj, String fallback) {
-		try {
-			return serializer.serialize(eobj);
-		}
-		catch (Exception e) {
+		final ICompositeNode node = NodeModelUtils.findActualNodeFor(eobj);		
+		if (node != null) {
+			return NodeModelUtils.getTokenText(node);
+		} else {
 			return fallback;
 		}
 	}
