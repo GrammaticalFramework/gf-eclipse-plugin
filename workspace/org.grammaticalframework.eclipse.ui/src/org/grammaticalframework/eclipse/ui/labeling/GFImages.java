@@ -15,7 +15,6 @@ import org.grammaticalframework.eclipse.gF.SourceModule;
 
 import com.google.inject.Inject;
 
-// TODO: Auto-generated Javadoc
 /**
  * Refer: org.eclipse.xtext.xtend2.ui.labeling.Xtend2Images
  * URL: http://git.eclipse.org/c/tmf/org.eclipse.xtext.git/tree/plugins/org.eclipse.xtext.xtend2.ui/src/org/eclipse/xtext/xtend2/ui/labeling/Xtend2Images.java?id=v2.0.1
@@ -94,12 +93,10 @@ public class GFImages {
 		return imageHelper.getImage("extends-list.png");
 	}
 
-	// TODO cannot use same icons as module! 
 	public Image forInstantiate() {
 		return imageHelper.getImage("module-instance.png");
 	}
 	
-	// TODO cannot use same icons as module!
 	public Image forFunctor() {
 		return imageHelper.getImage("module-functor.png");
 	}
@@ -117,7 +114,11 @@ public class GFImages {
 	}
 
 	public Image forParam() {
-		return imageHelper.getImage("parameter.gif");
+		return imageHelper.getImage("parameter.png");
+	}
+	
+	public Image forConstructor() {
+		return imageHelper.getImage("constructor.png");
 	}
 
 	public Image forLibraryReference() {
