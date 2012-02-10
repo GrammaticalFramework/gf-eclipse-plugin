@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.swt.graphics.RGB;
+import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
 import org.eclipse.xtext.ui.editor.utils.TextStyle;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 import org.eclipse.xtext.ui.label.StylerFactory;
@@ -138,8 +139,9 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 	 * @return
 	 */
 	public Object text(Ident id) {
-		for (EObject ref : id.eCrossReferences()) {
-			System.out.println(ref);
+		for (EObject ref : id.eContainingFeature().eCrossReferences()) {
+			// TODO How to get a proper handle on thsi stuff?
+			System.out.println(ref.eResource());
 		}
 		return super.text(id);
 	}
