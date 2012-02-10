@@ -59,21 +59,22 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	private GFImages images;
 	
 	/**
-	 * Prepare label
+	 * Prepare label from just a name
 	 * @param name
 	 * @return
 	 */
 	protected StyledString makeLabel(String name) {
-		return ((GFLabelProvider)labelProvider).twoPartLabel(name, null);
+		return makeLabel(name, null);
 	}
 	
 	/**
-	 * Prepare label
+	 * Prepare label with a name and a "type" (any kind of supplementary information)
 	 * @param name
 	 * @param type
 	 * @return
 	 */
 	protected StyledString makeLabel(String name, String type) {
+		// This is kind of badly coupled with GFLabelProvider#twoPartLabel(), but I don't want to duplicate my code. 
 		return ((GFLabelProvider)labelProvider).twoPartLabel(name, type);
 	}
 	
@@ -271,9 +272,5 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 			}
 		}
 	}
-	
-	protected void _createChildren(IOutlineNode parentNode, CatDef _) {
-		return;
-	}	
 
 }

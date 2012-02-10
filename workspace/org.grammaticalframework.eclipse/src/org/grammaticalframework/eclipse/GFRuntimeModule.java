@@ -9,6 +9,7 @@
  */
 package org.grammaticalframework.eclipse;
 
+import org.grammaticalframework.eclipse.documentation.GFDocumentationProvider;
 import org.grammaticalframework.eclipse.naming.GFQualifiedNameProvider;
 import org.grammaticalframework.eclipse.resource.GFResourceDescriptionStrategy;
 import org.grammaticalframework.eclipse.scoping.GFScopeProvider;
@@ -19,8 +20,7 @@ import org.grammaticalframework.eclipse.validation.GFResourceValidator;
  * Use this class to register components to be used at runtime / without the
  * Equinox extension registry.
  */
-public class GFRuntimeModule extends
-		org.grammaticalframework.eclipse.AbstractGFRuntimeModule {
+public class GFRuntimeModule extends org.grammaticalframework.eclipse.AbstractGFRuntimeModule {
 
 	// Ref: http://www.eclipse.org/forums/index.php/t/217911/
 	
@@ -49,5 +49,8 @@ public class GFRuntimeModule extends
 		return GFTagBasedGlobalScopeProvider.class;
 	}
 
+	public Class<? extends org.eclipse.xtext.documentation.IEObjectDocumentationProvider> bindIEObjectDocumentationProvider() {
+		return GFDocumentationProvider.class;
+	}
 
 }

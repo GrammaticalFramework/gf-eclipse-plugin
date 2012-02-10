@@ -143,6 +143,13 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 
 	
 	/**
+	 * Bind custom hover implementation
+	 */
+	public Class<? extends org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider> bindEObjectHoverProvider() {
+		return org.grammaticalframework.eclipse.ui.editor.GFEObjectHoverProvider.class;
+	}
+	
+	/**
 	 * Bind custom URI opener implementation
 	 */
 	public Class<? extends org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener> bindLanguageSpecificURIEditorOpener() {
