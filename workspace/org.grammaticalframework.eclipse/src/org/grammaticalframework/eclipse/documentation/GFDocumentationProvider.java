@@ -11,23 +11,36 @@ package org.grammaticalframework.eclipse.documentation;
 
 import java.util.Collections;
 
+import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.xtext.TerminalRule;
 import org.eclipse.xtext.documentation.IEObjectDocumentationProvider;
 import org.eclipse.xtext.nodemodel.ICompositeNode;
+import org.eclipse.xtext.nodemodel.ILeafNode;
+import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
-import org.eclipse.xtext.util.Exceptions;
 import org.eclipse.xtext.util.PolymorphicDispatcher;
 import org.eclipse.xtext.util.PolymorphicDispatcher.ErrorHandler;
 import org.grammaticalframework.eclipse.gF.CatDef;
+import org.grammaticalframework.eclipse.gF.DataDef;
+import org.grammaticalframework.eclipse.gF.DefDef;
+import org.grammaticalframework.eclipse.gF.FlagDef;
+import org.grammaticalframework.eclipse.gF.FunDef;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.Included;
 import org.grammaticalframework.eclipse.gF.Inst;
+import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.ListIncluded;
 import org.grammaticalframework.eclipse.gF.ModBody;
 import org.grammaticalframework.eclipse.gF.ModType;
+import org.grammaticalframework.eclipse.gF.Name;
 import org.grammaticalframework.eclipse.gF.Open;
+import org.grammaticalframework.eclipse.gF.OperDef;
 import org.grammaticalframework.eclipse.gF.ParConstr;
 import org.grammaticalframework.eclipse.gF.ParamDef;
+import org.grammaticalframework.eclipse.gF.TermDef;
+import org.grammaticalframework.eclipse.gF.TopDef;
+import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
 
 /**
  * Custom documentation provider, provides:
@@ -38,6 +51,12 @@ import org.grammaticalframework.eclipse.gF.ParamDef;
  */
 public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 //public class GFDocumentationProvider extends MultiLineCommentDocumentationProvider {
+	
+	/**
+	 * Logger
+	 */
+	private static final Logger log = Logger.getLogger(GFDocumentationProvider.class);
+	
 	
 	private final PolymorphicDispatcher<String> textDispatcher = new PolymorphicDispatcher<String>("handle", 1, 1,
 			Collections.singletonList(this), new ErrorHandler<String>() {
@@ -50,7 +69,113 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	 * Get documentation for the [resolved] eobject. Polymorphically dispatches to the other methods. 
 	 */
 	public String getDocumentation(EObject o) {
-		return textDispatcher.invoke(o.eContainer());
+		// Empirically this is only ever an Ident
+		if (o instanceof Ident) {
+			TopDef topdef = GFScopingHelper.getTopDef(o);
+			String gfDoc = findComment(topdef);
+			String documentation = textDispatcher.invoke(o.eContainer());
+			return (gfDoc!=null) ? gfDoc + "<br/><br/>" + documentation : documentation;
+		}
+		else {
+			log.warn("Wasn't expecting to get documentation for: "+o.toString());
+			return null;
+		}
+	}
+	
+	/**
+	 * Try to find some meaningful comments around the Ident declaration:
+	 * <ul>
+	 * 		<li>SL comment at end of line</li>
+	 * </ul>
+	 * 
+	 * Based heavily on MultiLineCommentDocumentationProvider#findComment(EObject)
+	 * @param o EObject
+	 * @return Found comments as a string, or <code>null</code>
+	 */
+	protected String findComment(EObject o) {
+		String ruleName = "SL_COMMENT";
+		String startTag = "--"; // regex
+
+		StringBuilder sb = new StringBuilder();
+		ICompositeNode node = NodeModelUtils.getNode(o);
+		
+		// TODO: This needs a proper looking at
+		
+		if (node != null) {
+			// get the last single line comment before a non hidden leaf node
+			for (INode abstractNode : node.getAsTreeIterable()) {
+				if (abstractNode instanceof ILeafNode && !((ILeafNode) abstractNode).isHidden())
+					break;
+				if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof TerminalRule
+						&& ruleName.equalsIgnoreCase(((TerminalRule) abstractNode.getGrammarElement()).getName())) {
+					String comment = ((ILeafNode) abstractNode).getText();
+//					if (comment.matches("(?s)" + startTag + ".*")) {
+						sb.append(comment);
+//					}
+				}
+			}
+		}
+		if (sb.length()>0) {
+			String returnValue = sb.toString();
+			returnValue = returnValue.replaceAll("\\A" + startTag, "");
+//			returnValue = returnValue.replaceAll(endTag + "\\z", "");
+//			returnValue = returnValue.replaceAll("(?m)^"+ whitespace + linePrefix, "");
+//			returnValue = returnValue.replaceAll("(?m)" + whitespace + linePostfix + whitespace + "$", "");
+			return returnValue.trim();
+		} else {
+			return null;
+		}
+	}
+	
+	/**
+	 * Get actual source tokens for eObject and append to stringbuilder in a &lt;pre&gt; block.
+	 * @param eobj EObject to serialize
+	 * @param sb StringBuilder to append to
+	 */
+	private void appendTokens(EObject eobj, StringBuilder sb) {
+		final ICompositeNode node = NodeModelUtils.findActualNodeFor(eobj);		
+		if (node != null) {
+			sb.append("<pre>");
+		    sb.append(NodeModelUtils.getTokenText(node));
+			sb.append("</pre>");
+		}
+	}
+	
+	/**
+	 * Wrap Ident in &lt;code&gt; tags
+	 * @param id Ident instance
+	 * @return String
+	 */
+	@SuppressWarnings("unused")
+	private String wrapID(Ident id) {
+		return String.format("<code>%s</code>", id.getS());
+	}
+	
+	/**
+	 * Wrap Ident in quotes and &lt;code&gt; tags
+	 * @param id Ident instance
+	 * @return String
+	 */
+	private String wrapIDQuotes(Ident id) {
+		return String.format("\"<code>%s</code>\"", id.getS());
+	}
+	
+	/**
+	 * Wrap Ident in &lt;li&gt; and &lt;code&gt; tags
+	 * @param id Ident instance
+	 * @return String
+	 */
+	private String wrapIDList(Ident id) {
+		return wrapIDList(id.getS());
+	}
+	
+	/**
+	 * Wrap String in &lt;li&gt; and &lt;code&gt; tags
+	 * @param s String to wrap
+	 * @return String
+	 */
+	private String wrapIDList(String s) {
+		return String.format("<li><code>%s</code></li>", s);
 	}
 	
 	/**
@@ -69,7 +194,7 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	 */
 	protected String handle(Open def) {
 		if (def.getAlias()!=null) {
-			return String.format("Module \"%s\" as \"%s\".", def.getName().getS(), def.getAlias().getS());
+			return String.format("Module %s as %s.", wrapIDQuotes(def.getName()), wrapIDQuotes(def.getAlias()));
 		} else {
 			return "Opened module.";
 		}
@@ -81,7 +206,7 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	 * @return
 	 */
 	protected String handle(Inst def) {
-		return String.format("Instantiation of \"%s\" with \"%s\".", def.getInterface().getS(), def.getName().getS());
+		return String.format("Instantiation of %s with %s.", wrapIDQuotes(def.getInterface()), wrapIDQuotes(def.getName()));
 	}
 	
 	/**
@@ -95,25 +220,25 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		// We need some further checking
 		if (def.eContainer() instanceof ListIncluded) {
 			// Extends
-			sb.append(String.format("Inherited module \"%s\".", def.getName().getS()));
+			sb.append(String.format("Inherited module %s.", wrapIDQuotes(def.getName())));
 		} else if (def.eContainer() instanceof ModBody) {
 			// Functor instantiaion
-			sb.append(String.format("Instantiation of functor \"%s\".", def.getName().getS()));
+			sb.append(String.format("Instantiation of functor %s.", wrapIDQuotes(def.getName())));
 		} else if (def.eContainer() instanceof ModType) {
 			// Interface instantiaion
-			sb.append(String.format("Instantiation of interface \"%s\".", def.getName().getS()));
+			sb.append(String.format("Instantiation of interface %s.", wrapIDQuotes(def.getName())));
 		}
 		
 		if (def.isInclusive()) {
 			sb.append("<br/>Includes only:<ul>");
 			for (Ident id : def.getIncludes()) {
-				sb.append(String.format("<li>%s</li>", id.getS()));
+				sb.append(wrapIDList(id));
 			}
 			sb.append("</ul>");
 		} else if (def.isExclusive()) {
 			sb.append("<br/>Excludes:<ul>");
 			for (Ident id : def.getExcludes()) {
-				sb.append(String.format("<li>%s</li>", id.getS()));
+				sb.append(wrapIDList(id));
 			}
 			sb.append("</ul>");
 		}
@@ -121,20 +246,60 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	}
 	
 	/**
-	 * Category declaration
+	 * Category declaration (cat)
 	 * @param def
 	 * @return
 	 */
 	protected String handle(CatDef def) {
-		final ICompositeNode node = NodeModelUtils.findActualNodeFor(def);		
-		if (node != null) {
-		    return NodeModelUtils.getTokenText(node);
-		}
-		return null;
+		StringBuilder sb = new StringBuilder("Category declaration.");
+		appendTokens(def, sb);
+		return sb.toString();
 	}
 	
 	/**
-	 * Parameter declaration
+	 * Function declaration (fun)
+	 * @param def
+	 * @return
+	 */
+	protected String handle(FunDef def) {
+		StringBuilder sb = new StringBuilder("Function declaration.");
+		appendTokens(def, sb);
+		return sb.toString();
+	}
+	
+	/**
+	 * Names can occur in: DefDef, OperDef, LinDef, TermDef; just delegate to parent.
+	 * @param def
+	 * @return
+	 */
+	protected String handle(Name def) {
+		return textDispatcher.invoke(def.eContainer());
+	}
+	
+	/**
+	 * Function definition (def)
+	 * @param def
+	 * @return
+	 */
+	protected String handle(DefDef def) {
+		StringBuilder sb = new StringBuilder("Function definition.");
+		appendTokens(def, sb);
+		return sb.toString();
+	}
+	
+	/**
+	 * Data constructor definition
+	 * @param def
+	 * @return
+	 */
+	protected String handle(DataDef def) {
+		StringBuilder sb = new StringBuilder("Data constructor.");
+		appendTokens(def, sb);
+		return sb.toString();
+	}
+	
+	/**
+	 * Parameter declaration (param)
 	 * @param def
 	 * @return
 	 */
@@ -144,7 +309,7 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		for (ParConstr constr : def.getConstructors()) {
 			final ICompositeNode node = NodeModelUtils.findActualNodeFor(constr);
 			String s = (node!=null) ? NodeModelUtils.getTokenText(node) : constr.getName().getS();
-			sb.append(String.format("<li>%s</li>", s));
+			sb.append(wrapIDList(s));
 		}
 		sb.append("</ul>");
 		return sb.toString();
@@ -158,17 +323,92 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	protected String handle(ParConstr constr) {
 		ParamDef paramdef = (ParamDef)constr.eContainer();
 		StringBuilder sb = new StringBuilder();
-		sb.append(String.format("Constructor of parameter \"%s\".<br/>", paramdef.getName().getS()));
+		sb.append(String.format("Constructor of parameter %s.<br/>", wrapIDQuotes(paramdef.getName())));
 		sb.append("Other constructors:<ul>");
 		for (ParConstr constrAlt : paramdef.getConstructors()) {
 			if (!constrAlt.equals(constr)) {
 				final ICompositeNode node = NodeModelUtils.findActualNodeFor(constrAlt);
 				String s = (node!=null) ? NodeModelUtils.getTokenText(node) : constrAlt.getName().getS();
-				sb.append(String.format("<li>%s</li>", s));
+				sb.append(wrapIDList(s));
 			}
 		}
 		sb.append("</ul>");
 		return sb.toString();
 	}
+	
+	/**
+	 * Operation definition (oper)
+	 * @param def
+	 * @return
+	 */
+	protected String handle(OperDef def) {
+		StringBuilder sb = new StringBuilder();
+		if (def.isOverload()) {
+			sb.append("Overloaded operation definitions. All forms:<ul>");
+			for (OperDef oper : def.getOverloads()) {
+				final ICompositeNode node = NodeModelUtils.findActualNodeFor(oper.getType());		
+				if (node != null) {
+				    sb.append( wrapIDList( NodeModelUtils.getTokenText(node) ) );
+				}
+			}
+			sb.append("</ul>");
+		} else {
+			sb.append("Operation definition.");
+			appendTokens(def.getType(), sb);
+		}
+		return sb.toString();
+	}
+	
+	/**
+	 * Linearization definition (lin)
+	 * @param def
+	 * @return
+	 */
+	protected String handle(LinDef def) {
+		StringBuilder sb = new StringBuilder("Linearization definition.");
+		appendTokens(def, sb);
+		return sb.toString();
+	}
+	
+	/**
+	 * TermDef can occur in: lincat, lindef, printname cat, printname fun;
+	 * @param def
+	 * @return
+	 */
+	protected String handle(TermDef def) {
+		StringBuilder sb = new StringBuilder();
+		
+		TopDef topdef = (TopDef)def.eContainer();
+		if (topdef.isLincat()) {
+			sb.append("Linearization type definition for");
+		} else if (topdef.isLindef()) {
+			sb.append("Linearization default definition for");
+		} else if (topdef.isPrintname()) {
+			sb.append("Printname definition for");
+		}
+		
+		if (def.getName().size()==1) {
+			sb.append(" " + wrapIDQuotes(def.getName().get(0).getName()));
+		} else {
+			sb.append(":<ul>");
+			for (Name name : def.getName()) {
+				sb.append( wrapIDList(name.getName()) );
+			}
+			sb.append("</ul>");
+		}
 
+		return sb.toString();
+	}
+		
+	/**
+	 * Flag definition
+	 * @param def
+	 * @return
+	 */
+	protected String handle(FlagDef def) {
+		StringBuilder sb = new StringBuilder("Flag.");
+		appendTokens(def, sb);
+		return sb.toString();
+	}
+		
 }

@@ -144,6 +144,7 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 	 */
 	public Object text(Ident id) {
 		
+		// TODO Is this modulename correct? It should really come from the scoping
 		String modname = GFScopingHelper.getSourceModule(id).getType().getName().getS();
 		TopDef topdef = GFScopingHelper.getTopDef(id);
 		return String.format("%s %s.%s", this.text(topdef), modname, id.getS());

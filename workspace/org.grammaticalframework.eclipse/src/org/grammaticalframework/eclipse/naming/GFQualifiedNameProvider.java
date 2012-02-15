@@ -26,6 +26,7 @@ import org.grammaticalframework.eclipse.gF.DefDef;
 import org.grammaticalframework.eclipse.gF.FunDef;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.Included;
+import org.grammaticalframework.eclipse.gF.ModBody;
 import org.grammaticalframework.eclipse.gF.ModType;
 import org.grammaticalframework.eclipse.gF.Open;
 import org.grammaticalframework.eclipse.gF.OperDef;
@@ -149,14 +150,17 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 		EObject grandParent = parent.eContainer();
 		EObject greatGrandParent = grandParent.eContainer();
 		
-		// Always include the raw module name, including this one!
-		if (parent instanceof ModType || parent instanceof Open || parent instanceof Included) {
-			return true;
-		}
-		
-		// General case for top level judgements
 		boolean ans = (
-			   parent instanceof CatDef // cat
+			// Always include "raw" module names, including this one!
+			parent instanceof ModType // name of module or abstract 
+			|| parent instanceof Open // name/alias of a module we're opening
+			|| (parent instanceof Included && (
+					grandParent instanceof ModType // interface name 
+					|| grandParent instanceof ModBody // functor name 
+					|| ((Included)parent).getName().equals(ident) // don't export include/exclude idents 
+			))
+			// General case for top level judgements
+			|| parent instanceof CatDef // cat
 			|| parent instanceof FunDef // fun
 			|| parent instanceof DefDef // def
 			|| parent instanceof DataDef // data
