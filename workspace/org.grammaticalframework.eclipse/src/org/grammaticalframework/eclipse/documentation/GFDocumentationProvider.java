@@ -13,6 +13,8 @@ import java.util.Collections;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.documentation.IEObjectDocumentationProvider;
+import org.eclipse.xtext.nodemodel.ICompositeNode;
+import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
 import org.eclipse.xtext.util.Exceptions;
 import org.eclipse.xtext.util.PolymorphicDispatcher;
 import org.eclipse.xtext.util.PolymorphicDispatcher.ErrorHandler;
@@ -124,15 +126,11 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	 * @return
 	 */
 	protected String handle(CatDef def) {
-		// TODO
-		StringBuilder sb = new StringBuilder();
-		sb.append("Possible constructors:<ul>");
-		for (ParConstr constr : def.getConstructors()) {
-			sb.append(String.format("<li>%s</li>", constr.getName().getS()));
-			// TODO what about contexts?
+		final ICompositeNode node = NodeModelUtils.findActualNodeFor(def);		
+		if (node != null) {
+		    return NodeModelUtils.getTokenText(node);
 		}
-		sb.append("</ul>");
-		return sb.toString();
+		return null;
 	}
 	
 	/**
@@ -144,8 +142,9 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Possible constructors:<ul>");
 		for (ParConstr constr : def.getConstructors()) {
-			sb.append(String.format("<li>%s</li>", constr.getName().getS()));
-			// TODO what about contexts?
+			final ICompositeNode node = NodeModelUtils.findActualNodeFor(constr);
+			String s = (node!=null) ? NodeModelUtils.getTokenText(node) : constr.getName().getS();
+			sb.append(String.format("<li>%s</li>", s));
 		}
 		sb.append("</ul>");
 		return sb.toString();
@@ -163,8 +162,9 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		sb.append("Other constructors:<ul>");
 		for (ParConstr constrAlt : paramdef.getConstructors()) {
 			if (!constrAlt.equals(constr)) {
-				sb.append(String.format("<li>%s</li>", constrAlt.getName().getS()));
-				// TODO what about contexts?
+				final ICompositeNode node = NodeModelUtils.findActualNodeFor(constrAlt);
+				String s = (node!=null) ? NodeModelUtils.getTokenText(node) : constrAlt.getName().getS();
+				sb.append(String.format("<li>%s</li>", s));
 			}
 		}
 		sb.append("</ul>");
