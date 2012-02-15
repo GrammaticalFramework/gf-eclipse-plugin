@@ -141,13 +141,30 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	 */
 	@Check
 	public void checkFlags(FlagDef flagdef) {
-		if (flagdef.getName().getS().equals("startcat")) {
-			String startCat = flagdef.getValue().getS();
+		String flagName = flagdef.getName().getS(); 
+		String flagValue;
+		if (flagdef.getValue()!=null)
+			flagValue = flagdef.getValue().getS(); 
+		else
+			flagValue = flagdef.getStrValue(); 
+		
+		if (flagName.equals("coding")) {
+			//
+		} else if (flagName.equals("startcat")) {
 			IScope scope = getScopeProvider().getScope(flagdef, GFPackage.Literals.FLAG_DEF__NAME);
-			if (scope.getSingleElement( getConverter().toQualifiedName(startCat) ) == null) {
-				String msg = String.format("Start category \"%1$s\" not found", startCat);
+			if (scope.getSingleElement(getConverter().toQualifiedName(flagValue)) == null) {
+				String msg = String.format("Start category \"%1$s\" not found", flagValue);
 				warning(msg, GFPackage.Literals.FLAG_DEF__VALUE);
 			}
+		} else if (flagName.equals("lexer")) {
+			//
+		} else if (flagName.equals("unlexer")) {
+			//
+		} else if (flagName.equals("literal")) {
+			//
+		} else {
+			String msg = String.format("Unknown flag type.");
+			warning(msg, GFPackage.Literals.FLAG_DEF__NAME);
 		}
 	}
 
