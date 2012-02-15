@@ -9,14 +9,22 @@
  */
 package org.grammaticalframework.eclipse.ui.labeling;
 
+import java.util.Collection;
+
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EStructuralFeature.Setting;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.swt.graphics.RGB;
 import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
+import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.IScopeProvider;
 import org.eclipse.xtext.ui.editor.utils.TextStyle;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 import org.eclipse.xtext.ui.label.StylerFactory;
+import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.ModType;
 import org.grammaticalframework.eclipse.gF.SourceModule;
@@ -133,16 +141,28 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 		return null;
 	}
 	
+	@Inject
+	IScopeProvider scoper;
+	
 	/**
 	 * This is used for the contextual pop-ups.
 	 * @param id
 	 * @return
 	 */
 	public Object text(Ident id) {
-		for (EObject ref : id.eContainingFeature().eCrossReferences()) {
-			// TODO How to get a proper handle on thsi stuff?
-			System.out.println(ref.eResource());
-		}
+		
+		// id points to the RESOLVED reference
+		IScope scope = scoper.getScope(id, id.eContainmentFeature());
+		IEObjectDescription guy = scope.getSingleElement(id);
+//		Iterable<IEObjectDescription> guys = scope.getElements(id);
+//		for (IEObjectDescription g : guys) {
+//			g.getUserDataKeys();
+//		}
+//		guy.getEObjectOrProxy().eResource()
+		
+//		Collection<Setting> list = EcoreUtil.UsageCrossReferencer.find(id, id.eResource());
+//		for (EObject ref : id.eContainingFeature().eCrossReferences()) {
+//		}
 		return super.text(id);
 	}
 

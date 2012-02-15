@@ -33,6 +33,7 @@ import org.grammaticalframework.eclipse.gF.ParConstr;
 import org.grammaticalframework.eclipse.gF.ParamDef;
 import org.grammaticalframework.eclipse.gF.SourceModule;
 import org.grammaticalframework.eclipse.gF.TopDef;
+import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
 
 import com.google.common.base.Function;
 import com.google.inject.Inject;
@@ -131,11 +132,8 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 		if (!shouldBeExported(id))
 			return null;
 		// Get module name
-		EObject temp = id;
-		while (!(temp  instanceof SourceModule) && temp.eContainer() != null) {
-			temp = temp.eContainer();
-		}
-		String qualifiedName = ((SourceModule)temp).getType().getName().getS() + "." + id.getS();
+		SourceModule mod = GFScopingHelper.getSourceModule(id);
+		String qualifiedName = mod.getType().getName().getS() + "." + id.getS();
 //		String qualifiedName = id.getS();
 		return getConverter().toQualifiedName( qualifiedName );
 	}

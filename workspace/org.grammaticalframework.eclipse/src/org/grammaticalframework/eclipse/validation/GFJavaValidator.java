@@ -12,7 +12,6 @@ package org.grammaticalframework.eclipse.validation;
 import java.util.ArrayList;
 import java.util.Iterator;
 import org.eclipse.emf.ecore.EAttribute;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.scoping.IScope;
@@ -29,6 +28,7 @@ import org.grammaticalframework.eclipse.gF.OperDef;
 import org.grammaticalframework.eclipse.gF.SourceModule;
 import org.grammaticalframework.eclipse.gF.TopDef;
 import org.grammaticalframework.eclipse.gF.Exp;
+import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
 
 import com.google.inject.Inject;
  
@@ -180,12 +180,7 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	 */
 	@Check
 	public void checkDefsAreInCorrectModuleTypes(TopDef topdef) {
-		// Ascend to module
-		EObject temp = topdef;
-		while (!(temp  instanceof SourceModule) && temp.eContainer() != null) {
-			temp = temp.eContainer();
-		}
-		ModType modtype = ((SourceModule)temp).getType();
+		ModType modtype = GFScopingHelper.getSourceModule(topdef).getType();
 		
 		// Flags are always ok
 		if (topdef.isFlags()) return;
@@ -284,11 +279,7 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 			QualifiedName fullyQualifiedName = getConverter().toQualifiedName(qualifier.getS() + "." + label.getName().getS());
 			
 			// See if the qualifier is a valid MODULE name
-			EObject temp = label;
-			while (!(temp  instanceof TopDef) && temp.eContainer() != null) {
-				temp = temp.eContainer();
-			}
-			TopDef topDef = (TopDef)temp;
+			TopDef topDef = GFScopingHelper.getTopDef(label);
 			String moduleName = ((SourceModule)topDef.eContainer().eContainer()).getType().getName().getS();
 			IScope scope = getScopeProvider().getScope(topDef, GFPackage.Literals.TOP_DEF__DEFINITIONS);
 			if (scope.getSingleElement(qualifier) != null) {

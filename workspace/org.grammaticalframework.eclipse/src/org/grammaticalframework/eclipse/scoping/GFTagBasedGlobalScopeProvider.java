@@ -201,7 +201,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			// Just remove invalid URIs
 			if (!EcoreUtil2.isValidUri(resource, uri)) {
 				uriIter.remove();
-				log.warn("Removed invalid URI: " + uri);
+				log.debug("Removed invalid URI: " + uri);
 			}
 			// Resolve refs to other tags files and replace, but making sure to keep original qualifier & alias
 			else if (uri.fileExtension().equals("gf-tags")) {

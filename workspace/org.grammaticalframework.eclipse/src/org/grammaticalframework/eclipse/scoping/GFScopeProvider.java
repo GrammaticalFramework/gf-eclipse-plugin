@@ -143,6 +143,11 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 				return null;
 			}
 		});
+		
+		for (IEObjectDescription x : allDescriptions) {
+			x.getUserDataKeys();
+		}
+		
 		return new MultimapBasedSelectable(allDescriptions);
 	}
 
