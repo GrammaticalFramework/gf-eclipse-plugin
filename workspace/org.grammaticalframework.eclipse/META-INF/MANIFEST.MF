@@ -27,15 +27,16 @@ Import-Package: org.apache.log4j,
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.grammaticalframework.eclipse,
  org.grammaticalframework.eclipse.builder,
+ org.grammaticalframework.eclipse.formatting,
  org.grammaticalframework.eclipse.gF,
  org.grammaticalframework.eclipse.gF.impl,
  org.grammaticalframework.eclipse.gF.util,
+ org.grammaticalframework.eclipse.generator,
  org.grammaticalframework.eclipse.launch,
  org.grammaticalframework.eclipse.parser.antlr,
  org.grammaticalframework.eclipse.parser.antlr.internal,
+ org.grammaticalframework.eclipse.scoping,
  org.grammaticalframework.eclipse.serializer,
  org.grammaticalframework.eclipse.services,
- org.grammaticalframework.eclipse.validation,
- org.grammaticalframework.eclipse.generator,
- org.grammaticalframework.eclipse.formatting
+ org.grammaticalframework.eclipse.validation
 

@@ -9,26 +9,18 @@
  */
 package org.grammaticalframework.eclipse.ui.labeling;
 
-import java.util.Collection;
-
-import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EStructuralFeature.Setting;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
-import org.eclipse.xtext.resource.IEObjectDescription;
-import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.IScopeProvider;
 import org.eclipse.xtext.ui.editor.utils.TextStyle;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 import org.eclipse.xtext.ui.label.StylerFactory;
-import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.ModType;
 import org.grammaticalframework.eclipse.gF.SourceModule;
 import org.grammaticalframework.eclipse.gF.TopDef;
+import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
 
 import com.google.inject.Inject;
 
@@ -145,15 +137,19 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 	IScopeProvider scoper;
 	
 	/**
-	 * This is used for the contextual pop-ups.
+	 * This is used for the contextual pop-ups. It returns the "first line".
+	 * Note: For cross-references, id points to the RESOLVED reference, not the referer. 
 	 * @param id
 	 * @return
 	 */
 	public Object text(Ident id) {
 		
-		// id points to the RESOLVED reference
-		IScope scope = scoper.getScope(id, id.eContainmentFeature());
-		IEObjectDescription guy = scope.getSingleElement(id);
+		String modname = GFScopingHelper.getSourceModule(id).getType().getName().getS();
+		TopDef topdef = GFScopingHelper.getTopDef(id);
+		return String.format("%s %s.%s", this.text(topdef), modname, id.getS());
+		
+//		IScope scope = scoper.getScope(id, id.eContainmentFeature());
+//		IEObjectDescription guy = scope.getSingleElement(id);
 //		Iterable<IEObjectDescription> guys = scope.getElements(id);
 //		for (IEObjectDescription g : guys) {
 //			g.getUserDataKeys();
@@ -163,7 +159,7 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 //		Collection<Setting> list = EcoreUtil.UsageCrossReferencer.find(id, id.eResource());
 //		for (EObject ref : id.eContainingFeature().eCrossReferences()) {
 //		}
-		return super.text(id);
+//		return super.text(id);
 	}
 
 }
