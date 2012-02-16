@@ -178,14 +178,12 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 		return org.grammaticalframework.eclipse.ui.editor.GFEditorCallback.class;
 	}
 	
-	
-	
 	/**
 	 * This has 2 functions:
 	 * 		Remove the prompt for Xtext nature (Refer: http://www.eclipse.org/forums/index.php/mv/msg/173440/552043/#msg_552043)
 	 * 		Disabling validation when openind a linked external resource
 	 * 
-	 * 	BUT It introduces a lot of problems when using external files! Therefore I have resolved to always using the xtext nature 
+	 * 	BUT It introduces a lot of problems when using external files! Therefore I have resolved to solution above. 
 	 */
 //	@Override
 //	public Class<? extends org.eclipse.xtext.ui.editor.IXtextEditorCallback> bindIXtextEditorCallback() {
