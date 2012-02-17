@@ -32,6 +32,7 @@ import org.grammaticalframework.eclipse.gF.Inst;
 import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.ListIncluded;
 import org.grammaticalframework.eclipse.gF.ModBody;
+import org.grammaticalframework.eclipse.gF.ModContent;
 import org.grammaticalframework.eclipse.gF.ModType;
 import org.grammaticalframework.eclipse.gF.Name;
 import org.grammaticalframework.eclipse.gF.Open;
@@ -71,16 +72,37 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	public String getDocumentation(EObject o) {
 		// Empirically this is only ever an Ident
 		if (o instanceof Ident) {
-			TopDef topdef = GFScopingHelper.getTopDef(o);
-			String gfDoc = findComment(topdef);
+			String gfDoc = findComment(o);
 			String documentation = textDispatcher.invoke(o.eContainer());
-			return (gfDoc!=null) ? gfDoc + "<br/><br/>" + documentation : documentation;
+			String format = "%s <font style=\"color:#888; font-style:italic;\">(inline comment)</font><br/>%s";
+			return (gfDoc!=null) ? String.format(format, gfDoc, documentation) : documentation;
 		}
 		else {
 			log.warn("Wasn't expecting to get documentation for: "+o.toString());
 			return null;
 		}
 	}
+	
+
+	String startTag = "--"; // regex
+	String ruleName = "SL_COMMENT";
+
+	private String checkNodeForComments(INode abstractNode) {
+		if (abstractNode instanceof ILeafNode && !((ILeafNode) abstractNode).isHidden())
+			// Not interested in non-hidden nodes
+			return null;
+		if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof TerminalRule
+				&& ruleName.equalsIgnoreCase(((TerminalRule) abstractNode.getGrammarElement()).getName())) {
+			
+			// We've found our SL_COMMENT
+			String comment = ((ILeafNode) abstractNode).getText();
+			if (comment.matches("(?s)" + startTag + ".*")) {
+				return comment;
+			}
+		}
+		return null;
+	}
+	
 	
 	/**
 	 * Try to find some meaningful comments around the Ident declaration:
@@ -93,27 +115,30 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	 * @return Found comments as a string, or <code>null</code>
 	 */
 	protected String findComment(EObject o) {
-		String ruleName = "SL_COMMENT";
-		String startTag = "--"; // regex
-
 		StringBuilder sb = new StringBuilder();
+		
 		ICompositeNode node = NodeModelUtils.getNode(o);
-		
-		// TODO: This needs a proper looking at
-		
-		if (node != null) {
-			// get the last single line comment before a non hidden leaf node
+		outer: while (node!=null && !(node.getSemanticElement() instanceof ModContent) && sb.length()==0) {
+			
 			for (INode abstractNode : node.getAsTreeIterable()) {
-				if (abstractNode instanceof ILeafNode && !((ILeafNode) abstractNode).isHidden())
-					break;
-				if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof TerminalRule
-						&& ruleName.equalsIgnoreCase(((TerminalRule) abstractNode.getGrammarElement()).getName())) {
-					String comment = ((ILeafNode) abstractNode).getText();
-//					if (comment.matches("(?s)" + startTag + ".*")) {
-						sb.append(comment);
-//					}
+				String s = checkNodeForComments(abstractNode);
+				if (s!=null) {
+					sb.append(s);
+					break outer;
 				}
 			}
+			INode sibling = node;
+			while (sibling.hasNextSibling()) {
+				sibling = sibling.getNextSibling();
+				String s = checkNodeForComments(sibling);
+				if (s!=null) {
+					sb.append(s);
+					break;
+				}
+			}
+			
+			// climb upwards
+			node = node.getParent();
 		}
 		if (sb.length()>0) {
 			String returnValue = sb.toString();
@@ -139,6 +164,24 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		    sb.append(NodeModelUtils.getTokenText(node));
 			sb.append("</pre>");
 		}
+	}
+	
+	/**
+	 * Start a list with the given heading (using &lt;dl&gt; tags) 
+	 * @param string
+	 * @return
+	 */
+	private String startList(String string) {
+		return String.format("<dl><dt>%s:</dt>", string);
+	}
+	
+	/**
+	 * End a list (using &lt;dl&gt; tags) 
+	 * @param string
+	 * @return
+	 */
+	private String endList() {
+		return String.format("</dl>");
 	}
 	
 	/**
@@ -175,7 +218,7 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	 * @return String
 	 */
 	private String wrapIDList(String s) {
-		return String.format("<li><code>%s</code></li>", s);
+		return String.format("<dd><code>%s</code></dd>", s);
 	}
 	
 	/**
@@ -230,17 +273,17 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		}
 		
 		if (def.isInclusive()) {
-			sb.append("<br/>Includes only:<ul>");
+			sb.append(startList("Includes only"));
 			for (Ident id : def.getIncludes()) {
 				sb.append(wrapIDList(id));
 			}
-			sb.append("</ul>");
+			sb.append(endList());
 		} else if (def.isExclusive()) {
-			sb.append("<br/>Excludes:<ul>");
+			sb.append(startList("Excludes"));
 			for (Ident id : def.getExcludes()) {
 				sb.append(wrapIDList(id));
 			}
-			sb.append("</ul>");
+			sb.append(endList());
 		}
 		return sb.toString();
 	}
@@ -305,13 +348,13 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	 */
 	protected String handle(ParamDef def) {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Possible constructors:<ul>");
+		sb.append(startList("Possible constructors"));
 		for (ParConstr constr : def.getConstructors()) {
 			final ICompositeNode node = NodeModelUtils.findActualNodeFor(constr);
 			String s = (node!=null) ? NodeModelUtils.getTokenText(node) : constr.getName().getS();
 			sb.append(wrapIDList(s));
 		}
-		sb.append("</ul>");
+		sb.append(endList());
 		return sb.toString();
 	}
 	
@@ -323,8 +366,8 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	protected String handle(ParConstr constr) {
 		ParamDef paramdef = (ParamDef)constr.eContainer();
 		StringBuilder sb = new StringBuilder();
-		sb.append(String.format("Constructor of parameter %s.<br/>", wrapIDQuotes(paramdef.getName())));
-		sb.append("Other constructors:<ul>");
+		sb.append(String.format("Constructor of parameter %s.", wrapIDQuotes(paramdef.getName())));
+		sb.append(startList("Other constructors"));
 		for (ParConstr constrAlt : paramdef.getConstructors()) {
 			if (!constrAlt.equals(constr)) {
 				final ICompositeNode node = NodeModelUtils.findActualNodeFor(constrAlt);
@@ -332,7 +375,7 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 				sb.append(wrapIDList(s));
 			}
 		}
-		sb.append("</ul>");
+		sb.append(endList());
 		return sb.toString();
 	}
 	
@@ -344,14 +387,15 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 	protected String handle(OperDef def) {
 		StringBuilder sb = new StringBuilder();
 		if (def.isOverload()) {
-			sb.append("Overloaded operation definitions. All forms:<ul>");
+			sb.append("Overloaded operation definitions.");
+			sb.append(startList("All forms"));
 			for (OperDef oper : def.getOverloads()) {
 				final ICompositeNode node = NodeModelUtils.findActualNodeFor(oper.getType());		
 				if (node != null) {
 				    sb.append( wrapIDList( NodeModelUtils.getTokenText(node) ) );
 				}
 			}
-			sb.append("</ul>");
+			sb.append(endList());
 		} else {
 			sb.append("Operation definition.");
 			appendTokens(def.getType(), sb);
@@ -390,11 +434,11 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		if (def.getName().size()==1) {
 			sb.append(" " + wrapIDQuotes(def.getName().get(0).getName()));
 		} else {
-			sb.append(":<ul>");
+			sb = new StringBuilder( startList(sb.toString()) );
 			for (Name name : def.getName()) {
 				sb.append( wrapIDList(name.getName()) );
 			}
-			sb.append("</ul>");
+			sb.append(endList());
 		}
 
 		return sb.toString();
