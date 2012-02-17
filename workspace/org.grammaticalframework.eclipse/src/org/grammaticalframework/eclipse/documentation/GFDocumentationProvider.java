@@ -32,7 +32,6 @@ import org.grammaticalframework.eclipse.gF.Inst;
 import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.ListIncluded;
 import org.grammaticalframework.eclipse.gF.ModBody;
-import org.grammaticalframework.eclipse.gF.ModContent;
 import org.grammaticalframework.eclipse.gF.ModType;
 import org.grammaticalframework.eclipse.gF.Name;
 import org.grammaticalframework.eclipse.gF.Open;
@@ -41,7 +40,6 @@ import org.grammaticalframework.eclipse.gF.ParConstr;
 import org.grammaticalframework.eclipse.gF.ParamDef;
 import org.grammaticalframework.eclipse.gF.TermDef;
 import org.grammaticalframework.eclipse.gF.TopDef;
-import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
 
 /**
  * Custom documentation provider, provides:
@@ -83,21 +81,30 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		}
 	}
 	
-
+	// TODO: what about --: gfDoc?
 	String startTag = "--"; // regex
 	String ruleName = "SL_COMMENT";
 
-	private String checkNodeForComments(INode abstractNode) {
-		if (abstractNode instanceof ILeafNode && !((ILeafNode) abstractNode).isHidden())
-			// Not interested in non-hidden nodes
-			return null;
-		if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof TerminalRule
-				&& ruleName.equalsIgnoreCase(((TerminalRule) abstractNode.getGrammarElement()).getName())) {
-			
-			// We've found our SL_COMMENT
-			String comment = ((ILeafNode) abstractNode).getText();
-			if (comment.matches("(?s)" + startTag + ".*")) {
-				return comment;
+	private String checkNodeForComments(INode node, int originalLineNo) {
+//		int originalOffset = node.getOffset();
+		for (INode abstractNode : node.getAsTreeIterable()) {
+			// only consider stuff on the right!
+//			if (abstractNode.getTotalOffset() <= originalOffset) {
+//				continue;
+//			}
+			if (abstractNode.getTotalStartLine() != originalLineNo) {
+				// A single-line comment can be on the same original line
+				continue;
+			}
+			if (abstractNode instanceof ILeafNode && !((ILeafNode) abstractNode).isHidden())
+				// Not interested in non-hidden nodes
+				break;
+			if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof TerminalRule
+					&& ruleName.equalsIgnoreCase(((TerminalRule) abstractNode.getGrammarElement()).getName())) {
+				String comment = ((ILeafNode) abstractNode).getText();
+				if (comment.matches("(?s)" + startTag + ".*")) {
+					return comment;
+				}
 			}
 		}
 		return null;
@@ -118,28 +125,40 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		StringBuilder sb = new StringBuilder();
 		
 		ICompositeNode node = NodeModelUtils.getNode(o);
-		outer: while (node!=null && !(node.getSemanticElement() instanceof ModContent) && sb.length()==0) {
-			
-			for (INode abstractNode : node.getAsTreeIterable()) {
-				String s = checkNodeForComments(abstractNode);
-				if (s!=null) {
-					sb.append(s);
-					break outer;
-				}
-			}
+		if (node==null) return null;
+		int originalLineNo = node.getEndLine();
+		ICompositeNode originalNode = node;
+		
+		// Check right, on same line!
+		while (node!=null && !(node.getSemanticElement() instanceof TopDef) && sb.length()==0) {
 			INode sibling = node;
 			while (sibling.hasNextSibling()) {
 				sibling = sibling.getNextSibling();
-				String s = checkNodeForComments(sibling);
+				String s = checkNodeForComments(sibling, originalLineNo);
 				if (s!=null) {
 					sb.append(s);
-					break;
 				}
 			}
-			
 			// climb upwards
 			node = node.getParent();
 		}
+		node = originalNode;
+		
+		// Check left, up one line
+		while (node!=null && !(node.getSemanticElement() instanceof TopDef) && sb.length()==0) {
+			INode sibling = node;
+			while (sibling.hasPreviousSibling()) {
+				String s = checkNodeForComments(sibling, originalLineNo-1);
+				if (s!=null) {
+					sb.append(s);
+				}
+				sibling = sibling.getPreviousSibling();
+			}
+			// climb upwards
+			node = node.getParent();
+		}
+		
+		// Format as needed
 		if (sb.length()>0) {
 			String returnValue = sb.toString();
 			returnValue = returnValue.replaceAll("\\A" + startTag, "");
