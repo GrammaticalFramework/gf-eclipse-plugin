@@ -385,7 +385,7 @@ PattAss
 ;
 
 Label 
-	: name=Ident
+	: name=[Ident|ID]
 	| '$' index=Integer
 ;
 

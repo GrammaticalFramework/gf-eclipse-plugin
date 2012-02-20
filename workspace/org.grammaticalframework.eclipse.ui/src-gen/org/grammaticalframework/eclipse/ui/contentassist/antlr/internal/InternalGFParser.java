@@ -5736,6 +5736,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
             if ( (LA6_0==RULE_ID) ) {
                 switch ( input.LA(2) ) {
+                case 59:
+                    {
+                    alt6=3;
+                    }
+                    break;
                 case EOF:
                 case 16:
                 case 22:
@@ -5744,11 +5749,6 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
                 case 58:
                     {
                     alt6=1;
-                    }
-                    break;
-                case 59:
-                    {
-                    alt6=3;
                     }
                     break;
                 case 33:
@@ -6367,11 +6367,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             if ( (LA9_0==RULE_ID) ) {
                 int LA9_1 = input.LA(2);
 
-                if ( ((LA9_1>=RULE_INTEGER && LA9_1<=RULE_DOUBLE)||LA9_1==25||LA9_1==30||LA9_1==33||LA9_1==44||LA9_1==47||LA9_1==59||(LA9_1>=77 && LA9_1<=79)) ) {
-                    alt9=2;
-                }
-                else if ( (LA9_1==22||LA9_1==29) ) {
+                if ( (LA9_1==22||LA9_1==29) ) {
                     alt9=1;
+                }
+                else if ( ((LA9_1>=RULE_INTEGER && LA9_1<=RULE_DOUBLE)||LA9_1==25||LA9_1==30||LA9_1==33||LA9_1==44||LA9_1==47||LA9_1==59||(LA9_1>=77 && LA9_1<=79)) ) {
+                    alt9=2;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -9257,6 +9257,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             case RULE_ID:
                 {
                 switch ( input.LA(2) ) {
+                case 49:
+                    {
+                    alt28=4;
+                    }
+                    break;
                 case 46:
                     {
                     int LA28_4 = input.LA(3);
@@ -9287,6 +9292,20 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
                     }
                     }
                     break;
+                case EOF:
+                case 15:
+                case 23:
+                case 26:
+                case 29:
+                case 31:
+                case 37:
+                case 39:
+                case 48:
+                case 73:
+                    {
+                    alt28=3;
+                    }
+                    break;
                 case RULE_INTEGER:
                 case RULE_STRING:
                 case RULE_ID:
@@ -9302,25 +9321,6 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
                 case 79:
                     {
                     alt28=1;
-                    }
-                    break;
-                case EOF:
-                case 15:
-                case 23:
-                case 26:
-                case 29:
-                case 31:
-                case 37:
-                case 39:
-                case 48:
-                case 73:
-                    {
-                    alt28=3;
-                    }
-                    break;
-                case 49:
-                    {
-                    alt28=4;
                     }
                     break;
                 default:
@@ -9503,11 +9503,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
                 {
                 int LA29_1 = input.LA(2);
 
-                if ( (LA29_1==49) ) {
-                    alt29=1;
-                }
-                else if ( (LA29_1==EOF||(LA29_1>=RULE_INTEGER && LA29_1<=RULE_DOUBLE)||(LA29_1>=22 && LA29_1<=23)||(LA29_1>=25 && LA29_1<=26)||(LA29_1>=29 && LA29_1<=31)||LA29_1==33||LA29_1==37||LA29_1==39||LA29_1==44||(LA29_1>=46 && LA29_1<=48)||LA29_1==59||LA29_1==73||(LA29_1>=77 && LA29_1<=79)) ) {
+                if ( (LA29_1==EOF||(LA29_1>=RULE_INTEGER && LA29_1<=RULE_DOUBLE)||(LA29_1>=22 && LA29_1<=23)||(LA29_1>=25 && LA29_1<=26)||(LA29_1>=29 && LA29_1<=31)||LA29_1==33||LA29_1==37||LA29_1==39||LA29_1==44||(LA29_1>=46 && LA29_1<=48)||LA29_1==59||LA29_1==73||(LA29_1>=77 && LA29_1<=79)) ) {
                     alt29=2;
+                }
+                else if ( (LA29_1==49) ) {
+                    alt29=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return ;}
@@ -10434,11 +10434,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
                     {
                     int LA34_3 = input.LA(3);
 
-                    if ( ((LA34_3>=RULE_INTEGER && LA34_3<=RULE_DOUBLE)||LA34_3==15||(LA34_3>=25 && LA34_3<=26)||LA34_3==30||LA34_3==33||LA34_3==37||LA34_3==44||(LA34_3>=46 && LA34_3<=47)||LA34_3==49||LA34_3==59||LA34_3==73||(LA34_3>=77 && LA34_3<=79)) ) {
-                        alt34=2;
-                    }
-                    else if ( (LA34_3==22||LA34_3==29) ) {
+                    if ( (LA34_3==22||LA34_3==29) ) {
                         alt34=1;
+                    }
+                    else if ( ((LA34_3>=RULE_INTEGER && LA34_3<=RULE_DOUBLE)||LA34_3==15||(LA34_3>=25 && LA34_3<=26)||LA34_3==30||LA34_3==33||LA34_3==37||LA34_3==44||(LA34_3>=46 && LA34_3<=47)||LA34_3==49||LA34_3==59||LA34_3==73||(LA34_3>=77 && LA34_3<=79)) ) {
+                        alt34=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return ;}
@@ -69990,28 +69990,36 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Label__NameAssignment_0"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24310:1: rule__Label__NameAssignment_0 : ( ruleIdent ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24310:1: rule__Label__NameAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Label__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24314:1: ( ( ruleIdent ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24315:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24314:1: ( ( ( RULE_ID ) ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24315:1: ( ( RULE_ID ) )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24315:1: ( ruleIdent )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24316:1: ruleIdent
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24315:1: ( ( RULE_ID ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24316:1: ( RULE_ID )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLabelAccess().getNameIdentParserRuleCall_0_0()); 
+               before(grammarAccess.getLabelAccess().getNameIdentCrossReference_0_0()); 
             }
-            pushFollow(FOLLOW_ruleIdent_in_rule__Label__NameAssignment_049025);
-            ruleIdent();
-
-            state._fsp--;
-            if (state.failed) return ;
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24317:1: ( RULE_ID )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24318:1: RULE_ID
+            {
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLabelAccess().getNameIdentParserRuleCall_0_0()); 
+               before(grammarAccess.getLabelAccess().getNameIdentIDTerminalRuleCall_0_0_1()); 
+            }
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Label__NameAssignment_049029); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getLabelAccess().getNameIdentIDTerminalRuleCall_0_0_1()); 
+            }
+
+            }
+
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getLabelAccess().getNameIdentCrossReference_0_0()); 
             }
 
             }
@@ -70035,22 +70043,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Label__IndexAssignment_1_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24325:1: rule__Label__IndexAssignment_1_1 : ( RULE_INTEGER ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24329:1: rule__Label__IndexAssignment_1_1 : ( RULE_INTEGER ) ;
     public final void rule__Label__IndexAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24329:1: ( ( RULE_INTEGER ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24330:1: ( RULE_INTEGER )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24333:1: ( ( RULE_INTEGER ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24334:1: ( RULE_INTEGER )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24330:1: ( RULE_INTEGER )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24331:1: RULE_INTEGER
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24334:1: ( RULE_INTEGER )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24335:1: RULE_INTEGER
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getLabelAccess().getIndexIntegerTerminalRuleCall_1_1_0()); 
             }
-            match(input,RULE_INTEGER,FOLLOW_RULE_INTEGER_in_rule__Label__IndexAssignment_1_149056); if (state.failed) return ;
+            match(input,RULE_INTEGER,FOLLOW_RULE_INTEGER_in_rule__Label__IndexAssignment_1_149064); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getLabelAccess().getIndexIntegerTerminalRuleCall_1_1_0()); 
             }
@@ -70076,22 +70084,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListPattAss__AssignmentsAssignment_1_0"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24340:1: rule__ListPattAss__AssignmentsAssignment_1_0 : ( rulePattAss ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24344:1: rule__ListPattAss__AssignmentsAssignment_1_0 : ( rulePattAss ) ;
     public final void rule__ListPattAss__AssignmentsAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24344:1: ( ( rulePattAss ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24345:1: ( rulePattAss )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24348:1: ( ( rulePattAss ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24349:1: ( rulePattAss )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24345:1: ( rulePattAss )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24346:1: rulePattAss
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24349:1: ( rulePattAss )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24350:1: rulePattAss
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListPattAssAccess().getAssignmentsPattAssParserRuleCall_1_0_0()); 
             }
-            pushFollow(FOLLOW_rulePattAss_in_rule__ListPattAss__AssignmentsAssignment_1_049087);
+            pushFollow(FOLLOW_rulePattAss_in_rule__ListPattAss__AssignmentsAssignment_1_049095);
             rulePattAss();
 
             state._fsp--;
@@ -70121,22 +70129,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListPattAss__AssignmentsAssignment_1_1_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24355:1: rule__ListPattAss__AssignmentsAssignment_1_1_1 : ( rulePattAss ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24359:1: rule__ListPattAss__AssignmentsAssignment_1_1_1 : ( rulePattAss ) ;
     public final void rule__ListPattAss__AssignmentsAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24359:1: ( ( rulePattAss ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24360:1: ( rulePattAss )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24363:1: ( ( rulePattAss ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24364:1: ( rulePattAss )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24360:1: ( rulePattAss )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24361:1: rulePattAss
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24364:1: ( rulePattAss )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24365:1: rulePattAss
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListPattAssAccess().getAssignmentsPattAssParserRuleCall_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_rulePattAss_in_rule__ListPattAss__AssignmentsAssignment_1_1_149118);
+            pushFollow(FOLLOW_rulePattAss_in_rule__ListPattAss__AssignmentsAssignment_1_1_149126);
             rulePattAss();
 
             state._fsp--;
@@ -70166,22 +70174,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListPatt__PatternsAssignment"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24370:1: rule__ListPatt__PatternsAssignment : ( rulePattArg ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24374:1: rule__ListPatt__PatternsAssignment : ( rulePattArg ) ;
     public final void rule__ListPatt__PatternsAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24374:1: ( ( rulePattArg ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24375:1: ( rulePattArg )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24378:1: ( ( rulePattArg ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24379:1: ( rulePattArg )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24375:1: ( rulePattArg )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24376:1: rulePattArg
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24379:1: ( rulePattArg )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24380:1: rulePattArg
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListPattAccess().getPatternsPattArgParserRuleCall_0()); 
             }
-            pushFollow(FOLLOW_rulePattArg_in_rule__ListPatt__PatternsAssignment49149);
+            pushFollow(FOLLOW_rulePattArg_in_rule__ListPatt__PatternsAssignment49157);
             rulePattArg();
 
             state._fsp--;
@@ -70211,22 +70219,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Arg__NameAssignment_0"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24385:1: rule__Arg__NameAssignment_0 : ( ruleIdent ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24389:1: rule__Arg__NameAssignment_0 : ( ruleIdent ) ;
     public final void rule__Arg__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24389:1: ( ( ruleIdent ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24390:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24393:1: ( ( ruleIdent ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24394:1: ( ruleIdent )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24390:1: ( ruleIdent )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24391:1: ruleIdent
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24394:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24395:1: ruleIdent
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArgAccess().getNameIdentParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleIdent_in_rule__Arg__NameAssignment_049180);
+            pushFollow(FOLLOW_ruleIdent_in_rule__Arg__NameAssignment_049188);
             ruleIdent();
 
             state._fsp--;
@@ -70256,28 +70264,28 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Arg__WildcardAssignment_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24400:1: rule__Arg__WildcardAssignment_1 : ( ( '_' ) ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24404:1: rule__Arg__WildcardAssignment_1 : ( ( '_' ) ) ;
     public final void rule__Arg__WildcardAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24404:1: ( ( ( '_' ) ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24405:1: ( ( '_' ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24408:1: ( ( ( '_' ) ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24409:1: ( ( '_' ) )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24405:1: ( ( '_' ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24406:1: ( '_' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getArgAccess().getWildcard_Keyword_1_0()); 
-            }
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24407:1: ( '_' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24408:1: '_'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24409:1: ( ( '_' ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24410:1: ( '_' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArgAccess().getWildcard_Keyword_1_0()); 
             }
-            match(input,79,FOLLOW_79_in_rule__Arg__WildcardAssignment_149216); if (state.failed) return ;
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24411:1: ( '_' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24412:1: '_'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getArgAccess().getWildcard_Keyword_1_0()); 
+            }
+            match(input,79,FOLLOW_79_in_rule__Arg__WildcardAssignment_149224); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getArgAccess().getWildcard_Keyword_1_0()); 
             }
@@ -70309,22 +70317,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Arg__NameAssignment_2_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24423:1: rule__Arg__NameAssignment_2_1 : ( ruleIdent ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24427:1: rule__Arg__NameAssignment_2_1 : ( ruleIdent ) ;
     public final void rule__Arg__NameAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24427:1: ( ( ruleIdent ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24428:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24431:1: ( ( ruleIdent ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24432:1: ( ruleIdent )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24428:1: ( ruleIdent )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24429:1: ruleIdent
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24432:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24433:1: ruleIdent
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getArgAccess().getNameIdentParserRuleCall_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleIdent_in_rule__Arg__NameAssignment_2_149255);
+            pushFollow(FOLLOW_ruleIdent_in_rule__Arg__NameAssignment_2_149263);
             ruleIdent();
 
             state._fsp--;
@@ -70354,22 +70362,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bind__NameAssignment_0"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24438:1: rule__Bind__NameAssignment_0 : ( ruleIdent ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24442:1: rule__Bind__NameAssignment_0 : ( ruleIdent ) ;
     public final void rule__Bind__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24442:1: ( ( ruleIdent ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24443:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24446:1: ( ( ruleIdent ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24447:1: ( ruleIdent )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24443:1: ( ruleIdent )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24444:1: ruleIdent
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24447:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24448:1: ruleIdent
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBindAccess().getNameIdentParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_049286);
+            pushFollow(FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_049294);
             ruleIdent();
 
             state._fsp--;
@@ -70399,28 +70407,28 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bind__WildcardAssignment_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24453:1: rule__Bind__WildcardAssignment_1 : ( ( '_' ) ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24457:1: rule__Bind__WildcardAssignment_1 : ( ( '_' ) ) ;
     public final void rule__Bind__WildcardAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24457:1: ( ( ( '_' ) ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24458:1: ( ( '_' ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24461:1: ( ( ( '_' ) ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24462:1: ( ( '_' ) )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24458:1: ( ( '_' ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24459:1: ( '_' )
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getBindAccess().getWildcard_Keyword_1_0()); 
-            }
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24460:1: ( '_' )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24461:1: '_'
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24462:1: ( ( '_' ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24463:1: ( '_' )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBindAccess().getWildcard_Keyword_1_0()); 
             }
-            match(input,79,FOLLOW_79_in_rule__Bind__WildcardAssignment_149322); if (state.failed) return ;
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24464:1: ( '_' )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24465:1: '_'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getBindAccess().getWildcard_Keyword_1_0()); 
+            }
+            match(input,79,FOLLOW_79_in_rule__Bind__WildcardAssignment_149330); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getBindAccess().getWildcard_Keyword_1_0()); 
             }
@@ -70452,22 +70460,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bind__NameAssignment_2_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24476:1: rule__Bind__NameAssignment_2_1 : ( ruleIdent ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24480:1: rule__Bind__NameAssignment_2_1 : ( ruleIdent ) ;
     public final void rule__Bind__NameAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24480:1: ( ( ruleIdent ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24481:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24484:1: ( ( ruleIdent ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24485:1: ( ruleIdent )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24481:1: ( ruleIdent )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24482:1: ruleIdent
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24485:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24486:1: ruleIdent
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBindAccess().getNameIdentParserRuleCall_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_2_149361);
+            pushFollow(FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_2_149369);
             ruleIdent();
 
             state._fsp--;
@@ -70497,22 +70505,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bind__NameAssignment_2_2_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24491:1: rule__Bind__NameAssignment_2_2_1 : ( ruleIdent ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24495:1: rule__Bind__NameAssignment_2_2_1 : ( ruleIdent ) ;
     public final void rule__Bind__NameAssignment_2_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24495:1: ( ( ruleIdent ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24496:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24499:1: ( ( ruleIdent ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24500:1: ( ruleIdent )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24496:1: ( ruleIdent )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24497:1: ruleIdent
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24500:1: ( ruleIdent )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24501:1: ruleIdent
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getBindAccess().getNameIdentParserRuleCall_2_2_1_0()); 
             }
-            pushFollow(FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_2_2_149392);
+            pushFollow(FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_2_2_149400);
             ruleIdent();
 
             state._fsp--;
@@ -70542,22 +70550,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListBind__BindingsAssignment_0"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24506:1: rule__ListBind__BindingsAssignment_0 : ( ruleBind ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24510:1: rule__ListBind__BindingsAssignment_0 : ( ruleBind ) ;
     public final void rule__ListBind__BindingsAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24510:1: ( ( ruleBind ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24511:1: ( ruleBind )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24514:1: ( ( ruleBind ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24515:1: ( ruleBind )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24511:1: ( ruleBind )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24512:1: ruleBind
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24515:1: ( ruleBind )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24516:1: ruleBind
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListBindAccess().getBindingsBindParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleBind_in_rule__ListBind__BindingsAssignment_049423);
+            pushFollow(FOLLOW_ruleBind_in_rule__ListBind__BindingsAssignment_049431);
             ruleBind();
 
             state._fsp--;
@@ -70587,22 +70595,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListBind__BindingsAssignment_1_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24521:1: rule__ListBind__BindingsAssignment_1_1 : ( ruleBind ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24525:1: rule__ListBind__BindingsAssignment_1_1 : ( ruleBind ) ;
     public final void rule__ListBind__BindingsAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24525:1: ( ( ruleBind ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24526:1: ( ruleBind )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24529:1: ( ( ruleBind ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24530:1: ( ruleBind )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24526:1: ( ruleBind )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24527:1: ruleBind
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24530:1: ( ruleBind )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24531:1: ruleBind
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListBindAccess().getBindingsBindParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleBind_in_rule__ListBind__BindingsAssignment_1_149454);
+            pushFollow(FOLLOW_ruleBind_in_rule__ListBind__BindingsAssignment_1_149462);
             ruleBind();
 
             state._fsp--;
@@ -70632,22 +70640,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListTupleComp__ElementsAssignment_1_0"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24536:1: rule__ListTupleComp__ElementsAssignment_1_0 : ( ruleExp ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:1: rule__ListTupleComp__ElementsAssignment_1_0 : ( ruleExp ) ;
     public final void rule__ListTupleComp__ElementsAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24540:1: ( ( ruleExp ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24541:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24544:1: ( ( ruleExp ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24545:1: ( ruleExp )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24541:1: ( ruleExp )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24542:1: ruleExp
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24545:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24546:1: ruleExp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListTupleCompAccess().getElementsExpParserRuleCall_1_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExp_in_rule__ListTupleComp__ElementsAssignment_1_049485);
+            pushFollow(FOLLOW_ruleExp_in_rule__ListTupleComp__ElementsAssignment_1_049493);
             ruleExp();
 
             state._fsp--;
@@ -70677,22 +70685,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListTupleComp__ElementsAssignment_1_1_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24551:1: rule__ListTupleComp__ElementsAssignment_1_1_1 : ( ruleExp ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24555:1: rule__ListTupleComp__ElementsAssignment_1_1_1 : ( ruleExp ) ;
     public final void rule__ListTupleComp__ElementsAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24555:1: ( ( ruleExp ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24556:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24559:1: ( ( ruleExp ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24560:1: ( ruleExp )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24556:1: ( ruleExp )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24557:1: ruleExp
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24560:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24561:1: ruleExp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListTupleCompAccess().getElementsExpParserRuleCall_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleExp_in_rule__ListTupleComp__ElementsAssignment_1_1_149516);
+            pushFollow(FOLLOW_ruleExp_in_rule__ListTupleComp__ElementsAssignment_1_1_149524);
             ruleExp();
 
             state._fsp--;
@@ -70722,22 +70730,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListPattTupleComp__PatternsAssignment_1_0"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24566:1: rule__ListPattTupleComp__PatternsAssignment_1_0 : ( rulePatt ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24570:1: rule__ListPattTupleComp__PatternsAssignment_1_0 : ( rulePatt ) ;
     public final void rule__ListPattTupleComp__PatternsAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24570:1: ( ( rulePatt ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24571:1: ( rulePatt )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24574:1: ( ( rulePatt ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24575:1: ( rulePatt )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24571:1: ( rulePatt )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24572:1: rulePatt
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24575:1: ( rulePatt )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24576:1: rulePatt
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListPattTupleCompAccess().getPatternsPattParserRuleCall_1_0_0()); 
             }
-            pushFollow(FOLLOW_rulePatt_in_rule__ListPattTupleComp__PatternsAssignment_1_049547);
+            pushFollow(FOLLOW_rulePatt_in_rule__ListPattTupleComp__PatternsAssignment_1_049555);
             rulePatt();
 
             state._fsp--;
@@ -70767,22 +70775,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListPattTupleComp__PatternsAssignment_1_1_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24581:1: rule__ListPattTupleComp__PatternsAssignment_1_1_1 : ( rulePatt ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24585:1: rule__ListPattTupleComp__PatternsAssignment_1_1_1 : ( rulePatt ) ;
     public final void rule__ListPattTupleComp__PatternsAssignment_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24585:1: ( ( rulePatt ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24586:1: ( rulePatt )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24589:1: ( ( rulePatt ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24590:1: ( rulePatt )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24586:1: ( rulePatt )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24587:1: rulePatt
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24590:1: ( rulePatt )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24591:1: rulePatt
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListPattTupleCompAccess().getPatternsPattParserRuleCall_1_1_1_0()); 
             }
-            pushFollow(FOLLOW_rulePatt_in_rule__ListPattTupleComp__PatternsAssignment_1_1_149578);
+            pushFollow(FOLLOW_rulePatt_in_rule__ListPattTupleComp__PatternsAssignment_1_1_149586);
             rulePatt();
 
             state._fsp--;
@@ -70812,22 +70820,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__PatternAssignment_0"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24596:1: rule__Case__PatternAssignment_0 : ( rulePatt ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24600:1: rule__Case__PatternAssignment_0 : ( rulePatt ) ;
     public final void rule__Case__PatternAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24600:1: ( ( rulePatt ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24601:1: ( rulePatt )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24604:1: ( ( rulePatt ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24605:1: ( rulePatt )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24601:1: ( rulePatt )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24602:1: rulePatt
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24605:1: ( rulePatt )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24606:1: rulePatt
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getPatternPattParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_rulePatt_in_rule__Case__PatternAssignment_049609);
+            pushFollow(FOLLOW_rulePatt_in_rule__Case__PatternAssignment_049617);
             rulePatt();
 
             state._fsp--;
@@ -70857,22 +70865,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Case__RightAssignment_2"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24611:1: rule__Case__RightAssignment_2 : ( ruleExp ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24615:1: rule__Case__RightAssignment_2 : ( ruleExp ) ;
     public final void rule__Case__RightAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24615:1: ( ( ruleExp ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24616:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24619:1: ( ( ruleExp ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24620:1: ( ruleExp )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24616:1: ( ruleExp )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24617:1: ruleExp
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24620:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24621:1: ruleExp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getCaseAccess().getRightExpParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExp_in_rule__Case__RightAssignment_249640);
+            pushFollow(FOLLOW_ruleExp_in_rule__Case__RightAssignment_249648);
             ruleExp();
 
             state._fsp--;
@@ -70902,22 +70910,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListCase__CasesAssignment_0"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24626:1: rule__ListCase__CasesAssignment_0 : ( ruleCase ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24630:1: rule__ListCase__CasesAssignment_0 : ( ruleCase ) ;
     public final void rule__ListCase__CasesAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24630:1: ( ( ruleCase ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24631:1: ( ruleCase )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24634:1: ( ( ruleCase ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24635:1: ( ruleCase )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24631:1: ( ruleCase )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24632:1: ruleCase
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24635:1: ( ruleCase )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24636:1: ruleCase
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListCaseAccess().getCasesCaseParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleCase_in_rule__ListCase__CasesAssignment_049671);
+            pushFollow(FOLLOW_ruleCase_in_rule__ListCase__CasesAssignment_049679);
             ruleCase();
 
             state._fsp--;
@@ -70947,22 +70955,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ListCase__CasesAssignment_1_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24641:1: rule__ListCase__CasesAssignment_1_1 : ( ruleCase ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24645:1: rule__ListCase__CasesAssignment_1_1 : ( ruleCase ) ;
     public final void rule__ListCase__CasesAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24645:1: ( ( ruleCase ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24646:1: ( ruleCase )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24649:1: ( ( ruleCase ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24650:1: ( ruleCase )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24646:1: ( ruleCase )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24647:1: ruleCase
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24650:1: ( ruleCase )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24651:1: ruleCase
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getListCaseAccess().getCasesCaseParserRuleCall_1_1_0()); 
             }
-            pushFollow(FOLLOW_ruleCase_in_rule__ListCase__CasesAssignment_1_149702);
+            pushFollow(FOLLOW_ruleCase_in_rule__ListCase__CasesAssignment_1_149710);
             ruleCase();
 
             state._fsp--;
@@ -70992,22 +71000,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Altern__Alt1Assignment_0"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24656:1: rule__Altern__Alt1Assignment_0 : ( ruleExp ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24660:1: rule__Altern__Alt1Assignment_0 : ( ruleExp ) ;
     public final void rule__Altern__Alt1Assignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24660:1: ( ( ruleExp ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24661:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24664:1: ( ( ruleExp ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24665:1: ( ruleExp )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24661:1: ( ruleExp )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24662:1: ruleExp
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24665:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24666:1: ruleExp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlternAccess().getAlt1ExpParserRuleCall_0_0()); 
             }
-            pushFollow(FOLLOW_ruleExp_in_rule__Altern__Alt1Assignment_049733);
+            pushFollow(FOLLOW_ruleExp_in_rule__Altern__Alt1Assignment_049741);
             ruleExp();
 
             state._fsp--;
@@ -71037,22 +71045,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Altern__Alt2Assignment_2"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24671:1: rule__Altern__Alt2Assignment_2 : ( ruleExp ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24675:1: rule__Altern__Alt2Assignment_2 : ( ruleExp ) ;
     public final void rule__Altern__Alt2Assignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24675:1: ( ( ruleExp ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24676:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24679:1: ( ( ruleExp ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24680:1: ( ruleExp )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24676:1: ( ruleExp )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24677:1: ruleExp
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24680:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24681:1: ruleExp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getAlternAccess().getAlt2ExpParserRuleCall_2_0()); 
             }
-            pushFollow(FOLLOW_ruleExp_in_rule__Altern__Alt2Assignment_249764);
+            pushFollow(FOLLOW_ruleExp_in_rule__Altern__Alt2Assignment_249772);
             ruleExp();
 
             state._fsp--;
@@ -71082,22 +71090,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DDecl__BindListAssignment_0_1"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24686:1: rule__DDecl__BindListAssignment_0_1 : ( ruleListBind ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24690:1: rule__DDecl__BindListAssignment_0_1 : ( ruleListBind ) ;
     public final void rule__DDecl__BindListAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24690:1: ( ( ruleListBind ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24691:1: ( ruleListBind )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24694:1: ( ( ruleListBind ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24695:1: ( ruleListBind )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24691:1: ( ruleListBind )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24692:1: ruleListBind
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24695:1: ( ruleListBind )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24696:1: ruleListBind
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDDeclAccess().getBindListListBindParserRuleCall_0_1_0()); 
             }
-            pushFollow(FOLLOW_ruleListBind_in_rule__DDecl__BindListAssignment_0_149795);
+            pushFollow(FOLLOW_ruleListBind_in_rule__DDecl__BindListAssignment_0_149803);
             ruleListBind();
 
             state._fsp--;
@@ -71127,22 +71135,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DDecl__EAssignment_0_3"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24701:1: rule__DDecl__EAssignment_0_3 : ( ruleExp ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24705:1: rule__DDecl__EAssignment_0_3 : ( ruleExp ) ;
     public final void rule__DDecl__EAssignment_0_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24705:1: ( ( ruleExp ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24706:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24709:1: ( ( ruleExp ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24710:1: ( ruleExp )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24706:1: ( ruleExp )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24707:1: ruleExp
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24710:1: ( ruleExp )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24711:1: ruleExp
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDDeclAccess().getEExpParserRuleCall_0_3_0()); 
             }
-            pushFollow(FOLLOW_ruleExp_in_rule__DDecl__EAssignment_0_349826);
+            pushFollow(FOLLOW_ruleExp_in_rule__DDecl__EAssignment_0_349834);
             ruleExp();
 
             state._fsp--;
@@ -71172,22 +71180,22 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Ident__SAssignment"
-    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24716:1: rule__Ident__SAssignment : ( RULE_ID ) ;
+    // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24720:1: rule__Ident__SAssignment : ( RULE_ID ) ;
     public final void rule__Ident__SAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24720:1: ( ( RULE_ID ) )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24721:1: ( RULE_ID )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24724:1: ( ( RULE_ID ) )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24725:1: ( RULE_ID )
             {
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24721:1: ( RULE_ID )
-            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24722:1: RULE_ID
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24725:1: ( RULE_ID )
+            // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24726:1: RULE_ID
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getIdentAccess().getSIDTerminalRuleCall_0()); 
             }
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Ident__SAssignment49857); if (state.failed) return ;
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Ident__SAssignment49865); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getIdentAccess().getSIDTerminalRuleCall_0()); 
             }
@@ -71271,34 +71279,34 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
     static final String DFA3_eotS =
         "\20\uffff";
     static final String DFA3_eofS =
-        "\1\2\1\4\11\uffff\1\4\1\uffff\1\4\2\uffff";
+        "\1\2\1\4\10\uffff\1\4\3\uffff\1\4\1\uffff";
     static final String DFA3_minS =
-        "\1\6\1\20\1\uffff\1\41\1\uffff\1\6\1\uffff\1\6\2\35\1\6\1\20\1\6"+
-        "\1\20\2\35";
+        "\1\6\1\20\1\uffff\1\6\2\uffff\1\41\1\35\2\6\1\20\2\35\1\6\1\20\1"+
+        "\35";
     static final String DFA3_maxS =
-        "\1\33\1\73\1\uffff\1\41\1\uffff\1\6\1\uffff\1\6\2\40\1\6\1\72\1"+
-        "\6\1\72\2\40";
+        "\1\33\1\73\1\uffff\1\6\2\uffff\1\41\1\40\2\6\1\72\2\40\1\6\1\72"+
+        "\1\40";
     static final String DFA3_acceptS =
-        "\2\uffff\1\3\1\uffff\1\1\1\uffff\1\2\11\uffff";
+        "\2\uffff\1\3\1\uffff\1\1\1\2\12\uffff";
     static final String DFA3_specialS =
         "\20\uffff}>";
     static final String[] DFA3_transitionS = {
             "\1\1\20\uffff\1\2\1\uffff\1\2\1\uffff\1\2",
-            "\1\4\6\uffff\1\4\5\uffff\1\4\3\uffff\1\5\30\uffff\1\6\1\3",
+            "\1\4\6\uffff\1\4\5\uffff\1\4\3\uffff\1\3\30\uffff\1\5\1\6",
             "",
             "\1\7",
             "",
-            "\1\10",
             "",
-            "\1\11",
-            "\1\12\2\uffff\1\13",
-            "\1\14\2\uffff\1\15",
-            "\1\16",
-            "\1\4\6\uffff\1\4\5\uffff\1\4\34\uffff\1\6",
+            "\1\10",
+            "\1\11\2\uffff\1\12",
+            "\1\13",
+            "\1\14",
+            "\1\4\6\uffff\1\4\5\uffff\1\4\34\uffff\1\5",
+            "\1\15\2\uffff\1\16",
+            "\1\11\2\uffff\1\12",
             "\1\17",
-            "\1\4\6\uffff\1\4\5\uffff\1\4\34\uffff\1\6",
-            "\1\12\2\uffff\1\13",
-            "\1\14\2\uffff\1\15"
+            "\1\4\6\uffff\1\4\5\uffff\1\4\34\uffff\1\5",
+            "\1\15\2\uffff\1\16"
     };
 
     static final short[] DFA3_eot = DFA.unpackEncodedString(DFA3_eotS);
@@ -71402,38 +71410,38 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
     static final String DFA11_eofS =
         "\21\uffff";
     static final String DFA11_minS =
-        "\3\6\1\uffff\1\6\2\4\1\40\1\26\1\6\4\uffff\1\6\1\40\1\26";
+        "\4\6\2\4\1\uffff\1\40\1\26\1\6\4\uffff\1\6\1\40\1\26";
     static final String DFA11_maxS =
-        "\1\41\1\117\1\6\1\uffff\1\41\2\115\1\40\1\44\1\6\4\uffff\1\117\1"+
+        "\1\41\1\117\1\6\1\41\2\115\1\uffff\1\40\1\44\1\6\4\uffff\1\117\1"+
         "\40\1\44";
     static final String DFA11_acceptS =
-        "\3\uffff\1\3\6\uffff\1\5\1\2\1\1\1\4\3\uffff";
+        "\6\uffff\1\3\3\uffff\1\1\1\4\1\5\1\2\3\uffff";
     static final String DFA11_specialS =
         "\21\uffff}>";
     static final String[] DFA11_transitionS = {
             "\1\1\32\uffff\1\2",
-            "\1\3\17\uffff\1\5\2\uffff\1\3\3\uffff\1\4\6\uffff\1\6\52\uffff"+
-            "\1\3",
+            "\1\6\17\uffff\1\5\2\uffff\1\6\3\uffff\1\3\6\uffff\1\4\52\uffff"+
+            "\1\6",
             "\1\7",
-            "",
             "\1\10\32\uffff\1\11",
-            "\4\13\11\uffff\5\13\3\uffff\1\13\2\uffff\1\13\1\uffff\1\13"+
-            "\2\uffff\1\13\6\uffff\1\13\1\uffff\4\13\1\uffff\1\13\20\uffff"+
-            "\1\13\1\uffff\1\13\2\uffff\1\12\2\13\2\uffff\4\13",
-            "\4\14\11\uffff\5\14\3\uffff\1\14\2\uffff\1\14\1\uffff\1\14"+
-            "\2\uffff\1\14\6\uffff\1\14\1\uffff\4\14\1\uffff\1\14\20\uffff"+
-            "\1\14\1\uffff\1\14\2\uffff\1\15\2\14\2\uffff\4\14",
+            "\4\12\11\uffff\5\12\3\uffff\1\12\2\uffff\1\12\1\uffff\1\12"+
+            "\2\uffff\1\12\6\uffff\1\12\1\uffff\4\12\1\uffff\1\12\20\uffff"+
+            "\1\12\1\uffff\1\12\2\uffff\1\13\2\12\2\uffff\4\12",
+            "\4\15\11\uffff\5\15\3\uffff\1\15\2\uffff\1\15\1\uffff\1\15"+
+            "\2\uffff\1\15\6\uffff\1\15\1\uffff\4\15\1\uffff\1\15\20\uffff"+
+            "\1\15\1\uffff\1\15\2\uffff\1\14\2\15\2\uffff\4\15",
+            "",
             "\1\16",
-            "\1\5\6\uffff\1\4\6\uffff\1\6",
+            "\1\5\6\uffff\1\3\6\uffff\1\4",
             "\1\17",
             "",
             "",
             "",
             "",
-            "\1\3\17\uffff\1\5\2\uffff\1\3\3\uffff\1\4\6\uffff\1\6\52\uffff"+
-            "\1\3",
+            "\1\6\17\uffff\1\5\2\uffff\1\6\3\uffff\1\3\6\uffff\1\4\52\uffff"+
+            "\1\6",
             "\1\20",
-            "\1\5\6\uffff\1\4\6\uffff\1\6"
+            "\1\5\6\uffff\1\3\6\uffff\1\4"
     };
 
     static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
@@ -71478,16 +71486,16 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
     static final String DFA15_maxS =
         "\1\6\1\44\1\6\2\uffff\1\44";
     static final String DFA15_acceptS =
-        "\3\uffff\1\2\1\1\1\uffff";
+        "\3\uffff\1\1\1\2\1\uffff";
     static final String DFA15_specialS =
         "\6\uffff}>";
     static final String[] DFA15_transitionS = {
             "\1\1",
-            "\1\3\6\uffff\1\2\6\uffff\1\4",
+            "\1\4\6\uffff\1\2\6\uffff\1\3",
             "\1\5",
             "",
             "",
-            "\1\3\6\uffff\1\2\6\uffff\1\4"
+            "\1\4\6\uffff\1\2\6\uffff\1\3"
     };
 
     static final short[] DFA15_eot = DFA.unpackEncodedString(DFA15_eotS);
@@ -74300,33 +74308,33 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleIdent_in_rule__PattAss__NameAssignment_048932 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleIdent_in_rule__PattAss__NameAssignment_1_148963 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePatt_in_rule__PattAss__ValueAssignment_348994 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rule__Label__NameAssignment_049025 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INTEGER_in_rule__Label__IndexAssignment_1_149056 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePattAss_in_rule__ListPattAss__AssignmentsAssignment_1_049087 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePattAss_in_rule__ListPattAss__AssignmentsAssignment_1_1_149118 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePattArg_in_rule__ListPatt__PatternsAssignment49149 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rule__Arg__NameAssignment_049180 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_rule__Arg__WildcardAssignment_149216 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rule__Arg__NameAssignment_2_149255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_049286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_rule__Bind__WildcardAssignment_149322 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_2_149361 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_2_2_149392 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBind_in_rule__ListBind__BindingsAssignment_049423 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBind_in_rule__ListBind__BindingsAssignment_1_149454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp_in_rule__ListTupleComp__ElementsAssignment_1_049485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp_in_rule__ListTupleComp__ElementsAssignment_1_1_149516 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePatt_in_rule__ListPattTupleComp__PatternsAssignment_1_049547 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePatt_in_rule__ListPattTupleComp__PatternsAssignment_1_1_149578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulePatt_in_rule__Case__PatternAssignment_049609 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp_in_rule__Case__RightAssignment_249640 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCase_in_rule__ListCase__CasesAssignment_049671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCase_in_rule__ListCase__CasesAssignment_1_149702 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp_in_rule__Altern__Alt1Assignment_049733 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp_in_rule__Altern__Alt2Assignment_249764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleListBind_in_rule__DDecl__BindListAssignment_0_149795 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExp_in_rule__DDecl__EAssignment_0_349826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Ident__SAssignment49857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Label__NameAssignment_049029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INTEGER_in_rule__Label__IndexAssignment_1_149064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePattAss_in_rule__ListPattAss__AssignmentsAssignment_1_049095 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePattAss_in_rule__ListPattAss__AssignmentsAssignment_1_1_149126 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePattArg_in_rule__ListPatt__PatternsAssignment49157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_rule__Arg__NameAssignment_049188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_rule__Arg__WildcardAssignment_149224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_rule__Arg__NameAssignment_2_149263 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_049294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_79_in_rule__Bind__WildcardAssignment_149330 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_2_149369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleIdent_in_rule__Bind__NameAssignment_2_2_149400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBind_in_rule__ListBind__BindingsAssignment_049431 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBind_in_rule__ListBind__BindingsAssignment_1_149462 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExp_in_rule__ListTupleComp__ElementsAssignment_1_049493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExp_in_rule__ListTupleComp__ElementsAssignment_1_1_149524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePatt_in_rule__ListPattTupleComp__PatternsAssignment_1_049555 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePatt_in_rule__ListPattTupleComp__PatternsAssignment_1_1_149586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulePatt_in_rule__Case__PatternAssignment_049617 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExp_in_rule__Case__RightAssignment_249648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCase_in_rule__ListCase__CasesAssignment_049679 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCase_in_rule__ListCase__CasesAssignment_1_149710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExp_in_rule__Altern__Alt1Assignment_049741 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExp_in_rule__Altern__Alt2Assignment_249772 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleListBind_in_rule__DDecl__BindListAssignment_0_149803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExp_in_rule__DDecl__EAssignment_0_349834 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Ident__SAssignment49865 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Exp6__Group_10_1_0__0_in_synpred71_InternalGF5672 = new BitSet(new long[]{0x0000000000000002L});
 
 }

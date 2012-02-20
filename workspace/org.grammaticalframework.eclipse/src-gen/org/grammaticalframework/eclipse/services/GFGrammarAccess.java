@@ -4256,24 +4256,28 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Label");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cNameIdentParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final CrossReference cNameIdentCrossReference_0_0 = (CrossReference)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cNameIdentIDTerminalRuleCall_0_0_1 = (RuleCall)cNameIdentCrossReference_0_0.eContents().get(1);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Keyword cDollarSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cIndexAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cIndexIntegerTerminalRuleCall_1_1_0 = (RuleCall)cIndexAssignment_1_1.eContents().get(0);
 		
 		//Label:
-		//	name=Ident | "$" index=Integer;
+		//	name=[Ident] | "$" index=Integer;
 		public ParserRule getRule() { return rule; }
 
-		//name=Ident | "$" index=Integer
+		//name=[Ident] | "$" index=Integer
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//name=Ident
+		//name=[Ident]
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//Ident
-		public RuleCall getNameIdentParserRuleCall_0_0() { return cNameIdentParserRuleCall_0_0; }
+		//[Ident]
+		public CrossReference getNameIdentCrossReference_0_0() { return cNameIdentCrossReference_0_0; }
+
+		//ID
+		public RuleCall getNameIdentIDTerminalRuleCall_0_0_1() { return cNameIdentIDTerminalRuleCall_0_0_1; }
 
 		//"$" index=Integer
 		public Group getGroup_1() { return cGroup_1; }
@@ -5510,7 +5514,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Label:
-	//	name=Ident | "$" index=Integer;
+	//	name=[Ident] | "$" index=Integer;
 	public LabelElements getLabelAccess() {
 		return (pLabel != null) ? pLabel : (pLabel = new LabelElements());
 	}

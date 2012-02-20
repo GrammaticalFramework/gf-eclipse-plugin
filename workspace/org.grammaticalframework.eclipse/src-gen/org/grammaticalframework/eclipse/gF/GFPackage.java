@@ -1918,7 +1918,7 @@ public interface GFPackage extends EPackage
   int LABEL = 29;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * The feature id for the '<em><b>Name</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -6354,10 +6354,10 @@ public interface GFPackage extends EPackage
   EClass getLabel();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Label#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link org.grammaticalframework.eclipse.gF.Label#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @return the meta object for the reference '<em>Name</em>'.
    * @see org.grammaticalframework.eclipse.gF.Label#getName()
    * @see #getLabel()
    * @generated
@@ -8204,7 +8204,7 @@ public interface GFPackage extends EPackage
     EClass LABEL = eINSTANCE.getLabel();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Name</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated

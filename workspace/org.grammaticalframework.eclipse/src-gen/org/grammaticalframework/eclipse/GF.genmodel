@@ -206,7 +206,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//PattAss/value"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//Label">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Label/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GF.ecore#//Label/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Label/index"/>
     </genClasses>
     <genClasses ecoreClass="GF.ecore#//ListPattAss">

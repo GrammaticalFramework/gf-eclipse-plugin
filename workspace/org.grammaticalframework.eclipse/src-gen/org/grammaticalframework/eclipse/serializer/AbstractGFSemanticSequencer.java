@@ -763,7 +763,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=Ident | index=Integer)
+	 *     (name=[Ident|ID] | index=Integer)
 	 */
 	protected void sequence_Label(EObject context, Label semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

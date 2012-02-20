@@ -13,6 +13,7 @@ import java.util.Collections;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
@@ -53,6 +54,10 @@ public class FakeScope implements IScope {
 			ieod = i;
 			break;
 		}
+	}
+
+	public FakeScope(EObject context, EReference reference) {
+		
 	}
 
 	public IEObjectDescription getSingleElement(QualifiedName name) {

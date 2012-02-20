@@ -10,6 +10,7 @@
 package org.grammaticalframework.eclipse;
 
 import org.grammaticalframework.eclipse.documentation.GFDocumentationProvider;
+import org.grammaticalframework.eclipse.linking.GFLinkingService;
 import org.grammaticalframework.eclipse.naming.GFQualifiedNameProvider;
 import org.grammaticalframework.eclipse.resource.GFResourceDescriptionStrategy;
 import org.grammaticalframework.eclipse.scoping.GFScopeProvider;
@@ -47,6 +48,11 @@ public class GFRuntimeModule extends org.grammaticalframework.eclipse.AbstractGF
 	public Class<? extends org.eclipse.xtext.scoping.IGlobalScopeProvider> bindIGlobalScopeProvider() {
 //		return GFGlobalScopeProvider.class;
 		return GFTagBasedGlobalScopeProvider.class;
+	}
+	
+	@Override
+	public Class<? extends org.eclipse.xtext.linking.ILinkingService> bindILinkingService() {
+		return GFLinkingService.class;
 	}
 
 	public Class<? extends org.eclipse.xtext.documentation.IEObjectDocumentationProvider> bindIEObjectDocumentationProvider() {

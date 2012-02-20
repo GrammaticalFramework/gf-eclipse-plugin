@@ -6405,20 +6405,15 @@ ruleLabel returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		{ 
-	        newCompositeNode(grammarAccess.getLabelAccess().getNameIdentParserRuleCall_0_0()); 
-	    }
-		lv_name_0_0=ruleIdent		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getLabelRule());
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getLabelRule());
 	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"Ident");
-	        afterParserOrEnumRuleCall();
-	    }
+        }
+	otherlv_0=RULE_ID
+	{
+		newLeafNode(otherlv_0, grammarAccess.getLabelAccess().getNameIdentCrossReference_0_0()); 
+	}
 
 )
 )

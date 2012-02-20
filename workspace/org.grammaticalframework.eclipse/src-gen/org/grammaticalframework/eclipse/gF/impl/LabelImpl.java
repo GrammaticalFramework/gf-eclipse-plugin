@@ -6,7 +6,6 @@
 package org.grammaticalframework.eclipse.gF.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -35,7 +34,7 @@ import org.grammaticalframework.eclipse.gF.Label;
 public class LabelImpl extends MinimalEObjectImpl.Container implements Label
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getName()
@@ -92,6 +91,16 @@ public class LabelImpl extends MinimalEObjectImpl.Container implements Label
    */
   public Ident getName()
   {
+    if (name != null && name.eIsProxy())
+    {
+      InternalEObject oldName = (InternalEObject)name;
+      name = (Ident)eResolveProxy(oldName);
+      if (name != oldName)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GFPackage.LABEL__NAME, oldName, name));
+      }
+    }
     return name;
   }
 
@@ -100,16 +109,9 @@ public class LabelImpl extends MinimalEObjectImpl.Container implements Label
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(Ident newName, NotificationChain msgs)
+  public Ident basicGetName()
   {
-    Ident oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.LABEL__NAME, oldName, newName);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
+    return name;
   }
 
   /**
@@ -119,18 +121,10 @@ public class LabelImpl extends MinimalEObjectImpl.Container implements Label
    */
   public void setName(Ident newName)
   {
-    if (newName != name)
-    {
-      NotificationChain msgs = null;
-      if (name != null)
-        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.LABEL__NAME, null, msgs);
-      if (newName != null)
-        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.LABEL__NAME, null, msgs);
-      msgs = basicSetName(newName, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.LABEL__NAME, newName, newName));
+    Ident oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.LABEL__NAME, oldName, name));
   }
 
   /**
@@ -162,28 +156,13 @@ public class LabelImpl extends MinimalEObjectImpl.Container implements Label
    * @generated
    */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case GFPackage.LABEL__NAME:
-        return basicSetName(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
       case GFPackage.LABEL__NAME:
-        return getName();
+        if (resolve) return getName();
+        return basicGetName();
       case GFPackage.LABEL__INDEX:
         return getIndex();
     }

@@ -24313,8 +24313,12 @@ rule__Label__NameAssignment_0
     }
 :
 (
-{ before(grammarAccess.getLabelAccess().getNameIdentParserRuleCall_0_0()); }
-	ruleIdent{ after(grammarAccess.getLabelAccess().getNameIdentParserRuleCall_0_0()); }
+{ before(grammarAccess.getLabelAccess().getNameIdentCrossReference_0_0()); }
+(
+{ before(grammarAccess.getLabelAccess().getNameIdentIDTerminalRuleCall_0_0_1()); }
+	RULE_ID{ after(grammarAccess.getLabelAccess().getNameIdentIDTerminalRuleCall_0_0_1()); }
+)
+{ after(grammarAccess.getLabelAccess().getNameIdentCrossReference_0_0()); }
 )
 
 ;

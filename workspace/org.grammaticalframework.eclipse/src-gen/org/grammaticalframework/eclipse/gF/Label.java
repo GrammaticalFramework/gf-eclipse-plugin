@@ -27,26 +27,26 @@ import org.eclipse.emf.ecore.EObject;
 public interface Label extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' containment reference.
+   * Returns the value of the '<em><b>Name</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Name</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' containment reference.
+   * @return the value of the '<em>Name</em>' reference.
    * @see #setName(Ident)
    * @see org.grammaticalframework.eclipse.gF.GFPackage#getLabel_Name()
-   * @model containment="true"
+   * @model
    * @generated
    */
   Ident getName();
 
   /**
-   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Label#getName <em>Name</em>}' containment reference.
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Label#getName <em>Name</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' containment reference.
+   * @param value the new value of the '<em>Name</em>' reference.
    * @see #getName()
    * @generated
    */
