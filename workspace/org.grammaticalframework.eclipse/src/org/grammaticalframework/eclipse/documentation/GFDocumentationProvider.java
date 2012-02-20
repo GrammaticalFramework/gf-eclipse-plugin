@@ -89,7 +89,7 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		for (INode abstractNode : node.getAsTreeIterable()) {
 			if (abstractNode instanceof ILeafNode && !((ILeafNode) abstractNode).isHidden())
 				// Not interested in non-hidden nodes
-				break;
+				continue;
 			if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof TerminalRule) {
 				String name = ((TerminalRule) abstractNode.getGrammarElement()).getName();
 				String comment = ((ILeafNode) abstractNode).getText();
@@ -138,15 +138,22 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		if (node==null) return null;
 		int originalLineNo = node.getEndLine();
 		ICompositeNode originalNode = node;
+		String tryComment;
+		
+		// Check inside
+//		s = checkNodeForComments(node, originalLineNo);
+//		if (s!=null) {
+//			sb.append(s);
+//		}
 		
 		// Check right, on same line!
 		while (node!=null && !(node.getSemanticElement() instanceof TopDef) && sb.length()==0) {
 			INode sibling = node;
 			while (sibling.hasNextSibling()) {
 				sibling = sibling.getNextSibling();
-				String s = checkNodeForComments(sibling, originalLineNo);
-				if (s!=null) {
-					sb.append(s);
+				tryComment = checkNodeForComments(sibling, originalLineNo);
+				if (tryComment!=null) {
+					sb.append(tryComment);
 				}
 			}
 			// climb upwards
@@ -158,9 +165,9 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		while (node!=null && !(node.getSemanticElement() instanceof TopDef) && sb.length()==0) {
 			INode sibling = node;
 			while (sibling.hasPreviousSibling()) {
-				String s = checkNodeForComments(sibling, originalLineNo-1);
-				if (s!=null) {
-					sb.append(s);
+				tryComment = checkNodeForComments(sibling, originalLineNo-1);
+				if (tryComment!=null) {
+					sb.append(tryComment);
 				}
 				sibling = sibling.getPreviousSibling();
 			}

@@ -33,7 +33,6 @@ import org.grammaticalframework.eclipse.gF.OperDef;
 import org.grammaticalframework.eclipse.gF.ParConstr;
 import org.grammaticalframework.eclipse.gF.ParamDef;
 import org.grammaticalframework.eclipse.gF.SourceModule;
-import org.grammaticalframework.eclipse.gF.TopDef;
 import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
 
 import com.google.common.base.Function;
@@ -148,7 +147,7 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 	public static boolean shouldBeExported(Ident ident) {
 		EObject parent = ident.eContainer();
 		EObject grandParent = parent.eContainer();
-		EObject greatGrandParent = grandParent.eContainer();
+//		EObject greatGrandParent = grandParent.eContainer();
 		
 		boolean ans = (
 			// Always include "raw" module names, including this one!
@@ -165,7 +164,8 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 			|| parent instanceof DefDef // def
 			|| parent instanceof DataDef // data
 			|| parent instanceof ParamDef || parent instanceof ParConstr // param
-			|| (grandParent instanceof OperDef && greatGrandParent instanceof TopDef) // oper (outer)
+//			|| (grandParent instanceof OperDef && greatGrandParent instanceof TopDef) // oper (outer)
+			|| (grandParent instanceof OperDef) // oper (outer AND inner)
 //			|| grandParent instanceof TermDef
 		);
 		return ans;
