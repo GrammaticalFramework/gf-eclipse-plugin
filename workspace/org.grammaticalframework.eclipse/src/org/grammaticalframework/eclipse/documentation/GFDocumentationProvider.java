@@ -9,6 +9,7 @@
  */
 package org.grammaticalframework.eclipse.documentation;
 
+import java.util.Arrays;
 import java.util.Collections;
 
 import org.apache.log4j.Logger;
@@ -72,7 +73,7 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		if (o instanceof Ident) {
 			String gfDoc = findComment(o);
 			String documentation = textDispatcher.invoke(o.eContainer());
-			String format = "%s <font style=\"color:#888; font-style:italic;\">(inline comment)</font><br/>%s";
+			String format = "<i>%s <font style=\"color:#888;\">(inline comment)</font></i><br/>%s";
 			return (gfDoc!=null) ? String.format(format, gfDoc, documentation) : documentation;
 		}
 		else {
@@ -81,29 +82,38 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		}
 	}
 	
-	// TODO: what about --: gfDoc?
-	String startTag = "--"; // regex
-	String ruleName = "SL_COMMENT";
+	String[] ruleNamesSingle = new String[]{"SL_COMMENT", "GF_DOC"};
+	String[] ruleNamesMulti = new String[]{"ML_COMMENT"};
 
 	private String checkNodeForComments(INode node, int originalLineNo) {
-//		int originalOffset = node.getOffset();
 		for (INode abstractNode : node.getAsTreeIterable()) {
-			// only consider stuff on the right!
-//			if (abstractNode.getTotalOffset() <= originalOffset) {
-//				continue;
-//			}
-			if (abstractNode.getTotalStartLine() != originalLineNo) {
-				// A single-line comment can be on the same original line
-				continue;
-			}
 			if (abstractNode instanceof ILeafNode && !((ILeafNode) abstractNode).isHidden())
 				// Not interested in non-hidden nodes
 				break;
-			if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof TerminalRule
-					&& ruleName.equalsIgnoreCase(((TerminalRule) abstractNode.getGrammarElement()).getName())) {
+			if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof TerminalRule) {
+				String name = ((TerminalRule) abstractNode.getGrammarElement()).getName();
 				String comment = ((ILeafNode) abstractNode).getText();
-				if (comment.matches("(?s)" + startTag + ".*")) {
-					return comment;
+				
+				// Single-line comment
+				if (Arrays.asList(ruleNamesSingle).contains(name)) {
+					// A single-line comment can only be on the same original line
+					if (abstractNode.getTotalStartLine() != originalLineNo) {
+						continue;
+					}
+					if (comment.matches("(?s)--:?.*")) { // (?s) turns on DOTALL
+						return comment.replaceAll("\\A--:?", "");
+					}
+				}
+				
+				// Multi-line comment
+				else if (Arrays.asList(ruleNamesMulti).contains(name)) {
+					// A multi-line comment can only be before original line
+					if (abstractNode.getTotalStartLine() > originalLineNo) {
+						continue;
+					}
+					if (comment.matches("(?s)\\{-.*?-\\}")) { // (?s) turns on DOTALL
+						return comment.replaceAll("\\{-|-\\}", "");
+					}
 				}
 			}
 		}
@@ -161,10 +171,8 @@ public class GFDocumentationProvider implements IEObjectDocumentationProvider {
 		// Format as needed
 		if (sb.length()>0) {
 			String returnValue = sb.toString();
-			returnValue = returnValue.replaceAll("\\A" + startTag, "");
-//			returnValue = returnValue.replaceAll(endTag + "\\z", "");
-//			returnValue = returnValue.replaceAll("(?m)^"+ whitespace + linePrefix, "");
-//			returnValue = returnValue.replaceAll("(?m)" + whitespace + linePostfix + whitespace + "$", "");
+			returnValue = returnValue.replaceAll("\\n|\\r|\\t", " ");
+			returnValue = returnValue.replaceAll("\\s{2,}", " ");
 			return returnValue.trim();
 		} else {
 			return null;
