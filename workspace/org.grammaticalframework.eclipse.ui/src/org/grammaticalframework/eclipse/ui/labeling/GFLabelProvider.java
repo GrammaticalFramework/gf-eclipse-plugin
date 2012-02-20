@@ -12,7 +12,6 @@ package org.grammaticalframework.eclipse.ui.labeling;
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider;
 import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.xtext.scoping.IScopeProvider;
 import org.eclipse.xtext.ui.editor.utils.TextStyle;
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider;
 import org.eclipse.xtext.ui.label.StylerFactory;
@@ -133,9 +132,6 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 		return null;
 	}
 	
-	@Inject
-	IScopeProvider scoper;
-	
 	/**
 	 * This is used for the contextual pop-ups. It returns the "first line".
 	 * Note: For cross-references, id points to the RESOLVED reference, not the referer. 
@@ -143,24 +139,9 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 	 * @return
 	 */
 	public Object text(Ident id) {
-		
-		// TODO Is this modulename correct? It should really come from the scoping
 		String modname = GFScopingHelper.getSourceModule(id).getType().getName().getS();
 		TopDef topdef = GFScopingHelper.getTopDef(id);
 		return String.format("%s %s.%s", this.text(topdef), modname, id.getS());
-		
-//		IScope scope = scoper.getScope(id, id.eContainmentFeature());
-//		IEObjectDescription guy = scope.getSingleElement(id);
-//		Iterable<IEObjectDescription> guys = scope.getElements(id);
-//		for (IEObjectDescription g : guys) {
-//			g.getUserDataKeys();
-//		}
-//		guy.getEObjectOrProxy().eResource()
-		
-//		Collection<Setting> list = EcoreUtil.UsageCrossReferencer.find(id, id.eResource());
-//		for (EObject ref : id.eContainingFeature().eCrossReferences()) {
-//		}
-//		return super.text(id);
 	}
 
 }
