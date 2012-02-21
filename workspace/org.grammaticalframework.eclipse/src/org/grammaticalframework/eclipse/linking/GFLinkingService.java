@@ -10,11 +10,16 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
+import org.eclipse.xtext.CrossReference;
+import org.eclipse.xtext.TerminalRule;
 import org.eclipse.xtext.diagnostics.IDiagnosticConsumer;
 import org.eclipse.xtext.linking.impl.DefaultLinkingService;
 import org.eclipse.xtext.linking.impl.IllegalNodeException;
 import org.eclipse.xtext.linking.impl.ImportedNamesAdapter;
+import org.eclipse.xtext.nodemodel.BidiTreeIterable;
+import org.eclipse.xtext.nodemodel.ILeafNode;
 import org.eclipse.xtext.nodemodel.INode;
+import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.Label;
@@ -41,14 +46,35 @@ public class GFLinkingService extends DefaultLinkingService {
 		
 		// If no matches, and we are dealing with a projection label, then trivially satisfy
 		if (list.isEmpty() && context instanceof Label) {
-//			Label label = (Label)context;
-			String name = node.getText();
 			
-			// TODO This condition is just temporary! We need to check if previous Ident is a ref to a module
-			if (name.equals("s")) {
+			INode prevNode = node.getParent().getPreviousSibling().getPreviousSibling();
+			Ident prevIdent = null;
+			CrossReference prevCrossRef = null;
+			boolean isQualifiedName = false;
+			search: for (INode abstractNode : prevNode.getAsTreeIterable()) {
+				if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof CrossReference) {
+					prevIdent = ((Exp)abstractNode.getSemanticElement()).getRef();
+					prevNode = abstractNode;
+					prevCrossRef = (CrossReference) abstractNode.getGrammarElement();
+
+					// TODO we need to know if prevCrossRef references a MODULE NAME
+					
+					// See if previous ident is a link to a module/alias
+					List<EObject> prevLinks = getLinkedObjects(prevIdent, GFPackage.Literals.EXP__REF, prevNode);
+					for (EObject eobj : prevLinks) {
+						if (eobj.eClass()==null) {
+							isQualifiedName = true;
+							break search;
+						}
+					}
+				}				
+			}
+			
+			// If we are dealing with projection, then satisfy it trivially
+			if (!isQualifiedName) {
 				// create the item
 				Ident newIdent = GFFactoryImpl.eINSTANCE.createIdent();
-				newIdent.setS(name);
+				newIdent.setS(node.getText());
 				
 				// add to resource
 				Resource r = context.eResource().getResourceSet().createResource(DUMMY_RESOURCE_URI);
