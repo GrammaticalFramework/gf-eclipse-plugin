@@ -9,7 +9,9 @@
  */
 package org.grammaticalframework.eclipse;
 
+import org.eclipse.xtext.linking.lazy.LazyLinker;
 import org.grammaticalframework.eclipse.documentation.GFDocumentationProvider;
+import org.grammaticalframework.eclipse.linking.GFLinker;
 import org.grammaticalframework.eclipse.linking.GFLinkingService;
 import org.grammaticalframework.eclipse.naming.GFQualifiedNameProvider;
 import org.grammaticalframework.eclipse.resource.GFResourceDescriptionStrategy;
@@ -50,10 +52,17 @@ public class GFRuntimeModule extends org.grammaticalframework.eclipse.AbstractGF
 		return GFTagBasedGlobalScopeProvider.class;
 	}
 	
+	// These linking extensions handle projection/qualification of labels
 	@Override
 	public Class<? extends org.eclipse.xtext.linking.ILinkingService> bindILinkingService() {
 		return GFLinkingService.class;
 	}
+	@Override
+	public Class<? extends org.eclipse.xtext.linking.ILinker> bindILinker() {
+		return GFLinker.class;
+	}
+
+	
 
 	public Class<? extends org.eclipse.xtext.documentation.IEObjectDocumentationProvider> bindIEObjectDocumentationProvider() {
 		return GFDocumentationProvider.class;

@@ -18,11 +18,9 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
-import org.eclipse.xtext.nodemodel.ICompositeNode;
-import org.eclipse.xtext.nodemodel.INode;
-import org.eclipse.xtext.nodemodel.util.NodeModelUtils;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.ISelectable;
+import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.MultimapBasedSelectable;
@@ -33,7 +31,6 @@ import org.grammaticalframework.eclipse.gF.Arg;
 import org.grammaticalframework.eclipse.gF.DefDef;
 import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.Ident;
-import org.grammaticalframework.eclipse.gF.Label;
 import org.grammaticalframework.eclipse.gF.LinDef;
 import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListLocDef;
@@ -67,30 +64,15 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	@Inject
 	private OnChangeEvictingCache cache;
 	
+	@Inject
+	ResourceDescriptionsProvider provider;
+
+	
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider#getScope(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference)
 	 */
 	@Override
 	public IScope getScope(final EObject context, final EReference reference) {
-		
-		// If we have a projection Label  (as opposed to qualified name) then we need to trivially satisfy it
-//		if (context instanceof Label) {
-//			if (((Label)context).getName().getS().equals("s")) {
-//				return IScope.NULLSCOPE;
-//			}
-//		}
-		
-		// Are we dealing with a qualified name?
-//		try {
-//		ICompositeNode node = NodeModelUtils.getNode(context);
-//			if (node.getNextSibling().getText().equals(".")) {
-//				INode next = node.getNextSibling().getNextSibling(); 
-//				context = next.getSemanticElement();
-//				reference = context.eContainmentFeature();
-//			}
-//		} catch (NullPointerException _) {
-//			// nevermind
-//		}
 		
 		// Get local scope
 		ISelectable localResourceContent = getLocalScope(context.eResource(), context, reference);

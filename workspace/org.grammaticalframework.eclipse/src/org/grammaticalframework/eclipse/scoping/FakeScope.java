@@ -35,11 +35,10 @@ import com.google.inject.Inject;
  * TODO This doesn't work properly yet - the solution itself is a bad idea really. For now we are just keeping old tags files.
  * 
  */
-@SuppressWarnings("unused")
 public class FakeScope implements IScope {
 	
 	private IEObjectDescription ieod;
-
+	
 //	private IQualifiedNameConverter con = new IQualifiedNameConverter.DefaultImpl();
 	
 	public FakeScope(ResourceDescriptionsProvider provider, Resource resource, EClass type) {
@@ -56,8 +55,13 @@ public class FakeScope implements IScope {
 		}
 	}
 
-	public FakeScope(EObject context, EReference reference) {
-		
+	public FakeScope(ResourceDescriptionsProvider provider, EObject context, EReference reference) {
+		IResourceDescriptions ird = provider.getResourceDescriptions(context.eResource());
+		Iterable<IEObjectDescription> matches = ird.getExportedObjectsByObject(context);
+		for (IEObjectDescription i : matches) {
+			ieod = i;
+			break;
+		}
 	}
 
 	public IEObjectDescription getSingleElement(QualifiedName name) {

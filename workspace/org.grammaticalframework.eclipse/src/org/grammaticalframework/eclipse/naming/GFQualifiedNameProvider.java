@@ -146,6 +146,8 @@ public class GFQualifiedNameProvider extends IQualifiedNameProvider.AbstractImpl
 	 */
 	public static boolean shouldBeExported(Ident ident) {
 		EObject parent = ident.eContainer();
+		if (parent == null)
+			return false;
 		EObject grandParent = parent.eContainer();
 //		EObject greatGrandParent = grandParent.eContainer();
 		
