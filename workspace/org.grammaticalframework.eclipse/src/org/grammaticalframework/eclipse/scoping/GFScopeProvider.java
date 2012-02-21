@@ -20,7 +20,6 @@ import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.ISelectable;
-import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.MultimapBasedSelectable;
@@ -63,10 +62,6 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	 */
 	@Inject
 	private OnChangeEvictingCache cache;
-	
-	@Inject
-	ResourceDescriptionsProvider provider;
-
 	
 	/* (non-Javadoc)
 	 * @see org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider#getScope(org.eclipse.emf.ecore.EObject, org.eclipse.emf.ecore.EReference)

@@ -21,6 +21,11 @@ import org.grammaticalframework.eclipse.gF.Label;
 import org.grammaticalframework.eclipse.gF.impl.GFFactoryImpl;
 
 public class GFLinkingService extends DefaultLinkingService {
+	
+	/**
+	 * URI to dummy resource, which is populated with EObjects to satisfy projections
+	 */
+	public static URI DUMMY_RESOURCE_URI = URI.createURI("dummy.projectionsatisfier");
 
 	/**
 	 * Delegate to the parent method, but if not links are found and the context is determined
@@ -46,14 +51,11 @@ public class GFLinkingService extends DefaultLinkingService {
 				newIdent.setS(name);
 				
 				// add to resource
-				URI uri = URI.createURI("dummy.projectionsatisfier");
-				Resource r = context.eResource().getResourceSet().createResource(uri);
+				Resource r = context.eResource().getResourceSet().createResource(DUMMY_RESOURCE_URI);
 				r.getContents().add(newIdent);
-//				context.eResource().getContents().add(newIdent);
 				
 				// link to it
 				list = Collections.singletonList((EObject)newIdent);
-//				list.add(newIdent);
 			}
 		}
 		
