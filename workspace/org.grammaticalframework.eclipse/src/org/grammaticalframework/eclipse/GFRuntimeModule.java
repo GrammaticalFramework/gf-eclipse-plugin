@@ -9,7 +9,6 @@
  */
 package org.grammaticalframework.eclipse;
 
-import org.eclipse.xtext.linking.lazy.LazyLinker;
 import org.grammaticalframework.eclipse.documentation.GFDocumentationProvider;
 import org.grammaticalframework.eclipse.linking.GFLinker;
 import org.grammaticalframework.eclipse.linking.GFLinkingService;

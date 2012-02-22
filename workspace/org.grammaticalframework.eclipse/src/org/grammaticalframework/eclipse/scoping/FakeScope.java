@@ -15,18 +15,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
-import org.eclipse.xtext.resource.EObjectDescription;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.resource.impl.ResourceDescriptionsProvider;
 import org.eclipse.xtext.scoping.IScope;
-import org.grammaticalframework.eclipse.gF.GFFactory;
-import org.grammaticalframework.eclipse.gF.Ident;
-import org.grammaticalframework.eclipse.gF.impl.IdentImpl;
-
-import com.google.inject.Inject;
 
 /**
  * A fake implementation which will satisfay ANY scoping request.
