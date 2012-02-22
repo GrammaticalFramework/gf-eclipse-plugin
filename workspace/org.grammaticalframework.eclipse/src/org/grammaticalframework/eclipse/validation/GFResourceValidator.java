@@ -17,6 +17,7 @@ import org.eclipse.xtext.validation.CheckMode;
 import org.eclipse.xtext.validation.Issue;
 import org.eclipse.xtext.validation.ResourceValidatorImpl;
 import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
+import org.grammaticalframework.eclipse.linking.GFLinkingService;
 
 /**
  * A litte insurance to prevent validating on externl linked resources
@@ -31,6 +32,11 @@ public class GFResourceValidator extends ResourceValidatorImpl {
 		// Never validate anything in the external folder
 		// I suspect this should never occur once we manage to make links read-only
 		if (GFLibraryHelper.isLinkedResource(resource)) {
+			return null;
+		}
+		
+		// 
+		if (resource.getURI().equals(GFLinkingService.DUMMY_RESOURCE_URI)) {
 			return null;
 		}
 

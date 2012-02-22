@@ -22,7 +22,11 @@ import org.eclipse.xtext.nodemodel.INode;
 import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.Included;
+import org.grammaticalframework.eclipse.gF.Inst;
 import org.grammaticalframework.eclipse.gF.Label;
+import org.grammaticalframework.eclipse.gF.ModType;
+import org.grammaticalframework.eclipse.gF.Open;
 import org.grammaticalframework.eclipse.gF.impl.GFFactoryImpl;
 
 public class GFLinkingService extends DefaultLinkingService {
@@ -41,51 +45,70 @@ public class GFLinkingService extends DefaultLinkingService {
 	@Override
 	public List<EObject> getLinkedObjects(EObject context, EReference ref, INode node) throws IllegalNodeException {
 
-		// Delegate to parent
-		List<EObject> list = super.getLinkedObjects(context, ref, node);
-		
-		// If no matches, and we are dealing with a projection label, then trivially satisfy
-		if (list.isEmpty() && context instanceof Label) {
+		// If are dealing with a projection label, then trivially satisfy
+		if (isProjection(context, node)) {
+			// create the item
+			Ident newIdent = GFFactoryImpl.eINSTANCE.createIdent();
+			newIdent.setS(node.getText());
 			
-			INode prevNode = node.getParent().getPreviousSibling().getPreviousSibling();
-			Ident prevIdent = null;
-			CrossReference prevCrossRef = null;
-			boolean isQualifiedName = false;
-			search: for (INode abstractNode : prevNode.getAsTreeIterable()) {
-				if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof CrossReference) {
-					prevIdent = ((Exp)abstractNode.getSemanticElement()).getRef();
-					prevNode = abstractNode;
-					prevCrossRef = (CrossReference) abstractNode.getGrammarElement();
+			// add to resource
+			Resource r = context.eResource().getResourceSet().createResource(DUMMY_RESOURCE_URI);
+			r.getContents().add(newIdent);
+			
+			// link to it
+			return Collections.singletonList((EObject)newIdent);
+		}
+		
+		else {
+			// Delegate to parent
+			List<EObject> list = super.getLinkedObjects(context, ref, node);
+			return list;
+		}
+	}
+	
+	/**
+	 * Determine whether the context/node is a variable projection.
+	 * @param context
+	 * @param node
+	 * @return
+	 */
+	private boolean isProjection(EObject context, INode node) {
+		
+		if (!(context instanceof Label)) {
+			return false;
+		}
+		
+		// Get the previous sibling before the period
+		INode prevNode = node.getParent().getPreviousSibling().getPreviousSibling();
+		for (INode abstractNode : prevNode.getAsTreeIterable()) {
+			if (abstractNode instanceof ILeafNode && abstractNode.getGrammarElement() instanceof CrossReference) {
+				
+				// If previous node is something other than an expression (eg another label), 
+				// then this is definitely a projection (qualified names can only have two segments)
+				if (!(abstractNode.getSemanticElement() instanceof Exp)) {
+					return true;
+				}
 
-					// TODO we need to know if prevCrossRef references a MODULE NAME
-					
-					// See if previous ident is a link to a module/alias
-					List<EObject> prevLinks = getLinkedObjects(prevIdent, GFPackage.Literals.EXP__REF, prevNode);
+				// See if previous ident is a link to a module/alias
+				try {
+					Ident prevIdent = ((Exp)abstractNode.getSemanticElement()).getRef();
+					List<EObject> prevLinks = super.getLinkedObjects(prevIdent, GFPackage.Literals.EXP__REF, abstractNode);
 					for (EObject eobj : prevLinks) {
-						if (eobj.eClass()==null) {
-							isQualifiedName = true;
-							break search;
+						EObject parent = eobj.eContainer();
+						if (parent instanceof ModType || parent instanceof Open || parent instanceof Included || parent instanceof Inst) {
+							return false;
 						}
 					}
-				}				
-			}
-			
-			// If we are dealing with projection, then satisfy it trivially
-			if (!isQualifiedName) {
-				// create the item
-				Ident newIdent = GFFactoryImpl.eINSTANCE.createIdent();
-				newIdent.setS(node.getText());
-				
-				// add to resource
-				Resource r = context.eResource().getResourceSet().createResource(DUMMY_RESOURCE_URI);
-				r.getContents().add(newIdent);
-				
-				// link to it
-				list = Collections.singletonList((EObject)newIdent);
+				} catch (NullPointerException e) {
+					// Not very elegant, but this essentially happens when prevIdent is not resolved.
+					// Thus treat is a projection
+					return true;
+				}
 			}
 		}
 		
-		return list;
+		// I guess it is a projection, then
+		return true;
 	}
 
 }
