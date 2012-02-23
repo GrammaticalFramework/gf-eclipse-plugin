@@ -434,16 +434,25 @@
      <view
            category="org.grammaticalframework.eclipse.ui.views"
            class="org.grammaticalframework.eclipse.ui.views.GFLibraryTableView"
-           icon="icons/gf-logo.png"
+           icon="icons/library-browser.png"
            id="org.grammaticalframework.eclipse.ui.views.GFLibraryTableView"
            name="GF RGL Browser (Beta)">
      </view>
      <view
            category="org.grammaticalframework.eclipse.ui.views"
            class="org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView"
-           icon="icons/gf-logo.png"
+           icon="icons/hierarchy-browser.png"
            id="org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView"
            name="GF External Libraries">
+     </view>
+     <view
+           allowMultiple="false"
+           category="org.grammaticalframework.eclipse.ui.views"
+           class="org.grammaticalframework.eclipse.ui.views.GFTreebankManagerView"
+           icon="icons/treebank-manager.png"
+           id="org.grammaticalframework.eclipse.ui.views.GFTreebankManagerView"
+           name="GF Treebank Manager"
+           restorable="true">
      </view>
   </extension>
   <extension
