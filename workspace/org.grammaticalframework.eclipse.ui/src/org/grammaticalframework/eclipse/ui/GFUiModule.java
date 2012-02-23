@@ -21,8 +21,13 @@ import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
 import org.eclipse.ui.console.IOConsoleOutputStream;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.ui.editor.outline.actions.IOutlineContribution;
 import org.grammaticalframework.eclipse.GFPreferences;
+import org.grammaticalframework.eclipse.ui.editor.outline.ExpandAllAction;
 import org.grammaticalframework.eclipse.ui.perspectives.GFConsole;
+
+import com.google.inject.Binder;
+import com.google.inject.name.Names;
 
 /**
  * Use this class to register components to be used within the IDE.
@@ -190,4 +195,8 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 //		return org.grammaticalframework.eclipse.ui.editor.validation.GFValidatingEditorCallback.class;
 ////		return org.eclipse.xtext.ui.editor.validation.ValidatingEditorCallback.class;
 //	}
+	
+	public void configureExpandAction(Binder binder) {
+		binder.bind(IOutlineContribution.class).annotatedWith(Names.named("expandOutline")).to(ExpandAllAction.class);
+	}
 }

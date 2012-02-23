@@ -9,6 +9,7 @@
  */
 package org.grammaticalframework.eclipse.ui.labeling;
 
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.xtext.ui.IImageHelper;
 import org.grammaticalframework.eclipse.gF.SourceModule;
@@ -17,11 +18,10 @@ import com.google.inject.Inject;
 
 /**
  * Refer: org.eclipse.xtext.xtend2.ui.labeling.Xtend2Images
- * URL: http://git.eclipse.org/c/tmf/org.eclipse.xtext.git/tree/plugins/org.eclipse.xtext.xtend2.ui/src/org/eclipse/xtext/xtend2/ui/labeling/Xtend2Images.java?id=v2.0.1
+ * Note: If you need an ImageDescriptor, use: {@link ImageDescriptor#createFromImage(Image)}
+ * 
  * @author John J. Camilleri
- *
  */
-
 public class GFImages {
 
 	/**
@@ -30,12 +30,19 @@ public class GFImages {
 	@Inject
 	private IImageHelper imageHelper;
 	
-	/* --------- */
-	
+	/**
+	 * The GF logo
+	 */
 	public Image logo() {
 		return imageHelper.getImage("gf-logo.png");
 	}
 	
+	/**
+	 * An icon based on the module type
+	 * 
+	 * @param module
+	 * @return
+	 */
 	public Image forModule(SourceModule module) {
 		return imageHelper.getImage( filenameForModule(module) );
 	}
@@ -159,6 +166,33 @@ public class GFImages {
 		return forAnyJudgement();
 	}
 
+	/**
+	 * Expand all action
+	 */
+	public Image forExpandAll() {
+		return imageHelper.getImage("expandall.png");
+	}
+	
+	/**
+	 * Collapse all action
+	 */
+	public Image forCollapseAll() {
+		return imageHelper.getImage("collapseall.png");
+	}
 
+	/**
+	 * Expand all action (disabled)
+	 */
+	public Image forExpandAllDisabled() {
+		return imageHelper.getImage("expandall-disabled.png");
+	}
+
+	/**
+	 * Collapse all action (disabled)
+	 */
+	public Image forCollapseAllDisabled() {
+		return imageHelper.getImage("collapseall-disabled.png");
+	}
+	
 
 }
