@@ -209,12 +209,4 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 			.to(ExpandAllAction.class);
 	}
 	
-	/**
-	 * 
-	 * @param binder
-	 */
-	public void configureGFImageHelper(Binder binder) {
-		binder
-			.bind(GFImages.class);
-	}
 }

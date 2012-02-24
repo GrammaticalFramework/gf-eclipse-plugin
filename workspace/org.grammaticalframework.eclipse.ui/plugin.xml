@@ -448,7 +448,7 @@
      <view
            allowMultiple="false"
            category="org.grammaticalframework.eclipse.ui.views"
-           class="org.grammaticalframework.eclipse.ui.views.GFTreebankManagerView"
+           class="org.grammaticalframework.eclipse.ui.GFExecutableExtensionFactory:org.grammaticalframework.eclipse.ui.views.GFTreebankManagerView"
            icon="icons/treebank-manager.png"
            id="org.grammaticalframework.eclipse.ui.views.GFTreebankManagerView"
            name="GF Treebank Manager"

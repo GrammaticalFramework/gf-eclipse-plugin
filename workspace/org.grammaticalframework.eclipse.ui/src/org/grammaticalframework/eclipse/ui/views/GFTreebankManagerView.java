@@ -32,8 +32,7 @@ import com.google.inject.Inject;
 public class GFTreebankManagerView extends ViewPart {
 	
 	@Inject
-//	private GFImages images;
-	private IImageHelper images;
+	private GFImages images;
 	
 	private Action runAction;
 	
@@ -85,9 +84,7 @@ public class GFTreebankManagerView extends ViewPart {
 				System.out.println("Running that shit");
 			}
 		};
-//		runAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankRun()));
-		ImageDescriptor img = PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_TOOL_UNDO_DISABLED);
-		runAction.setImageDescriptor(img);
+		runAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankRun()));
 	}	
 
 	private void hookContextMenu() {
