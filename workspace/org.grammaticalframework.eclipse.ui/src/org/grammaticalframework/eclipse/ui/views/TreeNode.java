@@ -12,9 +12,9 @@ package org.grammaticalframework.eclipse.ui.views;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView.ITreeNode;
 
 abstract class TreeNode implements ITreeNode {
+	
 	protected ITreeNode fParent;
 	protected List<ITreeNode> fChildren;
 	protected String number;

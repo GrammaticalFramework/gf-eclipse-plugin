@@ -11,28 +11,27 @@ package org.grammaticalframework.eclipse.ui.views;
 
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.xtext.ui.IImageHelper;
-import org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView.ITreeNode;
-
-import com.google.inject.Inject;
 
 class TreeLabelProvider extends LabelProvider {
 
-	@Inject
-	private IImageHelper imageHelper;
-
 	@Override
-	// TODO This never seems to work :(
 	public Image getImage(Object element) {
-		if (imageHelper != null)
-			return imageHelper.getImage("library-reference.png");
-		else
-			return super.getImage(element);
+		try {
+			return ((ITreeNode)element).getImage();
+		}
+		catch (ClassCastException _) {
+			return null;
+		}
 	}
 
 	@Override
 	public String getText(Object element) {
-		return ((ITreeNode)element).getName();
+		try {
+			return ((ITreeNode)element).getName();
+		}
+		catch (ClassCastException _) {
+			return element.toString();
+		}
 	}
 	
 }

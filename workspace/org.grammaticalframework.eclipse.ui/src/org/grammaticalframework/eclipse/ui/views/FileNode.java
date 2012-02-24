@@ -12,9 +12,11 @@ package org.grammaticalframework.eclipse.ui.views;
 import java.util.List;
 
 import org.eclipse.core.resources.IFile;
-import org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView.ITreeNode;
+import org.eclipse.swt.graphics.Image;
 
 class FileNode extends TreeNode {
+	
+	private Image image;
 	private IFile fFile;
 
 	public FileNode(ITreeNode parent, IFile file) {
@@ -30,10 +32,19 @@ class FileNode extends TreeNode {
 	}
 
 	protected void createChildren(List<ITreeNode> children) {
-		// empty
+		// a file has no children
 	}
 
+	@Override
 	public boolean hasChildren() {
 		return false;
+	}
+
+	public Image getImage() {
+		return image;
+	}
+	
+	public void setImage(Image image) {
+		this.image = image;
 	}
 }

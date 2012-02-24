@@ -15,10 +15,10 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
-import org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView.ITreeNode;
+import org.eclipse.swt.graphics.Image;
 
 class FolderNode extends TreeNode {
-	private IFolder fFolder; /* actual data object */
+	private IFolder fFolder;
 
 	public FolderNode(IFolder folder) {
 		this(null, folder);
@@ -45,8 +45,11 @@ class FolderNode extends TreeNode {
 					children.add(new FileNode(this, (IFile) childFile));
 			}
 		} catch (CoreException e) {
-			//GFLibraryTreeView.log.warn("Couldn't get contents of: "+getName(), e);
 		}
+	}
 
+	public Image getImage() {
+		// TODO
+		return null;
 	}
 }

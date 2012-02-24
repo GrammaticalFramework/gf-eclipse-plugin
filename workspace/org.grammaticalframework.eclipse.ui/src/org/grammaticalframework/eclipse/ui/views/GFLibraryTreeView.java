@@ -9,9 +9,9 @@
  */
 package org.grammaticalframework.eclipse.ui.views;
 
-import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.part.*;
@@ -24,6 +24,9 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
+import org.grammaticalframework.eclipse.ui.labeling.GFImages;
+
+import com.google.inject.Inject;
 
 /**
  * This sample class demonstrates how to plug-in a new workbench view. The view
@@ -50,7 +53,13 @@ public class GFLibraryTreeView extends ViewPart {
 	/**
 	 * Logger
 	 */
-	static final Logger log = Logger.getLogger(GFLibraryTreeView.class);
+	protected static final Logger log = Logger.getLogger(GFLibraryTreeView.class);
+	
+	/**
+	 * Image helper
+	 */
+	@Inject
+	private GFImages images;
 
 	private TreeViewer viewer;
 //	private DrillDownAdapter drillDownAdapter;
@@ -58,23 +67,13 @@ public class GFLibraryTreeView extends ViewPart {
 //	private Action action2;
 	private Action doubleClickAction;
 
-	interface ITreeNode {
-		public String getName();
-
-		public List<ITreeNode> getChildren();
-
-		public boolean hasChildren();
-
-		public ITreeNode getParent();
-	}
-
 	private IPartListener2 listener;
-
-	/**
-	 * The constructor.
-	 */
-	public GFLibraryTreeView() {
-	}
+	
+	@Inject
+	FolderContentsTreeContentProvider contentProvider;
+	
+	@Inject
+	TreeSorter sorter;
 
 	/**
 	 * This is a callback that will allow us to create the viewer and initialize
@@ -83,10 +82,15 @@ public class GFLibraryTreeView extends ViewPart {
 	public void createPartControl(Composite parent) {
 		viewer = new TreeViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
 //		drillDownAdapter = new DrillDownAdapter(viewer);
-		viewer.setContentProvider(new TreeContentProvider());
-		viewer.setLabelProvider(new TreeLabelProvider());
+		viewer.setContentProvider(contentProvider);
+		viewer.setLabelProvider(new TreeLabelProvider() {
+			@Override
+			public Image getImage(Object element) {
+				return images.forLibraryReference();
+			}
+		});
 		// viewer.setSorter(new NameSorter());
-		viewer.setComparator(new TreeSorter());
+		viewer.setComparator(sorter);
 		viewer.setInput(null); // our listener below will take care of this
 
 		// Create the help context id for the viewer's control
