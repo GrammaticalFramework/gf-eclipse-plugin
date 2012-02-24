@@ -54,9 +54,9 @@ class ExtensionTypeTreeContentProvider extends AbstractTreeContentProvider {
 	}
 	
 	public Object[] getChildren(Object parentElement) {
-		
+
+		// TODO Should this be moved into TreeNode#createChildren() ?
 		if (parentElement instanceof IProject) {
-			
 			List<ITreeNode> children = new ArrayList<ITreeNode>();
 			IProject project = (IProject)parentElement;
 			try {

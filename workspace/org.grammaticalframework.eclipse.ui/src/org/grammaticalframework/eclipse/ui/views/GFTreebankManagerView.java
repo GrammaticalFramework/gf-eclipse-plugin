@@ -17,18 +17,24 @@ import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Menu;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
@@ -54,9 +60,11 @@ public class GFTreebankManagerView extends ViewPart {
 	@Inject
 	TreeSorter sorter;
 	
-	// Widgets
+	// Actions
 	Action runAction;
+	Action makeGoldStandardAction;
 	
+	// Widgets
 	TableViewer treeFilesViewer;
 	TableViewer outputViewer;
 	
@@ -85,32 +93,26 @@ public class GFTreebankManagerView extends ViewPart {
 			}
 		});
 		
-		statusLabel = new Label(bar, SWT.LEFT);
+		statusLabel = new Label(bar, SWT.FILL);
 //		statusLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER));
 		statusLabel.setText("Status and stats..");
 		
 		// Bottom section with tableviews
         SashForm sash = new SashForm(parent, SWT.HORIZONTAL | SWT.SMOOTH);
-        sash.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true));
+        GridData gd = new GridData(SWT.FILL, SWT.TOP, true, true);
+        gd.minimumHeight = 50;
+        sash.setLayoutData(gd);
         
         // Table of trees files
-        contentProvider.setExtension("trees");
-        treeFilesViewer = new TableViewer(sash, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
-        treeFilesViewer.setContentProvider(contentProvider);
-        treeFilesViewer.setLabelProvider(labelProvider);
-		// treeFilesViewer.setSorter(new NameSorter());
-        treeFilesViewer.setComparator(sorter);
-        treeFilesViewer.setInput(null); // our listener below will take care of this
-        
+        configureTreesViewer(sash);
         
         // Output
-        outputViewer = new TableViewer(sash, SWT.H_SCROLL | SWT.V_SCROLL);
-        
-        for (int i = 0; i < 10; i++) {
-            treeFilesViewer.add("File "+i);
-            outputViewer.add("Output "+i+"A");
-            outputViewer.add("Output "+i+"B");
-        }
+        configureOutputViewer(sash);
+
+        sash.setWeights(new int[]{1,2});
+
+        // Bottom line
+		new Label(parent, SWT.LEFT).setText("bottom text");
         
 		// Actions and menus
 		makeActions();
@@ -120,6 +122,27 @@ public class GFTreebankManagerView extends ViewPart {
 		
 		addEditorListener();
     }
+	
+	private void configureTreesViewer(Composite parent) {
+        contentProvider.setExtension("trees");
+        treeFilesViewer = new TableViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER );
+        treeFilesViewer.setContentProvider(contentProvider);
+        treeFilesViewer.setLabelProvider(new TreeLabelProvider() {
+			@Override
+			public Image getImage(Object element) {
+				// TODO determine if item has GS or not
+				return images.getImage("treebank-item.png");
+			}
+        });
+		// treeFilesViewer.setSorter(new NameSorter());
+//        treeFilesViewer.setComparator(sorter);
+        treeFilesViewer.setInput(null); // our listener below will take care of this
+	}
+	
+	private void configureOutputViewer(Composite parent) {
+        outputViewer = new TableViewer(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER );
+        // one column: icon shows result; tree, lin and gold are on separate lines as same entry.
+	}
 	
 	private void addEditorListener() {
 		// Add a listener which updates the view each time the active editor is changed
@@ -163,11 +186,30 @@ public class GFTreebankManagerView extends ViewPart {
 		runAction = new Action() {
 			@Override
 			public void run() {
+				statusLabel.setText("Running");
 				// get selection from trees panel, or run everything if not
-				statusLabel.setText("Running that shit");
+//				IStructuredSelection selection = (IStructuredSelection) treeFilesViewer.getSelection();
+//				while (selection.iterator().hasNext()) {
+//					Object x = selection.iterator().next();
+					for (int i = 0; i < 5; i++) {
+//						outputViewer.add(x.toString() + " - "+i);
+						outputViewer.add(" - "+i);
+					}
+//				}
+				
 			}
 		};
+		runAction.setText("Run test suite");
 		runAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankRun()));
+		
+		makeGoldStandardAction = new Action() {
+			@Override
+			public void run() {
+				statusLabel.setText("Making gold standard");
+			}
+		};
+		makeGoldStandardAction.setText("Make gold standard");
+		makeGoldStandardAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-new.png")));
 	}	
 
 	private void hookContextMenu() {
@@ -178,9 +220,9 @@ public class GFTreebankManagerView extends ViewPart {
 				GFTreebankManagerView.this.fillContextMenu(manager);
 			}
 		});
-//		Menu menu = menuMgr.createContextMenu(viewer.getControl());
-//		viewer.getControl().setMenu(menu);
-//		getSite().registerContextMenu(menuMgr, viewer);
+		Menu menu = menuMgr.createContextMenu(treeFilesViewer.getControl());
+		treeFilesViewer.getControl().setMenu(menu);
+		getSite().registerContextMenu(menuMgr, treeFilesViewer);
 	}
 
 	private void hookDoubleClickAction() {
@@ -203,7 +245,7 @@ public class GFTreebankManagerView extends ViewPart {
 
 	private void fillContextMenu(IMenuManager manager) {
 		manager.add(runAction);
-//		manager.add(action2);
+		manager.add(makeGoldStandardAction);
 //		manager.add(new Separator());
 //		drillDownAdapter.addNavigationActions(manager);
 	}

@@ -31,4 +31,5 @@ abstract class AbstractTreeContentProvider implements ITreeContentProvider {
 
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
 	}
+
 }
