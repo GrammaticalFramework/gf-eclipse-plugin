@@ -24,7 +24,9 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.ui.editor.outline.actions.IOutlineContribution;
 import org.grammaticalframework.eclipse.GFPreferences;
 import org.grammaticalframework.eclipse.ui.editor.outline.ExpandAllAction;
+import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 import org.grammaticalframework.eclipse.ui.perspectives.GFConsole;
+import org.grammaticalframework.eclipse.ui.views.GFTreebankManagerView;
 
 import com.google.inject.Binder;
 import com.google.inject.name.Names;
@@ -196,7 +198,23 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 ////		return org.eclipse.xtext.ui.editor.validation.ValidatingEditorCallback.class;
 //	}
 	
+	/**
+	 * Expand all action for outline view
+	 * @param binder
+	 */
 	public void configureExpandAction(Binder binder) {
-		binder.bind(IOutlineContribution.class).annotatedWith(Names.named("expandOutline")).to(ExpandAllAction.class);
+		binder
+			.bind(IOutlineContribution.class)
+			.annotatedWith(Names.named("expandOutline"))
+			.to(ExpandAllAction.class);
+	}
+	
+	/**
+	 * 
+	 * @param binder
+	 */
+	public void configureGFImageHelper(Binder binder) {
+		binder
+			.bind(GFImages.class);
 	}
 }

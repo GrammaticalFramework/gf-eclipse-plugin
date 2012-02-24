@@ -5,20 +5,35 @@ import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.ui.IActionBars;
+import org.eclipse.ui.ISharedImages;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.ViewPart;
+import org.eclipse.xtext.ui.IImageHelper;
+import org.grammaticalframework.eclipse.ui.labeling.GFImages;
+
+import com.google.inject.Inject;
 
 public class GFTreebankManagerView extends ViewPart {
+	
+	@Inject
+//	private GFImages images;
+	private IImageHelper images;
 	
 	private Action runAction;
 	
@@ -32,13 +47,21 @@ public class GFTreebankManagerView extends ViewPart {
 	@Override
 	public void createPartControl(Composite parent) {
 		// Layout
-		parent.setLayout(new GridLayout(1, true));
-		new Button(parent, SWT.PUSH).setText("Status and stats");
+		GridLayout layout = new GridLayout(1, true);
+		parent.setLayout(layout);
 		
-		Composite comp = new Composite(parent, SWT.NONE);
-		comp.setLayout(new FillLayout());
-
-        SashForm sash = new SashForm(comp, SWT.HORIZONTAL | SWT.SMOOTH);
+		Button runButton = new Button(parent, SWT.PUSH);
+		runButton.setText("Run!");
+		runButton.addSelectionListener(new SelectionListener() {
+			public void widgetSelected(SelectionEvent e) {
+				runAction.run();
+			}
+			public void widgetDefaultSelected(SelectionEvent e) {
+			}
+		});
+		
+        SashForm sash = new SashForm(parent, SWT.HORIZONTAL | SWT.SMOOTH);
+        sash.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true));
         treeFilesViewer = new TableViewer(sash, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
         outputViewer = new TableViewer(sash, SWT.H_SCROLL | SWT.V_SCROLL);
         
@@ -62,6 +85,9 @@ public class GFTreebankManagerView extends ViewPart {
 				System.out.println("Running that shit");
 			}
 		};
+//		runAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankRun()));
+		ImageDescriptor img = PlatformUI.getWorkbench().getSharedImages().getImageDescriptor(ISharedImages.IMG_TOOL_UNDO_DISABLED);
+		runAction.setImageDescriptor(img);
 	}	
 
 	private void hookContextMenu() {
@@ -92,13 +118,11 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 
 	private void fillLocalPullDown(IMenuManager manager) {
-//		manager.add(action1);
-//		manager.add(new Separator());
-//		manager.add(action2);
+		manager.add(runAction);
 	}
 
 	private void fillContextMenu(IMenuManager manager) {
-//		manager.add(action1);
+		manager.add(runAction);
 //		manager.add(action2);
 //		manager.add(new Separator());
 //		drillDownAdapter.addNavigationActions(manager);
@@ -107,7 +131,7 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 
 	private void fillLocalToolBar(IToolBarManager manager) {
-//		manager.add(action1);
+		manager.add(runAction);
 //		manager.add(action2);
 //		manager.add(new Separator());
 //		drillDownAdapter.addNavigationActions(manager);

@@ -12,6 +12,7 @@ package org.grammaticalframework.eclipse.ui.labeling;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.xtext.ui.IImageHelper;
+import org.eclipse.xtext.ui.PluginImageHelper;
 import org.grammaticalframework.eclipse.gF.SourceModule;
 
 import com.google.inject.Inject;
@@ -22,19 +23,13 @@ import com.google.inject.Inject;
  * 
  * @author John J. Camilleri
  */
-public class GFImages {
+public class GFImages extends PluginImageHelper {
 
-	/**
-	 * The image helper.
-	 */
-	@Inject
-	private IImageHelper imageHelper;
-	
 	/**
 	 * The GF logo
 	 */
 	public Image logo() {
-		return imageHelper.getImage("gf-logo.png");
+		return getImage("gf-logo.png");
 	}
 	
 	/**
@@ -44,7 +39,7 @@ public class GFImages {
 	 * @return
 	 */
 	public Image forModule(SourceModule module) {
-		return imageHelper.getImage( filenameForModule(module) );
+		return getImage( filenameForModule(module) );
 	}
 	
 	/**
@@ -85,58 +80,58 @@ public class GFImages {
 	}
 	
 	public Image forOpen() {
-		return imageHelper.getImage("extends-item.png");
+		return getImage("extends-item.png");
 	}
 	
 	public Image forOpenList() {
-		return imageHelper.getImage("extends-list.png");
+		return getImage("extends-list.png");
 	}
 	
 	public Image forExtend() {
-		return imageHelper.getImage("extends-item.png");
+		return getImage("extends-item.png");
 	}
 	
 	public Image forExtendList() {
-		return imageHelper.getImage("extends-list.png");
+		return getImage("extends-list.png");
 	}
 
 	public Image forInstantiate() {
-		return imageHelper.getImage("module-instance.png");
+		return getImage("module-instance.png");
 	}
 	
 	public Image forFunctor() {
-		return imageHelper.getImage("module-functor.png");
+		return getImage("module-functor.png");
 	}
 
 	public Image forExtendInclude() {
-		return imageHelper.getImage("extend-include.png");
+		return getImage("extend-include.png");
 	}
 
 	public Image forExtendExclude() {
-		return imageHelper.getImage("extend-exclude.png");
+		return getImage("extend-exclude.png");
 	}
 
 	public Image forFlag() {
-		return imageHelper.getImage("flag.png");
+		return getImage("flag.png");
 	}
 
 	public Image forParam() {
-		return imageHelper.getImage("parameter.png");
+		return getImage("parameter.png");
 	}
 	
 	public Image forConstructor() {
-		return imageHelper.getImage("constructor.png");
+		return getImage("constructor.png");
 	}
 
 	public Image forLibraryReference() {
-		return imageHelper.getImage("library-reference.png");
+		return getImage("library-reference.png");
 	}
 
 	public Image forTopDef() {
-		return imageHelper.getImage("library-reference.png");
+		return getImage("library-reference.png");
 	}
 	public Image forAnyJudgement() {
-		return imageHelper.getImage("judgement.png");
+		return getImage("judgement.png");
 	}
 	public Image forCatDef() {
 		return forAnyJudgement();
@@ -170,28 +165,35 @@ public class GFImages {
 	 * Expand all action
 	 */
 	public Image forExpandAll() {
-		return imageHelper.getImage("expandall.png");
+		return getImage("expandall.png");
 	}
 	
 	/**
 	 * Collapse all action
 	 */
 	public Image forCollapseAll() {
-		return imageHelper.getImage("collapseall.png");
+		return getImage("collapseall.png");
 	}
 
 	/**
 	 * Expand all action (disabled)
 	 */
 	public Image forExpandAllDisabled() {
-		return imageHelper.getImage("expandall-disabled.png");
+		return getImage("expandall-disabled.png");
 	}
-
+	
 	/**
 	 * Collapse all action (disabled)
 	 */
 	public Image forCollapseAllDisabled() {
-		return imageHelper.getImage("collapseall-disabled.png");
+		return getImage("collapseall-disabled.png");
+	}
+
+	/**
+	 * Run treebank set
+	 */
+	public Image forTreebankRun() {
+		return getImage("treebank-run.png");
 	}
 	
 
