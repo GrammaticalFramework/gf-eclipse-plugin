@@ -1,9 +1,9 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 8 Feb 2012
+Updated: 27 Feb 2012
 
-_The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° FP7-ICT-247914._
+_The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914._
 
 _This documentation is also available at the [MOLTO Project Wiki](http://www.molto-project.eu/node/1395)._
 
@@ -25,7 +25,7 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 - Here are some [example GF projects](http://www.grammaticalframework.org/eclipse/examples/) for testing out the plugin features.
 - Software update site URL for installing through Eclipse: <http://www.grammaticalframework.org/eclipse/release/>
 
---------------------------------------------------------------------------------
+<!----------------------------------------------------------------------------->
 
 ## Features
 
@@ -41,23 +41,17 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 - Background compilation (shallow) using project builder
 - Support for _Open Declaration_ (F3)
 - Code generation for new languages in application grammars
+- Inline documentation for function calls, overloads
+- Proper cross-reference handling with qualified names
+- Treebank management and testing tool
 
-### Near-term
+### Forthcoming
 
 - Built-in library browser (in particular for GF resource grammar library)
-- Inline documentation for function calls, overloads
+- Tools for parallel language grammar writing (e.g. fast switching and linked navigation)
 - Quick-fix suggestions for syntax and naming errors
-- Code generation for concrete/instance modules
-- Grouping of concrete syntaxes by language, fast switching and linked navigation
 
-### Long-term goals
-
-- Test-suite functionality
-- Treebank management and testing
-- Provide a single platform for developing and using embedded grammars
-- Integration with ontology engineering tools
-
---------------------------------------------------------------------------------
+<!----------------------------------------------------------------------------->
 
 ## Major release history
 
@@ -86,7 +80,7 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 : Initial BETA released.
 
 
---------------------------------------------------------------------------------
+<!----------------------------------------------------------------------------->
 
 ## Installation &amp; updating
 
@@ -159,7 +153,7 @@ Your `.project` file should include the GF Builder as follows:
     </buildSpec>
 
 
---------------------------------------------------------------------------------
+<!----------------------------------------------------------------------------->
 
 ## Getting started
 
@@ -229,7 +223,7 @@ The in-editor validation sometimes needs to be triggered/updated by a keystroke.
 
 Sometimes you may get an entire file marked with errors, even though in fact there is only a single error which is causing the internal builder to fail. In such cases referring to the **Problems** view should help you locate the cause. This issue is particularly relevant when changes made to one module may induce errors in its descendants (e.g. renaming a parameter in a resource module). This behaviour will hopefully be improved in future versions. 
 
---------------------------------------------------------------------------------
+<!----------------------------------------------------------------------------->
 
 ## Evaluation & feedback
 
