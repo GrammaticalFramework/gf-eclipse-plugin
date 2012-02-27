@@ -11,11 +11,8 @@ package org.grammaticalframework.eclipse.ui.labeling;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.xtext.ui.IImageHelper;
 import org.eclipse.xtext.ui.PluginImageHelper;
 import org.grammaticalframework.eclipse.gF.SourceModule;
-
-import com.google.inject.Inject;
 
 /**
  * Refer: org.eclipse.xtext.xtend2.ui.labeling.Xtend2Images
@@ -25,6 +22,13 @@ import com.google.inject.Inject;
  */
 public class GFImages extends PluginImageHelper {
 
+	public Image forProject() {
+		return getImage("project.png");
+	}
+	public Image forFolder() {
+		return getImage("folder-open.png");
+	}
+	
 	/**
 	 * The GF logo
 	 */
@@ -195,6 +199,13 @@ public class GFImages extends PluginImageHelper {
 	public Image forTreebankRun() {
 		return getImage("treebank-run.png");
 	}
+	public Image forTreebankItem() {
+		return getImage("treebank-item.png");
+	}
+	public Image forTreebankItemWithGoldStandard() {
+		return getImage("treebank-item-gold.png");
+	}
 	
 
+	
 }

@@ -19,6 +19,10 @@ class FileNode extends TreeNode {
 	private Image image;
 	private IFile fFile;
 
+	public FileNode(IFile file) {
+		this(null, file);
+	}
+	
 	public FileNode(ITreeNode parent, IFile file) {
 		super(parent);
 		this.fFile = file;

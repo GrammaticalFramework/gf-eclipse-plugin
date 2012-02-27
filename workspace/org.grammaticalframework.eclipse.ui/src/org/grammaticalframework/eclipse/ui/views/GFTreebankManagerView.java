@@ -9,21 +9,26 @@
  */
 package org.grammaticalframework.eclipse.ui.views;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
-import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
-import org.eclipse.jface.viewers.TableViewerColumn;
+import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.events.SelectionEvent;
@@ -41,6 +46,7 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IPartListener2;
 import org.eclipse.ui.IWorkbenchPartReference;
+import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.eclipse.ui.part.ViewPart;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 
@@ -49,23 +55,14 @@ import com.google.inject.Inject;
 public class GFTreebankManagerView extends ViewPart {
 	
 	@Inject
-	private GFImages images;
-	
-	@Inject
-	TreeLabelProvider labelProvider;
-	
-	@Inject
-	ExtensionTypeTreeContentProvider contentProvider;
-	
-	@Inject
-	TreeSorter sorter;
+	GFImages images;
 	
 	// Actions
 	Action runAction;
 	Action makeGoldStandardAction;
 	
 	// Widgets
-	TableViewer treeFilesViewer;
+	TreeViewer treeFilesViewer;
 	TableViewer outputViewer;
 	
 	Button runButton;
@@ -100,7 +97,7 @@ public class GFTreebankManagerView extends ViewPart {
 		// Bottom section with tableviews
         SashForm sash = new SashForm(parent, SWT.HORIZONTAL | SWT.SMOOTH);
         GridData gd = new GridData(SWT.FILL, SWT.TOP, true, true);
-        gd.minimumHeight = 50;
+        gd.heightHint = 100;
         sash.setLayoutData(gd);
         
         // Table of trees files
@@ -124,18 +121,73 @@ public class GFTreebankManagerView extends ViewPart {
     }
 	
 	private void configureTreesViewer(Composite parent) {
-        contentProvider.setExtension("trees");
-        treeFilesViewer = new TableViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER );
-        treeFilesViewer.setContentProvider(contentProvider);
-        treeFilesViewer.setLabelProvider(new TreeLabelProvider() {
+        WorkbenchContentProvider contentProvider = new WorkbenchContentProvider() {
+//        	@Override
+//        	public Object[] getElements(Object element) {
+////        		Object[] elements = super.getElements(element);
+//        		return new Object[]{element};
+//        	}
+//			@Override
+//			public Object[] getChildren(Object element) {
+//				Object[] elements = super.getChildren(element);
+//				return elements;
+//			}
+
+//			@Override
+//			public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+//				super.inputChanged(viewer, oldInput, newInput);
+//				((TreeViewer)viewer).expandAll();
+//			}
+        	
+        };
+        ViewerFilter filter = new ViewerFilter() {
+        	List<String> extensions = Arrays.asList(new String[]{"trees"});
+			@Override
+			public boolean select(Viewer viewer, Object parentElement, Object element) {
+				if (element instanceof IProject || element instanceof IFolder) {
+					return true;
+				}
+				if (element instanceof IFile) {
+					IFile file = (IFile)element;
+					String ext = file.getFileExtension();
+					if (ext != null && extensions.contains(ext)) {
+						return true;
+					}
+				}
+				return false;
+			}
+		};
+		
+		LabelProvider labelProvider = new LabelProvider() {
 			@Override
 			public Image getImage(Object element) {
-				// TODO determine if item has GS or not
-				return images.getImage("treebank-item.png");
+				if (element instanceof IProject) {
+					return images.forProject();
+				} else if (element instanceof IFolder) {
+					return images.forFolder();
+				} else if (element instanceof IFile) {
+					IFile file = (IFile)element;
+					String gsFileName = file.getName().replaceFirst(".trees", ".gold");
+					if (file.getParent().findMember(gsFileName) != null)  // TODO extract this test elsewhere
+						return images.forTreebankItemWithGoldStandard();
+					else
+						return images.forTreebankItem();
+				}
+				else return null;
 			}
-        });
-		// treeFilesViewer.setSorter(new NameSorter());
-//        treeFilesViewer.setComparator(sorter);
+			@Override
+			public String getText(Object element) {
+				return ((IResource)element).getName();
+			}
+		};
+		
+        treeFilesViewer = new TreeViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER );
+        treeFilesViewer.setContentProvider(contentProvider);
+        treeFilesViewer.setFilters(new ViewerFilter[]{filter});
+        treeFilesViewer.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
+        treeFilesViewer.setLabelProvider(labelProvider);
+//		treeFilesViewer.setSorter(new NameSorter());
+//		treeFilesViewer.setComparator(sorter);
         treeFilesViewer.setInput(null); // our listener below will take care of this
 	}
 	
