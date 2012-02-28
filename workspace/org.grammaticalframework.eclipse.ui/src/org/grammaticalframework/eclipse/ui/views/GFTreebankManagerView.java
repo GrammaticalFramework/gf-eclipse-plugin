@@ -111,7 +111,7 @@ public class GFTreebankManagerView extends ViewPart {
         sash.setWeights(new int[]{1,2});
 
         // Bottom line
-		new Label(parent, SWT.LEFT).setText("bottom text");
+//		new Label(parent, SWT.LEFT).setText("bottom text");
         
 		// Actions and menus
 		makeActions();
@@ -123,48 +123,18 @@ public class GFTreebankManagerView extends ViewPart {
     }
 	
 	private void configureTreesViewer(Composite parent) {
-        WorkbenchContentProvider contentProvider = new WorkbenchContentProvider() {
-//        	@Override
-//        	public Object[] getElements(Object element) {
-//        		if (element instanceof IProject) {
-//        			return new Object[]{ ((IProject)element).getParent() };
-//        		} else {
-//        			return super.getElements(element);
-//        		}
-//        		
-////        		Object[] elements = super.getElements(element);
-////        		return new Object[]{element};
-//        	}
-//			@Override
-//			public Object[] getChildren(Object element) {
-//				Object[] elements = super.getChildren(element);
-//				return elements;
-//			}
-
-//			@Override
-//			public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
-//				super.inputChanged(viewer, oldInput, newInput);
-//				((TreeViewer)viewer).expandAll();
-//			}
-        	
-        };
+        WorkbenchContentProvider contentProvider = new WorkbenchContentProvider();
         ViewerFilter filter = new ViewerFilter() {
-        	List<String> extensions = Arrays.asList(new String[]{"trees"});
 			@Override
 			public boolean select(Viewer viewer, Object parentElement, Object element) {
 				if (element instanceof IProject) {
 					return ((IProject)element).equals(currentProject);
-//					return true;
 				}
 //				if (element instanceof IFolder) {
 //					return true;
 //				}
 				if (element instanceof IFile) {
-					IFile file = (IFile)element;
-					String ext = file.getFileExtension();
-					if (ext != null && extensions.contains(ext)) {
-						return true;
-					}
+					return TreebankManagerHelper.isTreebankFile((IFile)element);
 				}
 				return false;
 			}
@@ -178,9 +148,7 @@ public class GFTreebankManagerView extends ViewPart {
 				} else if (element instanceof IFolder) {
 					return images.forFolder();
 				} else if (element instanceof IFile) {
-					IFile file = (IFile)element;
-					String gsFileName = file.getName().replaceFirst(".trees", ".gold");
-					if (file.getParent().findMember(gsFileName) != null)  // TODO extract this test elsewhere
+					if (TreebankManagerHelper.hasGoldStandardFile((IFile)element))
 						return images.forTreebankItemWithGoldStandard();
 					else
 						return images.forTreebankItem();
@@ -250,6 +218,7 @@ public class GFTreebankManagerView extends ViewPart {
 		runAction = new Action() {
 			@Override
 			public void run() {
+				// TODO
 				statusLabel.setText("Running");
 				// get selection from trees panel, or run everything if not
 //				IStructuredSelection selection = (IStructuredSelection) treeFilesViewer.getSelection();
@@ -269,6 +238,7 @@ public class GFTreebankManagerView extends ViewPart {
 		makeGoldStandardAction = new Action() {
 			@Override
 			public void run() {
+				// TODO
 				statusLabel.setText("Making gold standard");
 			}
 		};
