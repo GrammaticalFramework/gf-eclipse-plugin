@@ -69,6 +69,8 @@ public class GFTreebankManagerView extends ViewPart {
 	Label statusLabel;
 
 	IPartListener2 listener;
+	
+	IProject currentProject;
 
 	public void createPartControl(Composite parent) {
 		// Overall layout
@@ -124,8 +126,14 @@ public class GFTreebankManagerView extends ViewPart {
         WorkbenchContentProvider contentProvider = new WorkbenchContentProvider() {
 //        	@Override
 //        	public Object[] getElements(Object element) {
+//        		if (element instanceof IProject) {
+//        			return new Object[]{ ((IProject)element).getParent() };
+//        		} else {
+//        			return super.getElements(element);
+//        		}
+//        		
 ////        		Object[] elements = super.getElements(element);
-//        		return new Object[]{element};
+////        		return new Object[]{element};
 //        	}
 //			@Override
 //			public Object[] getChildren(Object element) {
@@ -144,9 +152,13 @@ public class GFTreebankManagerView extends ViewPart {
         	List<String> extensions = Arrays.asList(new String[]{"trees"});
 			@Override
 			public boolean select(Viewer viewer, Object parentElement, Object element) {
-				if (element instanceof IProject || element instanceof IFolder) {
-					return true;
+				if (element instanceof IProject) {
+					return ((IProject)element).equals(currentProject);
+//					return true;
 				}
+//				if (element instanceof IFolder) {
+//					return true;
+//				}
 				if (element instanceof IFile) {
 					IFile file = (IFile)element;
 					String ext = file.getFileExtension();
@@ -205,8 +217,8 @@ public class GFTreebankManagerView extends ViewPart {
 					IEditorInput input = editor.getEditorInput();
 					if (input instanceof IFileEditorInput) {
 						IFile file = ((IFileEditorInput) input).getFile();
-						IProject project = file.getProject();
-						treeFilesViewer.setInput(project);
+						currentProject = file.getProject();
+						treeFilesViewer.setInput(currentProject.getParent());
 					}
 				} catch (NullPointerException e) {
 					treeFilesViewer.setInput(null);
