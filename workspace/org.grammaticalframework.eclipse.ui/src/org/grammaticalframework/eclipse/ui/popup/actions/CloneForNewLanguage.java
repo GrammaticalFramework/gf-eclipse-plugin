@@ -48,7 +48,11 @@ public class CloneForNewLanguage implements IObjectActionDelegate {
 	public void setActivePart(IAction action, IWorkbenchPart targetPart) {
 		shell = targetPart.getSite().getShell();
 		workbench = targetPart.getSite().getWorkbenchWindow().getWorkbench();
-		selection = targetPart.getSite().getSelectionProvider().getSelection();
+		try {
+			selection = targetPart.getSite().getSelectionProvider().getSelection();
+		} catch (NullPointerException _) {
+			
+		}
 	}
 
 	/**

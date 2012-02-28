@@ -401,6 +401,7 @@
      </objectContribution>
      <objectContribution
            id="org.grammaticalframework.eclipse.ui.contribution1"
+           nameFilter="*.gf"
            objectClass="org.eclipse.core.resources.IFile">
         <menu
               id="org.grammaticalframework.eclipse.ui.menu1"
