@@ -9,9 +9,6 @@
  */
 package org.grammaticalframework.eclipse.ui.views;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -59,6 +56,7 @@ public class GFTreebankManagerView extends ViewPart {
 	
 	// Actions
 	Action runAction;
+	Action runAllAction;
 	Action makeGoldStandardAction;
 	
 	// Widgets
@@ -82,7 +80,6 @@ public class GFTreebankManagerView extends ViewPart {
 		bar.setLayout(new GridLayout(2, false));
 		
 		runButton = new Button(bar, SWT.PUSH);
-//		runButton.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER));
 		runButton.setText("Run");
 		runButton.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
@@ -93,14 +90,11 @@ public class GFTreebankManagerView extends ViewPart {
 		});
 		
 		statusLabel = new Label(bar, SWT.FILL);
-//		statusLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER));
 		statusLabel.setText("Status and stats..");
 		
 		// Bottom section with tableviews
         SashForm sash = new SashForm(parent, SWT.HORIZONTAL | SWT.SMOOTH);
-        GridData gd = new GridData(SWT.FILL, SWT.TOP, true, true);
-        gd.heightHint = 100;
-        sash.setLayoutData(gd);
+        sash.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
         
         // Table of trees files
         configureTreesViewer(sash);
@@ -173,6 +167,9 @@ public class GFTreebankManagerView extends ViewPart {
 	
 	private void configureOutputViewer(Composite parent) {
         outputViewer = new TableViewer(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER );
+        outputViewer.setLabelProvider(new LabelProvider() {
+        	
+        });
         // one column: icon shows result; tree, lin and gold are on separate lines as same entry.
 	}
 	
@@ -215,6 +212,7 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 	
 	private void makeActions() {
+		// Run a single treebank
 		runAction = new Action() {
 			@Override
 			public void run() {
@@ -224,17 +222,23 @@ public class GFTreebankManagerView extends ViewPart {
 //				IStructuredSelection selection = (IStructuredSelection) treeFilesViewer.getSelection();
 //				while (selection.iterator().hasNext()) {
 //					Object x = selection.iterator().next();
-					for (int i = 0; i < 5; i++) {
-//						outputViewer.add(x.toString() + " - "+i);
-						outputViewer.add(" - "+i);
-					}
 //				}
-				
 			}
 		};
-		runAction.setText("Run test suite");
-		runAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankRun()));
+		runAction.setText("Run treebank");
 		
+		// Run all treebanks in project
+		runAllAction = new Action() {
+			@Override
+			public void run() {
+				// TODO
+				statusLabel.setText("Running all");
+			}
+		};
+		runAllAction.setText("Run all treebanks");
+		runAllAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankRun()));
+		
+		// Create a gold standard file from a treebank
 		makeGoldStandardAction = new Action() {
 			@Override
 			public void run() {
@@ -243,7 +247,7 @@ public class GFTreebankManagerView extends ViewPart {
 			}
 		};
 		makeGoldStandardAction.setText("Make gold standard");
-		makeGoldStandardAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-new.png")));
+//		makeGoldStandardAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-new.png")));
 	}	
 
 	private void hookContextMenu() {
@@ -256,7 +260,7 @@ public class GFTreebankManagerView extends ViewPart {
 		});
 		Menu menu = menuMgr.createContextMenu(treeFilesViewer.getControl());
 		treeFilesViewer.getControl().setMenu(menu);
-		getSite().registerContextMenu(menuMgr, treeFilesViewer);
+//		getSite().registerContextMenu(menuMgr, treeFilesViewer);
 	}
 
 	private void hookDoubleClickAction() {
@@ -274,7 +278,7 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 
 	private void fillLocalPullDown(IMenuManager manager) {
-		manager.add(runAction);
+		manager.add(runAllAction);
 	}
 
 	private void fillContextMenu(IMenuManager manager) {
@@ -285,7 +289,7 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 
 	private void fillLocalToolBar(IToolBarManager manager) {
-		manager.add(runAction);
+		manager.add(runAllAction);
 //		manager.add(action2);
 //		manager.add(new Separator());
 //		drillDownAdapter.addNavigationActions(manager);

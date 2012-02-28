@@ -11,6 +11,7 @@ package org.grammaticalframework.eclipse.ui.labeling;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.ui.PluginImageHelper;
 import org.grammaticalframework.eclipse.gF.SourceModule;
 
@@ -21,6 +22,14 @@ import org.grammaticalframework.eclipse.gF.SourceModule;
  * @author John J. Camilleri
  */
 public class GFImages extends PluginImageHelper {
+	
+	public static ImageDescriptor getImageDescriptorWithoutHelper(String filename) {
+		return AbstractUIPlugin.imageDescriptorFromPlugin("org.grammaticalframework.eclipse.ui", "icons/"+filename);
+	}
+	public static Image getImageWithoutHelper(String filename) {
+		return getImageDescriptorWithoutHelper(filename).createImage();
+	}
+	
 
 	public Image forProject() {
 		return getImage("project.png");

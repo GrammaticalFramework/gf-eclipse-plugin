@@ -28,8 +28,18 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Text;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
+import org.grammaticalframework.eclipse.ui.views.TreebankManagerHelper;
+
+import com.google.common.base.Predicate;
 
 public class GFWizardHelper {
+	
+	private static Predicate<IFile> gfFileFilter = new Predicate<IFile>() {
+		public boolean apply(IFile input) {
+			String ext = input.getFileExtension();
+			return (ext != null && ext.equalsIgnoreCase("gf"));
+		}
+	}; 
 	
 	/**
 	 * Recursively find all files in the workspace, in a flat list to be used as suggestions.
@@ -37,8 +47,23 @@ public class GFWizardHelper {
 	 * @return the file list
 	 */
 	public static List<IFile> getFileList(boolean includeExternal) {
-		List<IFile> suggestions = traverseFileList(includeExternal);
+		List<IFile> suggestions = traverseFileList(gfFileFilter, includeExternal);
 		return suggestions;
+	}
+	
+	/**
+	 * Recursively find all treebank files in the workspace
+	 * 
+	 * @param filter
+	 * @return the file list
+	 */
+	public static List<IFile> getTreebankFileList() {
+		Predicate<IFile> treebankFileFilter = new Predicate<IFile>() {
+			public boolean apply(IFile input) {
+				return TreebankManagerHelper.isTreebankFile(input);
+			}
+		};
+		return traverseFileList(treebankFileFilter, false);
 	}
 	
 	/**
@@ -48,7 +73,7 @@ public class GFWizardHelper {
 	 * @return module list
 	 */
 	public static String[] getModuleList(boolean includeExternal) {
-		List<IFile> files = traverseFileList(includeExternal);
+		List<IFile> files = traverseFileList(gfFileFilter, includeExternal);
 		List<String> suggestions = new ArrayList<String>(files.size());
 		for (IFile resource : files) {
 			suggestions.add( resource.getName().substring(0, resource.getName().length()-3) ); // we can safely assume they have a .gf
@@ -62,17 +87,18 @@ public class GFWizardHelper {
 	 * @param resource the resource
 	 * @param suggestions the suggestions
 	 */
-	private static List<IFile> traverseFileList(boolean includeExternal) {
+	private static List<IFile> traverseFileList(Predicate<IFile> filter, boolean includeExternal) {
 		ArrayList<IFile> suggestions = new ArrayList<IFile>();
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-		traverseFileList(root, suggestions, includeExternal);
+		traverseFileList(root, suggestions, filter, includeExternal);
 		return suggestions;
 	}
-	private static void traverseFileList(IResource resource, List<IFile> suggestions, boolean includeExternal) {
+	private static void traverseFileList(IResource resource, List<IFile> suggestions, Predicate<IFile> filter, boolean includeExternal) {
 		if (resource instanceof IFile) {
 			IFile file = (IFile)resource;
 			try {
-				if (file.getFileExtension().equalsIgnoreCase("gf")) {
+				if (filter.apply(file)) {
+//				if (file.getFileExtension().equalsIgnoreCase("gf")) {
 					suggestions.add(file);
 				}
 			} catch (NullPointerException e) {
@@ -84,7 +110,7 @@ public class GFWizardHelper {
 			}
 			try {
 				for (IResource member : ((IContainer)resource).members()) {
-					traverseFileList(member, suggestions, includeExternal);
+					traverseFileList(member, suggestions, filter, includeExternal);
 				}
 			} catch (CoreException e) {
 				// No problem

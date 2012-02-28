@@ -17,8 +17,6 @@ import java.io.OutputStreamWriter;
 
 /**
  * For allowing the UI plugin to provide its console streams to the non-UI plugin
- * 
- * CURRENTLY NOT IN USE! *
  */
 public class GFConsoleDelegate {
 	
