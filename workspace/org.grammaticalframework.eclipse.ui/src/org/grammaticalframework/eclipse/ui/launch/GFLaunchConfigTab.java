@@ -9,7 +9,6 @@
  */
 package org.grammaticalframework.eclipse.ui.launch;
 
-import java.awt.color.CMMException;
 import java.io.File;
 import java.util.List;
 
@@ -31,7 +30,6 @@ import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
@@ -39,14 +37,13 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 import org.grammaticalframework.eclipse.ui.views.TreebankManagerHelper;
 import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper;
 
 /**
- * The Class GFLaunchConfigTab.
+ * GF Launch Config Tab
  */
 public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 
@@ -87,11 +84,14 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	}
 
 	private Text text_GoldStandardFile;
-	private List<IFile> treebankFiles;
 	public String getGoldStandardFile() {
 		return text_GoldStandardFile.getText();
 	}
 	
+	/**
+	 * List of treebank files in workspace
+	 */
+	private List<IFile> treebankFiles;
 
 	/* (non-Javadoc)
 	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#createControl(org.eclipse.swt.widgets.Composite)
@@ -286,8 +286,6 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	 */
 	public void initializeFrom(ILaunchConfiguration configuration) {
 
-		String defaultOptions = "--force-recomp";
-		
 		// Determine default working directory
 		String defaultWorkingDir;
 		try {
@@ -299,11 +297,30 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 			defaultWorkingDir = "";
 		}
 		
+		String defaultOptions = ""; //"--force-recomp";
+		
 		try {
-			text_WorkingDirectory.setText(configuration.getAttribute(IGFLaunchConfigConstants.WORKING_DIR, defaultWorkingDir));
-			text_Options.setText(configuration.getAttribute(IGFLaunchConfigConstants.OPTIONS, defaultOptions));
-			button_InteractiveMode.setSelection(configuration.getAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, false));
-			text_Filenames.setText(configuration.getAttribute(IGFLaunchConfigConstants.FILENAMES, ""));
+			text_WorkingDirectory.setText(
+					configuration.getAttribute(IGFLaunchConfigConstants.WORKING_DIR, defaultWorkingDir)
+			);
+			text_Filenames.setText(
+					configuration.getAttribute(IGFLaunchConfigConstants.FILENAMES, "")
+			);
+			text_Options.setText(
+					configuration.getAttribute(IGFLaunchConfigConstants.OPTIONS, defaultOptions)
+			);
+			boolean intMode = configuration.getAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, false);
+			button_InteractiveMode.setSelection(intMode);
+			button_BatchMode.setSelection(!intMode);
+			button_TreebankMode.setSelection(
+					configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, false)
+			);
+			combo_TreebankFile.setText(
+					configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, "")
+			);
+			text_GoldStandardFile.setText(
+					configuration.getAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, "")
+			);
 		} catch (CoreException e) {
 			text_WorkingDirectory.setText(null);
 			text_Options.setText("--force-recomp");
@@ -318,9 +335,13 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	 */
 	public void performApply(ILaunchConfigurationWorkingCopy configuration) {
 		configuration.setAttribute(IGFLaunchConfigConstants.WORKING_DIR, getWorkingDirectory());
+		configuration.setAttribute(IGFLaunchConfigConstants.FILENAMES, getFilenames());
 		configuration.setAttribute(IGFLaunchConfigConstants.OPTIONS, getOptions());
 		configuration.setAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, isInteractiveMode());
-		configuration.setAttribute(IGFLaunchConfigConstants.FILENAMES, getFilenames());
+		configuration.setAttribute(IGFLaunchConfigConstants.BATCH_MODE, isBatchMode());
+		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, isTreebankMode());
+		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, getTreebankFile());
+		configuration.setAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, getGoldStandardFile());
 		setDirty(false);
 	}
 

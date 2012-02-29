@@ -13,25 +13,47 @@ package org.grammaticalframework.eclipse.launch;
  * Launch Config preferences
  */
 public interface IGFLaunchConfigConstants {
-
+	
+	static String prefix = "org.grammaticalframework.eclipse.launch.config.";
+	
 	/**
 	 * Working directory for running GF
 	 */
-	public static final String WORKING_DIR = "org.grammaticalframework.eclipse.launch.config.WORKING_DIR";
-	
-	/**
-	 * Command line flags
-	 */
-	public static final String OPTIONS = "org.grammaticalframework.eclipse.launch.config.OPTIONS";
-	
-	/**
-	 * Run in interactive mode (or --batch if not)
-	 */
-	public static final String INTERACTIVE_MODE = "org.grammaticalframework.eclipse.launch.config.INTERACTIVE_MODE";
+	public static final String WORKING_DIR = prefix + "WORKING_DIR";
 	
 	/**
 	 * Files to pass to the compiler
 	 */
-	public static final String FILENAMES = "org.grammaticalframework.eclipse.launch.config.FILENAMES";
+	public static final String FILENAMES = prefix + "FILENAMES";
 
+	/**
+	 * Command line flags
+	 */
+	public static final String OPTIONS = prefix + "OPTIONS";
+	
+	/**
+	 * Run in interactive mode (mutually exclusive with batch mode)
+	 */
+	public static final String INTERACTIVE_MODE = prefix + "INTERACTIVE_MODE";
+	
+	/**
+	 * Run in batch mode (mutually exclusive with interactive mode)
+	 */
+	public static final String BATCH_MODE = prefix + "BATCH_MODE";
+	
+	/**
+	 * Run in treebank mode (when in batch mode)
+	 */
+	public static final String TREEBANK_MODE = prefix + "TREEBANK_MODE";
+	
+	/**
+	 * 
+	 */
+	public static final String TREEBANK_FILENAME = prefix + "TREEBANK_FILENAME";
+	
+	/**
+	 * 
+	 */
+	public static final String GOLD_STANDARD_FILENAME = prefix + "GOLD_STANDARD_FILENAME";
+	
 }
