@@ -14,7 +14,7 @@ import java.util.List;
 
 import org.eclipse.core.resources.IFile;
 
-public class TreebankManagerHelper {
+public class GFTreebankManagerHelper {
 	
 	/**
 	 * List of valid treebank-file file extensions

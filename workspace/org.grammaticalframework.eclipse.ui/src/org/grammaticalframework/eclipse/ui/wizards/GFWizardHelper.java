@@ -31,7 +31,7 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Text;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 import org.grammaticalframework.eclipse.ui.natures.GFProjectNature;
-import org.grammaticalframework.eclipse.ui.views.TreebankManagerHelper;
+import org.grammaticalframework.eclipse.ui.views.GFTreebankManagerHelper;
 
 import com.google.common.base.Predicate;
 
@@ -71,7 +71,7 @@ public class GFWizardHelper {
 	public static List<IFile> getTreebankFileList() {
 		Predicate<IFile> treebankFileFilter = new Predicate<IFile>() {
 			public boolean apply(IFile input) {
-				return TreebankManagerHelper.isTreebankFile(input);
+				return GFTreebankManagerHelper.isTreebankFile(input);
 			}
 		};
 		return traverseFileList(treebankFileFilter, false);

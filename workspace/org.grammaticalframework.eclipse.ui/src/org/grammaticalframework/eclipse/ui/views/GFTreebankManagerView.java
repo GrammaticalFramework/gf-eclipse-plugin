@@ -55,7 +55,7 @@ public class GFTreebankManagerView extends ViewPart {
 	GFImages images;
 	
 	// Actions
-	Action runAction;
+	RunTreebankAction runAction;
 	Action runAllAction;
 	Action makeGoldStandardAction;
 	
@@ -128,7 +128,7 @@ public class GFTreebankManagerView extends ViewPart {
 //					return true;
 //				}
 				if (element instanceof IFile) {
-					return TreebankManagerHelper.isTreebankFile((IFile)element);
+					return GFTreebankManagerHelper.isTreebankFile((IFile)element);
 				}
 				return false;
 			}
@@ -142,7 +142,7 @@ public class GFTreebankManagerView extends ViewPart {
 				} else if (element instanceof IFolder) {
 					return images.forFolder();
 				} else if (element instanceof IFile) {
-					if (TreebankManagerHelper.hasGoldStandardFile((IFile)element))
+					if (GFTreebankManagerHelper.hasGoldStandardFile((IFile)element))
 						return images.forTreebankItemWithGoldStandard();
 					else
 						return images.forTreebankItem();
@@ -213,18 +213,7 @@ public class GFTreebankManagerView extends ViewPart {
 	
 	private void makeActions() {
 		// Run a single treebank
-		runAction = new Action() {
-			@Override
-			public void run() {
-				// TODO
-				statusLabel.setText("Running");
-				// get selection from trees panel, or run everything if not
-//				IStructuredSelection selection = (IStructuredSelection) treeFilesViewer.getSelection();
-//				while (selection.iterator().hasNext()) {
-//					Object x = selection.iterator().next();
-//				}
-			}
-		};
+		runAction = new RunTreebankAction(treeFilesViewer);
 		runAction.setText("Run treebank");
 		
 		// Run all treebanks in project
@@ -232,7 +221,7 @@ public class GFTreebankManagerView extends ViewPart {
 			@Override
 			public void run() {
 				// TODO
-				statusLabel.setText("Running all");
+				statusLabel.setText("Running all treebanks...");
 			}
 		};
 		runAllAction.setText("Run all treebanks");
