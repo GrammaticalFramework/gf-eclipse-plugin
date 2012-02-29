@@ -24,10 +24,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.eclipse.xtext.ui.editor.outline.actions.IOutlineContribution;
 import org.grammaticalframework.eclipse.GFPreferences;
 import org.grammaticalframework.eclipse.ui.editor.outline.ExpandAllAction;
-import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 import org.grammaticalframework.eclipse.ui.perspectives.GFConsole;
-import org.grammaticalframework.eclipse.ui.views.GFTreebankManagerView;
-
 import com.google.inject.Binder;
 import com.google.inject.name.Names;
 
@@ -36,10 +33,8 @@ import com.google.inject.name.Names;
  */
 public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUiModule {
 
-	/**
-	 * The Constant LOG_FILE_NAME.
-	 */
 	private static final String CONSOLE_LOG_NAME = "gf-console";
+	
 	private static final String PLATFORM_LOG_NAME = "eclipse-platform";
 	
 	/**
