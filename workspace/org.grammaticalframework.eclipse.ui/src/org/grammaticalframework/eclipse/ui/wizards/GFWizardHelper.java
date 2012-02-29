@@ -15,8 +15,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -28,12 +30,21 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Text;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
+import org.grammaticalframework.eclipse.ui.natures.GFProjectNature;
 import org.grammaticalframework.eclipse.ui.views.TreebankManagerHelper;
 
 import com.google.common.base.Predicate;
 
 public class GFWizardHelper {
-	
+
+	/**
+	 * Logger
+	 */
+	private static final Logger log = Logger.getLogger(GFWizardHelper.class);
+
+	/**
+	 * Filter which only accepts files with the .gf extension
+	 */
 	private static Predicate<IFile> gfFileFilter = new Predicate<IFile>() {
 		public boolean apply(IFile input) {
 			String ext = input.getFileExtension();
@@ -82,7 +93,7 @@ public class GFWizardHelper {
 	}
 	
 	/**
-	 * Traverse file list recursively, for suggestions
+	 * Traverse workspace recursively, for suggestions. Only considers OPEN projects with the GF nature
 	 *
 	 * @param resource the resource
 	 * @param suggestions the suggestions
@@ -90,21 +101,30 @@ public class GFWizardHelper {
 	private static List<IFile> traverseFileList(Predicate<IFile> filter, boolean includeExternal) {
 		ArrayList<IFile> suggestions = new ArrayList<IFile>();
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-		traverseFileList(root, suggestions, filter, includeExternal);
+		try {
+			traverseFileList(root, suggestions, filter, includeExternal);
+		} catch (CoreException e) {
+			log.warn("Error recursive through workspace", e);
+		}
 		return suggestions;
 	}
-	private static void traverseFileList(IResource resource, List<IFile> suggestions, Predicate<IFile> filter, boolean includeExternal) {
+	private static void traverseFileList(IResource resource, List<IFile> suggestions, Predicate<IFile> filter, boolean includeExternal) throws CoreException {
+		
+		// Avoid closed projects, and projects without the GF nature
+		if (resource instanceof IProject) {
+			IProject project = (IProject)resource;
+			if (!project.isOpen() || project.getNature(GFProjectNature.NATURE_ID) == null)
+				return;
+		}
+		// Add a file if it passes the filter
 		if (resource instanceof IFile) {
 			IFile file = (IFile)resource;
-			try {
-				if (filter.apply(file)) {
-//				if (file.getFileExtension().equalsIgnoreCase("gf")) {
-					suggestions.add(file);
-				}
-			} catch (NullPointerException e) {
-				// there was no file extension
+			if (filter.apply(file)) {
+				suggestions.add(file);
 			}
-		} else if (resource instanceof IContainer) {
+		}
+		// Recursve into containers
+		else if (resource instanceof IContainer) {
 			if (!includeExternal && ((IContainer)resource).getName().equals(GFBuilder.EXTERNAL_FOLDER)) {
 				return;
 			}
