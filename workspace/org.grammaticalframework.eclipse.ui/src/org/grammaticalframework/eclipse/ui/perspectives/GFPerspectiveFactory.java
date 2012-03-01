@@ -15,6 +15,7 @@ import org.eclipse.ui.IPageLayout;
 import org.eclipse.ui.IPerspectiveFactory;
 import org.eclipse.ui.console.IConsoleConstants;
 import org.grammaticalframework.eclipse.ui.views.GFLibraryTreeView;
+import org.grammaticalframework.eclipse.ui.views.GFTreebankManagerView;
 
 /**
  * Set up custom GF perspective
@@ -50,11 +51,12 @@ public class GFPerspectiveFactory implements IPerspectiveFactory {
 		//bottomLeft.addView(GFLibraryTableView.ID);
 		//bottomLeft.addView(IPageLayout.ID_PROP_SHEET);
 
-		// Bottom right: Console, Problems
+		// Bottom right: Console, Problems, Treebank Manager
 		// See also: http://wiki.eclipse.org/FAQ_How_do_I_write_to_the_console_from_a_plug-in%3F
 		IFolderLayout underEditor = layout.createFolder("underEditor", IPageLayout.BOTTOM, 0.66f, editorArea);
 		underEditor.addView(IConsoleConstants.ID_CONSOLE_VIEW);
 		underEditor.addView(IPageLayout.ID_PROBLEM_VIEW);
+		underEditor.addView(GFTreebankManagerView.ID);
 		
 		// Add Run/debug buttons
 		layout.addActionSet(IDebugUIConstants.LAUNCH_ACTION_SET);
