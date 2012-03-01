@@ -51,24 +51,28 @@ import com.google.inject.Inject;
 
 public class GFTreebankManagerView extends ViewPart {
 	
+	/**
+	 * The ID of the view as specified by the extension.
+	 */
+	public static final String ID = "org.grammaticalframework.eclipse.ui.views.GFTreebankManagerView";
+	
 	@Inject
-	GFImages images;
+	private GFImages images;
 	
 	// Actions
-	RunTreebankAction runAction;
-	Action runAllAction;
-	Action makeGoldStandardAction;
+	private RunTreebankAction runAction;
+	private Action runAllAction;
+	private Action makeGoldStandardAction;
 	
 	// Widgets
-	TreeViewer treeFilesViewer;
-	TableViewer outputViewer;
-	
-	Button runButton;
-	Label statusLabel;
+	private TreeViewer treeFilesViewer;
+	private TableViewer outputViewer;
+	private Button runButton;
+	private Label statusLabel;
 
-	IPartListener2 listener;
+	private IPartListener2 listener;
 	
-	IProject currentProject;
+	private IProject currentProject;
 
 	public void createPartControl(Composite parent) {
 		// Overall layout
