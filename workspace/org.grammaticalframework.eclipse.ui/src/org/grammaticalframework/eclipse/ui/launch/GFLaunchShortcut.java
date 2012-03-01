@@ -9,6 +9,10 @@
  */
 package org.grammaticalframework.eclipse.ui.launch;
 
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.eclipse.core.resources.IFile;
 import org.eclipse.debug.ui.ILaunchShortcut;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
@@ -29,38 +33,47 @@ import org.eclipse.ui.IEditorPart;
  */
 public class GFLaunchShortcut implements ILaunchShortcut {
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.debug.ui.ILaunchShortcut#launch(org.eclipse.ui.IEditorPart, java.lang.String)
+	/**
+	 * Logger
 	 */
-	public void launch(IEditorPart editor, String mode) {
-		IEditorInput input = editor.getEditorInput();
-		input.getName();
-
-	}
+	private static final Logger log = Logger.getLogger(GFTreebankLaunchShortcut.class);
 
 	/* (non-Javadoc)
 	 * @see org.eclipse.debug.ui.ILaunchShortcut#launch(org.eclipse.jface.viewers.ISelection, java.lang.String)
 	 */
 	public void launch(ISelection selection, String mode) {
 		if (selection instanceof IStructuredSelection) {
-			StringBuffer buffer = new StringBuffer();
-			for (Object s : ((IStructuredSelection) selection).toList()) {
-				buffer.append(s.toString() + " ");
-			}
+			@SuppressWarnings("unchecked")
+			List<Object> items = ((IStructuredSelection) selection).toList();
+			IFile[] files = items.toArray(new IFile[]{});
+			launch(files, mode);
 		}
 
 	}
-	/*
+	
+	/* (non-Javadoc)
+	 * @see org.eclipse.debug.ui.ILaunchShortcut#launch(org.eclipse.ui.IEditorPart, java.lang.String)
+	 */
+	public void launch(IEditorPart editor, String mode) {
+		IEditorInput input = editor.getEditorInput();
+		IFile file = (IFile) input.getAdapter(IFile.class);
+		if (file == null) {
+			log.warn("Error getting file from editor");
+			return;
+		}
+		launch(new IFile[]{file}, mode);
+	}
+
 	// Do the actual work
-    protected void launch(IType type, String mode) {
-        try {
-            ILaunchConfiguration config = findLaunchConfiguration(type, mode);
-            if (config != null) {
-            	config.launch(mode, null);
-            }
-        } catch (CoreException e) {
-            // Handle exceptions
-        }
+    protected void launch(IFile[] files, String mode) {
+//        try {
+//            ILaunchConfiguration config = findLaunchConfiguration(type, mode);
+//            if (config != null) {
+//            	config.launch(mode, null);
+//            }
+//        } catch (CoreException e) {
+//            // Handle exceptions
+//        }
     }
-*/
+
 }
