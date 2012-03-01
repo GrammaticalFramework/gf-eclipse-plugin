@@ -15,7 +15,6 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 
-// TODO: Auto-generated Javadoc
 /**
  * In most cases, a launch shortcut is maximally useful if it performs the following steps:
  * - Resolve something to launch from the specified selection or editor
@@ -30,7 +29,6 @@ import org.eclipse.ui.IEditorPart;
  */
 public class GFLaunchShortcut implements ILaunchShortcut {
 
-	// We have to resolve the entity to launch from the editor
 	/* (non-Javadoc)
 	 * @see org.eclipse.debug.ui.ILaunchShortcut#launch(org.eclipse.ui.IEditorPart, java.lang.String)
 	 */
@@ -40,7 +38,6 @@ public class GFLaunchShortcut implements ILaunchShortcut {
 
 	}
 
-	// The selection contains the candidate entities to launch
 	/* (non-Javadoc)
 	 * @see org.eclipse.debug.ui.ILaunchShortcut#launch(org.eclipse.jface.viewers.ISelection, java.lang.String)
 	 */

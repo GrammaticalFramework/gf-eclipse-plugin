@@ -322,9 +322,9 @@
         point="org.eclipse.debug.ui.launchShortcuts">
      <shortcut
            class="org.grammaticalframework.eclipse.ui.launch.GFLaunchShortcut"
-           icon="icons/gf-logo.png"
+           icon="icons/gf-run.png"
            id="org.grammaticalframework.eclipse.ui.launch.shortcut"
-           label="Compile with GF"
+           label="Run with GF"
            modes="run">
         <contextualLaunch>
            <enablement>
@@ -345,6 +345,35 @@
            </enablement>
            <contextLabel
                  label="Compile with GF"
+                 mode="run">
+           </contextLabel>
+        </contextualLaunch>
+     </shortcut>
+     <shortcut
+           class="org.grammaticalframework.eclipse.ui.launch.GFTreebankLaunchShortcut"
+           icon="icons/treebank-run.png"
+           id="org.grammaticalframework.eclipse.ui.launch.treebankshortcut"
+           label="Treebank test with GF"
+           modes="run">
+        <contextualLaunch>
+           <enablement>
+              <with
+                    variable="selection">
+                 <count
+                       value="1">
+                 </count>
+                 <iterate>
+	            <adapt type="org.eclipse.core.resources.IFile">
+                    <test
+                          property="org.eclipse.core.resources.name"
+                          value="*.trees">
+                    </test>
+	            </adapt>
+                 </iterate>
+              </with>
+           </enablement>
+           <contextLabel
+                 label="Treebank test with GF"
                  mode="run">
            </contextLabel>
         </contextualLaunch>
