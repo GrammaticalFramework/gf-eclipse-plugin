@@ -27,8 +27,6 @@ import org.eclipse.ui.IEditorPart;
  * 
  * @author John J. Camilleri
  * 
- * TODO: Implement launch shortcuts. For some reason the shortcut won't show up in the menu...
- *
  */
 public class GFLaunchShortcut implements ILaunchShortcut {
 
