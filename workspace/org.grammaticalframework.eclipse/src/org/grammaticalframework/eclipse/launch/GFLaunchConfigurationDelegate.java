@@ -9,10 +9,8 @@
  */
 package org.grammaticalframework.eclipse.launch;
 import java.io.BufferedOutputStream;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -24,11 +22,7 @@ import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.debug.core.DebugPlugin;
 import org.eclipse.debug.core.ILaunch;
 import org.eclipse.debug.core.ILaunchConfiguration;
-import org.eclipse.debug.core.IStreamListener;
-import org.eclipse.debug.core.model.IProcess;
-import org.eclipse.debug.core.model.IStreamMonitor;
 import org.eclipse.debug.core.model.LaunchConfigurationDelegate;
-import org.eclipse.xtext.generator.parser.antlr.splitting.services.SimpleExpressionsGrammarAccess.ArgumentElements;
 import org.grammaticalframework.eclipse.GFPreferences;
 
 
@@ -92,7 +86,8 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			Process process = b.start();
 			
 			// Hook up the streams
-			IProcess iProcess = DebugPlugin.newProcess(launch, process, "gf");
+			DebugPlugin.newProcess(launch, process, "gf");
+//			IProcess iProcess = DebugPlugin.newProcess(launch, process, "gf");
 //			iProcess.getStreamsProxy().getOutputStreamMonitor().addListener(new IStreamListener() {
 //				public void streamAppended(String text, IStreamMonitor monitor) {
 ////					log.debug(text);
