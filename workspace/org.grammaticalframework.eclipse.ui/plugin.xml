@@ -14,6 +14,22 @@
               id="org.grammaticalframework.eclipse.GF"
               name="GF Editor">
         </editor>
+        <editor
+              class="org.eclipse.ui.editors.text.TextEditor"
+              default="false"
+              extensions="trees"
+              icon="icons/treebank-item.png"
+              id="org.grammaticalframework.eclipse.GF.Treebank"
+              name="Treebank Editor">
+        </editor>
+        <editor
+              class="org.eclipse.ui.editors.text.TextEditor"
+              default="false"
+              extensions="gold"
+              icon="icons/goldstandard.png"
+              id="org.grammaticalframework.eclipse.GF.GoldStandard"
+              name="Gold Standard Editor">
+        </editor>
     </extension>
     <extension
         point="org.eclipse.ui.handlers">
