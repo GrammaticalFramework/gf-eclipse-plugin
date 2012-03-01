@@ -118,6 +118,9 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		writer.println(treebankCommand);
 		writer.println("quit");
 		
+//		DebugPlugin.getDefault().
+//		PlatformUI.getWorkbench();
+		
 		// TODO: Write to Treebank View
 //		HandlerUtil.getActiveWorkbenchWindow(event).getActivePage().showView(viewId);
 //		PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(arg0);

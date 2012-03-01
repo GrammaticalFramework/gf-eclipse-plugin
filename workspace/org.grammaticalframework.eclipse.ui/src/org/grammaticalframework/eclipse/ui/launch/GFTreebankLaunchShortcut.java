@@ -17,19 +17,22 @@ import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationType;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.debug.core.ILaunchManager;
-import org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager;
 import org.eclipse.debug.ui.DebugUITools;
+import org.eclipse.debug.ui.IDebugUIConstants;
 import org.eclipse.debug.ui.ILaunchShortcut;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.PlatformUI;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
 import org.grammaticalframework.eclipse.ui.views.GFTreebankManagerHelper;
-import org.grammaticalframework.eclipse.ui.views.RunTreebankAction;
 
 /**
- * Shortcut from a treebank file, opens the Launch Config Dialog with pre-populated options.
+ * Shortcut from a treebank file, finds and runs an existing launch config which
+ * uses the current treebank file, or opens a new Launch Config Dialog with
+ * pre-populated options for a one-time launch.
  * 
  * @author John J. Camilleri
  *
@@ -72,57 +75,60 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
 	 * For the given treebank file, see if it is already mentioned in any existing configs.
 	 * If so, launch that config. If not, create a new one and open the LCD.
 	 * 
-	 * @param file Treebank file
+	 * @param treebankFile Treebank file
 	 * @param mode
 	 */
-    protected void launch(IFile file, String mode) {
+    protected void launch(IFile treebankFile, String mode) {
         try {
         	ILaunchManager launchManager = DebugPlugin.getDefault().getLaunchManager();
         	ILaunchConfigurationType configType = launchManager.getLaunchConfigurationType("org.grammaticalframework.eclipse.GFLaunchConfigurationType");
-            ILaunchConfiguration[] configs = launchManager.getLaunchConfigurations(configType);
             
             // Try to find a matching config and launch it
+            ILaunchConfiguration[] configs = launchManager.getLaunchConfigurations(configType);
             for (int i = 0; i < configs.length; i++) {
             	if (configs[i].getAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, false)
-            			&& file.getName().equals( configs[i].getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, "") )) {
+            			&& treebankFile.getName().equals( configs[i].getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, "") )) {
 //					configs[i].launch(mode, null);
+            		log.info(String.format("Running launch \"%s\" for treebank file \"%s\"", configs[i].getName(), treebankFile.getName()));
             		DebugUITools.launch(configs[i], mode);
 					return;
 				}
 			}
             
             // If we're come this far, no matching launch config exists, so we open up the LCD
-            ILaunchConfiguration config = createLaunchConfiguration(file);
-            
+    		log.info(String.format("Running on-the-fly launch for treebank file \"%s\"", treebankFile.getName()));
+            ILaunchConfiguration config = createLaunchConfiguration(treebankFile, configType);
+            Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+            DebugUITools.openLaunchConfigurationDialog(shell, config, IDebugUIConstants.ID_RUN_LAUNCH_GROUP, null);
             
         } catch (CoreException e) {
             log.warn("Error running launch", e);
         }
     }
     
-    protected ILaunchConfiguration createLaunchConfiguration(IFile treebankFile) {
-    	
+    /**
+     * Create a partial launch configuration based on the given treebank file. The resulting config
+     * is intended to be opened with the Launch Config Dialog (LCD).
+     *  
+     * @param treebankFile
+     * @param configType
+     * @return
+     * @throws CoreException
+     */
+    protected ILaunchConfiguration createLaunchConfiguration(IFile treebankFile, ILaunchConfigurationType configType) throws CoreException {
 		IFile goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
-    	
-		ILaunchConfigurationType gfLaunchType = DebugPlugin.getDefault().getLaunchManager().getLaunchConfigurationType("org.grammaticalframework.eclipse.GFLaunchConfigurationType");
 		ILaunchConfigurationWorkingCopy config;
-		try {
-			config = gfLaunchType.newInstance(null, "On-the-fly GF Treebank Lanuch");
-			config.setAttribute(IGFLaunchConfigConstants.WORKING_DIR, treebankFile.getParent().getLocation().toOSString());
-			config.setAttribute(IGFLaunchConfigConstants.FILENAMES, "");
-			config.setAttribute(IGFLaunchConfigConstants.OPTIONS, "");
-			config.setAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, false);
-			config.setAttribute(IGFLaunchConfigConstants.BATCH_MODE, true);
-			config.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, true);
-			config.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, treebankFile.getName());
-			if (goldStandardFile != null) {
-				config.setAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, goldStandardFile.getName());
-			}
-		} catch (CoreException e) {
-			log.error("Couldn't create treebank launch configuration", e);
-			return null;
+		config = configType.newInstance(null, "GF Treebank Test");
+		config.setAttribute(IGFLaunchConfigConstants.WORKING_DIR, treebankFile.getParent().getLocation().toOSString());
+//		config.setAttribute(IGFLaunchConfigConstants.FILENAMES, "");
+//		config.setAttribute(IGFLaunchConfigConstants.OPTIONS, "");
+		config.setAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, false);
+		config.setAttribute(IGFLaunchConfigConstants.BATCH_MODE, true);
+		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, true);
+		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, treebankFile.getName());
+		if (goldStandardFile != null) {
+			config.setAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, goldStandardFile.getName());
 		}
-
 		return config;
     }
 
