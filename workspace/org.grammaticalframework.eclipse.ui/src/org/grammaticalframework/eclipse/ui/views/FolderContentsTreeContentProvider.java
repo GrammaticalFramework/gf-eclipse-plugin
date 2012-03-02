@@ -17,7 +17,8 @@ import org.eclipse.core.resources.IFolder;
  *
  */
 class FolderContentsTreeContentProvider extends AbstractTreeContentProvider {
-	
+
+	@Override
 	public Object[] getChildren(Object parentElement) {
 		if (parentElement instanceof IFolder) {
 			ITreeNode t = new FolderNode((IFolder)parentElement);
