@@ -19,17 +19,33 @@ public class GFTreebankManagerHelper {
 	/**
 	 * List of valid treebank-file file extensions
 	 */
-	public static List<String> extensions = Arrays.asList(new String[]{"trees"});
+	public static List<String> TREEBANK_EXTENSIONS = Arrays.asList(new String[]{"trees"});
+	
+	/**
+	 * List of valid gold standard-file file extensions
+	 */
+	public static List<String> GOLD_STANDARD_EXTENSIONS = Arrays.asList(new String[]{"gold"});
 	
 	/**
 	 * Is the given file a treebank file?
-	 * This does perform any deep file checks, but only checks file extension.
+	 * This doesn't perform any deep file checks, but only checks file extension.
 	 * @param file
 	 * @return boolean
 	 */
 	public static boolean isTreebankFile(IFile file) {
 		String ext = file.getFileExtension();
-		return (ext != null && extensions.contains(ext));
+		return (ext != null && TREEBANK_EXTENSIONS.contains(ext));
+	}
+	
+	/**
+	 * Is the given file a gold standard file?
+	 * This doesn't perform any deep file checks, but only checks file extension.
+	 * @param file
+	 * @return boolean
+	 */
+	public static boolean isGoldStandardFile(IFile file) {
+		String ext = file.getFileExtension();
+		return (ext != null && GOLD_STANDARD_EXTENSIONS.contains(ext));
 	}
 	
 	/**
