@@ -22,13 +22,17 @@ import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.viewers.CellLabelProvider;
+import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
+import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
@@ -82,13 +86,57 @@ public class GFTreebankManagerView extends ViewPart {
 	private Label statusLabel;
 	private Label passedLabel;
 	private Label failedLabel;
-	private TreeViewer treeFilesViewer;
+	private TreeViewer fileViewer;
 	private TableViewer outputViewer;
+	
+	// Getters & setters for widgets
+	public String getStatusText() {
+		return statusLabel.getText();
+	}
+
+	public void setStatusText(String statusLabel) {
+		this.statusLabel.setText(statusLabel);
+	}
+
+	public String getPassedText() {
+		return passedLabel.getText();
+	}
+
+	public void setPassedText(String passedLabel) {
+		this.passedLabel.setText(passedLabel);
+	}
+
+	public String getFailedText() {
+		return failedLabel.getText();
+	}
+
+	public void setFailedText(String failedLabel) {
+		this.failedLabel.setText(failedLabel);
+	}
+
+	public TreeViewer getFileViewer() {
+		return fileViewer;
+	}
+
+	public void setFileViewer(TreeViewer fileViewer) {
+		this.fileViewer = fileViewer;
+	}
+
+	public TableViewer getOutputViewer() {
+		return outputViewer;
+	}
+
+	public void setOutputViewer(TableViewer outputViewer) {
+		this.outputViewer = outputViewer;
+	}
 
 	private IPartListener2 listener;
 	
 	private IProject currentProject;
 
+	/**
+	 * Create the layout and put all the widgets in their places
+	 */
 	public void createPartControl(Composite parent) {
 		// Overall layout
 		GridLayout layout = new GridLayout(1, true);
@@ -113,7 +161,7 @@ public class GFTreebankManagerView extends ViewPart {
 		// Bottom section with tableviews
         SashForm sash = new SashForm(parent, SWT.HORIZONTAL | SWT.SMOOTH);
         sash.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-        configureTreesViewer(sash);
+        configureFilesViewer(sash);
         configureOutputViewer(sash);
         sash.setWeights(new int[]{1,2});
 
@@ -126,7 +174,11 @@ public class GFTreebankManagerView extends ViewPart {
 		addEditorListener();
     }
 	
-	private void configureTreesViewer(Composite parent) {
+	/**
+	 * Setup the treebank file viewer
+	 * @param parent
+	 */
+	private void configureFilesViewer(Composite parent) {
         WorkbenchContentProvider contentProvider = new WorkbenchContentProvider();
         ViewerFilter filter = new ViewerFilter() {
 			@Override
@@ -165,26 +217,52 @@ public class GFTreebankManagerView extends ViewPart {
 			}
 		};
 		
-        treeFilesViewer = new TreeViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER );
-        treeFilesViewer.setContentProvider(contentProvider);
-        treeFilesViewer.setFilters(new ViewerFilter[]{filter});
-        treeFilesViewer.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
-        treeFilesViewer.setLabelProvider(labelProvider);
+        fileViewer = new TreeViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER );
+        fileViewer.setContentProvider(contentProvider);
+        fileViewer.setFilters(new ViewerFilter[]{filter});
+        fileViewer.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
+        fileViewer.setLabelProvider(labelProvider);
 //		treeFilesViewer.setSorter(new NameSorter());
 //		treeFilesViewer.setComparator(sorter);
-        treeFilesViewer.setInput(null); // our listener below will take care of this
+        fileViewer.setInput(null); // our listener below will take care of this
 	}
 	
+	/**
+	 * Setup the output viewer
+	 * @param parent
+	 */
 	private void configureOutputViewer(Composite parent) {
         outputViewer = new TableViewer(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER );
-        outputViewer.setLabelProvider(new LabelProvider() {
-        	
+//        outputViewer.setLabelProvider(new LabelProvider() {
+//			@Override
+//			public Image getImage(Object element) {
+//				if (((String)element).contains("\n"))
+//					return images.forTreebankFail();
+//				else
+//					return images.forTreebankPass();
+//			}
+//        });
+        TableViewerColumn col = new TableViewerColumn(outputViewer, SWT.BORDER);
+        col.getColumn().setWidth(200);
+        col.getColumn().setText("Output");
+        col.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public Image getImage(Object element) {
+				if (((String)element).contains("\n"))
+					return images.forTreebankFail();
+				else
+					return images.forTreebankPass();
+			}
         });
+        
         // one column: icon shows result; tree, lin and gold are on separate lines as same entry.
 	}
 	
+	/**
+	 * Add listnere to the fiel editor so that we can swap project depending on the currently
+	 * active file.
+	 */
 	private void addEditorListener() {
-		// Add a listener which updates the view each time the active editor is changed
 		listener = new IPartListener2() {
 			public void partActivated(IWorkbenchPartReference partRef) {
 				try {
@@ -193,10 +271,10 @@ public class GFTreebankManagerView extends ViewPart {
 					if (input instanceof IFileEditorInput) {
 						IFile file = ((IFileEditorInput) input).getFile();
 						currentProject = file.getProject();
-						treeFilesViewer.setInput(currentProject.getParent());
+						fileViewer.setInput(currentProject.getParent());
 					}
 				} catch (NullPointerException e) {
-					treeFilesViewer.setInput(null);
+					fileViewer.setInput(null);
 				}
 			}
 			public void partBroughtToTop(IWorkbenchPartReference partRef) {
@@ -217,6 +295,9 @@ public class GFTreebankManagerView extends ViewPart {
 		getSite().getWorkbenchWindow().getPartService().addPartListener(listener);
 	}
 	
+	/**
+	 * Remove said listener
+	 */
 	private void removeEditorListener() {
 		getSite().getWorkbenchWindow().getPartService().removePartListener(listener);
 	}
@@ -226,7 +307,7 @@ public class GFTreebankManagerView extends ViewPart {
 	 * @return the selected file, or <code>null</code> if nothing is selected (or some other error occurs).
 	 */
 	private IFile getSelectedFile() {
-		IStructuredSelection selection = (IStructuredSelection)treeFilesViewer.getSelection();
+		IStructuredSelection selection = (IStructuredSelection)fileViewer.getSelection();
 		if (selection.isEmpty()) {
 			return null;
 		}
@@ -246,6 +327,9 @@ public class GFTreebankManagerView extends ViewPart {
 		return (file != null && GFTreebankManagerHelper.isTreebankFile(file)) ? file : null;
 	}
 	
+	/**
+	 * Create all the actions with their run() methods
+	 */
 	private void makeActions() {
 		// Run a single treebank
 		runAction = new Action() {
@@ -267,7 +351,7 @@ public class GFTreebankManagerView extends ViewPart {
 				}
 				// Launch
 				GFTreebankLaunchShortcut launchShortcut = new GFTreebankLaunchShortcut();
-				launchShortcut.launch(treeFilesViewer.getSelection(), ILaunchManager.RUN_MODE);
+				launchShortcut.launch(fileViewer.getSelection(), ILaunchManager.RUN_MODE);
 			}
 		};
 		runAction.setText("Run treebank");
@@ -292,7 +376,7 @@ public class GFTreebankManagerView extends ViewPart {
 					return;
 				IFile outputFile = GFTreebankManagerHelper.getOutputFile(treebankFile);
 				IFile goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
-				GFTreebankManagerHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile, treeFilesViewer);
+				GFTreebankManagerHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile, GFTreebankManagerView.this);
 			}
 		};
 		compareAction.setText("Compare output with gold standard");
@@ -306,13 +390,13 @@ public class GFTreebankManagerView extends ViewPart {
 				GFTreebankManagerView.this.fillContextMenu(manager);
 			}
 		});
-		Menu menu = menuMgr.createContextMenu(treeFilesViewer.getControl());
-		treeFilesViewer.getControl().setMenu(menu);
+		Menu menu = menuMgr.createContextMenu(fileViewer.getControl());
+		fileViewer.getControl().setMenu(menu);
 //		getSite().registerContextMenu(menuMgr, treeFilesViewer);
 	}
 
 	private void hookDoubleClickAction() {
-		treeFilesViewer.addDoubleClickListener(new IDoubleClickListener() {
+		fileViewer.addDoubleClickListener(new IDoubleClickListener() {
 			public void doubleClick(DoubleClickEvent event) {
 				runAction.run();
 			}
@@ -351,7 +435,7 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 	
 	public void setFocus() {
-		treeFilesViewer.getControl().setFocus();
+		fileViewer.getControl().setFocus();
 	}
 
 	@Override

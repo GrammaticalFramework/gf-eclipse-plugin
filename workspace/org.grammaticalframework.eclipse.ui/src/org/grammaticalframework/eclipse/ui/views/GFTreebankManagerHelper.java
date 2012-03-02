@@ -20,8 +20,12 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.jface.viewers.IContentProvider;
+import org.eclipse.jface.viewers.ITreeContentProvider;
+import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.swt.SWT;
 
 public class GFTreebankManagerHelper {
 	
@@ -116,7 +120,7 @@ public class GFTreebankManagerHelper {
 		}
 	}
 	
-	public static void compareOutputWithGoldStandard(IFile outputFile, IFile goldStandardFile, TreeViewer viewer) {
+	public static void compareOutputWithGoldStandard(IFile outputFile, IFile goldStandardFile, GFTreebankManagerView view) {
 		BufferedReader outReader = null;
 		BufferedReader goldReader = null;
 		try {
@@ -125,7 +129,7 @@ public class GFTreebankManagerHelper {
 			
 			String outLine;
 			String goldLine;
-			ArrayList<Object> viewerItems = new ArrayList<Object>();
+			final ArrayList<Object> viewerItems = new ArrayList<Object>();
 			int passed = 0;
 			int failed = 0;
 			while ((outLine = outReader.readLine()) != null) {
@@ -145,19 +149,23 @@ public class GFTreebankManagerHelper {
 				
 				// Do the comparison
 				StringBuilder sb = new StringBuilder();
-				sb.append(outLine + "\n");
+				sb.append(outLine);
 				if (outLine.equals(goldLine)) {
 					passed++;
 				} else {
 					failed++;
-					sb.append(goldLine + "\n");
+					sb.append("\n" + goldLine);
 				}
 				viewerItems.add(sb.toString());
 			}
 			
 			// Set items in viewer
 			int total = passed+failed;
-			viewer.add(null, viewerItems.toArray());
+			view.setStatusText("Results of "+outputFile.getName()); // TODO the FillLayout needs to adjust for this!
+			view.setPassedText(String.format("%d/%d", passed, total));
+			view.setFailedText(String.format("%d/%d", failed, total));
+			view.getOutputViewer().setItemCount(0);
+			view.getOutputViewer().add(viewerItems.toArray());
 			
 		} catch (Exception e) {
 			log.error("Error running comparison",  e);

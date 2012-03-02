@@ -214,6 +214,15 @@ public class GFImages extends PluginImageHelper {
 	public Image forTreebankItemWithGoldStandard() {
 		return getImage("treebank-item-gold.png");
 	}
+	public Image forTreebankPass() {
+		return getImage("treebank-ok.png");
+	}
+	public Image forTreebankFail() {
+		return getImage("treebank-error.png");
+	}
+	public Image forTreebankError() {
+		return getImage("treebank-error.png");
+	}
 	
 
 	
