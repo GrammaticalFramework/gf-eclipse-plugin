@@ -9,18 +9,22 @@
  */
 package org.grammaticalframework.eclipse.ui.views;
 
+import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.debug.core.ILaunchManager;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TreeViewer;
@@ -31,21 +35,25 @@ import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IPartListener2;
 import org.eclipse.ui.IWorkbenchPartReference;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.eclipse.ui.part.ViewPart;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
+import org.grammaticalframework.eclipse.ui.launch.GFTreebankLaunchShortcut;
 
 import com.google.inject.Inject;
 
@@ -56,19 +64,24 @@ public class GFTreebankManagerView extends ViewPart {
 	 */
 	public static final String ID = "org.grammaticalframework.eclipse.ui.views.GFTreebankManagerView";
 	
+	/**
+	 * Logger
+	 */
+	private static final Logger log = Logger.getLogger(GFTreebankManagerView.class);
+	
 	@Inject
 	private GFImages images;
 	
 	// Actions
-	private RunTreebankAction runAction;
-	private Action runAllAction;
+	private Action runAction;
 	private Action makeGoldStandardAction;
 	
 	// Widgets
+	private Label statusLabel;
+	private Label passedLabel;
+	private Label failedLabel;
 	private TreeViewer treeFilesViewer;
 	private TableViewer outputViewer;
-	private Button runButton;
-	private Label statusLabel;
 
 	private IPartListener2 listener;
 	
@@ -81,36 +94,27 @@ public class GFTreebankManagerView extends ViewPart {
 		
 		// Top bar with buttons & stats
 		Composite bar = new Composite(parent, SWT.NONE);
-		bar.setLayout(new GridLayout(2, false));
+		bar.setLayout(new FillLayout(SWT.HORIZONTAL));
+
+		new Label(bar, SWT.RIGHT).setText("Status: ");
+		statusLabel = new Label(bar, SWT.LEFT);
+		statusLabel.setText("Idle");
 		
-		runButton = new Button(bar, SWT.PUSH);
-		runButton.setText("Run");
-		runButton.addSelectionListener(new SelectionListener() {
-			public void widgetSelected(SelectionEvent e) {
-				runAction.run();
-			}
-			public void widgetDefaultSelected(SelectionEvent e) {
-			}
-		});
+		new Label(bar, SWT.RIGHT).setText("Passed: ");
+		passedLabel = new Label(bar, SWT.LEFT);
+		passedLabel.setText("-");
 		
-		statusLabel = new Label(bar, SWT.FILL);
-		statusLabel.setText("Status and stats..");
+		new Label(bar, SWT.RIGHT).setText("Failed: ");
+		failedLabel = new Label(bar, SWT.LEFT);
+		failedLabel.setText("-");
 		
 		// Bottom section with tableviews
         SashForm sash = new SashForm(parent, SWT.HORIZONTAL | SWT.SMOOTH);
         sash.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-        
-        // Table of trees files
         configureTreesViewer(sash);
-        
-        // Output
         configureOutputViewer(sash);
-
         sash.setWeights(new int[]{1,2});
 
-        // Bottom line
-//		new Label(parent, SWT.LEFT).setText("bottom text");
-        
 		// Actions and menus
 		makeActions();
 		hookContextMenu();
@@ -217,19 +221,37 @@ public class GFTreebankManagerView extends ViewPart {
 	
 	private void makeActions() {
 		// Run a single treebank
-		runAction = new RunTreebankAction(treeFilesViewer);
-		runAction.setText("Run treebank");
-		
-		// Run all treebanks in project
-		runAllAction = new Action() {
+		runAction = new Action() {
+			private IFile treebankFile;
+			private IFile goldStandardFile;
 			@Override
 			public void run() {
-				// TODO
-				statusLabel.setText("Running all treebanks...");
+				// See what's selected in our viewer and validate
+				IStructuredSelection selection = (IStructuredSelection)treeFilesViewer.getSelection();
+				if (selection.isEmpty()) {
+					return;
+				}
+				try {
+					treebankFile = (IFile)selection.getFirstElement();
+				} catch (ClassCastException _) {
+					log.warn("Can only run action on file.");
+					return;
+				}
+				goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
+				if (goldStandardFile == null) {
+					Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+					String title = "Error running treebank";
+					String message = String.format("Found no corresponding gold standard for %s", treebankFile.getName());
+					MessageDialog.openInformation(shell, title, message);
+					log.info(message);
+					return;
+				}
+				// Launch
+				GFTreebankLaunchShortcut launchShortcut = new GFTreebankLaunchShortcut();
+				launchShortcut.launch(selection, ILaunchManager.RUN_MODE);
 			}
 		};
-		runAllAction.setText("Run all treebanks");
-		runAllAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankRun()));
+		runAction.setText("Run treebank");
 		
 		// Create a gold standard file from a treebank
 		makeGoldStandardAction = new Action() {
@@ -271,18 +293,29 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 
 	private void fillLocalPullDown(IMenuManager manager) {
-		manager.add(runAllAction);
 	}
 
 	private void fillContextMenu(IMenuManager manager) {
-		manager.add(runAction);
-		manager.add(makeGoldStandardAction);
+		IStructuredSelection selection = (IStructuredSelection)treeFilesViewer.getSelection();
+		if (selection.isEmpty()) {
+			return;
+		}
+		try {
+			IFile file = (IFile)selection.getFirstElement();
+			if (GFTreebankManagerHelper.isTreebankFile(file)) {
+				if (GFTreebankManagerHelper.hasGoldStandardFile(file))
+					manager.add(runAction);
+				else
+					manager.add(makeGoldStandardAction);
+			}
+		} catch (ClassCastException _) {
+			return;
+		}
 //		manager.add(new Separator());
 //		drillDownAdapter.addNavigationActions(manager);
 	}
 
 	private void fillLocalToolBar(IToolBarManager manager) {
-		manager.add(runAllAction);
 //		manager.add(action2);
 //		manager.add(new Separator());
 //		drillDownAdapter.addNavigationActions(manager);
