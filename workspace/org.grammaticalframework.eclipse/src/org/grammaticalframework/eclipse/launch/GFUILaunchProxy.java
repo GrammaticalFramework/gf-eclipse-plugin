@@ -18,24 +18,23 @@ import java.io.OutputStreamWriter;
 /**
  * For allowing the UI plugin to provide its console streams to the non-UI plugin
  */
-public class GFConsoleDelegate {
+public class GFUILaunchProxy {
 	
-	@SuppressWarnings("unused")
-	private static InputStream inputStreamFromConsole;
-
-	private static BufferedWriter consoleWriter;
-	
-	public static void init(InputStream inputFromConsole, OutputStream outputToConsole) {
-		inputStreamFromConsole = inputFromConsole;
-		consoleWriter = new BufferedWriter(new OutputStreamWriter(outputToConsole));
-	}
-	
-	public static void write(String s) {
-		try {
-			consoleWriter.write(s);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
+//	private static InputStream inputStreamFromConsole;
+//
+//	private static BufferedWriter consoleWriter;
+//	
+//	public static void init(InputStream inputFromConsole, OutputStream outputToConsole) {
+//		inputStreamFromConsole = inputFromConsole;
+//		consoleWriter = new BufferedWriter(new OutputStreamWriter(outputToConsole));
+//	}
+//	
+//	public static void write(String s) {
+//		try {
+//			consoleWriter.write(s);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//	}
 	
 }
