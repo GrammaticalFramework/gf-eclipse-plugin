@@ -75,6 +75,8 @@ public class GFTreebankManagerView extends ViewPart {
 	// Actions
 	private Action runAction;
 	private Action makeGoldStandardAction;
+
+	private Action compareAction;
 	
 	// Widgets
 	private Label statusLabel;
@@ -219,6 +221,31 @@ public class GFTreebankManagerView extends ViewPart {
 		getSite().getWorkbenchWindow().getPartService().removePartListener(listener);
 	}
 	
+	/**
+	 * Get the currently selected file from the tree files viewer
+	 * @return the selected file, or <code>null</code> if nothing is selected (or some other error occurs).
+	 */
+	private IFile getSelectedFile() {
+		IStructuredSelection selection = (IStructuredSelection)treeFilesViewer.getSelection();
+		if (selection.isEmpty()) {
+			return null;
+		}
+		try {
+			return (IFile)selection.getFirstElement();
+		} catch (Exception _) {
+			return null;
+		}
+	}
+	
+	/**
+	 * Get the currently selected file from the tree files viewer, only if it is a treebank file
+	 * @return the selected file, or <code>null</code> if nothing is selected (or some other error occurs).
+	 */
+	private IFile getSelectedTreebankFile() {
+		IFile file = getSelectedFile();
+		return (file != null && GFTreebankManagerHelper.isTreebankFile(file)) ? file : null;
+	}
+	
 	private void makeActions() {
 		// Run a single treebank
 		runAction = new Action() {
@@ -227,16 +254,8 @@ public class GFTreebankManagerView extends ViewPart {
 			@Override
 			public void run() {
 				// See what's selected in our viewer and validate
-				IStructuredSelection selection = (IStructuredSelection)treeFilesViewer.getSelection();
-				if (selection.isEmpty()) {
+				if ((treebankFile = getSelectedTreebankFile()) == null)
 					return;
-				}
-				try {
-					treebankFile = (IFile)selection.getFirstElement();
-				} catch (ClassCastException _) {
-					log.warn("Can only run action on file.");
-					return;
-				}
 				goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
 				if (goldStandardFile == null) {
 					Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
@@ -248,7 +267,7 @@ public class GFTreebankManagerView extends ViewPart {
 				}
 				// Launch
 				GFTreebankLaunchShortcut launchShortcut = new GFTreebankLaunchShortcut();
-				launchShortcut.launch(selection, ILaunchManager.RUN_MODE);
+				launchShortcut.launch(treeFilesViewer.getSelection(), ILaunchManager.RUN_MODE);
 			}
 		};
 		runAction.setText("Run treebank");
@@ -263,6 +282,20 @@ public class GFTreebankManagerView extends ViewPart {
 		};
 		makeGoldStandardAction.setText("Make gold standard");
 //		makeGoldStandardAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-new.png")));
+		
+		// Compare output with gold standard 
+		compareAction = new Action() {
+			@Override
+			public void run() {
+				IFile treebankFile = getSelectedTreebankFile();
+				if (treebankFile == null)
+					return;
+				IFile outputFile = GFTreebankManagerHelper.getOutputFile(treebankFile);
+				IFile goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
+				GFTreebankManagerHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile, treeFilesViewer);
+			}
+		};
+		compareAction.setText("Compare output with gold standard");
 	}	
 
 	private void hookContextMenu() {
@@ -296,20 +329,16 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 
 	private void fillContextMenu(IMenuManager manager) {
-		IStructuredSelection selection = (IStructuredSelection)treeFilesViewer.getSelection();
-		if (selection.isEmpty()) {
+		IFile treebankFile = getSelectedTreebankFile();
+		if (treebankFile == null)
 			return;
-		}
-		try {
-			IFile file = (IFile)selection.getFirstElement();
-			if (GFTreebankManagerHelper.isTreebankFile(file)) {
-				if (GFTreebankManagerHelper.hasGoldStandardFile(file))
-					manager.add(runAction);
-				else
-					manager.add(makeGoldStandardAction);
+		if (GFTreebankManagerHelper.hasGoldStandardFile(treebankFile)) {
+			manager.add(runAction);
+			if (GFTreebankManagerHelper.hasOutputFile(treebankFile)) {
+				manager.add(compareAction);
 			}
-		} catch (ClassCastException _) {
-			return;
+		} else {
+			manager.add(makeGoldStandardAction);
 		}
 //		manager.add(new Separator());
 //		drillDownAdapter.addNavigationActions(manager);

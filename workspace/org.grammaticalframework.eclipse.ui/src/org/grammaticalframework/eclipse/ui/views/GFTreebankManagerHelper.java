@@ -9,12 +9,26 @@
  */
 package org.grammaticalframework.eclipse.ui.views;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.jface.viewers.TreeViewer;
+import org.eclipse.jface.viewers.Viewer;
 
 public class GFTreebankManagerHelper {
+	
+	/**
+	 * Logger
+	 */
+	private static final Logger log = Logger.getLogger(GFTreebankManagerHelper.class);
 	
 	/**
 	 * List of valid treebank-file file extensions
@@ -72,6 +86,88 @@ public class GFTreebankManagerHelper {
 			return (IFile) file.getParent().findMember(gsFileName);
 		} catch (ClassCastException e) {
 			return null;
+		}
+	}
+	
+	/**
+	 * Does the given treebank file have an output file?
+	 * @param file
+	 * @return boolean
+	 */
+	public static boolean hasOutputFile(IFile file) {
+		return getOutputFile(file) != null;
+	}
+	
+	/**
+	 * Find and return a output file for the given treebank file.
+	 * Does not perform any checking on the actual file, it only matches based on filenames.
+	 * @param file
+	 * @return The corresponding gold standard file, or <code>null</code>.
+	 */
+	public static IFile getOutputFile(IFile file) {
+		if (!isTreebankFile(file)) {
+			return null;
+		}
+		String gsFileName = file.getName() + ".out";
+		try {
+			return (IFile) file.getParent().findMember(gsFileName);
+		} catch (ClassCastException e) {
+			return null;
+		}
+	}
+	
+	public static void compareOutputWithGoldStandard(IFile outputFile, IFile goldStandardFile, TreeViewer viewer) {
+		BufferedReader outReader = null;
+		BufferedReader goldReader = null;
+		try {
+			outReader = new BufferedReader(new InputStreamReader(new DataInputStream(outputFile.getContents())));
+			goldReader = new BufferedReader(new InputStreamReader(new DataInputStream(goldStandardFile.getContents())));
+			
+			String outLine;
+			String goldLine;
+			ArrayList<Object> viewerItems = new ArrayList<Object>();
+			int passed = 0;
+			int failed = 0;
+			while ((outLine = outReader.readLine()) != null) {
+				// Sync with gold standard file
+				goldLine = goldReader.readLine();
+				if (goldLine == null) {
+					log.error(String.format("Output file \"%s\" and gold standard file \"%s\" do not match in length.", outputFile.getName(), goldStandardFile.getName()));
+					break;
+				}
+				
+				// Skip empty lines
+				outLine = outLine.trim();
+				goldLine = goldLine.trim();
+				if (outLine.isEmpty())  {
+					continue;
+				}
+				
+				// Do the comparison
+				StringBuilder sb = new StringBuilder();
+				sb.append(outLine + "\n");
+				if (outLine.equals(goldLine)) {
+					passed++;
+				} else {
+					failed++;
+					sb.append(goldLine + "\n");
+				}
+				viewerItems.add(sb.toString());
+			}
+			
+			// Set items in viewer
+			int total = passed+failed;
+			viewer.add(null, viewerItems.toArray());
+			
+		} catch (Exception e) {
+			log.error("Error running comparison",  e);
+		} finally {
+			try {
+				outReader.close();
+			} catch (Exception _) {	}
+			try {
+				goldReader.close();
+			} catch (Exception _) {	}
 		}
 	}
 
