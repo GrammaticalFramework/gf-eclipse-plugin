@@ -176,96 +176,100 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 */
 	protected void _createChildren(IOutlineNode parentNode, TopDef topDef) {
 
-		for (EObject e : topDef.getDefinitions()) {
-			// cat
-			if (topDef.isCat()) {
-				CatDef entity = (CatDef)e;
-				StyledString text = makeLabel(entity.getName().getS(), "<Category>");
-				createEObjectNode(parentNode, entity.getName(), images.forCatDef(), text, true);
-			}
-			// fun
-			else if (topDef.isFun()) {
-				FunDef entity = (FunDef)e;
-				for (Ident i : entity.getName()) { 
-					StyledString text = makeLabel(i.getS(), getTokens(entity.getType(), "<Function>"));
-					createEObjectNode(parentNode, i, images.forFunDef(), text, true);
+		try {
+			for (EObject e : topDef.getDefinitions()) {
+				// cat
+				if (topDef.isCat()) {
+					CatDef entity = (CatDef)e;
+					StyledString text = makeLabel(entity.getName().getS(), "<Category>");
+					createEObjectNode(parentNode, entity.getName(), images.forCatDef(), text, true);
 				}
-			}
-			// def
-			else if (topDef.isDef()) {
-				DefDef entity = (DefDef)e;
-				for (Name n : entity.getName()) { 
-					StyledString text = makeLabel(n.getName().getS(), "<Semantic definition>");
-					createEObjectNode(parentNode, n.getName(), images.forDefDef(), text, true);
-				}
-			}
-			// data
-			else if (topDef.isData()) {
-				DataDef entity = (DataDef)e;
-				for (Ident i : entity.getName()) { 
-					StyledString text = makeLabel(i.getS(), getTokens(entity.getType(), "<Data constructor definitions>"));
-					EObjectNode node = createEObjectNode(parentNode, i, images.forDataDef(), text, false);
-					node.setImage(images.forParam());
-					for (Ident cons : entity.getConstructors()) {
-						createEObjectNode(node, cons, images.forConstructor(), cons.getS(), true);
+				// fun
+				else if (topDef.isFun()) {
+					FunDef entity = (FunDef)e;
+					for (Ident i : entity.getName()) { 
+						StyledString text = makeLabel(i.getS(), getTokens(entity.getType(), "<Function>"));
+						createEObjectNode(parentNode, i, images.forFunDef(), text, true);
 					}
 				}
-			}
-			// param
-			else if (topDef.isParam()) {
-				ParamDef entity = (ParamDef)e;
-				StyledString text = makeLabel(entity.getName().getS(), "<Parameter type>");
-				EObjectNode node = createEObjectNode(parentNode, entity.getName(), images.forParamDef(), text, false);
-				node.setImage(images.forParam());
-				for (ParConstr cons : entity.getConstructors()) {
-					text = makeLabel(cons.getName().getS(), entity.getName().getS());
-					createEObjectNode(node, cons, images.forConstructor(), text, true);
+				// def
+				else if (topDef.isDef()) {
+					DefDef entity = (DefDef)e;
+					for (Name n : entity.getName()) { 
+						StyledString text = makeLabel(n.getName().getS(), "<Semantic definition>");
+						createEObjectNode(parentNode, n.getName(), images.forDefDef(), text, true);
+					}
 				}
-			}
-			// oper
-			else if (topDef.isOper()) {
-				OperDef entity = (OperDef)e;
-				for (Name n : entity.getName()) {
-					if (entity.isOverload()) {
-						StyledString text = makeLabel(n.getName().getS(), "<Overloaded operation>");
-						EObjectNode node = createEObjectNode(parentNode, n.getName(), images.forOperDef(), text, false);
-						for (OperDef overload : entity.getOverloads()) {
-							for (Name n2 : overload.getName()) {
-								text = makeLabel(n2.getName().getS(), getTokens(overload.getType(), "<Operation>"));
-								createEObjectNode(node, n2, images.forConstructor(), text, true);
-							}
+				// data
+				else if (topDef.isData()) {
+					DataDef entity = (DataDef)e;
+					for (Ident i : entity.getName()) { 
+						StyledString text = makeLabel(i.getS(), getTokens(entity.getType(), "<Data constructor definitions>"));
+						EObjectNode node = createEObjectNode(parentNode, i, images.forDataDef(), text, false);
+						node.setImage(images.forParam());
+						for (Ident cons : entity.getConstructors()) {
+							createEObjectNode(node, cons, images.forConstructor(), cons.getS(), true);
 						}
-					} else {
-						StyledString text = makeLabel(n.getName().getS(), getTokens(entity.getType(), "<Operation>"));
-						createEObjectNode(parentNode, n.getName(), images.forOperDef(), text, true);
 					}
 				}
-			}
-			// lincat, lindef, printname
-			else if (topDef.isLincat() || topDef.isLindef() || topDef.isPrintname()) {
-				TermDef entity = (TermDef)e;
-				for (Name n : entity.getName()) { 
-					StyledString text = makeLabel(n.getName().getS(), getTokens(entity.getDefinition()));
-					createEObjectNode(parentNode, n.getName(), images.forTermDef(), text, true);
+				// param
+				else if (topDef.isParam()) {
+					ParamDef entity = (ParamDef)e;
+					StyledString text = makeLabel(entity.getName().getS(), "<Parameter type>");
+					EObjectNode node = createEObjectNode(parentNode, entity.getName(), images.forParamDef(), text, false);
+					node.setImage(images.forParam());
+					for (ParConstr cons : entity.getConstructors()) {
+						text = makeLabel(cons.getName().getS(), entity.getName().getS());
+						createEObjectNode(node, cons, images.forConstructor(), text, true);
+					}
+				}
+				// oper
+				else if (topDef.isOper()) {
+					OperDef entity = (OperDef)e;
+					for (Name n : entity.getName()) {
+						if (entity.isOverload()) {
+							StyledString text = makeLabel(n.getName().getS(), "<Overloaded operation>");
+							EObjectNode node = createEObjectNode(parentNode, n.getName(), images.forOperDef(), text, false);
+							for (OperDef overload : entity.getOverloads()) {
+								for (Name n2 : overload.getName()) {
+									text = makeLabel(n2.getName().getS(), getTokens(overload.getType(), "<Operation>"));
+									createEObjectNode(node, n2, images.forConstructor(), text, true);
+								}
+							}
+						} else {
+							StyledString text = makeLabel(n.getName().getS(), getTokens(entity.getType(), "<Operation>"));
+							createEObjectNode(parentNode, n.getName(), images.forOperDef(), text, true);
+						}
+					}
+				}
+				// lincat, lindef, printname
+				else if (topDef.isLincat() || topDef.isLindef() || topDef.isPrintname()) {
+					TermDef entity = (TermDef)e;
+					for (Name n : entity.getName()) { 
+						StyledString text = makeLabel(n.getName().getS(), getTokens(entity.getDefinition()));
+						createEObjectNode(parentNode, n.getName(), images.forTermDef(), text, true);
+					}
+				}
+				// lin
+				else if (topDef.isLin()) {
+					for (Name n : ((LinDef)e).getName()) { 
+						StyledString text = makeLabel(n.getName().getS(), "<Linearisation>");
+						createEObjectNode(parentNode, n.getName(), images.forLinDef(), text, true);
+					}
+				}
+				// flags
+				else if (topDef.isFlags()) {
+					StyledString text = makeLabel(String.format("%s = %s", ((FlagDef)e).getName().getS(), ((FlagDef)e).getValue().getS()), "<Flag>");
+					createEObjectNode(parentNode, (FlagDef)e, images.forFlag(), text, true);
+				}
+				// Unknown
+				else {
+					// This should never happen
+					log.info("Unknown case in outline provider");
 				}
 			}
-			// lin
-			else if (topDef.isLin()) {
-				for (Name n : ((LinDef)e).getName()) { 
-					StyledString text = makeLabel(n.getName().getS(), "<Linearisation>");
-					createEObjectNode(parentNode, n.getName(), images.forLinDef(), text, true);
-				}
-			}
-			// flags
-			else if (topDef.isFlags()) {
-				StyledString text = makeLabel(String.format("%s = %s", ((FlagDef)e).getName().getS(), ((FlagDef)e).getValue().getS()), "<Flag>");
-				createEObjectNode(parentNode, (FlagDef)e, images.forFlag(), text, true);
-			}
-			// Unknown
-			else {
-				// This should never happen
-				log.info("Unknown case in outline provider");
-			}
+		} catch (NullPointerException e) {
+			// Just means we're in a transient invalid-model state. chill.
 		}
 	}
 
