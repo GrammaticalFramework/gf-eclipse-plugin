@@ -116,8 +116,8 @@ public class GFTreebankManagerHelper {
 		BufferedReader outReader = null;
 		BufferedReader goldReader = null;
 		try {
-			outReader = new BufferedReader(new InputStreamReader(new DataInputStream(outputFile.getContents())));
-			goldReader = new BufferedReader(new InputStreamReader(new DataInputStream(goldStandardFile.getContents())));
+			outReader = new BufferedReader(new InputStreamReader(new DataInputStream(outputFile.getContents(true))));
+			goldReader = new BufferedReader(new InputStreamReader(new DataInputStream(goldStandardFile.getContents(true))));
 			
 			String outLine;
 			String goldLine;
