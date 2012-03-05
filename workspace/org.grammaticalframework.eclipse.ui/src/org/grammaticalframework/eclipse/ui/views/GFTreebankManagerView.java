@@ -14,6 +14,12 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IResourceChangeEvent;
+import org.eclipse.core.resources.IResourceChangeListener;
+import org.eclipse.core.resources.IResourceDelta;
+import org.eclipse.core.resources.IResourceDeltaVisitor;
+import org.eclipse.core.resources.ResourcesPlugin;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.debug.core.ILaunchManager;
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.action.IMenuListener;
@@ -34,15 +40,13 @@ import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Table;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
@@ -127,7 +131,8 @@ public class GFTreebankManagerView extends ViewPart {
 		this.outputViewer = outputViewer;
 	}
 
-	private IPartListener2 listener;
+	private IPartListener2 editorListener;
+	private IResourceChangeListener resourceListener;
 	
 	private IProject currentProject;
 
@@ -279,7 +284,7 @@ public class GFTreebankManagerView extends ViewPart {
 	 * active file.
 	 */
 	private void addEditorListener() {
-		listener = new IPartListener2() {
+		editorListener = new IPartListener2() {
 			public void partActivated(IWorkbenchPartReference partRef) {
 				try {
 					IEditorPart editor = partRef.getPage().getActiveEditor();
@@ -308,14 +313,49 @@ public class GFTreebankManagerView extends ViewPart {
 			public void partInputChanged(IWorkbenchPartReference partRef) {
 			}
 		};
-		getSite().getWorkbenchWindow().getPartService().addPartListener(listener);
+		getSite().getWorkbenchWindow().getPartService().addPartListener(editorListener);
+
+		resourceListener = new IResourceChangeListener() {
+			@Override
+			public void resourceChanged(IResourceChangeEvent event) {
+				try {
+					event.getDelta().accept(new IResourceDeltaVisitor() {
+						@Override
+						public boolean visit(IResourceDelta delta) throws CoreException {
+							try {
+								if (delta.getResource() instanceof IFile) {
+									final IFile outputFile = (IFile) delta.getResource();
+									final IFile treebankFile = GFTreebankManagerHelper.getTreebankFileFromOutputFile(outputFile);
+									final IFile goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
+									
+									Display.getDefault().syncExec(new Runnable() {
+										public void run() {
+											GFTreebankManagerHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile, GFTreebankManagerView.this);
+										}
+									});
+									
+									return false;
+								}
+							} catch (NullPointerException e) {
+								//
+							}
+							return true;
+						}
+					});
+				} catch (CoreException e) {
+					// 
+				}
+			}
+		};
+		ResourcesPlugin.getWorkspace().addResourceChangeListener(resourceListener);
 	}
 	
 	/**
 	 * Remove said listener
 	 */
 	private void removeEditorListener() {
-		getSite().getWorkbenchWindow().getPartService().removePartListener(listener);
+		getSite().getWorkbenchWindow().getPartService().removePartListener(editorListener);
+		ResourcesPlugin.getWorkspace().removeResourceChangeListener(resourceListener);
 	}
 	
 	/**

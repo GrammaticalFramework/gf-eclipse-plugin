@@ -19,6 +19,17 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
 
+/**
+ * Helper methods for dealing with treebanks and associated files. We are assuming the
+ * following file name conventions:
+ * <dl>
+ * <dt><code>nouns.trees</code></dt><dd>Treebank file</dd>
+ * <dt><code>nouns.trees.out</code></dt><dd>Output file</dd>
+ * <dt><code>nouns.gold</code></dt><dd>Gold standard file</dd>
+ * </dl>
+ * 
+ * @author John J. Camilleri
+ */
 public class GFTreebankManagerHelper {
 	
 	/**
@@ -29,12 +40,28 @@ public class GFTreebankManagerHelper {
 	/**
 	 * List of valid treebank-file file extensions
 	 */
+	public static List<String> OUTPUT_EXTENSIONS = Arrays.asList(new String[]{"out"});
+	
+	/**
+	 * List of valid treebank-file file extensions
+	 */
 	public static List<String> TREEBANK_EXTENSIONS = Arrays.asList(new String[]{"trees"});
 	
 	/**
 	 * List of valid gold standard-file file extensions
 	 */
 	public static List<String> GOLD_STANDARD_EXTENSIONS = Arrays.asList(new String[]{"gold"});
+	
+	/**
+	 * Is the given file a treebank output file?
+	 * This doesn't perform any deep file checks, but only checks file extension.
+	 * @param file
+	 * @return boolean
+	 */
+	public static boolean isOutputFile(IFile file) {
+		String ext = file.getFileExtension();
+		return (ext != null && OUTPUT_EXTENSIONS.contains(ext));
+	}
 	
 	/**
 	 * Is the given file a treebank file?
@@ -98,20 +125,45 @@ public class GFTreebankManagerHelper {
 	 * Find and return a output file for the given treebank file.
 	 * Does not perform any checking on the actual file, it only matches based on filenames.
 	 * @param file
-	 * @return The corresponding gold standard file, or <code>null</code>.
+	 * @return The corresponding output standard file, or <code>null</code>.
 	 */
 	public static IFile getOutputFile(IFile file) {
 		if (!isTreebankFile(file)) {
 			return null;
 		}
-		String gsFileName = file.getName() + ".out";
+		String outputFileName = file.getName() + ".out";
 		try {
-			return (IFile) file.getParent().findMember(gsFileName);
+			return (IFile) file.getParent().findMember(outputFileName);
 		} catch (ClassCastException e) {
 			return null;
 		}
 	}
 	
+	/**
+	 * Find and return a treebank files file for the given output file.
+	 * Does not perform any checking on the actual file, it only matches based on filenames.
+	 * @param file
+	 * @return The corresponding treebank standard file, or <code>null</code>.
+	 */
+	public static IFile getTreebankFileFromOutputFile(IFile file) {
+		if (!isOutputFile(file)) {
+			return null;
+		}
+		String treebankFileName = file.getName().replace(".out", "");
+		try {
+			return (IFile) file.getParent().findMember(treebankFileName);
+		} catch (ClassCastException e) {
+			return null;
+		}
+	}
+	
+	/**
+	 * Compare a given output file with a gold standard, and writ the results directly to the supplied view.
+	 * TODO This is quite tightly coupled, maybe it should be refactored to be prettier.
+	 * @param outputFile
+	 * @param goldStandardFile
+	 * @param view
+	 */
 	public static void compareOutputWithGoldStandard(IFile outputFile, IFile goldStandardFile, GFTreebankManagerView view) {
 		view.resetStatusBar();
 		view.setStatusText("Comparing against "+goldStandardFile.getName());
