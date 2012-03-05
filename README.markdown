@@ -176,13 +176,20 @@ Use Eclipes' own features to drag and drop your editor tabs to suit your needs.
 
 ![The editor and outline view](http://www.grammaticalframework.org/eclipse/images/eclipse-editor-general.png)
 
-#### Outline view
+### Outline view
 The **Outline** view in the bottom-right offers a quite overview of your module structure. Clicking any of the terms will make your cursor jump to that point in the file.
 
 ### Cross-referencing errors and warnings
 Notice how changing a `cat` definition for example will produce warnings and/or errors in other the modules.
 
 ![Warnings and errors in the editor](http://www.grammaticalframework.org/eclipse/images/eclipse-editor-cat.png)
+
+### Validation
+For validation to work correctly, the project's **Build Automatically** option should be turned on.
+
+The in-editor validation sometimes needs to be triggered/updated by a keystroke. If you can still see errors which you believe should be correct, try adding a space character to ensure the validation is re-triggered.
+
+Sometimes you may get an entire file marked with errors, even though in fact there is only a single error which is causing the internal builder to fail. In such cases referring to the **Problems** view should help you locate the cause. This issue is particularly relevant when changes made to one module may induce errors in its descendants (e.g. renaming a parameter in a resource module). This behaviour will hopefully be improved in future versions. 
 
 ### Code formatting
 Use the built-in code formatter to tidy your code automatically. Right-click in the editor and choose **Format** or use the keyboard shortcut **Ctrl+Shift+F**.
@@ -222,8 +229,26 @@ If the process associated with a console window has terminated, it will be indic
 
 ![Close terminated console icon](http://www.grammaticalframework.org/eclipse/images/eclipse-console-terminated.png)
 
-
 _The Eclipse console implementation does not support command history (up arrow) or auto-completion (tab)._
+
+### _External Libraries_ view
+This view is automatically populated with a list of all the external modules referenced by the current file. Double-clicking on any item provides a quick way of opening GF files which are imported into your grammar from outside your Eclipse project, for example the GF Resource Grammar Library.
+
+![External libraries view](http://www.grammaticalframework.org/eclipse/images/eclipse-external-libraries.png)
+
+_Future versions of this view will contain a full tree of all identifiers available in the current scope._
+
+### _Treebank Manager_ view
+This feature works together with the launch configurations to make the process of testing treebanks against your grammars quick and easy. The general concept (independent of GFEP) is this:
+
+1. Create a file `test.trees` which contains a bunch of abstract syntax trees, which you want to test
+1. Compile your grammar and linearise the trees one by one, using some command like `rf -lines -tree -file=test.trees | l -table | wf -file=test.trees.out`
+1. Manually correct the output in `test.trees.out` and save it as your gold standard file `test.gold`.
+1. Each time you update your grammar, repeat step 2, then compare your new output against the gold standard using `diff` or some other comparison tool.
+
+The **Treebank Manager** view follows this same pattern but provides a convenient graphical interface for running your treebanks and also for looking at the output, just using a few clicks:
+
+![Treebank Manager view](http://www.grammaticalframework.org/eclipse/images/eclipse-treebank-manager.png)
 
 ### Logs
 The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
@@ -233,12 +258,6 @@ The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
 
 You can set the log verbosity from **Window &rarr; Preferences &rarr; Grammatical Framework**.
 
-### Validation
-For validation to work correctly, the project's **Build Automatically** option should be turned on.
-
-The in-editor validation sometimes needs to be triggered/updated by a keystroke. If you can still see errors which you believe should be correct, try adding a space character to ensure the validation is re-triggered.
-
-Sometimes you may get an entire file marked with errors, even though in fact there is only a single error which is causing the internal builder to fail. In such cases referring to the **Problems** view should help you locate the cause. This issue is particularly relevant when changes made to one module may induce errors in its descendants (e.g. renaming a parameter in a resource module). This behaviour will hopefully be improved in future versions. 
 
 <!----------------------------------------------------------------------------->
 
