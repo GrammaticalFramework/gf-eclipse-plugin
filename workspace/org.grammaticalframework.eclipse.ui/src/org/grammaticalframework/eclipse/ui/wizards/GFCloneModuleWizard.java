@@ -24,7 +24,7 @@ import org.eclipse.jface.operation.IRunnableWithProgress;
 import org.grammaticalframework.eclipse.GFException;
 
 /**
- * 
+ * Wizard for cloning an existing GF module into a new language.
  */
 public class GFCloneModuleWizard extends AbstractNewFileWizard {
 
@@ -44,13 +44,15 @@ public class GFCloneModuleWizard extends AbstractNewFileWizard {
 
 	public boolean performFinish() {
 		IFile sourceFile = page.getField_CloneFrom();
-		String languageCode = page.getField_NewLanguageCode();
+		String srcLanguageCode = page.getField_SourceLanguageCode();
+		String newLanguageCode = page.getField_NewLanguageCode();
+		Boolean blankStrings = page.getField_BlankStrings();
 
 		final IContainer container = sourceFile.getParent();
 		final String fileName;
 		final String fileContents;
 		try {
-			String[] clone = cloneFile(sourceFile, languageCode);
+			String[] clone = cloneFile(sourceFile, srcLanguageCode, newLanguageCode, blankStrings);
 			fileName = clone[0];
 			fileContents = clone[1];
 		} catch (GFException e) {
@@ -73,9 +75,8 @@ public class GFCloneModuleWizard extends AbstractNewFileWizard {
 		return performFinish(op);
 	}
 	
-	private String[] cloneFile(IFile sourceFile, String newLanguage) throws GFException {
+	private String[] cloneFile(IFile sourceFile, String srcLanguage, String newLanguage, Boolean blankStrings) throws GFException {
 		try {
-			String srcLanguage = null;
 			String newModuleName = null;
 			String newFileName = null;
 			
@@ -85,9 +86,7 @@ public class GFCloneModuleWizard extends AbstractNewFileWizard {
 			while ((line = bin.readLine())!=null) {
 				Matcher matcher = Pattern.compile("\\s*(concrete|instance)\\s+(\\S+)\\s+of\\s+(\\S+).*").matcher(line);
 				if (matcher.matches()) {
-					String baseName = matcher.group(3);
-					srcLanguage = matcher.group(2).substring(baseName.length());
-					newModuleName = baseName + newLanguage;
+					newModuleName = matcher.group(2).replace(srcLanguage, newLanguage);
 					newFileName = newModuleName + ".gf";
 					break;
 				}
@@ -99,8 +98,11 @@ public class GFCloneModuleWizard extends AbstractNewFileWizard {
 			StringBuilder sb = new StringBuilder();
 			bin = new BufferedReader(new InputStreamReader(sourceFile.getContents()));
 			while ((line = bin.readLine())!=null) {
-				sb.append( line.replaceAll("(\\S+)"+srcLanguage, "$1"+newLanguage).replaceAll("\".+?\"", "\"\"") );
-				sb.append( "\n" );
+				line = line.replaceAll("(\\S+)"+srcLanguage, "$1"+newLanguage);
+				if (blankStrings) {
+					line = line.replaceAll("\".+?\"", "\"\"");
+				}
+				sb.append( line + "\n" );
 			}
 			
 			// return

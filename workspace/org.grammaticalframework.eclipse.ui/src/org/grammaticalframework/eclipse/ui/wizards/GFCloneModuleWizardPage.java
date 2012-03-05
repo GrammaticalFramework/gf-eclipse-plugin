@@ -24,6 +24,7 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
@@ -45,8 +46,10 @@ public class GFCloneModuleWizardPage extends WizardPage {
 	 * Fields
 	 */
 	private Combo field_CloneFrom;
+	private Text field_SourceLanguageCode;
 	private Combo field_NewLanguage;
 	private Text field_NewLanguageCode;
+	private Button field_BlankStrings;
 	
 	private List<IFile> files;
 	private String[] languages;
@@ -92,6 +95,7 @@ public class GFCloneModuleWizardPage extends WizardPage {
 		field_CloneFrom.setItems(fileNameList);
 		field_CloneFrom.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
+				setSourceLanguageCode();
 				dialogChanged();
 			}
 			public void widgetDefaultSelected(SelectionEvent e) {
@@ -99,6 +103,17 @@ public class GFCloneModuleWizardPage extends WizardPage {
 			}
 		});
 		field_CloneFrom.select(0);
+		
+		// Source language code
+		new Label(container, SWT.NULL).setText("Detected &source language code:");
+		field_SourceLanguageCode = new Text(container, SWT.BORDER | SWT.SINGLE);
+		field_SourceLanguageCode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 1, 1));
+		((GridData)field_SourceLanguageCode.getLayoutData()).widthHint = 35;
+		field_SourceLanguageCode.addModifyListener(new ModifyListener() {
+			public void modifyText(ModifyEvent e) {
+				dialogChanged();
+			}
+		});		
 		
 		// Format the languages
 		ArrayList<String> list = new ArrayList<String>(GFWizardHelper.ISOLanguageCodes.length);
@@ -112,7 +127,7 @@ public class GFCloneModuleWizardPage extends WizardPage {
 		languages = list.toArray(new String[]{});
 		
 		// New language dropdown
-		new Label(container, SWT.NULL).setText("&New language:");
+		new Label(container, SWT.NULL).setText("Select &New language:");
 		field_NewLanguage = new Combo(container, SWT.DROP_DOWN | SWT.BORDER | SWT.READ_ONLY);
 		field_NewLanguage.setLayoutData(new GridData(SWT.NONE, SWT.TOP, true, false, 1, 1));
 		field_NewLanguage.setItems(languages);
@@ -135,14 +150,20 @@ public class GFCloneModuleWizardPage extends WizardPage {
 		field_NewLanguage.select(0);
 
 		// New language code
-		new Label(container, SWT.NULL).setText("Language &code:");
+		new Label(container, SWT.NULL).setText("New language &code:");
 		field_NewLanguageCode = new Text(container, SWT.BORDER | SWT.SINGLE);
-		field_NewLanguageCode.setLayoutData(new GridData(SWT.NULL, SWT.TOP, true, false, 1, 1));
+		field_NewLanguageCode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 1, 1));
+		((GridData)field_NewLanguageCode.getLayoutData()).widthHint = 35;
 		field_NewLanguageCode.addModifyListener(new ModifyListener() {
 			public void modifyText(ModifyEvent e) {
 				dialogChanged();
 			}
 		});
+		
+		// Blank out empty strings?
+		new Label(container, SWT.NULL);
+		field_BlankStrings = new Button(container, SWT.CHECK);
+		field_BlankStrings.setText("Replace string literals with empty string");
 
 		//
 		initialize();
@@ -159,12 +180,43 @@ public class GFCloneModuleWizardPage extends WizardPage {
 	}
 	
 	/**
+	 * Sets the source language code from the "From" field
+	 *
+	 */
+	protected void setSourceLanguageCode() {
+		String srcFilename = getField_CloneFrom().getName();
+		int ix = srcFilename.indexOf('.');
+		if (srcFilename.length() > 3 && ix > -1) {
+			String srcCode = srcFilename.substring(ix-3, ix);
+			field_SourceLanguageCode.setText(srcCode);
+		}
+	}
+	
+	/**
+	 * Gets the source language code
+	 *
+	 * @return source language code
+	 */
+	protected String getField_SourceLanguageCode() {
+		return field_SourceLanguageCode.getText();
+	}
+	
+	/**
 	 * Gets the new language code
 	 *
 	 * @return new language code
 	 */
 	protected String getField_NewLanguageCode() {
 		return field_NewLanguageCode.getText();
+	}
+	
+	/**
+	 * Gets the new language code
+	 *
+	 * @return new language code
+	 */
+	protected boolean getField_BlankStrings() {
+		return field_BlankStrings.getSelection();
 	}
 	
 	
@@ -185,6 +237,7 @@ public class GFCloneModuleWizardPage extends WizardPage {
 				for (int i = 0; i < items.length; i++) {
 					if (items[i].equals(file.getName())) {
 						field_CloneFrom.select(i);
+						setSourceLanguageCode();
 						break;
 					}
 				}
@@ -197,6 +250,10 @@ public class GFCloneModuleWizardPage extends WizardPage {
 	 * Dialog changed.
 	 */
 	private void dialogChanged() {
+		if (getField_SourceLanguageCode().length()==0) {
+			updateStatus("You must specify a source language code");
+			return;
+		}
 		if (getField_NewLanguageCode().length()==0) {
 			updateStatus("You must specify a new language code");
 			return;
