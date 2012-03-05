@@ -13,12 +13,18 @@ import java.io.File;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.apache.log4j.Logger;
+import org.eclipse.core.resources.IProject;
+import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.debug.core.DebugPlugin;
 import org.eclipse.debug.core.ILaunch;
 import org.eclipse.debug.core.ILaunchConfiguration;
@@ -98,6 +104,13 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			// Do treebank stuff
 			if (opt_BatchMode && opt_TreebankMode) {
 				runTreebankAndCompare(process);
+				try {
+					String dir = configuration.getAttribute(IGFLaunchConfigConstants.WORKING_DIR, "");
+					IResource container = ResourcesPlugin.getWorkspace().getRoot().getContainerForLocation(new Path(dir));
+					container.getProject().refreshLocal(IProject.DEPTH_INFINITE, monitor);
+				} catch (NullPointerException _) {
+					log.warn("Couldn't refresh project after running treebank");
+				}
 			}
 
 			process.waitFor();
