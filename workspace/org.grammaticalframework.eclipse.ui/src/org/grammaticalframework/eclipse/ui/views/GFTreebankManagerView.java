@@ -37,6 +37,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
@@ -80,6 +81,7 @@ public class GFTreebankManagerView extends ViewPart {
 	private Label statusLabel;
 	private Label passedLabel;
 	private Label failedLabel;
+	private Composite statusBar;
 	private TreeViewer fileViewer;
 	private TableViewer outputViewer;
 	
@@ -133,31 +135,21 @@ public class GFTreebankManagerView extends ViewPart {
 	 */
 	public void createPartControl(Composite parent) {
 		// Overall layout
-		GridLayout layout = new GridLayout(1, true);
-		parent.setLayout(layout);
-		
-		// Top bar with buttons & stats
-		Composite bar = new Composite(parent, SWT.NONE);
-		bar.setLayout(new FillLayout(SWT.HORIZONTAL));
-
-		new Label(bar, SWT.RIGHT).setText("Status: ");
-		statusLabel = new Label(bar, SWT.LEFT);
-		statusLabel.setText("Idle");
-		
-		new Label(bar, SWT.RIGHT).setText("Passed: ");
-		passedLabel = new Label(bar, SWT.LEFT);
-		passedLabel.setText("-");
-		
-		new Label(bar, SWT.RIGHT).setText("Failed: ");
-		failedLabel = new Label(bar, SWT.LEFT);
-		failedLabel.setText("-");
-		
-		// Bottom section with tableviews
+		parent.setLayout(new GridLayout(1, true));
         SashForm sash = new SashForm(parent, SWT.HORIZONTAL | SWT.SMOOTH);
         sash.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+
+        // Left
         configureFilesViewer(sash);
-        configureOutputViewer(sash);
-        sash.setWeights(new int[]{1,2});
+        
+        // Right
+		Composite right = new Composite(sash, SWT.NONE);
+		right.setLayout(new GridLayout(1, true));
+//        right.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+        configureStatusBar(right);
+        configureOutputViewer(right);
+
+        sash.setWeights(new int[]{1,3});
 
 		// Actions and menus
 		makeActions();
@@ -167,6 +159,37 @@ public class GFTreebankManagerView extends ViewPart {
 		
 		addEditorListener();
     }
+	
+	/**
+	 * Setup the status bar
+	 * @param parent
+	 */
+	private void configureStatusBar(Composite parent) {
+		statusBar = new Composite(parent, SWT.NONE);
+//		RowLayout layout = new RowLayout(SWT.HORIZONTAL);
+//		layout.center = true;
+//		layout.fill = true;
+//		layout.justify = true;
+//		layout.pack = false;
+//		layout.spacing = 5;
+//		layout.wrap = false;
+//		bar.setLayout(layout);
+		statusBar.setLayout(new GridLayout(6, false));
+		statusBar.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+
+		new Label(statusBar, SWT.RIGHT).setText("Status: ");
+		statusLabel = new Label(statusBar, SWT.LEFT);
+		statusLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+		statusLabel.setText("Idle");
+		
+		new Label(statusBar, SWT.RIGHT).setText("Passed: ");
+		passedLabel = new Label(statusBar, SWT.LEFT);
+		passedLabel.setText("-");
+		
+		new Label(statusBar, SWT.RIGHT).setText("Failed: ");
+		failedLabel = new Label(statusBar, SWT.LEFT);
+		failedLabel.setText("-");
+	}
 	
 	/**
 	 * Setup the treebank file viewer
@@ -227,6 +250,7 @@ public class GFTreebankManagerView extends ViewPart {
 	 */
 	private void configureOutputViewer(Composite parent) {
         outputViewer = new TableViewer(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER );
+        outputViewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
 //        outputViewer.setLabelProvider(new LabelProvider() {
 //			@Override
 //			public Image getImage(Object element) {
@@ -430,6 +454,10 @@ public class GFTreebankManagerView extends ViewPart {
 	
 	public void setFocus() {
 		fileViewer.getControl().setFocus();
+	}
+	
+	public void redrawStatusBar() {
+		statusBar.layout(true);
 	}
 
 	@Override

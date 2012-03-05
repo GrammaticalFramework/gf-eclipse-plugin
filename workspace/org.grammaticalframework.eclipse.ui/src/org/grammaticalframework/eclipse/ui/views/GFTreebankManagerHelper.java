@@ -153,11 +153,12 @@ public class GFTreebankManagerHelper {
 			
 			// Set items in viewer
 			int total = passed+failed;
-			view.setStatusText("Results of "+outputFile.getName()); // TODO the FillLayout needs to adjust for this!
+			view.setStatusText("Results of "+outputFile.getName());
 			view.setPassedText(String.format("%d/%d", passed, total));
 			view.setFailedText(String.format("%d/%d", failed, total));
 			view.getOutputViewer().setItemCount(0);
 			view.getOutputViewer().add(viewerItems.toArray());
+			view.redrawStatusBar();
 			
 		} catch (Exception e) {
 			log.error("Error running comparison",  e);
