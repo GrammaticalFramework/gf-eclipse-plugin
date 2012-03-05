@@ -155,18 +155,21 @@ Some steps you can follow to get a feel of of the plugin's features.
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-2.png)
 
-### Add some new modules
+### New module wizard
 Use the **GF Module** wizard from **File &rarr; New &rarr; Other &rarr; GF Module**:
 
 ![New module wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-modulewizard-1.png)
 
-You can find some small examples at <http://www.grammaticalframework.org/eclipse/examples/>. Download the 
-files and manually add them to your Eclipse workspace to experiment with some of the plugin features.
+You can find some small examples at <http://www.grammaticalframework.org/eclipse/examples/>. Download the files and manually add them to your Eclipse workspace to experiment with some of the plugin features.
 
-### Syntax highlighting
-You can change your syntax colouring styles as you wish from **Window &rarr; Preferences &rarr; Grammatical Framework &rarr; Syntax Coloring**
+### Clone module wizard
+If you want to clone an existing module into a new language, you can now do so via the **Clone GF Module** wizard. This is also available as a context menu option in the **Project Explorer**, via **&lt;Richt click&gt; &rarr; Grammatical Framework &rarr; Compile for new language**:
 
-![Syntax highlighting styles](http://www.grammaticalframework.org/eclipse/images/eclipse-syntaxcoloring.png)
+![Clone GF module to new language wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-clonewizard.png)
+
+This will create and open a new module with the relevant replacements made. Note how in this case string constants are replaced by the empty string `""`. This wizard currently only works on `concrete` and `instance` modules.
+
+![Newly cloned file](http://www.grammaticalframework.org/eclipse/images/eclipse-clonewizard-newfile.png)
 
 ### Workbench editor layout
 Use Eclipes' own features to drag and drop your editor tabs to suit your needs.
@@ -185,6 +188,11 @@ Notice how changing a `cat` definition for example will produce warnings and/or 
 Use the built-in code formatter to tidy your code automatically. Right-click in the editor and choose **Format** or use the keyboard shortcut **Ctrl+Shift+F**.
 
 ![Before auto-formatting](http://www.grammaticalframework.org/eclipse/images/eclipse-before-format.png) ![After auto-formatting](http://www.grammaticalframework.org/eclipse/images/eclipse-after-format.png)
+
+### Syntax highlighting
+You can change your syntax colouring styles as you wish from **Window &rarr; Preferences &rarr; Grammatical Framework &rarr; Syntax Coloring**
+
+![Syntax highlighting styles](http://www.grammaticalframework.org/eclipse/images/eclipse-syntaxcoloring.png)
 
 ### Launch configurations
 Set up a launch configuration from **Run &rarr; Run Configurations... &rarr; Grammatical Framework**. You will see the dialog below with some fields automatically filled in for you. 
