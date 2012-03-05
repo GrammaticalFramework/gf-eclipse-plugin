@@ -113,6 +113,10 @@ public class GFTreebankManagerHelper {
 	}
 	
 	public static void compareOutputWithGoldStandard(IFile outputFile, IFile goldStandardFile, GFTreebankManagerView view) {
+		view.resetStatusBar();
+		view.setStatusText("Comparing against "+goldStandardFile.getName());
+		view.redrawStatusBar();
+		
 		BufferedReader outReader = null;
 		BufferedReader goldReader = null;
 		try {

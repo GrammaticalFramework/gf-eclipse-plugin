@@ -42,6 +42,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Table;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
@@ -166,30 +167,37 @@ public class GFTreebankManagerView extends ViewPart {
 	 */
 	private void configureStatusBar(Composite parent) {
 		statusBar = new Composite(parent, SWT.NONE);
-//		RowLayout layout = new RowLayout(SWT.HORIZONTAL);
-//		layout.center = true;
-//		layout.fill = true;
-//		layout.justify = true;
-//		layout.pack = false;
-//		layout.spacing = 5;
-//		layout.wrap = false;
-//		bar.setLayout(layout);
 		statusBar.setLayout(new GridLayout(6, false));
 		statusBar.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 
 		new Label(statusBar, SWT.RIGHT).setText("Status: ");
 		statusLabel = new Label(statusBar, SWT.LEFT);
 		statusLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-		statusLabel.setText("Idle");
 		
 		new Label(statusBar, SWT.RIGHT).setText("Passed: ");
 		passedLabel = new Label(statusBar, SWT.LEFT);
-		passedLabel.setText("-");
 		
 		new Label(statusBar, SWT.RIGHT).setText("Failed: ");
 		failedLabel = new Label(statusBar, SWT.LEFT);
-		failedLabel.setText("-");
+		
+		resetStatusBar();
 	}
+	
+	/**
+	 * Redraw the status bar. This will adjust all the widths as needed.
+	 */
+	public void redrawStatusBar() {
+		statusBar.layout(true);
+	}
+	
+	/**
+	 * Reset all status bar labels to idle/blank
+	 */
+	public void resetStatusBar() {
+		statusLabel.setText("Idle");
+		passedLabel.setText("-");
+		failedLabel.setText("-");
+	}	
 	
 	/**
 	 * Setup the treebank file viewer
@@ -249,31 +257,21 @@ public class GFTreebankManagerView extends ViewPart {
 	 * @param parent
 	 */
 	private void configureOutputViewer(Composite parent) {
-        outputViewer = new TableViewer(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER );
+        outputViewer = new TableViewer(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER | SWT.FULL_SELECTION);
         outputViewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-//        outputViewer.setLabelProvider(new LabelProvider() {
-//			@Override
-//			public Image getImage(Object element) {
-//				if (((String)element).contains("\n"))
-//					return images.forTreebankFail();
-//				else
-//					return images.forTreebankPass();
-//			}
-//        });
-        TableViewerColumn col = new TableViewerColumn(outputViewer, SWT.BORDER);
-        col.getColumn().setWidth(200);
-        col.getColumn().setText("Output");
+        outputViewer.getTable().setLinesVisible(true);
+        TableViewerColumn col = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
+        col.getColumn().setWidth(200); // 200 is arbitrary, but col won't display without it!
+        col.getColumn().setResizable(true);
         col.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public Image getImage(Object element) {
-				if (((String)element).contains("\n"))
+				if (((String)element).contains("\n")) // TODO very high-tech checking...
 					return images.forTreebankFail();
 				else
 					return images.forTreebankPass();
 			}
         });
-        
-        // one column: icon shows result; tree, lin and gold are on separate lines as same entry.
 	}
 	
 	/**
@@ -456,10 +454,6 @@ public class GFTreebankManagerView extends ViewPart {
 		fileViewer.getControl().setFocus();
 	}
 	
-	public void redrawStatusBar() {
-		statusBar.layout(true);
-	}
-
 	@Override
 	public void dispose() {
 		super.dispose();
