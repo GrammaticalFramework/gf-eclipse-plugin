@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 27 Feb 2012
+Updated: 5 March 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914._
 
@@ -29,8 +29,6 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 
 ## Features
 
-### Implemented
-
 - Syntax highlighting and error detection
 - Code folding, quick block-commenting, automatic code formatting
 - Definition outlining, jump to declaration, find usage
@@ -39,21 +37,19 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 - Use GF Shell from within Eclipse
 - Auto-completion for declared identifiers
 - Background compilation (shallow) using project builder
-- Support for _Open Declaration_ (F3)
+- Support for _Open Declaration_ (F3), including qualified names
 - Code generation for new languages in application grammars
 - Inline documentation for function calls, overloads
 - Proper cross-reference handling with qualified names
 - Treebank management and testing tool
-
-### Forthcoming
-
-- Built-in library browser (in particular for GF resource grammar library)
-- Tools for parallel language grammar writing (e.g. fast switching and linked navigation)
-- Quick-fix suggestions for syntax and naming errors
+- External library browser
 
 <!----------------------------------------------------------------------------->
 
 ## Major release history
+
+**05/03/12**
+: (1.4.0.x) Treebank manager view. Updated launch configurations. UI improvements, new icons. Inline contextual documentation. Correct resolution of qualified identifiers. Bug fixes and some refactoring.
 
 **07/02/12**
 : (1.3.0.x) Re-written underlying GF grammar.
@@ -86,12 +82,8 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 
 ### System requirements
 
-1. The plugin makes use of the newest GF features, and **requires the latest developer version of GF** to be installed on your system (instructions [here](http://www.grammaticalframework.org/download/index.html)).
-_Specifically, you need a version of GF which supports the "--tags" flag, added in November 2011._
-1. Paths to GF must be set within the plugin (see below). This means:
-    - you don't necessarily need to have GF in your `PATH` environment variable
-    - you can use a separate GF installation for GFEP if you wish
-1. The plugin was developed using Eclipse 3.7. It has been successfully installed on Eclipse as low as 3.6.2.
+1. [GF version 3.3.3](http://www.grammaticalframework.org/download/release-3.3.3.html) or above. The path to GF must be set within the plugin (see below).
+1. [Eclipse](http://www.eclipse.org/downloads/) 3.6 or above.
 
 ### Installing the plugin for the first time
 
@@ -124,8 +116,8 @@ In order for dependencies to be satisfied, you need to ensure that your Eclipse 
 
 #### Deprecated stuff
 
-- If your project has a folder named `(External)` you can safely delete this **via the Eclipse Project Explorer**. It is no longer used in GFEP >= 1.2.3
-- If your workspace contains a log file `gfep.log` then you can safely delete it from your system. As of version 1.2.4, GFEP uses Eclipse's standard log file at `.metadata/.log`
+- If your project has a folder named `(External)` you can safely delete this **via the Eclipse Project Explorer**. It is no longer used in GFEP ≥ 1.2.3
+- If your workspace contains a log file `gfep.log` then you can safely delete it from your system. As of version 1.2.4, GFEP uses Eclipse's standard log file at `<workspace>/.metadata/.log`
 
 ### Project settings
 
@@ -213,6 +205,11 @@ _The Eclipse console implementation does not support command history (up arrow) 
 
 #### Logs
 
+The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
+
+1. By opening the **Error Log** view in Eclipse
+1. Accessing the file directly at `<workspace>/.metadata/.log`
+
 You can set the log verbosity from **Window &rarr; Preferences &rarr; Grammatical Framework**.
 
 #### Validation
@@ -244,9 +241,3 @@ As part of the evaluation of the GF Eclipse Plugin, feedback (both negative and 
 1. Feature wish-list
 1. Compatibilities / conflicts with other Eclipse plugins
 
-### Logs
-
-The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
-
-1. By opening the **Error Log** view in Eclipse
-1. Accessing the file directly at `workspace/.metadata/.log`
