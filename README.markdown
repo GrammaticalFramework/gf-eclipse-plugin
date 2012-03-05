@@ -116,7 +116,7 @@ In order for dependencies to be satisfied, you need to ensure that your Eclipse 
 
 #### Deprecated stuff
 
-- If your project has a folder named `(External)` you can safely delete this **via the Eclipse Project Explorer**. It is no longer used in GFEP ≥ 1.2.3
+- If your project has a folder named `(External)` you can safely delete this **via the Eclipse Project Explorer**. It is no longer used in GFEP &ge; 1.2.3
 - If your workspace contains a log file `gfep.log` then you can safely delete it from your system. As of version 1.2.4, GFEP uses Eclipse's standard log file at `<workspace>/.metadata/.log`
 
 ### Project settings
@@ -151,60 +151,73 @@ Your `.project` file should include the GF Builder as follows:
 
 Some steps you can follow to get a feel of of the plugin's features.
 
-- Create a new **GF Project**.
-
+### Create a new GF Project
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-2.png)
 
-- Create some new modules using the **GF Module** wizard from **File &rarr; New &rarr; Other &rarr; GF Module**:
+### Add some new modules
+Use the **GF Module** wizard from **File &rarr; New &rarr; Other &rarr; GF Module**:
 
 ![New module wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-modulewizard-1.png)
 
-_If asked whether you want to add the **Xtext nature** to your project, you can safely say **No** (this prompt has been removed in newer versions)._
-
-- You can find some small examples at <http://www.grammaticalframework.org/eclipse/examples/>. Download the 
+You can find some small examples at <http://www.grammaticalframework.org/eclipse/examples/>. Download the 
 files and manually add them to your Eclipse workspace to experiment with some of the plugin features.
 
-- You can change your syntax colouring styles as you wish from **Window &rarr; Preferences &rarr; Grammatical Framework &rarr; Syntax Coloring**
+### Syntax highlighting
+You can change your syntax colouring styles as you wish from **Window &rarr; Preferences &rarr; Grammatical Framework &rarr; Syntax Coloring**
 
 ![Syntax highlighting styles](http://www.grammaticalframework.org/eclipse/images/eclipse-syntaxcoloring.png)
 
-- Use Eclipes' own features to drag and drop your editor tabs to suit your needs. Notice the **Outline** view in the bottom-right offers a quite overview of your module structure. Clicking any of the terms will make your cursor jump to that point in the file.
+### Workbench editor layout
+Use Eclipes' own features to drag and drop your editor tabs to suit your needs.
 
 ![The editor and outline view](http://www.grammaticalframework.org/eclipse/images/eclipse-editor-general.png)
 
-- Note how changing a `cat` definition for example will produce warnings and/or errors in other the modules.
+#### Outline view
+The **Outline** view in the bottom-right offers a quite overview of your module structure. Clicking any of the terms will make your cursor jump to that point in the file.
+
+### Cross-referencing errors and warnings
+Notice how changing a `cat` definition for example will produce warnings and/or errors in other the modules.
 
 ![Warnings and errors in the editor](http://www.grammaticalframework.org/eclipse/images/eclipse-editor-cat.png)
 
-- Use the built-in code formatter to tidy your code automatically. Right-click in the editor and choose **Format** or use the keyboard shortcut **Ctrl+Shift+F**.
+### Code formatting
+Use the built-in code formatter to tidy your code automatically. Right-click in the editor and choose **Format** or use the keyboard shortcut **Ctrl+Shift+F**.
 
 ![Before auto-formatting](http://www.grammaticalframework.org/eclipse/images/eclipse-before-format.png) ![After auto-formatting](http://www.grammaticalframework.org/eclipse/images/eclipse-after-format.png)
 
-- Set up a launch configuration from **Run &rarr; Run Configurations... &rarr; Grammatical Framework**. You will see the dialog below with some fields automatically filled in for you. 
+### Launch configurations
+Set up a launch configuration from **Run &rarr; Run Configurations... &rarr; Grammatical Framework**. You will see the dialog below with some fields automatically filled in for you. 
 
 ![Launch configuration dialog](http://www.grammaticalframework.org/eclipse/images/eclipse-launchconfig.png)
 
-- Run the launch config and you will see the output from the GF compiler in the console view within Eclipse.
+Run the launch config and you will see the output from the GF compiler in the console view within Eclipse.
 
 ![Output from the GF compiler](http://www.grammaticalframework.org/eclipse/images/eclipse-compileroutput.png)
 
-### Usage hints & issues
+#### Run As... launch shortcut
+Using the **Run &rarr; Run As &rarr; Compile with GF** shortcut will take the current selection or active editor and do one of two things:
 
-#### Consoles
+1. If a launch configuration already exists which the current file in its _Source filenames_ field, then that config will be launch directly.
+1. Otherwise, a new a launch configuration window is displayed where you will need to review and confirm the default settings before continuing.
 
+### Consoles
 The plugin provides its own console view named _GFEP Log_, which shows log messages based on the **Log Level** preference (**Window &rarr; Preferences &rarr; Grammatical Framework**).
 
-Additionally, everytime a grammar is **Run** a _new_ console is opened to display the output. This console may also serve as the interactive GF Shell, depending on the **Interactive Mode** checkbox in your **Run Configuration**.
+Additionally, every time a grammar is **Run** a _new_ console is opened to display the output. This console may also serve as the interactive GF Shell, depending on the **Interactive Mode** checkbox in your **Run Configuration**.
 
 Eclipse does not make it obvious when multiple console windows open; click on the **Display Selected Console** button to switch between open consoles:
 
 ![Display Selected Console icon](http://www.grammaticalframework.org/eclipse/images/eclipse-console-icon.png)
 
+If the process associated with a console window has terminated, it will be indicated in the upper-left corner as below. Such console windows can then be closed using the gray cross button:
+
+![Close terminated console icon](http://www.grammaticalframework.org/eclipse/images/eclipse-console-terminated.png)
+
+
 _The Eclipse console implementation does not support command history (up arrow) or auto-completion (tab)._
 
-#### Logs
-
+### Logs
 The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
 
 1. By opening the **Error Log** view in Eclipse
@@ -212,8 +225,7 @@ The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
 
 You can set the log verbosity from **Window &rarr; Preferences &rarr; Grammatical Framework**.
 
-#### Validation
-
+### Validation
 For validation to work correctly, the project's **Build Automatically** option should be turned on.
 
 The in-editor validation sometimes needs to be triggered/updated by a keystroke. If you can still see errors which you believe should be correct, try adding a space character to ensure the validation is re-triggered.
@@ -240,4 +252,3 @@ As part of the evaluation of the GF Eclipse Plugin, feedback (both negative and 
 1. General intuitiveness of the UI
 1. Feature wish-list
 1. Compatibilities / conflicts with other Eclipse plugins
-
