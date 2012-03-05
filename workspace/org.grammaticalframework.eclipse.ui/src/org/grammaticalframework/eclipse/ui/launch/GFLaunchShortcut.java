@@ -29,7 +29,6 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PlatformUI;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
-import org.grammaticalframework.eclipse.ui.views.GFTreebankManagerHelper;
 
 /**
  * In most cases, a launch shortcut is maximally useful if it performs the following steps:
@@ -85,8 +84,18 @@ public class GFLaunchShortcut implements ILaunchShortcut {
         	ILaunchManager launchManager = DebugPlugin.getDefault().getLaunchManager();
         	ILaunchConfigurationType configType = launchManager.getLaunchConfigurationType("org.grammaticalframework.eclipse.GFLaunchConfigurationType");
 	    	
-	    	// TODO Search for matching launch config? A bit vague to define...
+            // Try to find a matching config and launch it
             ILaunchConfiguration[] configs = launchManager.getLaunchConfigurations(configType);
+            for (int i = 0; i < configs.length; i++) {
+            	String launchFilenames = configs[i].getAttribute(IGFLaunchConfigConstants.FILENAMES, "");
+            	for (IFile file : files) {
+            		if (launchFilenames.contains(file.getName())) {
+                		log.info(String.format("Running launch \"%s\" for matching file \"%s\"", configs[i].getName(), file.getName()));
+                		DebugUITools.launch(configs[i], mode);
+    					return;
+            		}
+            	}
+			}
 	    	
 	        // If we're come this far, no matching launch config exists, so we open up the LCD
 	        ILaunchConfiguration config = createLaunchConfiguration(files, configType);
