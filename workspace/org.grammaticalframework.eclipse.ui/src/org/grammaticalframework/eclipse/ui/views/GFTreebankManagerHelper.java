@@ -25,7 +25,7 @@ import org.eclipse.core.resources.IFile;
  * <dl>
  * <dt><code>nouns.trees</code></dt><dd>Treebank file</dd>
  * <dt><code>nouns.trees.out</code></dt><dd>Output file</dd>
- * <dt><code>nouns.gold</code></dt><dd>Gold standard file</dd>
+ * <dt><code>nouns.trees.gold</code></dt><dd>Gold standard file</dd>
  * </dl>
  * 
  * @author John J. Camilleri
@@ -104,7 +104,8 @@ public class GFTreebankManagerHelper {
 		if (!isTreebankFile(file)) {
 			return null;
 		}
-		String gsFileName = file.getName().replaceFirst(file.getFileExtension(), "gold");
+//		String gsFileName = file.getName().replaceFirst(file.getFileExtension(), "gold");
+		String gsFileName = file.getName() + ".gold";
 		try {
 			return (IFile) file.getParent().findMember(gsFileName);
 		} catch (ClassCastException e) {
