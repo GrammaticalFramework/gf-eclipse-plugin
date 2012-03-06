@@ -414,8 +414,11 @@ public class GFTreebankManagerView extends ViewPart {
 		makeGoldStandardAction = new Action() {
 			@Override
 			public void run() {
-				// TODO
-				statusLabel.setText("Making gold standard");
+//				statusLabel.setText("Making gold standard");
+				if (getSelectedTreebankFile() == null)
+					return;
+				GFTreebankLaunchShortcut launchShortcut = new GFTreebankLaunchShortcut();
+				launchShortcut.launch(fileViewer.getSelection(), ILaunchManager.RUN_MODE);
 			}
 		};
 		makeGoldStandardAction.setText("Make gold standard");
