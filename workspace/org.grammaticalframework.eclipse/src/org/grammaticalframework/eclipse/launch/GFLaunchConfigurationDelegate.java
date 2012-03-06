@@ -44,6 +44,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 	private boolean opt_TreebankMode;
 	private String opt_TreebankFile;
 	private String opt_GoldStandardFile;
+	private boolean opt_MakeGoldStandard = false;
 	
 	/**
 	 * Logger
@@ -101,7 +102,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 
 			// Do treebank stuff
 			if (opt_BatchMode && opt_TreebankMode) {
-				runTreebankAndCompare(process);
+				runTreebank(process);
 				try {
 					String dir = configuration.getAttribute(IGFLaunchConfigConstants.WORKING_DIR, "");
 					IResource container = ResourcesPlugin.getWorkspace().getRoot().getContainerForLocation(new Path(dir));
@@ -122,24 +123,13 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		
 	}
 	
-	private void runTreebankAndCompare(Process process) {
-		String outFileName = opt_TreebankFile + ".out";
+	private void runTreebank(Process process) {
+		// TODO: These extensios should be shared with those in GFTreebankManagerHelper
+		String outFileName = opt_TreebankFile + (opt_MakeGoldStandard ? ".gold" : ".out");
 		String treebankCommand = String.format("rf -lines -tree -file=%s | l -table | wf -file=%s", opt_TreebankFile, outFileName);
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(new BufferedOutputStream(process.getOutputStream())), true);
 		writer.println(treebankCommand);
 		writer.println("quit");
-		
-//		DebugPlugin.getDefault().
-//		PlatformUI.getWorkbench();
-		
-		// TODO: Write to Treebank View
-//		HandlerUtil.getActiveWorkbenchWindow(event).getActivePage().showView(viewId);
-//		PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().showView(arg0);
-//		Display.getDefault().asyncExec(new Runnable() {
-//			public void run() {
-//				// Your code goes here
-//			}
-//		});
 	}
 	
 	/**
@@ -177,7 +167,9 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 				throw new IllegalArgumentException("No treebank file specified");
 			}
 			if (opt_GoldStandardFile == null || opt_GoldStandardFile.trim().isEmpty())  {
-				throw new IllegalArgumentException("No gold standard file specified");
+//				throw new IllegalArgumentException("No gold standard file specified");
+				// Don't fail, but just write our own Gold Standard!
+				opt_MakeGoldStandard = true;
 			}
 		}
 	}
