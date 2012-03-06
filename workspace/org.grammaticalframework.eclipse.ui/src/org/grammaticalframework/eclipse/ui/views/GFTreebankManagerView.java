@@ -15,6 +15,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
+import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -286,6 +287,13 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 	
 	/**
+	 * Clear contents of output viewer
+	 */
+	private void clearOutputViewer() {
+		getOutputViewer().setItemCount(0);
+	}
+	
+	/**
 	 * Add listnere to the fiel editor so that we can swap project depending on the currently
 	 * active file.
 	 */
@@ -297,11 +305,19 @@ public class GFTreebankManagerView extends ViewPart {
 					IEditorInput input = editor.getEditorInput();
 					if (input instanceof IFileEditorInput) {
 						IFile file = ((IFileEditorInput) input).getFile();
+						if (!file.getProject().equals(currentProject)) {
+							clearOutputViewer();
+							resetStatusBar();
+						}
 						currentProject = file.getProject();
-						fileViewer.setInput(currentProject.getParent());
+						IContainer newInput = currentProject.getParent();
+						fileViewer.setInput(newInput);
 					}
 				} catch (NullPointerException e) {
+					currentProject = null;
 					fileViewer.setInput(null);
+					clearOutputViewer();
+					resetStatusBar();
 				}
 			}
 			public void partBroughtToTop(IWorkbenchPartReference partRef) {
@@ -507,7 +523,7 @@ public class GFTreebankManagerView extends ViewPart {
 			setStatusText("Results of "+outputFile.getName());
 			setPassedText(String.format("%d/%d", passed, total));
 			setFailedText(String.format("%d/%d", failed, total));
-			getOutputViewer().setItemCount(0);
+			clearOutputViewer();
 			getOutputViewer().add(viewerItems.toArray());
 			redrawStatusBar();
 			
