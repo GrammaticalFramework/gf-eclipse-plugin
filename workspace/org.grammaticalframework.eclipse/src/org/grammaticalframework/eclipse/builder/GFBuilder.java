@@ -32,7 +32,6 @@ import org.eclipse.core.resources.IncrementalProjectBuilder;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IProgressMonitor;
 import org.eclipse.core.runtime.OperationCanceledException;
-import org.grammaticalframework.eclipse.GFException;
 import org.grammaticalframework.eclipse.GFPreferences;
 import org.apache.log4j.Logger;
 
@@ -332,7 +331,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * a single tags file.
 	 *
 	 * @param file the file
-	 * @throws GFException if the build fails, containing the error message from GF
 	 */
 	private void buildFileTags(IFile file) {
 

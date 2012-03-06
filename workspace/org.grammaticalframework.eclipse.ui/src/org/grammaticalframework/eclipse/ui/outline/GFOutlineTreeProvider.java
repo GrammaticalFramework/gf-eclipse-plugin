@@ -18,7 +18,6 @@ import org.eclipse.xtext.ui.editor.outline.IOutlineNode;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import org.eclipse.xtext.ui.editor.outline.impl.EObjectNode;
 import org.eclipse.xtext.ui.editor.outline.impl.EStructuralFeatureNode;
-import org.grammaticalframework.eclipse.GFException;
 import org.grammaticalframework.eclipse.gF.CatDef;
 import org.grammaticalframework.eclipse.gF.DataDef;
 import org.grammaticalframework.eclipse.gF.DefDef;
@@ -172,7 +171,6 @@ public class GFOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	 *
 	 * @param parentNode the parent node
 	 * @param topDef the top def
-	 * @throws GFException the gF exception
 	 */
 	protected void _createChildren(IOutlineNode parentNode, TopDef topDef) {
 
