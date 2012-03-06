@@ -88,9 +88,19 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
             for (int i = 0; i < configs.length; i++) {
             	if (configs[i].getAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, false)
             			&& treebankFile.getName().equals( configs[i].getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, "") )) {
-//					configs[i].launch(mode, null);
-            		log.info(String.format("Running launch \"%s\" for treebank file \"%s\"", configs[i].getName(), treebankFile.getName()));
-            		DebugUITools.launch(configs[i], mode);
+//            		ILaunchConfiguration config = configs[i];
+            		ILaunchConfigurationWorkingCopy config = configs[i].copy("Copy of "+configs[i].getName());
+            		
+            		// If treebank has no gold, then make gold!
+            		if (!GFTreebankHelper.hasGoldStandardFile(treebankFile)) {
+            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, true);
+            		} else {
+            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, false);
+            		}
+            		
+            		log.info(String.format("Running launch \"%s\" for treebank file \"%s\"", config.getName(), treebankFile.getName()));
+//					config.launch(mode, null);
+            		DebugUITools.launch(config, mode);
 					return;
 				}
 			}

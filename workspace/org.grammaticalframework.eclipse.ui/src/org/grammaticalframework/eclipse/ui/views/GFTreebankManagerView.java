@@ -327,24 +327,25 @@ public class GFTreebankManagerView extends ViewPart {
 					event.getDelta().accept(new IResourceDeltaVisitor() {
 						public boolean visit(IResourceDelta delta) throws CoreException {
 							try {
-								if (delta.getResource() instanceof IFile) {
+								if (delta.getResource() instanceof IFile
+										&& (delta.getKind() == IResourceDelta.ADDED || delta.getKind() == IResourceDelta.CHANGED)
+										&& ((IFile)delta.getResource()).getFileExtension().equalsIgnoreCase(GFTreebankHelper.getOutputExtension(false))) {
 									final IFile outputFile = (IFile) delta.getResource();
 									final IFile treebankFile = GFTreebankHelper.getTreebankFileFromOutputFile(outputFile);
 									final IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
 									
 									Display.getDefault().syncExec(new Runnable() {
 										public void run() {
-//											GFTreebankManagerHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile, GFTreebankManagerView.this);
 											compareOutputWithGoldStandard(outputFile, goldStandardFile);
 										}
 									});
 									
-									return false;
+									return false; // stop looking
 								}
 							} catch (NullPointerException e) {
 								//
 							}
-							return true;
+							return true; // keep looking
 						}
 					});
 				} catch (CoreException e) {
@@ -438,10 +439,13 @@ public class GFTreebankManagerView extends ViewPart {
 				IFile treebankFile = getSelectedTreebankFile();
 				if (treebankFile == null)
 					return;
-				IFile outputFile = GFTreebankHelper.getOutputFile(treebankFile);
-				IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
-//				GFTreebankManagerHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile, GFTreebankManagerView.this);
-				compareOutputWithGoldStandard(outputFile, goldStandardFile);
+				final IFile outputFile = GFTreebankHelper.getOutputFile(treebankFile);
+				final IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
+				Display.getDefault().syncExec(new Runnable() {
+					public void run() {
+						compareOutputWithGoldStandard(outputFile, goldStandardFile);
+					}
+				});
 			}
 		};
 		compareAction.setText("Compare output with gold standard");

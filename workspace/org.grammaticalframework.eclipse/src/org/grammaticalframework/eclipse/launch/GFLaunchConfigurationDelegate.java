@@ -44,7 +44,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 	private boolean opt_TreebankMode;
 	private String opt_TreebankFile;
 	private String opt_GoldStandardFile;
-	private boolean opt_MakeGoldStandard = false;
+	private boolean opt_MakeGoldStandard;
 	
 	/**
 	 * Logger
@@ -103,16 +103,20 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			// Do treebank stuff
 			if (opt_BatchMode && opt_TreebankMode) {
 				runTreebank(process);
-				try {
-					String dir = configuration.getAttribute(IGFLaunchConfigConstants.WORKING_DIR, "");
-					IResource container = ResourcesPlugin.getWorkspace().getRoot().getContainerForLocation(new Path(dir));
-					container.getProject().refreshLocal(IProject.DEPTH_INFINITE, monitor);
-				} catch (NullPointerException _) {
-					log.warn("Couldn't refresh project after running treebank");
-				}
 			}
-
+			
+			// End
 			process.waitFor();
+			
+			// Refresh project to include new files
+			try {
+				String dir = configuration.getAttribute(IGFLaunchConfigConstants.WORKING_DIR, "");
+				IResource container = ResourcesPlugin.getWorkspace().getRoot().getContainerForLocation(new Path(dir));
+				container.getProject().refreshLocal(IProject.DEPTH_INFINITE, monitor);
+			} catch (NullPointerException _) {
+				log.warn("Couldn't refresh project after running launch");
+			}
+			
 		} catch (IOException e) {
 			log.error("Error running launch.", e);
 		} catch (InterruptedException e) {
@@ -166,10 +170,12 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			if (opt_TreebankFile == null || opt_TreebankFile.trim().isEmpty())  {
 				throw new IllegalArgumentException("No treebank file specified");
 			}
-			if (opt_GoldStandardFile == null || opt_GoldStandardFile.trim().isEmpty())  {
-//				throw new IllegalArgumentException("No gold standard file specified");
-				// Don't fail, but just write our own Gold Standard!
-				opt_MakeGoldStandard = true;
+			
+			opt_MakeGoldStandard = configuration.getAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, false);
+			if (!opt_MakeGoldStandard) {
+				if (opt_GoldStandardFile == null || opt_GoldStandardFile.trim().isEmpty())  {
+					throw new IllegalArgumentException("No gold standard file specified");
+				}
 			}
 		}
 	}
