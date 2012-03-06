@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 5 March 2012
+Updated: 6 March 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914._
 
@@ -48,7 +48,7 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 
 ## Major release history
 
-**05/03/12**
+**06/03/12**
 : (1.4.0.x) Treebank manager view. Updated launch configurations. UI improvements, new icons. Inline contextual documentation. Correct resolution of qualified identifiers. Bug fixes and some refactoring.
 
 **07/02/12**
@@ -239,16 +239,28 @@ This view is automatically populated with a list of all the external modules ref
 _Future versions of this view will contain a full tree of all identifiers available in the current scope._
 
 ### _Treebank Manager_ view
-This feature works together with the launch configurations to make the process of testing treebanks against your grammars quick and easy. The general concept (independent of GFEP) is this:
+This feature works together with the launch configurations to make the process of testing treebanks against your grammars quick and easy. As described in the [GF Book](http://www.grammaticalframework.org/gf-book/) (Section 10.5), the general development-test cycle (independent of GFEP) is as follows:
 
 1. Create a file `test.trees` which contains a bunch of abstract syntax trees, which you want to test
 1. Compile your grammar and linearise the trees one by one, using some command like `rf -lines -tree -file=test.trees | l -table | wf -file=test.trees.out`
-1. Manually correct the output in `test.trees.out` and save it as your gold standard file `test.gold`.
+1. Manually correct the output in `test.trees.out` and save it as your gold standard file `test.trees.gold`.
 1. Each time you update your grammar, repeat step 2, then compare your new output against the gold standard using `diff` or some other comparison tool.
 
 The **Treebank Manager** view follows this same pattern but provides a convenient graphical interface for running your treebanks and also for looking at the output, just using a few clicks:
 
 ![Treebank Manager view](http://www.grammaticalframework.org/eclipse/images/eclipse-treebank-manager.png)
+
+Note that GFEP assumes the following convention:
+
+`nouns.trees`
+: Treebank file (abstract trees)
+
+`nouns.trees.out`
+: Output file (generated linearisations)
+
+`nouns.trees.gold`
+: Gold standard file (manually corrected linearisations)
+
 
 ### Logs
 The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
