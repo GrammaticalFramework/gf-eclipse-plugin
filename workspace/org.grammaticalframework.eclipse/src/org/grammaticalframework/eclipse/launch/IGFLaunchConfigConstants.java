@@ -47,12 +47,12 @@ public interface IGFLaunchConfigConstants {
 	public static final String TREEBANK_MODE = prefix + "TREEBANK_MODE";
 	
 	/**
-	 * 
+	 * Name of treebank file
 	 */
 	public static final String TREEBANK_FILENAME = prefix + "TREEBANK_FILENAME";
 	
 	/**
-	 * 
+	 * Name of gold standard file
 	 */
 	public static final String GOLD_STANDARD_FILENAME = prefix + "GOLD_STANDARD_FILENAME";
 	
