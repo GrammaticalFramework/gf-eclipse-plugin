@@ -30,8 +30,8 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Text;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
+import org.grammaticalframework.eclipse.launch.GFTreebankHelper;
 import org.grammaticalframework.eclipse.ui.natures.GFProjectNature;
-import org.grammaticalframework.eclipse.ui.views.GFTreebankManagerHelper;
 
 import com.google.common.base.Predicate;
 
@@ -71,7 +71,7 @@ public class GFWizardHelper {
 	public static List<IFile> getTreebankFileList() {
 		Predicate<IFile> treebankFileFilter = new Predicate<IFile>() {
 			public boolean apply(IFile input) {
-				return GFTreebankManagerHelper.isTreebankFile(input);
+				return GFTreebankHelper.isTreebankFile(input);
 			}
 		};
 		return traverseFileList(treebankFileFilter, false);

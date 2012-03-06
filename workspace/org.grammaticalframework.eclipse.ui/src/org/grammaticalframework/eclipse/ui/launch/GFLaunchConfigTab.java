@@ -37,9 +37,9 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.PlatformUI;
+import org.grammaticalframework.eclipse.launch.GFTreebankHelper;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
-import org.grammaticalframework.eclipse.ui.views.GFTreebankManagerHelper;
 import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper;
 
 /**
@@ -250,7 +250,7 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		// Check treebank stuff
 		if (isTreebankMode() && combo_TreebankFile.getSelectionIndex() > -1) {
 			IFile treebankFile = treebankFiles.get(combo_TreebankFile.getSelectionIndex());
-			IFile goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
+			IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
 			if (goldStandardFile != null) {
 				text_GoldStandardFile.setText(goldStandardFile.getName());
 				text_GoldStandardFile.setEnabled(true);

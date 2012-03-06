@@ -124,8 +124,8 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 	}
 	
 	private void runTreebank(Process process) {
-		// TODO: These extensios should be shared with those in GFTreebankManagerHelper
-		String outFileName = opt_TreebankFile + (opt_MakeGoldStandard ? ".gold" : ".out");
+		String outExtension = opt_MakeGoldStandard ? GFTreebankHelper.getGoldStandardExtension(true) : GFTreebankHelper.getOutputExtension(true);
+		String outFileName = opt_TreebankFile + outExtension;
 		String treebankCommand = String.format("rf -lines -tree -file=%s | l -table | wf -file=%s", opt_TreebankFile, outFileName);
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(new BufferedOutputStream(process.getOutputStream())), true);
 		writer.println(treebankCommand);

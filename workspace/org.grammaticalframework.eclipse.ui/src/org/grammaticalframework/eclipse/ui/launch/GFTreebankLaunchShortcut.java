@@ -26,8 +26,8 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PlatformUI;
+import org.grammaticalframework.eclipse.launch.GFTreebankHelper;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
-import org.grammaticalframework.eclipse.ui.views.GFTreebankManagerHelper;
 
 /**
  * Shortcut from a treebank file, finds and runs an existing launch config which
@@ -116,7 +116,7 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
      * @throws CoreException
      */
     protected ILaunchConfiguration createLaunchConfiguration(IFile treebankFile, ILaunchConfigurationType configType) throws CoreException {
-		IFile goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
+		IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
 		ILaunchConfigurationWorkingCopy config;
 		config = configType.newInstance(null, "GF Treebank Test");
 		config.setAttribute(IGFLaunchConfigConstants.WORKING_DIR, treebankFile.getParent().getLocation().toOSString());

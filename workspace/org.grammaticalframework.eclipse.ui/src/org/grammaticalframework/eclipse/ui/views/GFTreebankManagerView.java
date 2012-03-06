@@ -9,6 +9,11 @@
  */
 package org.grammaticalframework.eclipse.ui.views;
 
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
@@ -56,6 +61,7 @@ import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.eclipse.ui.part.ViewPart;
+import org.grammaticalframework.eclipse.launch.GFTreebankHelper;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 import org.grammaticalframework.eclipse.ui.launch.GFTreebankLaunchShortcut;
 
@@ -220,7 +226,7 @@ public class GFTreebankManagerView extends ViewPart {
 //					return true;
 //				}
 				if (element instanceof IFile) {
-					return GFTreebankManagerHelper.isTreebankFile((IFile)element);
+					return GFTreebankHelper.isTreebankFile((IFile)element);
 				}
 				return false;
 			}
@@ -234,7 +240,7 @@ public class GFTreebankManagerView extends ViewPart {
 				} else if (element instanceof IFolder) {
 					return images.forFolder();
 				} else if (element instanceof IFile) {
-					if (GFTreebankManagerHelper.hasGoldStandardFile((IFile)element))
+					if (GFTreebankHelper.hasGoldStandardFile((IFile)element))
 						return images.forTreebankItemWithGoldStandard();
 					else
 						return images.forTreebankItem();
@@ -323,12 +329,13 @@ public class GFTreebankManagerView extends ViewPart {
 							try {
 								if (delta.getResource() instanceof IFile) {
 									final IFile outputFile = (IFile) delta.getResource();
-									final IFile treebankFile = GFTreebankManagerHelper.getTreebankFileFromOutputFile(outputFile);
-									final IFile goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
+									final IFile treebankFile = GFTreebankHelper.getTreebankFileFromOutputFile(outputFile);
+									final IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
 									
 									Display.getDefault().syncExec(new Runnable() {
 										public void run() {
-											GFTreebankManagerHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile, GFTreebankManagerView.this);
+//											GFTreebankManagerHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile, GFTreebankManagerView.this);
+											compareOutputWithGoldStandard(outputFile, goldStandardFile);
 										}
 									});
 									
@@ -378,7 +385,7 @@ public class GFTreebankManagerView extends ViewPart {
 	 */
 	private IFile getSelectedTreebankFile() {
 		IFile file = getSelectedFile();
-		return (file != null && GFTreebankManagerHelper.isTreebankFile(file)) ? file : null;
+		return (file != null && GFTreebankHelper.isTreebankFile(file)) ? file : null;
 	}
 	
 	/**
@@ -394,7 +401,7 @@ public class GFTreebankManagerView extends ViewPart {
 				// See what's selected in our viewer and validate
 				if ((treebankFile = getSelectedTreebankFile()) == null)
 					return;
-				goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
+				goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
 				if (goldStandardFile == null) {
 					Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
 					String title = "Error running treebank";
@@ -431,13 +438,85 @@ public class GFTreebankManagerView extends ViewPart {
 				IFile treebankFile = getSelectedTreebankFile();
 				if (treebankFile == null)
 					return;
-				IFile outputFile = GFTreebankManagerHelper.getOutputFile(treebankFile);
-				IFile goldStandardFile = GFTreebankManagerHelper.getGoldStandardFile(treebankFile);
-				GFTreebankManagerHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile, GFTreebankManagerView.this);
+				IFile outputFile = GFTreebankHelper.getOutputFile(treebankFile);
+				IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
+//				GFTreebankManagerHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile, GFTreebankManagerView.this);
+				compareOutputWithGoldStandard(outputFile, goldStandardFile);
 			}
 		};
 		compareAction.setText("Compare output with gold standard");
-	}	
+	}
+	
+	/**
+	 * Compare a given output file with a gold standard, and writ the results directly to the supplied view.
+	 * @param outputFile
+	 * @param goldStandardFile
+	 * @param view
+	 */
+	private void compareOutputWithGoldStandard(IFile outputFile, IFile goldStandardFile) {
+		resetStatusBar();
+		setStatusText("Comparing against "+goldStandardFile.getName());
+		redrawStatusBar();
+		
+		BufferedReader outReader = null;
+		BufferedReader goldReader = null;
+		try {
+			outReader = new BufferedReader(new InputStreamReader(new DataInputStream(outputFile.getContents(true))));
+			goldReader = new BufferedReader(new InputStreamReader(new DataInputStream(goldStandardFile.getContents(true))));
+			
+			String outLine;
+			String goldLine;
+			final ArrayList<Object> viewerItems = new ArrayList<Object>();
+			int passed = 0;
+			int failed = 0;
+			while ((outLine = outReader.readLine()) != null) {
+				// Sync with gold standard file
+				goldLine = goldReader.readLine();
+				if (goldLine == null) {
+					log.error(String.format("Output file \"%s\" and gold standard file \"%s\" do not match in length.", outputFile.getName(), goldStandardFile.getName()));
+					break;
+				}
+				
+				// Skip empty lines
+				outLine = outLine.trim();
+				goldLine = goldLine.trim();
+				if (outLine.isEmpty())  {
+					continue;
+				}
+				
+				// Do the comparison
+				StringBuilder sb = new StringBuilder();
+				sb.append(outLine);
+				if (outLine.equals(goldLine)) {
+					passed++;
+				} else {
+					failed++;
+					sb.append("\n" + goldLine);
+				}
+				viewerItems.add(sb.toString());
+			}
+			
+			// Set items in viewer
+			int total = passed+failed;
+			setStatusText("Results of "+outputFile.getName());
+			setPassedText(String.format("%d/%d", passed, total));
+			setFailedText(String.format("%d/%d", failed, total));
+			getOutputViewer().setItemCount(0);
+			getOutputViewer().add(viewerItems.toArray());
+			redrawStatusBar();
+			
+		} catch (Exception e) {
+			log.error("Error running comparison",  e);
+		} finally {
+			try {
+				outReader.close();
+			} catch (Exception _) {	}
+			try {
+				goldReader.close();
+			} catch (Exception _) {	}
+		}
+	}
+	
 
 	private void hookContextMenu() {
 		MenuManager menuMgr = new MenuManager("#PopupMenu");
@@ -473,9 +552,9 @@ public class GFTreebankManagerView extends ViewPart {
 		IFile treebankFile = getSelectedTreebankFile();
 		if (treebankFile == null)
 			return;
-		if (GFTreebankManagerHelper.hasGoldStandardFile(treebankFile)) {
+		if (GFTreebankHelper.hasGoldStandardFile(treebankFile)) {
 			manager.add(runAction);
-			if (GFTreebankManagerHelper.hasOutputFile(treebankFile)) {
+			if (GFTreebankHelper.hasOutputFile(treebankFile)) {
 				manager.add(compareAction);
 			}
 		} else {
