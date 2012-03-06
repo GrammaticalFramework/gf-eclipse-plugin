@@ -346,6 +346,8 @@ public class GFTreebankManagerView extends ViewPart {
 							return true; // keep looking
 						}
 					});
+				} catch (NullPointerException e) {
+					// 
 				} catch (CoreException e) {
 					// 
 				}
