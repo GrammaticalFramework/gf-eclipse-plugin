@@ -27,8 +27,8 @@ abstract class AbstractTreeContentProvider implements ITreeContentProvider {
 	}
 
 	public boolean hasChildren(Object element) {
-		return true;
-//		return ((ITreeNode) element).hasChildren();
+//		return true;
+		return ((ITreeNode) element).hasChildren();
 	}
 
 	public Object[] getElements(Object inputElement) {

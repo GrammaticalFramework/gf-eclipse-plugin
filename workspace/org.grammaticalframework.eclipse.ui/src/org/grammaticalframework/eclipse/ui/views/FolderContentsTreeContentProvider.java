@@ -28,4 +28,5 @@ class FolderContentsTreeContentProvider extends AbstractTreeContentProvider {
 		}
 	}
 
+
 }
