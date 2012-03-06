@@ -316,11 +316,9 @@ public class GFTreebankManagerView extends ViewPart {
 		getSite().getWorkbenchWindow().getPartService().addPartListener(editorListener);
 
 		resourceListener = new IResourceChangeListener() {
-			@Override
 			public void resourceChanged(IResourceChangeEvent event) {
 				try {
 					event.getDelta().accept(new IResourceDeltaVisitor() {
-						@Override
 						public boolean visit(IResourceDelta delta) throws CoreException {
 							try {
 								if (delta.getResource() instanceof IFile) {
