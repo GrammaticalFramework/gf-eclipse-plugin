@@ -333,14 +333,12 @@ public class GFTreebankManagerView extends ViewPart {
 									final IFile outputFile = (IFile) delta.getResource();
 									final IFile treebankFile = GFTreebankHelper.getTreebankFileFromOutputFile(outputFile);
 									final IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
-									
 									Display.getDefault().syncExec(new Runnable() {
 										public void run() {
 											compareOutputWithGoldStandard(outputFile, goldStandardFile);
 										}
 									});
-									
-									return false; // stop looking
+									return false; // stop looking... right?
 								}
 							} catch (NullPointerException e) {
 								//
@@ -441,6 +439,8 @@ public class GFTreebankManagerView extends ViewPart {
 					return;
 				final IFile outputFile = GFTreebankHelper.getOutputFile(treebankFile);
 				final IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
+				if (outputFile == null || goldStandardFile == null)
+					return;
 				Display.getDefault().syncExec(new Runnable() {
 					public void run() {
 						compareOutputWithGoldStandard(outputFile, goldStandardFile);
