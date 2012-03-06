@@ -174,7 +174,8 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			opt_MakeGoldStandard = configuration.getAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, false);
 			if (!opt_MakeGoldStandard) {
 				if (opt_GoldStandardFile == null || opt_GoldStandardFile.trim().isEmpty())  {
-					throw new IllegalArgumentException("No gold standard file specified");
+//					throw new IllegalArgumentException("No gold standard file specified");
+					opt_MakeGoldStandard = true;
 				}
 			}
 		}
