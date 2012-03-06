@@ -30,6 +30,14 @@
               id="org.grammaticalframework.eclipse.GF.GoldStandard"
               name="Gold Standard Editor">
         </editor>
+        <editor
+              class="org.eclipse.ui.editors.text.TextEditor"
+              default="false"
+              extensions="out"
+              icon="icons/textfile.png"
+              id="org.grammaticalframework.eclipse.GF.TreebankOutput"
+              name="Treebank Output Editor">
+        </editor>
     </extension>
     <extension
         point="org.eclipse.ui.handlers">
