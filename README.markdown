@@ -106,7 +106,8 @@ In order for dependencies to be satisfied, you need to ensure that your Eclipse 
 #### Settings
 
 1. Add the GF perspective by clicking **Open Perspective &rarr; Other** and choosing **GF**.
-1. The plugin will try to determine the path to your GF executable automatically. You can always check/overwrite it by going to **Window &rarr; Preferences &rarr; Grammatical Framework**.  
+1. The plugin will try to determine the path to your GF executable automatically. You can always check/overwrite it by going to **Window &rarr; Preferences &rarr; Grammatical Framework**.
+This path should **include** the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
 1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
 
 ### Updating the plugin
