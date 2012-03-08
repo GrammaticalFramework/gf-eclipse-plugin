@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 6 March 2012
+Updated: 8 March 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914._
 
@@ -151,6 +151,23 @@ Your `.project` file should include the GF Builder as follows:
 ## Getting started
 
 Some steps you can follow to get a feel of of the plugin's features.
+
+### The Eclipse _workspace_ and _project_ concepts
+When you run Eclipse, it asks you to create or specify a _workspace_ on your system. Any projects you wish to work
+on inside Eclipse must reside in this workspace; generally each folder under the top-level workspace directory is
+considered an individual project, i.e.:
+
+    workspace/
+        Project1/
+            file1.gf
+            file2.gf
+        Project2/
+            file3.gf
+            file4.gf
+
+If you open an existing folder as your workspace in Eclipse, then your folders in that workspace do not automatically
+become Eclipse projects. You must follow the "Create new GF Project" wizards below, and give your project the exact
+name of the existing folder (e.g. `Project1` or `Project2` in the example above.)
 
 ### Create a new GF Project
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
