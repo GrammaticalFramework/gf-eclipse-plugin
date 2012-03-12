@@ -283,23 +283,13 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		
 		// Get the corresponding project
 		String workspaceStem = ResourcesPlugin.getWorkspace().getRoot().getRawLocationURI().toString() + java.io.File.separator;
-		String projectName = tagFileURI.deresolve(URI.createURI(workspaceStem)).segment(0);
-		IProject project = null;
-		for (IProject p : ResourcesPlugin.getWorkspace().getRoot().getProjects()) {
-			if (p.getName().equals(projectName)) {
-				project = p;
-				break;
-			}
-		}
-		if (project == null) {
-			// We could find no matching project, just return same URI
-			log.warn("Couldn't find corresponding project for: " + tagFileURI);
-			return URI.createFileURI(externalFilePath);
-		}
+		URI projectURI = tagFileURI.deresolve(URI.createURI(workspaceStem));
+		IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(projectURI.toFileString()));
+		IProject project = file.getProject();
 		
 		try {
 			if (!project.isOpen()) {
-				log.info("Opening closed project '" + projectName + "'");
+				log.info("Opening closed project '" + project.getName() + "'");
 			    project.open(null);
 			}
 
