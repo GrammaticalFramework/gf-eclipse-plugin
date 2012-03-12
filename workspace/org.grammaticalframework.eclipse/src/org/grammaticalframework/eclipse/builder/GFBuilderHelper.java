@@ -21,6 +21,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.QualifiedName;
+import org.eclipse.emf.common.util.URI;
 import org.grammaticalframework.eclipse.scoping.GFTagsFileException;
 import org.grammaticalframework.eclipse.scoping.TagEntry;
 
@@ -41,6 +42,19 @@ public class GFBuilderHelper {
 		return GFBuilder.BUILD_FOLDER
 				+ java.io.File.separator
 				+ sourceFileName + "-tags";
+	}
+	
+	/**
+	 * Gets the tags file name, relative to the source file as a URI
+	 * Only pieces the name together; does not do any checking!
+	 * @param sourceFileName
+	 * @return relative URI of tags file
+	 */
+	public static URI getTagsFileURIRelative(String sourceFileName) {
+		String uri = GFBuilder.BUILD_FOLDER
+				+ "/"
+				+ sourceFileName + "-tags";
+		return URI.createURI(uri);
 	}
 
 	/**
