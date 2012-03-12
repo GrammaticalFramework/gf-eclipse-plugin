@@ -197,11 +197,21 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	 * Expand all action for outline view
 	 * @param binder
 	 */
-	public void configureExpandAction(Binder binder) {
+	public void configureOutlineExpandAction(Binder binder) {
 		binder
-			.bind(IOutlineContribution.class)
-			.annotatedWith(Names.named("expandOutline"))
-			.to(ExpandAllAction.class);
+		.bind(IOutlineContribution.class)
+		.annotatedWith(Names.named("expandOutline"))
+		.to(ExpandAllAction.class);
 	}
+
+	/**
+	 * Don't allow the "Alphabetical Sort" button on the outline view
+	 */
+	@Override
+	public void configureToggleSortingOutlineContribution(Binder binder) {
+		// super.configureToggleSortingOutlineContribution(binder);
+	}
+
+	
 	
 }
