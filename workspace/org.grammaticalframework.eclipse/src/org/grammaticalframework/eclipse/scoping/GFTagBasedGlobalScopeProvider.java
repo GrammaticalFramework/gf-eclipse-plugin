@@ -167,19 +167,8 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 */
 	private Hashtable<URI, Collection<TagEntry>> parseTagsFile(final Resource resource) throws GFTagsFileException {
 		
-		// Get module definition
-		SourceModule moduleDef;
-		String moduleName;
-		try {
-			moduleDef = (SourceModule)resource.getContents().get(0);
-			moduleName = moduleDef.getType().getName().getS();
-		} catch (Exception _) {
-			// This means there's a mother syntax error (mid-way during editing). Just return quietly.
-			return new Hashtable<URI, Collection<TagEntry>>();
-		}
-		
 		// Find the corresponding tags file & parse it (1st pass)
-		URI tagFileURI = GFLibraryHelper.getTagsFile(resource, moduleName);
+		URI tagFileURI = GFLibraryHelper.getTagsFile(resource);
 		Predicate<TagEntry> includePredicate = new Predicate<TagEntry>() {
 			// Ignore references to self, ie local scope
 			public boolean apply(TagEntry tag) {
