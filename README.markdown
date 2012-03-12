@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 6 March 2012
+Updated: 8 March 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914._
 
@@ -102,7 +102,8 @@ In order for dependencies to be satisfied, you need to ensure that your Eclipse 
 #### Settings
 
 1. Add the GF perspective by clicking **Open Perspective &rarr; Other** and choosing **GF**.
-1. The plugin will try to determine the path to your GF executable automatically. You can always check/overwrite it by going to **Window &rarr; Preferences &rarr; Grammatical Framework**.  
+1. The plugin will try to determine the path to your GF executable automatically. You can always check/overwrite it by going to **Window &rarr; Preferences &rarr; Grammatical Framework**.
+This path should **include** the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
 1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
 
 ### Updating the plugin
@@ -147,6 +148,23 @@ Your `.project` file should include the GF Builder as follows:
 
 Some steps you can follow to get a feel of of the plugin's features.
 
+### The Eclipse _workspace_ and _project_ concepts
+When you run Eclipse, it asks you to create or specify a _workspace_ on your system. Any projects you wish to work
+on inside Eclipse must reside in this workspace; generally each folder under the top-level workspace directory is
+considered an individual project, i.e.:
+
+    workspace/
+        Project1/
+            file1.gf
+            file2.gf
+        Project2/
+            file3.gf
+            file4.gf
+
+If you open an existing folder as your workspace in Eclipse, then your folders in that workspace do not automatically
+become Eclipse projects. You must follow the "Create new GF Project" wizards below, and give your project the exact
+name of the existing folder (e.g. `Project1` or `Project2` in the example above.)
+
 ### Create a new GF Project
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-2.png)
@@ -181,11 +199,13 @@ Notice how changing a `cat` definition for example will produce warnings and/or 
 ![Warnings and errors in the editor](http://www.grammaticalframework.org/eclipse/images/eclipse-editor-cat.png)
 
 ### Validation
-For validation to work correctly, the project's **Build Automatically** option should be turned on.
-
 The in-editor validation sometimes needs to be triggered/updated by a keystroke. If you can still see errors which you believe should be correct, try adding a space character to ensure the validation is re-triggered.
 
-Sometimes you may get an entire file marked with errors, even though in fact there is only a single error which is causing the internal builder to fail. In such cases referring to the **Problems** view should help you locate the cause. This issue is particularly relevant when changes made to one module may induce errors in its descendants (e.g. renaming a parameter in a resource module). This behaviour will hopefully be improved in future versions. 
+Sometimes you may get an entire file marked with errors, even though in fact there is only a single error which is causing the internal builder to fail. In such cases referring to the **Problems** view should help you locate the cause. This issue is particularly relevant when changes made to one module may induce errors in its descendants (e.g. renaming a parameter in a resource module). This behaviour will hopefully be improved in future versions.
+
+#### Builder
+For validation to work correctly, the project's **Build Automatically** option should be turned on.
+Each time you save a file (or some other change occurs in your project), the builder should get triggered which recompiles any GF files which have changed. If the builder does not seem to get triggered, try to run a _clean_ via **Project &rarr; Clean...**
 
 ### Code formatting
 Use the built-in code formatter to tidy your code automatically. Right-click in the editor and choose **Format** or use the keyboard shortcut **Ctrl+Shift+F**.
