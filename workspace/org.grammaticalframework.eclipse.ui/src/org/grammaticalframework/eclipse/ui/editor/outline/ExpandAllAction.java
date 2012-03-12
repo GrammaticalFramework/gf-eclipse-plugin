@@ -9,9 +9,11 @@
  */
 package org.grammaticalframework.eclipse.ui.editor.outline;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.eclipse.jface.action.Action;
 import org.eclipse.jface.resource.ImageDescriptor;
-import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.xtext.ui.editor.outline.impl.OutlinePage;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 
@@ -34,10 +36,10 @@ public class ExpandAllAction extends AbstractAction {
 	private static String label = "Expand All";
 	
 	/**
-	 * The tree viewer.
+	 * 
 	 */
-	TreeViewer treeViewer;
-
+	protected List<OutlinePage> outlinePages = new ArrayList<OutlinePage>();
+	
 	/* (non-Javadoc)
 	 * @see org.grammaticalframework.eclipse.ui.editor.outline.AbstractAction#configureAction(org.eclipse.jface.action.Action)
 	 */
@@ -50,29 +52,31 @@ public class ExpandAllAction extends AbstractAction {
 	}
 
 	/**
-	 * Expand the tree, woohoo
+	 * Expand the all trees in all outline pages.
+	 * Hardly ideal behaviour but I can't waste any more time on this crap.
 	 */
-	@Override
 	public void run() {
-		treeViewer.expandAll();
+		for (OutlinePage page : this.outlinePages) {
+			page.getTreeViewer().expandAll();
+		}
 	}
 	
 	/**
-	 * Get ahold of the treeviewer object
+	 * Add OutlinePage to our internal list
 	 */
 	@Override
-	public void register(OutlinePage outlinePage) {
+	public void register(final OutlinePage outlinePage) {
 		super.register(outlinePage);
-		treeViewer = outlinePage.getTreeViewer();
+		outlinePages.add(outlinePage);
 	}
 
-	/* (non-Javadoc)
-	 * @see org.grammaticalframework.eclipse.ui.editor.outline.AbstractAction#deregister(org.eclipse.xtext.ui.editor.outline.impl.OutlinePage)
+	/**
+	 * Remove OutlinePage from our internal list
 	 */
 	@Override
 	public void deregister(OutlinePage outlinePage) {
 		super.deregister(outlinePage);
-		treeViewer = null;
-	}	
+		outlinePages.remove(outlinePage);
+	}
 
 }
