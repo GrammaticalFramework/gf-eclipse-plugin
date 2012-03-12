@@ -46,8 +46,6 @@ import org.eclipse.xtext.scoping.impl.LoadOnDemandResourceDescriptions;
 import org.eclipse.xtext.util.OnChangeEvictingCache;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
-import org.grammaticalframework.eclipse.gF.SourceModule;
-
 import com.google.common.base.Predicate;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -120,42 +118,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		});
 		
 	}
-	
-//	/**
-//	 * Get the import URIs for a source file, possibly from cache
-//	 * @param resource
-//	 * @return
-//	 */
-//	private Set<URI> getImportedURIs(final Resource resource) {
-//		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Set<URI>>(){
-//			public Set<URI> get() {
-//				return parseTagsFile(resource).keySet();
-//			}
-//		});
-//	}
-//	
-//	/**
-//	 * Get list of all tags grouped by URI, possibly from cache
-//	 * 
-//	 * @param resource
-//	 * @return
-//	 * @throws GFTagsFileException 
-//	 */
-//	private Hashtable<URI, Collection<TagEntry>> getURITagMap(final Resource resource) throws GFTagsFileException {
-//		try {
-//			return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<Hashtable<URI, Collection<TagEntry>>>(){
-//				public Hashtable<URI, Collection<TagEntry>> get() {
-//					try {
-//						return parseTagsFile(resource);
-//					} catch (GFTagsFileException e) {
-//						throw new ProvisionException(e.getMessage());
-//					}
-//				}
-//			});
-//		} catch (ProvisionException e) {
-//			throw new GFTagsFileException(e.getMessage());
-//		}
-//	}
 	
 	/**
 	 * For a given resource, find its tags file and get a list of the all the files mentioned
