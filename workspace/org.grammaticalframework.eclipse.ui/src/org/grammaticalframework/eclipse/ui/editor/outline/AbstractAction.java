@@ -16,7 +16,7 @@ import org.eclipse.xtext.ui.editor.outline.impl.OutlinePage;
 import org.eclipse.xtext.ui.editor.preferences.IPreferenceStoreAccess;
 
 /**
- * Abstract action for contirbuting to the outline view
+ * Abstract action for contributing to the outline view
  */
 public abstract class AbstractAction extends Action implements IOutlineContribution {
 
