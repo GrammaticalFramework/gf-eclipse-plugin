@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>GF Project</name>
+	<name>Foods</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,11 +16,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>.gfexternal/Cat.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/abstract/Cat.gf</location>
-		</link>
-		<link>
 			<name>.gfexternal/CatEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/CatEng.gf</location>
@@ -29,11 +24,6 @@
 			<name>.gfexternal/Combinators.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/api/Combinators.gf</location>
-		</link>
-		<link>
-			<name>.gfexternal/Common.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/abstract/Common.gf</location>
 		</link>
 		<link>
 			<name>.gfexternal/CommonX.gf</name>
@@ -49,11 +39,6 @@
 			<name>.gfexternal/ParadigmsEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/ParadigmsEng.gf</location>
-		</link>
-		<link>
-			<name>.gfexternal/Structural.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/abstract/Structural.gf</location>
 		</link>
 		<link>
 			<name>.gfexternal/StructuralEng.gf</name>
