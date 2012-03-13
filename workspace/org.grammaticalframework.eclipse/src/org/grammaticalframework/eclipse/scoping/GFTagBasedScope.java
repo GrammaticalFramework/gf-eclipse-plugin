@@ -36,7 +36,6 @@ public class GFTagBasedScope extends AbstractScope {
 	/**
 	 * The logger
 	 */
-	@SuppressWarnings("unused")
 	private static final Logger log = Logger.getLogger(GFTagBasedScope.class);
 
 	/**
