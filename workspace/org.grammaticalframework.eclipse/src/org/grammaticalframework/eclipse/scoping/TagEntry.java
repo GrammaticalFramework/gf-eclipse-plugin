@@ -195,7 +195,7 @@ public class TagEntry {
 	public String toString() {
 		StringBuilder sb = new StringBuilder(moduleName + "." + ident);
 		sb.append(" (Q:" + qualifier);
-		if (!alias.isEmpty())
+		if (alias != null && !alias.isEmpty())
 			sb.append(", A:" + alias);
 		sb.append(")");
 		return sb.toString();
