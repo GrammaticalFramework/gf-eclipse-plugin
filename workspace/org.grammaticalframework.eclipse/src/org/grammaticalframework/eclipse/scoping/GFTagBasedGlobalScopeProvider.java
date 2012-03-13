@@ -172,7 +172,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				};
 				URITagMap newUriTagMap = parseSingleTagsFile(uri, includePredicate2, qualifiers);
 				
-				// Make sure to add all new refs withouth overwriting (I suspect this level of checking is no longer needed)
+				// Make sure to add all new refs without overwriting (I suspect this level of checking is no longer needed)
 				for (Map.Entry<URI, Collection<TagEntry>> entry : newUriTagMap.entrySet()) {
 					if (!resolvedUriTagMap.containsKey(entry.getKey()))
 						resolvedUriTagMap.put(entry.getKey(), entry.getValue());
