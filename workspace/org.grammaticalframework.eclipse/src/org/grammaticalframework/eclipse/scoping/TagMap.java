@@ -16,7 +16,8 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 /**
- * Map from tag file paths to a collection of all the tags each contains
+ * Map from tag file paths to a collection of all the tags each contains.
+ * This is mostly just a wrapper over <code>Hashtable&lt;String, Collection&lt;TagEntry&gt;&gt;</code>
  * 
  * @author John J. Camilleri
  *
