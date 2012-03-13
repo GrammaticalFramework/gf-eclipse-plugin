@@ -113,7 +113,7 @@ public class GFLibraryTreeView extends ViewPart {
 						IFolder buildFolder = project.getFolder(GFBuilder.EXTERNAL_FOLDER);
 						viewer.setInput(buildFolder);
 					}
-				} catch (NullPointerException e) {
+				} catch (Exception _) {
 					viewer.setInput(null);
 				}
 			}
