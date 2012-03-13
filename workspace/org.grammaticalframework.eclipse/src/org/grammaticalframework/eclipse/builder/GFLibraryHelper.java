@@ -21,17 +21,6 @@ import org.eclipse.emf.ecore.resource.Resource;
 public class GFLibraryHelper {
 	
 	/**
-	 * Put together path to compiled tags file in the build folder.
-	 *
-	 * @param context the context
-	 * @return the header path
-	 */
-	public static URI getTagsFile(Resource context) {
-		URI uri = GFBuilderHelper.getTagsFileURIRelative(context.getURI().lastSegment());
-		return uri.resolve(context.getURI());
-	}
-	
-	/**
 	 * Is the given resource linked?
 	 * @param resource
 	 * @return

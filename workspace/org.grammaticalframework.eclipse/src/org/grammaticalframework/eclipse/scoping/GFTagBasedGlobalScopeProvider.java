@@ -45,7 +45,6 @@ import org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider;
 import org.eclipse.xtext.scoping.impl.LoadOnDemandResourceDescriptions;
 import org.eclipse.xtext.util.OnChangeEvictingCache;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
-import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
 import com.google.common.base.Predicate;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -86,7 +85,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	protected IScope getScope(final Resource resource, final boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
 		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<IScope>(){
 			public IScope get() {
-				Map<URI, Collection<TagEntry>> uriTagMap;
+				URITagMap uriTagMap;
 				try {
 //					uriTagMap = getURITagMap(resource); // cached
 					uriTagMap = parseTagsFile(resource); // not cached
@@ -127,20 +126,20 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @return
 	 * @throws GFTagsFileException 
 	 */
-	private Hashtable<URI, Collection<TagEntry>> parseTagsFile(final Resource resource) throws GFTagsFileException {
+	private URITagMap parseTagsFile(final Resource resource) throws GFTagsFileException {
 		
 		// Find the corresponding tags file & parse it (1st pass)
-		URI tagFileURI = GFLibraryHelper.getTagsFile(resource);
+		URI tagFileURI = GFScopingHelper.getTagsFile(resource);
 		Predicate<TagEntry> includePredicate = new Predicate<TagEntry>() {
 			// Ignore references to self, ie local scope
 			public boolean apply(TagEntry tag) {
 				return !tag.getFile().endsWith(resource.getURI().lastSegment());
 			}
 		};
-		Hashtable<URI, Collection<TagEntry>> uriTagMap = parseSingleTagsFile(tagFileURI, includePredicate, null);
+		URITagMap uriTagMap = parseSingleTagsFile(tagFileURI, includePredicate, null);
 		
 		// Iterate again to replace references to indir tags files with proper references (2nd pass)
-		Hashtable<URI, Collection<TagEntry>> resolvedUriTagMap = new Hashtable<URI, Collection<TagEntry>>(uriTagMap.size());
+		URITagMap resolvedUriTagMap = new URITagMap(uriTagMap.size());
 //		Iterator<URI> uriIter = uriTagMap.keySet().iterator();
 		Iterator<Entry<URI, Collection<TagEntry>>> uriIter = uriTagMap.entrySet().iterator();
 		
@@ -158,6 +157,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			else if (uri.fileExtension().equals("gf-tags")) {
 				
 				// Iterate over all tags, to capture all the different qualifiers
+				// TODO Iterating over all tags to get qualifiers is inefficient
 				HashSet<String> qualifiers = new HashSet<String>();
 				for (TagEntry tag : tagList) {
 					qualifiers.add(tag.getQualifier());
@@ -170,7 +170,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 						return !tag.getFile().endsWith(".gf-tags") && !tag.getType().equals("overload-type") ;
 					}
 				};
-				Hashtable<URI, Collection<TagEntry>> newUriTagMap = parseSingleTagsFile(uri, includePredicate2, qualifiers);
+				URITagMap newUriTagMap = parseSingleTagsFile(uri, includePredicate2, qualifiers);
 				
 				// Make sure to add all new refs withouth overwriting (I suspect this level of checking is no longer needed)
 				for (Map.Entry<URI, Collection<TagEntry>> entry : newUriTagMap.entrySet()) {
@@ -200,10 +200,10 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @return collections of tags grouped by URI
 	 * @throws GFTagsFileException 
 	 */
-	private Hashtable<URI, Collection<TagEntry>> parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate, Set<String> qualifiers)
+	private URITagMap parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate, Set<String> qualifiers)
 			throws GFTagsFileException {
 		
-		Hashtable<String, Collection<TagEntry>> strTagMap = new Hashtable<String, Collection<TagEntry>>();
+		TagMap strTagMap = new TagMap();
 		try {
 			InputStream is = uriConverter.createInputStream(tagFileURI);
 			BufferedReader reader = new BufferedReader( new InputStreamReader(is) );
@@ -227,25 +227,46 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 						TagEntry tag2 = new TagEntry(line);
 						tag2.setQualifier(q);
 //						tag2.setAlias(""); // this is just a precaution
-						addTagToTagMap(tag2, strTagMap);
+						strTagMap.addTag(tag2);
 					}
 				} else {
 					// Add tag with its "true" qualifier
-					addTagToTagMap(tag, strTagMap);
+					strTagMap.addTag(tag);
 				}
 			}
 			// Clean up
 			reader.close();
 			is.close();
-		} catch (IOException _) {
+		} catch (IOException e) {
 			// Problem reading the actual file (not just a particular line)
-			GFTagsFileException e = new GFTagsFileException(tagFileURI);
-			log.debug(e.getMessage());
-			throw e;
+			log.debug(e);
+			throw new GFTagsFileException(tagFileURI);
 		}
 		
 		// Convert from String keys to URI keys (this is an optimisation thing)
-		Hashtable<URI, Collection<TagEntry>> uriTagMap = new Hashtable<URI, Collection<TagEntry>>();
+		URITagMap uriTagMap = convertStringToURITagMap(strTagMap, tagFileURI);
+		return uriTagMap;
+	}
+	
+	/**
+	 * Convert from a TagMap to a URITagMap, performing checks and creating
+	 * external links along the way.
+	 * 
+	 * @param strTagMap
+	 * @param tagFileURI
+	 * @return A URITagMap. In error cases, an empty list is returned.
+	 */
+	private URITagMap convertStringToURITagMap(TagMap strTagMap, URI tagFileURI) {
+		URITagMap uriTagMap = new URITagMap();
+
+		IFolder externalFolder = null;
+		try {
+			externalFolder = GFScopingHelper.getExternalFolder(tagFileURI);
+		} catch (Exception e) {
+//			log.error("Couldn't get external folder for "+tagFileURI.toFileString(), e);
+			return uriTagMap;
+		}
+		
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
 		String rootPath = root.getLocation().toString();
 		for (Entry<String, Collection<TagEntry>> entry : strTagMap.entrySet()) {
@@ -260,7 +281,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 					importURI = URI.createPlatformResourceURI(trimmedURI, true);
 				} else {
 					// Create a link to the file in the project, and use that URI
-					importURI = registerExternalFile(uriAsStr, tagFileURI);
+					importURI = registerExternalFile(uriAsStr, externalFolder);
 				}
 			} else {
 				// Just use a dumb old file:// URI
@@ -279,29 +300,11 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @param tagFileURI 
 	 * @return
 	 */
-	private URI registerExternalFile(String externalFilePath, URI tagFileURI) {
-		
-		// Get the corresponding project
-		String workspaceStem = ResourcesPlugin.getWorkspace().getRoot().getRawLocationURI().toString() + java.io.File.separator;
-		URI projectURI = tagFileURI.deresolve(URI.createURI(workspaceStem));
-		IFile file = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(projectURI.toFileString()));
-		IProject project = file.getProject();
-		
+	private URI registerExternalFile(String externalFilePath, IFolder extFolder) {
 		try {
-			if (!project.isOpen()) {
-				log.info("Opening closed project '" + project.getName() + "'");
-			    project.open(null);
-			}
-
-			// Create the folder if it doesn't exist
-			IFolder extFolder = project.getFolder(GFBuilder.EXTERNAL_FOLDER);
-			if (!extFolder.exists()) {
-				extFolder.create(true, true, null);
-			}
-	
 			IPath externalPath = new Path(externalFilePath);
 			String localLink = GFBuilder.EXTERNAL_FOLDER + java.io.File.separator + externalPath.lastSegment();
-			IFile link = project.getFile(localLink);
+			IFile link = extFolder.getProject().getFile(localLink);
 			
 			// NOTE! Re-creating the link each time will trigger the builder!!
 //			if (link.exists())
@@ -315,25 +318,12 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				attributes.setReadOnly(true);
 				link.setResourceAttributes(attributes);
 			}
-			
 			return URI.createURI(localLink);
+			
 		} catch (CoreException e) {
 			log.warn("Couldn't link to external file " + externalFilePath);
+			return null;
 		}
-		return null;
-	}
-	
-	
-	/**
-	 * Add a tag to a String->[TagEntry] dictionary, creating keys as necessary
-	 * @param tag
-	 * @param strTagMap
-	 */
-	private void addTagToTagMap(TagEntry tag, Hashtable<String, Collection<TagEntry>> strTagMap) {
-		if (!strTagMap.containsKey(tag.getFile())) {
-			strTagMap.put(tag.getFile(), new ArrayList<TagEntry>());
-		}
-		strTagMap.get(tag.getFile()).add(tag);
 	}
 	
 	/**
