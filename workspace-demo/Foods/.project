@@ -16,9 +16,19 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>.gfexternal/BeschIta.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/italian/BeschIta.gf</location>
+		</link>
+		<link>
 			<name>.gfexternal/CatEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/CatEng.gf</location>
+		</link>
+		<link>
+			<name>.gfexternal/CatRomance.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/romance/CatRomance.gf</location>
 		</link>
 		<link>
 			<name>.gfexternal/Combinators.gf</name>
@@ -41,9 +51,19 @@
 			<location>/home/john/repositories/GF/lib/src/english/ParadigmsEng.gf</location>
 		</link>
 		<link>
+			<name>.gfexternal/ParadigmsIta.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/italian/ParadigmsIta.gf</location>
+		</link>
+		<link>
 			<name>.gfexternal/StructuralEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/StructuralEng.gf</location>
+		</link>
+		<link>
+			<name>.gfexternal/StructuralIta.gf</name>
+			<type>1</type>
+			<location>/home/john/repositories/GF/lib/src/italian/StructuralIta.gf</location>
 		</link>
 	</linkedResources>
 </projectDescription>
