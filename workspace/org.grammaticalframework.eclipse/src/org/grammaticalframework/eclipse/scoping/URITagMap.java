@@ -17,7 +17,8 @@ import java.util.Set;
 import org.eclipse.emf.common.util.URI;
 
 /**
- * Map from tag file URIs to a collection of all the tags each contains
+ * Map from tag file URIs to a collection of all the tags each contains.
+ * This is mostly just a wrapper over <code>Hashtable&lt;URI, Collection&lt;TagEntry&gt;&gt;</code>
  * 
  * @author John J. Camilleri
  *
@@ -75,5 +76,9 @@ public class URITagMap {
 	@Override
 	public String toString() {
 		return map.toString();
+	}
+
+	public boolean isEmpty() {
+		return map.isEmpty();
 	}
 }

@@ -81,11 +81,9 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	protected IScope getScope(final Resource resource, final boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
 		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<IScope>(){
 			public IScope get() {
-				URITagMap uriTagMap;
-				try {
-//					uriTagMap = getURITagMap(resource); // cached
-					uriTagMap = parseTagsFile(resource); // not cached
-				} catch (GFTagsFileException e) {
+//				URITagMap uriTagMap = getURITagMap(resource); // cached
+				URITagMap uriTagMap = parseTagsFile(resource); // not cached
+				if (uriTagMap.isEmpty()) {
 					return IScope.NULLSCOPE;
 				}
 				
@@ -122,7 +120,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @return
 	 * @throws GFTagsFileException 
 	 */
-	private URITagMap parseTagsFile(final Resource resource) throws GFTagsFileException {
+	private URITagMap parseTagsFile(final Resource resource) {
 		
 		// Find the corresponding tags file & parse it (1st pass)
 		URI tagFileURI = GFScopingHelper.getTagsFile(resource);
@@ -196,8 +194,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @return collections of tags grouped by URI
 	 * @throws GFTagsFileException 
 	 */
-	private URITagMap parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate, Set<String> qualifiers)
-			throws GFTagsFileException {
+	private URITagMap parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate, Set<String> qualifiers) {
 		
 		TagMap strTagMap = new TagMap();
 		try {
@@ -220,10 +217,13 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				if (qualifiers != null) {
 					// Add with multiple qualifiers, as needed
 					for (String q : qualifiers) {
-						TagEntry tag2 = new TagEntry(line);
-						tag2.setQualifier(q);
-//						tag2.setAlias(""); // this is just a precaution
-						strTagMap.addTag(tag2);
+						try {
+							TagEntry tag2 = new TagEntry(line);
+							tag2.setQualifier(q);
+							strTagMap.addTag(tag2);
+						} catch (GFTagsFileException e) {
+							log.warn("Error creating tag", e);
+						}
 					}
 				} else {
 					// Add tag with its "true" qualifier
@@ -235,8 +235,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			is.close();
 		} catch (IOException e) {
 			// Problem reading the actual file (not just a particular line)
-			log.debug(e);
-			throw new GFTagsFileException(tagFileURI);
+			log.debug("Problem reading tags file: "+tagFileURI, e);
 		}
 		
 		// Convert from String keys to URI keys (this is an optimisation thing)
@@ -316,7 +315,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			return URI.createURI(localLink);
 			
 		} catch (CoreException e) {
-			log.warn("Couldn't link to external file " + externalFilePath);
+			log.warn("Couldn't link to external file " + externalFilePath, e);
 			return null;
 		}
 	}
