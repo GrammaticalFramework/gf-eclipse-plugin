@@ -57,9 +57,11 @@ public class TagEntry {
 				parseFileAndLineNumbers(elements[4]);
 				this.qualifier = elements[2];
 				this.alias = elements[3];
+				this.args = "";
 			} else {
 				parseFileAndLineNumbers(elements[2]);
 				this.qualifier = this.moduleName;
+				this.alias = "";
 				this.args = elements[3];
 			}
 		} catch (ArrayIndexOutOfBoundsException e) {
@@ -194,8 +196,9 @@ public class TagEntry {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder(moduleName + "." + ident);
-		sb.append(" (Q:" + qualifier);
-		if (alias != null && !alias.isEmpty())
+		if (!qualifier.isEmpty())
+			sb.append(" (Q:" + qualifier);
+		if (!alias.isEmpty())
 			sb.append(", A:" + alias);
 		sb.append(")");
 		return sb.toString();
