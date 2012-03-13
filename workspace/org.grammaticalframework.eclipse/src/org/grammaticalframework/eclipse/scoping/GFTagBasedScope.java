@@ -85,6 +85,7 @@ public class GFTagBasedScope extends AbstractScope {
 	 * @param tags
 	 */
 	public void addTags(IResourceDescriptions resourceDescriptions, Collection<TagEntry> tags) {
+		int notFoundCount = 0;
 		for (TagEntry tag : tags) {
 			try {
 				QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getQualifiedName());
@@ -115,12 +116,14 @@ public class GFTagBasedScope extends AbstractScope {
 					descriptions.add(eObjectDescription2);
 				}
 				else {
-					//log.debug("No EObject found for " + tag.getQualifiedName());
+					notFoundCount++;
 				}
-				
-				
 			} catch (IllegalStateException _) {
-				// Sometimes happens when you save during a build/validation, etc. Qisu ma ġara xejn. 
+				// Sometimes happens when you save during a build/validation, etc. 
+			}
+			
+			if (notFoundCount > 0) {
+				log.debug(String.format("No EObject found for %s items.", notFoundCount));
 			}
 		}
 	}
