@@ -65,8 +65,11 @@ public class GFScopingHelper {
 	}
 	
 	/**
-	 * The the external folder for a tag file URI. The type of URI expected is:
-	 * <code>platform:/resource/Foods/.gfbuild/FoodsEng.gf-tags</code>
+	 * The the external folder for a tag file URI. Expected types of URI are:
+	 * <ul>
+	 * 		<li><code>platform:/resource/Foods/.gfbuild/FoodsEng.gf-tags</code></li>
+	 * 		<li><code>file:/home/john/repositories/gf-eclipse-plugin/workspace-demo/Foods/.gfbuild/FoodsEng.gf-tags</code></li>
+	 * </ul>
 	 * @param uri
 	 * @return
 	 * @throws CoreException
@@ -97,6 +100,6 @@ public class GFScopingHelper {
 			extFolder.create(true, true, null);
 		}
 		
-		return extFolder;		
+		return extFolder;
 	}
 }
