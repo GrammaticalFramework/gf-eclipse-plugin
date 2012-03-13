@@ -62,6 +62,7 @@ import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.eclipse.ui.part.ViewPart;
+import org.grammaticalframework.eclipse.builder.GFBuilder;
 import org.grammaticalframework.eclipse.launch.GFTreebankHelper;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 import org.grammaticalframework.eclipse.ui.launch.GFTreebankLaunchShortcut;
@@ -223,9 +224,13 @@ public class GFTreebankManagerView extends ViewPart {
 				if (element instanceof IProject) {
 					return ((IProject)element).equals(currentProject);
 				}
-//				if (element instanceof IFolder) {
-//					return true;
-//				}
+				if (element instanceof IFolder) {
+					IFolder folder = (IFolder) element;
+					if (folder.getName().equals(GFBuilder.BUILD_FOLDER) || folder.getName().equals(GFBuilder.EXTERNAL_FOLDER))
+						return false;
+					else
+						return true;
+				}
 				if (element instanceof IFile) {
 					return GFTreebankHelper.isTreebankFile((IFile)element);
 				}
