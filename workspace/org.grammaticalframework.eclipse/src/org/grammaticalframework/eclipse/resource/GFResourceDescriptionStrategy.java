@@ -148,8 +148,8 @@ public class GFResourceDescriptionStrategy extends
 //					handleTLD.invoke(tld, acceptor);
 //				}
 //			}			
-		} catch (Exception exc) {
-			log.error(exc.getMessage());
+		} catch (Exception e) {
+			log.error(e);
 		}
 		return true;
 	}	
