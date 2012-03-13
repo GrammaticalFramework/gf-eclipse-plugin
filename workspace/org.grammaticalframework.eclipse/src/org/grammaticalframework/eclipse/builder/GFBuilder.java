@@ -295,8 +295,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		try {
 			boolean isFile = resource.getType() == IResource.FILE;
 			boolean isGF = resource.getFileExtension().equals("gf");
-			boolean notInBuildFolder = !resource.getFullPath().toOSString().contains(BUILD_FOLDER);
-			boolean notInExternalFolder = !resource.getFullPath().toOSString().contains(EXTERNAL_FOLDER);
+			boolean notInBuildFolder = !resource.getParent().getName().equals(GFBuilder.BUILD_FOLDER);
+			boolean notInExternalFolder = !resource.getParent().getName().equals(GFBuilder.EXTERNAL_FOLDER);
 			return isFile && isGF && notInBuildFolder && notInExternalFolder;
 		} catch (NullPointerException _) {
 			return false;
