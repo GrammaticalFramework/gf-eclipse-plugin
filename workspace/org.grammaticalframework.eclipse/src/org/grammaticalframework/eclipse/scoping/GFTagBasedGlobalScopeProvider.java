@@ -300,16 +300,15 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @param tagFileURI 
 	 * @return
 	 */
-	private URI registerExternalFile(String externalFilePath, IFolder extFolder) {
+	private URI registerExternalFile(String externalFilePath, IFolder linkFolder) {
 		try {
 			IPath externalPath = new Path(externalFilePath);
-			String localLink = GFBuilder.EXTERNAL_FOLDER + java.io.File.separator + externalPath.lastSegment();
-			IFile link = extFolder.getProject().getFile(localLink);
+			String localLink = linkFolder.getName() + java.io.File.separator + externalPath.lastSegment();
+			IFile link = linkFolder.getFile( externalPath.lastSegment() );
 			
-			// NOTE! Re-creating the link each time will trigger the builder!!
+			// Always recreate the link
 //			if (link.exists())
 //				link.delete(true, null);
-//			link.createLink(externalPath, IResource.NONE, null);
 			
 			if (!link.exists()) {
 				// Create and make read-only
