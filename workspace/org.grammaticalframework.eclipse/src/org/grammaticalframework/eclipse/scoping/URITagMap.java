@@ -72,5 +72,8 @@ public class URITagMap {
 		return map.containsKey(key);
 	}
 	
-
+	@Override
+	public String toString() {
+		return map.toString();
+	}
 }
