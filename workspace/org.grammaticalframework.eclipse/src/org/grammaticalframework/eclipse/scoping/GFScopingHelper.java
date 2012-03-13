@@ -1,5 +1,6 @@
 package org.grammaticalframework.eclipse.scoping;
 
+import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
@@ -16,6 +17,11 @@ import org.grammaticalframework.eclipse.gF.SourceModule;
 import org.grammaticalframework.eclipse.gF.TopDef;
 
 public class GFScopingHelper {
+	
+	/**
+	 * Logger
+	 */
+	private static final Logger log = Logger.getLogger(GFScopingHelper.class);
 	
 	/**
 	 * Climb the EMF tree and return the EObject's SourceModule object
@@ -84,18 +90,20 @@ public class GFScopingHelper {
 			URI projectURI = uri.deresolve(URI.createURI(workspaceStem));
 			res = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(projectURI.toFileString()));
 		} else {
-			// ... 
+			log.error("Unexpected URI format");
 		}
 		
-		IProject project = res.getProject();
-		
-		if (!project.isOpen()) {
-//			log.info("Opening closed project '" + project.getName() + "'");
-		    project.open(null);
+		IFolder extFolder;
+		if (GFBuilder.USE_GLOBAL_EXTERNAL_FOLDER) {
+			// Always in root of project
+			IProject project = res.getProject();
+			extFolder = project.getFolder(GFBuilder.EXTERNAL_FOLDER);
+		} else {
+			// In subfolder relative to file
+			extFolder = res.getParent().getParent().getFolder(new Path(GFBuilder.EXTERNAL_FOLDER));
 		}
-
+		
 		// Create the folder if it doesn't exist
-		IFolder extFolder = project.getFolder(GFBuilder.EXTERNAL_FOLDER);
 		if (!extFolder.exists()) {
 			extFolder.create(true, true, null);
 		}

@@ -60,6 +60,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * Folder for links to external files
 	 */
 	public static final String EXTERNAL_FOLDER = ".gfexternal"; //$NON-NLS-1$
+	
+	/**
+	 * Use a single external folder per project, or in every source code folder?
+	 */
+	public static final Boolean USE_GLOBAL_EXTERNAL_FOLDER = false;
 
 	/**
 	 * Clean old tags file before rebuilding?
