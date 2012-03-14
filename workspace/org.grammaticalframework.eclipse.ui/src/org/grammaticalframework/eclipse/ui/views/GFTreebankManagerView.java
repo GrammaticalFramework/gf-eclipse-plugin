@@ -63,7 +63,8 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.eclipse.ui.part.ViewPart;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
-import org.grammaticalframework.eclipse.launch.GFTreebankHelper;
+import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
+import org.grammaticalframework.eclipse.treebank.TreebankResults;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 import org.grammaticalframework.eclipse.ui.launch.GFTreebankLaunchShortcut;
 
@@ -485,63 +486,16 @@ public class GFTreebankManagerView extends ViewPart {
 		setStatusText("Comparing against "+goldStandardFile.getName());
 		redrawStatusBar();
 		
-		BufferedReader outReader = null;
-		BufferedReader goldReader = null;
-		try {
-			outReader = new BufferedReader(new InputStreamReader(new DataInputStream(outputFile.getContents(true))));
-			goldReader = new BufferedReader(new InputStreamReader(new DataInputStream(goldStandardFile.getContents(true))));
-			
-			String outLine;
-			String goldLine;
-			final ArrayList<Object> viewerItems = new ArrayList<Object>();
-			int passed = 0;
-			int failed = 0;
-			while ((outLine = outReader.readLine()) != null) {
-				// Sync with gold standard file
-				goldLine = goldReader.readLine();
-				if (goldLine == null) {
-					log.error(String.format("Output file \"%s\" and gold standard file \"%s\" do not match in length.", outputFile.getName(), goldStandardFile.getName()));
-					break;
-				}
-				
-				// Skip empty lines
-				outLine = outLine.trim();
-				goldLine = goldLine.trim();
-				if (outLine.isEmpty())  {
-					continue;
-				}
-				
-				// Do the comparison
-				StringBuilder sb = new StringBuilder();
-				sb.append(outLine);
-				if (outLine.equals(goldLine)) {
-					passed++;
-				} else {
-					failed++;
-					sb.append("\n" + goldLine);
-				}
-				viewerItems.add(sb.toString());
-			}
-			
-			// Set items in viewer
-			int total = passed+failed;
-			setStatusText("Results of "+outputFile.getName());
-			setPassedText(String.format("%d/%d", passed, total));
-			setFailedText(String.format("%d/%d", failed, total));
-			clearOutputViewer();
-			getOutputViewer().add(viewerItems.toArray());
-			redrawStatusBar();
-			
-		} catch (Exception e) {
-			log.error("Error running comparison",  e);
-		} finally {
-			try {
-				outReader.close();
-			} catch (Exception _) {	}
-			try {
-				goldReader.close();
-			} catch (Exception _) {	}
-		}
+		// Do it
+		TreebankResults results = GFTreebankHelper.compareOutputWithGoldStandard(outputFile, goldStandardFile);
+		
+		// Set items in viewer
+		setStatusText("Results of "+outputFile.getName());
+		setPassedText(String.format("%d/%d", results.getPassed(), results.getTotal()));
+		setFailedText(String.format("%d/%d", results.getFailed(), results.getTotal()));
+		clearOutputViewer();
+		getOutputViewer().add(results.getItems().toArray());
+		redrawStatusBar();
 	}
 	
 

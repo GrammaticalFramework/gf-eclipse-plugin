@@ -38,5 +38,6 @@ Export-Package: org.grammaticalframework.eclipse,
  org.grammaticalframework.eclipse.scoping,
  org.grammaticalframework.eclipse.serializer,
  org.grammaticalframework.eclipse.services,
+ org.grammaticalframework.eclipse.treebank,
  org.grammaticalframework.eclipse.validation
 

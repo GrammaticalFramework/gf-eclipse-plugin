@@ -28,6 +28,7 @@ import org.eclipse.debug.core.ILaunch;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.model.LaunchConfigurationDelegate;
 import org.grammaticalframework.eclipse.GFPreferences;
+import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
 
 
 /**

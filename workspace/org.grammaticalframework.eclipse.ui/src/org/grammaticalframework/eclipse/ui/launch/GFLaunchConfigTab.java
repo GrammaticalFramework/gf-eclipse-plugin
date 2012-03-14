@@ -37,8 +37,8 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.PlatformUI;
-import org.grammaticalframework.eclipse.launch.GFTreebankHelper;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
+import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper;
 

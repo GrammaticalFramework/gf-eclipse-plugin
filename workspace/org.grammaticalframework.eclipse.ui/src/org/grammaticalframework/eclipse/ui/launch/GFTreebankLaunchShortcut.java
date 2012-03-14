@@ -26,8 +26,8 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PlatformUI;
-import org.grammaticalframework.eclipse.launch.GFTreebankHelper;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
+import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
 
 /**
  * Shortcut from a treebank file, finds and runs an existing launch config which
