@@ -176,6 +176,14 @@ If you open an existing folder as your workspace in Eclipse, then your folders i
 become Eclipse projects. You must follow the "Create new GF Project" wizards below, and give your project the exact
 name of the existing folder (e.g. `Project1` or `Project2` in the example above.)
 
+#### GF Nature and Builder
+The _GF Nature_ and the _GF Builder_ are what make a regular Eclipse project a _GF_ project. If you create a new GF Project
+from scratch then you don't need to worry too much about them. If you already have some project set up in your Eclipse
+workspace, then you will need to associate these two items with your project in order for all the GF goodness to work.
+
+As of 1.4.2, this can be done very easily by right-clicking on your project in the explorer and clicking **Add/Remove GF Nature &amp; Builder**.
+If your project has the GF icon overlayed on it, then the GF nature and builder are correctly associated with it.
+
 ### Create a new GF Project
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-2.png)
