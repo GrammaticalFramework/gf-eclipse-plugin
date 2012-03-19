@@ -257,7 +257,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				boolean isFile = (resource.getType() == IResource.FILE);
 				String extension = (resource.getFileExtension() != null) ? resource.getFileExtension() : "";
 				String parent = (resource.getParent() != null) ? resource.getParent().getName() : "";
-				if (isFile && (extension.equals("gfo") || parent.equals(BUILD_FOLDER))) {
+				if (isFile && (extension.equals("gfo") || parent.equals(BUILD_FOLDER) || parent.equals(EXTERNAL_FOLDER))) {
 					try {
 						resource.delete(true, monitor);
 						log.info("Deleted: " + resource.getFullPath());
