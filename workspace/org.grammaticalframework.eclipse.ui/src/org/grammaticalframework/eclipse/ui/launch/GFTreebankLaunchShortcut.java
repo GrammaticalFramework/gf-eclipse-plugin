@@ -126,7 +126,7 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
      * @throws CoreException
      */
     protected ILaunchConfiguration createLaunchConfiguration(IFile treebankFile, ILaunchConfigurationType configType) throws CoreException {
-		IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
+//		IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
 		ILaunchConfigurationWorkingCopy config;
 		config = configType.newInstance(null, "GF Treebank Test");
 		config.setAttribute(IGFLaunchConfigConstants.WORKING_DIR, treebankFile.getParent().getLocation().toOSString());
@@ -135,10 +135,11 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
 		config.setAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, false);
 		config.setAttribute(IGFLaunchConfigConstants.BATCH_MODE, true);
 		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, true);
+		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND, IGFLaunchConfigConstants.DEFAULT_TREEBANK_COMMAND);
 		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, treebankFile.getName());
-		if (goldStandardFile != null) {
-			config.setAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, goldStandardFile.getName());
-		}
+//		if (goldStandardFile != null) {
+//			config.setAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, goldStandardFile.getName());
+//		}
 		return config;
     }
 

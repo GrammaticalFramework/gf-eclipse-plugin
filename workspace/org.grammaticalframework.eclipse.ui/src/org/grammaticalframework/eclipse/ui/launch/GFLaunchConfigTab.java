@@ -78,15 +78,20 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		return button_TreebankMode.getSelection();
 	}
 	
+	private Text text_TreebankCommand;
+	public String getTreebankCommand() {
+		return text_TreebankCommand.getText();
+	}
+
 	private Combo combo_TreebankFile;
 	public String getTreebankFile() {
 		return combo_TreebankFile.getText();
 	}
 
-	private Text text_GoldStandardFile;
-	public String getGoldStandardFile() {
-		return text_GoldStandardFile.getText();
-	}
+//	private Text text_GoldStandardFile;
+//	public String getGoldStandardFile() {
+//		return text_GoldStandardFile.getText();
+//	}
 	
 	/**
 	 * List of treebank files in workspace
@@ -207,7 +212,17 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		});
 		button_TreebankMode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 2, 1));
 		
-		// Treebank files
+		// Treebank command
+		new Label(treebankModeGroup, SWT.NULL).setText("&Command:");
+		text_TreebankCommand = new Text(treebankModeGroup, SWT.BORDER);
+		text_TreebankCommand.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+		text_TreebankCommand.addModifyListener(new ModifyListener() {
+			public void modifyText(ModifyEvent e) {
+				dialogChanged();
+			}
+		});
+		
+		// Treebank file
 		new Label(treebankModeGroup, SWT.NULL).setText("&Treebank file:");
 		combo_TreebankFile = new Combo(treebankModeGroup, SWT.DROP_DOWN | SWT.READ_ONLY);
 		combo_TreebankFile.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
@@ -227,10 +242,10 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 			}
 		});
 		
-		// Gold standard file
-		new Label(treebankModeGroup, SWT.NULL).setText("&Gold standard file:");
-		text_GoldStandardFile = new Text(treebankModeGroup, SWT.BORDER | SWT.READ_ONLY);
-		text_GoldStandardFile.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+//		// Gold standard file
+//		new Label(treebankModeGroup, SWT.NULL).setText("&Gold standard file:");
+//		text_GoldStandardFile = new Text(treebankModeGroup, SWT.BORDER | SWT.READ_ONLY);
+//		text_GoldStandardFile.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 	}
 
 	/**
@@ -243,23 +258,25 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		if (getFilenames().length() == 0) {
 			updateStatus("A least one source filename must be specified.");
 		}
-		else {
-			updateStatus(null);
-		}
 		
 		// Check treebank stuff
-		if (isTreebankMode() && combo_TreebankFile.getSelectionIndex() > -1) {
-			IFile treebankFile = treebankFiles.get(combo_TreebankFile.getSelectionIndex());
-			IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
-			if (goldStandardFile != null) {
-				text_GoldStandardFile.setText(goldStandardFile.getName());
-				text_GoldStandardFile.setEnabled(true);
-				updateStatus(null);
-			} else {
-				text_GoldStandardFile.setText("");
-				text_GoldStandardFile.setEnabled(false);
-				updateStatus("No corresponding gold standard file found for "+treebankFile.getName());
+		else if (isTreebankMode() && combo_TreebankFile.getSelectionIndex() > -1) {
+			if (text_TreebankCommand.getText().trim().isEmpty()) {
+				updateStatus("You must enter a treebank command, e.g. \"l -table\"");
 			}
+//			IFile treebankFile = treebankFiles.get(combo_TreebankFile.getSelectionIndex());
+//			IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
+//			if (goldStandardFile != null) {
+//				text_GoldStandardFile.setText(goldStandardFile.getName());
+//				text_GoldStandardFile.setEnabled(true);
+//				updateStatus(null);
+//			} else {
+//				text_GoldStandardFile.setText("");
+//				text_GoldStandardFile.setEnabled(false);
+//				updateStatus("No corresponding gold standard file found for "+treebankFile.getName());
+//			}
+		} else {
+			updateStatus(null);
 		}
 		
 		updateLaunchConfigurationDialog();
@@ -297,8 +314,6 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 			defaultWorkingDir = "";
 		}
 		
-		String defaultOptions = ""; //"--force-recomp";
-		
 		try {
 			text_WorkingDirectory.setText(
 					configuration.getAttribute(IGFLaunchConfigConstants.WORKING_DIR, defaultWorkingDir)
@@ -307,7 +322,7 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 					configuration.getAttribute(IGFLaunchConfigConstants.FILENAMES, "")
 			);
 			text_Options.setText(
-					configuration.getAttribute(IGFLaunchConfigConstants.OPTIONS, defaultOptions)
+					configuration.getAttribute(IGFLaunchConfigConstants.OPTIONS, IGFLaunchConfigConstants.DEFAULT_OPTIONS)
 			);
 			boolean intMode = configuration.getAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, false);
 			button_InteractiveMode.setSelection(intMode);
@@ -315,17 +330,16 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 			button_TreebankMode.setSelection(
 					configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, false)
 			);
+			text_TreebankCommand.setText(
+					configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND, IGFLaunchConfigConstants.DEFAULT_TREEBANK_COMMAND)
+			);
 			combo_TreebankFile.setText(
 					configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, "")
 			);
-			text_GoldStandardFile.setText(
-					configuration.getAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, "")
-			);
+//			text_GoldStandardFile.setText(
+//					configuration.getAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, "")
+//			);
 		} catch (CoreException e) {
-			text_WorkingDirectory.setText(null);
-			text_Options.setText("--force-recomp");
-			button_InteractiveMode.setSelection(false);
-			text_Filenames.setText(null);
 		}
 
 	}
@@ -340,8 +354,9 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		configuration.setAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, isInteractiveMode());
 		configuration.setAttribute(IGFLaunchConfigConstants.BATCH_MODE, isBatchMode());
 		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, isTreebankMode());
+		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND, getTreebankCommand());
 		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, getTreebankFile());
-		configuration.setAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, getGoldStandardFile());
+//		configuration.setAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, getGoldStandardFile());
 		setDirty(false);
 	}
 

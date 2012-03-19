@@ -15,6 +15,9 @@ package org.grammaticalframework.eclipse.launch;
 public interface IGFLaunchConfigConstants {
 	
 	static String prefix = "org.grammaticalframework.eclipse.launch.config.";
+
+	public static String DEFAULT_OPTIONS = ""; //"--force-recomp";
+	public static String DEFAULT_TREEBANK_COMMAND = "l -table";
 	
 	/**
 	 * Working directory for running GF
@@ -47,14 +50,19 @@ public interface IGFLaunchConfigConstants {
 	public static final String TREEBANK_MODE = prefix + "TREEBANK_MODE";
 	
 	/**
+	 * Treebank command to run (e.g. l, p)
+	 */
+	public static final String TREEBANK_COMMAND = prefix + "TREEBANK_COMMAND";
+	
+	/**
 	 * Name of treebank file
 	 */
 	public static final String TREEBANK_FILENAME = prefix + "TREEBANK_FILENAME";
 	
-	/**
-	 * Name of gold standard file
-	 */
-	public static final String GOLD_STANDARD_FILENAME = prefix + "GOLD_STANDARD_FILENAME";
+//	/**
+//	 * Name of gold standard file
+//	 */
+//	public static final String GOLD_STANDARD_FILENAME = prefix + "GOLD_STANDARD_FILENAME";
 	
 	/**
 	 * Hidden option for making a gold standard file

@@ -9,13 +9,27 @@
  */
 package org.grammaticalframework.eclipse.treebank;
 
-import java.util.ArrayList;
-
 /**
- * A collection of abstract syntax trees
+ * Represents a single abstract syntax tree in GF
+ * 
+ * @author John J. Camilleri
+ *
  */
-public class Treebank {
+public class AbstractSyntaxTree {
 	
-	private ArrayList<AbstractSyntaxTree> list;
+	private String string;
+
+	public String getString() {
+		return string;
+	}
+
+	public void setString(String string) {
+		this.string = string;
+	}
+
+	public AbstractSyntaxTree(String string) {
+		super();
+		this.string = string;
+	}
 
 }
