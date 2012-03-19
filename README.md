@@ -153,7 +153,11 @@ Some steps you can follow to get a feel of of the plugin's features.
 
 ### Video tutorial
 
+A quick run through of the major features available in the GF Eclipse Plugin.
+
 <iframe src="http://player.vimeo.com/video/38768382?byline=0&amp;portrait=0" width="693" height="512" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+_If the video doesn't appear above, you can view it at https://vimeo.com/38768382_
 
 ### The Eclipse _workspace_ and _project_ concepts
 When you run Eclipse, it asks you to create or specify a _workspace_ on your system. Any projects you wish to work
