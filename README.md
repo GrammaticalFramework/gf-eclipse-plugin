@@ -318,3 +318,23 @@ As part of the evaluation of the GF Eclipse Plugin, feedback (both negative and 
 1. General intuitiveness of the UI
 1. Feature wish-list
 1. Compatibilities / conflicts with other Eclipse plugins
+
+
+<!----------------------------------------------------------------------------->
+
+## Appendix
+
+### Icons
+
+Description of some of the icons which are used in the GF Eclipse Plugin.
+
+| Icon | Description | Notes |
+|:----:|:------------|:------|
+|![](http://www.grammaticalframework.org/eclipse/images/module-abstract.png)  | Abstract module |`abstract Foods = ...`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-concrete.png)  | Concrete module |`concrete FoodsEng of Foods = ...`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-resource.png)  | Resource module |`resource ResFoods = ...`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-interface.png)  | Interface |`interface LexFoods = ...`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-instance.png)  | Instance |`instance LexFoodsEng of LexFoods = ...`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-functor.png)  | Functor |`incomplete concrete FodosI of Foods = ...`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-functor-instantiation.png)  | Functor instantiation |`concrete FoodsEng of Foods = FoodsI with (...) ...`|
+
