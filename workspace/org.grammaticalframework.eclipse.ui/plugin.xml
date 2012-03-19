@@ -464,12 +464,12 @@
         point="org.eclipse.ui.popupMenus">
      <objectContribution
            adaptable="false"
-           id="toggleNatureObjectContributionID"
+           id="toggleNatureAndBuilderObjectContributionID"
            objectClass="org.eclipse.core.resources.IProject">
         <action
-              class="org.grammaticalframework.eclipse.ui.natures.ToggleNatureAction"
-              id="toggleNatureActionID"
-              label="Add/Remove GF Nature"
+              class="org.grammaticalframework.eclipse.ui.natures.GFToggleNatureAndBuilderAction"
+              id="toggleNatureAndBuilderActionID"
+              label="Add/Remove GF Nature &amp;&amp; Builder"
               menubarPath="additions">
         </action>
      </objectContribution>
