@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 8 March 2012
+Updated: 19 March 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914._
 
@@ -42,7 +42,10 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 - Treebank management and testing tool
 - External library browser
 
-## Major release history
+## Release history
+
+**14/03/13**
+: (1.4.1.x) GF source files can now be anywhere in project, not necessarily at top level.
 
 **06/03/12**
 : (1.4.0.x) Treebank manager view. Updated launch configurations. UI improvements, new icons. Inline contextual documentation. Correct resolution of qualified identifiers. Bug fixes and some refactoring.
@@ -147,6 +150,10 @@ Your `.project` file should include the GF Builder as follows:
 ## Getting started
 
 Some steps you can follow to get a feel of of the plugin's features.
+
+### Video tutorial
+
+<iframe src="http://player.vimeo.com/video/38768382?byline=0&amp;portrait=0" width="693" height="512" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
 ### The Eclipse _workspace_ and _project_ concepts
 When you run Eclipse, it asks you to create or specify a _workspace_ on your system. Any projects you wish to work
