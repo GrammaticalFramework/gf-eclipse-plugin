@@ -9,11 +9,6 @@
  */
 package org.grammaticalframework.eclipse.ui.views;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
