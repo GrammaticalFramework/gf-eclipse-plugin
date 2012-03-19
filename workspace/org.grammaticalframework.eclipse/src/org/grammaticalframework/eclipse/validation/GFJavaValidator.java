@@ -10,7 +10,10 @@
 package org.grammaticalframework.eclipse.validation;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
@@ -141,6 +144,8 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	 */
 	@Check
 	public void checkFlags(FlagDef flagdef) {
+		List<String> knownFlagNames = new ArrayList<String>();
+		knownFlagNames.addAll(Arrays.asList(new String[]{"coding", "startcat", "lexer", "unlexer", "literal", "language"}));
 		String flagName = flagdef.getName().getS(); 
 		String flagValue;
 		if (flagdef.getValue()!=null)
@@ -148,21 +153,15 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 		else
 			flagValue = flagdef.getStrValue(); 
 		
-		if (flagName.equals("coding")) {
-			//
-		} else if (flagName.equals("startcat")) {
+		// Special checks
+		if (flagName.equals("startcat")) {
 			IScope scope = getScopeProvider().getScope(flagdef, GFPackage.Literals.FLAG_DEF__NAME);
 			if (scope.getSingleElement(getConverter().toQualifiedName(flagValue)) == null) {
 				String msg = String.format("Start category \"%1$s\" not found", flagValue);
 				warning(msg, GFPackage.Literals.FLAG_DEF__VALUE);
 			}
-		} else if (flagName.equals("lexer")) {
-			//
-		} else if (flagName.equals("unlexer")) {
-			//
-		} else if (flagName.equals("literal")) {
-			//
-		} else {
+		// General case
+		} else if (!knownFlagNames.contains(flagName)) {
 			String msg = String.format("Unknown flag type.");
 			warning(msg, GFPackage.Literals.FLAG_DEF__NAME);
 		}
