@@ -443,6 +443,7 @@ public class GFTreebankManagerView extends ViewPart {
 				if (getSelectedTreebankFile() == null)
 					return;
 				GFTreebankLaunchShortcut launchShortcut = new GFTreebankLaunchShortcut();
+				launchShortcut.setMakeGoldStandard();
 				launchShortcut.launch(fileViewer.getSelection(), ILaunchManager.RUN_MODE);
 			}
 		};

@@ -27,7 +27,6 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PlatformUI;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
-import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
 
 /**
  * Shortcut from a treebank file, finds and runs an existing launch config which
@@ -43,6 +42,16 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
 	 * Logger
 	 */
 	private static final Logger log = Logger.getLogger(GFTreebankLaunchShortcut.class);
+	
+	private boolean makeGoldStandard = false;
+
+	public boolean isMakeGoldStandard() {
+		return makeGoldStandard;
+	}
+
+	public void setMakeGoldStandard() {
+		this.makeGoldStandard = true;
+	}	
 
 	/* (non-Javadoc)
 	 * @see org.eclipse.debug.ui.ILaunchShortcut#launch(org.eclipse.jface.viewers.ISelection, java.lang.String)
@@ -92,11 +101,12 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
             		ILaunchConfigurationWorkingCopy config = configs[i].copy("Copy of "+configs[i].getName());
             		
             		// If treebank has no gold, then make gold!
-            		if (!GFTreebankHelper.hasGoldStandardFile(treebankFile)) {
-            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, true);
-            		} else {
-            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, false);
-            		}
+//            		if (!GFTreebankHelper.hasGoldStandardFile(treebankFile)) {
+//            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, true);
+//            		} else {
+//            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, false);
+//            		}
+           			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, isMakeGoldStandard());
             		
             		log.info(String.format("Running launch \"%s\" for treebank file \"%s\"", config.getName(), treebankFile.getName()));
 //					config.launch(mode, null);
@@ -137,10 +147,13 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
 		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, true);
 		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND, IGFLaunchConfigConstants.DEFAULT_TREEBANK_COMMAND);
 		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, treebankFile.getName());
+		config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, isMakeGoldStandard());
+		
 //		if (goldStandardFile != null) {
 //			config.setAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, goldStandardFile.getName());
 //		}
 		return config;
     }
+
 
 }
