@@ -12,32 +12,24 @@ package org.grammaticalframework.eclipse.treebank;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import org.eclipse.core.resources.IFile;
 
 /**
  * A collection of abstract syntax trees
  */
-public class Treebank {
+public class Treebank extends AbstractCollectionFile<SyntaxTree> {
 	
-	private IFile treebankFile;
-	
-	private ArrayList<AbstractSyntaxTree> list;
-
 	public Treebank(IFile treebankFile) {
-		super();
-		this.list = new ArrayList<AbstractSyntaxTree>();
-		this.treebankFile = treebankFile;
-		parseTreebankFile();
+		super(treebankFile);
 	}
 	
 	/**
 	 * Parse the treebank file into a collection of AbstractSyntaxTrees
 	 */
-	private void parseTreebankFile() {
+	protected void parseFile() {
 		BufferedReader treeReader = null;
 		try {
-			treeReader = new BufferedReader(new InputStreamReader(new DataInputStream(treebankFile.getContents(true))));
+			treeReader = new BufferedReader(new InputStreamReader(new DataInputStream(getFile().getContents(true))));
 			
 			String treeLine;
 			while ((treeLine = treeReader.readLine()) != null) {
@@ -48,7 +40,7 @@ public class Treebank {
 				}
 				
 				// Create object and add to list
-				AbstractSyntaxTree tree = new AbstractSyntaxTree(treeLine);
+				SyntaxTree tree = new SyntaxTree(treeLine);
 				list.add(tree);
 			}
 		} catch (Exception e) {
@@ -58,14 +50,7 @@ public class Treebank {
 				treeReader.close();
 			} catch (Exception _) {	}
 		}
-	}
-
-	/**
-	 * Get iterator over the trees
-	 * @return
-	 */
-	public Iterable<AbstractSyntaxTree> getIterable() {
-		return list;
-	}
+	}	
+	
 	
 }

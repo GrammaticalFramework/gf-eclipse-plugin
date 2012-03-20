@@ -12,6 +12,7 @@ package org.grammaticalframework.eclipse.treebank;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
 
 /**
@@ -27,6 +28,11 @@ import org.eclipse.core.resources.IFile;
  */
 public class GFTreebankHelper {
 	
+	/**
+	 * Logger
+	 */
+	private static final Logger log = Logger.getLogger(GFTreebankHelper.class);
+
 	/**
 	 * List of valid treebank-file file extensions
 	 */
@@ -188,10 +194,19 @@ public class GFTreebankHelper {
 		Treebank treebank = new Treebank(treebankFile);
 		TreebankOutput output = new TreebankOutput(outputFile);
 		GoldStandard goldStandard = new GoldStandard(goldStandardFile);
-		
+
 		TreebankResults results = new TreebankResults();
+		if (output.getSize() != treebank.getSize()) {
+			log.warn(String.format("Size mis-match between treebank (%d) and output (%d).", treebank.getSize(), output.getSize()));
+			return results;
+		}
+		if (output.getSize() != goldStandard.getSize()) {
+			log.warn(String.format("Size mis-match output (%d) and gold standard (%d).", output.getSize(), goldStandard.getSize()));
+			return results;
+		}
+		
 		int i = 0;
-		for (AbstractSyntaxTree tree : treebank.getIterable()) {
+		for (SyntaxTree tree : treebank.getIterable()) {
 			List<String> outGroup = output.getGroup(i);
 			List<String> goldGroup = goldStandard.getGroup(i);
 			results.addItem(new TreebankResultItem(tree, outGroup, goldGroup));

@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class TreebankResultItem {
 	
-	private AbstractSyntaxTree tree;
+	private SyntaxTree tree;
 	
 	private List<String> outGroup, goldGroup;
 	
@@ -28,7 +28,7 @@ public class TreebankResultItem {
 	 * Get the abstract syntax tree
 	 * @return
 	 */
-	public AbstractSyntaxTree getTree() {
+	public SyntaxTree getTree() {
 		return tree;
 	}
 
@@ -56,7 +56,7 @@ public class TreebankResultItem {
 		return pass;
 	}
 	
-	public TreebankResultItem(AbstractSyntaxTree tree, List<String> out, List<String> gold) {
+	public TreebankResultItem(SyntaxTree tree, List<String> out, List<String> gold) {
 		super();
 		this.tree = tree;
 		this.outGroup = out;

@@ -15,7 +15,7 @@ package org.grammaticalframework.eclipse.treebank;
  * @author John J. Camilleri
  *
  */
-public class AbstractSyntaxTree {
+public class SyntaxTree {
 	
 	private String string;
 
@@ -27,7 +27,7 @@ public class AbstractSyntaxTree {
 		this.string = string;
 	}
 
-	public AbstractSyntaxTree(String string) {
+	public SyntaxTree(String string) {
 		super();
 		this.string = clean(string);
 	}

@@ -17,26 +17,19 @@ import java.util.List;
 
 import org.eclipse.core.resources.IFile;
 
-public class TreebankOutput {
+public class TreebankOutput extends AbstractCollectionFile<List<String>> {
 	
-	protected IFile outFile;
-	
-	protected List<List<String>> list;
-
 	public TreebankOutput(IFile outFile) {
-		super();
-		this.list = new ArrayList<List<String>>();
-		this.outFile = outFile;
-		parseOutputFile();
+		super(outFile);
 	}
 	
 	/**
 	 * Parse the output file into a 2D list of strings
 	 */
-	protected void parseOutputFile() {
+	protected void parseFile() {
 		BufferedReader outReader = null;
 		try {
-			outReader = new BufferedReader(new InputStreamReader(new DataInputStream(outFile.getContents(true))));
+			outReader = new BufferedReader(new InputStreamReader(new DataInputStream(getFile().getContents(true))));
 			
 			String outLine;
 			ArrayList<String> group = new ArrayList<String>();
@@ -64,17 +57,9 @@ public class TreebankOutput {
 		}
 	}
 	
-	/**
-	 * Get iterable over the output groups
-	 * @return
-	 */
-	public Iterable<List<String>> getGroupIterable() {
-		return list;
-	}
-	
 	public List<String> getGroup(int i) {
 		return list.get(i);
 	}
-
+	
 
 }
