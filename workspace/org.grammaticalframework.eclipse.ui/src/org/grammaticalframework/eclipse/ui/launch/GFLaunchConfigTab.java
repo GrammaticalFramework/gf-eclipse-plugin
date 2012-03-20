@@ -20,6 +20,7 @@ import org.eclipse.core.runtime.CoreException;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.debug.ui.AbstractLaunchConfigurationTab;
+import org.eclipse.debug.ui.ILaunchConfigurationTab;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
@@ -38,7 +39,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.PlatformUI;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
-import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper;
 
@@ -46,6 +46,14 @@ import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper;
  * GF Launch Config Tab
  */
 public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
+	
+	/**
+	 * @see ILaunchConfigurationTab#isValid(ILaunchConfiguration)
+	 */
+	public boolean isValid(ILaunchConfiguration launchConfig) {
+		return valid;
+	}
+	private boolean valid;
 
 	// UI widgets
 	private Text text_WorkingDirectory;
@@ -249,13 +257,14 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	}
 
 	/**
-	 * Dialog changed.
+	 * The dialog has changed, validate options.
 	 */
 	private void dialogChanged() {
 		setDirty(true);
+		clearStatus();
 		
 		// Check filenames
-		if (getFilenames().length() == 0) {
+		if (getFilenames().trim().isEmpty()) {
 			updateStatus("A least one source filename must be specified.");
 		}
 		
@@ -275,8 +284,6 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 //				text_GoldStandardFile.setEnabled(false);
 //				updateStatus("No corresponding gold standard file found for "+treebankFile.getName());
 //			}
-		} else {
-			updateStatus(null);
 		}
 		
 		updateLaunchConfigurationDialog();
@@ -288,7 +295,15 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	 * @param message the message
 	 */
 	private void updateStatus(String message) {
+		valid = (message==null);
 		setErrorMessage(message);
+	}
+	
+	/**
+	 * Clear status.
+	 */
+	private void clearStatus() {
+		updateStatus(null);
 	}
 
 	/* (non-Javadoc)
