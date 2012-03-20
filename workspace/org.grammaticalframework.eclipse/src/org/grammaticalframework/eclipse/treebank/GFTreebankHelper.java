@@ -209,7 +209,13 @@ public class GFTreebankHelper {
 		for (SyntaxTree tree : treebank.getIterable()) {
 			List<String> outGroup = output.getGroup(i);
 			List<String> goldGroup = goldStandard.getGroup(i);
-			results.addItem(new TreebankResultItem(tree, outGroup, goldGroup));
+			int j = 0;
+			for (String outItem : outGroup) {
+				String goldItem = goldGroup.get(j++);
+				
+				TreebankResultItem item = new TreebankResultItem(tree, outItem, goldItem);
+				results.addItem(item);
+			}
 			i++;
 		}
 		return results;

@@ -9,10 +9,8 @@
  */
 package org.grammaticalframework.eclipse.treebank;
 
-import java.util.List;
-
 /**
- * A single group of results (i.e. sharing the same abstract syntax tree) from a gold standard comparison.
+ * A single result from a gold standard comparison.
  * @author John J. Camilleri
  *
  */
@@ -20,7 +18,9 @@ public class TreebankResultItem {
 	
 	private SyntaxTree tree;
 	
-	private List<String> outGroup, goldGroup;
+	private String out;
+	
+	private String gold;
 	
 	private boolean pass;
 
@@ -33,19 +33,19 @@ public class TreebankResultItem {
 	}
 
 	/**
-	 * Get the output group
+	 * Get the output
 	 * @return
 	 */
-	public List<String> getOutGroup() {
-		return outGroup;
+	public String getOut() {
+		return out;
 	}
 
 	/**
-	 * Get the gold group
+	 * Get the gold
 	 * @return
 	 */
-	public List<String> getGoldGroup() {
-		return goldGroup;
+	public String getGold() {
+		return gold;
 	}
 
 	/**
@@ -56,11 +56,11 @@ public class TreebankResultItem {
 		return pass;
 	}
 	
-	public TreebankResultItem(SyntaxTree tree, List<String> out, List<String> gold) {
+	public TreebankResultItem(SyntaxTree tree, String out, String gold) {
 		super();
 		this.tree = tree;
-		this.outGroup = out;
-		this.goldGroup = gold;
+		this.out = out;
+		this.gold = gold;
 		calculateScore();
 	}
 
@@ -68,24 +68,15 @@ public class TreebankResultItem {
 	 * Perform comparison and give our item a score/pass
 	 */
 	private void calculateScore() {
-		int j = 0;
-		for (String outItem : outGroup) {
-			String goldItem = goldGroup.get(j++);
-			if (!outItem.equals(goldItem)) {
-				pass = false;
-				return;
-			}
-		}
-		pass = true;
+		pass = out.equals(gold);
 	}
 
 	@Override
 	public String toString() {
-		// TODO: return all, not just first
 		if (isPass()) {
-			return outGroup.get(0);
+			return out;
 		} else {
-			return goldGroup.get(0) + "\n" + outGroup.get(0);
+			return gold + "\n" + out;
 		}
 	}
 

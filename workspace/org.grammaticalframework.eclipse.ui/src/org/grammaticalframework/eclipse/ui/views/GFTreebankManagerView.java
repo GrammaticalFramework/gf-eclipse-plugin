@@ -31,8 +31,10 @@ import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
+import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TreeViewer;
@@ -177,10 +179,10 @@ public class GFTreebankManagerView extends ViewPart {
 	 */
 	private void configureStatusBar(Composite parent) {
 		statusBar = new Composite(parent, SWT.NONE);
-		statusBar.setLayout(new GridLayout(6, false));
+		statusBar.setLayout(new GridLayout(5, false));
 		statusBar.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 
-		new Label(statusBar, SWT.RIGHT).setText("Status: ");
+//		new Label(statusBar, SWT.RIGHT).setText("Status: ");
 		statusLabel = new Label(statusBar, SWT.LEFT);
 		statusLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 		
@@ -281,12 +283,7 @@ public class GFTreebankManagerView extends ViewPart {
 			@Override
 			public String getText(Object element) {
 				TreebankResultItem item = (TreebankResultItem)element;
-				// TODO: return all, not just first
-				if (item.isPass()) {
-					return item.getOutGroup().get(0);
-				} else {
-					return item.getGoldGroup().get(0) + "\n" + item.getOutGroup().get(0);
-				}
+				return item.toString();
 			}
 
 			@Override
@@ -297,6 +294,7 @@ public class GFTreebankManagerView extends ViewPart {
 				else
 					return images.forTreebankFail();
 			}
+			
         });
 	}
 	
