@@ -9,9 +9,6 @@
  */
 package org.grammaticalframework.eclipse.treebank;
 
-import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
 
@@ -181,67 +178,25 @@ public class GFTreebankHelper {
 	
 	/**
 	 * Compare a given output file with a gold standard, and write the results directly to the supplied view.
+	 * @param treebankFile
 	 * @param outputFile
 	 * @param goldStandardFile
 	 * @param view
 	 */
-	public static TreebankResults compareOutputWithGoldStandard(IFile outputFile, IFile goldStandardFile) {
+	public static TreebankResults compareOutputWithGoldStandard(IFile treebankFile, IFile outputFile, IFile goldStandardFile) {
+		
+		Treebank treebank = new Treebank(treebankFile);
+		TreebankOutput output = new TreebankOutput(outputFile);
+		GoldStandard goldStandard = new GoldStandard(goldStandardFile);
 		
 		TreebankResults results = new TreebankResults();
-		
-		BufferedReader outReader = null;
-		BufferedReader goldReader = null;
-		try {
-			outReader = new BufferedReader(new InputStreamReader(new DataInputStream(outputFile.getContents(true))));
-			goldReader = new BufferedReader(new InputStreamReader(new DataInputStream(goldStandardFile.getContents(true))));
-			
-			String outLine;
-			String goldLine;
-			int passed = 0;
-			int failed = 0;
-			while ((outLine = outReader.readLine()) != null) {
-				// Sync with gold standard file
-				goldLine = goldReader.readLine();
-				if (goldLine == null) {
-//					log.error(String.format("Output file \"%s\" and gold standard file \"%s\" do not match in length.", outputFile.getName(), goldStandardFile.getName()));
-					break;
-				}
-				
-				// Skip empty lines
-				outLine = outLine.trim();
-				goldLine = goldLine.trim();
-				if (outLine.isEmpty())  {
-					continue;
-				}
-				
-				// Do the comparison
-				StringBuilder sb = new StringBuilder();
-				sb.append(outLine);
-				if (outLine.equals(goldLine)) {
-					passed++;
-				} else {
-					failed++;
-					sb.append("\n" + goldLine);
-				}
-				results.addItem(sb.toString());
-			}
-			
-			// Set items in viewer
-			int total = passed+failed;
-			results.setPassed(passed);
-			results.setFailed(failed);
-			results.setTotal(total);
-		} catch (Exception e) {
-//			log.error("Error running comparison",  e);
-		} finally {
-			try {
-				outReader.close();
-			} catch (Exception _) {	}
-			try {
-				goldReader.close();
-			} catch (Exception _) {	}
+		int i = 0;
+		for (AbstractSyntaxTree tree : treebank.getIterable()) {
+			List<String> outGroup = output.getGroup(i);
+			List<String> goldGroup = goldStandard.getGroup(i);
+			results.addItem(new TreebankResultItem(tree, outGroup, goldGroup));
+			i++;
 		}
-		
 		return results;
 	}
 	

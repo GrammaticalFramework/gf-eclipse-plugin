@@ -29,7 +29,16 @@ public class AbstractSyntaxTree {
 
 	public AbstractSyntaxTree(String string) {
 		super();
-		this.string = string;
+		this.string = clean(string);
+	}
+	
+	private String clean(String string) {
+		return string.trim();
+	}
+
+	@Override
+	public String toString() {
+		return string;
 	}
 
 }

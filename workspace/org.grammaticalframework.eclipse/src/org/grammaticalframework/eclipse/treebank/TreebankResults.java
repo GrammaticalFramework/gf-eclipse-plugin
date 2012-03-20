@@ -12,53 +12,72 @@ package org.grammaticalframework.eclipse.treebank;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A set of treebank comparison results.
+ * 
+ * @author John J. Camilleri
+ *
+ */
 public class TreebankResults {
 	
-	private int passed, failed, total;
+	private int numPassed, numFailed;
 	
-	private List<Object> viewerItems;
+	private List<TreebankResultItem> resultItems;
 	
+	/**
+	 * Create an empty result set.
+	 */
 	public TreebankResults() {
 		super();
-		passed = failed = total = 0;
-		viewerItems = new ArrayList<Object>();
+		numPassed = numFailed = 0;
+		resultItems = new ArrayList<TreebankResultItem>();
 	}
 
-	public List<Object> getItems() {
-		return viewerItems;
+	/**
+	 * Get list of result items
+	 * @return
+	 */
+	public List<TreebankResultItem> getItems() {
+		return resultItems;
 	}
 
+	/**
+	 * Get number of passed items
+	 * @return
+	 */
 	public int getPassed() {
-		return passed;
+		return numPassed;
 	}
 
+	/**
+	 * Get number of failed items
+	 * @return
+	 */
 	public int getFailed() {
-		return failed;
+		return numFailed;
 	}
 
+	/**
+	 * Get total number of items processed
+	 * @return
+	 */
 	public int getTotal() {
-		return total;
+		return numPassed + numFailed;
 	}
 
-	public void addItem(Object item) {
-		this.viewerItems.add(item);
+	/**
+	 * Add result item to collection
+	 * @param item
+	 */
+	public void addItem(TreebankResultItem item) {
+		this.resultItems.add(item);
+		if (item.isPass()) numPassed++;
+		else numFailed++;
 	}
 	
-	public void setPassed(int passed) {
-		this.passed = passed;
-	}
-
-	public void setFailed(int failed) {
-		this.failed = failed;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
-	}
-
 	@Override
 	public String toString() {
-		return String.format("%s (%d,%d/%d)", TreebankResults.class.getName(), passed, failed, total);
+		return String.format("%s (%d,%d/%d)", TreebankResults.class.getName(), getPassed(), getFailed(), getTotal());
 	}
 
 }

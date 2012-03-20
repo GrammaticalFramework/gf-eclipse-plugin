@@ -9,6 +9,12 @@
  */
 package org.grammaticalframework.eclipse.treebank;
 
-public class GoldStandard {
+import org.eclipse.core.resources.IFile;
+
+public class GoldStandard extends TreebankOutput {
+
+	public GoldStandard(IFile outFile) {
+		super(outFile);
+	}
 
 }
