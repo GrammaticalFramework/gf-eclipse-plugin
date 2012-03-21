@@ -17,7 +17,13 @@ import java.util.List;
 
 import org.eclipse.core.resources.IFile;
 
-public class TreebankOutput extends AbstractCollectionFile<List<String>> {
+/**
+ * Represents a treebank output file, with each non-empty line
+ * stored in an internal collection of strings. 
+ * @author John J. Camilleri
+ *
+ */
+public class TreebankOutput extends AbstractCollectionFile<List<OutputItem>> {
 	
 	public TreebankOutput(IFile outFile) {
 		super(outFile);
@@ -32,7 +38,7 @@ public class TreebankOutput extends AbstractCollectionFile<List<String>> {
 			outReader = new BufferedReader(new InputStreamReader(new DataInputStream(getFile().getContents(true))));
 			
 			String outLine;
-			ArrayList<String> group = new ArrayList<String>();
+			ArrayList<OutputItem> group = new ArrayList<OutputItem>();
 			while ((outLine = outReader.readLine()) != null) {
 				outLine = outLine.trim();
 				
@@ -40,12 +46,12 @@ public class TreebankOutput extends AbstractCollectionFile<List<String>> {
 				if (outLine.isEmpty())  {
 					if (!group.isEmpty())
 						list.add(group);
-					group = new ArrayList<String>();
+					group = new ArrayList<OutputItem>();
 					continue;
 				}
 				
 				// Create object and add to list
-				group.add(outLine);
+				group.add(new OutputItem(outLine));
 			}
 			if (!group.isEmpty())
 				list.add(group);
@@ -57,7 +63,7 @@ public class TreebankOutput extends AbstractCollectionFile<List<String>> {
 		}
 	}
 	
-	public List<String> getGroup(int i) {
+	public List<OutputItem> getGroup(int i) {
 		return list.get(i);
 	}
 	
