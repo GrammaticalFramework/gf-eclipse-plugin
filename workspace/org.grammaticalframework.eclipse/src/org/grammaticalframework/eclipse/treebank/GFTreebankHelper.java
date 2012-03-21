@@ -190,33 +190,46 @@ public class GFTreebankHelper {
 	 * @param view
 	 */
 	public static TreebankResults compareOutputWithGoldStandard(IFile treebankFile, IFile outputFile, IFile goldStandardFile) {
-		
 		Treebank treebank = new Treebank(treebankFile);
 		TreebankOutput output = new TreebankOutput(outputFile);
 		GoldStandard goldStandard = new GoldStandard(goldStandardFile);
-
 		TreebankResults results = new TreebankResults();
-		if (output.getSize() != treebank.getSize()) {
-			log.warn(String.format("Size mis-match between treebank (%d) and output (%d).", treebank.getSize(), output.getSize()));
-			return results;
-		}
-		if (output.getSize() != goldStandard.getSize()) {
-			log.warn(String.format("Size mis-match output (%d) and gold standard (%d).", output.getSize(), goldStandard.getSize()));
-			return results;
-		}
 		
-		int i = 0;
-		for (SyntaxTree tree : treebank.getIterable()) {
-			List<OutputItem> outGroup = output.getGroup(i);
-			List<OutputItem> goldGroup = goldStandard.getGroup(i);
-			int j = 0;
-			for (OutputItem outItem : outGroup) {
-				OutputItem goldItem = goldGroup.get(j++);
-				
+		// Check sizes
+		if (output.getSize() != goldStandard.getSize()) {
+			log.warn(String.format("Size mis-match: output (%d) and gold standard (%d).", output.getSize(), goldStandard.getSize()));
+			return results;
+		}
+		int treebankIxMultiplier = 1;
+		if (output.getSize() > treebank.getSize()) {
+			// Our usual grouping is wrong, so we spread the trees evenly over all the outputs
+			if (output.getSize() % treebank.getSize() != 0) {
+				log.warn(String.format("Cannot accurately match trees (%d) to output groups (%d); the associations are probably misaligned.", treebank.getSize(), output.getSize()));
+			}
+//			treebankIxMultiplier = (output.getSize() - 1) / (treebank.getSize() + 1); // equivalent to: ceil( outSize / treeSize )
+			treebankIxMultiplier = (output.getSize() + treebank.getSize() - 1) / treebank.getSize(); // equivalent to: ceil( outSize / treeSize )
+		}
+
+		// Iterate over groups
+		for (int outGroupIx = 0; outGroupIx < output.getSize(); outGroupIx++) {
+			List<OutputItem> outGroup = output.getGroup(outGroupIx);
+			List<OutputItem> goldGroup = goldStandard.getGroup(outGroupIx);
+			
+			if (outGroup.size() != goldGroup.size()) {
+				log.warn(String.format("Size mis-match: output group (%d) and gold standard group (%d). Skipping group.", outGroup.size(), goldGroup.size()));
+				results.addError();
+				continue;
+			}
+			
+			int treebankIx = outGroupIx / treebankIxMultiplier;
+			SyntaxTree tree = treebank.get(treebankIx);
+			
+			for (int groupItemIx = 0; groupItemIx < outGroup.size(); groupItemIx++) {
+				OutputItem outItem = outGroup.get(groupItemIx);
+				OutputItem goldItem = goldGroup.get(groupItemIx);
 				TreebankResultItem item = new TreebankResultItem(tree, outItem, goldItem);
 				results.addItem(item);
 			}
-			i++;
 		}
 		return results;
 	}

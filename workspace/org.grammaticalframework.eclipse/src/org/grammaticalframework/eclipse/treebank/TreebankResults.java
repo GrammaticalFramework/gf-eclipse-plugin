@@ -20,7 +20,7 @@ import java.util.List;
  */
 public class TreebankResults {
 	
-	private int numPassed, numFailed;
+	private int numPassed, numFailed, numErrors;
 	
 	private List<TreebankResultItem> resultItems;
 	
@@ -29,7 +29,7 @@ public class TreebankResults {
 	 */
 	public TreebankResults() {
 		super();
-		numPassed = numFailed = 0;
+		numPassed = numFailed = numErrors = 0;
 		resultItems = new ArrayList<TreebankResultItem>();
 	}
 
@@ -66,6 +66,14 @@ public class TreebankResults {
 	}
 
 	/**
+	 * Get number of errors
+	 * @return
+	 */
+	public int getErrors() {
+		return numErrors;
+	}
+
+	/**
 	 * Add result item to collection
 	 * @param item
 	 */
@@ -73,6 +81,13 @@ public class TreebankResults {
 		this.resultItems.add(item);
 		if (item.isPass()) numPassed++;
 		else numFailed++;
+	}
+	
+	/**
+	 * Increment error count
+	 */
+	public void addError() {
+		numErrors++;
 	}
 	
 	@Override

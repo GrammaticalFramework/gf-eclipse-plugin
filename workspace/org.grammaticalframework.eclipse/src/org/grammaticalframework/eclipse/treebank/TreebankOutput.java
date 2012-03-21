@@ -11,11 +11,15 @@ package org.grammaticalframework.eclipse.treebank;
 
 import java.io.BufferedReader;
 import java.io.DataInputStream;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
+import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.runtime.CoreException;
 
 /**
  * Represents a treebank output file, with each non-empty line
@@ -24,6 +28,13 @@ import org.eclipse.core.resources.IFile;
  *
  */
 public class TreebankOutput extends AbstractCollectionFile<List<OutputItem>> {
+
+	/**
+	 * Logger
+	 */
+	private static final Logger log = Logger.getLogger(TreebankOutput.class);
+
+	private static Pattern leadingSpaceRegEx = Pattern.compile("^\\s\\S.*");
 	
 	public TreebankOutput(IFile outFile) {
 		super(outFile);
@@ -40,22 +51,31 @@ public class TreebankOutput extends AbstractCollectionFile<List<OutputItem>> {
 			String outLine;
 			ArrayList<OutputItem> group = new ArrayList<OutputItem>();
 			while ((outLine = outReader.readLine()) != null) {
-				outLine = outLine.trim();
-				
-				// Empty line signifies a new "group"
-				if (outLine.isEmpty())  {
+
+				// Empty line or single space at beginning signifies a new "group"
+				if (outLine.isEmpty() || leadingSpaceRegEx.matcher(outLine).matches())  {
 					if (!group.isEmpty())
 						list.add(group);
 					group = new ArrayList<OutputItem>();
-					continue;
+					if (outLine.isEmpty())
+						continue;
 				}
 				
 				// Create object and add to list
-				group.add(new OutputItem(outLine));
+				outLine = outLine.trim();
+				OutputItem item = new OutputItem(outLine);
+				if (!item.hasLanguage() && group.size()>0 && group.get(group.size()-1).hasLanguage()) {
+					// let language to last known, if applicable
+					item.setLanguage(group.get(group.size()-1).getLanguage());
+				}
+				group.add(item);
 			}
 			if (!group.isEmpty())
 				list.add(group);
-		} catch (Exception e) {
+		} catch (IOException e) {
+			log.error("Error reading treebank output file.", e);
+		} catch (CoreException e) {
+			log.error("Error reading treebank output file.", e);
 		} finally {
 			try {
 				outReader.close();

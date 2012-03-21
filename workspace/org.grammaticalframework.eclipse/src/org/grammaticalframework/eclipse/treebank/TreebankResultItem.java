@@ -18,9 +18,9 @@ public class TreebankResultItem {
 	
 	private SyntaxTree tree;
 	
-	private String out;
+	private OutputItem out;
 	
-	private String gold;
+	private OutputItem gold;
 	
 	private boolean pass;
 
@@ -36,7 +36,7 @@ public class TreebankResultItem {
 	 * Get the output
 	 * @return
 	 */
-	public String getOut() {
+	public OutputItem getOut() {
 		return out;
 	}
 
@@ -44,7 +44,7 @@ public class TreebankResultItem {
 	 * Get the gold
 	 * @return
 	 */
-	public String getGold() {
+	public OutputItem getGold() {
 		return gold;
 	}
 
@@ -56,7 +56,11 @@ public class TreebankResultItem {
 		return pass;
 	}
 	
-	public TreebankResultItem(SyntaxTree tree, String out, String gold) {
+	public TreebankResultItem(OutputItem out, OutputItem gold) {
+		this(null, out, gold);
+	}
+	
+	public TreebankResultItem(SyntaxTree tree, OutputItem out, OutputItem gold) {
 		super();
 		this.tree = tree;
 		this.out = out;
@@ -68,15 +72,15 @@ public class TreebankResultItem {
 	 * Perform comparison and give our item a score/pass
 	 */
 	private void calculateScore() {
-		pass = out.equals(gold);
+		pass = out.getMeat().equals(gold.getMeat());
 	}
 
 	@Override
 	public String toString() {
 		if (isPass()) {
-			return out;
+			return out.getMeat();
 		} else {
-			return gold + "\n" + out;
+			return gold.getMeat() + "\n" + out.getMeat();
 		}
 	}
 

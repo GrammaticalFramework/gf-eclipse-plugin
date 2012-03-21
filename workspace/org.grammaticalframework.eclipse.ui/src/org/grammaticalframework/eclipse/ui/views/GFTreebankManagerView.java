@@ -28,18 +28,23 @@ import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.dialogs.MessageDialog;
-import org.eclipse.jface.viewers.ColumnLabelProvider;
+import org.eclipse.jface.viewers.CellLabelProvider;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.viewers.LabelProvider;
+import org.eclipse.jface.viewers.StyledCellLabelProvider;
+import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
+import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
+import org.eclipse.swt.custom.StyleRange;
+import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -91,6 +96,7 @@ public class GFTreebankManagerView extends ViewPart {
 	private Label statusLabel;
 	private Label passedLabel;
 	private Label failedLabel;
+	private Label errorsLabel;
 	private Composite statusBar;
 	private TreeViewer fileViewer;
 	private TableViewer outputViewer;
@@ -115,9 +121,17 @@ public class GFTreebankManagerView extends ViewPart {
 	public String getFailedText() {
 		return failedLabel.getText();
 	}
-
+	
 	public void setFailedText(String failedLabel) {
 		this.failedLabel.setText(failedLabel);
+	}
+	
+	public String getErrorText() {
+		return errorsLabel.getText();
+	}
+
+	public void setErrorText(String failedLabel) {
+		this.errorsLabel.setText(failedLabel);
 	}
 
 	public TreeViewer getFileViewer() {
@@ -177,18 +191,21 @@ public class GFTreebankManagerView extends ViewPart {
 	 */
 	private void configureStatusBar(Composite parent) {
 		statusBar = new Composite(parent, SWT.NONE);
-		statusBar.setLayout(new GridLayout(5, false));
+		statusBar.setLayout(new GridLayout(7, false));
 		statusBar.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 
 //		new Label(statusBar, SWT.RIGHT).setText("Status: ");
 		statusLabel = new Label(statusBar, SWT.LEFT);
 		statusLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 		
-		new Label(statusBar, SWT.RIGHT).setText("Passed: ");
+		new Label(statusBar, SWT.RIGHT).setText("Passed:");
 		passedLabel = new Label(statusBar, SWT.LEFT);
 		
-		new Label(statusBar, SWT.RIGHT).setText("Failed: ");
+		new Label(statusBar, SWT.RIGHT).setText("Failed:");
 		failedLabel = new Label(statusBar, SWT.LEFT);
+		
+		new Label(statusBar, SWT.RIGHT).setText("Errors:");
+		errorsLabel = new Label(statusBar, SWT.LEFT);
 		
 		resetStatusBar();
 	}
@@ -207,6 +224,7 @@ public class GFTreebankManagerView extends ViewPart {
 		statusLabel.setText("Idle");
 		passedLabel.setText("-");
 		failedLabel.setText("-");
+		errorsLabel.setText("-");
 	}	
 	
 	/**
@@ -267,33 +285,83 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 	
 	/**
-	 * Setup the output viewer
+	 * Setup the output viewer, table columns etc.
 	 * @param parent
 	 */
 	private void configureOutputViewer(Composite parent) {
         outputViewer = new TableViewer(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER | SWT.FULL_SELECTION);
         outputViewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
         outputViewer.getTable().setLinesVisible(true);
-        TableViewerColumn col = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
-        col.getColumn().setWidth(200); // 200 is arbitrary, but col won't display without it!
-        col.getColumn().setResizable(true);
-        col.setLabelProvider(new ColumnLabelProvider() {
-			@Override
-			public String getText(Object element) {
-				TreebankResultItem item = (TreebankResultItem)element;
-				return item.toString();
-			}
-
-			@Override
-			public Image getImage(Object element) {
-				TreebankResultItem item = (TreebankResultItem)element;
-				if (item.isPass())
-					return images.forTreebankPass();
-				else
-					return images.forTreebankFail();
-			}
-			
+        outputViewer.getTable().setHeaderVisible(true);
+        
+        TableViewerColumn column_Main = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
+        column_Main.getColumn().setWidth(200);
+        column_Main.getColumn().setText("Result");
+        column_Main.getColumn().setResizable(true);
+        column_Main.setLabelProvider(new StyledCellLabelProvider() {
+        	@Override
+        	public void update(ViewerCell cell) {
+        		TreebankResultItem item = (TreebankResultItem)cell.getElement();
+        		String out = item.getOut().getMeat();
+        		String gold = item.getGold().getMeat();
+        		if (item.isPass()) {
+        			cell.setImage(images.forTreebankPass());
+        			cell.setText(out);
+        		} else {
+        			cell.setImage(images.forTreebankFail());
+	        		StyledString text = new StyledString();
+	        		StyleRange rangeGold = new StyleRange(0, gold.length(), new Color(Display.getCurrent(), 184, 134, 11), null);
+	        		StyleRange rangeOut = new StyleRange(gold.length()+1, out.length(), Display.getCurrent().getSystemColor(SWT.COLOR_DARK_RED), null);
+	        		text.append(gold+"\n");
+	        		text.append(out);
+	        		cell.setText(text.toString());
+	        		StyleRange[] range = { rangeGold, rangeOut };
+	        		cell.setStyleRanges(range);
+        		}
+        		super.update(cell);
+        	}        	
         });
+        
+        TableViewerColumn column_Language = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
+        column_Language.getColumn().setWidth(80);
+        column_Language.getColumn().setText("Language");
+        column_Language.getColumn().setResizable(true);
+        column_Language.setLabelProvider(new CellLabelProvider() {
+        	@Override
+        	public void update(ViewerCell cell) {
+        		TreebankResultItem item = (TreebankResultItem)cell.getElement();
+        		if (item.getOut().hasLanguage()) {
+        			cell.setText(item.getOut().getLanguage());
+        		}
+        	}        	
+        });
+        
+        TableViewerColumn column_Params = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
+        column_Params.getColumn().setWidth(150);
+        column_Params.getColumn().setText("Parameters");
+        column_Params.getColumn().setResizable(true);
+        column_Params.setLabelProvider(new CellLabelProvider() {
+        	@Override
+        	public void update(ViewerCell cell) {
+        		TreebankResultItem item = (TreebankResultItem)cell.getElement();
+        		if (item.getOut().hasParameters()) {
+        			cell.setText(item.getOut().getParameters());
+        		}
+        	}        	
+        });
+        
+        TableViewerColumn column_Tree = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
+        column_Tree.getColumn().setWidth(200);
+        column_Tree.getColumn().setText("Input tree");
+        column_Tree.getColumn().setResizable(true);
+        column_Tree.setLabelProvider(new CellLabelProvider() {
+        	@Override
+        	public void update(ViewerCell cell) {
+        		TreebankResultItem item = (TreebankResultItem)cell.getElement();
+       			cell.setText(item.getTree().toString());
+        	}        	
+        });
+        
 	}
 	
 	/**
@@ -498,6 +566,7 @@ public class GFTreebankManagerView extends ViewPart {
 		setStatusText("Results of "+outputFile.getName());
 		setPassedText(String.format("%d/%d", results.getPassed(), results.getTotal()));
 		setFailedText(String.format("%d/%d", results.getFailed(), results.getTotal()));
+		setErrorText(String.format("%d", results.getErrors()));
 		clearOutputViewer();
 		getOutputViewer().add(results.getItems().toArray());
 		redrawStatusBar();

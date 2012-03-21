@@ -9,11 +9,8 @@
  */
 package org.grammaticalframework.eclipse.treebank;
 
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import org.eclipse.emf.ecore.xml.type.internal.RegEx;
 
 /**
  * A single line from a treebank output file.
@@ -25,11 +22,51 @@ import org.eclipse.emf.ecore.xml.type.internal.RegEx;
  */
 public class OutputItem {
 	
-	private static Pattern langRegEx = Pattern.compile("^([^\\s:]+):\\s(.+)");
-	private static Pattern paramRegEx = Pattern.compile("^([^\\s:]+\\s)+:(.+)");
+	private static Pattern langRegEx = Pattern.compile("^\\s?([^\\s:]+):\\s(.+)");
+	
+	private static Pattern paramRegEx = Pattern.compile("^((?:[^\\s:]+\\s)+):\\s(.+)");
+
+	private String original;
+	
+	private String meat;
+	
+	private String language;
+	
+	private String parameters;
+	
+	
+	public String getOriginal() {
+		return original;
+	}
+
+
+	public String getMeat() {
+		return meat;
+	}
+
+	public String getLanguage() {
+		return language;
+	}
+	
+	public void setLanguage(String language) {
+		this.language = language;
+	}
+	
+	public Boolean hasLanguage() {
+		return language != null;
+	}
+
+	public String getParameters() {
+		return parameters;
+	}
+
+	public Boolean hasParameters() {
+		return parameters != null;
+	}
 
 	public OutputItem(String line) {
 		this.original = line;
+		this.meat = line;
 		
 		Matcher m1 = langRegEx.matcher(line);
 		if (m1.matches()) {
@@ -39,20 +76,11 @@ public class OutputItem {
 		
 		Matcher m2 = paramRegEx.matcher(line);
 		if (m2.matches()) {
-			// TODO: need to loop as we don't know how many groups we have!
-			this.params = m2.group();
-			this.meat = m2.group(2).trim();
+			this.parameters = m2.group(1).trim();
+			this.meat = m2.group(2);
 		} else {
 			this.meat = line;
 		}
 	}
 
-	private String original;
-	
-	private String meat;
-	
-	private String language;
-	
-	private List<String> parameters;
-	
 }

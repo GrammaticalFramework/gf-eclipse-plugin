@@ -65,6 +65,16 @@ public abstract class AbstractCollectionFile<T> {
 	public List<T> getList() {
 		return list;
 	}
+	
+	/**
+	 * Gets the nth item in the list.
+	 *
+	 * @param index
+	 * @return the item at that position
+	 */
+	public T get(int index) {
+		return list.get(index);
+	}
 
 	/**
 	 * Get iterator over the items.
@@ -88,7 +98,7 @@ public abstract class AbstractCollectionFile<T> {
 	 *
 	 * @return the size
 	 */
-	public Integer getSize() {
+	public int getSize() {
 		return list.size();
 	}
 
