@@ -1,0 +1,30 @@
+Lang: doctor_N
+LangEng: s Sg Nom : doctor
+s Sg Gen : doctor's
+s Pl Nom : docters
+s Pl Gen : docters'
+
+LangSwe: s Sg Indef Nom : läkare
+s Sg Indef Gen : läkares
+s Sg Def Nom : läkaren
+s Sg Def Gen : läkarens
+s Pl Indef Nom : läkare
+s Pl Indef Gen : läkares
+s Pl Def Nom : läkarna
+s Pl Def Gen : läkarnas
+
+ Lang: cat_N
+LangEng: s Sg Nom : cat
+s Sg Gen : cat's
+s Pl Nom : cats
+s Pl Gen : cats'
+
+LangSwe: s Sg Indef Nom : katt
+s Sg Indef Gen : katts
+s Sg Def Nom : kattan
+s Sg Def Gen : kattans
+s Pl Indef Nom : katter
+s Pl Indef Gen : katters
+s Pl Def Nom : katterna
+s Pl Def Gen : katternas
+
