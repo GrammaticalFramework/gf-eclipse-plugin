@@ -79,7 +79,16 @@ public abstract class AbstractNewFileWizard extends Wizard implements INewWizard
 			return false;
 		}
 		return true;
-	}	
+	}
+	
+	private IContainer getContainerFromName(String containerName) throws CoreException {
+		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+		IResource resource = root.findMember(new Path(containerName));
+		if (!resource.exists() || !(resource instanceof IContainer)) {
+			throwCoreException("Container \"" + containerName + "\" does not exist.");
+		}
+		return (IContainer) resource;
+	}
 	
 	/**
 	 * Find the container, create the file if missing or just replace its contents, and open
@@ -91,14 +100,26 @@ public abstract class AbstractNewFileWizard extends Wizard implements INewWizard
 	 * @param monitor the monitor
 	 * @throws CoreException the core exception
 	 */
-	protected void createFile(String containerName, String fileName, String fileContents, IProgressMonitor monitor)	throws CoreException {
-		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
-		IResource resource = root.findMember(new Path(containerName));
-		if (!resource.exists() || !(resource instanceof IContainer)) {
-			throwCoreException("Container \"" + containerName + "\" does not exist.");
-		}
-		IContainer container = (IContainer) resource;
-		createFile(container, fileName, fileContents, monitor);
+	protected void createFile(String containerName, String fileName, String fileContents, IProgressMonitor monitor)
+			throws CoreException {
+		IContainer container = getContainerFromName(containerName);
+		createFile(container, fileName, fileContents, true, monitor);
+	}
+	
+	/**
+	 * Find the container, create the file if missing or just replace its contents, and open
+	 * the editor on the newly created file.
+	 *
+	 * @param containerName the container name
+	 * @param fileName the file name
+	 * @param fileContents the file contents
+	 * @param monitor the monitor
+	 * @throws CoreException the core exception
+	 */
+	protected void createPlainFile(String containerName, String fileName, String fileContents, IProgressMonitor monitor)
+			throws CoreException {
+		IContainer container = getContainerFromName(containerName);
+		createFile(container, fileName, fileContents, false, monitor);
 	}
 
 	/**
@@ -107,10 +128,12 @@ public abstract class AbstractNewFileWizard extends Wizard implements INewWizard
 	 * @param container the container
 	 * @param fileName the file name
 	 * @param fileContents the file contents
+	 * @param isGF is this s GF file?
 	 * @param monitor the monitor
 	 * @throws CoreException the core exception
 	 */
-	protected void createFile(IContainer container, String fileName, String fileContents, IProgressMonitor monitor)	throws CoreException {
+	protected void createFile(IContainer container, String fileName, String fileContents, final Boolean isGF, IProgressMonitor monitor)
+			throws CoreException {
 		// create a sample file
 		monitor.beginTask("Creating " + fileName, 2);
 		final IFile file = container.getFile(new Path(fileName));
@@ -135,9 +158,11 @@ public abstract class AbstractNewFileWizard extends Wizard implements INewWizard
 					editor = IDE.openEditor(page, file, true);
 					
 					// format it
-					XtextEditor xed = (XtextEditor)editor;
-					SourceViewer sv = (SourceViewer)xed.getInternalSourceViewer();
-					sv.doOperation(ISourceViewer.FORMAT);
+					if (isGF) {
+						XtextEditor xed = (XtextEditor)editor;
+						SourceViewer sv = (SourceViewer)xed.getInternalSourceViewer();
+						sv.doOperation(ISourceViewer.FORMAT);
+					}
 					
 					// save it
 					editor.doSave(null);

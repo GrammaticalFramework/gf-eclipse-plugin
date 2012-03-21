@@ -20,6 +20,8 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -49,11 +51,11 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 	 */
 	private Text field_Path;
 	private Text field_ModuleName;
-	private Combo field_ModuleType;
+	private Combo field_GrammarFormat;
 	
-	private String[] moduleTypeOptions = new String[] {
-			"BNF",		// 0
-			"Extended BNF",		// 1
+	private String[] grammarFormatOptions = new String[] {
+			"BNF",
+			"Extended BNF",
 	};
 
 	/**
@@ -78,6 +80,16 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 		layout.numColumns = 3;
 		layout.verticalSpacing = 5;
 		
+		FontData fontData = parent.getFont().getFontData()[0];
+		Font fontItalic = new Font(container.getDisplay(), new FontData(fontData.getName(), fontData.getHeight(), SWT.ITALIC));
+		
+		// Little notice
+		Label l = new Label(container, SWT.NULL);
+		l.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
+		l.setFont(fontItalic);
+		l.setText("Note: The GF Eclipse Plugin does not feature any support for editing context-free grammars.\n" +
+				"This wizard will simply create your grammar file and open in the default plain-text editor. ");
+		
 		// Save to
 		new Label(container, SWT.NULL).setText("&Save to:");
 		field_Path = new Text(container, SWT.BORDER | SWT.SINGLE);
@@ -91,12 +103,12 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 			}
 		});
 		
-		// Module type
+		// Format (BNF or EBNF)
 		new Label(container, SWT.NULL).setText("Grammar &format:");
-	    field_ModuleType = new Combo(container, SWT.DROP_DOWN | SWT.BORDER | SWT.READ_ONLY);
-		field_ModuleType.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
-	    field_ModuleType.setItems(moduleTypeOptions);
-	    field_ModuleType.addSelectionListener(new SelectionListener() {
+	    field_GrammarFormat = new Combo(container, SWT.DROP_DOWN | SWT.BORDER | SWT.READ_ONLY);
+		field_GrammarFormat.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
+	    field_GrammarFormat.setItems(grammarFormatOptions);
+	    field_GrammarFormat.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
 				dialogChanged();
 			}
@@ -104,7 +116,7 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 				widgetSelected(e);
 			}
 		});
-		field_ModuleType.select(0);
+		field_GrammarFormat.select(0);
 		
 		// Module name
 		new Label(container, SWT.NULL).setText("Module &name:");
@@ -117,6 +129,15 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 	}
 	
 	/**
+	 * Gets the container name.
+	 *
+	 * @return the container name
+	 */
+	protected String getField_Path() {
+		return field_Path.getText();
+	}
+
+	/**
 	 * Gets the module name.
 	 *
 	 * @return the module name
@@ -125,13 +146,12 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 		return field_ModuleName.getText();
 	}
 
-	/**
-	 * Gets the container name.
-	 *
-	 * @return the container name
-	 */
-	protected String getField_Path() {
-		return field_Path.getText();
+	protected boolean isBNF() {
+		return field_GrammarFormat.getSelectionIndex()==0;
+	}
+	
+	protected boolean isExtendedBNF() {
+		return field_GrammarFormat.getSelectionIndex()==1;
 	}
 
 	/**

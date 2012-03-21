@@ -64,7 +64,7 @@ public class GFCloneModuleWizard extends AbstractNewFileWizard {
 			public void run(IProgressMonitor monitor)
 					throws InvocationTargetException {
 				try {
-					createFile(container, fileName, fileContents, monitor);
+					createFile(container, fileName, fileContents, true, monitor);
 				} catch (CoreException e) {
 					throw new InvocationTargetException(e);
 				} finally {

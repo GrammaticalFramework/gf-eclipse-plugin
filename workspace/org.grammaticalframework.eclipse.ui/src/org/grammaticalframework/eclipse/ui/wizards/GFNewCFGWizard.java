@@ -41,13 +41,13 @@ public class GFNewCFGWizard extends AbstractNewFileWizard {
 	 */
 	public boolean performFinish() {
 		final String containerName = page.getField_Path();
-		final String fileName = page.getField_ModuleName() + ".gf";
-		final String fileContents = generateFileContents();
+		final String fileName = page.getField_ModuleName() + (page.isExtendedBNF() ? ".ebnf" : ".cf");
+		final String fileContents = generateFileContents(page.isExtendedBNF());
 		IRunnableWithProgress op = new IRunnableWithProgress() {
 			public void run(IProgressMonitor monitor)
 					throws InvocationTargetException {
 				try {
-					createFile(containerName, fileName, fileContents, monitor);
+					createPlainFile(containerName, fileName, fileContents, monitor);
 				} catch (CoreException e) {
 					throw new InvocationTargetException(e);
 				} finally {
@@ -60,14 +60,22 @@ public class GFNewCFGWizard extends AbstractNewFileWizard {
 
 	/**
 	 * We will initialize file contents with a sample text.
+	 * @param isExtendedBNF 
 	 * 
 	 * @return the string
 	 */
-	private String generateFileContents() {
-		StringBuilder sb = new StringBuilder("-- Auto-generated template\n");
-
-		sb.append("\n};\n");
-
+	private String generateFileContents(boolean isExtendedBNF) {
+		StringBuilder sb = new StringBuilder("-- Auto-generated template\n\n");
+		sb.append("S ::= Greeting Audience \"!\" ;\n");
+		if (isExtendedBNF) {
+			// *.ebnf
+			sb.append("Greeting ::= \"Hello\" \"there\"? | \"Howdy\" ;\n");
+			sb.append("Audience ::= \"world\" | (\"uni-\"|\"multi-\")? \"verse\" ;\n");
+		} else {
+			// *.cf
+			sb.append("Greeting ::= \"Hello\" | \"Howdy\" ;\n");
+			sb.append("Audience ::= \"world\" | \"multiverse\" ;\n");
+		}
 		return sb.toString();
 	}
 

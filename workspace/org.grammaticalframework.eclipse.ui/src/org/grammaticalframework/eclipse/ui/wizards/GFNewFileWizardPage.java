@@ -339,7 +339,6 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 			return;
 		}
 		
-		
 		// Extends, Functor, Instantiates, Opens
 		if (!getField_Extends().isEmpty() && !getField_Extends().matches(regexExtends)) {
 			updateStatus("Extends field is invalid");
