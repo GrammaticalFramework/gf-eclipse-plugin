@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.grammaticalframework.feature_1.4.1.qualifier.jar" id="org.grammaticalframework.feature" version="1.4.1.qualifier">
+   <feature url="features/org.grammaticalframework.feature_1.4.2.qualifier.jar" id="org.grammaticalframework.feature" version="1.4.2.qualifier">
       <category name="org.grammaticalframework.feature.category.gf_dev"/>
    </feature>
    <category-def name="org.grammaticalframework.feature.category.gf_dev" label="Grammar Development Tools">

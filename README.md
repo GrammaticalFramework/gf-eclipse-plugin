@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 19 March 2012
+Updated: 21 March 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914._
 
@@ -44,7 +44,10 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 
 ## Release history
 
-**14/03/13**
+**21/03/12**
+: (1.4.2.x) Added wizard for context-free grammars (no syntax support, though).
+
+**14/03/12**
 : (1.4.1.x) GF source files can now be anywhere in project, not necessarily at top level.
 
 **06/03/12**
