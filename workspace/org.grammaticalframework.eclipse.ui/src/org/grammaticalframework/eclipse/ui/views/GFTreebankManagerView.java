@@ -28,6 +28,7 @@ import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.CellLabelProvider;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
@@ -89,8 +90,10 @@ public class GFTreebankManagerView extends ViewPart {
 	// Actions
 	private Action runAction;
 	private Action makeGoldStandardAction;
-
 	private Action compareAction;
+	private Action toggleLanguageColumnAction;
+	private Action toggleParametersColumnAction;
+	private Action toggleTreeColumnAction;
 	
 	// Widgets
 	private Label statusLabel;
@@ -151,9 +154,34 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 
 	private IPartListener2 editorListener;
+	
 	private IResourceChangeListener resourceListener;
 	
 	private IProject currentProject;
+
+	private TableViewerColumn column_Main;
+
+	private TableViewerColumn column_Language;
+
+	private TableViewerColumn column_Params;
+
+	private TableViewerColumn column_Tree;
+	
+	private static int COLUMN_WIDTH_MAIN = 200;
+	
+	private static int COLUMN_WIDTH_LANGUAGE = 80;
+	
+	private static int COLUMN_WIDTH_PARAMS = 150;
+	
+	private static int COLUMN_WIDTH_TREE = 200;
+	
+	private static String COLUMN_TEXT_MAIN = "Result";
+
+	private static String COLUMN_TEXT_LANGUAGE = "Language";
+	
+	private static String COLUMN_TEXT_PARAMS = "Parameters";
+	
+	private static String COLUMN_TEXT_TREE = "Input tree";
 
 	/**
 	 * Create the layout and put all the widgets in their places
@@ -294,9 +322,9 @@ public class GFTreebankManagerView extends ViewPart {
         outputViewer.getTable().setLinesVisible(true);
         outputViewer.getTable().setHeaderVisible(true);
         
-        TableViewerColumn column_Main = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
-        column_Main.getColumn().setWidth(200);
-        column_Main.getColumn().setText("Result");
+        column_Main = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
+        column_Main.getColumn().setWidth(COLUMN_WIDTH_MAIN);
+        column_Main.getColumn().setText(COLUMN_TEXT_MAIN);
         column_Main.getColumn().setResizable(true);
         column_Main.setLabelProvider(new StyledCellLabelProvider() {
         	@Override
@@ -322,9 +350,9 @@ public class GFTreebankManagerView extends ViewPart {
         	}        	
         });
         
-        TableViewerColumn column_Language = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
-        column_Language.getColumn().setWidth(80);
-        column_Language.getColumn().setText("Language");
+        column_Language = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
+        column_Language.getColumn().setWidth(COLUMN_WIDTH_LANGUAGE);
+        column_Language.getColumn().setText(COLUMN_TEXT_LANGUAGE);
         column_Language.getColumn().setResizable(true);
         column_Language.setLabelProvider(new CellLabelProvider() {
         	@Override
@@ -336,9 +364,9 @@ public class GFTreebankManagerView extends ViewPart {
         	}        	
         });
         
-        TableViewerColumn column_Params = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
-        column_Params.getColumn().setWidth(150);
-        column_Params.getColumn().setText("Parameters");
+        column_Params = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
+        column_Params.getColumn().setWidth(COLUMN_WIDTH_PARAMS);
+        column_Params.getColumn().setText(COLUMN_TEXT_PARAMS);
         column_Params.getColumn().setResizable(true);
         column_Params.setLabelProvider(new CellLabelProvider() {
         	@Override
@@ -350,9 +378,9 @@ public class GFTreebankManagerView extends ViewPart {
         	}        	
         });
         
-        TableViewerColumn column_Tree = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
-        column_Tree.getColumn().setWidth(200);
-        column_Tree.getColumn().setText("Input tree");
+        column_Tree = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
+        column_Tree.getColumn().setWidth(COLUMN_WIDTH_TREE);
+        column_Tree.getColumn().setText(COLUMN_TEXT_TREE);
         column_Tree.getColumn().setResizable(true);
         column_Tree.setLabelProvider(new CellLabelProvider() {
         	@Override
@@ -546,6 +574,50 @@ public class GFTreebankManagerView extends ViewPart {
 			}
 		};
 		compareAction.setText("Compare output with gold standard");
+		
+		// Actions for toggling table columns
+		toggleLanguageColumnAction = new Action() {
+			@Override
+			public void run() {
+				toggleColumn(column_Language, COLUMN_WIDTH_LANGUAGE);
+			}
+		};
+		toggleLanguageColumnAction.setText("Show/hide '"+COLUMN_TEXT_LANGUAGE+"' column");
+		toggleLanguageColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-new.png"))); // TODO
+		
+		toggleParametersColumnAction = new Action() {
+			@Override
+			public void run() {
+				toggleColumn(column_Params, COLUMN_WIDTH_PARAMS);
+			}
+		};
+		toggleParametersColumnAction.setText("Show/hide '"+COLUMN_TEXT_PARAMS+"' column");
+		toggleParametersColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("parameter-toggle.png")));
+		
+		toggleTreeColumnAction = new Action() {
+			@Override
+			public void run() {
+				toggleColumn(column_Tree, COLUMN_WIDTH_TREE);
+			}
+		};
+		toggleTreeColumnAction.setText("Show/hide '"+COLUMN_TEXT_TREE+"' column");
+		toggleTreeColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-toggle.png")));
+	}
+	
+	/**
+	 * Toggle a column's visibility.
+	 * Note: we are using "resizable" as an indicator of whether it is visible or not, which is quite naughty.
+	 * @param column
+	 * @param width
+	 */
+	private void toggleColumn(TableViewerColumn column, int width) {
+		if (column.getColumn().getResizable()) {
+			column.getColumn().setWidth(0);
+			column.getColumn().setResizable(false);					
+		} else {
+			column.getColumn().setWidth(width);
+			column.getColumn().setResizable(true);					
+		}
 	}
 	
 	/**
@@ -600,7 +672,14 @@ public class GFTreebankManagerView extends ViewPart {
 		fillLocalToolBar(bars.getToolBarManager());
 	}
 
+	/**
+	 * Add contributions to the text menu at the top-right (i.e. when clicking the small white arrow)
+	 * @param manager
+	 */
 	private void fillLocalPullDown(IMenuManager manager) {
+		manager.add(toggleLanguageColumnAction);
+		manager.add(toggleParametersColumnAction);
+		manager.add(toggleTreeColumnAction);
 	}
 
 	private void fillContextMenu(IMenuManager manager) {
@@ -619,10 +698,15 @@ public class GFTreebankManagerView extends ViewPart {
 //		drillDownAdapter.addNavigationActions(manager);
 	}
 
+	/**
+	 * Add contributions to the button area at the top-right of the view.
+	 * Actions added here should probably have an icon associated with them.
+	 * @param manager
+	 */
 	private void fillLocalToolBar(IToolBarManager manager) {
-//		manager.add(action2);
-//		manager.add(new Separator());
-//		drillDownAdapter.addNavigationActions(manager);
+		manager.add(toggleLanguageColumnAction);
+		manager.add(toggleParametersColumnAction);
+		manager.add(toggleTreeColumnAction);
 	}
 	
 	public void setFocus() {
