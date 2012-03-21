@@ -45,7 +45,7 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 ## Release history
 
 **21/03/12**
-: (1.4.2.x) Added wizard for context-free grammars (no syntax support, though).
+: (1.4.2.x) Added wizard for context-free grammars (no syntax support, though). Context-menu option for toggling the GF Nature and Builder together.
 
 **14/03/12**
 : (1.4.1.x) GF source files can now be anywhere in project, not necessarily at top level.
