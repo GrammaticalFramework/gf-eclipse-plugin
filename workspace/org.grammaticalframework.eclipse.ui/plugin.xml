@@ -304,7 +304,7 @@
            class="org.grammaticalframework.eclipse.ui.wizards.GFNewCFGWizard"
            finalPerspective="org.grammaticalframework.eclipse.ui.gfperspective"
            hasPages="true"
-           icon="icons/gf-module-new.png"
+           icon="icons/textfile-new.png"
            id="org.grammaticalframework.eclipse.ui.wizards.GFNewCFGWizard"
            name="Context-free Grammar"
            project="false">
