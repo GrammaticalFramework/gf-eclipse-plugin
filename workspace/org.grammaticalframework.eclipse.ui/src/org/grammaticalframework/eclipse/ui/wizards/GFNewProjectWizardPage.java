@@ -15,21 +15,17 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.ModifyEvent;
-import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class GFNewProjectWizardPage.
  */
-public class GFNewProjectWizardPage extends WizardPage {
+public class GFNewProjectWizardPage extends AbstractNewFileWizardPage {
 
 	/**
 	 * The project name text.
@@ -68,19 +64,15 @@ public class GFNewProjectWizardPage extends WizardPage {
 		new Label(container, SWT.NULL).setText("&Project name:");
 		projectNameText = new Text(container, SWT.BORDER | SWT.SINGLE);
 		projectNameText.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
-		projectNameText.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
+		projectNameText.addModifyListener(listener);
 		
-		setControl(container);
+		initialize(container);
 	}
 
 	/**
 	 * Dialog changed.
 	 */
-	private void dialogChanged() {
+	protected void dialogChanged() {
 		
 		// Check format of name
 		if (getProjectName().contains(java.io.File.separator)) {
@@ -107,17 +99,7 @@ public class GFNewProjectWizardPage extends WizardPage {
 			return;
 		}
 		
-		updateStatus(null);
-	}
-
-	/**
-	 * Update status.
-	 *
-	 * @param message the message
-	 */
-	private void updateStatus(String message) {
-		setErrorMessage(message);
-		setPageComplete(message == null);
+		clearStatus();
 	}
 	
 }

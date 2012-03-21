@@ -301,6 +301,16 @@
      </wizard>
      <wizard
            category="org.grammaticalframework.eclipse.ui.category.wizards"
+           class="org.grammaticalframework.eclipse.ui.wizards.GFNewCFGWizard"
+           finalPerspective="org.grammaticalframework.eclipse.ui.gfperspective"
+           hasPages="true"
+           icon="icons/gf-module-new.png"
+           id="org.grammaticalframework.eclipse.ui.wizards.GFNewCFGWizard"
+           name="Context-free Grammar"
+           project="false">
+     </wizard>
+     <wizard
+           category="org.grammaticalframework.eclipse.ui.category.wizards"
            class="org.grammaticalframework.eclipse.ui.wizards.GFCloneModuleWizard"
            finalPerspective="org.grammaticalframework.eclipse.ui.gfperspective"
            hasPages="true"

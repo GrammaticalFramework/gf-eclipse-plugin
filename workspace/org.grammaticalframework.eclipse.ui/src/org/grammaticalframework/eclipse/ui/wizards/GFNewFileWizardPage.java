@@ -15,30 +15,19 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.dialogs.IDialogPage;
-import org.eclipse.jface.fieldassist.ContentProposalAdapter;
-import org.eclipse.jface.fieldassist.ControlDecoration;
-import org.eclipse.jface.fieldassist.FieldDecorationRegistry;
-import org.eclipse.jface.fieldassist.TextContentAdapter;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.ModifyEvent;
-import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
-import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.ui.dialogs.ContainerSelectionDialog;
-import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper.GFModuleContentProposalProvider;
-import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper.GFModuleContentAdapter;
 
 /**
  * The "New" wizard page allows setting the container for the new file as well
@@ -46,7 +35,7 @@ import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper.GFModuleConten
  * OR with the extension that matches the expected one (gf).
  */
 
-public class GFNewFileWizardPage extends WizardPage {
+public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	
 	/**
 	 * The Constant PAGE_NAME.
@@ -68,8 +57,6 @@ public class GFNewFileWizardPage extends WizardPage {
 	private Text field_Extends,field_Opens, field_Instantiates, field_With;
 	private Label label_Of, label_Instantiates, label_With;
 	
-	
-	private ISelection selection;
 	
 	private String[] moduleTypeOptions = new String[] {
 			"Abstract",		// 0
@@ -96,10 +83,7 @@ public class GFNewFileWizardPage extends WizardPage {
 	 * @param selection the selection
 	 */
 	public GFNewFileWizardPage(ISelection selection) {
-		super(PAGE_NAME);
-		setTitle(PAGE_NAME);
-		setDescription(PAGE_DESCRIPTION);
-		this.selection = selection;
+		super(PAGE_NAME, PAGE_DESCRIPTION, selection);
 	}
 
 	/**
@@ -115,13 +99,6 @@ public class GFNewFileWizardPage extends WizardPage {
 		layout.numColumns = 4;
 		layout.verticalSpacing = 5;
 		
-		// General use listener
-		ModifyListener listener = new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		};
-		
 		// Save to
 		new Label(container, SWT.NULL).setText("&Save to:");
 		field_Path = new Text(container, SWT.BORDER | SWT.SINGLE);
@@ -131,7 +108,7 @@ public class GFNewFileWizardPage extends WizardPage {
 		button.setText("Browse...");
 		button.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				handleBrowse();
+				handleBrowse(field_Path);
 			}
 		});
 		
@@ -215,33 +192,7 @@ public class GFNewFileWizardPage extends WizardPage {
 		field_Extends.addModifyListener(listener);
 		enableAutoSuggest(field_Extends);
 		
-		initialize();
-		setControl(container);
-	}
-	
-	private GFModuleContentProposalProvider proposalProvider = new GFModuleContentProposalProvider(GFWizardHelper.getModuleList(true));
-	private TextContentAdapter contentAdapter = new GFModuleContentAdapter();
-	
-	/**
-	 * Enable augo-suggest on a given field
-	 * Ref: http://www.vogella.de/articles/EclipseRCP/article.html#fieldassist 
-	 * @param field
-	 */
-	private void enableAutoSuggest(Text field) {
-//		KeyStroke keystroke = null;
-//		try {
-//			keystroke = KeyStroke.getInstance("Ctrl+Space");
-//		} catch (ParseException _) {
-//		}		
-//		new ContentProposalAdapter(field, contentAdapter, proposalProvider, keystroke, null);
-		new ContentProposalAdapter(field, contentAdapter, proposalProvider, null, null); // always activate!
-
-		// Create the decoration for the text UI component
-		final ControlDecoration deco = new ControlDecoration(field, SWT.TOP | SWT.LEFT);
-		Image image = FieldDecorationRegistry.getDefault().getFieldDecoration(FieldDecorationRegistry.DEC_CONTENT_PROPOSAL).getImage();
-		deco.setImage(image);
-//		deco.setDescriptionText("Use Ctrl+Space to see possible values");
-		deco.setDescriptionText("Auto-suggest enabled");
+		initialize(container);
 	}
 	
 	/**
@@ -324,46 +275,24 @@ public class GFNewFileWizardPage extends WizardPage {
 	/**
 	 * Tests if the current workbench selection is a suitable container to use.
 	 */
-	private void initialize() {
-		if (selection != null && selection.isEmpty() == false
-				&& selection instanceof IStructuredSelection) {
-			IStructuredSelection ssel = (IStructuredSelection) selection;
-//			if (ssel.size() > 1)
-//				return;
-			Object obj = ssel.getFirstElement();
-			if (obj instanceof IResource) {
-				IContainer container;
-				if (obj instanceof IContainer)
-					container = (IContainer) obj;
-				else
-					container = ((IResource) obj).getParent();
-				field_Path.setText(container.getFullPath().toString());
-			}
+	@Override
+	protected void initialize(Control control) {
+		Object obj = getFirstSelection();
+		if (obj != null && obj instanceof IResource) {
+			IContainer container;
+			if (obj instanceof IContainer)
+				container = (IContainer) obj;
+			else
+				container = ((IResource) obj).getParent();
+			field_Path.setText(container.getFullPath().toString());
 		}
-		setPageComplete(false);
-	}
-
-	/**
-	 * Uses the standard container selection dialog to choose the new value for
-	 * the container field.
-	 */
-
-	private void handleBrowse() {
-		ContainerSelectionDialog dialog = new ContainerSelectionDialog(
-				getShell(), ResourcesPlugin.getWorkspace().getRoot(), false,
-				"Select new file container");
-		if (dialog.open() == ContainerSelectionDialog.OK) {
-			Object[] result = dialog.getResult();
-			if (result.length == 1) {
-				field_Path.setText(((Path) result[0]).toString());
-			}
-		}
+		super.initialize(control);
 	}
 	
 	/**
 	 * Dialog changed.
 	 */
-	private void dialogChanged() {
+	protected void dialogChanged() {
 		IResource container = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getField_Path()));
 		
 		String regexModName = "[a-zA-Z_][a-zA-Z0-9_']*";
@@ -430,18 +359,7 @@ public class GFNewFileWizardPage extends WizardPage {
 			return;
 		}
 
-		updateStatus(null);
-		
-	}
-
-	/**
-	 * Update status.
-	 *
-	 * @param message the message
-	 */
-	private void updateStatus(String message) {
-		setErrorMessage(message);
-		setPageComplete(message == null);
+		clearStatus();
 	}
 
 }

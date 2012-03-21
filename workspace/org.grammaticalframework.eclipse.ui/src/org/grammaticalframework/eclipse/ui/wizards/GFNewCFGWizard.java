@@ -17,19 +17,19 @@ import org.eclipse.core.runtime.CoreException;
 /**
  * Wizard for creating a new GF module
  */
-public class GFNewFileWizard extends AbstractNewFileWizard {
+public class GFNewCFGWizard extends AbstractNewFileWizard {
 
 	/**
 	 * The page.
 	 */
-	private GFNewFileWizardPage page;
+	private GFNewCFGWizardPage page;
 
 	/**
 	 * Adding the page to the wizard.
 	 */
 	@Override
 	public void addPages() {
-		page = new GFNewFileWizardPage(selection);
+		page = new GFNewCFGWizardPage(selection);
 		addPage(page);
 	}
 
@@ -65,39 +65,7 @@ public class GFNewFileWizard extends AbstractNewFileWizard {
 	 */
 	private String generateFileContents() {
 		StringBuilder sb = new StringBuilder("-- Auto-generated template\n");
-		sb.append(page.getField_ModuleKeywords());
-		sb.append(" ");
-		sb.append(page.getField_ModuleName());
-		if (!page.getField_Of().isEmpty()) {
-			sb.append(" of ");
-			sb.append(page.getField_Of());
-		}
-		sb.append(" = ");
-		if (!page.getField_Extends().isEmpty()) {
-			sb.append(page.getField_Extends());
-			sb.append(" ** ");
-		}
-		if (!page.getField_Instantiates().isEmpty()) {
-			sb.append(page.getField_Instantiates());
-			sb.append(" with\n\t");
-			sb.append(page.getField_With());
-			if (!page.getField_Opens().isEmpty()) {
-				sb.append(" **");
-			}
-			sb.append("\n\t");
-		}
-		if (!page.getField_Opens().isEmpty()) {
-			sb.append(" open ");
-			sb.append(page.getField_Opens());
-			sb.append(" in ");
-		}
-		sb.append("{\n\n");
-		// if (page.getField_ModuleKeywords().equals("abstract")) {
-		// sb.append("\tcat\n\n\tfun\n");
-		// }
-		// if (page.getField_ModuleKeywords().equals("concrete")) {
-		// sb.append("\tlincat\n\n\tlin\n");
-		// }
+
 		sb.append("\n};\n");
 
 		return sb.toString();

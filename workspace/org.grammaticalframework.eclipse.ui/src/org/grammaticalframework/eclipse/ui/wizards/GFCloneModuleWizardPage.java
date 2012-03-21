@@ -15,11 +15,7 @@ import java.util.ArrayList;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.ModifyEvent;
-import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.GridData;
@@ -27,10 +23,11 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
-public class GFCloneModuleWizardPage extends WizardPage {
+public class GFCloneModuleWizardPage extends AbstractNewFileWizardPage {
 
 	/**
 	 * The Constant PAGE_NAME.
@@ -54,18 +51,13 @@ public class GFCloneModuleWizardPage extends WizardPage {
 	private List<IFile> files;
 	private String[] languages;
 	
-	private ISelection selection;
-	
 	/**
 	 * Constructor for SampleNewWizardPage.
 	 *
 	 * @param selection the selection
 	 */
 	public GFCloneModuleWizardPage(ISelection selection) {
-		super(PAGE_NAME);
-		setTitle(PAGE_NAME);
-		setDescription(PAGE_DESCRIPTION);
-		this.selection = selection;
+		super(PAGE_NAME, PAGE_DESCRIPTION, selection);
 	}
 
 	/**
@@ -109,11 +101,7 @@ public class GFCloneModuleWizardPage extends WizardPage {
 		field_SourceLanguageCode = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_SourceLanguageCode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 1, 1));
 		((GridData)field_SourceLanguageCode.getLayoutData()).widthHint = 35;
-		field_SourceLanguageCode.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});		
+		field_SourceLanguageCode.addModifyListener(listener);		
 		
 		// Format the languages
 		ArrayList<String> list = new ArrayList<String>(GFWizardHelper.ISOLanguageCodes.length);
@@ -154,20 +142,14 @@ public class GFCloneModuleWizardPage extends WizardPage {
 		field_NewLanguageCode = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_NewLanguageCode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 1, 1));
 		((GridData)field_NewLanguageCode.getLayoutData()).widthHint = 35;
-		field_NewLanguageCode.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
+		field_NewLanguageCode.addModifyListener(listener);
 		
 		// Blank out empty strings?
 		new Label(container, SWT.NULL);
 		field_BlankStrings = new Button(container, SWT.CHECK);
 		field_BlankStrings.setText("Replace string literals with empty string");
 
-		//
-		initialize();
-		setControl(container);
+		initialize(container);
 	}
 	
 	/**
@@ -223,33 +205,29 @@ public class GFCloneModuleWizardPage extends WizardPage {
 	/**
 	 * Tests if the current workbench selection is a suitable container to use.
 	 */
-	private void initialize() {
-		if (selection != null && selection.isEmpty() == false && selection instanceof IStructuredSelection) {
-			IStructuredSelection ssel = (IStructuredSelection) selection;
-//			if (ssel.size() > 1)
-//				return;
-			Object obj = ssel.getFirstElement();
-			if (obj instanceof IFile) {
-				IFile file = (IFile) obj;
-//				String moduleName = (file.getFileExtension()!=null) ? (file.getName().substring(0, file.getName().length()-file.getFileExtension().length()-1)) : file.getName();
-				String[] items = field_CloneFrom.getItems();
-				// Note: this is folder-structure blind.. just looks purely at names
-				for (int i = 0; i < items.length; i++) {
-					if (items[i].equals(file.getName())) {
-						field_CloneFrom.select(i);
-						setSourceLanguageCode();
-						break;
-					}
+	@Override
+	protected void initialize(Control control) {
+		Object obj = getFirstSelection();
+		if (obj != null && obj instanceof IFile) {
+			IFile file = (IFile) obj;
+//			String moduleName = (file.getFileExtension()!=null) ? (file.getName().substring(0, file.getName().length()-file.getFileExtension().length()-1)) : file.getName();
+			String[] items = field_CloneFrom.getItems();
+			// Note: this is folder-structure blind.. just looks purely at names
+			for (int i = 0; i < items.length; i++) {
+				if (items[i].equals(file.getName())) {
+					field_CloneFrom.select(i);
+					setSourceLanguageCode();
+					break;
 				}
 			}
 		}
-		setPageComplete(false);
+		super.initialize(control);
 	}
 
 	/**
 	 * Dialog changed.
 	 */
-	private void dialogChanged() {
+	protected void dialogChanged() {
 		if (getField_SourceLanguageCode().length()==0) {
 			updateStatus("You must specify a source language code");
 			return;
@@ -263,17 +241,7 @@ public class GFCloneModuleWizardPage extends WizardPage {
 			return;
 		}
 		
-		updateStatus(null);
-	}
-
-	/**
-	 * Update status.
-	 *
-	 * @param message the message
-	 */
-	public void updateStatus(String message) {
-		setErrorMessage(message);
-		setPageComplete(message == null);
+		clearStatus();
 	}
 
 }
