@@ -96,11 +96,6 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		return combo_TreebankFile.getText();
 	}
 
-//	private Text text_GoldStandardFile;
-//	public String getGoldStandardFile() {
-//		return text_GoldStandardFile.getText();
-//	}
-	
 	/**
 	 * List of treebank files in workspace
 	 */
@@ -164,11 +159,6 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		text_Options.addModifyListener(listener);
 		
 		// Batch/Interactive mode
-//		Group runModeGroup = new Group(comp, SWT.BORDER);
-//		runModeGroup.setText("Run mode");
-//		runModeGroup.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 2, 1));
-//		runModeGroup.setLayout(new GridLayout(2, false));
-		
 		button_InteractiveMode = new Button(comp, SWT.RADIO);
 		button_InteractiveMode.setText("&Interactive mode (GF shell)");
 		button_InteractiveMode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 2, 1));
@@ -241,10 +231,6 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 			}
 		});
 		
-//		// Gold standard file
-//		new Label(treebankModeGroup, SWT.NULL).setText("&Gold standard file:");
-//		text_GoldStandardFile = new Text(treebankModeGroup, SWT.BORDER | SWT.READ_ONLY);
-//		text_GoldStandardFile.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 	}
 
 	/**
@@ -260,21 +246,12 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		}
 		
 		// Check treebank stuff
-		else if (isTreebankMode() && combo_TreebankFile.getSelectionIndex() > -1) {
-			if (text_TreebankCommand.getText().trim().isEmpty()) {
+		else if (isTreebankMode()) {
+			if (combo_TreebankFile.getSelectionIndex() < 0) {
+				updateStatus("You must select a treebank file.");
+			} else if (text_TreebankCommand.getText().trim().isEmpty()) {
 				updateStatus("You must enter a treebank command, e.g. \"l -table\"");
 			}
-//			IFile treebankFile = treebankFiles.get(combo_TreebankFile.getSelectionIndex());
-//			IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
-//			if (goldStandardFile != null) {
-//				text_GoldStandardFile.setText(goldStandardFile.getName());
-//				text_GoldStandardFile.setEnabled(true);
-//				updateStatus(null);
-//			} else {
-//				text_GoldStandardFile.setText("");
-//				text_GoldStandardFile.setEnabled(false);
-//				updateStatus("No corresponding gold standard file found for "+treebankFile.getName());
-//			}
 		}
 		
 		updateLaunchConfigurationDialog();
@@ -342,9 +319,6 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 			combo_TreebankFile.setText(
 					configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, "")
 			);
-//			text_GoldStandardFile.setText(
-//					configuration.getAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, "")
-//			);
 		} catch (CoreException e) {
 		}
 
@@ -362,7 +336,6 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, isTreebankMode());
 		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND, getTreebankCommand());
 		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, getTreebankFile());
-//		configuration.setAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, getGoldStandardFile());
 		setDirty(false);
 	}
 

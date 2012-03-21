@@ -100,12 +100,7 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
 //            		ILaunchConfiguration config = configs[i];
             		ILaunchConfigurationWorkingCopy config = configs[i].copy("Copy of "+configs[i].getName());
             		
-            		// If treebank has no gold, then make gold!
-//            		if (!GFTreebankHelper.hasGoldStandardFile(treebankFile)) {
-//            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, true);
-//            		} else {
-//            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, false);
-//            		}
+            		// Make gold?
            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, isMakeGoldStandard());
             		
             		log.info(String.format("Running launch \"%s\" for treebank file \"%s\"", config.getName(), treebankFile.getName()));
@@ -148,10 +143,6 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
 		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND, IGFLaunchConfigConstants.DEFAULT_TREEBANK_COMMAND);
 		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, treebankFile.getName());
 		config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, isMakeGoldStandard());
-		
-//		if (goldStandardFile != null) {
-//			config.setAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, goldStandardFile.getName());
-//		}
 		return config;
     }
 

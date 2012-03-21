@@ -168,19 +168,12 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		opt_TreebankMode = configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, false);
 		opt_TreebankCommand = configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND, IGFLaunchConfigConstants.DEFAULT_TREEBANK_COMMAND);
 		opt_TreebankFile = configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, (String)null);
-//		opt_GoldStandardFile = configuration.getAttribute(IGFLaunchConfigConstants.GOLD_STANDARD_FILENAME, (String)null);
 		if (opt_TreebankMode) {
 			if (opt_TreebankFile == null || opt_TreebankFile.trim().isEmpty())  {
 				throw new IllegalArgumentException("No treebank file specified");
 			}
 			
 			opt_MakeGoldStandard = configuration.getAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, false);
-//			if (!opt_MakeGoldStandard) {
-//				if (opt_GoldStandardFile == null || opt_GoldStandardFile.trim().isEmpty())  {
-////					throw new IllegalArgumentException("No gold standard file specified");
-//					opt_MakeGoldStandard = true;
-//				}
-//			}
 		}
 	}
 

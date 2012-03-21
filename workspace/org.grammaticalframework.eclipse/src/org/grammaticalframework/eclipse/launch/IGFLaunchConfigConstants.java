@@ -59,11 +59,6 @@ public interface IGFLaunchConfigConstants {
 	 */
 	public static final String TREEBANK_FILENAME = prefix + "TREEBANK_FILENAME";
 	
-//	/**
-//	 * Name of gold standard file
-//	 */
-//	public static final String GOLD_STANDARD_FILENAME = prefix + "GOLD_STANDARD_FILENAME";
-	
 	/**
 	 * Hidden option for making a gold standard file
 	 */
