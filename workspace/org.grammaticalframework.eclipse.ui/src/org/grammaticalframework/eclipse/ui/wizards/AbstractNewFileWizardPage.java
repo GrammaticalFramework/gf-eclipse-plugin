@@ -199,5 +199,20 @@ public abstract class AbstractNewFileWizardPage extends WizardPage {
 		deco.setImage(image);
 //		deco.setDescriptionText("Use Ctrl+Space to see possible values");
 		deco.setDescriptionText("Auto-suggest enabled");
-	}	
+	}
+	
+	/**
+	 * Regular expression which describes a valid module name
+	 */
+	protected static String REGEX_MODULE_NAME = "[a-zA-Z_][a-zA-Z0-9_']*";
+	
+	/**
+	 * Determine if a string is a valid module name (excluding file extension).
+	 * Uses {@link #REGEX_MODULE_NAME}.
+	 * @param s
+	 * @return true if valid, false otherwise
+	 */
+	protected boolean isValidModuleName(String s) {
+		return s.matches(REGEX_MODULE_NAME);
+	}
 }

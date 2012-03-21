@@ -158,8 +158,6 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 	protected void dialogChanged() {
 		IResource container = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getField_Path()));
 		
-		String regexModName = "[a-zA-Z_][a-zA-Z0-9_']*";
-		
 		// Container / location
 		if (getField_Path().length() == 0) {
 			updateStatus("File container must be specified");
@@ -179,7 +177,7 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 			updateStatus("Module name must be specified");
 			return;
 		}
-		if (!getField_ModuleName().matches(regexModName)) {
+		if (!isValidModuleName(getField_ModuleName())) {
 			updateStatus("Module name is invalid (don't include extension)");
 			return;
 		}

@@ -295,10 +295,9 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	protected void dialogChanged() {
 		IResource container = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getField_Path()));
 		
-		String regexModName = "[a-zA-Z_][a-zA-Z0-9_']*";
-		String regexFunctor = "[a-zA-Z_][a-zA-Z0-9_']*\\s*(\\s*-?\\s*\\[.*?\\])?";
-		String regexExtends = "[a-zA-Z_][a-zA-Z0-9_']*\\s*(\\s*-?\\s*\\[.*?\\])?(\\s*,\\s*[a-zA-Z_][a-zA-Z0-9_']*\\s*(-?\\s*\\[.*?\\])?\\s*)*";
-		String regexOpens = "([a-zA-Z_][a-zA-Z0-9_']*|\\(\\s*[a-zA-Z_][a-zA-Z0-9_']*\\s*(=\\s*[a-zA-Z_][a-zA-Z0-9_']*\\s*)?\\))\\s*(\\s*,\\s*([a-zA-Z_][a-zA-Z0-9_']*|\\(\\s*[a-zA-Z_][a-zA-Z0-9_']*\\s*(=\\s*[a-zA-Z_][a-zA-Z0-9_']*\\s*)?\\))\\s*)*";
+		String regexFunctor = REGEX_MODULE_NAME + "\\s*(\\s*-?\\s*\\[.*?\\])?";
+		String regexExtends = String.format("%1$s\\s*(\\s*-?\\s*\\[.*?\\])?(\\s*,\\s*%1$s\\s*(-?\\s*\\[.*?\\])?\\s*)*", REGEX_MODULE_NAME);
+		String regexOpens = String.format("(%1$s|\\(\\s*%1$s\\s*(=\\s*%1$s\\s*)?\\))\\s*(\\s*,\\s*(%1$s|\\(\\s*%1$s\\s*(=\\s*%1$s\\s*)?\\))\\s*)*", REGEX_MODULE_NAME);
 		
 		// Container / location
 		if (getField_Path().length() == 0) {
@@ -319,7 +318,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 			updateStatus("Module name must be specified");
 			return;
 		}
-		if (!getField_ModuleName().matches(regexModName)) {
+		if (!isValidModuleName(getField_ModuleName())) {
 			updateStatus("Module name is invalid (don't include extension)");
 			return;
 		}
