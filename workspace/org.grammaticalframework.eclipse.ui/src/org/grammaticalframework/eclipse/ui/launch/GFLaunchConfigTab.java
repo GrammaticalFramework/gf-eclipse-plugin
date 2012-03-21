@@ -127,6 +127,13 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		FontData fontData = parent.getFont().getFontData()[0];
 		Font fontItalic = new Font(comp.getDisplay(), new FontData(fontData.getName(), fontData.getHeight(), SWT.ITALIC));
 		
+		// Listener
+		ModifyListener listener = new ModifyListener() {
+			public void modifyText(ModifyEvent e) {
+				dialogChanged();
+			}
+		};
+		
 		// Little notice
 		Label l = new Label(comp, SWT.NULL);
 		l.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
@@ -137,21 +144,13 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		new Label(comp, SWT.NULL).setText("&Working directory:");
 		text_WorkingDirectory = new Text(comp, SWT.BORDER | SWT.SINGLE);
 		text_WorkingDirectory.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-		text_WorkingDirectory.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
+		text_WorkingDirectory.addModifyListener(listener);
 		
 		// Filenames
 		new Label(comp, SWT.NULL).setText("&Source filenames:");
 		text_Filenames = new Text(comp, SWT.BORDER | SWT.SINGLE);
 		text_Filenames.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-		text_Filenames.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
+		text_Filenames.addModifyListener(listener);
 		new Label(comp, SWT.NULL);
 		l = new Label(comp, SWT.NULL);
 		l.setFont(fontItalic);
@@ -162,11 +161,7 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		new Label(comp, SWT.NULL).setText("&Compiler options:");
 		text_Options = new Text(comp, SWT.BORDER | SWT.SINGLE);
 		text_Options.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-		text_Options.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
+		text_Options.addModifyListener(listener);
 		
 		// Batch/Interactive mode
 //		Group runModeGroup = new Group(comp, SWT.BORDER);
@@ -224,11 +219,7 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		new Label(treebankModeGroup, SWT.NULL).setText("&Command:");
 		text_TreebankCommand = new Text(treebankModeGroup, SWT.BORDER);
 		text_TreebankCommand.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-		text_TreebankCommand.addModifyListener(new ModifyListener() {
-			public void modifyText(ModifyEvent e) {
-				dialogChanged();
-			}
-		});
+		text_TreebankCommand.addModifyListener(listener);
 		
 		// Treebank file
 		new Label(treebankModeGroup, SWT.NULL).setText("&Treebank file:");
