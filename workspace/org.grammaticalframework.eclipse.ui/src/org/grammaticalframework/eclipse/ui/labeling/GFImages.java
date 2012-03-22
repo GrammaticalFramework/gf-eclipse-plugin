@@ -205,6 +205,9 @@ public class GFImages extends PluginImageHelper {
 	/**
 	 * Run treebank set
 	 */
+	public Image forTreebankNew() {
+		return getImage("treebank-new.png");
+	}
 	public Image forTreebankRun() {
 		return getImage("treebank-run.png");
 	}

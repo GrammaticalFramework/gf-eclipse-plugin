@@ -23,6 +23,10 @@ import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.debug.core.DebugPlugin;
+import org.eclipse.debug.core.ILaunchConfiguration;
+import org.eclipse.debug.core.ILaunchConfigurationType;
+import org.eclipse.debug.core.ILaunchManager;
 import org.eclipse.jface.fieldassist.IContentProposal;
 import org.eclipse.jface.fieldassist.SimpleContentProposalProvider;
 import org.eclipse.jface.fieldassist.TextContentAdapter;
@@ -30,6 +34,7 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Text;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
+import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
 import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
 import org.grammaticalframework.eclipse.ui.natures.GFProjectNature;
 
@@ -166,6 +171,22 @@ public class GFWizardHelper {
 			return (ix < 0) ? new Point(0, pos) : new Point(ix+1, pos);
 		}
 	}
+	
+	/**
+	 * Get an array of all GF launch configurations in the workbench.
+	 * @return Array of {@link ILaunchConfiguration}s or empty list on error.
+	 */
+	public static ILaunchConfiguration[] getGFLaunchConfigs() {
+    	ILaunchManager launchManager = DebugPlugin.getDefault().getLaunchManager();
+    	ILaunchConfigurationType configType = launchManager.getLaunchConfigurationType(IGFLaunchConfigConstants.GF_LAUNCH_CONFIG_TYPE_ID);
+        try {
+			return launchManager.getLaunchConfigurations(configType);
+		} catch (CoreException e) {
+			log.error(e);
+			return new ILaunchConfiguration[]{};
+		}
+	}
+	
 	
 	public static String[][] ISOLanguageCodes = new String[][]{
 		{"Abkhazian", "abk"},

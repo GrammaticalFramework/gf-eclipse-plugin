@@ -82,7 +82,7 @@ public class GFLaunchShortcut implements ILaunchShortcut {
     protected void launch(IFile[] files, String mode) {
         try {
         	ILaunchManager launchManager = DebugPlugin.getDefault().getLaunchManager();
-        	ILaunchConfigurationType configType = launchManager.getLaunchConfigurationType("org.grammaticalframework.eclipse.GFLaunchConfigurationType");
+        	ILaunchConfigurationType configType = launchManager.getLaunchConfigurationType(IGFLaunchConfigConstants.GF_LAUNCH_CONFIG_TYPE_ID);
 	    	
             // Try to find a matching config and launch it
             ILaunchConfiguration[] configs = launchManager.getLaunchConfigurations(configType);

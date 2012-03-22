@@ -45,8 +45,10 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 	private boolean opt_TreebankMode;
 	private String opt_TreebankCommand;
 	private String opt_TreebankFile;
-//	private String opt_GoldStandardFile;
 	private boolean opt_MakeGoldStandard;
+	private boolean opt_MakeTreebank;
+	private String opt_MakeTreebankName;
+	private String opt_MakeTreebankCommand;
 	
 	/**
 	 * Logger
@@ -103,7 +105,10 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 //			});
 
 			// Do treebank stuff
-			if (opt_BatchMode && opt_TreebankMode) {
+			if (opt_MakeTreebank) {
+				makeTreebank(process);	
+			}
+			else if (opt_BatchMode && opt_TreebankMode) {
 				runTreebank(process);
 			}
 			
@@ -127,6 +132,13 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			monitor.done();
 		}
 		
+	}
+	
+	private void makeTreebank(Process process) {
+		String makeTreebankCommand = String.format("%s | wf -file=%s", opt_MakeTreebankCommand, opt_MakeTreebankName);
+		PrintWriter writer = new PrintWriter(new OutputStreamWriter(new BufferedOutputStream(process.getOutputStream())), true);
+		writer.println(makeTreebankCommand);
+		writer.println("quit");
 	}
 	
 	private void runTreebank(Process process) {
@@ -175,6 +187,11 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			
 			opt_MakeGoldStandard = configuration.getAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, false);
 		}
+		
+		opt_MakeTreebank = configuration.getAttribute(IGFLaunchConfigConstants.MAKE_TREEBANK, false);
+		opt_MakeTreebankName = configuration.getAttribute(IGFLaunchConfigConstants.MAKE_TREEBANK_NAME, (String)null);
+		opt_MakeTreebankCommand = configuration.getAttribute(IGFLaunchConfigConstants.MAKE_TREEBANK_COMMAND, (String)null);
+		
 	}
 
 }

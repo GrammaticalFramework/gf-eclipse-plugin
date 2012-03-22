@@ -250,7 +250,7 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 			if (combo_TreebankFile.getSelectionIndex() < 0) {
 				updateStatus("You must select a treebank file.");
 			} else if (text_TreebankCommand.getText().trim().isEmpty()) {
-				updateStatus("You must enter a treebank command, e.g. \"l -table\"");
+				updateStatus("You must enter a treebank command, e.g. \""+IGFLaunchConfigConstants.DEFAULT_TREEBANK_COMMAND+"\"");
 			}
 		}
 		

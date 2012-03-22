@@ -42,6 +42,8 @@ import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.jface.viewers.ViewerFilter;
+import org.eclipse.jface.wizard.IWizard;
+import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.custom.StyleRange;
@@ -59,16 +61,19 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IPartListener2;
+import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPartReference;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.eclipse.ui.part.ViewPart;
+import org.eclipse.ui.wizards.IWizardDescriptor;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
 import org.grammaticalframework.eclipse.treebank.TreebankResults;
 import org.grammaticalframework.eclipse.treebank.TreebankResultItem;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 import org.grammaticalframework.eclipse.ui.launch.GFTreebankLaunchShortcut;
+import org.grammaticalframework.eclipse.ui.wizards.GFNewTreebankWizard;
 
 import com.google.inject.Inject;
 
@@ -90,6 +95,7 @@ public class GFTreebankManagerView extends ViewPart {
 	// Actions
 	private Action runAction;
 	private Action makeGoldStandardAction;
+	private Action makeTreebankAction;
 	private Action compareAction;
 	private Action hideSuccessfulAction;
 	private Action hideLanguageColumnAction;
@@ -563,6 +569,29 @@ public class GFTreebankManagerView extends ViewPart {
 		};
 //		makeGoldStandardAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-new.png")));
 		
+		// Create a treebank
+		makeTreebankAction = new Action("Generate random treebank") {
+			@Override
+			public void run() {
+				IWorkbench workbench = PlatformUI.getWorkbench();
+				IWizardDescriptor descriptor = workbench.getNewWizardRegistry().findWizard(GFNewTreebankWizard.ID);
+				if (descriptor != null) {
+					IWizard wizard;
+					try {
+						Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+						wizard = descriptor.createWizard();
+						((GFNewTreebankWizard)wizard).init(workbench, null);
+						WizardDialog wd = new WizardDialog(shell, wizard);
+						wd.setTitle(wizard.getWindowTitle());
+						wd.open();
+					} catch (CoreException e) {
+						log.error("Unable to open New Treebank wizard", e);
+					}
+				}
+			}
+		};
+		makeTreebankAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankNew()));
+		
 		// Compare output with gold standard 
 		compareAction = new Action("Compare output with gold standard") {
 			@Override
@@ -690,6 +719,7 @@ public class GFTreebankManagerView extends ViewPart {
 		manager.add(hideLanguageColumnAction);
 		manager.add(hideParametersColumnAction);
 		manager.add(hideTreeColumnAction);
+		manager.add(makeTreebankAction);
 	}
 
 	/**
@@ -708,6 +738,7 @@ public class GFTreebankManagerView extends ViewPart {
 		} else {
 			manager.add(makeGoldStandardAction);
 		}
+		manager.add(makeTreebankAction);
 //		manager.add(new Separator());
 //		drillDownAdapter.addNavigationActions(manager);
 	}

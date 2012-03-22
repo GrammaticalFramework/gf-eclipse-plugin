@@ -319,6 +319,16 @@
            name="Clone GF Module"
            project="false">
      </wizard>
+     <wizard
+           category="org.grammaticalframework.eclipse.ui.category.wizards"
+           class="org.grammaticalframework.eclipse.ui.wizards.GFNewTreebankWizard"
+           finalPerspective="org.grammaticalframework.eclipse.ui.gfperspective"
+           hasPages="true"
+           icon="icons/treebank-new.png"
+           id="org.grammaticalframework.eclipse.ui.wizards.GFNewTreebankWizard"
+           name="Treebank"
+           project="false">
+     </wizard>
   </extension>
   <extension
         point="org.eclipse.debug.ui.launchConfigurationTypeImages">

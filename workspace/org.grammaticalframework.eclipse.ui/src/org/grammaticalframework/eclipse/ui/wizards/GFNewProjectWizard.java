@@ -21,12 +21,13 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.wizards.newresource.BasicNewProjectResourceWizard;
 import org.grammaticalframework.eclipse.ui.projects.GFProjectSupport;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class GFNewProjectWizard.
  */
 public class GFNewProjectWizard extends Wizard implements INewWizard, IExecutableExtension {
 	
+	public static String ID = "org.grammaticalframework.eclipse.ui.wizards.GFNewProjectWizard";
+
 	/**
 	 * The page.
 	 */

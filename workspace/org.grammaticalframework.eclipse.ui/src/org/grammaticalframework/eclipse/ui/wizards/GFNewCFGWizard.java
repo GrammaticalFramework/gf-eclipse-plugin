@@ -19,6 +19,8 @@ import org.eclipse.core.runtime.CoreException;
  */
 public class GFNewCFGWizard extends AbstractNewFileWizard {
 
+	public static String ID = "org.grammaticalframework.eclipse.ui.wizards.GFNewCFGWizard";
+
 	/**
 	 * The page.
 	 */

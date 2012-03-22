@@ -14,6 +14,8 @@ package org.grammaticalframework.eclipse.launch;
  */
 public interface IGFLaunchConfigConstants {
 	
+	public static String GF_LAUNCH_CONFIG_TYPE_ID = "org.grammaticalframework.eclipse.GFLaunchConfigurationType";
+	
 	static String prefix = "org.grammaticalframework.eclipse.launch.config.";
 
 	public static String DEFAULT_OPTIONS = ""; //"--force-recomp";
@@ -58,6 +60,13 @@ public interface IGFLaunchConfigConstants {
 	 * Name of treebank file
 	 */
 	public static final String TREEBANK_FILENAME = prefix + "TREEBANK_FILENAME";
+	
+	/**
+	 * Hidden options for making a treebank file
+	 */
+	public static final String MAKE_TREEBANK = prefix + "MAKE_TREEBANK";
+	public static final String MAKE_TREEBANK_NAME = prefix + "MAKE_TREEBANK_NAME";
+	public static final String MAKE_TREEBANK_COMMAND = prefix + "MAKE_TREEBANK_COMMAND";
 	
 	/**
 	 * Hidden option for making a gold standard file

@@ -28,6 +28,8 @@ import org.grammaticalframework.eclipse.GFException;
  */
 public class GFCloneModuleWizard extends AbstractNewFileWizard {
 
+	public static String ID = "org.grammaticalframework.eclipse.ui.wizards.GFCloneModuleWizard";
+
 	/**
 	 * The page.
 	 */

@@ -90,7 +90,7 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
     protected void launch(IFile treebankFile, String mode) {
         try {
         	ILaunchManager launchManager = DebugPlugin.getDefault().getLaunchManager();
-        	ILaunchConfigurationType configType = launchManager.getLaunchConfigurationType("org.grammaticalframework.eclipse.GFLaunchConfigurationType");
+        	ILaunchConfigurationType configType = launchManager.getLaunchConfigurationType(IGFLaunchConfigConstants.GF_LAUNCH_CONFIG_TYPE_ID);
             
             // Try to find a matching config and launch it
             ILaunchConfiguration[] configs = launchManager.getLaunchConfigurations(configType);
@@ -104,7 +104,6 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, isMakeGoldStandard());
             		
             		log.info(String.format("Running launch \"%s\" for treebank file \"%s\"", config.getName(), treebankFile.getName()));
-//					config.launch(mode, null);
             		DebugUITools.launch(config, mode);
 					return;
 				}
