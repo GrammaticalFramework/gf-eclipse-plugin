@@ -218,12 +218,24 @@ public class GFImages extends PluginImageHelper {
 		return getImage("treebank-ok.png");
 	}
 	public Image forTreebankFail() {
-		return getImage("treebank-error.png");
+		return getImage("treebank-fail.png");
 	}
 	public Image forTreebankError() {
 		return getImage("treebank-error.png");
 	}
+	public Image forTreebankToggle() {
+		return getImage("treebank-toggle.png");
+	}
+	public Image forTreebankToggleSuccessful() {
+		return getImage("treebank-toggle-success.png");
+	}
 	
+	public Image forParameterToggle() {
+		return getImage("parameter-toggle.png");
+	}
+	public Image forLanguageToggle() {
+		return getImage("language-toggle.png");
+	}
 
 	
 }

@@ -91,9 +91,10 @@ public class GFTreebankManagerView extends ViewPart {
 	private Action runAction;
 	private Action makeGoldStandardAction;
 	private Action compareAction;
-	private Action toggleLanguageColumnAction;
-	private Action toggleParametersColumnAction;
-	private Action toggleTreeColumnAction;
+	private Action hideSuccessfulAction;
+	private Action hideLanguageColumnAction;
+	private Action hideParametersColumnAction;
+	private Action hideTreeColumnAction;
 	
 	// Widgets
 	private Label statusLabel;
@@ -321,6 +322,13 @@ public class GFTreebankManagerView extends ViewPart {
         outputViewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
         outputViewer.getTable().setLinesVisible(true);
         outputViewer.getTable().setHeaderVisible(true);
+        outputViewer.addFilter(new ViewerFilter() {
+			@Override
+			public boolean select(Viewer viewer, Object parentElement, Object element) {
+        		TreebankResultItem item = (TreebankResultItem)element;
+        		return !(hideSuccessfulAction.isChecked() && item.isPass()); 
+			}
+		});
         
         column_Main = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
         column_Main.getColumn().setWidth(COLUMN_WIDTH_MAIN);
@@ -333,8 +341,10 @@ public class GFTreebankManagerView extends ViewPart {
         		String out = item.getOut().getMeat();
         		String gold = item.getGold().getMeat();
         		if (item.isPass()) {
-        			cell.setImage(images.forTreebankPass());
-        			cell.setText(out);
+        			if (!hideSuccessfulAction.isChecked()) {
+	        			cell.setImage(images.forTreebankPass());
+	        			cell.setText(out);
+        			}
         		} else {
         			cell.setImage(images.forTreebankFail());
 	        		StyledString text = new StyledString();
@@ -516,7 +526,7 @@ public class GFTreebankManagerView extends ViewPart {
 	 */
 	private void makeActions() {
 		// Run a single treebank
-		runAction = new Action() {
+		runAction = new Action("Run treebank") {
 			private IFile treebankFile;
 			private IFile goldStandardFile;
 			@Override
@@ -538,10 +548,9 @@ public class GFTreebankManagerView extends ViewPart {
 				launchShortcut.launch(fileViewer.getSelection(), ILaunchManager.RUN_MODE);
 			}
 		};
-		runAction.setText("Run treebank");
 		
 		// Create a gold standard file from a treebank
-		makeGoldStandardAction = new Action() {
+		makeGoldStandardAction = new Action("Make gold standard") {
 			@Override
 			public void run() {
 //				statusLabel.setText("Making gold standard");
@@ -552,11 +561,10 @@ public class GFTreebankManagerView extends ViewPart {
 				launchShortcut.launch(fileViewer.getSelection(), ILaunchManager.RUN_MODE);
 			}
 		};
-		makeGoldStandardAction.setText("Make gold standard");
 //		makeGoldStandardAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-new.png")));
 		
 		// Compare output with gold standard 
-		compareAction = new Action() {
+		compareAction = new Action("Compare output with gold standard") {
 			@Override
 			public void run() {
 				final IFile treebankFile = getSelectedTreebankFile();
@@ -573,50 +581,52 @@ public class GFTreebankManagerView extends ViewPart {
 				});
 			}
 		};
-		compareAction.setText("Compare output with gold standard");
 		
 		// Actions for toggling table columns
-		toggleLanguageColumnAction = new Action() {
+		hideSuccessfulAction = new Action("Show only failures", SWT.TOGGLE){
 			@Override
 			public void run() {
-				toggleColumn(column_Language, COLUMN_WIDTH_LANGUAGE);
+				// TODO: We are re-running the comparison each time the action is toggled. Will this be slow?
+				compareAction.run();
 			}
 		};
-		toggleLanguageColumnAction.setText("Show/hide '"+COLUMN_TEXT_LANGUAGE+"' column");
-		toggleLanguageColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-new.png"))); // TODO
+		hideSuccessfulAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankToggleSuccessful()));
 		
-		toggleParametersColumnAction = new Action() {
+		hideLanguageColumnAction = new Action("Hide '"+COLUMN_TEXT_LANGUAGE+"' column", SWT.TOGGLE) {
 			@Override
 			public void run() {
-				toggleColumn(column_Params, COLUMN_WIDTH_PARAMS);
+				toggleColumn(this, column_Language, COLUMN_WIDTH_LANGUAGE);
 			}
 		};
-		toggleParametersColumnAction.setText("Show/hide '"+COLUMN_TEXT_PARAMS+"' column");
-		toggleParametersColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("parameter-toggle.png")));
+		hideLanguageColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forLanguageToggle()));
 		
-		toggleTreeColumnAction = new Action() {
+		hideParametersColumnAction = new Action("Hide '"+COLUMN_TEXT_PARAMS+"' column", SWT.TOGGLE) {
 			@Override
 			public void run() {
-				toggleColumn(column_Tree, COLUMN_WIDTH_TREE);
+				toggleColumn(this, column_Params, COLUMN_WIDTH_PARAMS);
 			}
 		};
-		toggleTreeColumnAction.setText("Show/hide '"+COLUMN_TEXT_TREE+"' column");
-		toggleTreeColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-toggle.png")));
+		hideParametersColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forParameterToggle()));
+		
+		hideTreeColumnAction = new Action("Hide '"+COLUMN_TEXT_TREE+"' column", SWT.TOGGLE) {
+			@Override
+			public void run() {
+				toggleColumn(this, column_Tree, COLUMN_WIDTH_TREE);
+			}
+		};
+		hideTreeColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankToggle()));
 	}
 	
 	/**
 	 * Toggle a column's visibility.
-	 * Note: we are using "resizable" as an indicator of whether it is visible or not, which is quite naughty.
 	 * @param column
 	 * @param width
 	 */
-	private void toggleColumn(TableViewerColumn column, int width) {
-		if (column.getColumn().getResizable()) {
+	private void toggleColumn(Action action, TableViewerColumn column, int width) {
+		if (action.isChecked()) {
 			column.getColumn().setWidth(0);
-			column.getColumn().setResizable(false);					
 		} else {
 			column.getColumn().setWidth(width);
-			column.getColumn().setResizable(true);					
 		}
 	}
 	
@@ -643,7 +653,6 @@ public class GFTreebankManagerView extends ViewPart {
 		getOutputViewer().add(results.getItems().toArray());
 		redrawStatusBar();
 	}
-	
 
 	private void hookContextMenu() {
 		MenuManager menuMgr = new MenuManager("#PopupMenu");
@@ -677,11 +686,16 @@ public class GFTreebankManagerView extends ViewPart {
 	 * @param manager
 	 */
 	private void fillLocalPullDown(IMenuManager manager) {
-		manager.add(toggleLanguageColumnAction);
-		manager.add(toggleParametersColumnAction);
-		manager.add(toggleTreeColumnAction);
+		manager.add(hideSuccessfulAction);
+		manager.add(hideLanguageColumnAction);
+		manager.add(hideParametersColumnAction);
+		manager.add(hideTreeColumnAction);
 	}
 
+	/**
+	 * Add contributions to the {@link #fileViewer} context menu.
+	 * @param manager
+	 */
 	private void fillContextMenu(IMenuManager manager) {
 		IFile treebankFile = getSelectedTreebankFile();
 		if (treebankFile == null)
@@ -704,9 +718,10 @@ public class GFTreebankManagerView extends ViewPart {
 	 * @param manager
 	 */
 	private void fillLocalToolBar(IToolBarManager manager) {
-		manager.add(toggleLanguageColumnAction);
-		manager.add(toggleParametersColumnAction);
-		manager.add(toggleTreeColumnAction);
+		manager.add(hideSuccessfulAction);
+		manager.add(hideLanguageColumnAction);
+		manager.add(hideParametersColumnAction);
+		manager.add(hideTreeColumnAction);
 	}
 	
 	public void setFocus() {
