@@ -586,7 +586,7 @@ public class GFTreebankManagerView extends ViewPart {
 		hideSuccessfulAction = new Action("Show only failures", SWT.TOGGLE){
 			@Override
 			public void run() {
-				// TODO: We are re-running the comparison each time the action is toggled. Will this be slow?
+				// We are re-running the comparison each time the action is toggled. Will this be slow?
 				compareAction.run();
 			}
 		};
