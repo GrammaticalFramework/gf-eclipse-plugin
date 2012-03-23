@@ -116,11 +116,9 @@ public abstract class AbstractNewFileWizardPage extends WizardPage {
 	 * General purpose listener which just calls {@link #dialogChanged()}
 	 */
 	protected SelectionListener defaultSelectionListener = new SelectionListener() {
-		@Override
 		public void widgetSelected(SelectionEvent e) {
 			dialogChanged();
 		}
-		@Override
 		public void widgetDefaultSelected(SelectionEvent e) {
 			widgetSelected(e);
 		}
