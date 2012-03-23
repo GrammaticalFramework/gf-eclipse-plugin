@@ -22,10 +22,16 @@ import org.eclipse.ui.wizards.newresource.BasicNewProjectResourceWizard;
 import org.grammaticalframework.eclipse.ui.projects.GFProjectSupport;
 
 /**
- * The Class GFNewProjectWizard.
+ * Wizard for creating a new GF Project
+ * 
+ * @author John J. Camilleri
+ * 
  */
 public class GFNewProjectWizard extends Wizard implements INewWizard, IExecutableExtension {
 	
+	/**
+	 * Wizard ID
+	 */
 	public static String ID = "org.grammaticalframework.eclipse.ui.wizards.GFNewProjectWizard";
 
 	/**
@@ -34,47 +40,23 @@ public class GFNewProjectWizard extends Wizard implements INewWizard, IExecutabl
 	private GFNewProjectWizardPage page;
 
 	/**
-	 * The Constant PAGE_NAME.
-	 */
-	private static final String PAGE_NAME = "GF Project Wizard"; //$NON-NLS-1$
-	
-	/**
-	 * The Constant PAGE_DESCRIPTION.
-	 */
-	private static final String PAGE_DESCRIPTION = "This wizard creates a new GF Project and loads the GF Perspective"; //$NON-NLS-1$
-	
-	/**
-	 * The Constant WIZARD_NAME.
-	 */
-	private static final String WIZARD_NAME = "New GF Project"; //$NON-NLS-1$
-
-	/**
-	 * Instantiates a new gF new project wizard.
-	 */
-	public GFNewProjectWizard() {
-		setWindowTitle(WIZARD_NAME);
-	}
-
-	/* (non-Javadoc)
-	 * @see org.eclipse.ui.IWorkbenchWizard#init(org.eclipse.ui.IWorkbench, org.eclipse.jface.viewers.IStructuredSelection)
+	 * {@inheritDoc}
 	 */
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 	}
 
 	/**
-	 * Adding the page to the wizard.
+	 * {@inheritDoc}
 	 */
 	@Override
 	public void addPages() {
-		page = new GFNewProjectWizardPage(PAGE_NAME);
-		page.setTitle(PAGE_NAME);
-		page.setDescription(PAGE_DESCRIPTION);
+		page = new GFNewProjectWizardPage();
 		addPage(page);
 	}
 
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.jface.wizard.Wizard#performFinish()
+	/**
+	 * {@inheritDoc}
 	 */
 	public boolean performFinish() {
 	    String name = page.getProjectName();
@@ -90,15 +72,13 @@ public class GFNewProjectWizard extends Wizard implements INewWizard, IExecutabl
 	    return true;
 	}
 
-
-	
 	/**
-	 * The _configuration element.
+	 * The configuration element.
 	 */
 	private IConfigurationElement _configurationElement;
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.core.runtime.IExecutableExtension#setInitializationData(org.eclipse.core.runtime.IConfigurationElement, java.lang.String, java.lang.Object)
+	/**
+	 * {@inheritDoc}
 	 */
 	public void setInitializationData(IConfigurationElement config, String propertyName, Object data) throws CoreException {
 		_configurationElement = config;

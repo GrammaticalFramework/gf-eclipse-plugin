@@ -9,7 +9,7 @@
  */
 package org.grammaticalframework.eclipse.ui.wizards;
 
-import org.eclipse.core.runtime.*;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.debug.core.ILaunchConfigurationWorkingCopy;
 import org.eclipse.debug.core.ILaunchManager;
@@ -17,10 +17,16 @@ import org.eclipse.debug.ui.DebugUITools;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
 
 /**
- * Wizard for creating a new GF module
+ * Wizard for creating a new treebank file
+ * 
+ * @author John J. Camilleri
+ * 
  */
 public class GFNewTreebankWizard extends AbstractNewFileWizard {
 	
+	/**
+	 * Wizard ID
+	 */
 	public static String ID = "org.grammaticalframework.eclipse.ui.wizards.GFNewTreebankWizard";
 
 	/**
@@ -29,7 +35,7 @@ public class GFNewTreebankWizard extends AbstractNewFileWizard {
 	private GFNewTreebankWizardPage page;
 
 	/**
-	 * Adding the page to the wizard.
+	 * {@inheritDoc}
 	 */
 	@Override
 	public void addPages() {
@@ -38,10 +44,7 @@ public class GFNewTreebankWizard extends AbstractNewFileWizard {
 	}
 
 	/**
-	 * This method is called when 'Finish' button is pressed in the wizard. We
-	 * will create an operation and run it using wizard as execution context.
-	 * 
-	 * @return true, if successful
+	 * {@inheritDoc}
 	 */
 	public boolean performFinish() {
 		try {
@@ -50,27 +53,12 @@ public class GFNewTreebankWizard extends AbstractNewFileWizard {
 			configCopy.setAttribute(IGFLaunchConfigConstants.MAKE_TREEBANK, true);
 			configCopy.setAttribute(IGFLaunchConfigConstants.MAKE_TREEBANK_NAME, page.getField_TreebankName());
 			configCopy.setAttribute(IGFLaunchConfigConstants.MAKE_TREEBANK_COMMAND, page.getField_GenerateCommand());
-//			Display.getDefault().asyncExec(new Runnable() {
-//				public void run() {
-					DebugUITools.launch(configCopy, ILaunchManager.RUN_MODE);
-//				}
-//			});
+			DebugUITools.launch(configCopy, ILaunchManager.RUN_MODE);
 			return true;
 		} catch (CoreException e) {
 			log.error(e);
 			return false;
 		}
-//		IRunnableWithProgress op = new IRunnableWithProgress() {
-//			public void run(final IProgressMonitor monitor) throws InvocationTargetException {
-//				try {
-//				} catch (CoreException e) {
-//					throw new InvocationTargetException(e);
-//				} finally {
-//					monitor.done();
-//				}
-//			}
-//		};
-//		return performFinish(op);
 	}
 
 }

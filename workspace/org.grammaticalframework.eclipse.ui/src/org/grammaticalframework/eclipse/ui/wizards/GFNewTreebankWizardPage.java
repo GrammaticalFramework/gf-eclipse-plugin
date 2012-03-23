@@ -10,11 +10,8 @@
 package org.grammaticalframework.eclipse.ui.wizards;
 
 import org.eclipse.debug.core.ILaunchConfiguration;
-import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.layout.GridData;
@@ -26,19 +23,12 @@ import org.eclipse.swt.widgets.Text;
 import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
 
 /**
- * Wizard page for creating a new CFG
+ * Wizard page for creating a new treebank
+ * 
+ * @author John J. Camilleri
+ * 
  */
 public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
-	
-	/**
-	 * The Constant PAGE_NAME.
-	 */
-	private static final String PAGE_NAME = "Create Treebank";
-	
-	/**
-	 * The Constant PAGE_DESCRIPTION.
-	 */
-	private static final String PAGE_DESCRIPTION = "Create a treebank file using GF's 'generate_random' function.";
 	
 	/**
 	 * Default generate command
@@ -54,20 +44,32 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 
 	private ILaunchConfiguration[] launchConfigurations;
 	
+	
 	/**
-	 * Constructor for SampleNewWizardPage.
+	 * The page name
+	 */
+	public static String getPageName() {
+		return "New treebank";
+	}
+	
+	/**
+	 * The page description
+	 */
+	public static String getPageDescription() {
+		return "Create a treebank file using GF's 'generate_random' function.";
+	}
+	
+	/**
+	 * Constructor for the page.
 	 *
 	 * @param selection the selection
 	 */
 	public GFNewTreebankWizardPage(ISelection selection) {
-		super(PAGE_NAME, PAGE_DESCRIPTION, selection);
+		super(getPageName(), getPageDescription(), selection);
 	}
 
 	/**
-	 * Creates the control.
-	 *
-	 * @param parent the parent
-	 * @see IDialogPage#createControl(Composite)
+	 * {@inheritDoc}	
 	 */
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.NULL);
@@ -94,7 +96,7 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 		new Label(container, SWT.NULL).setText("File &name:");
 		field_TreebankName = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_TreebankName.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-		field_TreebankName.addModifyListener(listener);
+		field_TreebankName.addModifyListener(defaultModifyListener);
 		field_TreebankName.setFocus();
 		new Label(container, SWT.LEFT).setText(".trees");
 		
@@ -109,23 +111,14 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 			// If there's only one, select it!
 			field_LaunchConfig.select(0);
 		}
-		field_LaunchConfig.addSelectionListener(new SelectionListener() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				dialogChanged();
-			}
-			@Override
-			public void widgetDefaultSelected(SelectionEvent e) {
-				widgetSelected(e);
-			}
-		});
+		field_LaunchConfig.addSelectionListener(defaultSelectionListener);
 		
 		// Generate command
 		new Label(container, SWT.NULL).setText("Generate &command:");
 		field_GenerateCommand = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_GenerateCommand.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
 		field_GenerateCommand.setText(DEFAULT_GENERATE_COMMAND);
-		field_GenerateCommand.addModifyListener(listener);
+		field_GenerateCommand.addModifyListener(defaultModifyListener);
 
 		initialize(container);
 	}
@@ -159,7 +152,7 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 	}
 
 	/**
-	 * Dialog changed.
+	 * {@inheritDoc}
 	 */
 	protected void dialogChanged() {
 		

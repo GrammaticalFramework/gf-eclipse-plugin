@@ -14,7 +14,6 @@ import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -33,18 +32,11 @@ import org.eclipse.swt.widgets.Text;
 
 /**
  * Wizard page for creating a new CFG
+ * 
+ * @author John J. Camilleri
+ * 
  */
 public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
-	
-	/**
-	 * The Constant PAGE_NAME.
-	 */
-	private static final String PAGE_NAME = "Context-free grammar";
-	
-	/**
-	 * The Constant PAGE_DESCRIPTION.
-	 */
-	private static final String PAGE_DESCRIPTION = "This wizard creates a new context-free grammar file (*.cf or *.ebnf)";
 
 	/**
 	 * Fields
@@ -59,19 +51,30 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 	};
 
 	/**
+	 * The page name
+	 */
+	public static String getPageName() {
+		return "New context-free grammar";
+	}
+	
+	/**
+	 * The page description
+	 */
+	public static String getPageDescription() {
+		return "This wizard creates a new context-free grammar file (*.cf or *.ebnf).";
+	}
+		
+	/**
 	 * Constructor for SampleNewWizardPage.
 	 *
 	 * @param selection the selection
 	 */
 	public GFNewCFGWizardPage(ISelection selection) {
-		super(PAGE_NAME, PAGE_DESCRIPTION, selection);
+		super(getPageName(), getPageDescription(), selection);
 	}
 
 	/**
-	 * Creates the control.
-	 *
-	 * @param parent the parent
-	 * @see IDialogPage#createControl(Composite)
+	 * {@inheritDoc}
 	 */
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.NULL);
@@ -94,7 +97,7 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 		new Label(container, SWT.NULL).setText("&Save to:");
 		field_Path = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_Path.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-		field_Path.addModifyListener(listener);
+		field_Path.addModifyListener(defaultModifyListener);
 		Button button = new Button(container, SWT.PUSH);
 		button.setText("Browse...");
 		button.addSelectionListener(new SelectionAdapter() {
@@ -122,7 +125,7 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 		new Label(container, SWT.NULL).setText("Module &name:");
 		field_ModuleName = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_ModuleName.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-		field_ModuleName.addModifyListener(listener);
+		field_ModuleName.addModifyListener(defaultModifyListener);
 		field_ModuleName.setFocus();
 
 		initialize(container);
@@ -146,10 +149,18 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 		return field_ModuleName.getText();
 	}
 
+	/**
+	 * Is the BNF option selected?
+	 * @return <code>true</code> or <code>false</code>
+	 */
 	protected boolean isBNF() {
 		return field_GrammarFormat.getSelectionIndex()==0;
 	}
 	
+	/**
+	 * Is the Extended BNF option selected?
+	 * @return <code>true</code> or <code>false</code>
+	 */
 	protected boolean isExtendedBNF() {
 		return field_GrammarFormat.getSelectionIndex()==1;
 	}
@@ -171,9 +182,8 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 		super.initialize(control);
 	}
 
-	
 	/**
-	 * Dialog changed.
+	 * {@inheritDoc}
 	 */
 	protected void dialogChanged() {
 		IResource container = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getField_Path()));

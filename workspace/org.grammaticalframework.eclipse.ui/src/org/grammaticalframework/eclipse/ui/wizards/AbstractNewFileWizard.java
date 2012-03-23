@@ -43,16 +43,20 @@ import org.eclipse.ui.ide.IDE;
 import org.eclipse.xtext.ui.editor.XtextEditor;
 
 /**
- * An intermediary class which provides some common methods for file-creation wizards
+ * Abstract  class which provides some common methods for file-creation wizards
+ * 
  * @author John J. Camilleri
  *
  */
 public abstract class AbstractNewFileWizard extends Wizard implements INewWizard {
 
+	/**
+	 * Logger
+	 */
 	protected static final Logger log = Logger.getLogger(AbstractNewFileWizard.class);
 
 	/**
-	 * The selection.
+	 * The current selection.
 	 */
 	protected ISelection selection;
 
@@ -68,6 +72,11 @@ public abstract class AbstractNewFileWizard extends Wizard implements INewWizard
 		this.selection = selection;
 	}
 	
+	/**
+	 * Perform finisd with a runnable operation
+	 * @param op
+	 * @return
+	 */
 	protected boolean performFinish(IRunnableWithProgress op) {
 		try {
 			getContainer().run(true, false, op);
@@ -81,6 +90,12 @@ public abstract class AbstractNewFileWizard extends Wizard implements INewWizard
 		return true;
 	}
 	
+	/**
+	 * Find {@link IContainer} with the given name
+	 * @param containerName
+	 * @return
+	 * @throws CoreException
+	 */
 	private IContainer getContainerFromName(String containerName) throws CoreException {
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
 		IResource resource = root.findMember(new Path(containerName));
@@ -173,9 +188,9 @@ public abstract class AbstractNewFileWizard extends Wizard implements INewWizard
 				}
 			}
 		});
-		
 		monitor.worked(1);
 	}
+	
 	/**
 	 * Throw core exception.
 	 *

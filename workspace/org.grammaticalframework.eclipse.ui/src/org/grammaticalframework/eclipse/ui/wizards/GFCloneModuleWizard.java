@@ -25,9 +25,15 @@ import org.grammaticalframework.eclipse.GFException;
 
 /**
  * Wizard for cloning an existing GF module into a new language.
+ * 
+ * @author John J. Camilleri
+ * 
  */
 public class GFCloneModuleWizard extends AbstractNewFileWizard {
 
+	/**
+	 * Wizard ID
+	 */
 	public static String ID = "org.grammaticalframework.eclipse.ui.wizards.GFCloneModuleWizard";
 
 	/**
@@ -36,7 +42,7 @@ public class GFCloneModuleWizard extends AbstractNewFileWizard {
 	private GFCloneModuleWizardPage page;
 
 	/**
-	 * Adding the page to the wizard.
+	 * {@inheritDoc}
 	 */
 	@Override
 	public void addPages() {
@@ -44,6 +50,9 @@ public class GFCloneModuleWizard extends AbstractNewFileWizard {
 		addPage(page);
 	}
 
+	/**
+	 * {@inheritDoc}
+	 */
 	public boolean performFinish() {
 		IFile sourceFile = page.getField_CloneFrom();
 		String srcLanguageCode = page.getField_SourceLanguageCode();
@@ -77,6 +86,15 @@ public class GFCloneModuleWizard extends AbstractNewFileWizard {
 		return performFinish(op);
 	}
 	
+	/**
+	 * Does the work of cloning one file into another
+	 * @param sourceFile
+	 * @param srcLanguage
+	 * @param newLanguage
+	 * @param blankStrings
+	 * @return
+	 * @throws GFException
+	 */
 	private String[] cloneFile(IFile sourceFile, String srcLanguage, String newLanguage, Boolean blankStrings) throws GFException {
 		try {
 			String newModuleName = null;

@@ -22,6 +22,8 @@ import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Text;
@@ -58,7 +60,9 @@ public abstract class AbstractNewFileWizardPage extends WizardPage {
 	}
 
 	/**
-	 * {@inheritDoc}
+	 * Creates a new wizard page with the given name, and with no title or image.
+	 * 
+	 * @param pageName the page name
 	 */
 	protected AbstractNewFileWizardPage(String pageName) {
 		super(pageName);
@@ -90,11 +94,35 @@ public abstract class AbstractNewFileWizardPage extends WizardPage {
 	}
 	
 	/**
+	 * Instantiates a new abstract new file wizard page with no selection.
+	 *
+	 * @param pageName
+	 * @param pageDescription
+	 */
+	public AbstractNewFileWizardPage(String pageName, String pageDescription) {
+		this(pageName, pageDescription, (ISelection)null);
+	}
+
+	/**
 	 * General purpose listener which just calls {@link #dialogChanged()}
 	 */
-	protected ModifyListener listener = new ModifyListener() {
+	protected ModifyListener defaultModifyListener = new ModifyListener() {
 		public void modifyText(ModifyEvent e) {
 			dialogChanged();
+		}
+	};
+	
+	/**
+	 * General purpose listener which just calls {@link #dialogChanged()}
+	 */
+	protected SelectionListener defaultSelectionListener = new SelectionListener() {
+		@Override
+		public void widgetSelected(SelectionEvent e) {
+			dialogChanged();
+		}
+		@Override
+		public void widgetDefaultSelected(SelectionEvent e) {
+			widgetSelected(e);
 		}
 	};
 	
@@ -127,8 +155,7 @@ public abstract class AbstractNewFileWizardPage extends WizardPage {
 	}
 	
 	/**
-	 * Dialog changed. This method should perform all validations, calling
-	 * {@link #updateStatus(String)} or {@link #clearStatus()} as necessary.
+	 * Dialog changed; perform all validations, calling {@link #updateStatus(String)} or {@link #clearStatus()} as necessary.
 	 */
 	abstract protected void dialogChanged();
 

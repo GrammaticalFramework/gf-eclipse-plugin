@@ -16,9 +16,15 @@ import org.eclipse.core.runtime.CoreException;
 
 /**
  * Wizard for creating a new GF module
+ * 
+ * @author John J. Camilleri
+ * 
  */
 public class GFNewCFGWizard extends AbstractNewFileWizard {
 
+	/**
+	 * Wizard ID
+	 */
 	public static String ID = "org.grammaticalframework.eclipse.ui.wizards.GFNewCFGWizard";
 
 	/**
@@ -27,7 +33,7 @@ public class GFNewCFGWizard extends AbstractNewFileWizard {
 	private GFNewCFGWizardPage page;
 
 	/**
-	 * Adding the page to the wizard.
+	 * {@inheritDoc}
 	 */
 	@Override
 	public void addPages() {
@@ -36,10 +42,7 @@ public class GFNewCFGWizard extends AbstractNewFileWizard {
 	}
 
 	/**
-	 * This method is called when 'Finish' button is pressed in the wizard. We
-	 * will create an operation and run it using wizard as execution context.
-	 * 
-	 * @return true, if successful
+	 * {@inheritDoc}
 	 */
 	public boolean performFinish() {
 		final String containerName = page.getField_Path();

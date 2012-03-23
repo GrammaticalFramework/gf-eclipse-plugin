@@ -14,7 +14,6 @@ import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
-import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -30,23 +29,13 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
 /**
- * The "New" wizard page allows setting the container for the new file as well
- * as the file name. The page will only accept file name without the extension
- * OR with the extension that matches the expected one (gf).
+ * Wizard for creating a new GF module
+ * 
+ * @author John J. Camilleri
+ * 
  */
-
 public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	
-	/**
-	 * The Constant PAGE_NAME.
-	 */
-	private static final String PAGE_NAME = "GF Module";
-	
-	/**
-	 * The Constant PAGE_DESCRIPTION.
-	 */
-	private static final String PAGE_DESCRIPTION = "This wizard creates a new GF module source file (*.gf)";
-
 	/**
 	 * Fields
 	 */
@@ -57,7 +46,9 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	private Text field_Extends,field_Opens, field_Instantiates, field_With;
 	private Label label_Of, label_Instantiates, label_With;
 	
-	
+	/**
+	 * GF module types (friendly names)
+	 */
 	private String[] moduleTypeOptions = new String[] {
 			"Abstract",		// 0
 			"Concrete",		// 1
@@ -67,6 +58,10 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 			"Functor",		// 5
 			"Functor Instantiation", // 6
 	};
+	
+	/**
+	 * GF module (keywords)
+	 */
 	private String[] moduleTypeKeywords = new String[] {
     	    "abstract",		// 0
     	    "concrete",		// 1
@@ -78,19 +73,30 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
     };
 
 	/**
+	 * The page name
+	 */
+	public static String getPageName() {
+		return "New GF module";
+	}
+	
+	/**
+	 * The page description
+	 */
+	public static String getPageDescription() {
+		return "This wizard creates a new GF module source file (*.gf).";
+	}
+	
+	/**
 	 * Constructor for SampleNewWizardPage.
 	 *
 	 * @param selection the selection
 	 */
 	public GFNewFileWizardPage(ISelection selection) {
-		super(PAGE_NAME, PAGE_DESCRIPTION, selection);
+		super(getPageName(), getPageDescription(), selection);
 	}
 
 	/**
-	 * Creates the control.
-	 *
-	 * @param parent the parent
-	 * @see IDialogPage#createControl(Composite)
+	 * {@inheritDoc}	
 	 */
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.NULL);
@@ -103,7 +109,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 		new Label(container, SWT.NULL).setText("&Save to:");
 		field_Path = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_Path.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
-		field_Path.addModifyListener(listener);
+		field_Path.addModifyListener(defaultModifyListener);
 		Button button = new Button(container, SWT.PUSH);
 		button.setText("Browse...");
 		button.addSelectionListener(new SelectionAdapter() {
@@ -150,7 +156,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 		new Label(container, SWT.NULL).setText("Module &name:");
 		field_ModuleName = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_ModuleName.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-		field_ModuleName.addModifyListener(listener);
+		field_ModuleName.addModifyListener(defaultModifyListener);
 		field_ModuleName.setFocus();
 
 	    // "of" for instance/concrete
@@ -159,7 +165,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 		label_Of.setEnabled(false);
 	    field_Of = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_Of.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-		field_Of.addModifyListener(listener);
+		field_Of.addModifyListener(defaultModifyListener);
 	    field_Of.setEnabled(false);
 	    enableAutoSuggest(field_Of);
 		
@@ -169,7 +175,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 		label_Instantiates.setEnabled(false);
 		field_Instantiates = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_Instantiates.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-		field_Instantiates.addModifyListener(listener);
+		field_Instantiates.addModifyListener(defaultModifyListener);
 		field_Instantiates.setEnabled(false);
 	    enableAutoSuggest(field_Instantiates);
 		label_With = new Label(container, SWT.NULL);
@@ -177,19 +183,19 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 		label_With.setEnabled(false);
 		field_With = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_With.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-		field_With.addModifyListener(listener);
+		field_With.addModifyListener(defaultModifyListener);
 		field_With.setEnabled(false);
 		
 		// Opens & Extends are available to all!
 		new Label(container, SWT.NULL).setText("&Opens:");
 		field_Opens = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_Opens.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
-		field_Opens.addModifyListener(listener);
+		field_Opens.addModifyListener(defaultModifyListener);
 		enableAutoSuggest(field_Opens);
 		new Label(container, SWT.NULL).setText("&Extends:");
 		field_Extends = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_Extends.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
-		field_Extends.addModifyListener(listener);
+		field_Extends.addModifyListener(defaultModifyListener);
 		enableAutoSuggest(field_Extends);
 		
 		initialize(container);
@@ -290,7 +296,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	}
 	
 	/**
-	 * Dialog changed.
+	 * {@inheritDoc}
 	 */
 	protected void dialogChanged() {
 		IResource container = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getField_Path()));

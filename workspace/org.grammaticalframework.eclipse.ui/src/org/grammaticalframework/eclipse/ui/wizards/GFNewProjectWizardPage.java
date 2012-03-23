@@ -23,7 +23,10 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
 /**
- * The Class GFNewProjectWizardPage.
+ * Wizard page for creating a new GF Project
+ * 
+ * @author John J. Camilleri
+ * 
  */
 public class GFNewProjectWizardPage extends AbstractNewFileWizardPage {
 
@@ -42,16 +45,30 @@ public class GFNewProjectWizardPage extends AbstractNewFileWizardPage {
 	}
 
 	/**
+	 * The page name
+	 */
+	public static String getPageName() {
+		return "New GF project";
+	}
+	
+	/**
+	 * The page description
+	 */
+	public static String getPageDescription() {
+		return "This wizard creates a new GF project and loads the GF perspective.";
+	}
+	
+	/**
 	 * Instantiates a new gF new project wizard page.
 	 *
 	 * @param pageName the page name
 	 */
-	protected GFNewProjectWizardPage(String pageName) {
-		super(pageName);
+	protected GFNewProjectWizardPage() {
+		super(getPageName(), getPageDescription());
 	}
 	
-	/* (non-Javadoc)
-	 * @see org.eclipse.jface.dialogs.IDialogPage#createControl(org.eclipse.swt.widgets.Composite)
+	/**
+	 * {@inheritDoc}	
 	 */
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.NULL);
@@ -64,13 +81,13 @@ public class GFNewProjectWizardPage extends AbstractNewFileWizardPage {
 		new Label(container, SWT.NULL).setText("&Project name:");
 		projectNameText = new Text(container, SWT.BORDER | SWT.SINGLE);
 		projectNameText.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
-		projectNameText.addModifyListener(listener);
+		projectNameText.addModifyListener(defaultModifyListener);
 		
 		initialize(container);
 	}
 
 	/**
-	 * Dialog changed.
+	 * {@inheritDoc}
 	 */
 	protected void dialogChanged() {
 		

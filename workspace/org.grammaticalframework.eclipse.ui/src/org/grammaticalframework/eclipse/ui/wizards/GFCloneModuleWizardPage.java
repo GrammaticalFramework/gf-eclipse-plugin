@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.ArrayList;
 
 import org.eclipse.core.resources.IFile;
-import org.eclipse.jface.dialogs.IDialogPage;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
@@ -27,17 +26,13 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
+/**
+ * Wizard page for cloning an existing module
+ * 
+ * @author John J. Camilleri
+ *
+ */
 public class GFCloneModuleWizardPage extends AbstractNewFileWizardPage {
-
-	/**
-	 * The Constant PAGE_NAME.
-	 */
-	private static final String PAGE_NAME = "Clone GF Module";
-	
-	/**
-	 * The Constant PAGE_DESCRIPTION.
-	 */
-	private static final String PAGE_DESCRIPTION = "This wizard clones an existing GF module for a new language.";
 
 	/**
 	 * Fields
@@ -52,19 +47,30 @@ public class GFCloneModuleWizardPage extends AbstractNewFileWizardPage {
 	private String[] languages;
 	
 	/**
+	 * The page name
+	 */
+	public static String getPageName() {
+		return "Clone GF module";
+	}
+	
+	/**
+	 * The page description
+	 */
+	public static String getPageDescription() {
+		return "This wizard clones an existing GF module for a new language.";
+	}
+	
+	/**
 	 * Constructor for SampleNewWizardPage.
 	 *
 	 * @param selection the selection
 	 */
 	public GFCloneModuleWizardPage(ISelection selection) {
-		super(PAGE_NAME, PAGE_DESCRIPTION, selection);
+		super(getPageName(), getPageDescription(), selection);
 	}
 
 	/**
-	 * Creates the control.
-	 *
-	 * @param parent the parent
-	 * @see IDialogPage#createControl(Composite)
+	 * {@inheritDoc}	
 	 */
 	public void createControl(Composite parent) {
 		Composite container = new Composite(parent, SWT.NULL);
@@ -101,7 +107,7 @@ public class GFCloneModuleWizardPage extends AbstractNewFileWizardPage {
 		field_SourceLanguageCode = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_SourceLanguageCode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 1, 1));
 		((GridData)field_SourceLanguageCode.getLayoutData()).widthHint = 35;
-		field_SourceLanguageCode.addModifyListener(listener);		
+		field_SourceLanguageCode.addModifyListener(defaultModifyListener);		
 		
 		// Format the languages
 		ArrayList<String> list = new ArrayList<String>(GFWizardHelper.ISOLanguageCodes.length);
@@ -142,7 +148,7 @@ public class GFCloneModuleWizardPage extends AbstractNewFileWizardPage {
 		field_NewLanguageCode = new Text(container, SWT.BORDER | SWT.SINGLE);
 		field_NewLanguageCode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 1, 1));
 		((GridData)field_NewLanguageCode.getLayoutData()).widthHint = 35;
-		field_NewLanguageCode.addModifyListener(listener);
+		field_NewLanguageCode.addModifyListener(defaultModifyListener);
 		
 		// Blank out empty strings?
 		new Label(container, SWT.NULL);
@@ -225,7 +231,7 @@ public class GFCloneModuleWizardPage extends AbstractNewFileWizardPage {
 	}
 
 	/**
-	 * Dialog changed.
+	 * {@inheritDoc}
 	 */
 	protected void dialogChanged() {
 		if (getField_SourceLanguageCode().length()==0) {
