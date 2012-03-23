@@ -43,12 +43,13 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 	private boolean opt_InteractiveMode;
 	private boolean opt_BatchMode;
 	private boolean opt_TreebankMode;
-	private String opt_TreebankCommand;
+	private String opt_TreebankCommandFlags;
 	private String opt_TreebankFile;
 	private boolean opt_MakeGoldStandard;
 	private boolean opt_MakeTreebank;
 	private String opt_MakeTreebankName;
 	private String opt_MakeTreebankCommand;
+	private boolean opt_TreebankTypeLinearize;
 	
 	/**
 	 * Logger
@@ -144,7 +145,14 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 	private void runTreebank(Process process) {
 		String outExtension = opt_MakeGoldStandard ? GFTreebankHelper.getGoldStandardExtension(true) : GFTreebankHelper.getOutputExtension(true);
 		String outFileName = opt_TreebankFile + outExtension;
-		String treebankCommand = String.format("rf -lines -tree -file=%s | %s | wf -file=%s", opt_TreebankFile, opt_TreebankCommand, outFileName);
+		String treebankCommand;
+		if (opt_TreebankTypeLinearize) {
+			// Linearize
+			treebankCommand = String.format("rf -lines -tree -file=%s | l %s | wf -file=%s", opt_TreebankFile, opt_TreebankCommandFlags, outFileName);
+		} else {
+			// Parse
+			treebankCommand = String.format("rf -lines -file=%s | p %s | wf -file=%s", opt_TreebankFile, opt_TreebankCommandFlags, outFileName);
+		}
 		PrintWriter writer = new PrintWriter(new OutputStreamWriter(new BufferedOutputStream(process.getOutputStream())), true);
 		writer.println(treebankCommand);
 		writer.println("quit");
@@ -178,7 +186,8 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		opt_BatchMode = configuration.getAttribute(IGFLaunchConfigConstants.BATCH_MODE, !opt_InteractiveMode);
 		
 		opt_TreebankMode = configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, false);
-		opt_TreebankCommand = configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND, IGFLaunchConfigConstants.DEFAULT_TREEBANK_COMMAND);
+		opt_TreebankTypeLinearize = configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_TYPE_LINEARIZE, true);
+		opt_TreebankCommandFlags = configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND_FLAGS, IGFLaunchConfigConstants.DEFAULT_TREEBANK_COMMAND);
 		opt_TreebankFile = configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, (String)null);
 		if (opt_TreebankMode) {
 			if (opt_TreebankFile == null || opt_TreebankFile.trim().isEmpty())  {

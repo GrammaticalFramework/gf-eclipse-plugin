@@ -52,9 +52,14 @@ public interface IGFLaunchConfigConstants {
 	public static final String TREEBANK_MODE = prefix + "TREEBANK_MODE";
 	
 	/**
-	 * Treebank command to run (e.g. l, p)
+	 * Treebank test type
 	 */
-	public static final String TREEBANK_COMMAND = prefix + "TREEBANK_COMMAND";
+	public static final String TREEBANK_TYPE_LINEARIZE = prefix + "TREEBANK_TYPE_LINEARIZE";
+	
+	/**
+	 * Flags for the treebank command (e.g. -table)
+	 */
+	public static final String TREEBANK_COMMAND_FLAGS = prefix + "TREEBANK_COMMAND";
 	
 	/**
 	 * Name of treebank file

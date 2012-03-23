@@ -97,8 +97,8 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
             for (int i = 0; i < configs.length; i++) {
             	if (configs[i].getAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, false)
             			&& treebankFile.getName().equals( configs[i].getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, "") )) {
-//            		ILaunchConfiguration config = configs[i];
-            		ILaunchConfigurationWorkingCopy config = configs[i].copy("Copy of "+configs[i].getName());
+            		String newName = configs[i].getName() + (isMakeGoldStandard() ? " (Make Gold)" : null);
+            		ILaunchConfigurationWorkingCopy config = configs[i].copy(newName);
             		
             		// Make gold?
            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, isMakeGoldStandard());
@@ -139,7 +139,7 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
 		config.setAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, false);
 		config.setAttribute(IGFLaunchConfigConstants.BATCH_MODE, true);
 		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, true);
-		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND, IGFLaunchConfigConstants.DEFAULT_TREEBANK_COMMAND);
+		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND_FLAGS, IGFLaunchConfigConstants.DEFAULT_TREEBANK_COMMAND);
 		config.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, treebankFile.getName());
 		config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, isMakeGoldStandard());
 		return config;

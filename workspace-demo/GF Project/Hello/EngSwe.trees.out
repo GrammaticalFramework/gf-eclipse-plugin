@@ -1,8 +1,8 @@
 Lang: doctor_N
 LangEng: s Sg Nom : doctor
 s Sg Gen : doctor's
-s Pl Nom : docters
-s Pl Gen : docters'
+s Pl Nom : doctors
+s Pl Gen : doctors'
 
 LangSwe: s Sg Indef Nom : läkare
 s Sg Indef Gen : läkares
@@ -21,8 +21,8 @@ s Pl Gen : cats'
 
 LangSwe: s Sg Indef Nom : katt
 s Sg Indef Gen : katts
-s Sg Def Nom : kattan
-s Sg Def Gen : kattans
+s Sg Def Nom : katten
+s Sg Def Gen : kattens
 s Pl Indef Nom : katter
 s Pl Indef Gen : katters
 s Pl Def Nom : katterna

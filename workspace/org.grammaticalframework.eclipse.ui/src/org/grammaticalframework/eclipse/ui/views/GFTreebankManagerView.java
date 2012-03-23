@@ -27,6 +27,7 @@ import org.eclipse.jface.action.IMenuListener;
 import org.eclipse.jface.action.IMenuManager;
 import org.eclipse.jface.action.IToolBarManager;
 import org.eclipse.jface.action.MenuManager;
+import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.CellLabelProvider;
@@ -178,9 +179,9 @@ public class GFTreebankManagerView extends ViewPart {
 	
 	private static int COLUMN_WIDTH_LANGUAGE = 80;
 	
-	private static int COLUMN_WIDTH_PARAMS = 150;
+	private static int COLUMN_WIDTH_PARAMS = 120;
 	
-	private static int COLUMN_WIDTH_TREE = 200;
+	private static int COLUMN_WIDTH_TREE = 150;
 	
 	private static String COLUMN_TEXT_MAIN = "Result";
 
@@ -188,7 +189,7 @@ public class GFTreebankManagerView extends ViewPart {
 	
 	private static String COLUMN_TEXT_PARAMS = "Parameters";
 	
-	private static String COLUMN_TEXT_TREE = "Input tree";
+	private static String COLUMN_TEXT_TREE = "Input";
 
 	/**
 	 * Create the layout and put all the widgets in their places
@@ -719,6 +720,7 @@ public class GFTreebankManagerView extends ViewPart {
 		manager.add(hideLanguageColumnAction);
 		manager.add(hideParametersColumnAction);
 		manager.add(hideTreeColumnAction);
+		manager.add(new Separator());
 		manager.add(makeTreebankAction);
 	}
 
@@ -738,8 +740,7 @@ public class GFTreebankManagerView extends ViewPart {
 		} else {
 			manager.add(makeGoldStandardAction);
 		}
-		manager.add(makeTreebankAction);
-//		manager.add(new Separator());
+//		manager.add(makeTreebankAction);
 //		drillDownAdapter.addNavigationActions(manager);
 	}
 

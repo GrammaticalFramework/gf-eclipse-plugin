@@ -1,0 +1,4 @@
+
+PhrUtt NoPConj (UttCN (UseN doctor_N)) NoVoc 
+PhrUtt NoPConj (UttNP (DetCN (DetQuant IndefArt NumPl) (UseN doctor_N))) NoVoc 
+PhrUtt NoPConj (UttNP (MassNP (UseN doctor_N))) NoVoc
