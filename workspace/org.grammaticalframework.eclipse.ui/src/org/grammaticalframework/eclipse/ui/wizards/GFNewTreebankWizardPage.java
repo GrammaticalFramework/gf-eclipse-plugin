@@ -19,9 +19,9 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.widgets.Text;
 import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
 
@@ -49,7 +49,7 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 	 * Fields
 	 */
 	private Text field_TreebankName;
-	private List field_LaunchConfig;
+	private Combo field_LaunchConfig;
 	private Text field_GenerateCommand;
 
 	private ILaunchConfiguration[] launchConfigurations;
@@ -99,8 +99,8 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 		new Label(container, SWT.LEFT).setText(".trees");
 		
 		// Launch config
-		new Label(container, SWT.TOP).setText("&Launch configuration:\n(select one)");
-		field_LaunchConfig = new List(container, SWT.BORDER | SWT.SINGLE);
+		new Label(container, SWT.TOP).setText("&Launch configuration:");
+		field_LaunchConfig = new Combo(container, SWT.BORDER | SWT.READ_ONLY);
 		field_LaunchConfig.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
 		for (int i = 0; i < launchConfigurations.length; i++) {
 			field_LaunchConfig.add(launchConfigurations[i].getName());
