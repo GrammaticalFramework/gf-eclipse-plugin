@@ -213,7 +213,7 @@ Use Eclipes' own features to drag and drop your editor tabs to suit your needs.
 ![The editor and outline view](http://www.grammaticalframework.org/eclipse/images/eclipse-editor-general.png)
 
 ### Outline view
-The **Outline** view in the bottom-right offers a quite overview of your module structure. Clicking any of the terms will make your cursor jump to that point in the file.
+The **Outline** view in the bottom-left offers a quite overview of your module structure. Clicking any of the terms will make your cursor jump to that point in the file.
 
 ### Cross-referencing errors and warnings
 Notice how changing a `cat` definition for example will produce warnings and/or errors in other the modules.
@@ -346,6 +346,6 @@ Description of some of the icons which are used in the GF Eclipse Plugin.
 |![](http://www.grammaticalframework.org/eclipse/images/module-resource.png)  | Resource module |`resource ResFoods = ...`|
 |![](http://www.grammaticalframework.org/eclipse/images/module-interface.png)  | Interface |`interface LexFoods = ...`|
 |![](http://www.grammaticalframework.org/eclipse/images/module-instance.png)  | Instance |`instance LexFoodsEng of LexFoods = ...`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-functor.png)  | Functor |`incomplete concrete FodosI of Foods = ...`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-functor.png)  | Functor |`incomplete concrete FoodsI of Foods = ...`|
 |![](http://www.grammaticalframework.org/eclipse/images/module-functor-instantiation.png)  | Functor instantiation |`concrete FoodsEng of Foods = FoodsI with (...) ...`|
 
