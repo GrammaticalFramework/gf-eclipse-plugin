@@ -21,6 +21,13 @@
            name="Grammatical Framework">
      </launchConfigurationType>
   </extension>
+  <extension
+        point="org.eclipse.debug.core.processFactories">
+     <processFactory
+           class="org.grammaticalframework.eclipse.launch.EchoProcessFactory"
+           id="org.grammaticalframework.eclipse.launch.EchoProcessFactoryID">
+     </processFactory>
+  </extension>
 
 
 

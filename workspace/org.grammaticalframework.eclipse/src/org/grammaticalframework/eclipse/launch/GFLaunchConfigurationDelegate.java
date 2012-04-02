@@ -9,12 +9,17 @@
  */
 package org.grammaticalframework.eclipse.launch;
 import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStreamWriter;
+import java.io.PipedOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IProject;
@@ -144,7 +149,11 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			b.directory(new File(opt_WorkingDir));
 			b.redirectErrorStream(true);
 			Process process = b.start();
-//			Process process = DebugPlugin.exec(command.toArray(new String[command.size()]), new File(opt_WorkingDir));
+	
+			// Can't even manage to use the custom processfactory!
+			//.setAttribute(DebugPlugin.ATTR_PROCESS_FACTORY_ID, EchoProcessFactory.ID);
+			
+			// Process process = DebugPlugin.exec(command.toArray(new String[command.size()]), new File(opt_WorkingDir));
 			IProcess iProcess = DebugPlugin.newProcess(launch, process, "gf");
 			setupWriter(process);
 			setupWriter(iProcess);
@@ -210,6 +219,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		proxy = iProcess.getStreamsProxy();
 		proxy.getOutputStreamMonitor().addListener(new IStreamListener() {
 			public void streamAppended(String text, IStreamMonitor monitor) {
+				text.trim();
 			}
 		});
 	}
@@ -222,6 +232,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 	private void gfCommand(String s) throws IOException {
 		// TODO Commands passed to GF should also show up in the Eclipse console!
 //		writer.println(s);
+//		proxy.write("! echo \"" + s + "\"\n");
 		proxy.write(s + "\n");
 	}
 	
