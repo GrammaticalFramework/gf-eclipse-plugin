@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 22 March 2012
+Updated: 2 April 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914._
 
@@ -19,7 +19,7 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 
 ### Links
 
-- This document shall contain the most up-to-date information about the plugin. The most up-to-date version of this file can always be found in the source-code repository at [GitHub](https://github.com/GrammaticalFramework/gf-eclipse-plugin/blob/master/README.md)
+- This document shall contain all collected information about the plugin. The most up-to-date version of this file can always be found in the source-code repository at [GitHub](https://github.com/GrammaticalFramework/gf-eclipse-plugin/blob/master/README.md)
 - Source code repository is at [github.com/GrammaticalFramework/gf-eclipse-plugin](https://github.com/GrammaticalFramework/gf-eclipse-plugin)
 - For reporting bugs and requesting features, please use the [GitHub Issue Tracker](https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues)
 - Here are some [example GF projects](http://www.grammaticalframework.org/eclipse/examples/) for testing out the plugin features.
@@ -84,7 +84,7 @@ The GFEP is being developed by  as part of Work Package 2 of the [MOLTO Project]
 
 ### System requirements
 
-1. [GF version 3.3.3](http://www.grammaticalframework.org/download/release-3.3.3.html) or above. The path to GF must be set within the plugin (see below).
+1. [GF 3.3.3](http://www.grammaticalframework.org/download/release-3.3.3.html) or above. The path to GF must be set within the plugin (see below).
 1. [Eclipse](http://www.eclipse.org/downloads/) 3.6 or above.
 
 ### Installing the plugin for the first time
