@@ -220,6 +220,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 	 * @throws IOException
 	 */
 	private void gfCommand(String s) throws IOException {
+		// TODO Commands passed to GF should also show up in the Eclipse console!
 //		writer.println(s);
 		proxy.write(s + "\n");
 	}
