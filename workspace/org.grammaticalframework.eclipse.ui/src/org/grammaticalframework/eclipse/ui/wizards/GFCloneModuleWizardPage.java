@@ -186,7 +186,7 @@ public class GFCloneModuleWizardPage extends AbstractNewFileWizardPage {
 	 * @return source language code
 	 */
 	protected String getField_SourceLanguageCode() {
-		return field_SourceLanguageCode.getText();
+		return field_SourceLanguageCode.getText().trim();
 	}
 	
 	/**
@@ -195,7 +195,7 @@ public class GFCloneModuleWizardPage extends AbstractNewFileWizardPage {
 	 * @return new language code
 	 */
 	protected String getField_NewLanguageCode() {
-		return field_NewLanguageCode.getText();
+		return field_NewLanguageCode.getText().trim();
 	}
 	
 	/**

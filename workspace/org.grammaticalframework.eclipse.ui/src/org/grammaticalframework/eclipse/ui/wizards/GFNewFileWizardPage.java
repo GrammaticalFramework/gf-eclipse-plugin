@@ -221,7 +221,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	 * @return the mod of
 	 */
 	protected String getField_Of() {
-		return field_Of.getText();
+		return field_Of.getText().trim();
 	}
 
 	/**
@@ -230,7 +230,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	 * @return the module extends
 	 */
 	protected String getField_Extends() {
-		return field_Extends.getText();
+		return field_Extends.getText().trim();
 	}
 	
 	/**
@@ -239,7 +239,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	 * @return the module functor
 	 */
 	protected String getField_Instantiates() {
-		return field_Instantiates.getText();
+		return field_Instantiates.getText().trim();
 	}
 	
 	/**
@@ -248,7 +248,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	 * @return the module instantiates
 	 */
 	protected String getField_With() {
-		return field_With.getText();
+		return field_With.getText().trim();
 	}
 	
 	/**
@@ -257,7 +257,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	 * @return the module opens
 	 */
 	protected String getField_Opens() {
-		return field_Opens.getText();
+		return field_Opens.getText().trim();
 	}
 	
 	/**
@@ -266,7 +266,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	 * @return the module name
 	 */
 	protected String getField_ModuleName() {
-		return field_ModuleName.getText();
+		return field_ModuleName.getText().trim();
 	}
 
 	/**
@@ -275,7 +275,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 	 * @return the container name
 	 */
 	protected String getField_Path() {
-		return field_Path.getText();
+		return field_Path.getText().trim();
 	}
 
 	/**
@@ -306,7 +306,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 		String regexOpens = String.format("(%1$s|\\(\\s*%1$s\\s*(=\\s*%1$s\\s*)?\\))\\s*(\\s*,\\s*(%1$s|\\(\\s*%1$s\\s*(=\\s*%1$s\\s*)?\\))\\s*)*", REGEX_MODULE_NAME);
 		
 		// Container / location
-		if (getField_Path().length() == 0) {
+		if (getField_Path().isEmpty()) {
 			updateStatus("File container must be specified");
 			return;
 		}
@@ -320,7 +320,7 @@ public class GFNewFileWizardPage extends AbstractNewFileWizardPage {
 		}
 
 		// Module name
-		if (getField_ModuleName().length() == 0) {
+		if (getField_ModuleName().isEmpty()) {
 			updateStatus("Module name must be specified");
 			return;
 		}

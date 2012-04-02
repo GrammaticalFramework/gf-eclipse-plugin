@@ -137,7 +137,7 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 	 * @return the container name
 	 */
 	protected String getField_Path() {
-		return field_Path.getText();
+		return field_Path.getText().trim();
 	}
 
 	/**
@@ -146,7 +146,7 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 	 * @return the module name
 	 */
 	protected String getField_ModuleName() {
-		return field_ModuleName.getText();
+		return field_ModuleName.getText().trim();
 	}
 
 	/**
@@ -189,7 +189,7 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 		IResource container = ResourcesPlugin.getWorkspace().getRoot().findMember(new Path(getField_Path()));
 		
 		// Container / location
-		if (getField_Path().length() == 0) {
+		if (getField_Path().isEmpty()) {
 			updateStatus("File container must be specified");
 			return;
 		}
@@ -203,7 +203,7 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 		}
 
 		// Module name
-		if (getField_ModuleName().length() == 0) {
+		if (getField_ModuleName().isEmpty()) {
 			updateStatus("Module name must be specified");
 			return;
 		}

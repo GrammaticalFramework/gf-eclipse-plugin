@@ -41,7 +41,7 @@ public class GFNewProjectWizardPage extends AbstractNewFileWizardPage {
 	 * @return the project name
 	 */
 	public String getProjectName() {
-		return projectNameText.getText();
+		return projectNameText.getText().trim();
 	}
 
 	/**

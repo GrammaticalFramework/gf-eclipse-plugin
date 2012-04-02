@@ -129,7 +129,7 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 	 * @return the treebank name
 	 */
 	protected String getField_TreebankName() {
-		return field_TreebankName.getText() + GFTreebankHelper.getTreebankExtension(true);
+		return field_TreebankName.getText().trim() + GFTreebankHelper.getTreebankExtension(true);
 	}
 	
 	/**
@@ -148,7 +148,7 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 	 * @return the generate command
 	 */
 	protected String getField_GenerateCommand() {
-		return field_GenerateCommand.getText();
+		return field_GenerateCommand.getText().trim();
 	}
 
 	/**
@@ -157,7 +157,7 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 	protected void dialogChanged() {
 		
 		// Module name
-		if (getField_TreebankName().trim().isEmpty()) {
+		if (getField_TreebankName().isEmpty()) {
 			updateStatus("A file name must be specified.");
 			return;
 		}
@@ -169,7 +169,7 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 		}
 		
 		// Command
-		if (getField_GenerateCommand().trim().isEmpty()) {
+		if (getField_GenerateCommand().isEmpty()) {
 			updateStatus("Please enter a generate command, e.g. \""+DEFAULT_GENERATE_COMMAND+"\"");
 			return;
 		}
