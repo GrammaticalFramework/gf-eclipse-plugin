@@ -37,6 +37,11 @@ public interface IGFLaunchConfigConstants {
 	public static final String OPTIONS = prefix + "OPTIONS";
 	
 	/**
+	 * Arbitrary commands
+	 */
+	public static final String COMMANDS = prefix + "COMMANDS";
+	
+	/**
 	 * Run in interactive mode (mutually exclusive with batch mode)
 	 */
 	public static final String INTERACTIVE_MODE = prefix + "INTERACTIVE_MODE";

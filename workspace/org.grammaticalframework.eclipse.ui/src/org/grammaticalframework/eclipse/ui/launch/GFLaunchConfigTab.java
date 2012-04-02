@@ -57,19 +57,24 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	// UI widgets
 	private Text text_WorkingDirectory;
 	public String getWorkingDirectory() {
-		return text_WorkingDirectory.getText();
+		return text_WorkingDirectory.getText().trim();
 	}
 	
 	private Text text_Filenames;
 	public String getFilenames() {
-		return text_Filenames.getText();
+		return text_Filenames.getText().trim();
 	}
 
 	private Text text_Options;
 	public String getOptions() {
-		return text_Options.getText();
+		return text_Options.getText().trim();
 	}
 	
+	private Text text_BatchCommands;
+	public String getBatchCommands() {
+		return text_BatchCommands.getText().trim();
+	}
+
 	private Button button_InteractiveMode;
 	public Boolean isInteractiveMode() {
 		return button_InteractiveMode.getSelection();
@@ -97,12 +102,12 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	
 	private Text text_TreebankCommandFlags;
 	public String getTreebankCommand() {
-		return text_TreebankCommandFlags.getText();
+		return text_TreebankCommandFlags.getText().trim();
 	}
 
 	private Combo combo_TreebankFile;
 	public String getTreebankFile() {
-		return combo_TreebankFile.getText();
+		return combo_TreebankFile.getText().trim();
 	}
 
 	/**
@@ -110,8 +115,8 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	 */
 	private List<IFile> treebankFiles;
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#createControl(org.eclipse.swt.widgets.Composite)
+	/**
+	 * {@inheritDoc}
 	 */
 	public void createControl(Composite parent) {
 		Composite comp = new Composite(parent, SWT.NONE);
@@ -166,18 +171,31 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		new Label(comp, SWT.NULL);
 		l = new Label(comp, SWT.NULL);
 		l.setFont(fontItalic);
-		l.setText("The names of the files to compile, separated by spaces ");
+		l.setText("The names of the files to compile, separated by spaces. ");
 		
 		
 		// Compiler options
-		new Label(comp, SWT.NULL).setText("&Compiler options:");
+		new Label(comp, SWT.NULL).setText("Compiler &options:");
 		text_Options = new Text(comp, SWT.BORDER | SWT.SINGLE);
 		text_Options.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 		text_Options.addModifyListener(modifyListener);
 		
+		// Arbitrary command
+		l = new Label(comp, SWT.NULL);
+		l.setText("Other &commands:");
+		l.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false));
+		text_BatchCommands = new Text(comp, SWT.MULTI | SWT.V_SCROLL | SWT.WRAP | SWT.BORDER);
+		text_BatchCommands.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+		((GridData)text_BatchCommands.getLayoutData()).horizontalIndent = 2;
+		text_BatchCommands.addModifyListener(modifyListener);
+		new Label(comp, SWT.NULL);
+		l = new Label(comp, SWT.NULL);
+		l.setFont(fontItalic);
+		l.setText("Any commands to be executed in the GF shell (one per line). ");
+		
 		// Batch/Interactive mode
 		button_InteractiveMode = new Button(comp, SWT.RADIO);
-		button_InteractiveMode.setText("&Interactive mode (GF shell)");
+		button_InteractiveMode.setText("&Interactive mode");
 		button_InteractiveMode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 2, 1));
 		button_InteractiveMode.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
@@ -190,18 +208,18 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		});
 		
 		button_BatchMode = new Button(comp, SWT.RADIO);
-		button_BatchMode.setText("&Batch mode:");
+		button_BatchMode.setText("&Batch mode");
 		button_BatchMode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
 		button_BatchMode.addSelectionListener(selectionListener);
 		
 		// The Treebank testing box
 		Group treebankModeGroup = new Group(comp, SWT.BORDER);
-		treebankModeGroup.setText("Treebank testing");
+		treebankModeGroup.setText(" Treebank testing ");
 		treebankModeGroup.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1));
 		treebankModeGroup.setLayout(new GridLayout(3, false));
 
 		button_TreebankMode = new Button(treebankModeGroup, SWT.CHECK);
-		button_TreebankMode.setText("&Run treebank test");
+		button_TreebankMode.setText("Run &treebank test");
 		button_TreebankMode.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
 				if (button_TreebankMode.getSelection()) {
@@ -217,7 +235,7 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		button_TreebankMode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 3, 1));
 		
 		// Linearize / parse
-		new Label(treebankModeGroup, SWT.NULL).setText("&Type:");
+		new Label(treebankModeGroup, SWT.NULL).setText("Type:");
 		button_TreebankLinMode = new Button(treebankModeGroup, SWT.RADIO);
 		button_TreebankLinMode.setText("&Linearize");
 		button_TreebankLinMode.addSelectionListener(selectionListener);
@@ -261,7 +279,7 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		clearStatus();
 		
 		// Check filenames
-		if (getFilenames().trim().isEmpty()) {
+		if (getFilenames().isEmpty()) {
 			updateStatus("A least one module file must be specified.");
 		}
 		
@@ -295,15 +313,15 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		updateStatus(null);
 	}
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#setDefaults(org.eclipse.debug.core.ILaunchConfigurationWorkingCopy)
+	/**
+	 * {@inheritDoc}
 	 */
 	public void setDefaults(ILaunchConfigurationWorkingCopy configuration) {
 		configuration.setContainer(null);
 	}
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#initializeFrom(org.eclipse.debug.core.ILaunchConfiguration)
+	/**
+	 * {@inheritDoc}
 	 */
 	public void initializeFrom(ILaunchConfiguration configuration) {
 
@@ -327,6 +345,9 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 			);
 			text_Options.setText(
 					configuration.getAttribute(IGFLaunchConfigConstants.OPTIONS, IGFLaunchConfigConstants.DEFAULT_OPTIONS)
+					);
+			text_BatchCommands.setText(
+					configuration.getAttribute(IGFLaunchConfigConstants.COMMANDS, "")
 			);
 			boolean interactiveMode = configuration.getAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, false);
 			button_InteractiveMode.setSelection(interactiveMode);
@@ -350,13 +371,14 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 
 	}
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.debug.ui.ILaunchConfigurationTab#performApply(org.eclipse.debug.core.ILaunchConfigurationWorkingCopy)
+	/**
+	 * {@inheritDoc}
 	 */
 	public void performApply(ILaunchConfigurationWorkingCopy configuration) {
 		configuration.setAttribute(IGFLaunchConfigConstants.WORKING_DIR, getWorkingDirectory());
 		configuration.setAttribute(IGFLaunchConfigConstants.FILENAMES, getFilenames());
 		configuration.setAttribute(IGFLaunchConfigConstants.OPTIONS, getOptions());
+		configuration.setAttribute(IGFLaunchConfigConstants.COMMANDS, getBatchCommands());
 		configuration.setAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, isInteractiveMode());
 		configuration.setAttribute(IGFLaunchConfigConstants.BATCH_MODE, isBatchMode());
 		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, isTreebankMode());
@@ -367,14 +389,14 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 	}
 
 	/**
-	 * Name of the launch config tab
+	 * {@inheritDoc}
 	 */
 	public String getName() {
 		return "GF"; 
 	}
 
 	/**
-	 * Image for the launch config tab
+	 * {@inheritDoc}
 	 */
 	@Override
 	public Image getImage() {
