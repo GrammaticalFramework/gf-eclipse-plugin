@@ -25,7 +25,6 @@ public class EchoProcessFactory implements IProcessFactory {
 	public static final String ID = "org.grammaticalframework.eclipse.launch.EchoProcessFactoryID";
 
 	@SuppressWarnings("rawtypes")
-	@Override
 	public IProcess newProcess(ILaunch launch, Process process, String label, Map attributes) {
 		// TODO Auto-generated method stub
 		return null;
