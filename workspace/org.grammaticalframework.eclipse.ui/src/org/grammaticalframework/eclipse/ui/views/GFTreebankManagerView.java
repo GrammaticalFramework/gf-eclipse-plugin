@@ -507,22 +507,20 @@ public class GFTreebankManagerView extends ViewPart {
 				try {
 					event.getDelta().accept(new IResourceDeltaVisitor() {
 						public boolean visit(IResourceDelta delta) throws CoreException {
-							try {
-								if (delta.getResource() instanceof IFile
-										&& (delta.getKind() == IResourceDelta.ADDED || delta.getKind() == IResourceDelta.CHANGED)
-										&& ((IFile)delta.getResource()).getFileExtension().equalsIgnoreCase(GFTestHelper.getOutputExtension(false))) {
-									final IFile outputFile = (IFile) delta.getResource();
-									final IFile inputFile = GFTestHelper.getInputFileFromOutputFile(outputFile);
-									final IFile goldStandardFile = GFTestHelper.getGoldStandardFile(inputFile);
+							if (delta.getResource() instanceof IFile
+									&& (delta.getKind() == IResourceDelta.ADDED || delta.getKind() == IResourceDelta.CHANGED)
+									&& ((IFile)delta.getResource()).getFileExtension().equalsIgnoreCase(GFTestHelper.getOutputExtension(false))) {
+								final IFile outputFile = (IFile) delta.getResource();
+								final IFile inputFile = GFTestHelper.getInputFileFromOutputFile(outputFile);
+								final IFile goldStandardFile = GFTestHelper.getGoldStandardFile(inputFile);
+								if (goldStandardFile!=null) {
 									Display.getDefault().syncExec(new Runnable() {
 										public void run() {
 											compareOutputWithGoldStandard(inputFile, outputFile, goldStandardFile);
 										}
 									});
-									return false; // stop looking... right?
 								}
-							} catch (NullPointerException e) {
-								//
+								return false; // stop looking... right?
 							}
 							return true; // keep looking
 						}
