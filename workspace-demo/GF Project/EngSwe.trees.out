@@ -6,8 +6,8 @@ s Pl Gen : doctors'
 
 LangSwe: s Sg Indef Nom : läkare
 s Sg Indef Gen : läkares
-s Sg Def Nom : läkaren
-s Sg Def Gen : läkarens
+s Sg Def Nom : läkaran
+s Sg Def Gen : läkarans
 s Pl Indef Nom : läkare
 s Pl Indef Gen : läkares
 s Pl Def Nom : läkarna
