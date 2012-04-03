@@ -14,9 +14,9 @@ package org.grammaticalframework.eclipse.treebank;
  * @author John J. Camilleri
  *
  */
-public class TreebankResultItem {
+public class TestResultItem {
 	
-	private SyntaxTree tree;
+	private InputItem in;
 	
 	private OutputItem out;
 	
@@ -25,11 +25,12 @@ public class TreebankResultItem {
 	private boolean pass;
 
 	/**
-	 * Get the abstract syntax tree
-	 * @return
+	 * Get the input.
+	 *
+	 * @return the in
 	 */
-	public SyntaxTree getTree() {
-		return tree;
+	public InputItem getIn() {
+		return in;
 	}
 
 	/**
@@ -52,17 +53,17 @@ public class TreebankResultItem {
 	 * Has this item passed?
 	 * @return
 	 */
-	public boolean isPass() {
+	public Boolean isPass() {
 		return pass;
 	}
 	
-	public TreebankResultItem(OutputItem out, OutputItem gold) {
+	public TestResultItem(OutputItem out, OutputItem gold) {
 		this(null, out, gold);
 	}
 	
-	public TreebankResultItem(SyntaxTree tree, OutputItem out, OutputItem gold) {
+	public TestResultItem(InputItem tree, OutputItem out, OutputItem gold) {
 		super();
-		this.tree = tree;
+		this.in = tree;
 		this.out = out;
 		this.gold = gold;
 		calculateScore();

@@ -20,15 +20,15 @@ import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
+import org.grammaticalframework.eclipse.treebank.GFTestHelper;
 
 /**
- * Wizard page for creating a new treebank
+ * Wizard page for creating a new trees file
  * 
  * @author John J. Camilleri
  * 
  */
-public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
+public class GFNewTreesWizardPage extends AbstractNewFileWizardPage {
 	
 	/**
 	 * Default generate command
@@ -38,7 +38,7 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 	/**
 	 * Fields
 	 */
-	private Text field_TreebankName;
+	private Text field_TreesFileName;
 	private Combo field_LaunchConfig;
 	private Text field_GenerateCommand;
 
@@ -49,14 +49,14 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 	 * The page name
 	 */
 	public static String getPageName() {
-		return "New treebank";
+		return "New trees file";
 	}
 	
 	/**
 	 * The page description
 	 */
 	public static String getPageDescription() {
-		return "Create a treebank file using GF's 'generate_random' function.";
+		return "Create a file of trees using GF's 'generate_random' function.";
 	}
 	
 	/**
@@ -64,7 +64,7 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 	 *
 	 * @param selection the selection
 	 */
-	public GFNewTreebankWizardPage(ISelection selection) {
+	public GFNewTreesWizardPage(ISelection selection) {
 		super(getPageName(), getPageDescription(), selection);
 	}
 
@@ -92,13 +92,13 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 			return;
 		}
 		
-		// Treebank file name
+		// Trees file name
 		new Label(container, SWT.NULL).setText("File &name:");
-		field_TreebankName = new Text(container, SWT.BORDER | SWT.SINGLE);
-		field_TreebankName.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
-		field_TreebankName.addModifyListener(defaultModifyListener);
-		field_TreebankName.setFocus();
-		new Label(container, SWT.LEFT).setText(".trees");
+		field_TreesFileName = new Text(container, SWT.BORDER | SWT.SINGLE);
+		field_TreesFileName.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
+		field_TreesFileName.addModifyListener(defaultModifyListener);
+		field_TreesFileName.setFocus();
+		new Label(container, SWT.LEFT).setText(GFTestHelper.getTreesFileExtension(true));
 		
 		// Launch config
 		new Label(container, SWT.TOP).setText("&Launch configuration:");
@@ -124,12 +124,12 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 	}
 	
 	/**
-	 * Gets the treebank file name.
+	 * Gets the trees file name.
 	 *
-	 * @return the treebank name
+	 * @return the trees name
 	 */
-	protected String getField_TreebankName() {
-		return field_TreebankName.getText().trim() + GFTreebankHelper.getTreebankExtension(true);
+	protected String getField_TreesFileName() {
+		return field_TreesFileName.getText().trim() + GFTestHelper.getTreesFileExtension(true);
 	}
 	
 	/**
@@ -157,7 +157,7 @@ public class GFNewTreebankWizardPage extends AbstractNewFileWizardPage {
 	protected void dialogChanged() {
 		
 		// Module name
-		if (getField_TreebankName().isEmpty()) {
+		if (getField_TreesFileName().isEmpty()) {
 			updateStatus("A file name must be specified.");
 			return;
 		}

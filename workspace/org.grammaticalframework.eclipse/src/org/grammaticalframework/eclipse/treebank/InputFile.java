@@ -15,16 +15,16 @@ import java.io.InputStreamReader;
 import org.eclipse.core.resources.IFile;
 
 /**
- * A collection of abstract syntax trees
+ * A file containing a collection of {@link InputItem}s.
  */
-public class Treebank extends AbstractCollectionFile<SyntaxTree> {
+public class InputFile extends AbstractCollectionFile<InputItem> {
 	
-	public Treebank(IFile treebankFile) {
-		super(treebankFile);
+	public InputFile(IFile inputFile) {
+		super(inputFile);
 	}
 	
 	/**
-	 * Parse the treebank file into a collection of AbstractSyntaxTrees
+	 * Parse the input file into a collection of {@link InputItem}s.
 	 */
 	protected void parseFile() {
 		BufferedReader treeReader = null;
@@ -40,7 +40,7 @@ public class Treebank extends AbstractCollectionFile<SyntaxTree> {
 				}
 				
 				// Create object and add to list
-				SyntaxTree tree = new SyntaxTree(treeLine);
+				InputItem tree = new InputItem(treeLine);
 				list.add(tree);
 			}
 		} catch (Exception e) {

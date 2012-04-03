@@ -9,32 +9,17 @@
  */
 package org.grammaticalframework.eclipse.treebank;
 
+import org.eclipse.core.resources.IFile;
+
 /**
- * Represents a single abstract syntax tree in GF
- * 
+ * Represents a gold standard file, for comparison against an output file. 
  * @author John J. Camilleri
  *
  */
-public class SyntaxTree {
-	
-	private String string;
+public class GoldFile extends OutputFile {
 
-	public void setString(String string) {
-		this.string = string;
-	}
-
-	public SyntaxTree(String string) {
-		super();
-		this.string = clean(string);
-	}
-	
-	private String clean(String string) {
-		return string.trim();
-	}
-
-	@Override
-	public String toString() {
-		return string;
+	public GoldFile(IFile outFile) {
+		super(outFile);
 	}
 
 }

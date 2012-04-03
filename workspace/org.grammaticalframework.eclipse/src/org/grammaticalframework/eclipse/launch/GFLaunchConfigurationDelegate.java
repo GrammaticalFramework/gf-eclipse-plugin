@@ -37,7 +37,7 @@ import org.eclipse.debug.core.model.IStreamMonitor;
 import org.eclipse.debug.core.model.IStreamsProxy;
 import org.eclipse.debug.core.model.LaunchConfigurationDelegate;
 import org.grammaticalframework.eclipse.GFPreferences;
-import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
+import org.grammaticalframework.eclipse.treebank.GFTestHelper;
 
 
 /**
@@ -265,7 +265,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 	 * @throws IOException 
 	 */
 	private void runTreebank(PrintWriter writer) throws IOException {
-		String outExtension = opt_MakeGoldStandard ? GFTreebankHelper.getGoldStandardExtension(true) : GFTreebankHelper.getOutputExtension(true);
+		String outExtension = opt_MakeGoldStandard ? GFTestHelper.getGoldStandardExtension(true) : GFTestHelper.getOutputExtension(true);
 		String outFileName = opt_TreebankFile + outExtension;
 		String treebankCommand;
 		if (opt_TreebankTypeLinearize) {

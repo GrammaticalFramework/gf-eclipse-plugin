@@ -35,7 +35,7 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Text;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
-import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
+import org.grammaticalframework.eclipse.treebank.GFTestHelper;
 import org.grammaticalframework.eclipse.ui.natures.GFProjectNature;
 
 import com.google.common.base.Predicate;
@@ -68,18 +68,18 @@ public class GFWizardHelper {
 	}
 	
 	/**
-	 * Recursively find all treebank files in the workspace
+	 * Recursively find all test input files in the workspace
 	 * 
 	 * @param filter
 	 * @return the file list
 	 */
-	public static List<IFile> getTreebankFileList() {
-		Predicate<IFile> treebankFileFilter = new Predicate<IFile>() {
+	public static List<IFile> getTestInputFileList() {
+		Predicate<IFile> testInputFileFilter = new Predicate<IFile>() {
 			public boolean apply(IFile input) {
-				return GFTreebankHelper.isTreebankFile(input);
+				return GFTestHelper.isInputFile(input);
 			}
 		};
-		return traverseFileList(treebankFileFilter, false);
+		return traverseFileList(testInputFileFilter, false);
 	}
 	
 	/**

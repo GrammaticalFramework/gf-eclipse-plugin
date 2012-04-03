@@ -29,19 +29,19 @@ import org.eclipse.ui.PlatformUI;
 import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
 
 /**
- * Shortcut from a treebank file, finds and runs an existing launch config which
- * uses the current treebank file, or opens a new Launch Config Dialog with
+ * Shortcut from a test input file, finds and runs an existing launch config which
+ * uses the current input file, or opens a new Launch Config Dialog with
  * pre-populated options for a one-time launch.
  * 
  * @author John J. Camilleri
  *
  */
-public class GFTreebankLaunchShortcut implements ILaunchShortcut {
+public class GFTestLaunchShortcut implements ILaunchShortcut {
 
 	/**
 	 * Logger
 	 */
-	private static final Logger log = Logger.getLogger(GFTreebankLaunchShortcut.class);
+	private static final Logger log = Logger.getLogger(GFTestLaunchShortcut.class);
 	
 	private boolean makeGoldStandard = false;
 
@@ -58,8 +58,8 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
 	 */
 	public void launch(ISelection selection, String mode) {
 		try {
-			IFile treebankFile = (IFile) ((IStructuredSelection)selection).getFirstElement();
-			launch(treebankFile, mode);
+			IFile inputFile = (IFile) ((IStructuredSelection)selection).getFirstElement();
+			launch(inputFile, mode);
 		} catch (ClassCastException e) {
 			log.warn("Couldn't process selection", e);
 		} catch (NullPointerException e) {
@@ -81,13 +81,13 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
 	}
 	
 	/**
-	 * For the given treebank file, see if it is already mentioned in any existing configs.
+	 * For the given input file, see if it is already mentioned in any existing configs.
 	 * If so, launch that config. If not, create a new one and open the LCD.
 	 * 
-	 * @param treebankFile Treebank file
+	 * @param inputFile Treebank file
 	 * @param mode
 	 */
-    protected void launch(IFile treebankFile, String mode) {
+    protected void launch(IFile inputFile, String mode) {
         try {
         	ILaunchManager launchManager = DebugPlugin.getDefault().getLaunchManager();
         	ILaunchConfigurationType configType = launchManager.getLaunchConfigurationType(IGFLaunchConfigConstants.GF_LAUNCH_CONFIG_TYPE_ID);
@@ -96,22 +96,22 @@ public class GFTreebankLaunchShortcut implements ILaunchShortcut {
             ILaunchConfiguration[] configs = launchManager.getLaunchConfigurations(configType);
             for (int i = 0; i < configs.length; i++) {
             	if (configs[i].getAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, false)
-            			&& treebankFile.getName().equals( configs[i].getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, "") )) {
+            			&& inputFile.getName().equals( configs[i].getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, "") )) {
             		String newName = configs[i].getName() + (isMakeGoldStandard() ? " (Make Gold)" : null);
             		ILaunchConfigurationWorkingCopy config = configs[i].copy(newName);
             		
             		// Make gold?
            			config.setAttribute(IGFLaunchConfigConstants.MAKE_GOLD_STANDARD, isMakeGoldStandard());
             		
-            		log.info(String.format("Running launch \"%s\" for treebank file \"%s\"", config.getName(), treebankFile.getName()));
+            		log.info(String.format("Running launch \"%s\" for test file \"%s\"", config.getName(), inputFile.getName()));
             		DebugUITools.launch(config, mode);
 					return;
 				}
 			}
             
             // If we're come this far, no matching launch config exists, so we open up the LCD
-    		log.info(String.format("Running on-the-fly launch for treebank file \"%s\"", treebankFile.getName()));
-            ILaunchConfiguration config = createLaunchConfiguration(treebankFile, configType);
+    		log.info(String.format("Running on-the-fly launch for test file \"%s\"", inputFile.getName()));
+            ILaunchConfiguration config = createLaunchConfiguration(inputFile, configType);
             Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
             DebugUITools.openLaunchConfigurationDialog(shell, config, IDebugUIConstants.ID_RUN_LAUNCH_GROUP, null);
             

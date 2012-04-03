@@ -46,17 +46,16 @@ public class GFPerspectiveFactory implements IPerspectiveFactory {
 
 		// Bottom left: Outline view and Property Sheet view
 		IFolderLayout bottomLeft = layout.createFolder("bottomLeft", IPageLayout.BOTTOM, 0.50f, "topLeft");
-		bottomLeft.addView(IPageLayout.ID_OUTLINE);
-		bottomLeft.addView(GFLibraryTreeView.ID);
-		//bottomLeft.addView(GFLibraryTableView.ID);
+		bottomLeft.addView(IPageLayout.ID_OUTLINE); // outline
+		bottomLeft.addView(GFLibraryTreeView.ID); // external libraries 
 		//bottomLeft.addView(IPageLayout.ID_PROP_SHEET);
 
 		// Bottom right: Console, Problems, Treebank Manager
 		// See also: http://wiki.eclipse.org/FAQ_How_do_I_write_to_the_console_from_a_plug-in%3F
 		IFolderLayout underEditor = layout.createFolder("underEditor", IPageLayout.BOTTOM, 0.66f, editorArea);
-		underEditor.addView(IConsoleConstants.ID_CONSOLE_VIEW);
-		underEditor.addView(IPageLayout.ID_PROBLEM_VIEW);
-		underEditor.addView(GFTreebankManagerView.ID);
+		underEditor.addView(IConsoleConstants.ID_CONSOLE_VIEW); // console
+		underEditor.addView(GFTreebankManagerView.ID); // test manager
+		underEditor.addView(IPageLayout.ID_PROBLEM_VIEW); // error log
 		
 		// Add Run/debug buttons
 		layout.addActionSet(IDebugUIConstants.LAUNCH_ACTION_SET);

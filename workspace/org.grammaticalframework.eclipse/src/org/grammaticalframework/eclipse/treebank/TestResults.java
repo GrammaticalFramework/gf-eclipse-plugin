@@ -13,31 +13,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A set of treebank comparison results.
+ * A set of test comparison results.
  * 
  * @author John J. Camilleri
  *
  */
-public class TreebankResults {
+public class TestResults {
 	
 	private int numPassed, numFailed, numErrors;
 	
-	private List<TreebankResultItem> resultItems;
+	private List<TestResultItem> resultItems;
 	
 	/**
 	 * Create an empty result set.
 	 */
-	public TreebankResults() {
+	public TestResults() {
 		super();
 		numPassed = numFailed = numErrors = 0;
-		resultItems = new ArrayList<TreebankResultItem>();
+		resultItems = new ArrayList<TestResultItem>();
 	}
 
 	/**
 	 * Get list of result items
 	 * @return
 	 */
-	public List<TreebankResultItem> getItems() {
+	public List<TestResultItem> getItems() {
 		return resultItems;
 	}
 
@@ -77,7 +77,7 @@ public class TreebankResults {
 	 * Add result item to collection
 	 * @param item
 	 */
-	public void addItem(TreebankResultItem item) {
+	public void addItem(TestResultItem item) {
 		this.resultItems.add(item);
 		if (item.isPass()) numPassed++;
 		else numFailed++;
@@ -92,7 +92,7 @@ public class TreebankResults {
 	
 	@Override
 	public String toString() {
-		return String.format("%s (%d,%d/%d)", TreebankResults.class.getName(), getPassed(), getFailed(), getTotal());
+		return String.format("%s (%d,%d/%d)", TestResults.class.getName(), getPassed(), getFailed(), getTotal());
 	}
 
 }

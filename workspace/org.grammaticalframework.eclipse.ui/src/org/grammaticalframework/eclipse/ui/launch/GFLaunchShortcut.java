@@ -47,7 +47,7 @@ public class GFLaunchShortcut implements ILaunchShortcut {
 	/**
 	 * Logger
 	 */
-	private static final Logger log = Logger.getLogger(GFTreebankLaunchShortcut.class);
+	private static final Logger log = Logger.getLogger(GFTestLaunchShortcut.class);
 
 	/* (non-Javadoc)
 	 * @see org.eclipse.debug.ui.ILaunchShortcut#launch(org.eclipse.jface.viewers.ISelection, java.lang.String)

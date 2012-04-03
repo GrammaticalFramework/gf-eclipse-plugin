@@ -22,7 +22,7 @@ import org.grammaticalframework.eclipse.launch.IGFLaunchConfigConstants;
  * @author John J. Camilleri
  * 
  */
-public class GFNewTreebankWizard extends AbstractNewFileWizard {
+public class GFNewTreesWizard extends AbstractNewFileWizard {
 	
 	/**
 	 * Wizard ID
@@ -32,14 +32,14 @@ public class GFNewTreebankWizard extends AbstractNewFileWizard {
 	/**
 	 * The page.
 	 */
-	private GFNewTreebankWizardPage page;
+	private GFNewTreesWizardPage page;
 
 	/**
 	 * {@inheritDoc}
 	 */
 	@Override
 	public void addPages() {
-		page = new GFNewTreebankWizardPage(selection);
+		page = new GFNewTreesWizardPage(selection);
 		addPage(page);
 	}
 
@@ -51,7 +51,7 @@ public class GFNewTreebankWizard extends AbstractNewFileWizard {
 			ILaunchConfiguration config = page.getField_LaunchConfig();
 			final ILaunchConfigurationWorkingCopy configCopy = config.copy("Copy of "+config.getName());
 			configCopy.setAttribute(IGFLaunchConfigConstants.MAKE_TREEBANK, true);
-			configCopy.setAttribute(IGFLaunchConfigConstants.MAKE_TREEBANK_NAME, page.getField_TreebankName());
+			configCopy.setAttribute(IGFLaunchConfigConstants.MAKE_TREEBANK_NAME, page.getField_TreesFileName());
 			configCopy.setAttribute(IGFLaunchConfigConstants.MAKE_TREEBANK_COMMAND, page.getField_GenerateCommand());
 			DebugUITools.launch(configCopy, ILaunchManager.RUN_MODE);
 			return true;

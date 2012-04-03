@@ -22,21 +22,20 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.CoreException;
 
 /**
- * Represents a treebank output file, with each non-empty line
- * stored in an internal collection of strings. 
+ * Represents a test output file, with each non-empty line stored in an internal collection of strings. 
  * @author John J. Camilleri
  *
  */
-public class TreebankOutput extends AbstractCollectionFile<List<OutputItem>> {
+public class OutputFile extends AbstractCollectionFile<List<OutputItem>> {
 
 	/**
 	 * Logger
 	 */
-	private static final Logger log = Logger.getLogger(TreebankOutput.class);
+	private static final Logger log = Logger.getLogger(OutputFile.class);
 
 	private static Pattern leadingSpaceRegEx = Pattern.compile("^\\s\\S.*");
 	
-	public TreebankOutput(IFile outFile) {
+	public OutputFile(IFile outFile) {
 		super(outFile);
 	}
 	
@@ -73,9 +72,9 @@ public class TreebankOutput extends AbstractCollectionFile<List<OutputItem>> {
 			if (!group.isEmpty())
 				list.add(group);
 		} catch (IOException e) {
-			log.error("Error reading treebank output file.", e);
+			log.error("Error reading test output file.", e);
 		} catch (CoreException e) {
-			log.error("Error reading treebank output file.", e);
+			log.error("Error reading test output file.", e);
 		} finally {
 			try {
 				outReader.close();

@@ -9,6 +9,8 @@
  */
 package org.grammaticalframework.eclipse.ui.views;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
@@ -30,6 +32,7 @@ import org.eclipse.jface.action.MenuManager;
 import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.CellLabelProvider;
 import org.eclipse.jface.viewers.DoubleClickEvent;
 import org.eclipse.jface.viewers.IDoubleClickListener;
@@ -48,6 +51,8 @@ import org.eclipse.jface.wizard.WizardDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.custom.SashForm;
 import org.eclipse.swt.custom.StyleRange;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
@@ -57,6 +62,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.TableColumn;
 import org.eclipse.ui.IActionBars;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
@@ -69,15 +75,20 @@ import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.eclipse.ui.part.ViewPart;
 import org.eclipse.ui.wizards.IWizardDescriptor;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
-import org.grammaticalframework.eclipse.treebank.GFTreebankHelper;
-import org.grammaticalframework.eclipse.treebank.TreebankResults;
-import org.grammaticalframework.eclipse.treebank.TreebankResultItem;
+import org.grammaticalframework.eclipse.treebank.GFTestHelper;
+import org.grammaticalframework.eclipse.treebank.TestResults;
+import org.grammaticalframework.eclipse.treebank.TestResultItem;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
-import org.grammaticalframework.eclipse.ui.launch.GFTreebankLaunchShortcut;
-import org.grammaticalframework.eclipse.ui.wizards.GFNewTreebankWizard;
+import org.grammaticalframework.eclipse.ui.launch.GFTestLaunchShortcut;
+import org.grammaticalframework.eclipse.ui.wizards.GFNewTreesWizard;
 
 import com.google.inject.Inject;
 
+/**
+ * Test Manager view, for running linearisationg and parsing tests and browsing the results.
+ * @author John J. Camilleri
+ *
+ */
 public class GFTreebankManagerView extends ViewPart {
 	
 	/**
@@ -96,7 +107,7 @@ public class GFTreebankManagerView extends ViewPart {
 	// Actions
 	private Action runAction;
 	private Action makeGoldStandardAction;
-	private Action makeTreebankAction;
+	private Action makeTreesFileAction;
 	private Action compareAction;
 	private Action hideSuccessfulAction;
 	private Action hideLanguageColumnAction;
@@ -110,7 +121,7 @@ public class GFTreebankManagerView extends ViewPart {
 	private Label errorsLabel;
 	private Composite statusBar;
 	private TreeViewer fileViewer;
-	private TableViewer outputViewer;
+	private TableViewer resultsViewer;
 	
 	// Getters & setters for widgets
 	public String getStatusText() {
@@ -145,51 +156,53 @@ public class GFTreebankManagerView extends ViewPart {
 		this.errorsLabel.setText(failedLabel);
 	}
 
-	public TreeViewer getFileViewer() {
-		return fileViewer;
+	/**
+	 * Set the input for the file viewer
+	 * @param data
+	 */
+	protected void setFileViewerInput(Object input) {
+		fileViewer.setInput(input);
+	}
+	
+	/**
+	 * Set the input data for the results viewer
+	 * @param data
+	 */
+	protected void setResultData(List<TestResultItem> data) {
+		resultsViewer.setInput(data);
 	}
 
-	public void setFileViewer(TreeViewer fileViewer) {
-		this.fileViewer = fileViewer;
-	}
-
-	public TableViewer getOutputViewer() {
-		return outputViewer;
-	}
-
-	public void setOutputViewer(TableViewer outputViewer) {
-		this.outputViewer = outputViewer;
-	}
-
+	private TestResultViewerComparator resultComparator;
+	
 	private IPartListener2 editorListener;
 	
 	private IResourceChangeListener resourceListener;
 	
 	private IProject currentProject;
 
-	private TableViewerColumn column_Main;
+	private TableViewerColumn column_Result;
 
 	private TableViewerColumn column_Language;
 
 	private TableViewerColumn column_Params;
 
-	private TableViewerColumn column_Tree;
+	private TableViewerColumn column_Input;
 	
-	private static int COLUMN_WIDTH_MAIN = 200;
+	private static int COLUMN_WIDTH_RESULT = 200;
 	
 	private static int COLUMN_WIDTH_LANGUAGE = 80;
 	
 	private static int COLUMN_WIDTH_PARAMS = 120;
 	
-	private static int COLUMN_WIDTH_TREE = 150;
+	private static int COLUMN_WIDTH_INPUT = 150;
 	
-	private static String COLUMN_TEXT_MAIN = "Result";
+	private static String COLUMN_TEXT_RESULT = "Result";
 
 	private static String COLUMN_TEXT_LANGUAGE = "Language";
 	
 	private static String COLUMN_TEXT_PARAMS = "Parameters";
 	
-	private static String COLUMN_TEXT_TREE = "Input";
+	private static String COLUMN_TEXT_INPUT = "Input";
 
 	/**
 	 * Create the layout and put all the widgets in their places
@@ -208,7 +221,7 @@ public class GFTreebankManagerView extends ViewPart {
 		right.setLayout(new GridLayout(1, true));
 //        right.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
         configureStatusBar(right);
-        configureOutputViewer(right);
+        configureResultsViewer(right);
 
         sash.setWeights(new int[]{1,3});
 
@@ -230,7 +243,6 @@ public class GFTreebankManagerView extends ViewPart {
 		statusBar.setLayout(new GridLayout(7, false));
 		statusBar.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 
-//		new Label(statusBar, SWT.RIGHT).setText("Status: ");
 		statusLabel = new Label(statusBar, SWT.LEFT);
 		statusLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 		
@@ -257,14 +269,14 @@ public class GFTreebankManagerView extends ViewPart {
 	 * Reset all status bar labels to idle/blank
 	 */
 	public void resetStatusBar() {
-		statusLabel.setText("Idle");
+		statusLabel.setText("");
 		passedLabel.setText("-");
 		failedLabel.setText("-");
 		errorsLabel.setText("-");
 	}	
 	
 	/**
-	 * Setup the treebank file viewer
+	 * Setup the input file viewer
 	 * @param parent
 	 */
 	private void configureFilesViewer(Composite parent) {
@@ -283,7 +295,7 @@ public class GFTreebankManagerView extends ViewPart {
 						return true;
 				}
 				if (element instanceof IFile) {
-					return GFTreebankHelper.isTreebankFile((IFile)element);
+					return GFTestHelper.isInputFile((IFile)element);
 				}
 				return false;
 			}
@@ -297,7 +309,7 @@ public class GFTreebankManagerView extends ViewPart {
 				} else if (element instanceof IFolder) {
 					return images.forFolder();
 				} else if (element instanceof IFile) {
-					if (GFTreebankHelper.hasGoldStandardFile((IFile)element))
+					if (GFTestHelper.hasGoldStandardFile((IFile)element))
 						return images.forTreebankItemWithGoldStandard();
 					else
 						return images.forTreebankItem();
@@ -315,41 +327,44 @@ public class GFTreebankManagerView extends ViewPart {
         fileViewer.setFilters(new ViewerFilter[]{filter});
         fileViewer.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
         fileViewer.setLabelProvider(labelProvider);
-//		treeFilesViewer.setSorter(new NameSorter());
-//		treeFilesViewer.setComparator(sorter);
-        fileViewer.setInput(null); // our listener below will take care of this
 	}
 	
 	/**
-	 * Setup the output viewer, table columns etc.
+	 * Setup the test results viewer, table columns etc.
 	 * @param parent
 	 */
-	private void configureOutputViewer(Composite parent) {
-        outputViewer = new TableViewer(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER | SWT.FULL_SELECTION);
-        outputViewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-        outputViewer.getTable().setLinesVisible(true);
-        outputViewer.getTable().setHeaderVisible(true);
-        outputViewer.addFilter(new ViewerFilter() {
+	private void configureResultsViewer(Composite parent) {
+        resultsViewer = new TableViewer(parent, SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER | SWT.FULL_SELECTION);
+        resultsViewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+        resultsViewer.getTable().setLinesVisible(true);
+        resultsViewer.getTable().setHeaderVisible(true);
+        resultsViewer.setContentProvider(new ArrayContentProvider(){
+			@Override
+			public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
+				viewer.refresh();
+			}
+        });
+        resultsViewer.addFilter(new ViewerFilter() {
 			@Override
 			public boolean select(Viewer viewer, Object parentElement, Object element) {
-        		TreebankResultItem item = (TreebankResultItem)element;
+        		TestResultItem item = (TestResultItem)element;
         		return !(hideSuccessfulAction.isChecked() && item.isPass()); 
 			}
 		});
+        resultComparator = new TestResultViewerComparator();
+        resultsViewer.setComparator(resultComparator);
         
-        column_Main = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
-        column_Main.getColumn().setWidth(COLUMN_WIDTH_MAIN);
-        column_Main.getColumn().setText(COLUMN_TEXT_MAIN);
-        column_Main.getColumn().setResizable(true);
-        column_Main.setLabelProvider(new StyledCellLabelProvider() {
+        column_Result = createResultsViewerColumn(COLUMN_TEXT_RESULT, COLUMN_WIDTH_RESULT, 0);
+        column_Result.setLabelProvider(new StyledCellLabelProvider() {
         	@Override
         	public void update(ViewerCell cell) {
-        		TreebankResultItem item = (TreebankResultItem)cell.getElement();
+        		TestResultItem item = (TestResultItem)cell.getElement();
         		String out = item.getOut().getMeat();
         		String gold = item.getGold().getMeat();
         		if (item.isPass()) {
         			if (!hideSuccessfulAction.isChecked()) {
 	        			cell.setImage(images.forTreebankPass());
+	        			cell.setStyleRanges(null);
 	        			cell.setText(out);
         			}
         		} else {
@@ -364,56 +379,83 @@ public class GFTreebankManagerView extends ViewPart {
 	        		cell.setStyleRanges(range);
         		}
         		super.update(cell);
-        	}        	
+        	}
         });
         
-        column_Language = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
-        column_Language.getColumn().setWidth(COLUMN_WIDTH_LANGUAGE);
-        column_Language.getColumn().setText(COLUMN_TEXT_LANGUAGE);
-        column_Language.getColumn().setResizable(true);
+        column_Language = createResultsViewerColumn(COLUMN_TEXT_LANGUAGE, COLUMN_WIDTH_LANGUAGE, 1);
         column_Language.setLabelProvider(new CellLabelProvider() {
         	@Override
         	public void update(ViewerCell cell) {
-        		TreebankResultItem item = (TreebankResultItem)cell.getElement();
+        		TestResultItem item = (TestResultItem)cell.getElement();
         		if (item.getOut().hasLanguage()) {
         			cell.setText(item.getOut().getLanguage());
         		}
         	}        	
         });
         
-        column_Params = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
-        column_Params.getColumn().setWidth(COLUMN_WIDTH_PARAMS);
-        column_Params.getColumn().setText(COLUMN_TEXT_PARAMS);
-        column_Params.getColumn().setResizable(true);
+        column_Params = createResultsViewerColumn(COLUMN_TEXT_PARAMS, COLUMN_WIDTH_PARAMS, 2);
         column_Params.setLabelProvider(new CellLabelProvider() {
         	@Override
         	public void update(ViewerCell cell) {
-        		TreebankResultItem item = (TreebankResultItem)cell.getElement();
+        		TestResultItem item = (TestResultItem)cell.getElement();
         		if (item.getOut().hasParameters()) {
         			cell.setText(item.getOut().getParameters());
         		}
         	}        	
         });
         
-        column_Tree = new TableViewerColumn(outputViewer, SWT.LEFT | SWT.BORDER);
-        column_Tree.getColumn().setWidth(COLUMN_WIDTH_TREE);
-        column_Tree.getColumn().setText(COLUMN_TEXT_TREE);
-        column_Tree.getColumn().setResizable(true);
-        column_Tree.setLabelProvider(new CellLabelProvider() {
+        column_Input = createResultsViewerColumn(COLUMN_TEXT_INPUT, COLUMN_WIDTH_INPUT, 3);
+        column_Input.setLabelProvider(new CellLabelProvider() {
         	@Override
         	public void update(ViewerCell cell) {
-        		TreebankResultItem item = (TreebankResultItem)cell.getElement();
-       			cell.setText(item.getTree().toString());
+        		TestResultItem item = (TestResultItem)cell.getElement();
+       			cell.setText(item.getIn().toString());
         	}        	
         });
         
 	}
 	
 	/**
+	 * Create a column in the resultsViewer
+	 * @param title
+	 * @param width
+	 * @return
+	 */
+	private TableViewerColumn createResultsViewerColumn(String title, int width, final int colNumber) {
+		TableViewerColumn viewerColumn = new TableViewerColumn(resultsViewer, SWT.LEFT | SWT.BORDER);
+		final TableColumn column = viewerColumn.getColumn();
+        column.setWidth(width);
+        column.setText(title);
+        column.setResizable(true);
+        column.addSelectionListener(getSelectionAdapter(column, colNumber));
+        return viewerColumn;
+	}
+	
+	/**
+	 * Get a selection adapter for the specified column and column number
+	 * @param column
+	 * @param index
+	 * @return
+	 */
+	private SelectionAdapter getSelectionAdapter(final TableColumn column, final int index) {
+		SelectionAdapter selectionAdapter = new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				resultComparator.setColumn(index);
+				int dir = resultComparator.getDirection();
+				resultsViewer.getTable().setSortDirection(dir);
+				resultsViewer.getTable().setSortColumn(column);
+				resultsViewer.refresh();
+			}
+		};
+		return selectionAdapter;
+	}
+	
+	/**
 	 * Clear contents of output viewer
 	 */
-	private void clearOutputViewer() {
-		getOutputViewer().setItemCount(0);
+	private void clearResultsViewer() {
+		resultsViewer.setInput(null);
 	}
 	
 	/**
@@ -429,17 +471,17 @@ public class GFTreebankManagerView extends ViewPart {
 					if (input instanceof IFileEditorInput) {
 						IFile file = ((IFileEditorInput) input).getFile();
 						if (!file.getProject().equals(currentProject)) {
-							clearOutputViewer();
+							clearResultsViewer();
 							resetStatusBar();
 						}
 						currentProject = file.getProject();
 						IContainer newInput = currentProject.getParent();
-						fileViewer.setInput(newInput);
+						setFileViewerInput(newInput);
 					}
 				} catch (NullPointerException e) {
 					currentProject = null;
-					fileViewer.setInput(null);
-					clearOutputViewer();
+					setFileViewerInput(null);
+					clearResultsViewer();
 					resetStatusBar();
 				}
 			}
@@ -468,13 +510,13 @@ public class GFTreebankManagerView extends ViewPart {
 							try {
 								if (delta.getResource() instanceof IFile
 										&& (delta.getKind() == IResourceDelta.ADDED || delta.getKind() == IResourceDelta.CHANGED)
-										&& ((IFile)delta.getResource()).getFileExtension().equalsIgnoreCase(GFTreebankHelper.getOutputExtension(false))) {
+										&& ((IFile)delta.getResource()).getFileExtension().equalsIgnoreCase(GFTestHelper.getOutputExtension(false))) {
 									final IFile outputFile = (IFile) delta.getResource();
-									final IFile treebankFile = GFTreebankHelper.getTreebankFileFromOutputFile(outputFile);
-									final IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
+									final IFile inputFile = GFTestHelper.getInputFileFromOutputFile(outputFile);
+									final IFile goldStandardFile = GFTestHelper.getGoldStandardFile(inputFile);
 									Display.getDefault().syncExec(new Runnable() {
 										public void run() {
-											compareOutputWithGoldStandard(treebankFile, outputFile, goldStandardFile);
+											compareOutputWithGoldStandard(inputFile, outputFile, goldStandardFile);
 										}
 									});
 									return false; // stop looking... right?
@@ -520,50 +562,49 @@ public class GFTreebankManagerView extends ViewPart {
 	}
 	
 	/**
-	 * Get the currently selected file from the tree files viewer, only if it is a treebank file
+	 * Get the currently selected file from the tree files viewer, only if it is an input file
 	 * @return the selected file, or <code>null</code> if nothing is selected (or some other error occurs).
 	 */
-	private IFile getSelectedTreebankFile() {
+	private IFile getSelectedInputFile() {
 		IFile file = getSelectedFile();
-		return (file != null && GFTreebankHelper.isTreebankFile(file)) ? file : null;
+		return (file != null && GFTestHelper.isInputFile(file)) ? file : null;
 	}
 	
 	/**
 	 * Create all the actions with their run() methods
 	 */
 	private void makeActions() {
-		// Run a single treebank
-		runAction = new Action("Run treebank") {
-			private IFile treebankFile;
+		// Run a single test
+		runAction = new Action("Run test") {
+			private IFile inputFile;
 			private IFile goldStandardFile;
 			@Override
 			public void run() {
 				// See what's selected in our viewer and validate
-				if ((treebankFile = getSelectedTreebankFile()) == null)
+				if ((inputFile = getSelectedInputFile()) == null)
 					return;
-				goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
+				goldStandardFile = GFTestHelper.getGoldStandardFile(inputFile);
 				if (goldStandardFile == null) {
 					Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
-					String title = "Error running treebank";
-					String message = String.format("Found no corresponding gold standard for %s", treebankFile.getName());
+					String title = "Error running test";
+					String message = String.format("Found no corresponding gold standard for %s", inputFile.getName());
 					MessageDialog.openInformation(shell, title, message);
 					log.info(message);
 					return;
 				}
 				// Launch
-				GFTreebankLaunchShortcut launchShortcut = new GFTreebankLaunchShortcut();
+				GFTestLaunchShortcut launchShortcut = new GFTestLaunchShortcut();
 				launchShortcut.launch(fileViewer.getSelection(), ILaunchManager.RUN_MODE);
 			}
 		};
 		
-		// Create a gold standard file from a treebank
+		// Create a gold standard file from an input file
 		makeGoldStandardAction = new Action("Make gold standard") {
 			@Override
 			public void run() {
-//				statusLabel.setText("Making gold standard");
-				if (getSelectedTreebankFile() == null)
+				if (getSelectedInputFile() == null)
 					return;
-				GFTreebankLaunchShortcut launchShortcut = new GFTreebankLaunchShortcut();
+				GFTestLaunchShortcut launchShortcut = new GFTestLaunchShortcut();
 				launchShortcut.setMakeGoldStandard();
 				launchShortcut.launch(fileViewer.getSelection(), ILaunchManager.RUN_MODE);
 			}
@@ -571,42 +612,42 @@ public class GFTreebankManagerView extends ViewPart {
 //		makeGoldStandardAction.setImageDescriptor(ImageDescriptor.createFromImage(images.getImage("treebank-new.png")));
 		
 		// Create a treebank
-		makeTreebankAction = new Action("Generate random treebank") {
+		makeTreesFileAction = new Action("Generate trees file") {
 			@Override
 			public void run() {
 				IWorkbench workbench = PlatformUI.getWorkbench();
-				IWizardDescriptor descriptor = workbench.getNewWizardRegistry().findWizard(GFNewTreebankWizard.ID);
+				IWizardDescriptor descriptor = workbench.getNewWizardRegistry().findWizard(GFNewTreesWizard.ID);
 				if (descriptor != null) {
 					IWizard wizard;
 					try {
 						Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
 						wizard = descriptor.createWizard();
-						((GFNewTreebankWizard)wizard).init(workbench, null);
+						((GFNewTreesWizard)wizard).init(workbench, null);
 						WizardDialog wd = new WizardDialog(shell, wizard);
 						wd.setTitle(wizard.getWindowTitle());
 						wd.open();
 					} catch (CoreException e) {
-						log.error("Unable to open New Treebank wizard", e);
+						log.error("Unable to open wizard", e);
 					}
 				}
 			}
 		};
-		makeTreebankAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankNew()));
+		makeTreesFileAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankNew()));
 		
 		// Compare output with gold standard 
-		compareAction = new Action("Compare output with gold standard") {
+		compareAction = new Action("Compare with gold standard") {
 			@Override
 			public void run() {
-				final IFile treebankFile = getSelectedTreebankFile();
-				if (treebankFile == null)
+				final IFile inputFile = getSelectedInputFile();
+				if (inputFile == null)
 					return;
-				final IFile outputFile = GFTreebankHelper.getOutputFile(treebankFile);
-				final IFile goldStandardFile = GFTreebankHelper.getGoldStandardFile(treebankFile);
+				final IFile outputFile = GFTestHelper.getOutputFile(inputFile);
+				final IFile goldStandardFile = GFTestHelper.getGoldStandardFile(inputFile);
 				if (outputFile == null || goldStandardFile == null)
 					return;
 				Display.getDefault().syncExec(new Runnable() {
 					public void run() {
-						compareOutputWithGoldStandard(treebankFile, outputFile, goldStandardFile);
+						compareOutputWithGoldStandard(inputFile, outputFile, goldStandardFile);
 					}
 				});
 			}
@@ -616,8 +657,7 @@ public class GFTreebankManagerView extends ViewPart {
 		hideSuccessfulAction = new Action("Show only failures", SWT.TOGGLE){
 			@Override
 			public void run() {
-				// We are re-running the comparison each time the action is toggled. Will this be slow?
-				compareAction.run();
+				resultsViewer.refresh();
 			}
 		};
 		hideSuccessfulAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankToggleSuccessful()));
@@ -638,10 +678,10 @@ public class GFTreebankManagerView extends ViewPart {
 		};
 		hideParametersColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forParameterToggle()));
 		
-		hideTreeColumnAction = new Action("Hide '"+COLUMN_TEXT_TREE+"' column", SWT.TOGGLE) {
+		hideTreeColumnAction = new Action("Hide '"+COLUMN_TEXT_INPUT+"' column", SWT.TOGGLE) {
 			@Override
 			public void run() {
-				toggleColumn(this, column_Tree, COLUMN_WIDTH_TREE);
+				toggleColumn(this, column_Input, COLUMN_WIDTH_INPUT);
 			}
 		};
 		hideTreeColumnAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forTreebankToggle()));
@@ -662,28 +702,31 @@ public class GFTreebankManagerView extends ViewPart {
 	
 	/**
 	 * Compare a given output file with a gold standard, and write the results directly to the supplied view.
-	 * @param treebankFile
+	 * @param inputFile
 	 * @param outputFile
 	 * @param goldStandardFile
 	 */
-	private void compareOutputWithGoldStandard(IFile treebankFile, IFile outputFile, IFile goldStandardFile) {
+	private void compareOutputWithGoldStandard(IFile inputFile, IFile outputFile, IFile goldStandardFile) {
 		resetStatusBar();
 		setStatusText("Comparing against "+goldStandardFile.getName());
 		redrawStatusBar();
 		
 		// Do it
-		TreebankResults results = GFTreebankHelper.compareOutputWithGoldStandard(treebankFile, outputFile, goldStandardFile);
+		TestResults results = GFTestHelper.compareOutputWithGoldStandard(inputFile, outputFile, goldStandardFile);
 		
 		// Set items in viewer
 		setStatusText("Results of "+outputFile.getName());
 		setPassedText(String.format("%d/%d", results.getPassed(), results.getTotal()));
 		setFailedText(String.format("%d/%d", results.getFailed(), results.getTotal()));
 		setErrorText(String.format("%d", results.getErrors()));
-		clearOutputViewer();
-		getOutputViewer().add(results.getItems().toArray());
+		clearResultsViewer();
+		setResultData(results.getItems());
 		redrawStatusBar();
 	}
 
+	/**
+	 * Configure context menu
+	 */
 	private void hookContextMenu() {
 		MenuManager menuMgr = new MenuManager("#PopupMenu");
 		menuMgr.setRemoveAllWhenShown(true);
@@ -694,9 +737,11 @@ public class GFTreebankManagerView extends ViewPart {
 		});
 		Menu menu = menuMgr.createContextMenu(fileViewer.getControl());
 		fileViewer.getControl().setMenu(menu);
-//		getSite().registerContextMenu(menuMgr, treeFilesViewer);
 	}
 
+	/**
+	 * Configure double-click action (runs treebank)
+	 */
 	private void hookDoubleClickAction() {
 		fileViewer.addDoubleClickListener(new IDoubleClickListener() {
 			public void doubleClick(DoubleClickEvent event) {
@@ -705,6 +750,9 @@ public class GFTreebankManagerView extends ViewPart {
 		});
 	}
 
+	/**
+	 * Add actions to various parts of the view
+	 */
 	private void contributeToActionBars() {
 		IActionBars bars = getViewSite().getActionBars();
 		fillLocalPullDown(bars.getMenuManager());
@@ -721,7 +769,7 @@ public class GFTreebankManagerView extends ViewPart {
 		manager.add(hideParametersColumnAction);
 		manager.add(hideTreeColumnAction);
 		manager.add(new Separator());
-		manager.add(makeTreebankAction);
+		manager.add(makeTreesFileAction);
 	}
 
 	/**
@@ -729,19 +777,17 @@ public class GFTreebankManagerView extends ViewPart {
 	 * @param manager
 	 */
 	private void fillContextMenu(IMenuManager manager) {
-		IFile treebankFile = getSelectedTreebankFile();
-		if (treebankFile == null)
+		IFile inputFile = getSelectedInputFile();
+		if (inputFile == null)
 			return;
-		if (GFTreebankHelper.hasGoldStandardFile(treebankFile)) {
+		if (GFTestHelper.hasGoldStandardFile(inputFile)) {
 			manager.add(runAction);
-			if (GFTreebankHelper.hasOutputFile(treebankFile)) {
+			if (GFTestHelper.hasOutputFile(inputFile)) {
 				manager.add(compareAction);
 			}
 		} else {
 			manager.add(makeGoldStandardAction);
 		}
-//		manager.add(makeTreebankAction);
-//		drillDownAdapter.addNavigationActions(manager);
 	}
 
 	/**
@@ -756,10 +802,16 @@ public class GFTreebankManagerView extends ViewPart {
 		manager.add(hideTreeColumnAction);
 	}
 	
+	/* (non-Javadoc)
+	 * @see org.eclipse.ui.part.WorkbenchPart#setFocus()
+	 */
 	public void setFocus() {
 		fileViewer.getControl().setFocus();
 	}
 	
+	/* (non-Javadoc)
+	 * @see org.eclipse.ui.part.WorkbenchPart#dispose()
+	 */
 	@Override
 	public void dispose() {
 		super.dispose();

@@ -85,35 +85,35 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		return button_BatchMode.getSelection();
 	}
 	
-	private Button button_TreebankMode;
-	public Boolean isTreebankMode() {
-		return button_TreebankMode.getSelection();
+	private Button button_TestMode;
+	public Boolean isTestMode() {
+		return button_TestMode.getSelection();
 	}
 	
-	private Button button_TreebankLinMode;
-	public Boolean isTreebankLinearizeMode() {
-		return button_TreebankLinMode.getSelection();
+	private Button button_TestLinMode;
+	public Boolean isTestLinearizeMode() {
+		return button_TestLinMode.getSelection();
 	}
 	
-	private Button button_TreebankParseMode;
-	public Boolean isTreebankParseMode() {
-		return button_TreebankParseMode.getSelection();
+	private Button button_TestParseMode;
+	public Boolean isTestParseMode() {
+		return button_TestParseMode.getSelection();
 	}
 	
-	private Text text_TreebankCommandFlags;
-	public String getTreebankCommand() {
-		return text_TreebankCommandFlags.getText().trim();
+	private Text text_TestCommandFlags;
+	public String getTestCommandFlags() {
+		return text_TestCommandFlags.getText().trim();
 	}
 
-	private Combo combo_TreebankFile;
-	public String getTreebankFile() {
-		return combo_TreebankFile.getText().trim();
+	private Combo combo_TestInputFile;
+	public String getTestInputFile() {
+		return combo_TestInputFile.getText().trim();
 	}
 
 	/**
 	 * List of treebank files in workspace
 	 */
-	private List<IFile> treebankFiles;
+	private List<IFile> testInputFiles;
 
 	/**
 	 * {@inheritDoc}
@@ -199,7 +199,7 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		button_InteractiveMode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 2, 1));
 		button_InteractiveMode.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
-				button_TreebankMode.setSelection(false);
+				button_TestMode.setSelection(false);
 				dialogChanged();
 			}
 			public void widgetDefaultSelected(SelectionEvent e) {
@@ -212,17 +212,18 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		button_BatchMode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
 		button_BatchMode.addSelectionListener(selectionListener);
 		
-		// The Treebank testing box
-		Group treebankModeGroup = new Group(comp, SWT.BORDER);
-		treebankModeGroup.setText(" Treebank testing ");
-		treebankModeGroup.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1));
-		treebankModeGroup.setLayout(new GridLayout(3, false));
+		// The testing box
+		Group testModeGroup = new Group(comp, SWT.BORDER);
+		testModeGroup.setText(" Grammar testing ");
+		testModeGroup.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1));
+		((GridData)testModeGroup.getLayoutData()).verticalIndent = 4;
+		testModeGroup.setLayout(new GridLayout(3, false));
 
-		button_TreebankMode = new Button(treebankModeGroup, SWT.CHECK);
-		button_TreebankMode.setText("Run &treebank test");
-		button_TreebankMode.addSelectionListener(new SelectionListener() {
+		button_TestMode = new Button(testModeGroup, SWT.CHECK);
+		button_TestMode.setText("Run regression &test");
+		button_TestMode.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
-				if (button_TreebankMode.getSelection()) {
+				if (button_TestMode.getSelection()) {
 					button_InteractiveMode.setSelection(false);
 					button_BatchMode.setSelection(true);
 				}
@@ -232,36 +233,36 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 				widgetSelected(e);
 			}
 		});
-		button_TreebankMode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 3, 1));
+		button_TestMode.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 3, 1));
 		
 		// Linearize / parse
-		new Label(treebankModeGroup, SWT.NULL).setText("Type:");
-		button_TreebankLinMode = new Button(treebankModeGroup, SWT.RADIO);
-		button_TreebankLinMode.setText("&Linearize");
-		button_TreebankLinMode.addSelectionListener(selectionListener);
-		button_TreebankParseMode = new Button(treebankModeGroup, SWT.RADIO);
-		button_TreebankParseMode.setText("&Parse");
-		button_TreebankParseMode.addSelectionListener(selectionListener);
+		new Label(testModeGroup, SWT.NULL).setText("Type:");
+		button_TestLinMode = new Button(testModeGroup, SWT.RADIO);
+		button_TestLinMode.setText("&Linearize");
+		button_TestLinMode.addSelectionListener(selectionListener);
+		button_TestParseMode = new Button(testModeGroup, SWT.RADIO);
+		button_TestParseMode.setText("&Parse");
+		button_TestParseMode.addSelectionListener(selectionListener);
 		
 		// Command flags
-		new Label(treebankModeGroup, SWT.NULL).setText("Additional &flags:");
-		text_TreebankCommandFlags = new Text(treebankModeGroup, SWT.BORDER);
-		text_TreebankCommandFlags.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
-		text_TreebankCommandFlags.addModifyListener(modifyListener);
+		new Label(testModeGroup, SWT.NULL).setText("Additional &flags:");
+		text_TestCommandFlags = new Text(testModeGroup, SWT.BORDER);
+		text_TestCommandFlags.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
+		text_TestCommandFlags.addModifyListener(modifyListener);
 		
-		// Treebank file
-		new Label(treebankModeGroup, SWT.NULL).setText("&Input file:");
-		combo_TreebankFile = new Combo(treebankModeGroup, SWT.DROP_DOWN | SWT.READ_ONLY);
-		combo_TreebankFile.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 2, 1));
-		treebankFiles = GFWizardHelper.getTreebankFileList();
-		for (int i = 0; i < treebankFiles.size(); i++) {
-			combo_TreebankFile.add(treebankFiles.get(i).getName());
+		// Test input file
+		new Label(testModeGroup, SWT.NULL).setText("&Input file:");
+		combo_TestInputFile = new Combo(testModeGroup, SWT.DROP_DOWN | SWT.READ_ONLY);
+		combo_TestInputFile.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 2, 1));
+		testInputFiles = GFWizardHelper.getTestInputFileList();
+		for (int i = 0; i < testInputFiles.size(); i++) {
+			combo_TestInputFile.add(testInputFiles.get(i).getName());
 		}
-		combo_TreebankFile.addSelectionListener(new SelectionListener() {
+		combo_TestInputFile.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
 				button_InteractiveMode.setSelection(false);
 				button_BatchMode.setSelection(true);
-				button_TreebankMode.setSelection(true);
+				button_TestMode.setSelection(true);
 				dialogChanged();
 			}
 			public void widgetDefaultSelected(SelectionEvent e) {
@@ -284,11 +285,11 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		}
 		
 		// Check treebank stuff
-		else if (isTreebankMode()) {
-			if (!isTreebankLinearizeMode() && !isTreebankParseMode()) {
+		else if (isTestMode()) {
+			if (!isTestLinearizeMode() && !isTestParseMode()) {
 				updateStatus("You must select a test type (Linearize or Parse).");
 			}
-			if (combo_TreebankFile.getSelectionIndex() < 0) {
+			if (combo_TestInputFile.getSelectionIndex() < 0) {
 				updateStatus("You must select a test input file.");
 			}
 		}
@@ -352,18 +353,18 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 			boolean interactiveMode = configuration.getAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, false);
 			button_InteractiveMode.setSelection(interactiveMode);
 			button_BatchMode.setSelection(!interactiveMode);
-			button_TreebankMode.setSelection(
+			button_TestMode.setSelection(
 					configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, false)
 			);
 			
 			boolean treebankTypeLin = configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_TYPE_LINEARIZE, true);
-			button_TreebankLinMode.setSelection(treebankTypeLin);
-			button_TreebankParseMode.setSelection(!treebankTypeLin);
+			button_TestLinMode.setSelection(treebankTypeLin);
+			button_TestParseMode.setSelection(!treebankTypeLin);
 			
-			text_TreebankCommandFlags.setText(
+			text_TestCommandFlags.setText(
 					configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND_FLAGS, "")
 			);
-			combo_TreebankFile.setText(
+			combo_TestInputFile.setText(
 					configuration.getAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, "")
 			);
 		} catch (CoreException e) {
@@ -381,10 +382,10 @@ public class GFLaunchConfigTab extends AbstractLaunchConfigurationTab {
 		configuration.setAttribute(IGFLaunchConfigConstants.COMMANDS, getBatchCommands());
 		configuration.setAttribute(IGFLaunchConfigConstants.INTERACTIVE_MODE, isInteractiveMode());
 		configuration.setAttribute(IGFLaunchConfigConstants.BATCH_MODE, isBatchMode());
-		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, isTreebankMode());
-		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_TYPE_LINEARIZE, isTreebankLinearizeMode());
-		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND_FLAGS, getTreebankCommand());
-		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, getTreebankFile());
+		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_MODE, isTestMode());
+		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_TYPE_LINEARIZE, isTestLinearizeMode());
+		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_COMMAND_FLAGS, getTestCommandFlags());
+		configuration.setAttribute(IGFLaunchConfigConstants.TREEBANK_FILENAME, getTestInputFile());
 		setDirty(false);
 	}
 
