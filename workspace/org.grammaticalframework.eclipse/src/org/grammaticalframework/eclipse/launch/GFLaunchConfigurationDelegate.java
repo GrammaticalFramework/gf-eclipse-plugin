@@ -9,18 +9,12 @@
  */
 package org.grammaticalframework.eclipse.launch;
 import java.io.BufferedOutputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStreamWriter;
-import java.io.PipedOutputStream;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
@@ -128,8 +122,6 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		ArrayList<String> command = new ArrayList<String>();
 		command.add(opt_GFPath);
 //		command.add("-q"); // Force quiet mode
-//		if (opt_BatchMode && !opt_TreebankMode)
-//			command.add("--batch");
 		if (!opt_Options.isEmpty()) {
 			command.addAll( Arrays.asList(opt_Options.split("\\s")) );
 		}
@@ -150,7 +142,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 			b.redirectErrorStream(true);
 			Process process = b.start();
 	
-			// Can't even manage to use the custom processfactory!
+			// TODO Can't even manage to use the custom processfactory!
 			//.setAttribute(DebugPlugin.ATTR_PROCESS_FACTORY_ID, EchoProcessFactory.ID);
 			
 			// Process process = DebugPlugin.exec(command.toArray(new String[command.size()]), new File(opt_WorkingDir));
@@ -176,7 +168,7 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 				runTreebank(writer);
 				gfQuit();
 			}
-			// Else we are interactive; it's up to the user to exit gf!
+			// else we are interactive; it's up to the user to exit gf!
 			
 			// End
 			process.waitFor();
