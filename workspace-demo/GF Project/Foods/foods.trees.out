@@ -1,0 +1,70 @@
+s Pres Simul CPos ODir : these Italian pieses are delicious
+s Pres Simul CPos OQuest : are these Italian pieses delicious
+s Pres Simul (CNeg True) ODir : these Italian pieses aren't delicious
+s Pres Simul (CNeg True) OQuest : aren't these Italian pieses delicious
+s Pres Simul (CNeg False) ODir : these Italian pieses are not delicious
+s Pres Simul (CNeg False) OQuest : are these Italian pieses not delicious
+
+s SPres Simul Pos Main : de här pizzorna är läckra
+s SPres Simul Pos Inv : är de här pizzorna läckra
+s SPres Simul Pos Sub : de här pizzorna är läckra
+s SPres Simul Neg Main : de här pizzorna är inte läckra
+s SPres Simul Neg Inv : är de här pizzorna inte läckra
+s SPres Simul Neg Sub : de här pizzorna inte är läckra
+
+ s Pres Simul CPos ODir : that fresh fish is very delicious
+s Pres Simul CPos OQuest : is that fresh fish very delicious
+s Pres Simul (CNeg True) ODir : that fresh fish isn't very delicious
+s Pres Simul (CNeg True) OQuest : isn't that fresh fish very delicious
+s Pres Simul (CNeg False) ODir : that fresh fish is not very delicious
+s Pres Simul (CNeg False) OQuest : is that fresh fish not very delicious
+
+s SPres Simul Pos Main : den där färska fisken är mycket läcker
+s SPres Simul Pos Inv : är den där färska fisken mycket läcker
+s SPres Simul Pos Sub : den där färska fisken är mycket läcker
+s SPres Simul Neg Main : den där färska fisken är inte mycket läcker
+s SPres Simul Neg Inv : är den där färska fisken inte mycket läcker
+s SPres Simul Neg Sub : den där färska fisken inte är mycket läcker
+
+ s Pres Simul CPos ODir : those fishes are very fresh
+s Pres Simul CPos OQuest : are those fishes very fresh
+s Pres Simul (CNeg True) ODir : those fishes aren't very fresh
+s Pres Simul (CNeg True) OQuest : aren't those fishes very fresh
+s Pres Simul (CNeg False) ODir : those fishes are not very fresh
+s Pres Simul (CNeg False) OQuest : are those fishes not very fresh
+
+s SPres Simul Pos Main : de där fiskarna är mycket färska
+s SPres Simul Pos Inv : är de där fiskarna mycket färska
+s SPres Simul Pos Sub : de där fiskarna är mycket färska
+s SPres Simul Neg Main : de där fiskarna är inte mycket färska
+s SPres Simul Neg Inv : är de där fiskarna inte mycket färska
+s SPres Simul Neg Sub : de där fiskarna inte är mycket färska
+
+ s Pres Simul CPos ODir : this Italian pies is Italian
+s Pres Simul CPos OQuest : is this Italian pies Italian
+s Pres Simul (CNeg True) ODir : this Italian pies isn't Italian
+s Pres Simul (CNeg True) OQuest : isn't this Italian pies Italian
+s Pres Simul (CNeg False) ODir : this Italian pies is not Italian
+s Pres Simul (CNeg False) OQuest : is this Italian pies not Italian
+
+s SPres Simul Pos Main : den här pizzan är italiensk
+s SPres Simul Pos Inv : är den här pizzan italiensk
+s SPres Simul Pos Sub : den här pizzan är italiensk
+s SPres Simul Neg Main : den här pizzan är inte italiensk
+s SPres Simul Neg Inv : är den här pizzan inte italiensk
+s SPres Simul Neg Sub : den här pizzan inte är italiensk
+
+ s Pres Simul CPos ODir : those expensive cheeses are expensive
+s Pres Simul CPos OQuest : are those expensive cheeses expensive
+s Pres Simul (CNeg True) ODir : those expensive cheeses aren't expensive
+s Pres Simul (CNeg True) OQuest : aren't those expensive cheeses expensive
+s Pres Simul (CNeg False) ODir : those expensive cheeses are not expensive
+s Pres Simul (CNeg False) OQuest : are those expensive cheeses not expensive
+
+s SPres Simul Pos Main : de där dyra ostarna är dyra
+s SPres Simul Pos Inv : är de där dyra ostarna dyra
+s SPres Simul Pos Sub : de där dyra ostarna är dyra
+s SPres Simul Neg Main : de där dyra ostarna är inte dyra
+s SPres Simul Neg Inv : är de där dyra ostarna inte dyra
+s SPres Simul Neg Sub : de där dyra ostarna inte är dyra
+
