@@ -102,6 +102,8 @@ In order for dependencies to be satisfied, you need to ensure that your Eclipse 
 - Eclipse releases (change version name to match): `http://download.eclipse.org/releases/indigo`
 - Xtext: `http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/`
 
+You can set these from **Preferences &rarr; Install/Update &rarr; Available Software Sites**.
+
 **Steps for installation**
 
 1. Inside Eclipse, go to **Help &rarr; Install New Software**.
@@ -113,10 +115,17 @@ In order for dependencies to be satisfied, you need to ensure that your Eclipse 
 
 #### Settings
 
-1. Add the GF perspective by clicking **Open Perspective &rarr; Other** and choosing **GF**.
-1. The plugin will try to determine the path to your GF executable automatically. You can always check/overwrite it by going to **Window &rarr; Preferences &rarr; Grammatical Framework**.
+1. Add the GF perspective by clicking **Window &rarr; Open Perspective &rarr; Other** and choosing **GF**.
+1. The plugin will try to determine the path to your GF executable automatically. You can check/overwrite it by going to **Preferences &rarr; Grammatical Framework**.
 This path should **include** the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
 1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
+
+#### Eclipse preferences
+
+How to find the Eclipse preferences window may depend on your version and/or operating system, and may be either of:
+
+- **Window &rarr; Preferences**
+- **Eclipse &rarr; Preferences**
 
 ### Updating the plugin
 
@@ -261,7 +270,7 @@ Using the **Run &rarr; Run As &rarr; Compile with GF** shortcut will take the cu
 1. Otherwise, a new a launch configuration window is displayed where you will need to review and confirm the default settings before continuing.
 
 ### Consoles
-The plugin provides its own console view named _GFEP Log_, which shows log messages based on the **Log Level** preference (**Window &rarr; Preferences &rarr; Grammatical Framework**).
+The plugin provides its own console view named _GFEP Log_, which shows log messages based on the **Log Level** preference (**Preferences &rarr; Grammatical Framework**).
 
 Additionally, every time a grammar is **Run** a _new_ console is opened to display the output. This console may also serve as the interactive GF Shell, depending on the **Interactive Mode** checkbox in your **Run Configuration**.
 
@@ -312,7 +321,7 @@ The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
 1. By opening the **Error Log** view in Eclipse
 1. Accessing the file directly at `<workspace>/.metadata/.log`
 
-You can set the log verbosity from **Window &rarr; Preferences &rarr; Grammatical Framework**.
+You can set the log verbosity from **Preferences &rarr; Grammatical Framework**.
 
 
 <!----------------------------------------------------------------------------->

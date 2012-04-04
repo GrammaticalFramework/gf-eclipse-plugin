@@ -42,6 +42,11 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 		Font fontItalic = new Font(parent.getDisplay(), new FontData(fontData.getName(), fontData.getHeight(), SWT.ITALIC));
 		
 		addField(new StringFieldEditor(GFPreferences.GF_BIN_PATH, "&Runtime path:", parent));
+		new Label(parent, SWT.NULL); // skip cell
+		Label label_Path = new Label(parent, SWT.NULL);
+		label_Path.setFont(fontItalic);
+		label_Path.setText("Must include the executable name, e.g. C:\\GF\\gf.exe ");
+//		label_Path.setText("Must include the executable name, e.g. /sbin/gf ");
 
 		/*
 		 * Specifying the library path doesn't really help at all, just forget the whole thing.
@@ -63,7 +68,7 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 		new Label(parent, SWT.NULL); // skip cell
 		Label label_LogLevel = new Label(parent, SWT.NULL);
 		label_LogLevel.setFont(fontItalic);
-		label_LogLevel.setText("Only affects console output, not Eclipse's internal log ");
+		label_LogLevel.setText("Only affects console output, not Eclipse's internal log. ");
 
 		addField(new BooleanFieldEditor(GFPreferences.BUILD_DEPENDENTS, "&Build inferred dependents of changed files", parent));
 		
