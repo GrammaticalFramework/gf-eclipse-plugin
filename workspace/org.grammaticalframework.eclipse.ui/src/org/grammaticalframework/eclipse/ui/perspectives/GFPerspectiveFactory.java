@@ -55,7 +55,8 @@ public class GFPerspectiveFactory implements IPerspectiveFactory {
 		IFolderLayout underEditor = layout.createFolder("underEditor", IPageLayout.BOTTOM, 0.66f, editorArea);
 		underEditor.addView(IConsoleConstants.ID_CONSOLE_VIEW); // console
 		underEditor.addView(GFTreebankManagerView.ID); // test manager
-		underEditor.addView(IPageLayout.ID_PROBLEM_VIEW); // error log
+//		underEditor.addView(IPageLayout.ID_PROBLEM_VIEW); // problems
+		underEditor.addView("org.eclipse.pde.runtime.LogView"); // error log
 		
 		// Add Run/debug buttons
 		layout.addActionSet(IDebugUIConstants.LAUNCH_ACTION_SET);
