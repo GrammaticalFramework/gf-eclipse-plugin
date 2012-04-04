@@ -11,14 +11,13 @@ The aim behind developing a desktop IDE for GF is to provide more powerful tools
 
 The choice was made to develop this desktop IDE as a plugin for the Eclipse Platform as it emerged as the most popular choice among the GF developer community. Support for the platform is vast and many tools for adapting Eclipse to domain-specific languages already exist. Unlike the zero-click Web IDE approach, using the GF Eclipse plugin requires some manual installation and configuration on the development machine.
 
-The GFEP is being developed with support from the [MOLTO Project](http://www.molto-project.eu/).
+The GFEP was developed with support from the [MOLTO Project](http://www.molto-project.eu/).
 
 ### License
 
-The GF Eclipse Plugin is open-source under the [GNU General Public License (GPL)](http://www.gnu.org/licenses/gpl-3.0.txt).
-The licenses that cover the rest of GF are listed [here](http://www.grammaticalframework.org/LICENSE).
+The GF Eclipse Plugin is open-source under the [GNU General Public License (GPL)](http://www.gnu.org/licenses/gpl-3.0.txt).  
+The licenses that cover the rest of GF are listed [here](http://www.grammaticalframework.org/LICENSE).  
 Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://www.eclipse.org/legal/epl-v10.html).
-
 
 ### Links
 
@@ -301,7 +300,7 @@ Note that GFEP assumes the following convention:
 : Test input files: trees file (for testing linearisation) and sentences file (for testing parsing)
 
 `*.trees.out` or `*.sentences.out`
-: Corresponding output files
+: Corresponding output files (generated each time a test is run)
 
 `*.trees.gold` or `*.sentences.gold`
 : Corresponding gold standard files (manually corrected from an output file)
