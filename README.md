@@ -109,7 +109,7 @@ How to find the **Eclipse preferences** window depends on your Eclipse version a
 - **Window &rarr; Preferences**
 - **Eclipse &rarr; Preferences**
 
-**Steps for installation**
+### Installation
 
 1. Inside Eclipse, go to **Help &rarr; Install New Software**.
 1. Add new software site using the URL: `http://www.grammaticalframework.org/eclipse/release/`
