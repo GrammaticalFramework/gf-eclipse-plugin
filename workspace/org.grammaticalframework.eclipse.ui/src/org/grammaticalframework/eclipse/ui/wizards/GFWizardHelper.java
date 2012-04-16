@@ -9,6 +9,7 @@
  */
 package org.grammaticalframework.eclipse.ui.wizards;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -93,6 +94,28 @@ public class GFWizardHelper {
 		List<String> suggestions = new ArrayList<String>(files.size());
 		for (IFile resource : files) {
 			suggestions.add( resource.getName().substring(0, resource.getName().length()-3) ); // we can safely assume they have a .gf
+		}
+		return suggestions.toArray(new String[]{});
+	}
+	
+	/**
+	 * List all top-level directories which are NOT projects.
+	 *
+	 * @return folder list
+	 */
+	public static String[] getWorkspaceFolders() {
+		List<String> suggestions = new ArrayList<String>();
+		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
+		try {
+			File[] files = root.getLocation().toFile().listFiles();
+			for (int i = 0; i < files.length; i++) {
+				File f = files[i];
+				if (f.isDirectory() && !f.isHidden() && root.findMember(f.getName())==null) {
+					suggestions.add(f.getName());
+				}
+			}
+		} catch (Exception e) {
+			log.warn("Error listing top-level folders", e);
 		}
 		return suggestions.toArray(new String[]{});
 	}
