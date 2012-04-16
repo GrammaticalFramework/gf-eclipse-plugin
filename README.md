@@ -1,9 +1,9 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 4 April 2012
+Updated: 11 April 2012
 
-_The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914._
+_The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
 ## Introduction
 
@@ -11,17 +11,15 @@ The aim behind developing a desktop IDE for GF is to provide more powerful tools
 
 The choice was made to develop this desktop IDE as a plugin for the Eclipse Platform as it emerged as the most popular choice among the GF developer community. Support for the platform is vast and many tools for adapting Eclipse to domain-specific languages already exist. Unlike the zero-click Web IDE approach, using the GF Eclipse plugin requires some manual installation and configuration on the development machine.
 
-The GFEP was developed with support from the [MOLTO Project](http://www.molto-project.eu/).
-
 ### License
 
 The GF Eclipse Plugin is open-source under the [GNU General Public License (GPL)](http://www.gnu.org/licenses/gpl-3.0.txt).  
-The licenses that cover the rest of GF are listed [here](http://www.grammaticalframework.org/LICENSE).  
-Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://www.eclipse.org/legal/epl-v10.html).
+_The licenses that cover the rest of GF are listed [here](http://www.grammaticalframework.org/LICENSE)._  
+_Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://www.eclipse.org/legal/epl-v10.html)._
 
 ### Links
 
-- This document shall contain all collected information about the plugin. The most up-to-date version of this file can always be found at [GitHub](https://github.com/GrammaticalFramework/gf-eclipse-plugin/blob/master/README.md)
+- This document shall contain all collected information about the plugin. The most up-to-date version of this file can always be found [here](https://github.com/GrammaticalFramework/gf-eclipse-plugin/blob/master/README.md)
 - This documentation is also available at the [MOLTO Project Wiki](http://www.molto-project.eu/node/1395).
 - Source code repository is at [github.com/GrammaticalFramework/gf-eclipse-plugin](https://github.com/GrammaticalFramework/gf-eclipse-plugin)
 - For reporting bugs and requesting features, please use the [GitHub Issue Tracker](https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues)
@@ -90,12 +88,12 @@ Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL)
 
 ### System requirements
 
-1. [GF 3.3.3](http://www.grammaticalframework.org/download/release-3.3.3.html) or above. The path to GF must be set within the plugin (see below).
 1. [Eclipse](http://www.eclipse.org/downloads/) 3.6 or above.
+1. [GF 3.3.3](http://www.grammaticalframework.org/download/release-3.3.3.html) or above. The path to GF must be set within the plugin (see below).
 
 ### Installing the plugin for the first time
 
-**Note about Available Software Sites**
+#### Available Software Sites
 
 In order for dependencies to be satisfied, you need to ensure that your Eclipse has the following update site URLs set:
 
@@ -104,7 +102,14 @@ In order for dependencies to be satisfied, you need to ensure that your Eclipse 
 
 You can set these from **Preferences &rarr; Install/Update &rarr; Available Software Sites**.
 
-**Steps for installation**
+#### Eclipse preferences
+
+How to find the **Eclipse preferences** window depends on your Eclipse version and/or OS, and may be either of:
+
+- **Window &rarr; Preferences**
+- **Eclipse &rarr; Preferences**
+
+### Installation
 
 1. Inside Eclipse, go to **Help &rarr; Install New Software**.
 1. Add new software site using the URL: `http://www.grammaticalframework.org/eclipse/release/`
@@ -119,13 +124,6 @@ You can set these from **Preferences &rarr; Install/Update &rarr; Available Soft
 1. The plugin will try to determine the path to your GF executable automatically. You can check/overwrite it by going to **Preferences &rarr; Grammatical Framework**.
 This path should **include** the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
 1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
-
-#### Eclipse preferences
-
-How to find the Eclipse preferences window may depend on your version and/or operating system, and may be either of:
-
-- **Window &rarr; Preferences**
-- **Eclipse &rarr; Preferences**
 
 ### Updating the plugin
 
@@ -178,29 +176,32 @@ A quick run through of the major features available in the GF Eclipse Plugin.
 _If the video doesn't appear above, you can view it at [https://vimeo.com/38768382](https://vimeo.com/38768382)_
 
 ### The Eclipse _workspace_ and _project_ concepts
-When you run Eclipse, it asks you to create or specify a _workspace_ on your system. Any projects you wish to work
-on inside Eclipse must reside in this workspace; generally each folder under the top-level workspace directory is
-considered an individual project, i.e.:
+When you run Eclipse, it asks you to create or specify a _workspace_ on your system, which is essentially the top directory that Eclipse will "see". Any code you wish to work on inside Eclipse must reside in this workspace.
+A workspace contains one or more _projects_, which may or may not be related to each other. Generally each folder under the top-level workspace directory is considered an individual project, i.e.:
 
     workspace/
         Project1/
-            file1.gf
-            file2.gf
+            file1-1.gf
+            file1-2.gf
         Project2/
-            file3.gf
-            file4.gf
+            subdir2-1/
+                file2-1-1.gf
+                file2-1-2.gf
+            file2-1.gf
+            file2-2.gf
 
-If you open an existing folder as your workspace in Eclipse, then your folders in that workspace do not automatically
-become Eclipse projects. You must follow the "Create new GF Project" wizards below, and give your project the exact
-name of the existing folder (e.g. `Project1` or `Project2` in the example above.)
+If you open an existing folder as your workspace in Eclipse, then your folders in that workspace **do not** automatically become Eclipse projects.
+To do this, you must follow the "Create new GF Project" wizard below, and give your project the exact name of the existing folder (e.g. `Project1` or `Project2` in the example above.)
 
 #### GF Nature and Builder
-The _GF Nature_ and the _GF Builder_ are what make a regular Eclipse project a _GF_ project. If you create a new GF Project
-from scratch then you don't need to worry too much about them. If you already have some project set up in your Eclipse
-workspace, then you will need to associate these two items with your project in order for all the GF goodness to work.
+The _GF Nature_ and the _GF Builder_ are what make a regular Eclipse project a _GF_ project.
+If you create a new GF Project from scratch then you don't need to worry too much about them.
+If you already have some project set up in your Eclipse workspace, then you will need to associate these two items with your project in order for all the GF goodness to work.
 
 As of 1.4.2, this can be done very easily by right-clicking on your project in the explorer and clicking **Add/Remove GF Nature &amp; Builder**.
 If your project has the GF icon overlayed on it, then the GF nature and builder are correctly associated with it.
+
+See the **project settings** section above if you want to mess with your `.project` file.
 
 ### Create a new GF Project
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
@@ -250,7 +251,7 @@ Use the built-in code formatter to tidy your code automatically. Right-click in 
 ![Before auto-formatting](http://www.grammaticalframework.org/eclipse/images/eclipse-before-format.png) ![After auto-formatting](http://www.grammaticalframework.org/eclipse/images/eclipse-after-format.png)
 
 ### Syntax highlighting
-You can change your syntax colouring styles as you wish from **Window &rarr; Preferences &rarr; Grammatical Framework &rarr; Syntax Coloring**
+You can change your syntax colouring styles as you wish from **Preferences &rarr; Grammatical Framework &rarr; Syntax Coloring**
 
 ![Syntax highlighting styles](http://www.grammaticalframework.org/eclipse/images/eclipse-syntaxcoloring.png)
 
