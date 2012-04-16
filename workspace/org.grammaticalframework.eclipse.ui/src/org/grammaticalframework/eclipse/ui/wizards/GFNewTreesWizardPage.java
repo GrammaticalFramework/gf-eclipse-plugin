@@ -12,8 +12,6 @@ package org.grammaticalframework.eclipse.ui.wizards;
 import org.eclipse.debug.core.ILaunchConfiguration;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.graphics.Font;
-import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Combo;
@@ -81,13 +79,11 @@ public class GFNewTreesWizardPage extends AbstractNewFileWizardPage {
 		// If no launch configs, diplay message and that's it
 		launchConfigurations = GFWizardHelper.getGFLaunchConfigs();
 		if (launchConfigurations.length==0) {
-			FontData fontData = parent.getFont().getFontData()[0];
-			Font fontItalic = new Font(container.getDisplay(), new FontData(fontData.getName(), fontData.getHeight(), SWT.ITALIC));
 			Label l = new Label(container, SWT.NULL);
 			l.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
-			l.setFont(fontItalic);
 			l.setText("No GF launch configurations were found.\n" +
 					"Please create one from 'Run Configurations' and re-open this wizard. ");
+			makeItalic(l);
 			initialize(container);
 			return;
 		}

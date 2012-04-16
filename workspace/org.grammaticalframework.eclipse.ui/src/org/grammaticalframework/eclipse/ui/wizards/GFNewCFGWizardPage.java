@@ -19,8 +19,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
-import org.eclipse.swt.graphics.Font;
-import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -83,13 +81,10 @@ public class GFNewCFGWizardPage extends AbstractNewFileWizardPage {
 		layout.numColumns = 3;
 		layout.verticalSpacing = 5;
 		
-		FontData fontData = parent.getFont().getFontData()[0];
-		Font fontItalic = new Font(container.getDisplay(), new FontData(fontData.getName(), fontData.getHeight(), SWT.ITALIC));
-		
 		// Little notice
 		Label l = new Label(container, SWT.NULL);
 		l.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
-		l.setFont(fontItalic);
+		makeItalic(l);
 		l.setText("Note: The GF Eclipse Plugin does not feature any support for editing context-free grammars.\n" +
 				"This wizard will simply create your grammar file and open in the default plain-text editor. ");
 		

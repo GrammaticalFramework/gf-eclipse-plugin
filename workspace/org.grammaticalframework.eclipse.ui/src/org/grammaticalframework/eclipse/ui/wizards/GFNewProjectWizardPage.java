@@ -17,16 +17,11 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jface.dialogs.IMessageProvider;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.FocusEvent;
-import org.eclipse.swt.events.FocusListener;
-import org.eclipse.swt.events.SelectionEvent;
-import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.List;
-import org.eclipse.swt.widgets.Text;
 
 /**
  * Wizard page for creating a new GF Project
@@ -37,28 +32,17 @@ import org.eclipse.swt.widgets.Text;
 public class GFNewProjectWizardPage extends AbstractNewFileWizardPage {
 
 	/**
-	 * The project name text field.
+	 * The project name field.
 	 */
-	private Text projectNameText;
+	private Combo projectNameField;
 	
-	/**
-	 * List of folders available for import.
-	 */
-	private List importFolderList;
-
 	/**
 	 * Gets the project name, either from text field or folder list
 	 *
 	 * @return the project name
 	 */
 	public String getProjectName() {
-		if (importFolderList != null && importFolderList.getSelectionIndex() > -1) {
-			return importFolderList.getSelection()[0];
-//			return importFolderList.getItem(importFolderList.getSelectionIndex());
-		}
-		else {
-			return projectNameText.getText().trim();
-		}
+		return projectNameField.getText().trim();
 	}
 
 	/**
@@ -96,44 +80,19 @@ public class GFNewProjectWizardPage extends AbstractNewFileWizardPage {
 		
 		// Project name
 		new Label(container, SWT.NULL).setText("&New project name:");
-		projectNameText = new Text(container, SWT.BORDER);
-		projectNameText.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-		projectNameText.addModifyListener(defaultModifyListener);
-		projectNameText.addFocusListener(new FocusListener() {
-			public void focusLost(FocusEvent e) {
-			}
-			public void focusGained(FocusEvent e) {
-				importFolderList.deselectAll();
-				if (getProjectName().isEmpty()) {
-					clearStatus();
-					setMessage(null, IMessageProvider.INFORMATION);
-					setPageComplete(false);
-				} else {
-					dialogChanged();
-				}
-			}
-		});
+		projectNameField = new Combo(container, SWT.BORDER | SWT.SIMPLE); // not read-only!
+		projectNameField.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+		projectNameField.addModifyListener(defaultModifyListener);
 		
-		// Existing folders (if there are any)
+		// Add existing folders (if there are any)
 		String[] items = GFWizardHelper.getWorkspaceFolders();
 		if (items.length > 0) {
-			Label l = new Label(container, SWT.CENTER);
-			l.setText("OR");
-			l.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
-
-			new Label(container, SWT.NULL).setText("&Convert folder to GF project:");
-			importFolderList = new List(container, SWT.BORDER | SWT.SINGLE);
-			importFolderList.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
-			importFolderList.addSelectionListener(new SelectionListener() {
-				public void widgetSelected(SelectionEvent e) {
-					projectNameText.setText("");
-					dialogChanged();
-				}
-				public void widgetDefaultSelected(SelectionEvent e) {
-					widgetSelected(e);
-				}
-			});
-			importFolderList.setItems(items);
+			projectNameField.setItems(items);
+			new Label(container, SWT.NULL);
+			Label l = new Label(container, SWT.NULL);
+			l.setText("You can turn an existing workspace folder into a GF Project \n" +
+					"by selecting it from the drop-down above.");
+			makeItalic(l);
 		}
 		
 		initialize(container);

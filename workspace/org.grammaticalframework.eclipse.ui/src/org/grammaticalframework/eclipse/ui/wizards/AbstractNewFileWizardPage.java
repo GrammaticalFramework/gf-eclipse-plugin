@@ -24,8 +24,11 @@ import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.graphics.FontData;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.ContainerSelectionDialog;
 import org.grammaticalframework.eclipse.ui.wizards.GFWizardHelper.GFModuleContentAdapter;
@@ -239,5 +242,11 @@ public abstract class AbstractNewFileWizardPage extends WizardPage {
 	 */
 	protected boolean isValidModuleName(String s) {
 		return s.matches(REGEX_MODULE_NAME);
+	}
+	
+	protected void makeItalic(Label label) {
+		FontData fontData = label.getFont().getFontData()[0];
+		Font fontItalic = new Font(label.getDisplay(), new FontData(fontData.getName(), fontData.getHeight(), SWT.ITALIC));
+		label.setFont(fontItalic);
 	}
 }
