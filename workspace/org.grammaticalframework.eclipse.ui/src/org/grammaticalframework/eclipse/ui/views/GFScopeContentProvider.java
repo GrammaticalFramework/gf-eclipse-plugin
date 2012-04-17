@@ -101,7 +101,7 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 			
 			// Ignore certain stuff
 			String type = ieObjectDescription.getUserData(TagEntry.USER_DATA_KEY_TYPE);
-			if (!type.equals("oper-def"))
+			if (type.equals("oper-def"))
 				continue;
 				
 			tagMap.get(module).add(ieObjectDescription);
