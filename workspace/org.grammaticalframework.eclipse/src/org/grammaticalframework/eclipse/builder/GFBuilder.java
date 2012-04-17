@@ -22,6 +22,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IMarker;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
@@ -59,7 +60,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	/**
 	 * Folder for links to external files
 	 */
-	public static final String EXTERNAL_FOLDER = ".gfexternal"; //$NON-NLS-1$
+//	public static final String EXTERNAL_FOLDER = ".gfexternal"; //$NON-NLS-1$
+	public static final String EXTERNAL_FOLDER = BUILD_FOLDER;
 	
 	/**
 	 * Use a single external folder per project, or in every source code folder?
@@ -254,10 +256,25 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				}
 				
 				// Decide if we want to delete it
-				boolean isFile = (resource.getType() == IResource.FILE);
+				boolean isFile = resource instanceof IFile;
+				boolean isFolder = resource instanceof IFolder;
 				String extension = (resource.getFileExtension() != null) ? resource.getFileExtension() : "";
 				String parent = (resource.getParent() != null) ? resource.getParent().getName() : "";
-				if (isFile && (extension.equals("gfo") || parent.equals(BUILD_FOLDER) || parent.equals(EXTERNAL_FOLDER))) {
+
+				boolean delete = false;
+				
+				// Just delete the build/external folders outright
+				if (isFolder && (resource.getName().equals(BUILD_FOLDER) || resource.getName().equals(BUILD_FOLDER))) {
+					delete = true;
+				}
+				
+				// Delete gfo files, build/external files (should be obsolete cos of above)
+				else if (isFile && (extension.equals("gfo") || parent.equals(BUILD_FOLDER) || parent.equals(EXTERNAL_FOLDER))) {
+					delete = true;
+				}
+				
+				// Do the deed
+				if (delete) {
 					try {
 						resource.delete(true, monitor);
 						log.info("Deleted: " + resource.getFullPath());
@@ -265,9 +282,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 						log.warn("Delete failed: " + resource.getFullPath(), e);
 					}
 				}
-				
-				// Visit children too
-				return true;
+
+				// Only visit children of something not deleted
+				return !delete;
 			}
 		});		
 	}
