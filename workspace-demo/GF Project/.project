@@ -16,32 +16,32 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>Foods/.gfexternal/CatEng.gf</name>
+			<name>Foods/.gfbuild/CatEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/CatEng.gf</location>
 		</link>
 		<link>
-			<name>Foods/.gfexternal/Combinators.gf</name>
+			<name>Foods/.gfbuild/Combinators.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/api/Combinators.gf</location>
 		</link>
 		<link>
-			<name>Foods/.gfexternal/CommonX.gf</name>
+			<name>Foods/.gfbuild/CommonX.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/common/CommonX.gf</location>
 		</link>
 		<link>
-			<name>Foods/.gfexternal/Constructors.gf</name>
+			<name>Foods/.gfbuild/Constructors.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/api/Constructors.gf</location>
 		</link>
 		<link>
-			<name>Foods/.gfexternal/ParadigmsEng.gf</name>
+			<name>Foods/.gfbuild/ParadigmsEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/ParadigmsEng.gf</location>
 		</link>
 		<link>
-			<name>Foods/.gfexternal/StructuralEng.gf</name>
+			<name>Foods/.gfbuild/StructuralEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/StructuralEng.gf</location>
 		</link>
