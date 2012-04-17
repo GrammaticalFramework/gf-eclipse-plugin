@@ -34,6 +34,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl;
+import org.eclipse.internal.xtend.util.Pair;
 import org.eclipse.xtext.EcoreUtil2;
 import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.resource.IResourceDescriptions;
@@ -41,6 +42,7 @@ import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider;
 import org.eclipse.xtext.scoping.impl.LoadOnDemandResourceDescriptions;
 import org.eclipse.xtext.util.OnChangeEvictingCache;
+
 import com.google.common.base.Predicate;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
@@ -152,10 +154,14 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				
 				// Iterate over all tags, to capture all the different qualifiers
 				// TODO Iterating over all tags to get qualifiers is inefficient
-				HashSet<String> qualifiers = new HashSet<String>();
+//				HashSet<String> qualifiers = new HashSet<String>();
+//				for (TagEntry tag : tagList) {
+//					qualifiers.add(tag.getQualifier());
+//					qualifiers.add(tag.getAlias()); // this also allows for empty aliases! i.e. when inheriting
+//				}
+				Set<Pair<String, String>> qualifiers = new HashSet<Pair<String,String>>();
 				for (TagEntry tag : tagList) {
-					qualifiers.add(tag.getQualifier());
-					qualifiers.add(tag.getAlias()); // this also allows for empty aliases! i.e. when inheriting
+					qualifiers.add(new Pair<String,String>(tag.getQualifier(), tag.getAlias()));
 				}
 				
 				Predicate<TagEntry> includePredicate2 = new Predicate<TagEntry>() {
@@ -194,7 +200,8 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @return collections of tags grouped by URI
 	 * @throws GFTagsFileException 
 	 */
-	private URITagMap parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate, Set<String> qualifiers) {
+//	private URITagMap parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate, Set<String> qualifiers) {
+	private URITagMap parseSingleTagsFile(URI tagFileURI, Predicate<TagEntry> includePredicate, Set<Pair<String, String>> qualifiers) {
 		
 		TagMap strTagMap = new TagMap();
 		try {
@@ -215,11 +222,14 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				
 				// Add tag to map...
 				if (qualifiers != null) {
+					if (qualifiers.size()>1) log.debug("more than one set of qualifiers!!!");
+					
 					// Add with multiple qualifiers, as needed
-					for (String q : qualifiers) {
+					for (Pair<String, String> pair : qualifiers) {
 						try {
 							TagEntry tag2 = new TagEntry(line);
-							tag2.setQualifier(q);
+							tag2.setQualifier(pair.getFirst());
+							tag2.setAlias(pair.getSecond());
 							strTagMap.addTag(tag2);
 						} catch (GFTagsFileException e) {
 							log.warn("Error creating tag", e);

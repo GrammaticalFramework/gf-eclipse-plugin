@@ -84,51 +84,57 @@ public class GFTagBasedScope extends AbstractScope {
 	 * @param tags
 	 */
 	public void addTags(IResourceDescriptions resourceDescriptions, Collection<TagEntry> tags) {
-		int notFoundCount = 0;
+		ArrayList<TagEntry> notFound = new ArrayList<TagEntry>();
 		for (TagEntry tag : tags) {
 			try {
-				QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getQualifiedName());
-				QualifiedName trueQualifiedName = converter.toQualifiedName(tag.getTrueQualifiedName());
-//				QualifiedName unQualifiedName = getUnQualifiedName(trueQualifiedName);
+				QualifiedName trueQualifiedName = converter.toQualifiedName(tag.getTrueQualifiedName()); // qualified with ultimate module of definition
 				Map<String, String> userData = tag.getProperties();
 				
 				IEObjectDescription eObjectDescription = null;
 				
-				// First try trueQualifiedName
+				// Try to find by using trueQualifiedName
 				Iterable<IEObjectDescription> matchingEObjects1 = resourceDescriptions.getExportedObjects(GFPackage.Literals.IDENT, trueQualifiedName, false);
 				Iterator<IEObjectDescription> iter1 = matchingEObjects1.iterator();
-				if (iter1.hasNext()) { // TODO This just always chooses first occurance... is that bad?
+				if (iter1.hasNext()) {
+					// TODO This just always chooses first occurance... is that bad?
 					eObjectDescription = iter1.next();
-//				} else {
-//					// If not, then try fullyQualifiedName
-//					Iterable<IEObjectDescription> matchingEObjects2 = resourceDescriptions.getExportedObjects(GFPackage.Literals.IDENT, fullyQualifiedName, false);
-//					Iterator<IEObjectDescription> iter2 = matchingEObjects2.iterator();
-//					if (iter2.hasNext()) {
-//						eObjectDescription = iter2.next();
-//					}
 				}
 				
 				// Did we find anything?
 				if (eObjectDescription != null) {
 					// Duplicate the object description, so that we can edit the qualified name and add the user data
+					QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getQualifiedName());
 					IEObjectDescription eObjectDescription2 = new EObjectDescription(fullyQualifiedName, eObjectDescription.getEObjectOrProxy(), userData);
 					descriptions.add(eObjectDescription2);
+
+					/*
+					 * Do it again for the alias, or if no alias then for the UNQUALIFIED name
+					 * Technically we can do without the else block, since TagEntry#getAliasQualifiedName() will
+					 * just return an unqualified name if no alias exists. But that makes for very unreadable code.
+					 */
+					if (tag.hasAlias()) {
+						QualifiedName aliasQualifiedName = converter.toQualifiedName(tag.getAliasQualifiedName());
+						eObjectDescription2 = new EObjectDescription(aliasQualifiedName, eObjectDescription.getEObjectOrProxy(), userData);
+						descriptions.add(eObjectDescription2);
+					} else {
+						QualifiedName unQualifiedName = getUnQualifiedName(trueQualifiedName);
+						eObjectDescription2 = new EObjectDescription(unQualifiedName, eObjectDescription.getEObjectOrProxy(), userData);
+						descriptions.add(eObjectDescription2);
+					}
 				}
 				else {
-					notFoundCount++;
+					notFound.add(tag);
 				}
 			} catch (IllegalStateException _) {
 				// Sometimes happens when you save during a build/validation, etc. 
 			}
+		}
 			
-			if (notFoundCount > 0) {
-				log.debug(String.format("No EObject found for %s items.", notFoundCount));
-			}
+		if (notFound.size() > 0) {
+			log.debug(String.format("No EObject found for %s items.", notFound.size()));
 		}
 	}
 	
-
-	@SuppressWarnings("unused")
 	private QualifiedName getUnQualifiedName(QualifiedName qn) {
 		return qn.skipFirst(qn.getSegmentCount()-1);
 	}

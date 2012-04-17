@@ -35,11 +35,46 @@ public class TagEntry {
 	public static String USER_DATA_KEY_ARGS = "args";
 	
 	/**
-	 * Record fields
+	 * The unqualified indentifier
 	 */
-	private String ident, type, qualifier, alias, file, args;
+	private String ident;
+	
+	/**
+	 * Judgement type, e.g. param, oper.
+	 */
+	private String type;
+	
+	/**
+	 * Full qualifier of name; i.e. the name of CLOSEST module where the identifier was inherited from.
+	 */
+	private String qualifier;
+	
+	/**
+	 * Aliased name for qualifier, e.g. P in (P = ParadigmsEng) 
+	 */
+	private String alias;
+	
+	/**
+	 * Module where this identifier is ultimately defined.
+	 */
 	private String moduleName;
+
+	/**
+	 * Filesystem path to definition; could be another tags file OR the ultimate source file.
+	 */
+	private String file;
+	
+	/**
+	 * Oper arguments, where applicable
+	 */
+	private String args;
+	
+	
 	private Integer lineFrom, lineTo;
+	
+	/**
+	 * Is this tag pointing to another tags file? (indirect = yes)
+	 */
 	private Boolean isIndirect;
 	
 	/**
@@ -154,6 +189,9 @@ public class TagEntry {
 	public void setAlias(String alias) {
 		this.alias = alias;
 	}
+	public boolean hasAlias() {
+		return !this.alias.isEmpty();
+	}
 
 	public String getFile() {
 		return file;
@@ -170,7 +208,7 @@ public class TagEntry {
 	public Boolean getIsIndirect() {
 		return isIndirect;
 	}
-
+	
 	/**
 	 * Return the qualified name as determined by the dependancy graph.
 	 *  
@@ -178,6 +216,15 @@ public class TagEntry {
 	 */
 	public String getQualifiedName() {
 		return qualifier.isEmpty() ? ident : qualifier + "." + ident;
+	}
+
+	/**
+	 * Return the named qualified with the alias.
+	 *  
+	 * @return alias-qualified name
+	 */
+	public String getAliasQualifiedName() {
+		return alias.isEmpty() ? ident : alias + "." + ident;
 	}
 	
 	/**
@@ -203,5 +250,5 @@ public class TagEntry {
 		sb.append(")");
 		return sb.toString();
 	}
-	
+
 }
