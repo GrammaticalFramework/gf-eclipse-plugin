@@ -76,6 +76,8 @@ public class GFLibraryTreeView extends ViewPart {
 	// Actions
 	private Action expandAllAction;
 	private Action collapseAllAction;
+	private Action caseSensitiveSearchAction;
+	private Action regexSearchAction;
 	private Action doubleClickAction;
 
 	private IPartListener2 listener;
@@ -104,8 +106,7 @@ public class GFLibraryTreeView extends ViewPart {
 		searchField.addModifyListener(new ModifyListener() {
 			@Override
 			public void modifyText(ModifyEvent e) {
-				viewer.refresh();
-				viewer.expandAll();
+				refreshAndExpandViewer();
 			}
 		});
 		
@@ -116,14 +117,19 @@ public class GFLibraryTreeView extends ViewPart {
 		viewer.addFilter(new ViewerFilter() {
 			@Override
 			public boolean select(Viewer viewer, Object parentElement, Object element) {
-				String search = searchField.getText().trim().toLowerCase();
+				String search = searchField.getText().trim();
 				if (search.isEmpty()) {
 					return true;
 				}
 				if (element instanceof IEObjectDescription) {
-					String name = ((IEObjectDescription)element).getName().toString().toLowerCase();
+					String name = ((IEObjectDescription)element).getName().toString();
 //					String moduleName = ((ModuleItem)parentElement).getName().toString().toLowerCase();
-					return (name.contains(search));
+					if (regexSearchAction.isChecked()) {
+						return (caseSensitiveSearchAction.isChecked()) ? name.matches(search) : name.matches("(?i)"+search) ;
+					} else {
+						return (caseSensitiveSearchAction.isChecked()) ? name.contains(search) : name.toLowerCase().contains(search.toLowerCase());
+					}
+					
 				}
 				return true;
 			}
@@ -205,6 +211,11 @@ public class GFLibraryTreeView extends ViewPart {
 		
 	}
 	
+	private void refreshAndExpandViewer() {
+		viewer.refresh();
+		viewer.expandAll();
+	}
+	
 	/**
 	 * Create all the actions with their run() methods
 	 */
@@ -226,6 +237,22 @@ public class GFLibraryTreeView extends ViewPart {
 		};
 		collapseAllAction.setText("Expand all");
 		collapseAllAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forCollapseAll()));
+		
+		// Case sensitive search action
+		caseSensitiveSearchAction = new Action("Case-sensitive search", SWT.TOGGLE){
+			@Override
+			public void run() {
+				refreshAndExpandViewer();
+			}
+		};
+		
+		// Regex search action
+		regexSearchAction = new Action("Regular expression search", SWT.TOGGLE){
+			@Override
+			public void run() {
+				refreshAndExpandViewer();
+			}
+		};
 
 		// Double-clicking on an item should take you to its definition
 		doubleClickAction = new Action() {
@@ -298,6 +325,8 @@ public class GFLibraryTreeView extends ViewPart {
 	 * @param manager
 	 */
 	private void fillLocalPullDown(IMenuManager manager) {
+		manager.add(caseSensitiveSearchAction);
+		manager.add(regexSearchAction);
 	}
 
 	/**
