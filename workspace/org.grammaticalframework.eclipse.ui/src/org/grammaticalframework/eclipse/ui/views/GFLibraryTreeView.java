@@ -10,20 +10,29 @@
 package org.grammaticalframework.eclipse.ui.views;
 
 import org.apache.log4j.Logger;
-import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.events.ModifyEvent;
+import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.ide.IDE;
+import org.eclipse.ui.ide.ResourceUtil;
 import org.eclipse.ui.part.*;
 import org.eclipse.jface.viewers.*;
 import org.eclipse.jface.action.*;
 import org.eclipse.ui.*;
+import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.ui.editor.XtextEditor;
+import org.eclipse.xtext.ui.editor.model.XtextDocument;
+import org.eclipse.xtext.ui.resource.IResourceSetProvider;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.SWT;
 import org.eclipse.core.resources.IFile;
-import org.eclipse.core.resources.IFolder;
-import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
-import org.grammaticalframework.eclipse.ui.labeling.GFImages;
-
+import org.eclipse.core.resources.IResource;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import com.google.inject.Inject;
 
 /**
@@ -43,11 +52,7 @@ public class GFLibraryTreeView extends ViewPart {
 	 */
 	protected static final Logger log = Logger.getLogger(GFLibraryTreeView.class);
 	
-	/**
-	 * Image helper
-	 */
-	@Inject
-	private GFImages images;
+	private Text searchField;
 
 	private TreeViewer viewer;
 //	private DrillDownAdapter drillDownAdapter;
@@ -58,23 +63,52 @@ public class GFLibraryTreeView extends ViewPart {
 	private IPartListener2 listener;
 	
 	@Inject
-	FolderContentsTreeContentProvider contentProvider;
+	GFScopeContentProvider contentProvider;
+	
+	@Inject
+	GFScopeLabelProvider labelProvider;
 	
 	@Inject
 	TreeSorter sorter;
+	
+	@Inject
+	private IResourceSetProvider resourceSetProvider;
 
 	/**
 	 * This is a callback that will allow us to create the viewer and initialize
 	 * it.
 	 */
 	public void createPartControl(Composite parent) {
-		viewer = new TreeViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL);
+		
+		parent.setLayout(new GridLayout(1, true));
+		
+		searchField = new Text(parent, SWT.BORDER | SWT.SEARCH | SWT.ICON_SEARCH | SWT.ICON_CANCEL );
+		searchField.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
+		searchField.addModifyListener(new ModifyListener() {
+			@Override
+			public void modifyText(ModifyEvent e) {
+				// TODO Auto-generated method stub
+				viewer.refresh();
+			}
+		});
+		
+		viewer = new TreeViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER);
+		viewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));		
 //		drillDownAdapter = new DrillDownAdapter(viewer);
 		viewer.setContentProvider(contentProvider);
-		viewer.setLabelProvider(new TreeLabelProvider() {
+		viewer.setLabelProvider(labelProvider);
+		viewer.addFilter(new ViewerFilter() {
 			@Override
-			public Image getImage(Object element) {
-				return images.forLibraryReference();
+			public boolean select(Viewer viewer, Object parentElement, Object element) {
+				String search = searchField.getText().trim().toLowerCase();
+				if (search.isEmpty()) {
+					return true;
+				}
+				if (element instanceof IEObjectDescription) {
+					String name = ((IEObjectDescription)element).getName().toString().toLowerCase();
+					return (name.contains(search));
+				}
+				return true;
 			}
 		});
 		// viewer.setSorter(new NameSorter());
@@ -82,8 +116,7 @@ public class GFLibraryTreeView extends ViewPart {
 		viewer.setInput(null); // our listener below will take care of this
 
 		// Create the help context id for the viewer's control
-		// PlatformUI.getWorkbench().getHelpSystem().setHelp(viewer.getControl(),
-		// "org.grammaticalframework.eclipse.ui.viewer");
+		// PlatformUI.getWorkbench().getHelpSystem().setHelp(viewer.getControl(), "org.grammaticalframework.eclipse.ui.viewer");
 		makeActions();
 		hookContextMenu();
 		hookDoubleClickAction();
@@ -92,14 +125,31 @@ public class GFLibraryTreeView extends ViewPart {
 		// Add a listener which updates the view each time the active editor is changed
 		listener = new IPartListener2() {
 			public void partActivated(IWorkbenchPartReference partRef) {
+				
+				// TODO Put this in an async block
+				
 				try {
+					// TODO Check the file is a GF source file
+					
 					IEditorPart editor = partRef.getPage().getActiveEditor();
-					IEditorInput input = editor.getEditorInput();
-					if (input instanceof IFileEditorInput) {
-						IFile file = ((IFileEditorInput) input).getFile();
-						IFolder extFolder = GFScopingHelper.getExernalFolder(file);
-						viewer.setInput(extFolder);
-					}
+					XtextEditor xEditor = (XtextEditor)editor;
+					XtextDocument doc = (XtextDocument)xEditor.getDocument();
+					URI uri = doc.getResourceURI();
+					IResource iresource = ResourceUtil.getResource(editor.getEditorInput());
+					ResourceSet resourceSet = resourceSetProvider.get(iresource.getProject());
+					Resource resource = resourceSet.getResource(uri, true);
+					viewer.setInput(resource);
+					
+//					IEditorInput input = editor.getEditorInput();
+//					if (input instanceof IFileEditorInput) {
+//						IFile file = ((IFileEditorInput) input).getFile();
+//						
+//						// TODO Check the file is a GF source file
+//						viewer.setInput(file);
+//						
+////						IFolder extFolder = GFScopingHelper.getExernalFolder(file);
+////						viewer.setInput(extFolder);
+//					}
 				} catch (Exception _) {
 					viewer.setInput(null);
 				}

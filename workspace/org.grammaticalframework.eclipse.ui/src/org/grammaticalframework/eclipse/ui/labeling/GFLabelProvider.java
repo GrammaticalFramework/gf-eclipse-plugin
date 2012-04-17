@@ -65,7 +65,7 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 	}
 	
 	/**
-	 * Format a teo-part label, with the name regular and the type greyed and italic
+	 * Format a two-part label, with the name regular and the type greyed and italic
 	 * @param name
 	 * @param type
 	 * @return
