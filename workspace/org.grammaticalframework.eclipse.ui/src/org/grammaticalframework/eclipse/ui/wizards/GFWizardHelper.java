@@ -151,7 +151,7 @@ public class GFWizardHelper {
 				suggestions.add(file);
 			}
 		}
-		// Recursve into containers
+		// Recurse into containers
 		else if (resource instanceof IContainer) {
 			if (!includeExternal && ((IContainer)resource).getName().equals(GFBuilder.EXTERNAL_FOLDER)) {
 				return;
