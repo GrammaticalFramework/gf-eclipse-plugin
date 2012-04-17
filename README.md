@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 11 April 2012
+Updated: 16 April 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -13,7 +13,7 @@ The choice was made to develop this desktop IDE as a plugin for the Eclipse Plat
 
 ### License
 
-The GF Eclipse Plugin is open-source under the [GNU General Public License (GPL)](http://www.gnu.org/licenses/gpl-3.0.txt).  
+The GF Eclipse Plugin is open-source under the **[GNU General Public License (GPL)](http://www.gnu.org/licenses/gpl-3.0.txt)**.  
 _The licenses that cover the rest of GF are listed [here](http://www.grammaticalframework.org/LICENSE)._  
 _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://www.eclipse.org/legal/epl-v10.html)._
 
@@ -203,6 +203,14 @@ If your project has the GF icon overlayed on it, then the GF nature and builder 
 
 See the **project settings** section above if you want to mess with your `.project` file.
 
+#### Metadata folders
+GFEP will create the following metadata directories within your project. They can be removed manually at any time, as they will always be regenerated as necessary.
+You will probably want to ignore these directories in your version control system.
+
+- A `.gfbuild` directory in every folder containing GF source code, containing `.gf-tags` files created using the GF `--tags` compiler flag.
+- A `.gfexternal` directory in every folder containing GF source code, containing symbolic links to external libraries referenced in your code. These links are only visible within Eclipse; to the filesystem this directory appears empty.
+
+
 ### Create a new GF Project
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-2.png)
@@ -330,14 +338,7 @@ You can set the log verbosity from **Preferences &rarr; Grammatical Framework**.
 ## Evaluation & feedback
 
 Please try to use the plugin for developing your own GF projects and report any issues you come up against.
-
-For all bug reports and feature requests please use the [GitHub Issue Tracker](https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues).
-
-Do not hesitate to let us know how you think the plugin can be improved!
-
-### Criteria
-
-As part of the evaluation of the GF Eclipse Plugin, feedback (both negative and positive) on the following would be appreciated:
+Feedback (both negative and positive) on the following would be appreciated:
 
 1. Issues encountered with installation
 1. Incorrect support of GF syntactic constructs, module hierarchy system
@@ -346,14 +347,16 @@ As part of the evaluation of the GF Eclipse Plugin, feedback (both negative and 
 1. Feature wish-list
 1. Compatibilities / conflicts with other Eclipse plugins
 
+For all bug reports and feature requests, please use the [GitHub Issue Tracker](https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues).
+
 
 <!----------------------------------------------------------------------------->
 
 ## Appendix
 
-### Icons
+### Module types
 
-Description of some of the icons which are used in the GF Eclipse Plugin.
+Description of the GF module types and their icons within the GF Eclipse Plugin.
 
 | Icon | Description | Notes |
 |:----:|:------------|:------|
