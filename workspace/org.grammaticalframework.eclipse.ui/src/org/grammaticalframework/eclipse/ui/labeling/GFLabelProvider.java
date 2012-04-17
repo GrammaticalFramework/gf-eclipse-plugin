@@ -65,15 +65,15 @@ public class GFLabelProvider extends DefaultEObjectLabelProvider {
 	}
 	
 	/**
-	 * Format a two-part label, with the name regular and the type greyed and italic
-	 * @param name
-	 * @param type
+	 * Format a two-part label: regular / grey + italic
+	 * @param s1
+	 * @param s2
 	 * @return
 	 */
-	public StyledString twoPartLabel(String name, String type) {
-		StyledString ss = new StyledString(name);
-		if (type != null && !type.isEmpty())
-			ss.append(" : " + type, stylerFactory.createXtextStyleAdapterStyler(getTypeTextStyle()));
+	public StyledString twoPartLabel(String s1, String s2) {
+		StyledString ss = new StyledString(s1);
+		if (s2 != null && !s2.isEmpty())
+			ss.append(" : " + s2, stylerFactory.createXtextStyleAdapterStyler(getTypeTextStyle()));
 		return ss;
 	}
 

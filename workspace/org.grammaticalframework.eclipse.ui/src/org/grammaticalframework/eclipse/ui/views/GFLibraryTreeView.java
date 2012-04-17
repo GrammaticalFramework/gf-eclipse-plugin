@@ -15,10 +15,12 @@ import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.ide.ResourceUtil;
 import org.eclipse.ui.part.*;
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.*;
 import org.eclipse.jface.action.*;
 import org.eclipse.ui.*;
@@ -29,10 +31,19 @@ import org.eclipse.xtext.ui.resource.IResourceSetProvider;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.SWT;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.runtime.IProgressMonitor;
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.core.runtime.jobs.Job;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
+import org.grammaticalframework.eclipse.ui.labeling.GFImages;
+import org.grammaticalframework.eclipse.ui.views.GFScopeContentProvider.ModuleItem;
+
 import com.google.inject.Inject;
 
 /**
@@ -51,13 +62,20 @@ public class GFLibraryTreeView extends ViewPart {
 	 * Logger
 	 */
 	protected static final Logger log = Logger.getLogger(GFLibraryTreeView.class);
-	
-	private Text searchField;
 
+	/**
+	 * Image helper
+	 */
+	@Inject
+	private GFImages images;
+	
+	// Widgets
+	private Text searchField;
 	private TreeViewer viewer;
-//	private DrillDownAdapter drillDownAdapter;
-//	private Action action1;
-//	private Action action2;
+
+	// Actions
+	private Action expandAllAction;
+	private Action collapseAllAction;
 	private Action doubleClickAction;
 
 	private IPartListener2 listener;
@@ -69,10 +87,9 @@ public class GFLibraryTreeView extends ViewPart {
 	GFScopeLabelProvider labelProvider;
 	
 	@Inject
-	TreeSorter sorter;
-	
-	@Inject
 	private IResourceSetProvider resourceSetProvider;
+	
+	private IFile currentFile;
 
 	/**
 	 * This is a callback that will allow us to create the viewer and initialize
@@ -87,14 +104,13 @@ public class GFLibraryTreeView extends ViewPart {
 		searchField.addModifyListener(new ModifyListener() {
 			@Override
 			public void modifyText(ModifyEvent e) {
-				// TODO Auto-generated method stub
 				viewer.refresh();
+				viewer.expandAll();
 			}
 		});
 		
 		viewer = new TreeViewer(parent, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER);
 		viewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));		
-//		drillDownAdapter = new DrillDownAdapter(viewer);
 		viewer.setContentProvider(contentProvider);
 		viewer.setLabelProvider(labelProvider);
 		viewer.addFilter(new ViewerFilter() {
@@ -106,13 +122,12 @@ public class GFLibraryTreeView extends ViewPart {
 				}
 				if (element instanceof IEObjectDescription) {
 					String name = ((IEObjectDescription)element).getName().toString().toLowerCase();
+//					String moduleName = ((ModuleItem)parentElement).getName().toString().toLowerCase();
 					return (name.contains(search));
 				}
 				return true;
 			}
 		});
-		// viewer.setSorter(new NameSorter());
-		viewer.setComparator(sorter);
 		viewer.setInput(null); // our listener below will take care of this
 
 		// Create the help context id for the viewer's control
@@ -124,35 +139,52 @@ public class GFLibraryTreeView extends ViewPart {
 
 		// Add a listener which updates the view each time the active editor is changed
 		listener = new IPartListener2() {
-			public void partActivated(IWorkbenchPartReference partRef) {
-				
-				// TODO Put this in an async block
-				
+			
+			/**
+			 * Finds the corresponding Resource and sets it as input.
+			 * This causes <code>inputChanged</code> to fire in the content provider.
+			 * In our case, this retrieves the module scope, which is long-running, so this
+			 * method should always be called asynchronously.
+			 * 
+			 * @param partRef
+			 */
+			private void changeInput(IWorkbenchPartReference partRef) {
 				try {
-					// TODO Check the file is a GF source file
-					
+
 					IEditorPart editor = partRef.getPage().getActiveEditor();
 					XtextEditor xEditor = (XtextEditor)editor;
 					XtextDocument doc = (XtextDocument)xEditor.getDocument();
 					URI uri = doc.getResourceURI();
-					IResource iresource = ResourceUtil.getResource(editor.getEditorInput());
-					ResourceSet resourceSet = resourceSetProvider.get(iresource.getProject());
-					Resource resource = resourceSet.getResource(uri, true);
-					viewer.setInput(resource);
-					
-//					IEditorInput input = editor.getEditorInput();
-//					if (input instanceof IFileEditorInput) {
-//						IFile file = ((IFileEditorInput) input).getFile();
-//						
-//						// TODO Check the file is a GF source file
-//						viewer.setInput(file);
-//						
-////						IFolder extFolder = GFScopingHelper.getExernalFolder(file);
-////						viewer.setInput(extFolder);
-//					}
+					currentFile = (IFile) ResourceUtil.getResource(editor.getEditorInput());
+					ResourceSet resourceSet = resourceSetProvider.get(currentFile.getProject());
+					final Resource resource = resourceSet.getResource(uri, true);
+					Job job = new Job("Updating External Libraries view") {
+						@Override
+						protected IStatus run(IProgressMonitor monitor) {
+							// If you want to update the UI
+							Display.getDefault().asyncExec(new Runnable() {
+								@Override
+								public void run() {
+									viewer.setInput(resource);
+									if (!searchField.getText().isEmpty()) {
+										viewer.expandAll();
+									}
+								}
+							});
+							return Status.OK_STATUS;
+						}
+					};
+					job.schedule();
+
 				} catch (Exception _) {
 					viewer.setInput(null);
+					currentFile = null;
 				}
+				
+			}
+			
+			public void partActivated(final IWorkbenchPartReference partRef) {
+				changeInput(partRef);
 			}
 			public void partBroughtToTop(IWorkbenchPartReference partRef) {
 			}
@@ -172,7 +204,73 @@ public class GFLibraryTreeView extends ViewPart {
 		getSite().getWorkbenchWindow().getPartService().addPartListener(listener);
 		
 	}
+	
+	/**
+	 * Create all the actions with their run() methods
+	 */
+	private void makeActions() {
+		// Expand all items in view
+		expandAllAction = new Action() {
+			public void run() {
+				viewer.expandAll();
+			}
+		};
+		expandAllAction.setText("Expand all");
+		expandAllAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forExpandAll()));
+		
+		// Collapse all items in view
+		collapseAllAction = new Action() {
+			public void run() {
+				viewer.collapseAll();
+			}
+		};
+		collapseAllAction.setText("Expand all");
+		collapseAllAction.setImageDescriptor(ImageDescriptor.createFromImage(images.forCollapseAll()));
 
+		// Double-clicking on an item should take you to its definition
+		doubleClickAction = new Action() {
+			public void run() {
+				if (currentFile == null)
+					return;
+
+				IFolder extFolder = GFScopingHelper.getExernalFolder(currentFile);
+				
+				ISelection selection = viewer.getSelection();
+				Object obj = ((IStructuredSelection) selection).getFirstElement();
+
+				if (obj instanceof ModuleItem) {
+					IResource res = extFolder.findMember(((ModuleItem)obj).getName()+".gf");
+					if (res != null && res instanceof IFile) {
+						IFile file = (IFile) res;
+						IWorkbenchPage page = getSite().getWorkbenchWindow().getActivePage();
+						try {
+							IDE.openEditor(page, file);
+						} catch (Exception e) {
+							log.warn("Couldn't open "+file.getRawLocation().toOSString());
+						}
+					}
+				}
+				else if (obj instanceof IEObjectDescription) {
+					// TODO Open the respective file and jump to the right point in the file!
+				}
+			}
+		};
+	}
+
+	/**
+	 * Configure double-click action
+	 */
+	private void hookDoubleClickAction() {
+		viewer.addDoubleClickListener(new IDoubleClickListener() {
+			public void doubleClick(DoubleClickEvent event) {
+				doubleClickAction.run();
+			}
+		});
+	}
+
+	/**
+	 * Configure context menu
+	 */
 	private void hookContextMenu() {
 		MenuManager menuMgr = new MenuManager("#PopupMenu");
 		menuMgr.setRemoveAllWhenShown(true);
@@ -186,77 +284,37 @@ public class GFLibraryTreeView extends ViewPart {
 		getSite().registerContextMenu(menuMgr, viewer);
 	}
 
+	/**
+	 * Add actions to various parts of the view
+	 */
 	private void contributeToActionBars() {
 		IActionBars bars = getViewSite().getActionBars();
 		fillLocalPullDown(bars.getMenuManager());
 		fillLocalToolBar(bars.getToolBarManager());
 	}
 
+	/**
+	 * Add contributions to the text menu at the top-right (i.e. when clicking the small white arrow)
+	 * @param manager
+	 */
 	private void fillLocalPullDown(IMenuManager manager) {
-//		manager.add(action1);
-//		manager.add(new Separator());
-//		manager.add(action2);
 	}
 
+	/**
+	 * Add contributions to the {@link #viewer} context menu.
+	 * @param manager
+	 */
 	private void fillContextMenu(IMenuManager manager) {
-//		manager.add(action1);
-//		manager.add(action2);
-//		manager.add(new Separator());
-//		drillDownAdapter.addNavigationActions(manager);
-//		// Other plug-ins can contribute there actions here
-//		manager.add(new Separator(IWorkbenchActionConstants.MB_ADDITIONS));
 	}
 
+	/**
+	 * Add contributions to the button area at the top-right of the view.
+	 * Actions added here should probably have an icon associated with them.
+	 * @param manager
+	 */
 	private void fillLocalToolBar(IToolBarManager manager) {
-//		manager.add(action1);
-//		manager.add(action2);
-//		manager.add(new Separator());
-//		drillDownAdapter.addNavigationActions(manager);
-	}
-
-	private void makeActions() {
-//		action1 = new Action() {
-//			public void run() {
-//				showMessage("Action 1 executed");
-//			}
-//		};
-//		action1.setText("Action 1");
-//		action1.setToolTipText("Action 1 tooltip");
-//		action1.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages()
-//				.getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
-//
-//		action2 = new Action() {
-//			public void run() {
-//				showMessage("Action 2 executed");
-//			}
-//		};
-//		action2.setText("Action 2");
-//		action2.setToolTipText("Action 2 tooltip");
-//		action2.setImageDescriptor(PlatformUI.getWorkbench().getSharedImages()
-//				.getImageDescriptor(ISharedImages.IMG_OBJS_INFO_TSK));
-		doubleClickAction = new Action() {
-			public void run() {
-				ISelection selection = viewer.getSelection();
-				Object obj = ((IStructuredSelection) selection).getFirstElement();
-				if (obj instanceof FileNode) {
-					IFile file = ((FileNode)obj).getFile();
-					IWorkbenchPage page = getSite().getWorkbenchWindow().getActivePage();
-					try {
-						IDE.openEditor(page, file);
-					} catch (PartInitException e) {
-						log.warn("Couldn't open "+file.getRawLocation().toOSString());
-					}
-				}
-			}
-		};
-	}
-
-	private void hookDoubleClickAction() {
-		viewer.addDoubleClickListener(new IDoubleClickListener() {
-			public void doubleClick(DoubleClickEvent event) {
-				doubleClickAction.run();
-			}
-		});
+		manager.add(expandAllAction);
+		manager.add(collapseAllAction);
 	}
 
 	/**

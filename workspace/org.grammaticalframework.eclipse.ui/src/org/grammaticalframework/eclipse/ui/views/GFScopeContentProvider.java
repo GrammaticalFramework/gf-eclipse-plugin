@@ -81,12 +81,6 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 	private Map<ModuleItem, List<IEObjectDescription>> tagMap;
 
 	@Override
-	public void dispose() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
 		tagMap = new HashMap<ModuleItem, List<IEObjectDescription>>();
 		
@@ -104,8 +98,15 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 			if (!tagMap.containsKey(module)) {
 				tagMap.put(module, new ArrayList<IEObjectDescription>());
 			}
+			
+			// Ignore certain stuff
+			String type = ieObjectDescription.getUserData(TagEntry.USER_DATA_KEY_TYPE);
+			if (!type.equals("oper-def"))
+				continue;
+				
 			tagMap.get(module).add(ieObjectDescription);
 		}
+		
 	}
 
 	/**
@@ -131,7 +132,7 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 
 	@Override
 	public Object getParent(Object element) {
-		// TODO Auto-generated method stub
+		// We don't really need this
 		return null;
 	}
 
@@ -140,4 +141,9 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 		return (element instanceof ModuleItem);
 	}
 
+	@Override
+	public void dispose() {
+		tagMap = null;
+	}
+	
 }
