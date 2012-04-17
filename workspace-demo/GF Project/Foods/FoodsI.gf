@@ -5,7 +5,7 @@ incomplete concrete FoodsI of Foods =
 	open Syntax, LexFoods in {
 		
 	lincat
-		Phrase = Cl ;
+		Phrase = Syntax.Cl ;
 		Item = NP ;
 		Kind = CN ;
 		Quality = AP ; 
