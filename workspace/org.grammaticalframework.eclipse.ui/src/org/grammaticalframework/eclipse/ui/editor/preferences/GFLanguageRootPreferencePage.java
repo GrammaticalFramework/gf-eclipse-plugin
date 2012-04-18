@@ -48,15 +48,11 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 		label_Path.setText("Must include the executable name, e.g. C:\\GF\\gf.exe ");
 //		label_Path.setText("Must include the executable name, e.g. /sbin/gf ");
 
-		/*
-		 * Specifying the library path doesn't really help at all, just forget the whole thing.
-		 * Pointed out by Thomas H. 2012-02-02
-		 */
-//		addField(new StringFieldEditor(GFPreferences.GF_LIB_PATH, "&Library path:", parent));
-//		new Label(parent, SWT.NULL); // skip cell
-//		Label label_LibraryPath = new Label(parent, SWT.NULL);
-//		label_LibraryPath.setFont(fontItalic);
-//		label_LibraryPath.setText("This is passed to GF using the --gf-lib-path flag (optional) ");
+		addField(new StringFieldEditor(GFPreferences.GF_LIB_PATH, "&Library path:", parent));
+		new Label(parent, SWT.NULL); // skip cell
+		Label label_LibraryPath = new Label(parent, SWT.NULL);
+		label_LibraryPath.setFont(fontItalic);
+		label_LibraryPath.setText("This is passed to GF using the --gf-lib-path flag (optional) ");
 
 		String[][] entryNamesAndValues = new String[][]{
 			// Refer: http://logging.apache.org/log4j/1.2/manual.html
