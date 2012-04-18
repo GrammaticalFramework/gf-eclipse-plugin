@@ -50,7 +50,7 @@ public class GFProjectSupport {
         	addNature(project);
         	addBuilder(project);
             turnOnAutoBuild();
-            String[] paths = { GFBuilder.BUILD_FOLDER, GFBuilder.EXTERNAL_FOLDER }; // "parent/child1-1/child2"
+            String[] paths = { /*GFBuilder.BUILD_FOLDER, GFBuilder.EXTERNAL_FOLDER*/ }; // "parent/child1-1/child2"
             addToProjectStructure(project, paths);
 
             // Maybe this is rude?

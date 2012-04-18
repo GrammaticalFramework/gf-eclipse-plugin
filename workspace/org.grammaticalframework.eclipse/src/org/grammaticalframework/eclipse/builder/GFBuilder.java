@@ -59,6 +59,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	
 	/**
 	 * Folder for links to external files
+	 * Since 1.5, this has been made the same as the build folder.
 	 */
 //	public static final String EXTERNAL_FOLDER = ".gfexternal"; //$NON-NLS-1$
 	public static final String EXTERNAL_FOLDER = BUILD_FOLDER;
@@ -265,6 +266,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				
 				// Just delete the build/external folders outright
 				if (isFolder && (resource.getName().equals(BUILD_FOLDER) || resource.getName().equals(BUILD_FOLDER))) {
+					delete = true;
+				}
+				
+				// This is to handle the upgrade to 1.5, where build and external folders were combined
+				else if (isFolder && (resource.getName().equals(".gfexternal"))) {
 					delete = true;
 				}
 				
