@@ -7,4 +7,6 @@ concrete FoodsEng of Foods = FoodsI - [Pizza] with
 
   lin
     Pizza = mkCN (ParadigmsEng.mkA "Italian") (mkN "pies") ;
-} ; 
+    Cheese = mkCN (mkN "cheese");
+    Muffins = mkN "muffin" ;
+} ;
