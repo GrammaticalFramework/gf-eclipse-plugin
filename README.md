@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 16 April 2012
+Updated: 19 April 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -44,6 +44,9 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 - External library browser
 
 ## Release history
+
+**19/04/12**
+: (1.5.0.x) Removed need for `.gfexternal` folder. Much improved "External Libraries" view allows you to search in current scope. Memory usage improvements in scoping implementation. Validation now occurs on file open. Re-added GF Library Path field in preferences.
 
 **04/04/12**
 : (1.4.3.x) Improvements to the Test Manager. Added support for arbitrary commands in launch. Made the license information clearer.
@@ -132,6 +135,7 @@ This path should **include** the name of the GF binary itself, e.g. `/home/john/
 
 #### Deprecated stuff
 
+- Any folders `.gfexternal` can safely deleted as of GFEP &ge; 1.5. Using Eclipse's **Clean** function from the **Run** menu will do this for you automatically.
 - If your project has a folder named `(External)` you can safely delete this **via the Eclipse Project Explorer**. It is no longer used in GFEP &ge; 1.2.3
 - If your workspace contains a log file `gfep.log` then you can safely delete it from your system. As of version 1.2.4, GFEP uses Eclipse's standard log file at `<workspace>/.metadata/.log`
 
@@ -193,25 +197,28 @@ A workspace contains one or more _projects_, which may or may not be related to 
 If you open an existing folder as your workspace in Eclipse, then your folders in that workspace **do not** automatically become Eclipse projects.
 To do this, you must follow the "Create new GF Project" wizard below, and give your project the exact name of the existing folder (e.g. `Project1` or `Project2` in the example above.)
 
-#### GF Nature and Builder
-The _GF Nature_ and the _GF Builder_ are what make a regular Eclipse project a _GF_ project.
+#### GF Nature
+The _GF Nature_ is what makes a regular Eclipse project a _GF_ project.
 If you create a new GF Project from scratch then you don't need to worry too much about them.
-If you already have some project set up in your Eclipse workspace, then you will need to associate these two items with your project in order for all the GF goodness to work.
+If you already have some project set up in your Eclipse workspace, then you will need to associate the builder with your project in order for all the GF goodness to work.
+This will internally add the _GF Builder_ to your project also.
 
-As of 1.4.2, this can be done very easily by right-clicking on your project in the explorer and clicking **Add/Remove GF Nature &amp; Builder**.
+As of 1.4.2, this can be done very easily by right-clicking on your project in the explorer and clicking **Add/Remove GF Nature**.
 If your project has the GF icon overlayed on it, then the GF nature and builder are correctly associated with it.
 
 See the **project settings** section above if you want to mess with your `.project` file.
 
 #### Metadata folders
-GFEP will create the following metadata directories within your project. They can be removed manually at any time, as they will always be regenerated as necessary.
-You will probably want to ignore these directories in your version control system.
+GFEP will create the following metadata directories within your project:
 
 - A `.gfbuild` directory in every folder containing GF source code, containing `.gf-tags` files created using the GF `--tags` compiler flag.
-- A `.gfexternal` directory in every folder containing GF source code, containing symbolic links to external libraries referenced in your code. These links are only visible within Eclipse; to the filesystem this directory appears empty.
 
+These can be removed manually at any time, as they will always be regenerated as necessary.
+You will probably want to ignore these directories in your version control system.
 
 ### Create a new GF Project
+If you have a folder in your workspace which you want to convert into a GF Project, then you can select it from the dropdown. This folder will then appear as an Eclipse project in your workspace.
+
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-2.png)
 
