@@ -2,22 +2,22 @@
 <feature
       id="org.grammaticalframework.feature"
       label="GF Eclipse Plugin"
-      version="1.4.3.qualifier"
+      version="1.5.0.qualifier"
       provider-name="MOLTO Project">
 
    <description url="http://www.grammaticalframework.org/">
-Eclipse integration for developing grammars using the Grammatical Framework (GF).
+      Eclipse integration for developing grammars using the Grammatical Framework (GF).
    </description>
 
    <copyright url="http://www.grammaticalframework.org/">
-The research leading to these results has received funding from
+      The research leading to these results has received funding from
 the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)
 under grant agreement no FP7-ICT-247914.
 Copyright MOLTO Project, 2011.
    </copyright>
 
    <license url="http://www.gnu.org/licenses/gpl-3.0.txt">
-GF Eclipse Plugin License Agreement
+      GF Eclipse Plugin License Agreement
 
 The GF Eclipse Plugin is covered by the GNU General Public License (GPL).
 For details refer to: http://www.gnu.org/licenses/gpl-3.0.txt.
