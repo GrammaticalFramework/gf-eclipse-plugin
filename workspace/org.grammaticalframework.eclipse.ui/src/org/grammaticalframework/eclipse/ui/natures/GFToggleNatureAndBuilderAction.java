@@ -11,7 +11,6 @@ package org.grammaticalframework.eclipse.ui.natures;
 
 import java.util.Iterator;
 
-import org.eclipse.core.resources.ICommand;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.runtime.CoreException;
@@ -21,7 +20,6 @@ import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.IObjectActionDelegate;
 import org.eclipse.ui.IWorkbenchPart;
-import org.grammaticalframework.eclipse.builder.GFBuilder;
 
 /**
  * This code copied from the Eclipse extension wizard "Project Builder and Nature".
@@ -79,11 +77,8 @@ public class GFToggleNatureAndBuilderAction implements IObjectActionDelegate {
 	private void toggleNature(IProject project) {
 		if (hasNature(project)) {
 			removeNature(project);
-			removeBuilder(project);
 		} else {
 			addNature(project);
-			if (!hasBuilder(project))
-				addBuilder(project);
 		}
 	}
 	
@@ -148,67 +143,5 @@ public class GFToggleNatureAndBuilderAction implements IObjectActionDelegate {
 		} catch (CoreException e) {
 		}
 	}
-	
-	/**
-	 * Determines if the specified project has the GF builder or not
-	 * @param project
-	 * @return
-	 */
-	private boolean hasBuilder(IProject project) {
-		try {
-			IProjectDescription description = project.getDescription();
-			ICommand[] commands = description.getBuildSpec();
-			for (int i = 0; i < commands.length; i++) {
-				if (commands[i].getBuilderName().equals(GFBuilder.BUILDER_ID)) {
-					return true; 
-				}
-			}
-		} catch (CoreException e) {
-		}
-		return false;
-	}	
-	
-	/**
-	 * Add the GF Builder to the project.
-	 * This method DOES NOT CHECK whether the builder is already added to the project.
-	 * @param project
-	 */
-	private void addBuilder(IProject project) {
-		try {
-			IProjectDescription description = project.getDescription();
-			ICommand[] commands = description.getBuildSpec();
-			ICommand command = description.newCommand();
-			command.setBuilderName(GFBuilder.BUILDER_ID);
-			ICommand[] nc = new ICommand[commands.length + 1];
-			System.arraycopy(commands, 0, nc, 1, commands.length);
-			nc[0] = command;
-			description.setBuildSpec(nc);
-			project.setDescription(description, null);
-			return;
-		} catch (CoreException e) {
-		}
-	}	
-	
-	/**
-	 * Remove the GF Builder from the project.
-	 * @param project
-	 */
-	private void removeBuilder(IProject project) {
-		try {
-			IProjectDescription description = project.getDescription();
-			ICommand[] commands = description.getBuildSpec();
-			for (int i = 0; i < commands.length; i++) {
-				if (commands[i].getBuilderName().equals(GFBuilder.BUILDER_ID)) {
-					ICommand[] newCommands = new ICommand[commands.length - 1];
-					System.arraycopy(commands, 0, newCommands, 0, i);
-					System.arraycopy(commands, i + 1, newCommands, i, commands.length - i - 1);
-					description.setBuildSpec(newCommands);
-					project.setDescription(description, null);
-					return;
-				}
-			}
-		} catch (CoreException e) {
-		}
-	}	
 
 }

@@ -162,24 +162,50 @@ public class GFProjectSupport {
      * Refer: http://wiki.eclipse.org/FAQ_How_do_I_add_a_builder_to_a_given_project%3F
      *
      * @param project the project
-     * @throws CoreException the core exception
      */
-    private static void addBuilder(IProject project) throws CoreException {
-    	 IProjectDescription desc = project.getDescription();
-         ICommand[] commands = desc.getBuildSpec();
-         for (int i = 0; i < commands.length; ++i)
-            if (commands[i].getBuilderName().equals(GFBuilder.BUILDER_ID))
-               return;
-         //add builder to project
-         ICommand command = desc.newCommand();
-         command.setBuilderName(GFBuilder.BUILDER_ID);
-         ICommand[] nc = new ICommand[commands.length + 1];
-         // Add it before other builders.
-         System.arraycopy(commands, 0, nc, 1, commands.length);
-         nc[0] = command;
-         desc.setBuildSpec(nc);
-         project.setDescription(desc, null);
-    }
+	public static void addBuilder(IProject project) {
+		try {
+			IProjectDescription desc = project.getDescription();
+			ICommand[] commands = desc.getBuildSpec();
+			// check it's not already there
+			for (int i = 0; i < commands.length; ++i)
+				if (commands[i].getBuilderName().equals(GFBuilder.BUILDER_ID))
+					return;
+			// add builder to project
+			ICommand command = desc.newCommand();
+			command.setBuilderName(GFBuilder.BUILDER_ID);
+			ICommand[] nc = new ICommand[commands.length + 1];
+			// Add it before other builders.
+			System.arraycopy(commands, 0, nc, 1, commands.length);
+			nc[0] = command;
+			desc.setBuildSpec(nc);
+			project.setDescription(desc, null);
+		} catch (CoreException e) {
+		}
+	}
+    
+	/**
+	 * Remove the GF Builder from the project.
+	 * @param project
+	 */
+	public static void removeBuilder(IProject project) {
+		try {
+			IProjectDescription description = project.getDescription();
+			ICommand[] commands = description.getBuildSpec();
+			for (int i = 0; i < commands.length; i++) {
+				if (commands[i].getBuilderName().equals(GFBuilder.BUILDER_ID)) {
+					ICommand[] newCommands = new ICommand[commands.length - 1];
+					System.arraycopy(commands, 0, newCommands, 0, i);
+					System.arraycopy(commands, i + 1, newCommands, i, commands.length - i - 1);
+					description.setBuildSpec(newCommands);
+					project.setDescription(description, null);
+					return;
+				}
+			}
+		} catch (CoreException e) {
+		}
+	}	
+    
     
     /**
      * Ref: http://www.eclipse.org/articles/Article-Builders/builders.html

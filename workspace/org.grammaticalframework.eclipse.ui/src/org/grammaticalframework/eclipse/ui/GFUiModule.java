@@ -173,25 +173,14 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	}
 	
 	/**
-	 * Remove the prompt for Xtext nature
+	 * Remove the prompt for Xtext nature but retain validation.
+	 * Refer to {@link http://www.eclipse.org/forums/index.php/mv/msg/173440/552043/#msg_552043} 
 	 */
 	@Override
 	public Class<? extends org.eclipse.xtext.ui.editor.IXtextEditorCallback> bindIXtextEditorCallback() {
-		return org.grammaticalframework.eclipse.ui.editor.GFEditorCallback.class;
+//		return org.eclipse.xtext.ui.editor.validation.ValidatingEditorCallback.class;
+		return org.grammaticalframework.eclipse.ui.editor.validation.GFValidatingEditorCallback.class;
 	}
-	
-	/**
-	 * This has 2 functions:
-	 * 		Remove the prompt for Xtext nature (Refer: http://www.eclipse.org/forums/index.php/mv/msg/173440/552043/#msg_552043)
-	 * 		Disabling validation when openind a linked external resource
-	 * 
-	 * 	BUT It introduces a lot of problems when using external files! Therefore I have resolved to solution above. 
-	 */
-//	@Override
-//	public Class<? extends org.eclipse.xtext.ui.editor.IXtextEditorCallback> bindIXtextEditorCallback() {
-//		return org.grammaticalframework.eclipse.ui.editor.validation.GFValidatingEditorCallback.class;
-////		return org.eclipse.xtext.ui.editor.validation.ValidatingEditorCallback.class;
-//	}
 	
 	/**
 	 * Expand all action for outline view
@@ -211,7 +200,5 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 	public void configureToggleSortingOutlineContribution(Binder binder) {
 		// super.configureToggleSortingOutlineContribution(binder);
 	}
-
-	
 	
 }

@@ -495,7 +495,7 @@
         <action
               class="org.grammaticalframework.eclipse.ui.natures.GFToggleNatureAndBuilderAction"
               id="toggleNatureAndBuilderActionID"
-              label="Add/Remove GF Nature &amp;&amp; Builder"
+              label="Add/Remove GF Nature"
               menubarPath="additions">
         </action>
      </objectContribution>
