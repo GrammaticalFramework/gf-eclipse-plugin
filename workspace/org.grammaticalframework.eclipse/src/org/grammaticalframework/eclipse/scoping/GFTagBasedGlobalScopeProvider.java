@@ -222,8 +222,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				
 				// Add tag to map...
 				if (qualifiers != null) {
-					if (qualifiers.size()>1) log.debug("more than one set of qualifiers!!!");
-					
 					// Add with multiple qualifiers, as needed
 					for (Pair<String, String> pair : qualifiers) {
 						try {
