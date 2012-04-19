@@ -80,7 +80,6 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 	
 	private Map<ModuleItem, List<IEObjectDescription>> tagMap;
 
-	@Override
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
 		tagMap = new HashMap<ModuleItem, List<IEObjectDescription>>();
 		
@@ -112,7 +111,6 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 	/**
 	 * Get list module names in the scope
 	 */
-	@Override
 	public Object[] getElements(Object inputElement) {
 		return tagMap.keySet().toArray();
 	}
@@ -120,7 +118,6 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 	/**
 	 * Get the children of any module in the scope
 	 */
-	@Override
 	public Object[] getChildren(Object parentElement) {
 		if (parentElement instanceof ModuleItem) {
 			List<IEObjectDescription> items = tagMap.get(parentElement);
@@ -130,18 +127,15 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 		}
 	}
 
-	@Override
 	public Object getParent(Object element) {
 		// We don't really need this
 		return null;
 	}
 
-	@Override
 	public boolean hasChildren(Object element) {
 		return (element instanceof ModuleItem);
 	}
 
-	@Override
 	public void dispose() {
 		tagMap = null;
 	}

@@ -104,7 +104,6 @@ public class GFLibraryTreeView extends ViewPart {
 		searchField = new Text(parent, SWT.BORDER | SWT.SEARCH | SWT.ICON_SEARCH | SWT.ICON_CANCEL );
 		searchField.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false));
 		searchField.addModifyListener(new ModifyListener() {
-			@Override
 			public void modifyText(ModifyEvent e) {
 				refreshAndExpandViewer();
 			}
@@ -115,7 +114,6 @@ public class GFLibraryTreeView extends ViewPart {
 		viewer.setContentProvider(contentProvider);
 		viewer.setLabelProvider(labelProvider);
 		viewer.addFilter(new ViewerFilter() {
-			@Override
 			public boolean select(Viewer viewer, Object parentElement, Object element) {
 				String search = searchField.getText().trim();
 				if (search.isEmpty()) {
@@ -165,11 +163,9 @@ public class GFLibraryTreeView extends ViewPart {
 					ResourceSet resourceSet = resourceSetProvider.get(currentFile.getProject());
 					final Resource resource = resourceSet.getResource(uri, true);
 					Job job = new Job("Updating External Libraries view") {
-						@Override
 						protected IStatus run(IProgressMonitor monitor) {
 							// If you want to update the UI
 							Display.getDefault().asyncExec(new Runnable() {
-								@Override
 								public void run() {
 									viewer.setInput(resource);
 									if (!searchField.getText().isEmpty()) {
