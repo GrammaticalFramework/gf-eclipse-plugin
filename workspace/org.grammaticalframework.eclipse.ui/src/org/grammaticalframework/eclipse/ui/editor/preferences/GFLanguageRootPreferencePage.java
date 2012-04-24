@@ -52,7 +52,7 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 		new Label(parent, SWT.NULL); // skip cell
 		Label label_LibraryPath = new Label(parent, SWT.NULL);
 		label_LibraryPath.setFont(fontItalic);
-		label_LibraryPath.setText("This is passed to GF using the --gf-lib-path flag (optional) ");
+		label_LibraryPath.setText("This is passed to GF using the --path flag (optional) ");
 
 		String[][] entryNamesAndValues = new String[][]{
 			// Refer: http://logging.apache.org/log4j/1.2/manual.html

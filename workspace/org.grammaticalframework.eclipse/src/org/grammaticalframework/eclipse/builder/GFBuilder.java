@@ -383,7 +383,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 
 			// Use library path in command (if supplied)
 			if (gfLibPath != null && !gfLibPath.isEmpty()) {
-				command.add("--gf-lib-path=" + gfLibPath); 
+//				command.add("--gf-lib-path=" + gfLibPath); 
+				command.add("--path=" + gfLibPath); 
 			}
 			
 			command.add(filename);
