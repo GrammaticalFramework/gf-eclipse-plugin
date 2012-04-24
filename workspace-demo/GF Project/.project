@@ -16,44 +16,14 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>Foods/.gfbuild/BeschIta.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/italian/BeschIta.gf</location>
-		</link>
-		<link>
-			<name>Foods/.gfbuild/Cat.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/abstract/Cat.gf</location>
-		</link>
-		<link>
 			<name>Foods/.gfbuild/CatEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/CatEng.gf</location>
 		</link>
 		<link>
-			<name>Foods/.gfbuild/CatGer.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/german/CatGer.gf</location>
-		</link>
-		<link>
-			<name>Foods/.gfbuild/CatRomance.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/romance/CatRomance.gf</location>
-		</link>
-		<link>
-			<name>Foods/.gfbuild/CatScand.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/scandinavian/CatScand.gf</location>
-		</link>
-		<link>
 			<name>Foods/.gfbuild/Combinators.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/api/Combinators.gf</location>
-		</link>
-		<link>
-			<name>Foods/.gfbuild/Common.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/abstract/Common.gf</location>
 		</link>
 		<link>
 			<name>Foods/.gfbuild/CommonX.gf</name>
@@ -71,44 +41,9 @@
 			<location>/home/john/repositories/GF/lib/src/english/ParadigmsEng.gf</location>
 		</link>
 		<link>
-			<name>Foods/.gfbuild/ParadigmsGer.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/german/ParadigmsGer.gf</location>
-		</link>
-		<link>
-			<name>Foods/.gfbuild/ParadigmsIta.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/italian/ParadigmsIta.gf</location>
-		</link>
-		<link>
-			<name>Foods/.gfbuild/ParadigmsSwe.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/swedish/ParadigmsSwe.gf</location>
-		</link>
-		<link>
-			<name>Foods/.gfbuild/Structural.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/abstract/Structural.gf</location>
-		</link>
-		<link>
 			<name>Foods/.gfbuild/StructuralEng.gf</name>
 			<type>1</type>
 			<location>/home/john/repositories/GF/lib/src/english/StructuralEng.gf</location>
-		</link>
-		<link>
-			<name>Foods/.gfbuild/StructuralGer.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/german/StructuralGer.gf</location>
-		</link>
-		<link>
-			<name>Foods/.gfbuild/StructuralIta.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/italian/StructuralIta.gf</location>
-		</link>
-		<link>
-			<name>Foods/.gfbuild/StructuralSwe.gf</name>
-			<type>1</type>
-			<location>/home/john/repositories/GF/lib/src/swedish/StructuralSwe.gf</location>
 		</link>
 	</linkedResources>
 </projectDescription>
