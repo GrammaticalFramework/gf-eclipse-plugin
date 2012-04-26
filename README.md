@@ -375,3 +375,8 @@ Description of the GF module types and their icons within the GF Eclipse Plugin.
 |![](http://www.grammaticalframework.org/eclipse/images/module-functor.png)  | Functor |`incomplete concrete FoodsI of Foods = {...}`|
 |![](http://www.grammaticalframework.org/eclipse/images/module-functor-instantiation.png)  | Functor instantiation |`concrete FoodsEng of Foods = FoodsI with (...) {...}`|
 
+### Build command
+
+This is the GF command run by the builder:
+
+    gf --v=0 --tags --output-dir=.gfbuild [--path=PATH] FILE
