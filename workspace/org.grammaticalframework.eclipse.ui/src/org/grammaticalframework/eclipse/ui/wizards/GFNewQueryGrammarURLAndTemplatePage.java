@@ -16,11 +16,11 @@ import org.eclipse.swt.widgets.Label;
 public class GFNewQueryGrammarURLAndTemplatePage extends AbstractNewFileWizardPage {
 	
 	public static String getPageName() {
-		return "Select a SPARQL endpoint URL";
+		return "Welcome!";
 	}
 	
 	public static String getPageDescription() {
-		return "Select a SPARQL endpoint URL... ";
+		return "Select a SPARQL endpoint URL and a grammar templates file. ";
 	}
 	
 	protected GFNewQueryGrammarURLAndTemplatePage(ISelection selection) {
@@ -40,7 +40,7 @@ public class GFNewQueryGrammarURLAndTemplatePage extends AbstractNewFileWizardPa
 		urlLabel.setText("&URL to:");
 		
 		Label templateLabel = new Label(container, SWT.NULL);
-		templateLabel.setText("&Templates file");
+		templateLabel.setText("&Templates file:");
 				
 		initialize(container);
 		System.out.println("INITIAL PAGE!");

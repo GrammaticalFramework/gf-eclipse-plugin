@@ -28,7 +28,7 @@ public class GFNewQueryGrammarFromSemanticRepositoryWizard extends AbstractNewFi
 	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		super.init(workbench, selection);
-		System.out.println("Wizard initialized!");
+		this.setWindowTitle("New Query Grammar from Semantic Repository");
 	}
 	
 	@Override
