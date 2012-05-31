@@ -7,23 +7,23 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
 /**
- * This is the first page of the GFQueryGrammarFromSemanticRepositoryWizard, 
- * for selection of a SPARQL endpoint URL and a templates file for the grammar
+ * This is the second page of the GFQueryGrammarFromSemanticRepositoryWizard, 
+ * for selection of a template for the grammar
  * 
  * @see GFQueryGrammarFromSemanticRepositoryWizard
  * @author Maria Mateva
  */
-public class GFNewQueryGrammarURLAndTemplatePage extends AbstractNewFileWizardPage {
+public class GFNewQueryGrammarChooseTemplatePage extends AbstractNewFileWizardPage {
 	
 	public static String getPageName() {
-		return "Select a SPARQL endpoint URL";
+		return "Select a template";
 	}
 	
 	public static String getPageDescription() {
-		return "Select a SPARQL endpoint URL... ";
+		return "Select a template... ";
 	}
 	
-	protected GFNewQueryGrammarURLAndTemplatePage(ISelection selection) {
+	protected GFNewQueryGrammarChooseTemplatePage(ISelection selection) {
 		super(getPageName(), getPageDescription(), selection);
 	}
 	
@@ -35,15 +35,12 @@ public class GFNewQueryGrammarURLAndTemplatePage extends AbstractNewFileWizardPa
 		layout.numColumns = 4;
 		layout.verticalSpacing = 5;
 		
-		// Open URL 
-		Label urlLabel = new Label(container, SWT.NULL);
-		urlLabel.setText("&URL to:");
 		
 		Label templateLabel = new Label(container, SWT.NULL);
-		templateLabel.setText("&Templates file");
+		templateLabel.setText("&Template");
 				
 		initialize(container);
-		System.out.println("INITIAL PAGE!");
+		System.out.println("TEMPLATE PAGE!");
 
 	}
 

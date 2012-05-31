@@ -14,7 +14,10 @@ public class GFNewQueryGrammarFromSemanticRepositoryWizard extends AbstractNewFi
 	/**
 	 * Initial Page for selection of the 
 	 */
-	private GFNewQueryGrammarURLAndTemplatePage page;
+	private GFNewQueryGrammarURLAndTemplatePage introPage;
+	private GFNewQueryGrammarChooseTemplatePage templatesPage;
+	private GFNewQueryGrammarSelectFromRepositoryPage repositoryPage;
+	private GFNewQueryGrammarSaveToFilePage savePage;
 	
 	@Override
 	public boolean performFinish() {
@@ -30,8 +33,14 @@ public class GFNewQueryGrammarFromSemanticRepositoryWizard extends AbstractNewFi
 	
 	@Override
 	public void addPages() {
-		page = new GFNewQueryGrammarURLAndTemplatePage();
-		addPage(page);
+		introPage = new GFNewQueryGrammarURLAndTemplatePage(selection);
+		addPage(introPage);
+		templatesPage = new GFNewQueryGrammarChooseTemplatePage(selection);
+		addPage(templatesPage);
+		repositoryPage = new GFNewQueryGrammarSelectFromRepositoryPage(selection);
+		addPage(repositoryPage);
+		savePage = new GFNewQueryGrammarSaveToFilePage(selection);
+		addPage(savePage);
 	}
 
 }
