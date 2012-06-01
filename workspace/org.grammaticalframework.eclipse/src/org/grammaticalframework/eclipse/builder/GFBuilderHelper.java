@@ -60,7 +60,7 @@ public class GFBuilderHelper {
 	/**
 	 * Gets the tags file path as a raw location.
 	 * Only pieces the name together; does not do any checking!
-	 * @param sourceFileName
+	 * @param file
 	 * @return
 	 */
 	public static String getTagsFileFullPath(IFile file) {
@@ -69,7 +69,27 @@ public class GFBuilderHelper {
 				+ getTagsFileNameRelative(file.getName());
 	}
 	
-	public static Set<String> readTagsFile(IFile file) {
+//	/**
+//	 * Gets the modification time of the file's tags file, or 0 if not found
+//	 * @param file
+//	 * @return
+//	 */
+//	public static Long getTagsFileMTime(IFile file) {
+//		String tagsFileName = getTagsFileNameRelative(file.getName());
+//		try {
+//			IFile tagsFile = (IFile)file.getParent().findMember(tagsFileName);
+//			return tagsFile.getLocalTimeStamp();
+//		} catch (Exception e) {
+//			return (long) IResource.NULL_STAMP;
+//		}
+//	}
+	
+	/**
+	 * Read tags file for a source module and return a list of the modules it imports/opens
+	 * @param file
+	 * @return
+	 */
+	public static Set<String> getImportsFromTagsFile(IFile file) {
 		boolean includeSelf = false;
 		String tagsFileName = getTagsFileNameRelative(file.getName());
 		try {
@@ -106,7 +126,7 @@ public class GFBuilderHelper {
 		} catch (CoreException e) {
 			log.warn("Error reading tags file "+tagsFileName, e);
 		}
-		return null;		
+		return null;
 	}
 
 	/**

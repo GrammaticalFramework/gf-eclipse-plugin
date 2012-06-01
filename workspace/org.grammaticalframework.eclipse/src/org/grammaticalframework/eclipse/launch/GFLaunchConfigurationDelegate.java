@@ -125,6 +125,11 @@ public class GFLaunchConfigurationDelegate extends LaunchConfigurationDelegate {
 		if (!opt_Options.isEmpty()) {
 			command.addAll( Arrays.asList(opt_Options.split("\\s")) );
 		}
+
+		// TODO: Do we want to add the --run command to suppress annoying output?
+		// command.add("--run");
+		
+		// Add filenames
 		command.addAll( Arrays.asList(opt_Files.split("\\s")) );
 		
 		try {

@@ -80,6 +80,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	private String gfPath;
 	private String gfLibPath;
 	private Boolean buildDependents;
+	
+//	/**
+//	 * For avoiding duplicate work
+//	 */
+//	private Long buildStartTime;
 
 	/**
 	 * Logger
@@ -99,6 +104,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 		gfLibPath = GFPreferences.getLibraryPath();
 		buildDependents = GFPreferences.getBuildDependents();
+		
+//		// Record start time
+//		buildStartTime = new Date().getTime();
 		
 		try {
 			switch (kind) {
@@ -149,7 +157,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				}
 				
 				// Do we want to bother further? 
-				if (!shouldBuild(delta.getResource())) {
+				if (!isBuildable(delta.getResource())) {
 					return true;
 				}
 				IFile file = (IFile)delta.getResource(); 
@@ -187,7 +195,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					throw new OperationCanceledException();
 				}
 				// Build
-				if (shouldBuild(resource)) {
+				if (isBuildable(resource)) {
 					IFile file = (IFile) resource;
 					Set<String> imports = GFBuilderHelper.getFileImports(file);
 					if (imports == null) {
@@ -223,7 +231,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					throw new OperationCanceledException();
 				}
 				// Build
-				if (shouldBuild(resource)) {
+				if (isBuildable(resource)) {
 					buildFile((IFile) resource);
 				}
 				// Visit children too
@@ -251,7 +259,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				}
 				
 				// If it's a buildable file, then clear its 'imports' data!
-				if (shouldBuild(resource)) {
+				if (isBuildable(resource)) {
 					GFBuilderHelper.clearFileImports(resource);
 					return true;
 				}
@@ -319,7 +327,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param resource the resource
 	 * @return true, if this is a source fiel which should be built
 	 */
-	private boolean shouldBuild(IResource resource) {
+	private boolean isBuildable(IResource resource) {
 		try {
 			boolean isFile = resource.getType() == IResource.FILE;
 			boolean isGF = resource.getFileExtension().equals("gf");
@@ -332,7 +340,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	}
 	
 	/**
-	 * Call the respective build method depending on the type of build
+	 * Build an individual file, including pre & post tasks
 	 * @param file
 	 * @return
 	 */
@@ -350,7 +358,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		buildFileTags(file);
 		
 		// Process tags file and save imports
-		Set<String> imports = GFBuilderHelper.readTagsFile(file);
+		Set<String> imports = GFBuilderHelper.getImportsFromTagsFile(file);
 		GFBuilderHelper.saveFileImports(file, imports);
 	}
 	
