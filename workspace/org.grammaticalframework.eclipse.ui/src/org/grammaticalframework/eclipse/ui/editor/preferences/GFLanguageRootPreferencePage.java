@@ -66,7 +66,7 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 		label_LogLevel.setFont(fontItalic);
 		label_LogLevel.setText("Only affects console output, not Eclipse's internal log. ");
 
-		addField(new BooleanFieldEditor(GFPreferences.BUILD_DEPENDENTS, "&Build inferred dependents of changed files", parent));
+		addField(new BooleanFieldEditor(GFPreferences.BUILD_DEPENDENTS, "&Build dependents of changed files", parent));
 		
 	}
 	

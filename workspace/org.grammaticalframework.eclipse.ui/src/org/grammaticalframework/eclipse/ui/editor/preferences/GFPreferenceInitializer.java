@@ -70,9 +70,11 @@ public class GFPreferenceInitializer extends AbstractPreferenceInitializer {
 			log.warn("Cannot determine path to GF runtime", e);
 		}
 		
-//		try {
-//			store.setDefault(GFPreferences.GF_LIB_PATH, System.getenv("GF_LIB_PATH"));
-//		} catch (SecurityException _) {	}
+		try {
+			String defaultPath = ".:present:alltenses:prelude";
+			//String defaultPath = System.getenv("GF_LIB_PATH");
+			store.setDefault(GFPreferences.GF_LIB_PATH, defaultPath);
+		} catch (SecurityException _) {	}
 		
 		store.setDefault(GFPreferences.LOG_LEVEL, "INFO");
 		

@@ -1,6 +1,5 @@
 -- Functor
 -- (a module that opens one or more interfaces)
---# -path=present
 incomplete concrete FoodsI of Foods =
 	open Syntax, LexFoods in {
 		

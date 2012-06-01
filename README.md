@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 19 April 2012
+Updated: 1 June 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -23,15 +23,20 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 - This documentation is also available at the [MOLTO Project Wiki](http://www.molto-project.eu/node/1395).
 - Source code repository is at [github.com/GrammaticalFramework/gf-eclipse-plugin](https://github.com/GrammaticalFramework/gf-eclipse-plugin)
 - For reporting bugs and requesting features, please use the [GitHub Issue Tracker](https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues)
-- Here are some [example GF projects](http://www.grammaticalframework.org/eclipse/examples/) for testing out the plugin features.
+- Here are some [example GF projects](https://github.com/GrammaticalFramework/gf-eclipse-plugin/tree/master/workspace-demo/GF%20Project) for testing out the plugin features.
 - Software update site URL for installing through Eclipse: `http://www.grammaticalframework.org/eclipse/release/`
+
+### Publications
+
+- [Poster](http://academic.johnjcamilleri.com/presentations/2012-05%20EAMT%20poster.pdf) at EAMT 2012 in Trento, Italy
+- [Paper](http://academic.johnjcamilleri.com/papers/freerbmt2012.pdf) presented at FreeRBMT 2012 in Gothenburg, Sweden.
 
 ## Features
 
 - Syntax highlighting and error detection
 - Code folding, quick block-commenting, automatic code formatting
 - Definition outlining, jump to declaration, find usage
-- Warnings for problems in module dependancy hierarchy
+- Warnings for problems in module dependency hierarchy
 - Launch configurations, i.e. compilation directly from IDE
 - Use GF Shell from within Eclipse
 - Auto-completion for declared identifiers
@@ -52,7 +57,7 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 : (1.4.3.x) Improvements to the Test Manager. Added support for arbitrary commands in launch. Made the license information clearer.
 
 **22/03/12**
-: (1.4.2.x) Added wizard for context-free grammars (no syntax support, though). Context-menu option for toggling the GF Nature and Builder together. Test Manager now parses languages & params, and includes filtering and toggling options.
+: (1.4.2.x) Added wizard for context-free grammars (no syntax support, though). Context-menu option for toggling the GF Nature and Builder together. Test Manager now parses languages & parameters, and includes filtering and toggling options.
 
 **14/03/12**
 : (1.4.1.x) GF source files can now be anywhere in project, not necessarily at top level.
@@ -76,7 +81,7 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 : (1.2.0.x) with support for "Open Declaration" (F3) function, including for external libraries.
 
 **18/11/11**
-: Third BETA (1.1.0.x) released, overhauled to take advantage of new compiler features. Tag-based scoping with caching for better performance. Interactive console (GF Shell) for luanch configs.
+: Third BETA (1.1.0.x) released, overhauled to take advantage of new compiler features. Tag-based scoping with caching for better performance. Interactive console (GF Shell) for launch configs.
 
 **11/10/11**
 : Second BETA (1.0.0.x) released, with improved support for qualified names, local variable bindings, selective inheritance, module outlining, and launch configurations. Also new GF Project type.
@@ -125,7 +130,8 @@ How to find the **Eclipse preferences** window depends on your Eclipse version a
 
 1. Add the GF perspective by clicking **Window &rarr; Open Perspective &rarr; Other** and choosing **GF**.
 1. The plugin will try to determine the path to your GF executable automatically. You can check/overwrite it by going to **Preferences &rarr; Grammatical Framework**.
-This path should **include** the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
+This path should include the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
+1. By default, the _Library path_ setting is set to `.:present:alltenses:prelude`. This is passed to GF using the `--path` flag.
 1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
 
 ### Updating the plugin
@@ -217,7 +223,7 @@ These can be removed manually at any time, as they will always be regenerated as
 You will probably want to ignore these directories in your version control system.
 
 ### Create a new GF Project
-If you have a folder in your workspace which you want to convert into a GF Project, then you can select it from the dropdown. This folder will then appear as an Eclipse project in your workspace.
+If you have a folder in your workspace which you want to convert into a GF Project, then you can select it from the drop-down. This folder will then appear as an Eclipse project in your workspace.
 
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
 ![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-2.png)
@@ -227,10 +233,10 @@ Use the **GF Module** wizard from **File &rarr; New &rarr; Other &rarr; GF Modul
 
 ![New module wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-modulewizard-1.png)
 
-You can find some small examples at [grammaticalframework.org/eclipse/examples](http://www.grammaticalframework.org/eclipse/examples/). Download the files and manually add them to your Eclipse workspace to experiment with some of the plugin features.
+You can find some small examples [here](https://github.com/GrammaticalFramework/gf-eclipse-plugin/tree/master/workspace-demo/GF%20Project). Download the files and manually add them to your Eclipse workspace to experiment with some of the plugin features.
 
 ### Clone module wizard
-If you want to clone an existing module into a new language, you can now do so via the **Clone GF Module** wizard. This is also available as a context menu option in the **Project Explorer**, via **&lt;Richt click&gt; &rarr; Grammatical Framework &rarr; Compile for new language**:
+If you want to clone an existing module into a new language, you can now do so via the **Clone GF Module** wizard. This is also available as a context menu option in the **Project Explorer**, via **&lt;Right click&gt; &rarr; Grammatical Framework &rarr; Compile for new language**:
 
 ![Clone GF module to new language wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-clonewizard.png)
 
@@ -239,7 +245,7 @@ This will create and open a new module with the relevant replacements made. Note
 ![Newly cloned file](http://www.grammaticalframework.org/eclipse/images/eclipse-clonewizard-newfile.png)
 
 ### Workbench editor layout
-Use Eclipes' own features to drag and drop your editor tabs to suit your needs.
+Use Eclipse' own features to drag and drop your editor tabs to suit your needs.
 
 ![The editor and outline view](http://www.grammaticalframework.org/eclipse/images/eclipse-editor-general.png)
 
@@ -258,7 +264,7 @@ Sometimes you may get an entire file marked with errors, even though in fact the
 
 #### Builder
 For validation to work correctly, the project's **Build Automatically** option should be turned on.
-Each time you save a file (or some other change occurs in your project), the builder should get triggered which recompiles any GF files which have changed. If the builder does not seem to get triggered, try to run a _clean_ via **Project &rarr; Clean...**
+Each time you save a file (or some other change occurs in your project), the builder should get triggered which re-compiles any GF files which have changed. If the builder does not seem to get triggered, try to run a _clean_ via **Project &rarr; Clean...**
 
 ### Code formatting
 Use the built-in code formatter to tidy your code automatically. Right-click in the editor and choose **Format** or use the keyboard shortcut **Ctrl+Shift+F**.
@@ -294,7 +300,7 @@ Eclipse does not make it obvious when multiple console windows open; click on th
 
 ![Display Selected Console icon](http://www.grammaticalframework.org/eclipse/images/eclipse-console-icon.png)
 
-If the process associated with a console window has terminated, it will be indicated in the upper-left corner as below. Such console windows can then be closed using the gray cross button:
+If the process associated with a console window has terminated, it will be indicated in the upper-left corner as below. Such console windows can then be closed using the grey cross button:
 
 ![Close terminated console icon](http://www.grammaticalframework.org/eclipse/images/eclipse-console-terminated.png)
 
@@ -303,9 +309,9 @@ _The Eclipse console implementation does not support command history (up arrow) 
 ### _External Libraries_ view
 This view is automatically populated with a list of all the external modules referenced by the current file. Double-clicking on any item provides a quick way of opening GF files which are imported into your grammar from outside your Eclipse project, for example the GF Resource Grammar Library.
 
-![External libraries view](http://www.grammaticalframework.org/eclipse/images/eclipse-external-libraries.png)
+This view also provides a text box for searching within the current module's scope, as shown in the image below. Clicking the small arrow on the right-hand side of the view provides options for case sensitive and/or regular-expression based search.
 
-_Future versions of this view will contain a full tree of all identifiers available in the current scope._
+![External libraries view](http://www.grammaticalframework.org/eclipse/images/eclipse-external-libraries.png)
 
 ### _Test Manager_ view
 This feature works together with the launch configurations to make the process of running regression tests on your grammars quick and easy. As described in the [GF Book](http://www.grammaticalframework.org/gf-book/) (Section 10.5), the general development-test cycle (independent of GFEP) is as follows:
@@ -339,6 +345,33 @@ The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
 
 You can set the log verbosity from **Preferences &rarr; Grammatical Framework**.
 
+
+<!----------------------------------------------------------------------------->
+
+## Common issues and fixes
+
+### No identifiers are resolved and my log contains messages saying "File Syntax.gf does not exist."
+
+In general, this means that something is wrong with your _library path_ setting.
+
+GFEP attempts to compile all of your files individually with GF, which is not the usual way in which you would compile your grammar.
+As a result, when looking for the RGL files, GF needs a little help via the `path` argument.
+
+The normal way to do this is to specify the _Library path_ setting from  **Preferences &rarr; Grammatical Framework**, setting it to something like `.:present:alltenses:prelude` (this is the default setting). Note that these paths are relative to the true RGL directory, which GF should already be aware of. The value of this setting is passed to GF from GFEP using the `--path` flag.
+
+The _Library path_ setting is the same for all your GF projects. If you want finer-grain control over the `path` compiler option then you should use compiler pragmas in your source files, e.g.:
+
+    --# -path=.:present:alltenses:prelude
+
+The advantage of this method is that the information is bound to the file, so you can freely compile your modules outside of GFEP without having to specify the path as a command line option to GF.
+The disadvantage is that you need to specify such a pragma in every single file (at least if you want to continue to use the GFEP).
+
+### Other strange behaviour
+
+When things seem strange, the very first step is always to clean the project via **Project &rarr; Clean...**.
+I only support the latest version of the plugin, so make sure you are up to date too.
+
+If problems persist, please contact me or better yet file an issue on the GitHub issue tracker (see below).
 
 <!----------------------------------------------------------------------------->
 

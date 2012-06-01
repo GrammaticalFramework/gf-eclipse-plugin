@@ -1,5 +1,4 @@
 -- Lexicon Instance
---# -path=present
 instance LexFoodsGer of LexFoods =
 	open SyntaxGer, ParadigmsGer in {
 

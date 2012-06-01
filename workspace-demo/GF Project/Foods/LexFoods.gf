@@ -1,6 +1,5 @@
 -- Lexicon Interface
 -- (a resource which contains only oper TYPES)
---# -path=present
 interface LexFoods =
   open Syntax in {
 

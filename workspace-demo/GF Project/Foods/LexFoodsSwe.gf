@@ -1,4 +1,4 @@
---# -path=.:present
+-- Lexicon Instance
 instance LexFoodsSwe of LexFoods =
 	open SyntaxSwe, ParadigmsSwe in {
 
