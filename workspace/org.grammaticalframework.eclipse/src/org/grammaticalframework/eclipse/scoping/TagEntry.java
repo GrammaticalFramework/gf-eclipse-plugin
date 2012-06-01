@@ -97,7 +97,7 @@ public class TagEntry {
 				parseFileAndLineNumbers(elements[2]);
 				this.qualifier = this.moduleName;
 				this.alias = "";
-				this.args = elements[3];
+				this.args = cleanTypeSignature(elements[3]);
 			}
 		} catch (ArrayIndexOutOfBoundsException e) {
 			throw new GFTagsFileException("Malformed tag line: "+line);
@@ -132,6 +132,15 @@ public class TagEntry {
 		} catch (NumberFormatException e) {
 			this.lineFrom = this.lineTo = null;
 		}
+	}
+	
+	/**
+	 * Clean up a type signature by removing lock fields
+	 * @param s
+	 * @return
+	 */
+	private String cleanTypeSignature(String s) {
+		return s.replaceAll("(; )?lock_\\S+ : \\{\\}(; )?", "");
 	}
 	
 	/**
