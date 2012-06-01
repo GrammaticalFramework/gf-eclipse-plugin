@@ -241,7 +241,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			// Clean up
 			reader.close();
 			is.close();
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// Problem reading the actual file (not just a particular line)
 			log.debug("Problem reading tags file: "+tagFileURI, e);
 		}
@@ -322,7 +322,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			}
 			return URI.createURI(localLink);
 			
-		} catch (CoreException e) {
+		} catch (Exception e) {
 			log.warn("Couldn't link to external file " + externalFilePath, e);
 			return null;
 		}
