@@ -1,5 +1,4 @@
 -- Lexicon Instance
---# -path=present
 instance LexFoodsIta of LexFoods =
 	open SyntaxIta, ParadigmsIta in {
 

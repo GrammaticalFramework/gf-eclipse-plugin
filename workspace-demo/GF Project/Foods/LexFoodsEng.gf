@@ -1,5 +1,4 @@
 -- Lexicon Instance
---# -path=present
 instance LexFoodsEng of LexFoods =
 	open SyntaxEng, ParadigmsEng in {
 
