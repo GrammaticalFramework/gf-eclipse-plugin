@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<templates>
+	<template>
+		<pattern>give me all [CLASS_NAME]</pattern>
+		<fun>
+			MQuery  : Query -> Move ;
+			QSet    : Set  -> Query ;
+			SAll   : Kind -> Set ;
+			[CLASS_NAME] : Kind ;
+		</fun>
+		<lincat>
+			Move = Utt ;
+			Query = Utt ;
+			Set = NP ;
+			Kind = CN ;
+		</lincat>
+		<lin>
+			MQuery  q = q ;
+			QSet s =
+				let
+				 ss : NP = s
+					| mkNP (mkNP thePl_Det (mkN "name")) (mkAdv possess_Prep s)
+					---- s's names
+				in
+				  mkUtt (mkImp (mkVP (mkV3 give_V) (mkNP i_Pron) ss))
+				| mkUtt (mkQS (mkQCl (L.CompIP whatSg_IP) ss))
+				| mkUtt (mkQS (mkQCl (L.CompIP (L.IdetIP (mkIDet which_IQuant))) ss))
+				| mkUtt ss ;
+			SAll k = mkNP all_Predet (mkNP aPl_Det k) | mkNP thePl_Det k ;
+		</lin>
+		<sparql>
+		construct WHERE { ?subject &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; [CLASS_NAME] .}
+		</sparql>
+		<sparql-lin>
+		MQuery  q = q;
+		QSet  k = {s = "construct WHERE {" ++ k.s ++ "}"};
+		SAll k = {s = "?subject &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;" ++ k.s ++"."};
+		QInfo k = {s = "construct WHERE {" ++ k.s ++ "?subject ?predicate ?object.}"};
+		</sparql-lin>
+	</template>
+	<template>
+		<pattern>give me information about all [CLASS_NAME] </pattern>
+		<fun>
+			MQuery  : Query -> Move ;
+			QSet    : Set  -> Query ;
+			SAll   : Kind -> Set ;
+			QInfo   : Set  -> Query ;
+			[CLASS_NAME] : Kind ;
+		</fun>
+		<lincat>
+			Move = Utt ;
+			Query = Utt ;
+			Set = NP ;
+			Kind = CN ;
+		</lincat>
+		<lin>
+			MQuery  q = q ;
+			QSet s =
+				let
+				 ss : NP = s
+					| mkNP (mkNP thePl_Det (mkN "name")) (mkAdv possess_Prep s)
+					---- s's names
+				in
+				  mkUtt (mkImp (mkVP (mkV3 give_V) (mkNP i_Pron) ss))
+				| mkUtt (mkQS (mkQCl (L.CompIP whatSg_IP) ss))
+				| mkUtt (mkQS (mkQCl (L.CompIP (L.IdetIP (mkIDet which_IQuant))) ss))
+				| mkUtt ss ;
+			QInfo  s =
+				let
+				  info : NP = mkNP (mkNP (mkN "information")) (mkAdv (mkPrep "about") s)
+				in
+				  mkUtt (mkImp (mkVP (mkV3 give_V) (mkNP i_Pron) info))
+				| mkUtt info ;
+			SAll k = mkNP all_Predet (mkNP aPl_Det k) | mkNP thePl_Det k ;
+		</lin>
+		<sparql>
+		construct WHERE { ?subject &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; [CLASS_NAME] . ?subject ?predicate ?object}
+		</sparql>
+		<sparql-lin>
+		MQuery  q = q;
+		QSet  k = {s = "construct WHERE {" ++ k.s ++ "}"};
+		SAll k = {s = "?subject &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt;" ++ k.s ++"."};
+		QInfo k = {s = "construct WHERE {" ++ k.s ++ "?subject ?predicate ?object.}"};
+		</sparql-lin>
+	</template>
+	
+	<template>
+		<pattern>give me information about [CLASS_INSTANCE] </pattern>
+		<fun>
+			MQuery  : Query -> Move ;
+			QInfoInd   : Individual  -> Query ;
+			IName    : [CLASS_INSTANCE] -> Individual ;
+		</fun>
+		<lincat>
+			Move = Utt ;
+			Query = Utt ;
+			Individual = NP ;
+		</lincat>
+		<lin>
+			MQuery  q = q ;
+			QInfoInd   s =
+				let
+				  info : NP = mkNP (mkNP (mkN "information")) (mkAdv (mkPrep "about") s)
+				in
+				  mkUtt (mkImp (mkVP (mkV3 give_V) (mkNP i_Pron) info))
+				| mkUtt info ;
+			IName n = n ;
+		</lin>
+		<sparql>
+		construct WHERE { [CLASS_INSTANCE] ?predicate ?object}
+		</sparql>
+		<sparql-lin>
+		MQuery  q = q;
+		QInfoInd  k = {s = "construct WHERE {" ++ k.s ++ " ?predicate ?object.}"};
+		IName n = n ;
+		Individual n = n;
+		</sparql-lin>
+	</template>
+</templates>

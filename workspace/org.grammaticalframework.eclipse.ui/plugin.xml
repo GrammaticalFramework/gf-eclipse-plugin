@@ -331,10 +331,10 @@
      </wizard>
       <wizard
            category="org.grammaticalframework.eclipse.ui.category.wizards"
-           class="org.grammaticalframework.eclipse.ui.wizards.GFNewQueryGrammarFromSemanticRepositoryWizard"
+           class="org.grammaticalframework.eclipse.ui.wizards.GFNewQueryGrammarWizard"
            hasPages="true"
            icon="icons/sample.gif"
-           id="org.grammaticalframework.eclipse.ui.wizards.GFNewQueryGrammarFromSemanticRepositoryWizard"
+           id="org.grammaticalframework.eclipse.ui.wizards.GFNewQueryGrammarWizard"
            name="GF query grammar from semantic repository"
            project="true">
      </wizard>

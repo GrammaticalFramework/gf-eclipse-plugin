@@ -7,21 +7,20 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 
 /**
- * This is the third page of the GFQueryGrammarFromSemanticRepositoryWizard, 
- * used for selection of a class or instance to fill in the template.
+ * This is the last page of the GFQueryGrammarWizard, 
+ * used for saving the new query grammar into a file
  * 
  * @see GFQueryGrammarFromSemanticRepositoryWizard
  * @author Maria Mateva
  */
-public class GFNewQueryGrammarSaveToFilePage extends AbstractNewFileWizardPage {
+public class GFNewQueryGrammarSaveToFilePage extends GFQueryGrammarClipboardPage {
 	
 	public static String getPageName() {
-		return "Select a binding for a template";
+		return "Save the new query grammar";
 	}
 	
 	public static String getPageDescription() {
-		return "Select  a binding for a template.\n " +
-				"That can be a class or an instance of a class.";
+		return "Save the new query grammar to a file ";
 	}
 	
 	protected GFNewQueryGrammarSaveToFilePage(ISelection selection) {
@@ -36,16 +35,14 @@ public class GFNewQueryGrammarSaveToFilePage extends AbstractNewFileWizardPage {
 		layout.numColumns = 4;
 		layout.verticalSpacing = 5;
 		
-		
-		Label classesLabel = new Label(container, SWT.NULL);
-		classesLabel.setText("&Classes");
+	
+		Label saveToLabel = new Label(container, SWT.NULL);
+		saveToLabel.setText("&Save to");
 				
-		Label instancesLabel = new Label(container, SWT.NULL);
-		instancesLabel.setText("&Instances of classes");
 		
 		initialize(container);
-		System.out.println("REPO PAGE!");
-
+		System.out.println("SAVE to PAGE!");
+		
 	}
 
 	@Override
@@ -53,5 +50,7 @@ public class GFNewQueryGrammarSaveToFilePage extends AbstractNewFileWizardPage {
 		// TODO Auto-generated method stub
 		System.out.println("Dialog changed");
 	}
+	
+
 
 }
