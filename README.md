@@ -23,7 +23,7 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 - This documentation is also available at the [MOLTO Project Wiki](http://www.molto-project.eu/node/1395).
 - Source code repository is at [github.com/GrammaticalFramework/gf-eclipse-plugin](https://github.com/GrammaticalFramework/gf-eclipse-plugin)
 - For reporting bugs and requesting features, please use the [GitHub Issue Tracker](https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues)
-- Here are some [example GF projects](http://www.grammaticalframework.org/eclipse/examples/) for testing out the plugin features.
+- Here are some [example GF projects](https://github.com/GrammaticalFramework/gf-eclipse-plugin/tree/master/workspace-demo/GF%20Project) for testing out the plugin features.
 - Software update site URL for installing through Eclipse: `http://www.grammaticalframework.org/eclipse/release/`
 
 ### Publications
@@ -233,7 +233,7 @@ Use the **GF Module** wizard from **File &rarr; New &rarr; Other &rarr; GF Modul
 
 ![New module wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-modulewizard-1.png)
 
-You can find some small examples at [grammaticalframework.org/eclipse/examples](http://www.grammaticalframework.org/eclipse/examples/). Download the files and manually add them to your Eclipse workspace to experiment with some of the plugin features.
+You can find some small examples [here](https://github.com/GrammaticalFramework/gf-eclipse-plugin/tree/master/workspace-demo/GF%20Project). Download the files and manually add them to your Eclipse workspace to experiment with some of the plugin features.
 
 ### Clone module wizard
 If you want to clone an existing module into a new language, you can now do so via the **Clone GF Module** wizard. This is also available as a context menu option in the **Project Explorer**, via **&lt;Right click&gt; &rarr; Grammatical Framework &rarr; Compile for new language**:
