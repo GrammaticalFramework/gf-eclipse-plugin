@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 19 April 2012
+Updated: 1 June 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -25,6 +25,11 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 - For reporting bugs and requesting features, please use the [GitHub Issue Tracker](https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues)
 - Here are some [example GF projects](http://www.grammaticalframework.org/eclipse/examples/) for testing out the plugin features.
 - Software update site URL for installing through Eclipse: `http://www.grammaticalframework.org/eclipse/release/`
+
+### Publications
+
+- [Poster](http://academic.johnjcamilleri.com/presentations/2012-05%20EAMT%20poster.pdf) at EAMT 2012 in Trento, Italy
+- [Paper](http://academic.johnjcamilleri.com/papers/freerbmt2012.pdf) presented at FreeRBMT 2012 in Gothenburg, Sweden.
 
 ## Features
 
@@ -304,9 +309,9 @@ _The Eclipse console implementation does not support command history (up arrow) 
 ### _External Libraries_ view
 This view is automatically populated with a list of all the external modules referenced by the current file. Double-clicking on any item provides a quick way of opening GF files which are imported into your grammar from outside your Eclipse project, for example the GF Resource Grammar Library.
 
-![External libraries view](http://www.grammaticalframework.org/eclipse/images/eclipse-external-libraries.png)
+This view also provides a text box for searching within the current module's scope, as shown in the image below. Clicking the small arrow on the right-hand side of the view provides options for case sensitive and/or regular-expression based search.
 
-_Future versions of this view will contain a full tree of all identifiers available in the current scope._
+![External libraries view](http://www.grammaticalframework.org/eclipse/images/eclipse-external-libraries.png)
 
 ### _Test Manager_ view
 This feature works together with the launch configurations to make the process of running regression tests on your grammars quick and easy. As described in the [GF Book](http://www.grammaticalframework.org/gf-book/) (Section 10.5), the general development-test cycle (independent of GFEP) is as follows:
@@ -361,7 +366,7 @@ The _Library path_ setting is the same for all your GF projects. If you want fin
 The advantage of this method is that the information is bound to the file, so you can freely compile your modules outside of GFEP without having to specify the path as a command line option to GF.
 The disadvantage is that you need to specify such a pragma in every single file (at least if you want to continue to use the GFEP).
 
-## Other strange behaviour
+### Other strange behaviour
 
 When things seem strange, the very first step is always to clean the project via **Project &rarr; Clean...**.
 I only support the latest version of the plugin, so make sure you are up to date too.
