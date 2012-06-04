@@ -1,5 +1,7 @@
 package org.grammaticalframework.eclipse.ui.wizards;
 
+import java.util.ArrayList;
+
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridLayout;
@@ -15,7 +17,7 @@ import org.eclipse.swt.widgets.List;
  * @see GFQueryGrammarWizard
  * @author Maria Mateva
  */
-public class GFNewQueryGrammarChooseTemplatePage extends GFQueryGrammarClipboardPage {
+public class GFNewQueryGrammarChooseTemplatePage extends GFNewQueryGrammarClipboardPage {
 	
 	private List listOfTemplates;
 	
@@ -44,10 +46,14 @@ public class GFNewQueryGrammarChooseTemplatePage extends GFQueryGrammarClipboard
 				
 		listOfTemplates = new List(container, SWT.BORDER | SWT.READ_ONLY );
 		listOfTemplates.addListener(SWT.Selection, this);
-		addTemplatesToList();
+		// TODO improve
+		java.util.List<String> templ = new ArrayList<String>();
+		templ.add("TEMPL");
+		templ.add("TEMPL 1q31321");
+		addSelectablesToListWidget(templ, listOfTemplates);
 		
 		createCurrentTemplatesLabel(container, 1);
-		populateWithSelectedTemplates(container);			
+		populateWithSelectedTemplates(container, 1);			
 		
 		initialize(container);
 		System.out.println("TEMPLATE PAGE!");
@@ -69,17 +75,6 @@ public class GFNewQueryGrammarChooseTemplatePage extends GFQueryGrammarClipboard
 		setNextPage(repositoryPage);
 		
 		setPageComplete(true);
-	}
-	
-
-
-	protected void addTemplatesToList() {
-		// TODO add the templates from the templates.xml file
-		listOfTemplates.add("TEMLATE 1");
-		listOfTemplates.add("TEMLATE 2");
-		listOfTemplates.add("TEMLATE 3");
-		listOfTemplates.add("TEMLATE 4");
-		listOfTemplates.add("TEMLATE 5");
 	}
 	
 	private void addCurrentlyChosen(Composite parent) {

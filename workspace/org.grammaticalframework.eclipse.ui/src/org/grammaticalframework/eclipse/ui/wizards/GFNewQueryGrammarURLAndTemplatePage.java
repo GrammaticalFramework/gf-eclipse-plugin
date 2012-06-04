@@ -22,7 +22,7 @@ import org.eclipse.swt.widgets.Text;
  * @see GFQueryGrammarWizard
  * @author Maria Mateva
  */
-public class GFNewQueryGrammarURLAndTemplatePage extends GFQueryGrammarClipboardPage {
+public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipboardPage {
 	
 	/*
 	 * URL/HTTP address boxes	
@@ -157,7 +157,7 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFQueryGrammarClipboard
 	 * 
 	 * @return true if valid, false if not
 	 */
-	public boolean validateURLField() {
+	private boolean validateURLField() {
 		System.out.println("Validate URL!");
 		return true;
 	}
@@ -168,7 +168,7 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFQueryGrammarClipboard
 	 * 
 	 * @return true if valid, false if not
 	 */
-	public boolean validateTemplate() {
+	private boolean validateTemplate() {
 		System.out.println("Validate Template!");
 		return true;
 	}

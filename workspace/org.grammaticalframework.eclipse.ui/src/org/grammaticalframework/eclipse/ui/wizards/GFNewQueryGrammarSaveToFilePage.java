@@ -2,9 +2,14 @@ package org.grammaticalframework.eclipse.ui.wizards;
 
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
 
 /**
  * This is the last page of the GFQueryGrammarWizard, 
@@ -13,7 +18,8 @@ import org.eclipse.swt.widgets.Label;
  * @see GFQueryGrammarFromSemanticRepositoryWizard
  * @author Maria Mateva
  */
-public class GFNewQueryGrammarSaveToFilePage extends GFQueryGrammarClipboardPage {
+public class GFNewQueryGrammarSaveToFilePage extends GFNewQueryGrammarClipboardPage {
+	private Text saveToField;
 	
 	public static String getPageName() {
 		return "Save the new query grammar";
@@ -36,10 +42,22 @@ public class GFNewQueryGrammarSaveToFilePage extends GFQueryGrammarClipboardPage
 		layout.verticalSpacing = 5;
 		
 		createCurrentTemplatesLabel(container, 4);
-		populateWithSelectedTemplates(container);	
+		populateWithSelectedTemplates(container, 4);	
 		
 		Label saveToLabel = new Label(container, SWT.NULL);
 		saveToLabel.setText("&Save to");	
+		
+		saveToField = new Text(container, SWT.BORDER | SWT.SINGLE);
+		saveToField.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
+		saveToField.addModifyListener (defaultModifyListener);
+		Button browseButton = new Button(container, SWT.PUSH);
+		browseButton.setText("Browse...");
+		browseButton.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		browseButton.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent e) {
+				handleBrowse();
+			}
+		});
 		
 		initialize(container);
 		System.out.println("SAVE to PAGE!");
@@ -54,6 +72,7 @@ public class GFNewQueryGrammarSaveToFilePage extends GFQueryGrammarClipboardPage
 		System.out.println("Dialog changed");
 	}
 	
-
-
+	private void handleBrowse() {
+		
+	}
 }

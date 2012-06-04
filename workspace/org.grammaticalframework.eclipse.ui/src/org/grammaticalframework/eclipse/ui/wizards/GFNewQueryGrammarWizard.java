@@ -14,7 +14,7 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	/**
 	 * Clipboard that will hold the chosen so far templates
 	 */
-	private GFQueryGrammarClipBoard clipboard;
+	private GFNewQueryGrammarClipBoard clipboard;
 	
 	@Override
 	public boolean performFinish() {
@@ -26,7 +26,7 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		super.init(workbench, selection);
 		this.setWindowTitle("New Query Grammar from Semantic Repository");
-		clipboard = new GFQueryGrammarClipBoard();
+		clipboard = new GFNewQueryGrammarClipBoard();
 	}
 	
 	@Override
@@ -40,7 +40,7 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 		addPage(templatesPage);
 	}
 	
-	public GFQueryGrammarClipBoard getClipboard() {
+	public GFNewQueryGrammarClipBoard getClipboard() {
 		return this.clipboard;
 	}
 	
