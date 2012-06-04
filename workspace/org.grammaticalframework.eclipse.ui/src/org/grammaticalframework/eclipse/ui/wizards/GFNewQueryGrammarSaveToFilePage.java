@@ -35,15 +35,18 @@ public class GFNewQueryGrammarSaveToFilePage extends GFQueryGrammarClipboardPage
 		layout.numColumns = 4;
 		layout.verticalSpacing = 5;
 		
-	
+		createCurrentTemplatesLabel(container, 4);
+		populateWithSelectedTemplates(container);	
+		
 		Label saveToLabel = new Label(container, SWT.NULL);
-		saveToLabel.setText("&Save to");
-				
+		saveToLabel.setText("&Save to");	
 		
 		initialize(container);
 		System.out.println("SAVE to PAGE!");
 		
 	}
+	
+	
 
 	@Override
 	protected void dialogChanged() {
