@@ -145,7 +145,7 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	@Check
 	public void checkFlags(FlagDef flagdef) {
 		List<String> knownFlagNames = new ArrayList<String>();
-		knownFlagNames.addAll(Arrays.asList(new String[]{"coding", "startcat", "lexer", "unlexer", "literal", "language"}));
+		knownFlagNames.addAll(Arrays.asList(new String[]{"coding", "startcat", "lexer", "unlexer", "literal", "language", "optimize"}));
 		String flagName = flagdef.getName().getS(); 
 		String flagValue;
 		if (flagdef.getValue()!=null)
