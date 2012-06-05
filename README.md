@@ -131,7 +131,7 @@ How to find the **Eclipse preferences** window depends on your Eclipse version a
 1. Add the GF perspective by clicking **Window &rarr; Open Perspective &rarr; Other** and choosing **GF**.
 1. The plugin will try to determine the path to your GF executable automatically. You can check/overwrite it by going to **Preferences &rarr; Grammatical Framework**.
 This path should include the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
-1. By default, the _Library path_ setting is set to `.:present:alltenses:prelude`. This is passed to GF using the `--path` flag.
+1. By default, the _Library path_ setting is set to `.:alltenses:prelude`. This is passed to GF using the `--path` flag.
 1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
 
 ### Updating the plugin
@@ -357,11 +357,11 @@ In general, this means that something is wrong with your _library path_ setting.
 GFEP attempts to compile all of your files individually with GF, which is not the usual way in which you would compile your grammar.
 As a result, when looking for the RGL files, GF needs a little help via the `path` argument.
 
-The normal way to do this is to specify the _Library path_ setting from  **Preferences &rarr; Grammatical Framework**, setting it to something like `.:present:alltenses:prelude` (this is the default setting). Note that these paths are relative to the true RGL directory, which GF should already be aware of. The value of this setting is passed to GF from GFEP using the `--path` flag.
+The normal way to do this is to specify the _Library path_ setting from  **Preferences &rarr; Grammatical Framework**, setting it to something like `.:alltenses:prelude` (this is the default setting). Note that these paths are relative to the true RGL directory, which GF should already be aware of. The value of this setting is passed to GF from GFEP using the `--path` flag.
 
 The _Library path_ setting is the same for all your GF projects. If you want finer-grain control over the `path` compiler option then you should use compiler pragmas in your source files, e.g.:
 
-    --# -path=.:present:alltenses:prelude
+    --# -path=.:alltenses:prelude
 
 The advantage of this method is that the information is bound to the file, so you can freely compile your modules outside of GFEP without having to specify the path as a command line option to GF.
 The disadvantage is that you need to specify such a pragma in every single file (at least if you want to continue to use the GFEP).

@@ -71,7 +71,7 @@ public class GFPreferenceInitializer extends AbstractPreferenceInitializer {
 		}
 		
 		try {
-			String defaultPath = ".:present:alltenses:prelude";
+			String defaultPath = ".:alltenses:prelude";
 			//String defaultPath = System.getenv("GF_LIB_PATH");
 			store.setDefault(GFPreferences.GF_LIB_PATH, defaultPath);
 		} catch (SecurityException _) {	}
