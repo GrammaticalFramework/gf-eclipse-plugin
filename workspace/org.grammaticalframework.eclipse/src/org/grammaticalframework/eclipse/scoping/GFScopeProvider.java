@@ -27,6 +27,7 @@ import org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider;
 import org.eclipse.xtext.util.OnChangeEvictingCache;
 import org.eclipse.xtext.util.Tuples;
 import org.grammaticalframework.eclipse.gF.Arg;
+import org.grammaticalframework.eclipse.gF.Case;
 import org.grammaticalframework.eclipse.gF.DefDef;
 import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.Ident;
@@ -35,6 +36,7 @@ import org.grammaticalframework.eclipse.gF.ListBind;
 import org.grammaticalframework.eclipse.gF.ListLocDef;
 import org.grammaticalframework.eclipse.gF.ListPatt;
 import org.grammaticalframework.eclipse.gF.OperDef;
+import org.grammaticalframework.eclipse.gF.Patt;
 import org.grammaticalframework.eclipse.gF.TopDef;
 import org.grammaticalframework.eclipse.naming.GFQualifiedNameProvider;
 
@@ -152,7 +154,7 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 	}
 
 	/**
-	 * Get judgment-level descriptions for a given context/reference.
+	 * Get judgement-level descriptions for a given context/reference.
 	 *
 	 * @param context the context
 	 * @param reference the reference
@@ -197,6 +199,12 @@ public class GFScopeProvider extends SimpleLocalScopeProvider {
 								return getConverter().toQualifiedName(ident.getS());
 							}
 							if (parent instanceof Arg && (grandparent instanceof OperDef || grandparent instanceof LinDef )) {
+								return getConverter().toQualifiedName(ident.getS());
+							}
+							
+							// Bindings in pattern matching
+							// TODO: too general!
+							if (parent instanceof Patt) {
 								return getConverter().toQualifiedName(ident.getS());
 							}
 							
