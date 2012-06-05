@@ -195,7 +195,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Patt/tokenList"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Patt/str"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt/patternName"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference GF.ecore#//Patt/ref"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference GF.ecore#//Patt/ref"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Patt/wildcard"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Patt/integer"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute GF.ecore#//Patt/double"/>

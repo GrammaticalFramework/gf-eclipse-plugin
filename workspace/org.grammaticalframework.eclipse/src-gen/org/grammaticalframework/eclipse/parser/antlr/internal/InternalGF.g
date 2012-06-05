@@ -6139,15 +6139,20 @@ rulePatt3 returns [EObject current=null]
 ))?)
     |((
 (
-		{
-			if ($current==null) {
-	            $current = createModelElement(grammarAccess.getPatt3Rule());
+		{ 
+	        newCompositeNode(grammarAccess.getPatt3Access().getRefIdentParserRuleCall_3_0_0()); 
+	    }
+		lv_ref_8_0=ruleIdent		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getPatt3Rule());
 	        }
-        }
-	otherlv_8=RULE_ID
-	{
-		newLeafNode(otherlv_8, grammarAccess.getPatt3Access().getRefIdentCrossReference_3_0_0()); 
-	}
+       		set(
+       			$current, 
+       			"ref",
+        		lv_ref_8_0, 
+        		"Ident");
+	        afterParserOrEnumRuleCall();
+	    }
 
 )
 )(	otherlv_9='.' 

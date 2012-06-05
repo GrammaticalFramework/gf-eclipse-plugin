@@ -1008,7 +1008,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         meta?='?' | 
 	 *         (tokenList?='[' str=String) | 
 	 *         (patternName=Ident label=Ident?) | 
-	 *         (ref=[Ident|ID] label=Ident?) | 
+	 *         (ref=Ident label=Ident?) | 
 	 *         wildcard?='_' | 
 	 *         integer?=Integer | 
 	 *         double?=Double | 
