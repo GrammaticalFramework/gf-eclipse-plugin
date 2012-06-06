@@ -8,7 +8,9 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.FileDialog;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
 /**
@@ -59,9 +61,7 @@ public class GFNewQueryGrammarSaveToFilePage extends GFNewQueryGrammarClipboardP
 			}
 		});
 		
-		initialize(container);
-		System.out.println("SAVE to PAGE!");
-		
+		initialize(container);		
 	}
 	
 	
@@ -69,10 +69,23 @@ public class GFNewQueryGrammarSaveToFilePage extends GFNewQueryGrammarClipboardP
 	@Override
 	protected void dialogChanged() {
 		// TODO Auto-generated method stub
-		System.out.println("Dialog changed");
 	}
 	
+	/**
+	 * File browser activated
+	 */
 	private void handleBrowse() {
-		
+		Shell shell = getShell();
+		FileDialog dialog = new FileDialog(shell,  SWT.SAVE);
+		dialog.setFilterNames(new String[] {"Templates", "All Files (*.*)"});
+		dialog.setFilterExtensions(new String[] {"*.xml", "*.*"});                        
+		dialog.setFilterPath("");
+		dialog.setText("Save Grammar to");
+		dialog.setFileName("grammar.txt");
+		String file = dialog.open();
+		if (file != null) {
+			saveToField.setText(file);
+			System.out.println(file);	
+		}
 	}
 }

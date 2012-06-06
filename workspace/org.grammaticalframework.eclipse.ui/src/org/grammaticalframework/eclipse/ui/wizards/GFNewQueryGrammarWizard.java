@@ -5,6 +5,11 @@ import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
 public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements INewWizard {
+	/**
+	 * Denotes that the wizard is in a finished state.
+	 * (The "Finish" button is enabled.)
+	 */
+	private boolean canFinish;
 	
 	/**
 	 * Wizard ID
@@ -18,7 +23,6 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	
 	@Override
 	public boolean performFinish() {
-		System.out.println("FINISH");
 		return false;
 	}
 
@@ -27,6 +31,7 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 		super.init(workbench, selection);
 		this.setWindowTitle("New Query Grammar from Semantic Repository");
 		clipboard = new GFNewQueryGrammarClipBoard();
+		canFinish = false;
 	}
 	
 	@Override
@@ -39,9 +44,17 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 		GFNewQueryGrammarChooseTemplatePage templatesPage = new GFNewQueryGrammarChooseTemplatePage(selection);
 		addPage(templatesPage);
 	}
+
 	
 	public GFNewQueryGrammarClipBoard getClipboard() {
 		return this.clipboard;
 	}
 	
+	public boolean canFinish() {
+		return canFinish;
+	}
+	
+	public void setFinished() {
+		canFinish = true;
+	}
 }

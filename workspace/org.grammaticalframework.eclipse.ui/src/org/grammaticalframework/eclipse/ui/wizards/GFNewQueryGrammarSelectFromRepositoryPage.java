@@ -2,9 +2,7 @@ package org.grammaticalframework.eclipse.ui.wizards;
 
 import java.util.ArrayList;
 
-import org.eclipse.emf.ecore.impl.ESuperAdapter.Holder;
 import org.eclipse.jface.viewers.ISelection;
-import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -13,11 +11,9 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
-import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
 /**
@@ -35,8 +31,7 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 	private List instancesList;
 	private Text editCurrentTemplateBox;
 	private Button [] continueRadios;
-	
-	private int indexOfTheNextPage;
+
 	private boolean currentTemplateWasAdded;
 	private boolean nextPageAdded;
 	
@@ -57,10 +52,6 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 	
 	@Override
 	public void createControl(Composite parent) {
-		// get the index of the next page
-		indexOfTheNextPage = this.getWizard().getPageCount();
-		((GFNewQueryGrammarWizard) this.getWizard()).addPage(new GFNewQueryGrammarSaveToFilePage(null));
-		
 		// Force the shell size
 		Point size = getShell().computeSize(SCREEN_WIDTH, SCREEN_HEIGTH);
 		getShell().setSize(size);
@@ -98,6 +89,7 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 		editCurrentLabel.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 6, 1));
 		editCurrentTemplateBox = new Text(container, SWT.BORDER | SWT.SINGLE);
 		editCurrentTemplateBox.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 5, 2));
+		
 		Button addButton = new Button(container, SWT.PUSH);
 		addButton.setText("Add this template!");
 		addButton.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 2));
@@ -105,7 +97,6 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 			public void widgetSelected(SelectionEvent e) {
 				addCurrentlySelectedTemplate();
 				currentTemplateWasAdded = true;
-				System.out.println("Add!");
 			}
 		});
 		
@@ -117,29 +108,28 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 		Label continueLabel = new Label(container, SWT.NULL);
 		continueLabel.setText("&How would you like to proceed?");
 		continueLabel.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 6, 1));
+		
 		continueRadios = new Button[2];
 		continueRadios[0] = new Button(container, SWT.RADIO);
 		continueRadios[0].setText("Select more templates");
 		continueRadios[0].setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 3, 1));	
 		continueRadios[0].addSelectionListener(new SelectionListener() {
-			@Override
 			public void widgetSelected(SelectionEvent arg0) {
 				addTheNextPage(true);
 			}
-			@Override
 			public void widgetDefaultSelected(SelectionEvent arg0) {}
 		});
+		continueRadios[0].setEnabled(false);
 		continueRadios[1] = new Button(container, SWT.RADIO);
 		continueRadios[1].setText("Continue");
 		continueRadios[1].setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 3, 1));	
 		continueRadios[1].addSelectionListener(new SelectionListener() {
-			@Override
 			public void widgetSelected(SelectionEvent arg0) {
 				 addTheNextPage(false);
 			}
-			@Override
 			public void widgetDefaultSelected(SelectionEvent arg0) {}
 		});
+		continueRadios[1].setEnabled(false);
 		
 		initialize(container);
 	}
@@ -163,13 +153,13 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 	}
 	
 	private void addCurrentlySelectedTemplate() {
-		System.out.println("Add currently Selected template");
+		continueRadios[0].setEnabled(true);
+		continueRadios[1].setEnabled(true);
 	}
 	
 	@Override
 	protected void dialogChanged() {
 		// TODO Auto-generated method stub
-		System.out.println("Dialog changed");
 		if (currentTemplateWasAdded && nextPageAdded) {
 			setPageComplete(true);
 		}
@@ -183,11 +173,16 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 	 * @param hasNextTemplate if "true", adds a GFNewQueryGrammarChooseTemplatePage, else adds a 
 	 */
 	private void addTheNextPage(boolean hasNextTemplate) {
+		GFNewQueryGrammarChooseTemplatePage templatePage = new GFNewQueryGrammarChooseTemplatePage(null);
+		GFNewQueryGrammarSaveToFilePage saveToPage = new GFNewQueryGrammarSaveToFilePage(null);
 		if (hasNextTemplate) {
-			this.getWizard().getPages()[indexOfTheNextPage] = new GFNewQueryGrammarChooseTemplatePage(null);
+			setNextPage(templatePage);
 		} else {
-			this.getWizard().getPages()[indexOfTheNextPage] = new GFNewQueryGrammarChooseTemplatePage(null);
+			setNextPage(saveToPage);
 		}
 		nextPageAdded = true;
+		if (currentTemplateWasAdded) {
+			setPageComplete(true);
+		}
 	}
 }

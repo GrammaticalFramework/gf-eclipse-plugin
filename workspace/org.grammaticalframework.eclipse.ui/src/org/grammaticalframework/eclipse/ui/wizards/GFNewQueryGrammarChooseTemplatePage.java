@@ -56,21 +56,18 @@ public class GFNewQueryGrammarChooseTemplatePage extends GFNewQueryGrammarClipbo
 		populateWithSelectedTemplates(container, 1);			
 		
 		initialize(container);
-		System.out.println("TEMPLATE PAGE!");
-
 	}
 
 	@Override
 	protected void dialogChanged() {
 		// TODO Auto-generated method stub
-		System.out.println("Dialog changed");
 	}
 
 	@Override
 	public void handleEvent(Event arg0) {
 		// TODO Auto-generated method stub
 		System.out.println(listOfTemplates.getSelection().toString());
-		System.out.println(this.getSelection());
+		System.out.println("sELECTION: " + this.getSelection());
 		GFNewQueryGrammarSelectFromRepositoryPage repositoryPage = new GFNewQueryGrammarSelectFromRepositoryPage(null);
 		setNextPage(repositoryPage);
 		

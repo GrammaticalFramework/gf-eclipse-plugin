@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <templates>
 	<template>
-		<pattern>give me all [CLASS_NAME]</pattern>
+		<pattern>show me all [CLASS_NAME]</pattern>
 		<fun>
 			MQuery  : Query -> Move ;
 			QSet    : Set  -> Query ;
@@ -39,7 +39,7 @@
 		</sparql-lin>
 	</template>
 	<template>
-		<pattern>give me information about all [CLASS_NAME] </pattern>
+		<pattern>show me information about all [CLASS_NAME] </pattern>
 		<fun>
 			MQuery  : Query -> Move ;
 			QSet    : Set  -> Query ;
@@ -85,7 +85,7 @@
 	</template>
 	
 	<template>
-		<pattern>give me information about [CLASS_INSTANCE] </pattern>
+		<pattern>show me information about [CLASS_INSTANCE] </pattern>
 		<fun>
 			MQuery  : Query -> Move ;
 			QInfoInd   : Individual  -> Query ;

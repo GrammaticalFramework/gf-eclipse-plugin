@@ -5,7 +5,6 @@ import java.util.Iterator;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
@@ -17,7 +16,6 @@ import org.eclipse.swt.widgets.Listener;
  * 
  * @see GFNewQueryGrammarClipBoard
  * @author Maria Mateva
- *
  */
 public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWizardPage implements Listener {
 	
@@ -39,11 +37,11 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 		((GFNewQueryGrammarWizard) this.getWizard()).addPage(page);
 	}
 
-	@Override
-	public void handleEvent(Event arg0) { }
+	
+	public void handleEvent(Event event) { }
 
-	@Override
-	public void createControl(Composite arg0) { }
+	
+	public void createControl(Composite parent) { }
 
 	@Override
 	protected void dialogChanged() { }
@@ -57,7 +55,7 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 	}
 	
 	protected void populateWithSelectedTemplates(Composite parent, int horizontalCellsSpan) {
-		java.util.List<String> currentlyChosen = getClipboard().getSelectedTemplates();
+		java.util.List<String> currentlyChosen = getClipboard().getSelectedQueries();
 		
 		// TODO remove the below hardcodes
 		currentlyChosen.add("FUN");
@@ -67,6 +65,13 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 		addLabelsOfAList(parent, horizontalCellsSpan, currentlyChosen);
 	}	
 	
+	/**
+	 * Adds a list of strings as separate immutable labels to a parent Composite unit
+	 * 
+	 * @param container - the parent, a Composite
+	 * @param horizontalCellsSpan - the number of horizontal cells that this each label covers
+	 * @param things - the list of things that have different labels
+	 */
 	protected void addLabelsOfAList(Composite container, int horizontalCellsSpan, java.util.List<String> things) {
 		Iterator<String> iter = things.iterator();
 		int templCounter = 0;
@@ -75,12 +80,19 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 			templateLabel.setText(iter.next());
 			templateLabel.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, horizontalCellsSpan, 1));
 			templCounter += 1;
-			if (templCounter > 10) {
-				break;
-			}
+//			if (templCounter > 10) {
+//				break;
+//			}
 		}
 	}
 	
+	/**
+	 * Adds a list of strings to a List widget.
+	 * Each string is a separate entity and can be selected.
+	 * 
+	 * @param selectables - the strings
+	 * @param listWidget - the List widget
+	 */
 	protected void addSelectablesToListWidget(java.util.List<String> selectables, List listWidget) {
 		if (selectables != null) {
 			Iterator<String> iter = selectables.iterator();
@@ -88,6 +100,10 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 				listWidget.add(iter.next());
 			}
 		}
+	}
+	
+	protected void enableFinishButton() {
+		((GFNewQueryGrammarWizard)this.getWizard()).setFinished();
 	}
  
 }
