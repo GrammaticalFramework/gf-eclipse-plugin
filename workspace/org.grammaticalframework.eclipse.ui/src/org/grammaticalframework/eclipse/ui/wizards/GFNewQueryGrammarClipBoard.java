@@ -24,7 +24,7 @@ public class GFNewQueryGrammarClipBoard {
 	public void addTemplates(List<GFTemplate> templates) {
 		if (templates != null) {
 			loadedTemplates.addAll(templates);
-			System.out.println(templates.size() + "templates added");
+			System.out.println(templates.size() + " templates were added");
 		}
 	}
 	
@@ -36,6 +36,14 @@ public class GFNewQueryGrammarClipBoard {
 
 	public List<GFTemplate> getLoadedTemplates() {
 		return loadedTemplates;
+	}
+	
+	public List<String> getTemplatesAsStrings() {
+		List<String> templates = new ArrayList<String>(loadedTemplates.size());
+		for (GFTemplate template: loadedTemplates) {
+			templates.add(template.toString());
+		}
+		return templates;		
 	}
 
 	public List<String> getSelectedQueries() {

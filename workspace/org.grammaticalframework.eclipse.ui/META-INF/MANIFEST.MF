@@ -24,7 +24,7 @@ Import-Package: org.apache.log4j,
  org.apache.commons.logging
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: org.grammaticalframework.eclipse.ui.contentassist.antlr,
- org.grammaticalframework.eclipse.ui.internal
+  org.grammaticalframework.eclipse.ui.internal
 Bundle-Activator: org.grammaticalframework.eclipse.ui.internal.GFActivator
 Bundle-ClassPath: .,
  libs/molto-repository-helper-0.2.jar

@@ -4,7 +4,14 @@ import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
+import com.ontotext.molto.repositoryHelper.RepositoryUtils;
+
 public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements INewWizard {
+	/**
+	 * Wizard ID
+	 */
+	public static String ID = "org.grammaticalframework.eclipse.ui.wizards.GFNewQueryGrammarFromSemanticRepositoryWizard";
+	
 	/**
 	 * Denotes that the wizard is in a finished state.
 	 * (The "Finish" button is enabled.)
@@ -12,14 +19,14 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	private boolean canFinish;
 	
 	/**
-	 * Wizard ID
-	 */
-	public static String ID = "org.grammaticalframework.eclipse.ui.wizards.GFNewQueryGrammarFromSemanticRepositoryWizard";
-	
-	/**
 	 * Clipboard that will hold the chosen so far templates
 	 */
 	private GFNewQueryGrammarClipBoard clipboard;
+	
+	/**
+	 * A repository that will be used for all the queries.
+	 */
+	private RepositoryUtils repository;
 	
 	@Override
 	public boolean performFinish() {
@@ -32,8 +39,17 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 		this.setWindowTitle("New Query Grammar from Semantic Repository");
 		clipboard = new GFNewQueryGrammarClipBoard();
 		canFinish = false;
+		repository = null;
 	}
 	
+	public RepositoryUtils getRepository() {
+		return repository;
+	}
+
+	public void setRepository(RepositoryUtils repository) {
+		this.repository = repository;
+	}
+
 	@Override
 	/**
 	 * Adding the first and the second page

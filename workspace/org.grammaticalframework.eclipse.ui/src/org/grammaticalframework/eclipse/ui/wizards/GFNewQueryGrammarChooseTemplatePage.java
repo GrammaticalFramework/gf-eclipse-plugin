@@ -46,11 +46,9 @@ public class GFNewQueryGrammarChooseTemplatePage extends GFNewQueryGrammarClipbo
 				
 		listOfTemplates = new List(container, SWT.BORDER | SWT.READ_ONLY );
 		listOfTemplates.addListener(SWT.Selection, this);
-		// TODO improve
-		java.util.List<String> templ = new ArrayList<String>();
-		templ.add("TEMPL");
-		templ.add("TEMPL 1q31321");
-		addSelectablesToListWidget(templ, listOfTemplates);
+		
+		// templates added
+		addSelectablesToListWidget(getClipboard().getTemplatesAsStrings(), listOfTemplates);
 		
 		createCurrentTemplatesLabel(container, 1);
 		populateWithSelectedTemplates(container, 1);			
