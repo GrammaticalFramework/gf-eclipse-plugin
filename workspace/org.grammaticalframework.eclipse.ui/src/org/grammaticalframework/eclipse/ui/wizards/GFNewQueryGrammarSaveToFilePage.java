@@ -1,6 +1,5 @@
 package org.grammaticalframework.eclipse.ui.wizards;
 
-import org.eclipse.jface.dialogs.PageChangedEvent;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -50,10 +49,11 @@ public class GFNewQueryGrammarSaveToFilePage extends GFNewQueryGrammarClipboardP
 		populateWithSelectedTemplates(container, selectedLabel, 4);	
 		
 		Label saveToLabel = new Label(container, SWT.NULL);
-		saveToLabel.setText("&Save to");	
+		saveToLabel.setText("Save to");	
+		saveToLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
 		
 		saveToField = new Text(container, SWT.BORDER | SWT.SINGLE);
-		saveToField.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
+		saveToField.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
 		saveToField.addModifyListener (defaultModifyListener);
 		Button browseButton = new Button(container, SWT.PUSH);
 		browseButton.setText("Browse...");
@@ -80,10 +80,10 @@ public class GFNewQueryGrammarSaveToFilePage extends GFNewQueryGrammarClipboardP
 		Shell shell = getShell();
 		FileDialog dialog = new FileDialog(shell,  SWT.SAVE);
 		dialog.setFilterNames(new String[] {"Templates", "All Files (*.*)"});
-		dialog.setFilterExtensions(new String[] {"*.xml", "*.*"});                        
+		dialog.setFilterExtensions(new String[] {"*.txt", "*.*"});                        
 		dialog.setFilterPath("");
 		dialog.setText("Save Grammar to");
-		dialog.setFileName("grammar.txt");
+		dialog.setFileName("grammar.gf");
 		String file = dialog.open();
 		if (file != null) {
 			saveToField.setText(file);

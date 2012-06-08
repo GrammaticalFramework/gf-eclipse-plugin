@@ -47,11 +47,11 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 	private boolean nextPageAdded;
 	
 	public static String getPageName() {
-		return "Select a binding for a pattern";
+		return "Select a binding for a template";
 	}
 	
 	public static String getPageDescription() {
-		return "Select  a binding for a pattern.\n " +
+		return "Select  a binding for a template.\n " +
 				"That can be a class or an instance of a class.";
 	}
 	
@@ -221,6 +221,7 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 	 * Future method
 	 * @param className
 	 */
+	@SuppressWarnings("unused")
 	private void populateCorrespondingPredicates(String className) {
 		try {
 			java.util.List<String> preicates 
@@ -232,12 +233,16 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 	}
 	
 	private void addCurrentlySelectedTemplate() {
-		continueRadios[0].setEnabled(true);
-		continueRadios[1].setEnabled(true);
 		String query = editCurrentTemplateBox.getText();
-		getClipboard().addQuery(query);
-		refreshTemplateBox();
-		resetEditBox();
+		if (!query.contains(GFQueryGrammarConstants.CLASS_NAME) &&
+			!query.contains(GFQueryGrammarConstants.CLASS_INSTANCE)) {
+			continueRadios[0].setEnabled(true);
+			continueRadios[1].setEnabled(true);
+	
+			getClipboard().addQuery(query);
+			refreshTemplateBox();
+			resetEditBox();
+		}
 	}
 	
 	
@@ -271,6 +276,7 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 	public void refreshTemplateBox() {
 		populateWithSelectedTemplates(container, chosenTemplates, 6);	
 		chosenTemplates.update();
+		container.update();
 	}
 	
 	/**

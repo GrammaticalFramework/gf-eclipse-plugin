@@ -23,21 +23,21 @@ import com.ontotext.molto.repositoryHelper.GFTemplate;
  */
 public class GFNewQueryGrammarChooseTemplatePage extends GFNewQueryGrammarClipboardPage {
 	
-	private List listOfTemplates;
-	private Composite container;
 	/**
 	 * A template chosen on this iteration of the wizard
 	 */
 	private GFTemplate chosenTemplate;
+	private List listOfTemplates;
+	private Composite container;
 	
 	private GFNewQueryGrammarSelectFromRepositoryPage repositoryPage;
 	
 	public static String getPageName() {
-		return "Select a pattern";
+		return "Select a template";
 	}
 	
 	public static String getPageDescription() {
-		return "Select a pattern for the grammar ";
+		return "Select a template for the grammar ";
 	}
 	
 	protected GFNewQueryGrammarChooseTemplatePage(ISelection selection) {
@@ -53,7 +53,7 @@ public class GFNewQueryGrammarChooseTemplatePage extends GFNewQueryGrammarClipbo
 		layout.verticalSpacing = 5;
 		
 		Label templateLabel = new Label(container, SWT.NULL);
-		templateLabel.setText("Available pattern:");
+		templateLabel.setText("Available templates:");
 		
 		listOfTemplates = new List(container, SWT.BORDER | SWT.READ_ONLY | SWT.SINGLE);
 		listOfTemplates.addListener(SWT.Selection, this);
@@ -68,24 +68,22 @@ public class GFNewQueryGrammarChooseTemplatePage extends GFNewQueryGrammarClipbo
 	}
 
 	@Override
-	protected void dialogChanged() {
-		if (repositoryPage != null) {
-			repositoryPage.setTemplate(chosenTemplate);	
-		}
-		
-	}
+	protected void dialogChanged() { }
+	
+	
 
 	@Override
 	public void handleEvent(Event arg0) {
 		String [] selected = listOfTemplates.getSelection();
 		System.out.println("Selected: " + selected[0]);
-		if (getNextPage() == null) {
-			chosenTemplate = getClipboard().getTemplateByTextPattern(selected[0]);
+		chosenTemplate = getClipboard().getTemplateByTextPattern(selected[0]);
+		if (repositoryPage == null) {
 			repositoryPage = new GFNewQueryGrammarSelectFromRepositoryPage(null, chosenTemplate);
 			repositoryPage.setPreviousPage(getWizard().getStartingPage());		
 			setNextPage(repositoryPage);
 			setPageComplete(true);
 		}		
+		repositoryPage.setTemplate(chosenTemplate);	
 	}
 	
 	/**
@@ -97,11 +95,5 @@ public class GFNewQueryGrammarChooseTemplatePage extends GFNewQueryGrammarClipbo
 			addSelectablesToListWidget(getClipboard().getTemplatesAsStrings(), listOfTemplates);
 		}
 	}
-
-	public void pageChanged(PageChangedEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 
 }

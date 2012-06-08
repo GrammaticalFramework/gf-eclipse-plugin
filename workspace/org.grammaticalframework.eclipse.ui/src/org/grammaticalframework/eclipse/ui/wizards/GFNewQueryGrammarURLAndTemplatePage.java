@@ -2,8 +2,6 @@ package org.grammaticalframework.eclipse.ui.wizards;
 
 import java.util.List;
 
-import org.eclipse.jface.dialogs.IPageChangedListener;
-import org.eclipse.jface.dialogs.PageChangedEvent;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -29,7 +27,7 @@ import com.ontotext.molto.repositoryHelper.TemplateFileReader;
  * @see GFQueryGrammarWizard
  * @author Maria Mateva, Ontotext AD
  */
-public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipboardPage implements IPageChangedListener{
+public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipboardPage {
 	
 	/*
 	 * URL/HTTP address boxes	
@@ -108,12 +106,12 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 		passwordLabel.setText("Password:");
 		passwordLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
 		
-		passwordBox = new Text(container, SWT.BORDER | SWT.SINGLE);
+		passwordBox = new Text(container, SWT.BORDER | SWT.PASSWORD);
 		passwordBox.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 2, 1));
 		passwordBox.addModifyListener(defaultModifyListener);
 		
 		validateURLButton = new Button(container, SWT.PUSH);
-		validateURLButton.setText("Try connection to SPARQL endpoint");
+		validateURLButton.setText("Connect");
 		validateURLButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 3, 1));
 		validateURLButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
@@ -127,7 +125,7 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 		
 		// Open template path
 		Label templateLabel = new Label(container, SWT.NULL);
-		templateLabel.setText("&Templates file:");
+		templateLabel.setText("Templates file:");
 		templateLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
 		
 		templatePathField = new Text(container, SWT.BORDER | SWT.SINGLE);
@@ -158,6 +156,19 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 		initialize(container);
 	}
 	
+	
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	protected void dialogChanged() {
+		if (passwordBox != null && usernameBox != null 
+				&& urlPath != null && templatePathField != null) {
+			// making sure these components were already created				
+			setPageComplete(templateOK && sparqlEndpointOK);
+		}
+	}
+	
 	/**
 	 * File browser activated
 	 */
@@ -174,6 +185,48 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 			templatePathField.setText(templateFile);
 			validateAndLoadTemplate();
 		}
+	}
+	
+	/**
+	 * Validates if the SPARQL endpoint is accessible and can be queried
+	 * 
+	 * @return true if valid, false if not
+	 */
+	private boolean validateURLField() {
+		String url = urlPath.getText();
+
+		String password = passwordBox.getText();
+		String username = usernameBox.getText();
+		if (url.length() < 5 || password.length() == 0 || username.length() == 0) {
+			displayFieldValidOrNot(urlValidationLabel, GFNewQueryGrammarMsg.FIELD_INCOMPLETE, false);
+			sparqlEndpointOK = false;
+		}
+		RepositoryUtils repository;
+		String validation = "";
+		try {
+			sparqlEndpointOK = true;
+			repository = new RepositoryUtils(url, username, password);
+			((GFNewQueryGrammarWizard) getWizard()).setRepository(repository);
+			// test the connection
+			if (repository.getAllClassesAndNames() != null) { 
+			
+				getClipboard().setClassNames(repository.getAllClassesAndNames());
+			} else {
+				sparqlEndpointOK = false;
+			}
+		
+		} catch (RepositoryUtilsConnectionException ex) {
+			sparqlEndpointOK = false;
+			validation = ex.getMessage();
+		} finally {
+			displayFieldValidOrNot(urlValidationLabel, validation, sparqlEndpointOK);
+		}
+		if (sparqlEndpointOK) {
+			validation = GFNewQueryGrammarMsg.REPO_VALID;
+		}
+		setPageComplete(templateOK && sparqlEndpointOK);
+		displayFieldValidOrNot(urlValidationLabel, validation, sparqlEndpointOK);
+		return sparqlEndpointOK;
 	}
 	
 	/**
@@ -209,51 +262,6 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 		}
 	}
 	
-	/**
-	 * {@inheritDoc}
-	 */
-	@Override
-	protected void dialogChanged() {
-		if (passwordBox != null && usernameBox != null 
-				&& urlPath != null && templatePathField != null) {
-			// making sure these components were already created				
-			setPageComplete(templateOK && sparqlEndpointOK);
-		}
-	}
-	
-	
-	/**
-	 * Validates if the SPARQL endpoint is accessible and can be queried
-	 * 
-	 * @return true if valid, false if not
-	 */
-	private boolean validateURLField() {
-		String url = urlPath.getText();
-
-		String password = passwordBox.getText();
-		String username = usernameBox.getText();
-		if (url.length() < 5 || password.length() == 0 || username.length() == 0) {
-			displayFieldValidOrNot(urlValidationLabel, GFNewQueryGrammarMsg.FIELD_INCOMPLETE, false);
-			sparqlEndpointOK = false;
-		}
-		RepositoryUtils repository;
-		try {
-			repository = new RepositoryUtils(url, username, password);
-			repository.testConnection();
-			
-			((GFNewQueryGrammarWizard) getWizard()).setRepository(repository);
-			getClipboard().setClassNames(repository.getAllClassesAndNames());
-			
-			displayFieldValidOrNot(urlValidationLabel, GFNewQueryGrammarMsg.REPO_VALID, true);
-			sparqlEndpointOK = true;
-			setPageComplete(templateOK && sparqlEndpointOK);
-			return true;
-		} catch (RepositoryUtilsConnectionException ex) {
-			displayFieldValidOrNot(urlValidationLabel, ex.getMessage(), false);
-			sparqlEndpointOK = false;
-			return false;
-		} 
-	}
 	
 	/*
 	 * Display that SPARQL endpoint or template was not valid
@@ -263,10 +271,4 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 		label.setVisible(true);
 	}
 	
-	/**
-	 * Method called when the page is passed.
-	 */
-	public void pageChanged(PageChangedEvent arg0) {
-		//templatesPage.refreshTemplates();	
-	}
 }
