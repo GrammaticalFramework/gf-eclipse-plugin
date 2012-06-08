@@ -1,11 +1,18 @@
 package org.grammaticalframework.eclipse.ui.wizards;
 
 import org.eclipse.jface.viewers.IStructuredSelection;
+import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
 import com.ontotext.molto.repositoryHelper.RepositoryUtils;
 
+/**
+ * A Wizard to assist a user to create a sparql query grammar 
+ * from natural language template patterns.
+ * 
+ * @author Maria Mateva, Ontotext AD
+ */
 public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements INewWizard {
 	/**
 	 * Wizard ID
@@ -27,6 +34,11 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	 * A repository that will be used for all the queries.
 	 */
 	private RepositoryUtils repository;
+	
+	/**
+	 * The first page of the wizard.
+	 */
+	private GFNewQueryGrammarURLAndTemplatePage introPage;
 	
 	@Override
 	public boolean performFinish() {
@@ -50,17 +62,15 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 		this.repository = repository;
 	}
 
-	@Override
 	/**
-	 * Adding the first and the second page
+	 * Adding the first page
 	 */
+
+	@Override
 	public void addPages() {
 		GFNewQueryGrammarURLAndTemplatePage introPage = new GFNewQueryGrammarURLAndTemplatePage(selection);
 		addPage(introPage);
-		GFNewQueryGrammarChooseTemplatePage templatesPage = new GFNewQueryGrammarChooseTemplatePage(selection);
-		addPage(templatesPage);
 	}
-
 	
 	public GFNewQueryGrammarClipBoard getClipboard() {
 		return this.clipboard;
@@ -72,5 +82,9 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	
 	public void setFinished() {
 		canFinish = true;
+	}
+	
+	public WizardPage getFirstWizardPage() {
+		return introPage;
 	}
 }

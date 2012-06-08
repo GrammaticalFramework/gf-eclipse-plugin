@@ -27,4 +27,12 @@ Export-Package: org.grammaticalframework.eclipse.ui.contentassist.antlr,
   org.grammaticalframework.eclipse.ui.internal
 Bundle-Activator: org.grammaticalframework.eclipse.ui.internal.GFActivator
 Bundle-ClassPath: .,
- libs/molto-repository-helper-0.2.jar
+ libs/commons-codec-1.2.jar,
+ libs/commons-httpclient-3.1.jar,
+ libs/commons-logging-1.1.1.jar,
+ libs/junit-4.8.1.jar,
+ libs/log4j-1.2.16.jar,
+ libs/sesame-onejar-2.6.2.jar,
+ libs/slf4j-api-1.6.1.jar,
+ libs/slf4j-log4j12-1.6.1.jar,
+ libs/molto-repository-helper-0.3.jar

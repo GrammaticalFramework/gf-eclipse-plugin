@@ -1,5 +1,6 @@
 package org.grammaticalframework.eclipse.ui.wizards;
 
+import org.eclipse.jface.dialogs.PageChangedEvent;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -18,7 +19,8 @@ import org.eclipse.swt.widgets.Text;
  * used for saving the new query grammar into a file
  * 
  * @see GFQueryGrammarFromSemanticRepositoryWizard
- * @author Maria Mateva
+ * @author Maria Mateva, Ontotext AD
+ * 
  */
 public class GFNewQueryGrammarSaveToFilePage extends GFNewQueryGrammarClipboardPage {
 	private Text saveToField;
@@ -44,7 +46,8 @@ public class GFNewQueryGrammarSaveToFilePage extends GFNewQueryGrammarClipboardP
 		layout.verticalSpacing = 5;
 		
 		createCurrentTemplatesLabel(container, 4);
-		populateWithSelectedTemplates(container, 4);	
+		Label selectedLabel = new Label(container, SWT.NULL);
+		populateWithSelectedTemplates(container, selectedLabel, 4);	
 		
 		Label saveToLabel = new Label(container, SWT.NULL);
 		saveToLabel.setText("&Save to");	
@@ -63,8 +66,7 @@ public class GFNewQueryGrammarSaveToFilePage extends GFNewQueryGrammarClipboardP
 		
 		initialize(container);		
 	}
-	
-	
+		
 
 	@Override
 	protected void dialogChanged() {
@@ -88,4 +90,5 @@ public class GFNewQueryGrammarSaveToFilePage extends GFNewQueryGrammarClipboardP
 			System.out.println(file);	
 		}
 	}
+
 }
