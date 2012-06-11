@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 1 June 2012
+Updated: 11 June 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -417,10 +417,9 @@ To package the GFEP sources as `.jar` files and install/update the GFEP in a sep
 
 Some have mentioned than when opening the GFEP sources, under Linux, they needed to install the following:
 
-```
-sudo apt-get install appmenu-gtk
-sudo apt-get install gtk2-engines-pixbuf
-```
+    sudo apt-get install appmenu-gtk
+    sudo apt-get install gtk2-engines-pixbuf
+
 
 
 <!----------------------------------------------------------------------------->
