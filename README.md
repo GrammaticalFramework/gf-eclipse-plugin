@@ -413,6 +413,16 @@ To package the GFEP sources as `.jar` files and install/update the GFEP in a sep
       - Allow for binary cycles in target platform
 4. Click **Finish** and wait for the plugin to build. You may get some errors, in which case look through the generated `log.zip` and fix them, then repeat the process.
 
+### Other notes
+
+Some have mentioned than when opening the GFEP sources, under Linux, they needed to install the following:
+
+```
+sudo apt-get install appmenu-gtk
+sudo apt-get install gtk2-engines-pixbuf
+```
+
+
 <!----------------------------------------------------------------------------->
 
 ## Evaluation & feedback
