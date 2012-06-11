@@ -25,6 +25,25 @@ public class GFScopingHelper {
 	private static final Logger log = Logger.getLogger(GFScopingHelper.class);
 	
 	/**
+	 * Create dummy URI for a path
+	 * @param path
+	 * @return
+	 */
+	public static URI createDummyURI(String path) {
+		URI uri = URI.createURI("dummy."+path);
+		return uri;
+	}
+	
+	/**
+	 * Check if the given URI is a dummy URI
+	 * @param uri
+	 * @return
+	 */
+	public static boolean isDummyURI(URI uri) {
+		return uri.path().startsWith("dummy.");
+	}
+	
+	/**
 	 * Climb the EMF tree and return the EObject's SourceModule object
 	 * @param eObj
 	 * @return SourceModule or null

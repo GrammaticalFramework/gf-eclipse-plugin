@@ -9,6 +9,8 @@
  */
 package org.grammaticalframework.eclipse;
 
+import java.io.File;
+
 import org.eclipse.core.runtime.Platform;
 import org.eclipse.core.runtime.preferences.IPreferencesService;
 import org.eclipse.core.runtime.preferences.IScopeContext;
@@ -43,11 +45,20 @@ public class GFPreferences {
 	}
 	
 	/**
-	 * Preference to hold path of GF libraries
+	 * Preference to hold an additional --path directive
 	 */
 	public static final String GF_LIB_PATH = "libraryPath"; 
 	public static String getLibraryPath() {
 		return getString(GF_LIB_PATH);
+	}
+	
+	/**
+	 * Preference to hold source path of GF libraries
+	 */
+	public static final String GF_LIB_SRC_PATH = "librarySourcePath"; 
+	public static String getLibrarySourcePath() {
+		String s = getString(GF_LIB_SRC_PATH);
+		return (s != null && !s.isEmpty() && !s.matches(".*[/\\\\]$")) ? s + File.separator : s; // ensure always ends with slash
 	}
 	
 	/**

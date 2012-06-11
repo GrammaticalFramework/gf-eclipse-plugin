@@ -51,6 +51,19 @@ public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 
 	@Override
 	public IEditorPart open(URI uri, EReference crossReference, int indexInList, boolean select) {
+		
+		// If using a dummy URI, just warn that no sources available
+		if (GFScopingHelper.isDummyURI(uri)) {
+			final Shell shell = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell();
+			shell.getDisplay().asyncExec(new Runnable() {
+				public void run() {
+					MessageDialog.openInformation(shell, "No sources found", "You cannot jump to definition since the appropriate module sources" +
+							" could not be found on your system");
+				}
+			});
+			return null;
+		}
+		
 		IWorkbenchPage activePage = workbench.getActiveWorkbenchWindow().getActivePage();
 		if (uri.isPlatformResource()) {
 			if (GFLibraryHelper.isLinkedResource(uri)) {
