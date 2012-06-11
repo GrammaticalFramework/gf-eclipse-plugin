@@ -1817,7 +1817,7 @@ public interface GFPackage extends EPackage
   int PATT__PATTERN_NAME = 14;
 
   /**
-   * The feature id for the '<em><b>Ref</b></em>' reference.
+   * The feature id for the '<em><b>Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -2090,7 +2090,7 @@ public interface GFPackage extends EPackage
   int LIST_PATT_ASS__PATTERN_NAME = PATT__PATTERN_NAME;
 
   /**
-   * The feature id for the '<em><b>Ref</b></em>' reference.
+   * The feature id for the '<em><b>Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -2456,7 +2456,7 @@ public interface GFPackage extends EPackage
   int LIST_PATT_TUPLE_COMP__PATTERN_NAME = PATT__PATTERN_NAME;
 
   /**
-   * The feature id for the '<em><b>Ref</b></em>' reference.
+   * The feature id for the '<em><b>Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -6257,10 +6257,10 @@ public interface GFPackage extends EPackage
   EReference getPatt_PatternName();
 
   /**
-   * Returns the meta object for the reference '{@link org.grammaticalframework.eclipse.gF.Patt#getRef <em>Ref</em>}'.
+   * Returns the meta object for the containment reference '{@link org.grammaticalframework.eclipse.gF.Patt#getRef <em>Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Ref</em>'.
+   * @return the meta object for the containment reference '<em>Ref</em>'.
    * @see org.grammaticalframework.eclipse.gF.Patt#getRef()
    * @see #getPatt()
    * @generated
@@ -8128,7 +8128,7 @@ public interface GFPackage extends EPackage
     EReference PATT__PATTERN_NAME = eINSTANCE.getPatt_PatternName();
 
     /**
-     * The meta object literal for the '<em><b>Ref</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Ref</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated

@@ -24166,12 +24166,8 @@ rule__Patt3__RefAssignment_3_0
     }
 :
 (
-{ before(grammarAccess.getPatt3Access().getRefIdentCrossReference_3_0_0()); }
-(
-{ before(grammarAccess.getPatt3Access().getRefIdentIDTerminalRuleCall_3_0_0_1()); }
-	RULE_ID{ after(grammarAccess.getPatt3Access().getRefIdentIDTerminalRuleCall_3_0_0_1()); }
-)
-{ after(grammarAccess.getPatt3Access().getRefIdentCrossReference_3_0_0()); }
+{ before(grammarAccess.getPatt3Access().getRefIdentParserRuleCall_3_0_0()); }
+	ruleIdent{ after(grammarAccess.getPatt3Access().getRefIdentParserRuleCall_3_0_0()); }
 )
 
 ;

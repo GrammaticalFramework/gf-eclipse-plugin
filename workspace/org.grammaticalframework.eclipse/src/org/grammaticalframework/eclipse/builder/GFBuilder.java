@@ -396,6 +396,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			}
 			
 			command.add(filename);
+			
+			// For debugging what's getting called
+			StringBuilder sb = new StringBuilder("Running command:");
+			for (String s : command) sb.append(" "+s);
+			log.debug(sb.toString());
 
 			// Execute command
 			ProcessBuilder pbTags = new ProcessBuilder(command);

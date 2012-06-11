@@ -107,7 +107,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Syntax:
-	 *     '!' | '*' | '**'
+	 *     '!' | '**' | '*'
 	 */
 	protected void emit_Exp3_AsteriskAsteriskKeyword_1_1_2_or_AsteriskKeyword_1_1_1_or_ExclamationMarkKeyword_1_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -219,7 +219,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     '('* | ('{' '('*)
+	 *     ('{' '('*) | '('*
 	 */
 	protected void emit_Patt3_PattArg_LeftParenthesisKeyword_10_0_a_or___LeftCurlyBracketKeyword_1_0_LeftParenthesisKeyword_10_0_a__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

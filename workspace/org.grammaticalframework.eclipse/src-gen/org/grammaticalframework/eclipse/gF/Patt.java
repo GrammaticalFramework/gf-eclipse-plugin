@@ -435,26 +435,26 @@ public interface Patt extends EObject
   void setPatternName(Ident value);
 
   /**
-   * Returns the value of the '<em><b>Ref</b></em>' reference.
+   * Returns the value of the '<em><b>Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ref</em>' reference isn't clear,
+   * If the meaning of the '<em>Ref</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ref</em>' reference.
+   * @return the value of the '<em>Ref</em>' containment reference.
    * @see #setRef(Ident)
    * @see org.grammaticalframework.eclipse.gF.GFPackage#getPatt_Ref()
-   * @model
+   * @model containment="true"
    * @generated
    */
   Ident getRef();
 
   /**
-   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#getRef <em>Ref</em>}' reference.
+   * Sets the value of the '{@link org.grammaticalframework.eclipse.gF.Patt#getRef <em>Ref</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ref</em>' reference.
+   * @param value the new value of the '<em>Ref</em>' containment reference.
    * @see #getRef()
    * @generated
    */

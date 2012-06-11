@@ -4033,8 +4033,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLabelIdentParserRuleCall_2_2_1_0 = (RuleCall)cLabelAssignment_2_2_1.eContents().get(0);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
 		private final Assignment cRefAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final CrossReference cRefIdentCrossReference_3_0_0 = (CrossReference)cRefAssignment_3_0.eContents().get(0);
-		private final RuleCall cRefIdentIDTerminalRuleCall_3_0_0_1 = (RuleCall)cRefIdentCrossReference_3_0_0.eContents().get(1);
+		private final RuleCall cRefIdentParserRuleCall_3_0_0 = (RuleCall)cRefAssignment_3_0.eContents().get(0);
 		private final Group cGroup_3_1 = (Group)cGroup_3.eContents().get(1);
 		private final Keyword cFullStopKeyword_3_1_0 = (Keyword)cGroup_3_1.eContents().get(0);
 		private final Assignment cLabelAssignment_3_1_1 = (Assignment)cGroup_3_1.eContents().get(1);
@@ -4061,12 +4060,14 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_10_2 = (Keyword)cGroup_10.eContents().get(2);
 		
 		//Patt3 returns Patt:
-		//	meta?="?" | tokenList?="[" str=String "]" | "#" patternName=Ident ("." label=Ident)? | ref=[Ident] ("." label=Ident)?
-		//	| wildcard?="_" | integer?=Integer | double?=Double | string?=String | "{" ListPattAss "}" | "<" ListPattTupleComp ">"
-		//	| "(" Patt ")";
+		//	meta?="?" //	| ref=[Ident|ID] ('.' label=Ident)?
+		//	| tokenList?="[" str=String "]" | "#" patternName=Ident ("." label=Ident)? | ref=Ident ("." label=Ident)? |
+		//	wildcard?="_" | integer?=Integer | double?=Double | string?=String | "{" ListPattAss "}" | "<" ListPattTupleComp ">" |
+		//	"(" Patt ")";
 		public ParserRule getRule() { return rule; }
 
-		//meta?="?" | tokenList?="[" str=String "]" | "#" patternName=Ident ("." label=Ident)? | ref=[Ident] ("." label=Ident)? |
+		//meta?="?" //	| ref=[Ident|ID] ('.' label=Ident)?
+		//| tokenList?="[" str=String "]" | "#" patternName=Ident ("." label=Ident)? | ref=Ident ("." label=Ident)? |
 		//wildcard?="_" | integer?=Integer | double?=Double | string?=String | "{" ListPattAss "}" | "<" ListPattTupleComp ">" |
 		//"(" Patt ")"
 		public Alternatives getAlternatives() { return cAlternatives; }
@@ -4119,17 +4120,14 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//Ident
 		public RuleCall getLabelIdentParserRuleCall_2_2_1_0() { return cLabelIdentParserRuleCall_2_2_1_0; }
 
-		//ref=[Ident] ("." label=Ident)?
+		//ref=Ident ("." label=Ident)?
 		public Group getGroup_3() { return cGroup_3; }
 
-		//ref=[Ident]
+		//ref=Ident
 		public Assignment getRefAssignment_3_0() { return cRefAssignment_3_0; }
 
-		//[Ident]
-		public CrossReference getRefIdentCrossReference_3_0_0() { return cRefIdentCrossReference_3_0_0; }
-
-		//ID
-		public RuleCall getRefIdentIDTerminalRuleCall_3_0_0_1() { return cRefIdentIDTerminalRuleCall_3_0_0_1; }
+		//Ident
+		public RuleCall getRefIdentParserRuleCall_3_0_0() { return cRefIdentParserRuleCall_3_0_0; }
 
 		//("." label=Ident)?
 		public Group getGroup_3_1() { return cGroup_3_1; }
@@ -5492,9 +5490,10 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Patt3 returns Patt:
-	//	meta?="?" | tokenList?="[" str=String "]" | "#" patternName=Ident ("." label=Ident)? | ref=[Ident] ("." label=Ident)?
-	//	| wildcard?="_" | integer?=Integer | double?=Double | string?=String | "{" ListPattAss "}" | "<" ListPattTupleComp ">"
-	//	| "(" Patt ")";
+	//	meta?="?" //	| ref=[Ident|ID] ('.' label=Ident)?
+	//	| tokenList?="[" str=String "]" | "#" patternName=Ident ("." label=Ident)? | ref=Ident ("." label=Ident)? |
+	//	wildcard?="_" | integer?=Integer | double?=Double | string?=String | "{" ListPattAss "}" | "<" ListPattTupleComp ">" |
+	//	"(" Patt ")";
 	public Patt3Elements getPatt3Access() {
 		return (pPatt3 != null) ? pPatt3 : (pPatt3 = new Patt3Elements());
 	}

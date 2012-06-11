@@ -275,7 +275,7 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
   protected Ident patternName;
 
   /**
-   * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
+   * The cached value of the '{@link #getRef() <em>Ref</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRef()
@@ -937,16 +937,6 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    */
   public Ident getRef()
   {
-    if (ref != null && ref.eIsProxy())
-    {
-      InternalEObject oldRef = (InternalEObject)ref;
-      ref = (Ident)eResolveProxy(oldRef);
-      if (ref != oldRef)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GFPackage.PATT__REF, oldRef, ref));
-      }
-    }
     return ref;
   }
 
@@ -955,9 +945,16 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    * <!-- end-user-doc -->
    * @generated
    */
-  public Ident basicGetRef()
+  public NotificationChain basicSetRef(Ident newRef, NotificationChain msgs)
   {
-    return ref;
+    Ident oldRef = ref;
+    ref = newRef;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GFPackage.PATT__REF, oldRef, newRef);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -967,10 +964,18 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
    */
   public void setRef(Ident newRef)
   {
-    Ident oldRef = ref;
-    ref = newRef;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__REF, oldRef, ref));
+    if (newRef != ref)
+    {
+      NotificationChain msgs = null;
+      if (ref != null)
+        msgs = ((InternalEObject)ref).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GFPackage.PATT__REF, null, msgs);
+      if (newRef != null)
+        msgs = ((InternalEObject)newRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GFPackage.PATT__REF, null, msgs);
+      msgs = basicSetRef(newRef, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GFPackage.PATT__REF, newRef, newRef));
   }
 
   /**
@@ -1091,6 +1096,8 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
         return basicSetPattern(null, msgs);
       case GFPackage.PATT__PATTERN_NAME:
         return basicSetPatternName(null, msgs);
+      case GFPackage.PATT__REF:
+        return basicSetRef(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -1136,8 +1143,7 @@ public class PattImpl extends MinimalEObjectImpl.Container implements Patt
       case GFPackage.PATT__PATTERN_NAME:
         return getPatternName();
       case GFPackage.PATT__REF:
-        if (resolve) return getRef();
-        return basicGetRef();
+        return getRef();
       case GFPackage.PATT__WILDCARD:
         return isWildcard();
       case GFPackage.PATT__INTEGER:

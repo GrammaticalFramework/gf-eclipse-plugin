@@ -15,6 +15,10 @@ import java.util.Iterator;
 import java.util.Map;
 
 import org.apache.log4j.Logger;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.resource.EObjectDescription;
@@ -23,6 +27,9 @@ import org.eclipse.xtext.resource.IResourceDescriptions;
 import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.AbstractScope;
 import org.grammaticalframework.eclipse.gF.GFPackage;
+import org.grammaticalframework.eclipse.gF.Ident;
+import org.grammaticalframework.eclipse.gF.impl.GFFactoryImpl;
+
 import com.google.inject.Inject;
 
 public class GFTagBasedScope extends AbstractScope {
@@ -101,30 +108,41 @@ public class GFTagBasedScope extends AbstractScope {
 				}
 				
 				// Did we find anything?
+				EObject eObj;
 				if (eObjectDescription != null) {
-					// Duplicate the object description, so that we can edit the qualified name and add the user data
-					QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getQualifiedName());
-					IEObjectDescription eObjectDescription2 = new EObjectDescription(fullyQualifiedName, eObjectDescription.getEObjectOrProxy(), userData);
-					descriptions.add(eObjectDescription2);
-
-					/*
-					 * Do it again for the alias, or if no alias then for the UNQUALIFIED name
-					 * Technically we can do without the else block, since TagEntry#getAliasQualifiedName() will
-					 * just return an unqualified name if no alias exists. But that makes for very unreadable code.
-					 */
-					if (tag.hasAlias()) {
-						QualifiedName aliasQualifiedName = converter.toQualifiedName(tag.getAliasQualifiedName());
-						eObjectDescription2 = new EObjectDescription(aliasQualifiedName, eObjectDescription.getEObjectOrProxy(), userData);
-						descriptions.add(eObjectDescription2);
-					} else {
-						QualifiedName unQualifiedName = getUnQualifiedName(trueQualifiedName);
-						eObjectDescription2 = new EObjectDescription(unQualifiedName, eObjectDescription.getEObjectOrProxy(), userData);
-						descriptions.add(eObjectDescription2);
-					}
+					eObj = eObjectDescription.getEObjectOrProxy();
 				}
 				else {
+					// TODO: clean up this
+					// Create a dummy EObject
+					Ident newIdent = GFFactoryImpl.eINSTANCE.createIdent();
+					newIdent.setS(tag.getIdent());
+					Resource r = new ResourceSetImpl().createResource(URI.createURI("dummy.scopesatisfier"));
+					r.getContents().add(newIdent);
+					eObj = newIdent;
 					notFound.add(tag);
 				}
+				
+				// Duplicate the object description, so that we can edit the qualified name and add the user data
+				QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getQualifiedName());
+				IEObjectDescription eObjectDescription2 = new EObjectDescription(fullyQualifiedName, eObj, userData);
+				descriptions.add(eObjectDescription2);
+
+				/*
+				 * Do it again for the alias, or if no alias then for the UNQUALIFIED name
+				 * Technically we can do without the else block, since TagEntry#getAliasQualifiedName() will
+				 * just return an unqualified name if no alias exists. But that makes for very unreadable code.
+				 */
+				if (tag.hasAlias() && !tag.getAlias().equals(tag.getQualifier())) {
+					QualifiedName aliasQualifiedName = converter.toQualifiedName(tag.getAliasQualifiedName());
+					eObjectDescription2 = new EObjectDescription(aliasQualifiedName, eObj, userData);
+					descriptions.add(eObjectDescription2);
+				} else {
+					QualifiedName unQualifiedName = getUnQualifiedName(trueQualifiedName);
+					eObjectDescription2 = new EObjectDescription(unQualifiedName, eObj, userData);
+					descriptions.add(eObjectDescription2);
+				}
+				
 			} catch (IllegalStateException _) {
 				// Sometimes happens when you save during a build/validation, etc. 
 			}
