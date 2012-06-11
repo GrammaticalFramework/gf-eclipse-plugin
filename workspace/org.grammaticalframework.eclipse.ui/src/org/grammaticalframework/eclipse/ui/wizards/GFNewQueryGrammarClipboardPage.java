@@ -2,8 +2,8 @@ package org.grammaticalframework.eclipse.ui.wizards;
 
 import java.util.Iterator;
 
-import org.eclipse.jface.dialogs.IPageChangedListener;
 import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
@@ -25,9 +25,19 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 	 * A list widget of templates
 	 */
 	protected List listOfSelectedTemplates;
+	
+	/** 
+	 * Current template labels
+	 */
 	protected Label currentTemplates;
 	
-	protected GFNewQueryGrammarClipboardPage(String name, String description, ISelection selection) {
+	/**
+	 * The index of the next page in the wizard.
+	 */
+	protected int indexOfNextPage;
+
+	
+	public GFNewQueryGrammarClipboardPage(String name, String description, ISelection selection) {
 		super(name, description, selection);   
 	}
 
@@ -35,20 +45,51 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 		return ((GFNewQueryGrammarWizard) this.getWizard()).getClipboard();
 	}
 	
-	protected void setNextPage(AbstractNewFileWizardPage page) {
-		((GFNewQueryGrammarWizard) this.getWizard()).addPage(page);
+	public int getIndexOfNextPage() {
+		return indexOfNextPage;
 	}
 
+	public void setIndexOfNextPage(int indexOfNextPage) {
+		this.indexOfNextPage = indexOfNextPage;
+	}
 	
+	/**
+	 * Add a next page to the wizard. 
+	 * The wizard is designed to take the last added page as next.
+	 * 
+	 * @see GFNewQueryGrammarWizard 
+	 * @param page
+	 */
+	protected void addNextPage(IWizardPage page) {
+		GFNewQueryGrammarWizard thisWizard = ((GFNewQueryGrammarWizard) this.getWizard());
+		thisWizard.addPage(page);
+		// the last added page is added as next
+		setIndexOfNextPage(thisWizard.getPageCount() - 1);
+	}
+
+	/**
+	 * {inherit:doc}
+	 */
 	public void handleEvent(Event event) { }
 
-	
+	/**
+	 * {inherit:doc}
+	 */
 	public void createControl(Composite parent) { }
-
+	
+	/**
+	 * {inherit:doc}
+	 */
 	@Override
 	protected void dialogChanged() { }
 	
-	
+	/**
+	 * Creates a list of all added current templates.
+	 * 
+	 * @param container - the Composite to which the Label is added
+	 * @param horizontalCellsSpan - the horizontal span size of the label(number of cells)
+	 * @return - the label
+	 */
 	protected Label createCurrentTemplatesLabel(Composite container, int horizontalCellsSpan) {
 		Label label = new Label(container, SWT.NULL);
 		label.setText("Currently Selected Patterns");
@@ -56,6 +97,14 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 		return label;
 	}
 	
+	/**
+	 * Adds all selected templates to a Label
+	 * TODO switch to another control
+	 * @param parent
+	 * @param label
+	 * @param horizontalCellsSpan
+	 * @return
+	 */
 	protected Label populateWithSelectedTemplates(Composite parent, Label label, int horizontalCellsSpan) {
 		java.util.List<String> currentlyChosen = getClipboard().getSelectedQueries();	
 		return addLabelsOfAList(parent, label, horizontalCellsSpan, currentlyChosen);
@@ -96,6 +145,9 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 		}
 	}
 	
+	/**
+	 * Enable the Finish button of the Wizard
+	 */
 	protected void enableFinishButton() {
 		((GFNewQueryGrammarWizard)this.getWizard()).setFinished();
 	}

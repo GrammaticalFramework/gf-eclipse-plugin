@@ -102,14 +102,7 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 		classesList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 3, 10));
 		classesList.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				String classNameWhole = classesList.getSelection()[0];
-				String [] classNameParts = classNameWhole.split("\\|\\|");
-				String classNameUri = classNameParts[0].trim();
-				String classNameLabel = classNameParts[1].trim();
-				editCurrentTemplateBox.setText(
-						substituteBindingWith(GFQueryGrammarConstants.CLASS_NAME_BR, classNameUri));
-				populateCorrespondingInstances(classNameUri);
-				// populateCorrespondingPredicates(classNameUri);
+				classNameSelected();
 			}
 		});
 		populateExistingClasses();
@@ -120,9 +113,7 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 		instancesList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 3, 10));		
 		instancesList.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				editCurrentTemplateBox.setText(
-					substituteBindingWith(GFQueryGrammarConstants.CLASS_INSTANCE_BR, 
-							instancesList.getSelection()[0]));
+				instenceSelected();
 			}
 		});
 		
@@ -196,6 +187,29 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 	}
 	
 	/**
+	 * A class name was selected
+	 */
+	private void classNameSelected() {
+		String classNameWhole = classesList.getSelection()[0];
+		String [] classNameParts = classNameWhole.split("\\|\\|");
+		String classNameUri = classNameParts[0].trim();
+		String classNameLabel = classNameParts[1].trim();
+		editCurrentTemplateBox.setText(
+				substituteBindingWith(GFQueryGrammarConstants.CLASS_NAME_BR, classNameUri));
+		populateCorrespondingInstances(classNameUri);
+		// populateCorrespondingPredicates(classNameUri);
+	}
+	
+	/**
+	 * A class instance was selected
+	 */
+	private void instenceSelected() {
+		editCurrentTemplateBox.setText(
+				substituteBindingWith(GFQueryGrammarConstants.CLASS_INSTANCE_BR, 
+						instancesList.getSelection()[0]));
+	}
+	
+	/**
 	 * Populate all class names(always)
 	 */
 	private void populateExistingClasses() {
@@ -232,53 +246,6 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 		}
 	}
 	
-	private void addCurrentlySelectedTemplate() {
-		String query = editCurrentTemplateBox.getText();
-		if (!query.contains(GFQueryGrammarConstants.CLASS_NAME) &&
-			!query.contains(GFQueryGrammarConstants.CLASS_INSTANCE)) {
-			continueRadios[0].setEnabled(true);
-			continueRadios[1].setEnabled(true);
-	
-			getClipboard().addQuery(query);
-			refreshTemplateBox();
-			resetEditBox();
-		}
-	}
-	
-	
-	/**
-	 * Adds the correct next page to the Wizard
-	 * 
-	 * @param hasNextTemplate if "true", adds a GFNewQueryGrammarChooseTemplatePage, else adds a 
-	 */
-	private void addTheNextPage(boolean hasNextTemplate) {
-		GFNewQueryGrammarChooseTemplatePage templatePage = new GFNewQueryGrammarChooseTemplatePage(null);
-		GFNewQueryGrammarSaveToFilePage saveToPage = new GFNewQueryGrammarSaveToFilePage(null);
-		if (hasNextTemplate) {
-			setNextPage(templatePage);
-		} else {
-			setNextPage(saveToPage);
-		}
-		nextPageAdded = true;
-		setPageComplete(currentTemplateWasAdded);
-	}
-	
-	/**
-	 * Clean up the current 
-	 */
-	private void resetEditBox() {
-		editCurrentTemplateBox.setText(template.getTextPattern());
-	}
-	
-	/**
-	 * Refresh the selected templates label
-	 */
-	public void refreshTemplateBox() {
-		populateWithSelectedTemplates(container, chosenTemplates, 6);	
-		chosenTemplates.update();
-		container.update();
-	}
-	
 	/**
 	 * Substitute the binding name with the selected value
 	 * in the chosen template
@@ -292,4 +259,55 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 		Matcher matcher = pattern.matcher(templateString);
 		return matcher.replaceAll(substitute);
 	}
+	
+	/**
+	 * Adding a currently selected template to the clipboard of the wizard
+	 */
+	private void addCurrentlySelectedTemplate() {
+		String query = editCurrentTemplateBox.getText();
+		if (!query.contains(GFQueryGrammarConstants.CLASS_NAME) &&
+			!query.contains(GFQueryGrammarConstants.CLASS_INSTANCE)) {
+			continueRadios[0].setEnabled(true);
+			continueRadios[1].setEnabled(true);
+	
+			getClipboard().addQuery(query);
+			refreshTemplateBox();
+			resetEditBox();
+		}
+	}
+	
+	/**
+	 * Refresh the selected templates label
+	 */
+	public void refreshTemplateBox() {
+		populateWithSelectedTemplates(container, chosenTemplates, 6);	
+		chosenTemplates.update();
+		container.update();
+	}
+	
+	/**
+	 * Clean up the current 
+	 */
+	private void resetEditBox() {
+		editCurrentTemplateBox.setText(template.getTextPattern());
+	}
+	
+	
+	/**
+	 * Adds the correct next page to the Wizard
+	 * 
+	 * @param hasNextTemplate if "true", adds a GFNewQueryGrammarChooseTemplatePage, else adds a 
+	 */
+	private void addTheNextPage(boolean hasNextTemplate) {
+		GFNewQueryGrammarChooseTemplatePage templatePage = new GFNewQueryGrammarChooseTemplatePage(null);
+		GFNewQueryGrammarSaveToFilePage saveToPage = new GFNewQueryGrammarSaveToFilePage(null);
+		if (hasNextTemplate) {
+			addNextPage(templatePage);
+		} else {
+			addNextPage(saveToPage);
+		}
+		nextPageAdded = true;
+		setPageComplete(currentTemplateWasAdded);
+	}
+
 }

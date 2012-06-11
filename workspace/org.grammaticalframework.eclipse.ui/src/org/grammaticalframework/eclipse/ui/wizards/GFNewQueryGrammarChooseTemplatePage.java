@@ -1,11 +1,8 @@
 package org.grammaticalframework.eclipse.ui.wizards;
 
 
-import org.eclipse.jface.dialogs.PageChangedEvent;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
@@ -80,7 +77,7 @@ public class GFNewQueryGrammarChooseTemplatePage extends GFNewQueryGrammarClipbo
 		if (repositoryPage == null) {
 			repositoryPage = new GFNewQueryGrammarSelectFromRepositoryPage(null, chosenTemplate);
 			repositoryPage.setPreviousPage(getWizard().getStartingPage());		
-			setNextPage(repositoryPage);
+			addNextPage(repositoryPage);
 			setPageComplete(true);
 		}		
 		repositoryPage.setTemplate(chosenTemplate);	

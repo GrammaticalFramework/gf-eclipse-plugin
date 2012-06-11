@@ -1,7 +1,7 @@
 package org.grammaticalframework.eclipse.ui.wizards;
 
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.jface.wizard.WizardPage;
+import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
@@ -10,6 +10,7 @@ import com.ontotext.molto.repositoryHelper.RepositoryUtils;
 /**
  * A Wizard to assist a user to create a sparql query grammar 
  * from natural language template patterns.
+ * Note: the pages are added dynamically one by one.
  * 
  * @author Maria Mateva, Ontotext AD
  */
@@ -18,12 +19,6 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	 * Wizard ID
 	 */
 	public static String ID = "org.grammaticalframework.eclipse.ui.wizards.GFNewQueryGrammarFromSemanticRepositoryWizard";
-	
-	/**
-	 * Denotes that the wizard is in a finished state.
-	 * (The "Finish" button is enabled.)
-	 */
-	private boolean canFinish;
 	
 	/**
 	 * Clipboard that will hold the chosen so far templates
@@ -40,11 +35,12 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	 */
 	private GFNewQueryGrammarURLAndTemplatePage introPage;
 	
-	@Override
-	public boolean performFinish() {
-		return false;
-	}
-
+	/**
+	 * Denotes that the wizard is in a finished state.
+	 * (The "Finish" button is enabled.)
+	 */
+	private boolean canFinish;
+	
 	@Override
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		super.init(workbench, selection);
@@ -63,28 +59,59 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	}
 
 	/**
-	 * Adding the first page
+	 * Adding the inital page
 	 */
-
 	@Override
 	public void addPages() {
 		GFNewQueryGrammarURLAndTemplatePage introPage = new GFNewQueryGrammarURLAndTemplatePage(selection);
 		addPage(introPage);
 	}
-	
+	/**
+	 * A reference to the initial page of this wizard
+	 */
+	public IWizardPage getFirstWizardPage() {
+		return introPage;
+	}
+	/**
+	 * Getter for the clipboard
+	 * @return - the clipboard used to story inter-pages templates results.
+	 * @see GFNewQueryGrammarClipBoard
+	 */
 	public GFNewQueryGrammarClipBoard getClipboard() {
 		return this.clipboard;
 	}
 	
+	/**
+	 * Returns true if the Finish button can be pressed.
+	 */
 	public boolean canFinish() {
 		return canFinish;
 	}
 	
+	/**
+	 * Set the wizards complete; the Finish button is enabled.
+	 */
 	public void setFinished() {
 		canFinish = true;
 	}
 	
-	public WizardPage getFirstWizardPage() {
-		return introPage;
+	@Override
+	public boolean performFinish() {
+		return false;
+	}
+	
+	/**
+	 * This overriding contributes to the dynamic selection of next pages.
+	 * (So that a loop for the template selection is possible.)
+	 * The next pages are added dynamically(page for page) on the go,
+	 * so that last one is returned here, as a next page.
+	 */
+	@Override
+	public IWizardPage getNextPage(IWizardPage page) {
+		int nextPageIndex = ((GFNewQueryGrammarClipboardPage)page).getIndexOfNextPage();
+		if (nextPageIndex > -1) {
+			return this.getPages()[nextPageIndex];
+		}
+		return null;		
 	}
 }

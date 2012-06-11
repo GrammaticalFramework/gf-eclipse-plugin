@@ -70,6 +70,7 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 		super(getPageName(), getPageDescription(), selection);
 		templateOK = false;
 		sparqlEndpointOK = false;
+		templatesPage = new GFNewQueryGrammarChooseTemplatePage(null);
 	}
 	
 	/**
@@ -209,7 +210,6 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 			((GFNewQueryGrammarWizard) getWizard()).setRepository(repository);
 			// test the connection
 			if (repository.getAllClassesAndNames() != null) { 
-			
 				getClipboard().setClassNames(repository.getAllClassesAndNames());
 			} else {
 				sparqlEndpointOK = false;
@@ -242,10 +242,7 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 			if (templateValuesList.size() > 0) { 
 				getClipboard().clearTemplates();
 				getClipboard().addTemplates(templateValuesList);
-				if(getNextPage() == null) {
-					templatesPage = new GFNewQueryGrammarChooseTemplatePage(null);
-					setNextPage(templatesPage);
-				}
+				addNextPage(templatesPage);
 				templatesPage.refreshTemplates();
 				displayFieldValidOrNot(templateValidationLabel, GFNewQueryGrammarMsg.TEMPLATE_OK, true);
 				templateOK = true;

@@ -83,5 +83,5 @@ public class GFNewProjectWizard extends Wizard implements INewWizard, IExecutabl
 	public void setInitializationData(IConfigurationElement config, String propertyName, Object data) throws CoreException {
 		_configurationElement = config;
 	}
-
+	
 }
