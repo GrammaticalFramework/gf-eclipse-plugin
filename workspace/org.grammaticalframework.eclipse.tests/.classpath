@@ -4,8 +4,9 @@
 	<classpathentry kind="src" path="resources"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="src-gen"/>
+	<classpathentry exported="true" kind="lib" path="/data/sw/org.eclipselabs.xtext.xtend_2.0.1.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry kind="lib" path="/data/sw/org.eclipse.xtext.junit.source-2.0.1.v201108020636.jar"/>
+	<classpathentry kind="lib" path="/data/sw/unittesting-repo/plugins/org.eclipselabs.xtext.utils.unittesting_0.9.3.201204261440.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
