@@ -389,7 +389,7 @@ Once you have Xtext set up, you can clone the repository locally with `git clone
 
 #### Xtext version
 
-GFEP currently uses Xtext 2.1.0.
+GFEP currently uses **Xtext 2.1.0**.
 
 ### Running from source
 
