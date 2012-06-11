@@ -382,36 +382,36 @@ If problems persist, please contact me or better yet file an issue on the GitHub
 In order to build/run the GFEP from source, you need to have the Xtext libraries available in your Eclipse workspace. You have two choices:
 
 1. Download the Xtext libraries from <http://www.eclipse.org/Xtext/download/> and add them to your existing Eclipse instance
-1. Download a releease of Eclipse packaged together with Xtext from <http://xtext.itemis.com/xtext/language=en/36553/downloads>
+1. Download a release of Eclipse packaged together with Xtext from <http://xtext.itemis.com/xtext/language=en/36553/downloads>
 
-In both cases make usre you get the correct version of Xtext (see below).
-Once you have Xtext set up, you can clone the repository locally with `git clone git://github.com/GrammaticalFramework/gf-eclipse-plugin.git` and add the projects to your Eclipse workspace. 
+In both cases make sure you get the correct version of Xtext (see below).
+Once you have Xtext set up, you can clone the repository locally with `git clone git://github.com/GrammaticalFramework/gf-eclipse-plugin.git` and then add the projects under the `workspace` directory to your Eclipse workspace. 
+
+### Xtext version
+
+GFEP currently uses Xtext 2.1.0
 
 ### Running from source
 
-Once you have set up your projects (see above), you can run/debug the GFEP by following the steps here: <http://www.eclipse.org/Xtext/documentation/2_1_0/020-domainmodel-step-by-step.php#DomainmodelWalkThrough_7>
-Note that this means you will be running two instances of Eclipse, with the first debugging the other.
+Once you have set up your projects (see above), you can run/debug the GFEP by following the steps [here](http://www.eclipse.org/Xtext/documentation/2_1_0/020-domainmodel-step-by-step.php#DomainmodelWalkThrough_7).
+Note that this means you will be running _two_ instances of Eclipse simultaneously; the first debugging the second.
 
 ### Building plugin package
 
 To package the GFEP sources as `.jar` files and install/update the GFEP in a separate Eclipse installation, do the following:
 
-1. Right-click on the project `org.grammaticalframework.feature` and choose **Export**.
+1. Right-click on the project `org.grammaticalframework.feature` and choose **Export...**
 2. Select **Plug-in Development &rarr; Deployable features**
 3. Use the following options:
   - Available features: **org.grammaticalframework.feature (x.y.z.qualifier)**
   - Destination
-    - Directory: **&lt;local directory&gt;**
+      - Directory: **&lt;local directory&gt;**
   - Options
-    - Package as individual JAR archives
-      - Generate metadata repository
-      - Categorize repository: **&lt;workspace&gt;/org.grammaticalframework.feature/category.xml**
-    - Allow for binary cycles in target platform
+      - Package as individual JAR archives
+          - Generate metadata repository
+          - Categorize repository: **&lt;workspace&gt;/org.grammaticalframework.feature/category.xml**
+      - Allow for binary cycles in target platform
 4. Click **Finish** and wait for the plugin to build. You may get some errors, in which case look through the generated `log.zip` and fix them, then repeat the process.
-
-### Xtext version
-
-GFEP currently uses Xtext 2.1.0
 
 <!----------------------------------------------------------------------------->
 
