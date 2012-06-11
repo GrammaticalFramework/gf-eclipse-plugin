@@ -18,15 +18,21 @@ import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.jface.dialogs.MessageDialog;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IEditorRegistry;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
+import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.ide.IDE;
 import org.eclipse.xtext.Constants;
 import org.eclipse.xtext.ui.editor.LanguageSpecificURIEditorOpener;
+import org.eclipse.xtext.ui.editor.XtextReadonlyEditorInput;
 import org.grammaticalframework.eclipse.builder.GFLibraryHelper;
+import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
 
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
@@ -71,9 +77,9 @@ public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 				Path path = new Path(uri.toPlatformString(true));
 				IFile file = getWorkspaceRoot().getFile(path);
 				try {
-//					IEditorInput editorInput = new XtextReadonlyEditorInput(file);
-//					IEditorPart editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
-					IEditorPart editor = IDE.openEditor(activePage, file, GF_XTEXT_EDITOR_ID);
+					IEditorInput editorInput = new XtextReadonlyEditorInput(file);
+					IEditorPart editor = IDE.openEditor(activePage, editorInput, GF_XTEXT_EDITOR_ID);
+//					IEditorPart editor = IDE.openEditor(activePage, file, GF_XTEXT_EDITOR_ID);
 					selectAndReveal(editor, uri, crossReference, indexInList, select);
 					return editor;
 				} catch (PartInitException e) {

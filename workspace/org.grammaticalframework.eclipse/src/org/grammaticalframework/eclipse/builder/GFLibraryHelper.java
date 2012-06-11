@@ -25,14 +25,14 @@ public class GFLibraryHelper {
 	 * @param resource
 	 * @return
 	 */
-	public static Boolean isLinkedResource(IResource resource) {
+	public static boolean isLinkedResource(IResource resource) {
 		URI uri = URI.createURI(resource.getFullPath().toString());
 		return isLinkedResource(uri);
 	}
-	public static Boolean isLinkedResource(Resource resource) {
+	public static boolean isLinkedResource(Resource resource) {
 		return isLinkedResource(resource.getURI()); 
 	}
-	public static Boolean isLinkedResource(URI uri) {
+	public static boolean isLinkedResource(URI uri) {
 		return uri.segment(uri.segmentCount()-2).equals(GFBuilder.EXTERNAL_FOLDER);
 	}
 

@@ -24,7 +24,7 @@ public class GFValidatingEditorCallback extends ValidatingEditorCallback {
 
 	@Override
 	public void afterCreatePartControl(XtextEditor editor) {
-		if (!GFLibraryHelper.isLinkedResource(editor.getResource())) {
+		if (editor.getResource()!=null && !GFLibraryHelper.isLinkedResource(editor.getResource())) {
 			super.afterCreatePartControl(editor);
 		}
 	}
