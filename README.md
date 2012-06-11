@@ -387,9 +387,9 @@ In order to build/run the GFEP from source, you need to have the Xtext libraries
 In both cases make sure you get the correct version of Xtext (see below).
 Once you have Xtext set up, you can clone the repository locally with `git clone git://github.com/GrammaticalFramework/gf-eclipse-plugin.git` and then add the projects under the `workspace` directory to your Eclipse workspace. 
 
-### Xtext version
+#### Xtext version
 
-GFEP currently uses Xtext 2.1.0
+GFEP currently uses Xtext 2.1.0.
 
 ### Running from source
 
