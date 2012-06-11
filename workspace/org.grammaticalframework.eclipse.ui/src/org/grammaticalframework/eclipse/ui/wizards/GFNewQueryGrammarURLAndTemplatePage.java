@@ -260,8 +260,8 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 	}
 	
 	
-	/*
-	 * Display that SPARQL endpoint or template was not valid
+	/**
+	 * Display if the SPARQL endpoint or template was not valid
 	 */
 	private void displayFieldValidOrNot(Label label, String message, boolean valid) {
 		label.setText(message);
