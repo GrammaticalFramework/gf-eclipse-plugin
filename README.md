@@ -432,10 +432,9 @@ Some have mentioned than when opening the GFEP sources, under Linux, they needed
     sudo apt-get install gtk2-engines-pixbuf
 
 
-
 <!----------------------------------------------------------------------------->
 
-## Evaluation & feedback
+## Evaluation &amp; feedback
 
 Please try to use the plugin for developing your own GF projects and report any issues you come up against.
 Feedback (both negative and positive) on the following would be appreciated:
@@ -473,3 +472,4 @@ Description of the GF module types and their icons within the GF Eclipse Plugin.
 This is the GF command run by the builder:
 
     gf --v=0 --tags --output-dir=.gfbuild [--path=PATH] FILE
+
