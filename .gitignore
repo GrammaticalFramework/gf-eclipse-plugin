@@ -6,7 +6,7 @@ releases/
 *.gfo
 
 *.class
-*.jar
+#*.jar
 *.war
 *.ear
 target/
