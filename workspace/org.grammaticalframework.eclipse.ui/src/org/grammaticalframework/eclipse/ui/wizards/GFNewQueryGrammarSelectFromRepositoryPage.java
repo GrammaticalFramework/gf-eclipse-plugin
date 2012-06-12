@@ -3,7 +3,6 @@ package org.grammaticalframework.eclipse.ui.wizards;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -68,8 +67,8 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 				"That can be a class or an instance of a class.";
 	}
 	
-	protected GFNewQueryGrammarSelectFromRepositoryPage(ISelection selection, GFTemplate template) {
-		super(getPageName(), getPageDescription(), selection);
+	protected GFNewQueryGrammarSelectFromRepositoryPage(GFTemplate template) {
+		super(getPageName(), getPageDescription());
 		this.currentTemplateWasAdded = false;
 		this.nextPageEnabled = false;
 		this.template = template;
@@ -312,8 +311,8 @@ public class GFNewQueryGrammarSelectFromRepositoryPage extends GFNewQueryGrammar
 	 * @param hasNextTemplate if "true", adds a GFNewQueryGrammarChooseTemplatePage, else adds a 
 	 */
 	private void addTheNextPage(boolean hasNextTemplate) {
-		GFNewQueryGrammarChooseTemplatePage templatePage = new GFNewQueryGrammarChooseTemplatePage(null);
-		GFNewQueryGrammarSaveToFilePage saveToPage = new GFNewQueryGrammarSaveToFilePage(null);
+		GFNewQueryGrammarChooseTemplatePage templatePage = new GFNewQueryGrammarChooseTemplatePage();
+		GFNewQueryGrammarSaveToFilePage saveToPage = new GFNewQueryGrammarSaveToFilePage();
 		if (hasNextTemplate) {
 			addNextPage(templatePage);
 		} else {

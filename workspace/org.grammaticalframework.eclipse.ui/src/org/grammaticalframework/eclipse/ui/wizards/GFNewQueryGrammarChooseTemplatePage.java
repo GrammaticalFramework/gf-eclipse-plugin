@@ -1,7 +1,5 @@
 package org.grammaticalframework.eclipse.ui.wizards;
 
-
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -37,8 +35,8 @@ public class GFNewQueryGrammarChooseTemplatePage extends GFNewQueryGrammarClipbo
 		return "Select a template for the grammar ";
 	}
 	
-	protected GFNewQueryGrammarChooseTemplatePage(ISelection selection) {
-		super(getPageName(), getPageDescription(), selection);
+	protected GFNewQueryGrammarChooseTemplatePage() {
+		super(getPageName(), getPageDescription());
 	}
 	
 	@Override
@@ -75,7 +73,7 @@ public class GFNewQueryGrammarChooseTemplatePage extends GFNewQueryGrammarClipbo
 		System.out.println("Selected: " + selected[0]);
 		chosenTemplate = getClipboard().getTemplateByTextPattern(selected[0]);
 		if (repositoryPage == null) {
-			repositoryPage = new GFNewQueryGrammarSelectFromRepositoryPage(null, chosenTemplate);
+			repositoryPage = new GFNewQueryGrammarSelectFromRepositoryPage(chosenTemplate);
 			repositoryPage.setPreviousPage(getWizard().getStartingPage());		
 			addNextPage(repositoryPage);
 			setPageComplete(true);

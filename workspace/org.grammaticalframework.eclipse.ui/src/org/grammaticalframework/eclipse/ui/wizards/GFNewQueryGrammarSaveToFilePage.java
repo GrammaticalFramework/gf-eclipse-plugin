@@ -1,6 +1,5 @@
 package org.grammaticalframework.eclipse.ui.wizards;
 
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -32,8 +31,8 @@ public class GFNewQueryGrammarSaveToFilePage extends GFNewQueryGrammarClipboardP
 		return "Save the new query grammar to a file ";
 	}
 	
-	protected GFNewQueryGrammarSaveToFilePage(ISelection selection) {
-		super(getPageName(), getPageDescription(), selection);
+	protected GFNewQueryGrammarSaveToFilePage() {
+		super(getPageName(), getPageDescription());
 	}
 	
 	@Override

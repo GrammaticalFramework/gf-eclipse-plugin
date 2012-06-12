@@ -2,11 +2,15 @@ package org.grammaticalframework.eclipse.ui.wizards;
 
 import java.util.Iterator;
 
-import org.eclipse.jface.viewers.ISelection;
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.IWizardPage;
+import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.ModifyEvent;
+import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
@@ -19,7 +23,7 @@ import org.eclipse.swt.widgets.Listener;
  * @author Maria Mateva, Ontotext AD
  * 
  */
-public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWizardPage implements Listener {
+public abstract class GFNewQueryGrammarClipboardPage extends WizardPage implements Listener {
 	
 	/**
 	 * A list widget of templates
@@ -35,10 +39,14 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 	 * The index of the next page in the wizard.
 	 */
 	protected int indexOfNextPage;
-
 	
-	public GFNewQueryGrammarClipboardPage(String name, String description, ISelection selection) {
-		super(name, description, selection);   
+	protected static ImageDescriptor image;
+	  static {
+	    image = ImageDescriptor.createFromFile(GFNewQueryGrammarWizard.class, "icons/sample.gif");
+	  }
+	
+	public GFNewQueryGrammarClipboardPage(String name, String description) {
+		super(name, description, image);   
 	}
 
 	protected GFNewQueryGrammarClipBoard getClipboard() {
@@ -78,9 +86,14 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 	public void createControl(Composite parent) { }
 	
 	/**
-	 * {inherit:doc}
+	 * General purpose listener which just calls {@link #dialogChanged()}
 	 */
-	@Override
+	protected ModifyListener defaultModifyListener = new ModifyListener() {
+		public void modifyText(ModifyEvent e) {
+			dialogChanged();
+		}
+	};
+	
 	protected void dialogChanged() { }
 	
 	/**
@@ -151,5 +164,17 @@ public abstract class GFNewQueryGrammarClipboardPage extends AbstractNewFileWiza
 	protected void enableFinishButton() {
 		((GFNewQueryGrammarWizard)this.getWizard()).setFinished();
 	}
+	
+	/**
+	 * Initialize, by setting control and setting page to incomplete.
+	 * Overriders of this method should call <code>super.initialize(container)</code> at the <em>end</em> of the method.
+	 *
+	 * @param container the container
+	 */
+	protected void initialize(Control container) {
+		setPageComplete(false);
+		setControl(container);
+	}
+	
  
 }

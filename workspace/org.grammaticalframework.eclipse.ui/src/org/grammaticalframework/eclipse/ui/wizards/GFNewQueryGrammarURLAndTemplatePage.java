@@ -2,7 +2,6 @@ package org.grammaticalframework.eclipse.ui.wizards;
 
 import java.util.List;
 
-import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -66,11 +65,11 @@ public class GFNewQueryGrammarURLAndTemplatePage extends GFNewQueryGrammarClipbo
 		return "Select a SPARQL endpoint URL and a grammar templates file";
 	}
 	
-	protected GFNewQueryGrammarURLAndTemplatePage(ISelection selection) {
-		super(getPageName(), getPageDescription(), selection);
+	protected GFNewQueryGrammarURLAndTemplatePage() {
+		super(getPageName(), getPageDescription());
 		templateOK = false;
 		sparqlEndpointOK = false;
-		templatesPage = new GFNewQueryGrammarChooseTemplatePage(null);
+		templatesPage = new GFNewQueryGrammarChooseTemplatePage();
 	}
 	
 	/**

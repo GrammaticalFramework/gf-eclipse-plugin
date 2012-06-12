@@ -2,6 +2,7 @@ package org.grammaticalframework.eclipse.ui.wizards;
 
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.IWizardPage;
+import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
@@ -14,7 +15,7 @@ import com.ontotext.molto.repositoryHelper.RepositoryUtils;
  * 
  * @author Maria Mateva, Ontotext AD
  */
-public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements INewWizard {
+public class GFNewQueryGrammarWizard extends Wizard implements INewWizard {
 	/**
 	 * Wizard ID
 	 */
@@ -41,9 +42,8 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	 */
 	private boolean canFinish;
 	
-	@Override
+
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
-		super.init(workbench, selection);
 		this.setWindowTitle("New Query Grammar from Semantic Repository");
 		clipboard = new GFNewQueryGrammarClipBoard();
 		canFinish = false;
@@ -63,7 +63,7 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 	 */
 	@Override
 	public void addPages() {
-		GFNewQueryGrammarURLAndTemplatePage introPage = new GFNewQueryGrammarURLAndTemplatePage(selection);
+		GFNewQueryGrammarURLAndTemplatePage introPage = new GFNewQueryGrammarURLAndTemplatePage();
 		addPage(introPage);
 	}
 	/**
@@ -114,4 +114,5 @@ public class GFNewQueryGrammarWizard extends AbstractNewFileWizard implements IN
 		}
 		return null;		
 	}
+
 }
