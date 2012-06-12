@@ -194,33 +194,34 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 	 */
 	private boolean validateURLField() {
 		String url = urlPath.getText();
-
 		String password = passwordBox.getText();
 		String username = usernameBox.getText();
 		if (url.length() < 5 || password.length() == 0 || username.length() == 0) {
-			displayFieldValidOrNot(urlValidationLabel, GFOntologyGrammarMsg.FIELD_INCOMPLETE, false);
 			sparqlEndpointOK = false;
+			displayFieldValidOrNot(urlValidationLabel, GFOntologyGrammarMsg.FIELD_INCOMPLETE, false);
 		}
 		RepositoryUtils repository;
 		String validation = "";
+		sparqlEndpointOK = false;
 		try {
-			sparqlEndpointOK = true;
 			repository = new RepositoryUtils(url, username, password);
 			((GFOntologyGrammarWizard) getWizard()).setRepository(repository);
 			// test the connection
-			if (repository.getAllClassesAndNames() != null) { 
-				getClipboard().setClassNames(repository.getAllClassesAndNames());
+			List<String> classnames = repository.getAllClassesAndNames();
+			if (classnames != null) { 
+				getClipboard().setClassNames(classnames);
+				sparqlEndpointOK = true;
 			} else {
 				sparqlEndpointOK = false;
 			}
 		
 		} catch (Exception ex) {
-			sparqlEndpointOK = false;
-			validation = ex.getMessage();
+			 validation = GFOntologyGrammarMsg.REPO_UNREACHABLE;
+			 sparqlEndpointOK = false;
 		} finally {
 			displayFieldValidOrNot(urlValidationLabel, validation, sparqlEndpointOK);
 		}
-		if (sparqlEndpointOK) {
+		if (sparqlEndpointOK == true) {
 			validation = GFOntologyGrammarMsg.REPO_VALID;
 		}
 		setPageComplete(templateOK && sparqlEndpointOK);
