@@ -133,9 +133,11 @@ How to find the **Eclipse preferences** window depends on your Eclipse version a
 
 1. Add the GF perspective by clicking **Window &rarr; Open Perspective &rarr; Other** and choosing **GF**.
 1. Open the plugin settings by going to **Preferences &rarr; Grammatical Framework** (image below).
-1. The plugin will try to determine the path to your GF executable automatically, but this may need to be corrected. The path should include the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
+1. The plugin will try to determine the path to your GF executable automatically, but this may need to be corrected.  
+The path should include the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
 1. The _Additional path directive_ setting can be used if you want to avoid writing `--# -path=...` directives in your source files. By default it is set to `.:alltenses:prelude`, but can also be left blank. This is passed to GF using the `--path` flag.
-1. If you are using pre-compiled version of the Resource Grammar Library (i.e. you didn't build them yourself from source) _but_ you still have the sources available on your system, then you can enter to that path here. This is optional and is only used for jumping to source definitions. You should enter the absolute system path up to and including the `src` folder, e.g. `/home/john/GF/lib/src/`.
+1. If you are using a pre-compiled version of the Resource Grammar Library (i.e. you didn't build it from source yourself) but you have the sources available on your system, then you can enter their path in the _Library source path_ setting. This is optional and is only used for jumping to source definitions.  
+You should enter an absolute system path, up to and including the `src` folder, e.g. `/home/john/GF/lib/src/` or `C:\Users\John\GF\lib\src\`.
 1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
 
 ![Plugin preferences window](http://www.grammaticalframework.org/eclipse/images/eclipse-preferences.png)
