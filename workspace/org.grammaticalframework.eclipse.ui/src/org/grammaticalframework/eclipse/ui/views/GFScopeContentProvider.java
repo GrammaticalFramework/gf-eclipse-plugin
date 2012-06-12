@@ -97,7 +97,6 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 		// Get scope
 		Resource resource = (Resource)newInput;
 		Predicate<IEObjectDescription> filter = new Predicate<IEObjectDescription>() {
-			@Override
 			public boolean apply(IEObjectDescription input) {
 				String type = input.getUserData(TagEntry.USER_DATA_KEY_TYPE);
 				if (type!=null && type.equals("oper-def"))
