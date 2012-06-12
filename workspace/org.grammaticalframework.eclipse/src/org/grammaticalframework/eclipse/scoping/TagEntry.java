@@ -12,6 +12,8 @@ package org.grammaticalframework.eclipse.scoping;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.eclipse.xtext.resource.IEObjectDescription;
+
 /**
  * Represents a single "tag" entry in the GF-produced tags file, e.g.:
  * <pre>
@@ -102,6 +104,27 @@ public class TagEntry {
 		} catch (ArrayIndexOutOfBoundsException e) {
 			throw new GFTagsFileException("Malformed tag line: "+line);
 		}
+	}
+	
+	/**
+	 * Construct TagEntry instance from information in an eObjectDescription
+	 * @param eObjDesc
+	 * @throws GFTagsFileException
+	 */
+	public TagEntry(IEObjectDescription eObjDesc) throws GFTagsFileException {
+		this.alias = eObjDesc.getUserData(TagEntry.USER_DATA_KEY_ALIAS);
+		this.args = eObjDesc.getUserData(TagEntry.USER_DATA_KEY_ARGS);
+		this.file = eObjDesc.getUserData(TagEntry.USER_DATA_KEY_FILE);
+		this.ident = eObjDesc.getUserData(TagEntry.USER_DATA_KEY_IDENT);
+//		this.isIndirect = eObjDesc.getUserData(TagEntry.USER_DATA_KEY_);
+//		this.lineFrom = eObjDesc.getUserData(TagEntry.USER_DATA_KEY_);
+//		this.lineTo = eObjDesc.getUserData(TagEntry.USER_DATA_KEY_);
+		this.moduleName = eObjDesc.getUserData(TagEntry.USER_DATA_KEY_MODULENAME);
+		this.qualifier = eObjDesc.getUserData(TagEntry.USER_DATA_KEY_QUALIFIER);
+		this.type = eObjDesc.getUserData(TagEntry.USER_DATA_KEY_TYPE);
+		
+		if (this.ident == null)
+			throw new GFTagsFileException("Cannot reconstruct TagEntry from IEObjectDescription");
 	}
 	
 	/**
@@ -201,6 +224,10 @@ public class TagEntry {
 	public boolean hasAlias() {
 		return !this.alias.isEmpty();
 	}
+	
+	public String getArgs() {
+		return this.args;
+	}
 
 	public String getFile() {
 		return file;
@@ -260,4 +287,78 @@ public class TagEntry {
 		return sb.toString();
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((alias == null) ? 0 : alias.hashCode());
+		result = prime * result + ((args == null) ? 0 : args.hashCode());
+		result = prime * result + ((file == null) ? 0 : file.hashCode());
+		result = prime * result + ((ident == null) ? 0 : ident.hashCode());
+		result = prime * result + ((lineFrom == null) ? 0 : lineFrom.hashCode());
+		result = prime * result + ((lineTo == null) ? 0 : lineTo.hashCode());
+		result = prime * result + ((moduleName == null) ? 0 : moduleName.hashCode());
+		result = prime * result + ((qualifier == null) ? 0 : qualifier.hashCode());
+		result = prime * result + ((type == null) ? 0 : type.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TagEntry other = (TagEntry) obj;
+		if (alias == null) {
+			if (other.alias != null)
+				return false;
+		} else if (!alias.equals(other.alias))
+			return false;
+		if (args == null) {
+			if (other.args != null)
+				return false;
+		} else if (!args.equals(other.args))
+			return false;
+		if (file == null) {
+			if (other.file != null)
+				return false;
+		} else if (!file.equals(other.file))
+			return false;
+		if (ident == null) {
+			if (other.ident != null)
+				return false;
+		} else if (!ident.equals(other.ident))
+			return false;
+		if (lineFrom == null) {
+			if (other.lineFrom != null)
+				return false;
+		} else if (!lineFrom.equals(other.lineFrom))
+			return false;
+		if (lineTo == null) {
+			if (other.lineTo != null)
+				return false;
+		} else if (!lineTo.equals(other.lineTo))
+			return false;
+		if (moduleName == null) {
+			if (other.moduleName != null)
+				return false;
+		} else if (!moduleName.equals(other.moduleName))
+			return false;
+		if (qualifier == null) {
+			if (other.qualifier != null)
+				return false;
+		} else if (!qualifier.equals(other.qualifier))
+			return false;
+		if (type == null) {
+			if (other.type != null)
+				return false;
+		} else if (!type.equals(other.type))
+			return false;
+		return true;
+	}
+
+	
 }

@@ -31,6 +31,7 @@ import org.grammaticalframework.eclipse.gF.GFPackage;
 import org.grammaticalframework.eclipse.gF.Ident;
 import org.grammaticalframework.eclipse.gF.impl.GFFactoryImpl;
 
+import com.google.common.base.Predicate;
 import com.google.inject.Inject;
 
 public class GFTagBasedScope extends AbstractScope {
@@ -105,7 +106,7 @@ public class GFTagBasedScope extends AbstractScope {
 	 * @param resourceDescriptions
 	 * @param tags
 	 */
-	public void addTags(IResourceDescriptions resourceDescriptions, URI uri, Collection<TagEntry> tags) {
+	public void addTags(IResourceDescriptions resourceDescriptions, URI uri, Collection<TagEntry> tags, Predicate<IEObjectDescription> filter) {
 		ArrayList<TagEntry> notFound = new ArrayList<TagEntry>();
 		for (TagEntry tag : tags) {
 			try {
@@ -123,8 +124,7 @@ public class GFTagBasedScope extends AbstractScope {
 					Iterator<IEObjectDescription> iter1 = matchingEObjects1.iterator();
 					if (iter1.hasNext()) {
 						// TODO This just always chooses first occurance... is that bad?
-						IEObjectDescription eObjectDescription = iter1.next();
-						eObj = eObjectDescription.getEObjectOrProxy();
+						eObj = iter1.next().getEObjectOrProxy();
 					} else {
 						// Cannot find EObject in source even though it's in tags
 						// Always trust the tags file, but this should be noted.
@@ -135,8 +135,10 @@ public class GFTagBasedScope extends AbstractScope {
 				
 				// Duplicate the object description, so that we can edit the qualified name and add the user data
 				QualifiedName fullyQualifiedName = converter.toQualifiedName(tag.getQualifiedName());
-				IEObjectDescription eObjectDescription2 = new EObjectDescription(fullyQualifiedName, eObj, userData);
-				descriptions.add(eObjectDescription2);
+				IEObjectDescription eObjDesc = new EObjectDescription(fullyQualifiedName, eObj, userData);
+				if (filter==null || filter.apply(eObjDesc)) {
+					descriptions.add(eObjDesc);
+				}
 
 				/*
 				 * Do it again for the alias, or if no alias then for the UNQUALIFIED name
@@ -145,12 +147,16 @@ public class GFTagBasedScope extends AbstractScope {
 				 */
 				if (tag.hasAlias() && !tag.getAlias().equals(tag.getQualifier())) {
 					QualifiedName aliasQualifiedName = converter.toQualifiedName(tag.getAliasQualifiedName());
-					eObjectDescription2 = new EObjectDescription(aliasQualifiedName, eObj, userData);
-					descriptions.add(eObjectDescription2);
+					eObjDesc = new EObjectDescription(aliasQualifiedName, eObj, userData);
+					if (filter==null || filter.apply(eObjDesc)) {
+						descriptions.add(eObjDesc);
+					}
 				} else {
 					QualifiedName unQualifiedName = getUnQualifiedName(trueQualifiedName);
-					eObjectDescription2 = new EObjectDescription(unQualifiedName, eObj, userData);
-					descriptions.add(eObjectDescription2);
+					eObjDesc = new EObjectDescription(unQualifiedName, eObj, userData);
+					if (filter==null || filter.apply(eObjDesc)) {
+						descriptions.add(eObjDesc);
+					}
 				}
 				
 			} catch (IllegalStateException _) {

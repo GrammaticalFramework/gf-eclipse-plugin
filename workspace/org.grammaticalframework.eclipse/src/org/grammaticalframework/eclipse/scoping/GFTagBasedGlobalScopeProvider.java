@@ -78,7 +78,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @see org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider#getScope(org.eclipse.emf.ecore.resource.Resource, boolean, org.eclipse.emf.ecore.EClass, com.google.common.base.Predicate)
 	 */
 	@Override
-	protected IScope getScope(final Resource resource, final boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
+	protected IScope getScope(final Resource resource, final boolean ignoreCase, EClass type, final Predicate<IEObjectDescription> filter) {
 		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<IScope>(){
 			public IScope get() {
 				URITagMap uriTagMap = parseTagsFile(resource);
@@ -101,7 +101,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 						
 						// Append new scope for the current module/uri
 						gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
-						gfScope.addTags(resourceDescriptions, uri, entry.getValue());
+						gfScope.addTags(resourceDescriptions, uri, entry.getValue(), filter);
 					}
 					
 					return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
@@ -152,11 +152,11 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			else if (uri.fileExtension().equals("gf-tags")) {
 				
 				// Capture all the different qualifiers by iterating until the ident changes
-				// TODO This is possibly buggy when using selective inheritence
 				Set<Pair<String, String>> qualifiers = new HashSet<Pair<String,String>>();
 //				for (TagEntry tag : tagList) {
 //					qualifiers.add(new Pair<String,String>(tag.getQualifier(), tag.getAlias()));
 //				}
+				// TODO This is possibly buggy when using selective inheritence
 				String lastIdent = null;
 				for (TagEntry tag : tagList) {
 					if (lastIdent != null && !tag.getIdent().equals(lastIdent)) break;
@@ -167,7 +167,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				Predicate<TagEntry> includePredicate2 = new Predicate<TagEntry>() {
 					// Only include tags FROM the respective tags file (opposite of above)
 					public boolean apply(TagEntry tag) {
-						return !tag.getFile().endsWith(".gf-tags") && !tag.getType().equals("overload-type") ;
+						return !tag.getFile().endsWith(".gf-tags") /*&& !tag.getType().equals("overload-type")*/ ;
 					}
 				};
 				URITagMap newUriTagMap = parseSingleTagsFile(uri, includePredicate2, qualifiers);
@@ -315,7 +315,6 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		}
 		
 		// See if using the GF_LIB_SRC preference will help
-		// We are assuming the path is 
 		String librarySourcePath = GFPreferences.getLibrarySourcePath();
 		if (librarySourcePath != null) {
 			String adjustedPath = path.toOSString().replaceFirst("^.+?lib[/\\\\]src[/\\\\]", librarySourcePath);

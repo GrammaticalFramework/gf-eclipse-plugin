@@ -13,7 +13,6 @@ import org.eclipse.jface.viewers.StyledCellLabelProvider;
 import org.eclipse.jface.viewers.StyledString;
 import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.swt.graphics.RGB;
-import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.ui.editor.utils.TextStyle;
 import org.eclipse.xtext.ui.label.StylerFactory;
 import org.grammaticalframework.eclipse.scoping.TagEntry;
@@ -38,24 +37,19 @@ public class GFScopeLabelProvider extends StyledCellLabelProvider {
 			cell.setImage(images.forLibraryReference());
 			cell.setText(moduleItem.getName());
 			
-		} else if (cell.getElement() instanceof IEObjectDescription) {
-			IEObjectDescription item = (IEObjectDescription)cell.getElement();
-			
-//			IEObjectDescription item = (IEObjectDescription)element;
-//			item.getUserData(TagEntry.USER_DATA_KEY_TYPE);
+		} else if (cell.getElement() instanceof TagEntry) {
+			TagEntry item = (TagEntry)cell.getElement();
 			cell.setImage(images.forAnyJudgement());
-			
-			String type = item.getUserData(TagEntry.USER_DATA_KEY_TYPE);
-			if (type.equals("oper-type")) {
+			String type = item.getType(); 
+			if (item.getType().equals("oper-type")) {
 				type = "oper";
 			}
-			if (type.equals("overload-def")) {
+			if (item.getType().equals("overload-type")) {
 				type = "oper";
 			}
-			
-			String name = item.getName().toString();
-			String args = item.getUserData(TagEntry.USER_DATA_KEY_ARGS);
-			StyledString styledString = threePartLabel(type, name, args);
+//			String name = (item.hasAlias()) ? item.getAlias()+"."+item.getIdent() : item.getIdent();
+			String name = item.getIdent();
+			StyledString styledString = threePartLabel(type, name, item.getArgs());
 			
 			cell.setText(styledString.getString());
 			cell.setStyleRanges(styledString.getStyleRanges());

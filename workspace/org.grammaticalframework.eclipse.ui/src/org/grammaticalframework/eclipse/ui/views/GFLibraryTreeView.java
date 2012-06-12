@@ -24,7 +24,6 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.*;
 import org.eclipse.jface.action.*;
 import org.eclipse.ui.*;
-import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.ui.editor.XtextEditor;
 import org.eclipse.xtext.ui.editor.model.XtextDocument;
 import org.eclipse.xtext.ui.resource.IResourceSetProvider;
@@ -41,6 +40,7 @@ import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
+import org.grammaticalframework.eclipse.scoping.TagEntry;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 import org.grammaticalframework.eclipse.ui.views.GFScopeContentProvider.ModuleItem;
 
@@ -119,8 +119,8 @@ public class GFLibraryTreeView extends ViewPart {
 				if (search.isEmpty()) {
 					return true;
 				}
-				if (element instanceof IEObjectDescription) {
-					String name = ((IEObjectDescription)element).getName().toString();
+				if (element instanceof TagEntry) {
+					String name = ((TagEntry)element).getIdent();
 //					String moduleName = ((ModuleItem)parentElement).getName().toString().toLowerCase();
 					if (regexSearchAction.isChecked()) {
 						return (caseSensitiveSearchAction.isChecked()) ? name.matches(search) : name.matches("(?i)"+search) ;
@@ -143,7 +143,6 @@ public class GFLibraryTreeView extends ViewPart {
 
 		// Add a listener which updates the view each time the active editor is changed
 		listener = new IPartListener2() {
-			
 			/**
 			 * Finds the corresponding Resource and sets it as input.
 			 * This causes <code>inputChanged</code> to fire in the content provider.
@@ -154,7 +153,6 @@ public class GFLibraryTreeView extends ViewPart {
 			 */
 			private void changeInput(IWorkbenchPartReference partRef) {
 				try {
-
 					IEditorPart editor = partRef.getPage().getActiveEditor();
 					XtextEditor xEditor = (XtextEditor)editor;
 					XtextDocument doc = (XtextDocument)xEditor.getDocument();
@@ -167,9 +165,13 @@ public class GFLibraryTreeView extends ViewPart {
 							// If you want to update the UI
 							Display.getDefault().asyncExec(new Runnable() {
 								public void run() {
-									viewer.setInput(resource);
-									if (!searchField.getText().isEmpty()) {
-										viewer.expandAll();
+									try {
+										viewer.setInput(resource);
+										if (!searchField.getText().isEmpty()) {
+											viewer.expandAll();
+										}
+									} catch (IllegalStateException e) {
+										return;
 									}
 								}
 							});
@@ -177,14 +179,11 @@ public class GFLibraryTreeView extends ViewPart {
 						}
 					};
 					job.schedule();
-
 				} catch (Exception _) {
 					viewer.setInput(null);
 					currentFile = null;
 				}
-				
 			}
-			
 			public void partActivated(final IWorkbenchPartReference partRef) {
 				changeInput(partRef);
 			}
@@ -273,7 +272,7 @@ public class GFLibraryTreeView extends ViewPart {
 						}
 					}
 				}
-				else if (obj instanceof IEObjectDescription) {
+				else if (obj instanceof TagEntry) {
 					// TODO Open the respective file and jump to the right point in the file!
 				}
 			}
@@ -351,8 +350,8 @@ public class GFLibraryTreeView extends ViewPart {
 
 	@Override
 	public void dispose() {
-		super.dispose();
 		getSite().getWorkbenchWindow().getPartService().removePartListener(listener);
+		super.dispose();
 	}
 	
 	
