@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ontology-grammar-wizard
+Bundle-SymbolicName: org.grammaticalframework.eclipse.ontology-grammar-wizard
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: org.grammaticalframework.eclipse.ontologygrammar.Activator
+Bundle-Vendor: Ontotext AD
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,
+ libs/commons-codec-1.2.jar,
+ libs/commons-httpclient-3.1.jar,
+ libs/commons-logging-1.1.1.jar,
+ libs/junit-4.8.1.jar,
+ libs/log4j-1.2.16.jar,
+ libs/molto-repository-helper-0.3.jar,
+ libs/sesame-onejar-2.6.2.jar,
+ libs/slf4j-api-1.6.1.jar,
+ libs/slf4j-log4j12-1.6.1.jar
