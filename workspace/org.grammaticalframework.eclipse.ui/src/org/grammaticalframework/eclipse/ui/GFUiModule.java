@@ -145,6 +145,13 @@ public class GFUiModule extends org.grammaticalframework.eclipse.ui.AbstractGFUi
 
 	
 	/**
+	 * Bind custom document provider which is read-only when resource is linked/external 	
+	 */
+	public Class<? extends org.eclipse.xtext.ui.editor.model.XtextDocumentProvider> bindDocumentProvider() {
+		return org.grammaticalframework.eclipse.ui.editor.GFDocumentProvider.class;
+	}
+	
+	/**
 	 * Bind custom hover implementation
 	 */
 	public Class<? extends org.eclipse.xtext.ui.editor.hover.html.DefaultEObjectHoverProvider> bindEObjectHoverProvider() {

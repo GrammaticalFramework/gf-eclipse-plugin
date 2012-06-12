@@ -37,6 +37,12 @@ import org.grammaticalframework.eclipse.scoping.GFScopingHelper;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 
+
+/**
+ * Custom handling when opening linked resources and other known files
+ * @author John J. Camilleri
+ *
+ */
 public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 
 	/**
