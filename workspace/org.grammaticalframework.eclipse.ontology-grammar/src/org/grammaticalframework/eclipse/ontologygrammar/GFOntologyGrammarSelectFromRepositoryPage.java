@@ -21,7 +21,7 @@ import com.ontotext.molto.repositoryHelper.GFTemplate;
 import com.ontotext.molto.repositoryHelper.RepositoryUtilsConnectionException;
 
 /**
- * This is the third page of the GFQueryGrammarWizard, 
+ * This is the third page of the GFOntologyGrammarWizard, 
  * used for selection of a class or instance to fill in the template.
  * 
  * @see GFQueryGrammarWizard

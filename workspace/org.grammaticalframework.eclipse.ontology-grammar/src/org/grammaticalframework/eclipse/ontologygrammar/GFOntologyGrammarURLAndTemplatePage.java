@@ -214,7 +214,7 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 				sparqlEndpointOK = false;
 			}
 		
-		} catch (RepositoryUtilsConnectionException ex) {
+		} catch (Exception ex) {
 			sparqlEndpointOK = false;
 			validation = ex.getMessage();
 		} finally {
