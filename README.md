@@ -100,7 +100,10 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 ### System requirements
 
 1. [Eclipse](http://www.eclipse.org/downloads/) 3.6 or above.
-1. [GF 3.3.3](http://www.grammaticalframework.org/download/release-3.3.3.html) or above. The path to GF must be set within the plugin (see below).
+1. [GF 3.3.3](http://www.grammaticalframework.org/download/release-3.3.3.html) or above. The path to GF must be set within the plugin preferences (see below).
+
+Using the GF Resource Grammar Library requires that the RGL binaries are also installed on your system.
+If you are using the [pre-compiled binaries](http://www.grammaticalframework.org/download/index.html) but have separately downloaded the RGL sources to your system, you can optionally specify this path in the plugin preferences (see below).
 
 ### Installing the plugin for the first time
 
@@ -134,7 +137,7 @@ How to find the **Eclipse preferences** window depends on your Eclipse version a
 1. Add the GF perspective by clicking **Window &rarr; Open Perspective &rarr; Other** and choosing **GF**.
 1. Open the plugin settings by going to **Preferences &rarr; Grammatical Framework** (image below).
 1. The plugin will try to determine the path to your GF executable automatically, but this may need to be corrected.  
-The path should include the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
+The path should include the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\bin\gf.exe`.
 1. The _Additional path directive_ setting can be used if you want to avoid writing `--# -path=...` directives in your source files. By default it is set to `.:alltenses:prelude`, but can also be left blank. This is passed to GF using the `--path` flag.
 1. If you are using a pre-compiled version of the Resource Grammar Library (i.e. you didn't build it from source yourself) but you have the sources available on your system, then you can enter their path in the _Library source path_ setting. This is optional and is only used for jumping to source definitions.  
 You should enter an absolute system path, up to and including the `src` folder, e.g. `/home/john/GF/lib/src/` or `C:\Users\John\GF\lib\src\`.
