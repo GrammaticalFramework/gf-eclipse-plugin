@@ -27,7 +27,6 @@ import org.eclipse.xtext.scoping.impl.SimpleLocalScopeProvider;
 import org.eclipse.xtext.util.OnChangeEvictingCache;
 import org.eclipse.xtext.util.Tuples;
 import org.grammaticalframework.eclipse.gF.Arg;
-import org.grammaticalframework.eclipse.gF.Case;
 import org.grammaticalframework.eclipse.gF.DefDef;
 import org.grammaticalframework.eclipse.gF.Exp;
 import org.grammaticalframework.eclipse.gF.Ident;

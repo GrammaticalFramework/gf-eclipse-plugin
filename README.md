@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John  J. Camilleri  
-Updated: 11 June 2012
+Updated: 12 June 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -50,6 +50,9 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 
 ## Release history
 
+**12/06/12**
+: (1.5.1.x) Support for scoping when library sources not available. Performance and implementational improvements to External Library View.
+
 **19/04/12**
 : (1.5.0.x) Removed need for `.gfexternal` folder. Much improved "External Libraries" view allows you to search in current scope. Memory usage improvements in scoping implementation. Validation now occurs on file open. Re-added GF Library Path field in preferences.
 
@@ -97,7 +100,10 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 ### System requirements
 
 1. [Eclipse](http://www.eclipse.org/downloads/) 3.6 or above.
-1. [GF 3.3.3](http://www.grammaticalframework.org/download/release-3.3.3.html) or above. The path to GF must be set within the plugin (see below).
+1. [GF 3.3.3](http://www.grammaticalframework.org/download/release-3.3.3.html) or above. The path to GF must be set within the plugin preferences (see below).
+
+Using the GF Resource Grammar Library requires that the RGL binaries are also installed on your system.
+If you are using the [pre-compiled binaries](http://www.grammaticalframework.org/download/index.html) but have separately downloaded the RGL sources to your system, you can optionally specify this path in the plugin preferences (see below).
 
 ### Installing the plugin for the first time
 
@@ -129,10 +135,15 @@ How to find the **Eclipse preferences** window depends on your Eclipse version a
 #### Settings
 
 1. Add the GF perspective by clicking **Window &rarr; Open Perspective &rarr; Other** and choosing **GF**.
-1. The plugin will try to determine the path to your GF executable automatically. You can check/overwrite it by going to **Preferences &rarr; Grammatical Framework**.
-This path should include the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\gf.exe`.
-1. By default, the _Library path_ setting is set to `.:alltenses:prelude`. This is passed to GF using the `--path` flag.
+1. Open the plugin settings by going to **Preferences &rarr; Grammatical Framework** (image below).
+1. The plugin will try to determine the path to your GF executable automatically, but this may need to be corrected.  
+The path should include the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\bin\gf.exe`.
+1. The _Additional path directive_ setting can be used if you want to avoid writing `--# -path=...` directives in your source files. By default it is set to `.:alltenses:prelude`, but can also be left blank. This is passed to GF using the `--path` flag.
+1. If you are using a pre-compiled version of the Resource Grammar Library (i.e. you didn't build it from source yourself) but you have the sources available on your system, then you can enter their path in the _Library source path_ setting. This is optional and is only used for jumping to source definitions.  
+You should enter an absolute system path, up to and including the `src` folder, e.g. `/home/john/GF/lib/src/` or `C:\Users\John\GF\lib\src\`.
 1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
+
+![Plugin preferences window](http://www.grammaticalframework.org/eclipse/images/eclipse-preferences.png)
 
 ### Updating the plugin
 
@@ -421,10 +432,9 @@ Some have mentioned than when opening the GFEP sources, under Linux, they needed
     sudo apt-get install gtk2-engines-pixbuf
 
 
-
 <!----------------------------------------------------------------------------->
 
-## Evaluation & feedback
+## Evaluation &amp; feedback
 
 Please try to use the plugin for developing your own GF projects and report any issues you come up against.
 Feedback (both negative and positive) on the following would be appreciated:
@@ -462,3 +472,4 @@ Description of the GF module types and their icons within the GF Eclipse Plugin.
 This is the GF command run by the builder:
 
     gf --v=0 --tags --output-dir=.gfbuild [--path=PATH] FILE
+

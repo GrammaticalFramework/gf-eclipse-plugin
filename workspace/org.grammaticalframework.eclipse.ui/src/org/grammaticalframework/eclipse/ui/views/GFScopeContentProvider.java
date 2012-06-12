@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
@@ -21,11 +22,18 @@ import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.scoping.IGlobalScopeProvider;
 import org.eclipse.xtext.scoping.IScope;
 import org.grammaticalframework.eclipse.gF.GFPackage;
+import org.grammaticalframework.eclipse.scoping.GFTagsFileException;
 import org.grammaticalframework.eclipse.scoping.TagEntry;
 
+import com.google.common.base.Predicate;
 import com.google.inject.Inject;
 
 public class GFScopeContentProvider implements ITreeContentProvider {
+	
+	/**
+	 * The logger
+	 */
+	private static final Logger log = Logger.getLogger(GFScopeContentProvider.class);
 	
 	class ModuleItem {
 		private String name;
@@ -78,32 +86,50 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 	@Inject
 	IGlobalScopeProvider scopeProvider;
 	
-	private Map<ModuleItem, List<IEObjectDescription>> tagMap;
+	private Map<ModuleItem, List<TagEntry>> tagMap;
 
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
-		tagMap = new HashMap<ModuleItem, List<IEObjectDescription>>();
+		tagMap = new HashMap<ModuleItem, List<TagEntry>>();
 		
 		if (newInput == null)
 			return;
 		
 		// Get scope
 		Resource resource = (Resource)newInput;
-		IScope scope = scopeProvider.getScope(resource, GFPackage.Literals.EXP__IDENT, null);
+		Predicate<IEObjectDescription> filter = new Predicate<IEObjectDescription>() {
+			public boolean apply(IEObjectDescription input) {
+				String type = input.getUserData(TagEntry.USER_DATA_KEY_TYPE);
+				if (type!=null && type.equals("oper-def"))
+					return false;
+				if (type!=null && type.equals("overload-def"))
+					return false;
+				if (input.toString().contains("."))
+					return false;
+				return true;
+			}
+		};
+		IScope scope = scopeProvider.getScope(resource, GFPackage.Literals.EXP__IDENT, filter);
 		Iterable<IEObjectDescription> items = scope.getAllElements();
 		
 		// Organise into modules
 		for (IEObjectDescription ieObjectDescription : items) {
-			ModuleItem module = new ModuleItem(ieObjectDescription.getUserData(TagEntry.USER_DATA_KEY_MODULENAME));
-			if (!tagMap.containsKey(module)) {
-				tagMap.put(module, new ArrayList<IEObjectDescription>());
-			}
-			
-			// Ignore certain stuff
-			String type = ieObjectDescription.getUserData(TagEntry.USER_DATA_KEY_TYPE);
-			if (type.equals("oper-def"))
+			TagEntry tag;
+			try {
+				tag = new TagEntry(ieObjectDescription);
+			} catch (GFTagsFileException e) {
+				log.debug(e);
 				continue;
-				
-			tagMap.get(module).add(ieObjectDescription);
+			}
+			ModuleItem module = new ModuleItem(tag.getQualifier());
+			if (tag.hasAlias() && tag.getQualifier().equals(tag.getAlias())) {
+				continue;
+			}
+			if (!tagMap.containsKey(module)) {
+				tagMap.put(module, new ArrayList<TagEntry>());
+			}
+			if (!tagMap.get(module).contains(tag)) {
+				tagMap.get(module).add(tag);
+			}
 		}
 		
 	}
@@ -120,7 +146,7 @@ public class GFScopeContentProvider implements ITreeContentProvider {
 	 */
 	public Object[] getChildren(Object parentElement) {
 		if (parentElement instanceof ModuleItem) {
-			List<IEObjectDescription> items = tagMap.get(parentElement);
+			List<TagEntry> items = tagMap.get(parentElement);
 			return items.toArray();
 		} else {
 			return null;

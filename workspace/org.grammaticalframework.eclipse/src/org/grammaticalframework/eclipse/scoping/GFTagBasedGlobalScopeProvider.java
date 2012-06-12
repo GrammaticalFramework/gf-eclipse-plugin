@@ -10,7 +10,6 @@
 package org.grammaticalframework.eclipse.scoping;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Collection;
@@ -25,9 +24,7 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.IWorkspaceRoot;
-import org.eclipse.core.resources.ResourceAttributes;
 import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.emf.common.util.URI;
@@ -42,6 +39,7 @@ import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider;
 import org.eclipse.xtext.scoping.impl.LoadOnDemandResourceDescriptions;
 import org.eclipse.xtext.util.OnChangeEvictingCache;
+import org.grammaticalframework.eclipse.GFPreferences;
 
 import com.google.common.base.Predicate;
 import com.google.inject.Inject;
@@ -80,11 +78,10 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @see org.eclipse.xtext.scoping.impl.AbstractGlobalScopeProvider#getScope(org.eclipse.emf.ecore.resource.Resource, boolean, org.eclipse.emf.ecore.EClass, com.google.common.base.Predicate)
 	 */
 	@Override
-	protected IScope getScope(final Resource resource, final boolean ignoreCase, EClass type, Predicate<IEObjectDescription> filter) {
+	protected IScope getScope(final Resource resource, final boolean ignoreCase, EClass type, final Predicate<IEObjectDescription> filter) {
 		return cache.get(GFTagBasedGlobalScopeProvider.class.getName(), resource, new Provider<IScope>(){
 			public IScope get() {
-//				URITagMap uriTagMap = getURITagMap(resource); // cached
-				URITagMap uriTagMap = parseTagsFile(resource); // not cached
+				URITagMap uriTagMap = parseTagsFile(resource);
 				if (uriTagMap.isEmpty()) {
 					return IScope.NULLSCOPE;
 				}
@@ -95,14 +92,16 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 					IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
 					for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
 						
+						URI uri = entry.getKey();
+						
 						// Get module name from URI
-						String lastSegment = entry.getKey().lastSegment();
+						String lastSegment = uri.lastSegment();
 						int dotIx = lastSegment.lastIndexOf('.');
 						String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
 						
 						// Append new scope for the current module/uri
 						gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
-						gfScope.addTags(resourceDescriptions, entry.getValue());
+						gfScope.addTags(resourceDescriptions, uri, entry.getValue(), filter);
 					}
 					
 					return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
@@ -152,22 +151,23 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 			// Resolve refs to other tags files and replace, but making sure to keep original qualifier & alias
 			else if (uri.fileExtension().equals("gf-tags")) {
 				
-				// Iterate over all tags, to capture all the different qualifiers
-				// TODO Iterating over all tags to get qualifiers is inefficient
-//				HashSet<String> qualifiers = new HashSet<String>();
-//				for (TagEntry tag : tagList) {
-//					qualifiers.add(tag.getQualifier());
-//					qualifiers.add(tag.getAlias()); // this also allows for empty aliases! i.e. when inheriting
-//				}
+				// Capture all the different qualifiers by iterating until the ident changes
 				Set<Pair<String, String>> qualifiers = new HashSet<Pair<String,String>>();
+//				for (TagEntry tag : tagList) {
+//					qualifiers.add(new Pair<String,String>(tag.getQualifier(), tag.getAlias()));
+//				}
+				// TODO This is possibly buggy when using selective inheritence
+				String lastIdent = null;
 				for (TagEntry tag : tagList) {
+					if (lastIdent != null && !tag.getIdent().equals(lastIdent)) break;
 					qualifiers.add(new Pair<String,String>(tag.getQualifier(), tag.getAlias()));
+					lastIdent = tag.getIdent();
 				}
 				
 				Predicate<TagEntry> includePredicate2 = new Predicate<TagEntry>() {
 					// Only include tags FROM the respective tags file (opposite of above)
 					public boolean apply(TagEntry tag) {
-						return !tag.getFile().endsWith(".gf-tags") && !tag.getType().equals("overload-type") ;
+						return !tag.getFile().endsWith(".gf-tags") /*&& !tag.getType().equals("overload-type")*/ ;
 					}
 				};
 				URITagMap newUriTagMap = parseSingleTagsFile(uri, includePredicate2, qualifiers);
@@ -266,33 +266,67 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		try {
 			externalFolder = GFScopingHelper.getExternalFolder(tagFileURI);
 		} catch (Exception e) {
-//			log.error("Couldn't get external folder for "+tagFileURI.toFileString(), e);
+			log.error("Couldn't get external folder for "+tagFileURI.toFileString(), e);
 			return uriTagMap;
 		}
 		
 		IWorkspaceRoot root = ResourcesPlugin.getWorkspace().getRoot();
 		String rootPath = root.getLocation().toString();
 		for (Entry<String, Collection<TagEntry>> entry : strTagMap.entrySet()) {
-			URI importURI;
+			URI importURI = null;
 			String uriAsStr = entry.getKey();
+			Path uriAsPath = new Path(uriAsStr);
 			
+			// Determine an import URI
 			if (uriAsStr.endsWith(".gf")) {
 				if (uriAsStr.contains(rootPath)) {
 					// If the URI is pointing within the workspace, convert it to a platform URI
 					String trimmedURI = uriAsStr.substring(rootPath.length());
-					root.getFile(new Path(uriAsStr));
+					root.getFile(uriAsPath);
 					importURI = URI.createPlatformResourceURI(trimmedURI, true);
 				} else {
-					// Create a link to the file in the project, and use that URI
-					importURI = registerExternalFile(uriAsStr, externalFolder);
+					importURI = resolveExternalFile(uriAsStr, externalFolder);
 				}
-			} else {
+			} else if (uriAsStr.endsWith(".gf-tags")) {
 				// Just use a dumb old file:// URI
 				importURI = URI.createFileURI(uriAsStr);
 			}
-			uriTagMap.put(importURI, entry.getValue());
+			
+			if (importURI != null) {
+				uriTagMap.put(importURI, entry.getValue());
+			}
 		}
 		return uriTagMap;
+	}
+	
+	/**
+	 * Given an external URI, see if we can access it directly or by using
+	 * the user's library source path preference. If not, create a dummy resource.
+	 *  
+	 * @param uriAsStr
+	 * @return URI to resolved resource (may be a link or a dummy resource)
+	 */
+	private URI resolveExternalFile(String uriAsStr, IFolder externalFolder) {
+		IPath path = new Path(uriAsStr);
+
+		// If file exists, register link
+		if (path.toFile().exists()) {
+			return registerExternalFile(path, externalFolder);
+		}
+		
+		// See if using the GF_LIB_SRC preference will help
+		String librarySourcePath = GFPreferences.getLibrarySourcePath();
+		if (librarySourcePath != null) {
+			String adjustedPath = path.toOSString().replaceFirst("^.+?lib[/\\\\]src[/\\\\]", librarySourcePath);
+			path = new Path(adjustedPath);
+			if (path.toFile().exists()) {
+				return registerExternalFile(path, externalFolder);
+			}
+		}
+		
+		// Sources not found, use a dummy URI
+		log.debug("Source file "+uriAsStr+" not found on system.");
+		return GFScopingHelper.createDummyURI(uriAsStr);
 	}
 	
 	/**
@@ -303,9 +337,8 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 	 * @param tagFileURI 
 	 * @return
 	 */
-	private URI registerExternalFile(String externalFilePath, IFolder linkFolder) {
+	private URI registerExternalFile(IPath externalPath, IFolder linkFolder) {
 		try {
-			IPath externalPath = new Path(externalFilePath);
 			String localLink = linkFolder.getName() + java.io.File.separator + externalPath.lastSegment();
 			IFile link = linkFolder.getFile( externalPath.lastSegment() );
 			
@@ -314,16 +347,16 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 //				link.delete(true, null);
 			
 			if (!link.exists()) {
-				// Create and make read-only
+				// Create
 				link.createLink(externalPath, IResource.NONE, null);
-				ResourceAttributes attributes = link.getResourceAttributes();
-				attributes.setReadOnly(true);
-				link.setResourceAttributes(attributes);
+//				ResourceAttributes attributes = link.getResourceAttributes();
+//				attributes.setReadOnly(true);
+//				link.setResourceAttributes(attributes);
 			}
 			return URI.createURI(localLink);
 			
 		} catch (Exception e) {
-			log.warn("Couldn't link to external file " + externalFilePath, e);
+			log.warn("Couldn't link to external file " + externalPath, e);
 			return null;
 		}
 	}

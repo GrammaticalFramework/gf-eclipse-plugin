@@ -1,5 +1,6 @@
 archive-and-commit.sh
 publish-release.sh
+publish-readme.sh
 releases/
 .gfbuild/
 *.gfo
