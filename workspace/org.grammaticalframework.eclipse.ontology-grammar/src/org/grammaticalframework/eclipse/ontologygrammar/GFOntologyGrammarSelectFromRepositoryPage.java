@@ -298,8 +298,6 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		}
 	}
 	
-	
-
 	/**
 	 * Clean up the current 
 	 */
@@ -308,7 +306,6 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 			editCurrentTemplateBox.setText(template.getTextPattern());
 		}
 	}
-	
 	
 	/**
 	 * Adds the correct next page to the Wizard
