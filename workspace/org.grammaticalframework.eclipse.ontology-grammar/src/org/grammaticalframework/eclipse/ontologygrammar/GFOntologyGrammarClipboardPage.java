@@ -18,6 +18,7 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Text;
 
 /**
  * An abstract class to unite the functionality of the pages that use a clipboard
@@ -104,7 +105,7 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	 */
 	protected Label createCurrentTemplatesLabel(Composite container, int horizontalCellsSpan) {
 		Label label = new Label(container, SWT.NULL);
-		label.setText("Currently Selected Patterns");
+		label.setText("Currently Selected Patterns:");
 		label.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, horizontalCellsSpan, 1));
 		return label;
 	}
@@ -117,9 +118,9 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	 * @param horizontalCellsSpan
 	 * @return
 	 */
-	protected Label populateWithSelectedTemplates(Composite parent, Label label, int horizontalCellsSpan) {
+	protected Text populateWithSelectedTemplates(Composite parent, Text text, int horizontalCellsSpan) {
 		java.util.List<String> currentlyChosen = getClipboard().getSelectedQueries();	
-		return addLabelsOfAList(parent, label, horizontalCellsSpan, currentlyChosen);
+		return addLabelsOfAList(parent, text, horizontalCellsSpan, currentlyChosen);
 	}	
 	
 	/**
@@ -129,16 +130,24 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	 * @param horizontalCellsSpan - the number of horizontal cells that this each label covers
 	 * @param things - the list of things that have different labels
 	 */
-	protected Label addLabelsOfAList(Composite container, Label templateLabel, int horizontalCellsSpan, java.util.List<String> things) {
+	protected Text addLabelsOfAList(Composite container, Text textBox, int horizontalCellsSpan, java.util.List<String> things) {
 		Iterator<String> iter = things.iterator();
-		templateLabel.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, true, horizontalCellsSpan, 1));
+		textBox.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, true, horizontalCellsSpan, 1));
 		StringBuilder text = new StringBuilder("");
 		while(iter.hasNext()) {
 			text.append(iter.next());
 			text.append("\n");
 		}
-		templateLabel.setText(text.toString());
-		return templateLabel;
+		textBox.setText(text.toString());
+		return textBox;
+	}
+	
+	protected void refrestText(Composite parent, Text textBox, int horizontal) {
+		textBox.dispose();
+		textBox = new Text(parent, SWT.NULL);
+		populateWithSelectedTemplates(parent, textBox, horizontal);
+		parent.layout();
+		
 	}
 	
 	/**

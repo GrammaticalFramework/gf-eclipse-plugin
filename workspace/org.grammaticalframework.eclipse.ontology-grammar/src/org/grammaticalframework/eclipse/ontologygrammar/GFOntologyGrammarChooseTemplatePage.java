@@ -6,6 +6,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
+import org.eclipse.swt.widgets.Text;
 
 import com.ontotext.molto.repositoryHelper.GFTemplate;
 
@@ -56,8 +57,8 @@ public class GFOntologyGrammarChooseTemplatePage extends GFOntologyGrammarClipbo
 		//listOfTemplates.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1));
 		addSelectablesToListWidget(getClipboard().getTemplatesAsStrings(), listOfTemplates);
 		createCurrentTemplatesLabel(container, 1);
-		Label label = new Label(container, SWT.NULL);
-		populateWithSelectedTemplates(container, label, 1);		    
+		Text text = new Text(container, SWT.NULL);
+		populateWithSelectedTemplates(container, text, 1);		    
 		
 		initialize(container);
 	}

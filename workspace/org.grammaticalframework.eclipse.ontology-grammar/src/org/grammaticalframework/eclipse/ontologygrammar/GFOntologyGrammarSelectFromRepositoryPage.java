@@ -44,7 +44,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	private List predicateList;
 	private Text editCurrentTemplateBox;
 	private Button [] continueRadios;
-	private Label chosenTemplates;
+	private Text chosenTemplates;
 	
 	/**
 	 * At least one template was added 
@@ -158,7 +158,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		
 		// current templates
 		createCurrentTemplatesLabel(container, 6);
-		chosenTemplates  = new Label(container, SWT.NULL);
+		chosenTemplates  = new Text(container, SWT.NULL);
 		populateWithSelectedTemplates(container, chosenTemplates, 6);	
 		
 		// "how to continue" radio buttons
@@ -292,9 +292,9 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	 * Refresh the selected templates label
 	 */
 	public void refreshTemplateBox() {
-		populateWithSelectedTemplates(container, chosenTemplates, 6);	
-		chosenTemplates.redraw();
-		container.redraw();
+		refrestText(container, chosenTemplates, 6);	
+		//chosenTemplates.redraw();
+		//container.layout();
 	}
 	
 	/**

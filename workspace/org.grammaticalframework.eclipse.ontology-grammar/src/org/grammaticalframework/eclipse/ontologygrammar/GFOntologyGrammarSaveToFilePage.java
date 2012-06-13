@@ -44,8 +44,8 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		layout.verticalSpacing = 5;
 		
 		createCurrentTemplatesLabel(container, 4);
-		Label selectedLabel = new Label(container, SWT.NULL);
-		populateWithSelectedTemplates(container, selectedLabel, 4);	
+		Text text = new Text(container, SWT.NULL);
+		populateWithSelectedTemplates(container, text, 4);	
 		
 		Label saveToLabel = new Label(container, SWT.NULL);
 		saveToLabel.setText("Save to");	

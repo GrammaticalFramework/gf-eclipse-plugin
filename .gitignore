@@ -13,7 +13,7 @@ target/
 ## From https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
 
 *.pydevproject
-.project
+#.project
 .metadata
 bin/**
 tmp/**
