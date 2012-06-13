@@ -29,8 +29,8 @@ import com.ontotext.molto.repositoryHelper.RepositoryUtilsConnectionException;
  * 
  */
 public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammarClipboardPage {
-	public static final int SCREEN_WIDTH = 1024;
-	public static final int SCREEN_HEIGTH = 600;
+	private static final int SCREEN_WIDTH = 1024;
+	private static final int SCREEN_HEIGTH = 600;
 	
 	/**
 	 * The current GFTemplate that is being populated 
@@ -44,7 +44,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	private List predicateList;
 	private Text editCurrentTemplateBox;
 	private Button [] continueRadios;
-	private Text chosenTemplates;
+	private Composite selectedTemplatesComposite;
 	
 	/**
 	 * At least one template was added 
@@ -80,6 +80,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 
 	public void setTemplate(GFTemplate template) {
 		this.template = template;
+		resetEditBox();
 	}
 
 	@Override
@@ -109,7 +110,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 //		predicatesLabel.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 2, 1));
 		
 		// adding classes
-		classesList = new List(container, SWT.BORDER | SWT.READ_ONLY | SWT.V_SCROLL | SWT.H_SCROLL );
+		classesList = new List(container, SWT.BORDER | SWT.READ_ONLY | SWT.V_SCROLL | SWT.H_SCROLL);
 		classesList.addListener(SWT.Selection, this);
 		classesList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 3, 10));
 		classesList.addSelectionListener(new SelectionAdapter() {
@@ -120,7 +121,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		populateExistingClasses();
 		
 		// adding instances
-		instancesList = new List(container, SWT.BORDER | SWT.READ_ONLY | SWT.V_SCROLL | SWT.H_SCROLL );
+		instancesList = new List(container, SWT.BORDER | SWT.READ_ONLY | SWT.V_SCROLL | SWT.H_SCROLL);
 		instancesList.addListener(SWT.Selection, this);
 		instancesList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 3, 10));		
 		instancesList.addSelectionListener(new SelectionAdapter() {
@@ -133,7 +134,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		Label editCurrentLabel = new Label(container, SWT.NULL);
 		editCurrentLabel.setText("&Edit currently selected");
 		editCurrentLabel.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 6, 1));
-		editCurrentTemplateBox = new Text(container, SWT.BORDER | SWT.SINGLE);
+		editCurrentTemplateBox = new Text(container, SWT.BORDER | SWT.SINGLE | SWT.READ_ONLY);
 		editCurrentTemplateBox.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 4, 2));
 		editCurrentTemplateBox.setText(template.getTextPattern());
 		
@@ -158,18 +159,22 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		
 		// current templates
 		createCurrentTemplatesLabel(container, 6);
-		chosenTemplates  = new Text(container, SWT.NULL);
-		populateWithSelectedTemplates(container, chosenTemplates, 6);	
+		selectedTemplatesComposite = new Composite(container, SWT.NULL);
+		selectedTemplatesComposite.setLayoutData(new GridData(SWT.LEFT, SWT.BOTTOM, true, false, 6, 1));
+		GridLayout newLayout = new GridLayout();
+		newLayout.numColumns = 1;
+		selectedTemplatesComposite.setLayout(newLayout);
+		createSelectedTemplatesList(selectedTemplatesComposite, 1);	
 		
 		// "how to continue" radio buttons
 		Label continueLabel = new Label(container, SWT.NULL);
 		continueLabel.setText("How would you like to proceed?");
-		continueLabel.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 6, 1));
+		continueLabel.setLayoutData(new GridData(SWT.LEFT, SWT.BOTTOM, true, false, 6, 1));
 		
 		continueRadios = new Button[2];
 		continueRadios[0] = new Button(container, SWT.RADIO);
 		continueRadios[0].setText("Select more templates");
-		continueRadios[0].setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 3, 1));	
+		continueRadios[0].setLayoutData(new GridData(SWT.LEFT, SWT.BOTTOM, false, false, 3, 1));	
 		continueRadios[0].addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent arg0) {
 				addTheNextPage(true);
@@ -179,7 +184,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		continueRadios[0].setEnabled(false);
 		continueRadios[1] = new Button(container, SWT.RADIO);
 		continueRadios[1].setText("Export Grammar");
-		continueRadios[1].setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 3, 1));	
+		continueRadios[1].setLayoutData(new GridData(SWT.LEFT, SWT.BOTTOM, false, false, 3, 1));	
 		continueRadios[1].addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent arg0) {
 				 addTheNextPage(false);
@@ -279,24 +284,22 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		String query = editCurrentTemplateBox.getText();
 		if (!query.contains(GFQueryGrammarConstants.CLASS_NAME) &&
 			!query.contains(GFQueryGrammarConstants.CLASS_INSTANCE)) {
+			// add the query to the clipboard
+			getClipboard().addQuery(query);
+			// refresh the list of queries
 			continueRadios[0].setEnabled(true);
 			continueRadios[1].setEnabled(true);
-	
-			getClipboard().addQuery(query);
-			refreshTemplateBox();
+			selectedTemplatesComposite.getChildren()[0].dispose();
+			createSelectedTemplatesList(selectedTemplatesComposite, 6);
+			selectedTemplatesComposite.layout();
+			container.layout();
+
 			resetEditBox();
 		}
 	}
 	
-	/**
-	 * Refresh the selected templates label
-	 */
-	public void refreshTemplateBox() {
-		refrestText(container, chosenTemplates, 6);	
-		//chosenTemplates.redraw();
-		//container.layout();
-	}
 	
+
 	/**
 	 * Clean up the current 
 	 */

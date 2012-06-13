@@ -5,6 +5,7 @@ import java.util.List;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -77,6 +78,9 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 	 */
 	@Override
 	public void createControl(Composite parent) {
+		Point size = getShell().computeSize(SCREEN_WIDTH, SCREEN_HEIGTH);
+		getShell().setSize(size);
+		
 		Composite container = new Composite(parent, SWT.NULL);
 		GridLayout layout = new GridLayout();
 		container.setLayout(layout);

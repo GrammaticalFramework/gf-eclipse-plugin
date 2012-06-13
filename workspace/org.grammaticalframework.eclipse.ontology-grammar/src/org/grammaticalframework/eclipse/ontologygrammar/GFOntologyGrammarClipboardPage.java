@@ -9,7 +9,6 @@ import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
-import org.eclipse.swt.graphics.Path;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
@@ -18,7 +17,6 @@ import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.widgets.Listener;
-import org.eclipse.swt.widgets.Text;
 
 /**
  * An abstract class to unite the functionality of the pages that use a clipboard
@@ -28,6 +26,11 @@ import org.eclipse.swt.widgets.Text;
  * 
  */
 public abstract class GFOntologyGrammarClipboardPage extends WizardPage implements Listener {
+	/**
+	 * Default page sizes
+	 */
+	protected static final int SCREEN_WIDTH = 512;
+	protected static final int SCREEN_HEIGTH = 360;
 	
 	/**
 	 * A list widget of templates
@@ -112,15 +115,13 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	
 	/**
 	 * Adds all selected templates to a Label
-	 * TODO switch to another control
 	 * @param parent
-	 * @param label
 	 * @param horizontalCellsSpan
 	 * @return
 	 */
-	protected Text populateWithSelectedTemplates(Composite parent, Text text, int horizontalCellsSpan) {
+	protected List createSelectedTemplatesList(Composite parent, int horizontalCellsSpan) {
 		java.util.List<String> currentlyChosen = getClipboard().getSelectedQueries();	
-		return addLabelsOfAList(parent, text, horizontalCellsSpan, currentlyChosen);
+		return addLabelsOfAList(parent, horizontalCellsSpan, currentlyChosen);
 	}	
 	
 	/**
@@ -130,25 +131,20 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	 * @param horizontalCellsSpan - the number of horizontal cells that this each label covers
 	 * @param things - the list of things that have different labels
 	 */
-	protected Text addLabelsOfAList(Composite container, Text textBox, int horizontalCellsSpan, java.util.List<String> things) {
+	protected List addLabelsOfAList(Composite container, int horizontalCellsSpan, java.util.List<String> things) {
+		List list = new List(container, SWT.BORDER | SWT.READ_ONLY | SWT.V_SCROLL | SWT.H_SCROLL);
+		list.setLayoutData(new GridData(SWT.LEFT, SWT.BOTTOM, false, false, horizontalCellsSpan, 1));
 		Iterator<String> iter = things.iterator();
-		textBox.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, true, horizontalCellsSpan, 1));
-		StringBuilder text = new StringBuilder("");
-		while(iter.hasNext()) {
-			text.append(iter.next());
-			text.append("\n");
+		if (!iter.hasNext()) {
+			//list.setVisible(false);
+		} else {	
+			while(iter.hasNext()) {
+				list.add(iter.next());
+			}
 		}
-		textBox.setText(text.toString());
-		return textBox;
+		return list;
 	}
 	
-	protected void refrestText(Composite parent, Text textBox, int horizontal) {
-		textBox.dispose();
-		textBox = new Text(parent, SWT.NULL);
-		populateWithSelectedTemplates(parent, textBox, horizontal);
-		parent.layout();
-		
-	}
 	
 	/**
 	 * Adds a list of strings to a List widget.

@@ -1,12 +1,12 @@
 package org.grammaticalframework.eclipse.ontologygrammar;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
-import org.eclipse.swt.widgets.Text;
 
 import com.ontotext.molto.repositoryHelper.GFTemplate;
 
@@ -42,6 +42,9 @@ public class GFOntologyGrammarChooseTemplatePage extends GFOntologyGrammarClipbo
 	
 	@Override
 	public void createControl(Composite parent) {
+		Point size = getShell().computeSize(SCREEN_WIDTH, SCREEN_HEIGTH);
+		getShell().setSize(size);
+		
 		container = new Composite(parent, SWT.NULL);
 		GridLayout layout = new GridLayout();
 		container.setLayout(layout);
@@ -57,8 +60,7 @@ public class GFOntologyGrammarChooseTemplatePage extends GFOntologyGrammarClipbo
 		//listOfTemplates.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1));
 		addSelectablesToListWidget(getClipboard().getTemplatesAsStrings(), listOfTemplates);
 		createCurrentTemplatesLabel(container, 1);
-		Text text = new Text(container, SWT.NULL);
-		populateWithSelectedTemplates(container, text, 1);		    
+		createSelectedTemplatesList(container, 1);		    
 		
 		initialize(container);
 	}
