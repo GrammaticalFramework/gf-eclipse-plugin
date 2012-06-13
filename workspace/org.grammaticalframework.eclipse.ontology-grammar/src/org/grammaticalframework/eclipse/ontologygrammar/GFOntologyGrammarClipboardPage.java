@@ -114,7 +114,7 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	}
 	
 	/**
-	 * Adds all selected templates to a Label
+	 * Adds all selected templates to a List widget
 	 * @param parent
 	 * @param horizontalCellsSpan
 	 * @return
@@ -136,7 +136,7 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 		list.setLayoutData(new GridData(SWT.LEFT, SWT.BOTTOM, false, false, horizontalCellsSpan, 1));
 		Iterator<String> iter = things.iterator();
 		if (!iter.hasNext()) {
-			//list.setVisible(false);
+			list.setVisible(false);
 		} else {	
 			while(iter.hasNext()) {
 				list.add(iter.next());

@@ -304,7 +304,9 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	 * Clean up the current 
 	 */
 	private void resetEditBox() {
-		editCurrentTemplateBox.setText(template.getTextPattern());
+		if (editCurrentTemplateBox != null) {
+			editCurrentTemplateBox.setText(template.getTextPattern());
+		}
 	}
 	
 	
