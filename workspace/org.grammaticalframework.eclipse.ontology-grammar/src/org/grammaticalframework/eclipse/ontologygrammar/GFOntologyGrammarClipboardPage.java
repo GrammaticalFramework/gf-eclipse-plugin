@@ -3,14 +3,17 @@ package org.grammaticalframework.eclipse.ontologygrammar;
 import java.util.Iterator;
 
 import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.resource.ImageRegistry;
 import org.eclipse.jface.wizard.IWizardPage;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
+import org.eclipse.swt.graphics.Path;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.List;
@@ -40,13 +43,9 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	 */
 	protected int indexOfNextPage;
 	
-	protected static ImageDescriptor image;
-	  static {
-	    image = ImageDescriptor.createFromFile(GFOntologyGrammarWizard.class, "icons/sample.gif");
-	  }
-	
+
 	public GFOntologyGrammarClipboardPage(String name, String description) {
-		super(name, description, image);   
+		super(name, description, null);   
 	}
 
 	protected GFOntologyGrammarClipBoard getClipboard() {
@@ -176,5 +175,11 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 		setControl(container);
 	}
 	
+	// TODO set the image
+	//protected static ImageDescriptor image;
+	protected static void setImage(Display display){
+		ImageRegistry registry = new ImageRegistry(display);
+		registry.put("folder", ImageDescriptor.createFromFile(GFOntologyGrammarClipboardPage.class, "icons/sample.gif"));
+	}
  
 }

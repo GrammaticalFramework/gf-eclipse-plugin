@@ -293,8 +293,8 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	 */
 	public void refreshTemplateBox() {
 		populateWithSelectedTemplates(container, chosenTemplates, 6);	
-		chosenTemplates.update();
-		container.update();
+		chosenTemplates.redraw();
+		container.redraw();
 	}
 	
 	/**

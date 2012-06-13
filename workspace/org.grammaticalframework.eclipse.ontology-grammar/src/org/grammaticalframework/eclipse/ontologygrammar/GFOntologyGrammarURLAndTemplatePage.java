@@ -216,12 +216,16 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 			}
 		
 		} catch (Exception ex) {
-			 validation = GFOntologyGrammarMsg.REPO_UNREACHABLE;
+			if (ex.getMessage() == null) {
+				validation = GFOntologyGrammarMsg.REPO_UNREACHABLE;
+			} else {
+				validation = ex.getMessage();
+			}
 			 sparqlEndpointOK = false;
 		} finally {
 			displayFieldValidOrNot(urlValidationLabel, validation, sparqlEndpointOK);
 		}
-		if (sparqlEndpointOK == true) {
+		if (sparqlEndpointOK) {
 			validation = GFOntologyGrammarMsg.REPO_VALID;
 		}
 		setPageComplete(templateOK && sparqlEndpointOK);
