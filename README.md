@@ -150,6 +150,8 @@ You should enter an absolute system path, up to and including the `src` folder, 
 1. In Eclipse, go to **Help &rarr; Check for updates**.
 1. Any available updates will appear in the dialog. Select them and follow the usual steps.
 
+_Note:_ You will probably want to uncheck the **Contact all update sites during install to find required software** option, which is not usually needed when simply updating the plugin (it makes things go a lot slower).
+
 #### Deprecated stuff
 
 - Any folders `.gfexternal` can safely deleted as of GFEP &ge; 1.5. Using Eclipse's **Clean** function from the **Run** menu will do this for you automatically.
