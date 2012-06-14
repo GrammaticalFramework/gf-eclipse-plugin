@@ -94,6 +94,7 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 				handleBrowse();
 			}
 		});
+		
 		saveButton = new Button(container, SWT.PUSH);
 		saveButton.setText("Export Grammar");
 		saveButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 4, 1));

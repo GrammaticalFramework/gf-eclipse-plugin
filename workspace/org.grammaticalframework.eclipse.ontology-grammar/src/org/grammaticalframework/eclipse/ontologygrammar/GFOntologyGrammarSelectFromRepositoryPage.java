@@ -19,6 +19,8 @@ import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.widgets.Text;
 
 import static com.ontotext.molto.repositoryHelper.GFQueryGrammarConstants.*;
+
+import com.ontotext.molto.repositoryHelper.GFFilledTemplate;
 import com.ontotext.molto.repositoryHelper.GFTemplate;
 import com.ontotext.molto.repositoryHelper.RepositoryUtilsConnectionException;
 
@@ -225,14 +227,16 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	 * A class name was selected
 	 */
 	private void classNameSelected() {
+		// prepare to add new filled template
 		String classNameWhole = classesList.getSelection()[0];
 		String [] classNameParts = classNameWhole.split("\\|\\|");
 		String classNameUri = classNameParts[0].trim();
 		String classNameLabel = classNameParts[1].trim();
 		currentTemplateLabels.put(CLASS_NAME_BR, classNameLabel);
 		currentTemplateURIs.put(CLASS_NAME_BR, classNameUri);
+		// reset the template box
 		editCurrentTemplateBox.setText(
-				substituteBindingWith(CLASS_NAME_BR, classNameUri));
+				substituteBindingWith(CLASS_NAME_BR, classNameLabel));
 		populateCorrespondingInstances(classNameUri);
 		// populateCorrespondingPredicates(classNameUri);
 	}
@@ -241,9 +245,16 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	 * A class instance was selected
 	 */
 	private void instenceSelected() {
+		// prepare to add new filled template
+		String instanceNameWhole = instancesList.getSelection()[0];
+		String [] instanceNameParts = instanceNameWhole.split("\\|\\|");
+		String instanceNameUri = instanceNameParts[0].trim();
+		String instanceNameLabel = instanceNameParts[1].trim();
+		currentTemplateLabels.put(CLASS_INSTANCE_BR, instanceNameLabel);
+		currentTemplateURIs.put(CLASS_INSTANCE_BR, instanceNameUri);
+		// reset the template box
 		editCurrentTemplateBox.setText(
-				substituteBindingWith(CLASS_INSTANCE_BR, 
-						instancesList.getSelection()[0]));
+				substituteBindingWith(CLASS_INSTANCE_BR, instanceNameLabel));
 	}
 	
 	/**
@@ -307,6 +318,8 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 			
 			// add the query to the clipboard
 			getClipboard().addQuery(query);
+			GFFilledTemplate filled = new GFFilledTemplate(template, currentTemplateLabels, currentTemplateURIs);
+			getClipboard().addFilledTemplate(filled);
 			
 			// refresh the list of queries
 			continueRadios[0].setEnabled(true);
@@ -316,6 +329,9 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 			selectedTemplatesComposite.layout();
 			container.layout();
 			
+			// reset 
+			currentTemplateLabels = new HashMap<String, String>();
+			currentTemplateURIs =  new HashMap<String, String>();			
 			resetEditBox();
 		}
 	}
