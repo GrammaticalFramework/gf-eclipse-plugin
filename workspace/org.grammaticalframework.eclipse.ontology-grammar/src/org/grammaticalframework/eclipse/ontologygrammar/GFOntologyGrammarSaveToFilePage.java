@@ -99,18 +99,14 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		saveButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 4, 1));
 		saveButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				saveGrammar();
+				saveTheGrammar(destinationFolder, grammarName);
 			}
 		});
 		saveButton.setEnabled(false);
 				
 		initialize(container);		
 	}
-		
-	
-	private void saveGrammar() {
-		
-	}
+
 
 	@Override
 	protected void dialogChanged() { }
@@ -130,7 +126,7 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		if (file != null && file.length() > 0) {
 			saveToField.setText(file);
 			destinationFolder = new File(dialog.getFilterPath());
-			grammarName = saveToField.getText();
+			grammarName = dialog.getFileName();
 			saveButton.setEnabled(true);
 		}
 	}
