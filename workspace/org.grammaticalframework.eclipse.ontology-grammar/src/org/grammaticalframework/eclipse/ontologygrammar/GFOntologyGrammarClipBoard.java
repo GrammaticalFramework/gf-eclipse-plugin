@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.ontotext.molto.repositoryHelper.GFFilledTemplate;
 import com.ontotext.molto.repositoryHelper.GFTemplate;
 
 /**
@@ -18,12 +19,14 @@ public class GFOntologyGrammarClipBoard {
 	private List<String> selectedTemplates;
 	private Map<String, GFTemplate> loadedTemplatesMap;
 	private List<String> classNames;
+	private List<GFFilledTemplate> filledTemplates;
 	
 	public GFOntologyGrammarClipBoard () {
 		loadedTemplates = new ArrayList<GFTemplate>();
 		selectedTemplates = new ArrayList<String>();	
 		loadedTemplatesMap = new HashMap<String, GFTemplate>();
 		classNames = new ArrayList<String>();
+		filledTemplates = new ArrayList<GFFilledTemplate>();
 	}
 	
 	public void addTemplates(List<GFTemplate> templates) {
@@ -89,6 +92,13 @@ public class GFOntologyGrammarClipBoard {
 	public void setClassNames(List<String> classNames) {
 		this.classNames = classNames;
 	}
-
-
+	
+	public void addFilledTemplate(GFFilledTemplate filledTemplate) {
+		filledTemplates.add(filledTemplate);
+	}
+	
+	public List<GFFilledTemplate> getFilledTemplates() {
+		return filledTemplates;
+	}
+	
 }

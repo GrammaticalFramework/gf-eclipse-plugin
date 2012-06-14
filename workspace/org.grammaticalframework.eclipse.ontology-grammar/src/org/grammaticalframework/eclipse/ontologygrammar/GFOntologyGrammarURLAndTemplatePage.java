@@ -29,7 +29,7 @@ import com.ontotext.molto.repositoryHelper.TemplateFileReader;
  */
 public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipboardPage {
 	
-	/*
+	/**
 	 * URL/HTTP address boxes	
 	 */
 	private Text urlPath;
@@ -37,13 +37,13 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 	private Text passwordBox;
 	private Text templatePathField;
 	
-	/*
+	/**
 	 * Buttons for preliminary validation
 	 */
 	private Button validateTemplateButton;
 	private Button validateURLButton;
 	
-	/*
+	/**
 	 * Labels to hold eventual errors on validation
 	 */
 	private Label urlValidationLabel;

@@ -30,7 +30,7 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	 * Default page sizes
 	 */
 	protected static final int SCREEN_WIDTH = 512;
-	protected static final int SCREEN_HEIGTH = 360;
+	protected static final int SCREEN_HEIGTH = 400;
 	
 	/**
 	 * A list widget of templates
