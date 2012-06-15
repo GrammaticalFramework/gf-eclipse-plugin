@@ -139,7 +139,6 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		try {
 			addAllFilledTemplatesToGrammar();
 		} catch (RepositoryUtilsConnectionException e) {
-			// TODO fix that
 			e.printStackTrace();
 		}
 		String abstractGrammarName = "Abstract" + filename;
@@ -147,6 +146,8 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		grammarGenerator.writeAbstractGrammarToFile(folder, abstractGrammarName);
 		grammarGenerator.writeConcreteGrammarToFile(folder, filename, abstractGrammarName);
 		grammarGenerator.writeConcreteSparqlGrammarToFile(folder, sparqlGrammarName, abstractGrammarName);
+		
+		((GFOntologyGrammarWizard)getWizard()).setFinished();
 	}
 	
 	/**

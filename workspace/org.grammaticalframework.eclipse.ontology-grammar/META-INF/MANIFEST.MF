@@ -6,7 +6,6 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Ontotext AD
 Require-Bundle: org.eclipse.ui
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .,
  libs/commons-codec-1.2.jar,
  libs/commons-httpclient-3.1.jar,
@@ -17,3 +16,6 @@ Bundle-ClassPath: .,
  libs/slf4j-api-1.6.1.jar,
  libs/slf4j-log4j12-1.6.1.jar,
  libs/molto-repository-helper-1.0.jar
+Export-Package: bin,
+ com.ontotext.molto.repositoryHelper,
+ resources
