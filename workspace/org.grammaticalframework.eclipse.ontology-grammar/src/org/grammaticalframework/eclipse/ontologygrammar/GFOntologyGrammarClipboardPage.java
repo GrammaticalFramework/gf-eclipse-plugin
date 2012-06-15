@@ -29,8 +29,8 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	/**
 	 * Default page sizes
 	 */
-	protected static final int SCREEN_WIDTH = 512;
-	protected static final int SCREEN_HEIGTH = 400;
+	protected static final int SCREEN_WIDTH = 600;
+	protected static final int SCREEN_HEIGTH = 475;
 	
 	/**
 	 * A list widget of templates
@@ -108,7 +108,7 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	 */
 	protected Label createCurrentTemplatesLabel(Composite container, int horizontalCellsSpan) {
 		Label label = new Label(container, SWT.NULL);
-		label.setText("Currently Selected Patterns:");
+		label.setText("Currently Filled Templates:");
 		label.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, horizontalCellsSpan, 1));
 		return label;
 	}
@@ -154,6 +154,7 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	 * @param listWidget - the List widget
 	 */
 	protected static void addSelectablesToListWidget(java.util.List<String> selectables, List listWidget) {
+		listWidget.removeAll();
 		if (selectables != null) {
 			Iterator<String> iter = selectables.iterator();
 			while (iter.hasNext()) {

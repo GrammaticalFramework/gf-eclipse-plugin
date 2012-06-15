@@ -60,7 +60,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	private List classesList;
 	private List instancesList;
 	private List predicateList;
-	private Text editCurrentTemplateBox;
+	private Text currentTemplateBox;
 	private Button [] continueRadios;
 	private Composite selectedTemplatesComposite;
 	
@@ -113,8 +113,9 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		GridLayout layout = new GridLayout();
 		container.setLayout(layout);
 		layout.numColumns = 6;
+		// layout.makeColumnsEqualWidth = true; WTF behaviour under Linux
 		layout.verticalSpacing = 5;
-		layout.horizontalSpacing = 10;
+		layout.horizontalSpacing = 5;
 		
 		Label classesLabel = new Label(container, SWT.NULL);
 		classesLabel.setText("Classes");
@@ -132,7 +133,10 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		// adding classes
 		classesList = new List(container, SWT.BORDER | SWT.READ_ONLY | SWT.V_SCROLL | SWT.H_SCROLL);
 		classesList.addListener(SWT.Selection, this);
-		classesList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 3, 10));
+		GridData gd1 = new GridData(SWT.LEFT, SWT.FILL, false, true, 3, 10);
+		gd1.minimumWidth = 500;
+		gd1.widthHint = 500;
+		classesList.setLayoutData(gd1);
 		classesList.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
 				classNameSelected();
@@ -143,7 +147,10 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		// adding instances
 		instancesList = new List(container, SWT.BORDER | SWT.READ_ONLY | SWT.V_SCROLL | SWT.H_SCROLL);
 		instancesList.addListener(SWT.Selection, this);
-		instancesList.setLayoutData(new GridData(SWT.FILL, SWT.FILL, false, true, 3, 10));		
+		GridData gd2 = new GridData(SWT.LEFT, SWT.FILL, false, true, 3, 10);
+		gd2.minimumWidth = 500;
+		gd2.widthHint = 500;
+		instancesList.setLayoutData(gd2);		
 		instancesList.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
 				instenceSelected();
@@ -152,15 +159,15 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		
 		// edit box for the current template
 		Label editCurrentLabel = new Label(container, SWT.NULL);
-		editCurrentLabel.setText("&Edit currently selected");
+		editCurrentLabel.setText("Currently selected:");
 		editCurrentLabel.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 6, 1));
-		editCurrentTemplateBox = new Text(container, SWT.BORDER | SWT.SINGLE | SWT.READ_ONLY);
-		editCurrentTemplateBox.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 4, 2));
-		editCurrentTemplateBox.setText(template.getTextPattern());
+		currentTemplateBox = new Text(container, SWT.BORDER | SWT.SINGLE | SWT.READ_ONLY);
+		currentTemplateBox.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 4, 2));
+		currentTemplateBox.setText(template.getTextPattern());
 		
 		Button addButton = new Button(container, SWT.PUSH);
 		addButton.setText("Add this template!");
-		addButton.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 2));
+		addButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 2));
 		addButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
 				addCurrentlySelectedTemplate();
@@ -170,7 +177,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		
 		Button resetTemplButton = new Button(container, SWT.PUSH);
 		resetTemplButton.setText("Reset template");
-		resetTemplButton.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 2));
+		resetTemplButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 2));
 		resetTemplButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
 				 resetEditBox();
@@ -235,7 +242,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		currentTemplateLabels.put(CLASS_NAME_BR, classNameLabel);
 		currentTemplateURIs.put(CLASS_NAME_BR, classNameUri);
 		// reset the template box
-		editCurrentTemplateBox.setText(
+		currentTemplateBox.setText(
 				substituteBindingWith(CLASS_NAME_BR, classNameLabel));
 		populateCorrespondingInstances(classNameUri);
 		// populateCorrespondingPredicates(classNameUri);
@@ -253,7 +260,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		currentTemplateLabels.put(CLASS_INSTANCE_BR, instanceNameLabel);
 		currentTemplateURIs.put(CLASS_INSTANCE_BR, instanceNameUri);
 		// reset the template box
-		editCurrentTemplateBox.setText(
+		currentTemplateBox.setText(
 				substituteBindingWith(CLASS_INSTANCE_BR, instanceNameLabel));
 	}
 	
@@ -305,14 +312,14 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		String templateString = new String(template.getTextPattern());
 		Pattern pattern = Pattern.compile(binding, Pattern.LITERAL); 
 		Matcher matcher = pattern.matcher(templateString);
-		return matcher.replaceAll(substitute);
+		return matcher.replaceAll("\"" + substitute + "\"");
 	}
 	
 	/**
 	 * Adding a currently selected template to the clipboard of the wizard
 	 */
 	private void addCurrentlySelectedTemplate() {
-		String query = editCurrentTemplateBox.getText();
+		String query = currentTemplateBox.getText();
 		if (!query.contains(CLASS_NAME) &&
 			!query.contains(CLASS_INSTANCE)) {
 			
@@ -340,8 +347,8 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	 * Clean up the current 
 	 */
 	private void resetEditBox() {
-		if (editCurrentTemplateBox != null) {
-			editCurrentTemplateBox.setText(template.getTextPattern());
+		if (currentTemplateBox != null) {
+			currentTemplateBox.setText(template.getTextPattern());
 		}
 	}
 	

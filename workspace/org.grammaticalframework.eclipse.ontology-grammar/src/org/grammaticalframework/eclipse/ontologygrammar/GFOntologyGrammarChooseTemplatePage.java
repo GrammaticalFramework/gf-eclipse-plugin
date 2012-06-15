@@ -59,8 +59,10 @@ public class GFOntologyGrammarChooseTemplatePage extends GFOntologyGrammarClipbo
 		
 		//listOfTemplates.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, true, 1, 1));
 		addSelectablesToListWidget(getClipboard().getTemplatesAsStrings(), listOfTemplates);
-		createCurrentTemplatesLabel(container, 1);
-		createSelectedTemplatesList(container, 1);		    
+		if (getClipboard().getFilledTemplates().size() > 0) {
+			createCurrentTemplatesLabel(container, 1);
+			createSelectedTemplatesList(container, 1);		    
+		}
 		
 		initialize(container);
 	}

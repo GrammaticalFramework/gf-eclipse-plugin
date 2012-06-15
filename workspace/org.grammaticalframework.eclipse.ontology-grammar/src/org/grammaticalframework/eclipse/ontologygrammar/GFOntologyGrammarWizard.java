@@ -44,7 +44,7 @@ public class GFOntologyGrammarWizard extends Wizard implements INewWizard {
 	
 
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
-		this.setWindowTitle("New Query Grammar from Semantic Repository");
+		this.setWindowTitle("New Ontology Grammar");
 		clipboard = new GFOntologyGrammarClipBoard();
 		canFinish = false;
 		repository = null;
