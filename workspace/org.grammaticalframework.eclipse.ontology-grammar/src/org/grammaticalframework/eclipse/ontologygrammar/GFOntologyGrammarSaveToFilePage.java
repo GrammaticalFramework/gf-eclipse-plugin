@@ -36,11 +36,21 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 	 * Save file path text box
 	 */
 	private Text saveToField;
-	
+	/**
+	 * "Save" button
+	 */
 	private Button saveButton;
+	/**
+	 * A notification label
+	 */
+	private Label grammarStored;
 	
+	/**
+	 * A folder where the files will be stored.
+	 */
 	private File destinationFolder;
 	
+
 	private GFGenerator grammarGenerator;
 	
 	private String grammarName;
@@ -55,7 +65,7 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 	
 	protected GFOntologyGrammarSaveToFilePage() {
 		super(getPageName(), getPageDescription());
-		grammarName = "ConcreteEng";
+		grammarName = "EngGrammar.gf";
 	}
 	
 	/**
@@ -104,6 +114,11 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 			}
 		});
 		saveButton.setEnabled(false);
+		
+		grammarStored = new Label(container, SWT.NULL);
+		grammarStored.setText("The grammars was exported.");	
+		grammarStored.setVisible(false);
+		grammarStored.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 4, 1));
 				
 		initialize(container);		
 	}
@@ -118,16 +133,18 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 	private void handleBrowse() {
 		Shell shell = getShell();
 		FileDialog dialog = new FileDialog(shell,  SWT.SAVE);
-		dialog.setFilterNames(new String[] {"Templates", "All Files (*.*)"});
+		dialog.setFilterNames(new String[] {"Grammars", "All Files (*.*)"});
 		dialog.setFilterExtensions(new String[] {"*.gf", "*.*"});                        
 		dialog.setFilterPath("");
 		dialog.setText("Choose destination");
-		dialog.setFileName(grammarName + ".gf");
+		dialog.setFileName(grammarName);
 		String file = dialog.open();
 		if (file != null && file.length() > 0) {
 			saveToField.setText(file);
 			destinationFolder = new File(dialog.getFilterPath());
-			grammarName = dialog.getFileName();
+			// making sure the user didn't add an extra .gf
+			grammarName = dialog.getFileName().replaceAll(".gf", "");
+		
 			saveButton.setEnabled(true);
 		}
 	}
@@ -141,11 +158,14 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		} catch (RepositoryUtilsConnectionException e) {
 			e.printStackTrace();
 		}
+		String concreteGrammarName = "Concrete" + filename;
 		String abstractGrammarName = "Abstract" + filename;
 		String sparqlGrammarName = filename + "SPARQL";
 		grammarGenerator.writeAbstractGrammarToFile(folder, abstractGrammarName);
-		grammarGenerator.writeConcreteGrammarToFile(folder, filename, abstractGrammarName);
+		grammarGenerator.writeConcreteGrammarToFile(folder, concreteGrammarName, abstractGrammarName);
 		grammarGenerator.writeConcreteSparqlGrammarToFile(folder, sparqlGrammarName, abstractGrammarName);
+		
+		grammarStored.setVisible(true);
 		
 		((GFOntologyGrammarWizard)getWizard()).setFinished();
 	}

@@ -1,0 +1,2579 @@
+commit 719052a68886bcdc40edd79ddceeae0df4dc7b0f
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Thu Jun 14 17:47:37 2012 +0300
+
+    classes/instances selected completed
+
+commit 15aa22de067e1349bbc8ce87c6af55071f2ae205
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Thu Jun 14 17:10:21 2012 +0300
+
+    add classpath 5
+
+commit 0e97fa29e557aefa76aeba80e1bb306f677dd488
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Thu Jun 14 16:47:35 2012 +0300
+
+    add classpath
+
+commit 27d75e2e66ba03b5e4ce0215b17e5e02be712e5e
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Thu Jun 14 16:06:42 2012 +0300
+
+    save to file logic added partially
+
+commit c573c5d38c17a17e701262141dd80989e052c991
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Wed Jun 13 19:50:34 2012 +0300
+
+    molto jar updated
+
+commit f642ff0848cd007fa279b86ebc80bb1be572d9cb
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Wed Jun 13 19:17:27 2012 +0300
+
+    MANIFEST.MF updated
+
+commit 8e35101ced9dc457b60c97998dac9ca9088599d5
+Merge: ecad583 2226b1a
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Wed Jun 13 18:00:13 2012 +0300
+
+    Merge branch 'master' of https://github.com/GrammaticalFramework/gf-eclipse-plugin
+
+commit ecad583a589729f507dad57ea0a8df3405c14586
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Wed Jun 13 17:59:50 2012 +0300
+
+    fix on selected templates list and chosen template
+
+commit 7c36557bcb59d3565354469b2fcd57f056965fe9
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Wed Jun 13 15:50:09 2012 +0300
+
+    .project files added back
+
+commit 2226b1a1bfa5e4fe3a6e1fa395d99907864b56d9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jun 13 13:22:08 2012 +0200
+
+    Updated readme (publish-readme.sh)
+
+commit 81d4048328b837e1244e4b2f145df86be9152d7e
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Wed Jun 13 12:11:03 2012 +0300
+
+    error handling
+
+commit f143f9cb22971154b7e58395eb186fdd2b8005f3
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 20:42:21 2012 +0300
+
+    lib update for better exception handling
+
+commit 44be11c9c4e128e0e84003b353c0699fcad68b64
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 19:52:04 2012 +0300
+
+    git add libs
+
+commit d4910bc2b02dedaeeba0d2238e1e43b16c92253f
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 19:51:37 2012 +0300
+
+    git add libs
+
+commit 3af2efa3fcd9a2e9e6c180f7a7ed5665731e892d
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 19:44:21 2012 +0300
+
+    once again
+
+commit df1fd141a92a3a6d1ef67332bac5ce97e30b48aa
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 19:36:28 2012 +0300
+
+    try to add libs
+
+commit 1d65f652c8d423fee51c469a7a740ccb50b3dbb6
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 19:31:24 2012 +0300
+
+    add libs
+
+commit bd01c3151f95b4e0e1de0ad70a4b1c88ec9004c9
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 19:15:02 2012 +0300
+
+    plugin isolation completed, really :)
+
+commit 694e48a4e9cbeecc8fe8834c3f9a2e9c38bea201
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 19:07:42 2012 +0300
+
+    plugin isolation completed
+
+commit 07530470ebf6ad1370c0352ede5a9d4856d77e32
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 18:05:13 2012 +0300
+
+    remove deleted files
+
+commit bc2bce135fe15065b01f420733bb7610c0fbbd38
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 18:03:28 2012 +0300
+
+    rename all
+
+commit 6c48dba5b2edf670016dea987b23530897c6c7be
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 17:54:17 2012 +0300
+
+    new plugin started
+
+commit 57a6c10c550aed621da6e0cf2533e9941fb51bc7
+Merge: 3b06280 18f8f0c
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 17:24:38 2012 +0300
+
+    Merge branch 'master' of https://github.com/GrammaticalFramework/gf-eclipse-plugin
+
+commit 3b0628096fa9e53a9cd13dec72a063e2340848bd
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 17:24:28 2012 +0300
+
+    adding target/ to .gitignore
+
+commit 18f8f0c7061d2e8a59e7e6ad10643be9642dd1a9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jun 12 14:28:59 2012 +0200
+
+    Minor update to README
+
+commit 168a40dbdb874418bf9d75970792af3609502e83
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jun 12 13:27:19 2012 +0200
+
+    Updated readme (publish-readme.sh)
+
+commit a02dfc055828859471c1011c2d9375bff7c933ed
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Tue Jun 12 14:19:49 2012 +0300
+
+    query-grammar part separated from the rest of the gf-plugin
+
+commit fdd59b64a911d97ab18e2846a11bbff5ce28ae36
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jun 12 13:10:47 2012 +0200
+
+    Updated readme (publish-readme.sh)
+
+commit b1e8c66ae4534dd8e59d92021bbbd77be3fb0f9e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jun 12 12:56:29 2012 +0200
+
+    Version 1.5.1
+
+commit 1a4834a7e41b17fda6fca7ff6bf842473d0f3c75
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jun 12 12:03:16 2012 +0200
+
+    Updated readme (publish-readme.sh)
+
+commit e41c98d6da45571c826b9a393076741d42f0dbe5
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jun 12 11:46:45 2012 +0200
+
+    Ignore the readme script
+
+commit fe67b22bad3e4bf35b1a76ac66bb272885cfe886
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jun 12 11:45:39 2012 +0200
+
+    Improved performance & implementation of TreeLibraryViewer
+
+commit 619bd0a2767aa66402dc35a942396bb7a8882f69
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jun 12 09:45:00 2012 +0200
+
+    Proper handling of read-only on external files
+
+commit 450ddd429356c24bc69c6a30dfb3d30a1832af73
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Mon Jun 11 20:01:49 2012 +0300
+
+    comments
+
+commit 3deb63d25ebe0edc66489f7cac9a9e500e501b31
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Mon Jun 11 19:21:51 2012 +0300
+
+    git test
+
+commit b618448312456d95b73606b292d883db40768c9d
+Merge: 050c7e3 4e285d5
+Author: Maria Mateva <maria.mateva@ontotext.com>
+Date:   Mon Jun 11 18:42:57 2012 +0300
+
+    classpath fixes added to MANIFEST.NF
+
+commit 0539a9d80797b11523212cd51c41e89508ace485
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jun 11 15:16:18 2012 +0200
+
+    External files no longer set to read-only
+    Ideally they are not editable, though
+
+commit 258023e301fc996c59911a2e014eac062e20c68f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jun 11 15:15:35 2012 +0200
+
+    Proper support when scoping without library sources
+
+commit 050c7e32510cdc28a1719901dcb18e8c4a3cdf00
+Author: miaaaooow <mateva@airene>
+Date:   Mon Jun 11 16:13:24 2012 +0300
+
+    cycle corrected(next page index added)
+
+commit 4e285d51770dc8451b7704c6cf11eea08df4eeb3
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jun 11 10:32:13 2012 +0200
+
+    Updated readme (publish-readme.sh)
+
+commit b04072d6a3e938b92ab49a41e702a5b724fb6da2
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jun 11 10:29:48 2012 +0200
+
+    Updated readme (publish-readme.sh)
+
+commit c149168ec3c89b5406c5a91e4bae199c57e0f0a7
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jun 11 10:29:09 2012 +0200
+
+    Updated readme (publish-readme.sh)
+
+commit d596bc8bf4c2c08583f7890665b51e64d1182a8a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jun 11 10:25:44 2012 +0200
+
+    Updated readme (publish-readme.sh)
+
+commit b093b152a9c987286131bea84058f613571eedd1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jun 11 10:00:59 2012 +0200
+
+    Typos in Readme
+
+commit 427e4781b675c7299a2db34ce9a05ce3a89af2e3
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jun 11 09:55:53 2012 +0200
+
+    Added section for developers
+
+commit d927ceaa5bf18c82dd02821485f039e9de5bf34e
+Author: miaaaooow <mateva@airene>
+Date:   Fri Jun 8 19:54:57 2012 +0300
+
+    multiple fixes
+
+commit 7d174c630f02e5298bb329d6ad63c32eb3b457fe
+Author: miaaaooow <mateva@airene>
+Date:   Fri Jun 8 15:53:26 2012 +0300
+
+    solved lib dependencies problem
+
+commit d24438398d79a6c59c725ba3e214cbc26f709c81
+Author: miaaaooow <mateva@airene>
+Date:   Wed Jun 6 19:04:42 2012 +0300
+
+    first page validation ok :)
+
+commit 741dad686100be42069f46753be56cbe9a850594
+Author: miaaaooow <mateva@airene>
+Date:   Wed Jun 6 11:37:42 2012 +0300
+
+    finally succeeded to add an external jar to the classpath of the Eclipse Application(not the plugin itself)
+
+commit dfbfa9006b2dcc2b98b65b2684de6f7a7e886a40
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Tue Jun 5 18:10:01 2012 +0200
+
+    Dummy EObjects now created when no match found
+    Implementation should be cleaned up
+
+commit 121e38dead6edd6bcb9deb56248f8ed3109eba9f
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Tue Jun 5 18:08:54 2012 +0200
+
+    Added support for variables in LHS of patterns
+    Still very general and must be corrected!
+
+commit 389b3061d96d5a7ff9ce795ef0716e8c39c8deda
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Tue Jun 5 18:07:49 2012 +0200
+
+    Debug messages of builder calls
+
+commit d9144db7d7f9716d5c32e26d41eb26e4175827ae
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Tue Jun 5 18:07:24 2012 +0200
+
+    Chnaged default lib path to .:alltenses:prelude
+
+commit 65ef29f13c58a20a3f31a5a8d43d3a5db75d1a1a
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Tue Jun 5 18:05:28 2012 +0200
+
+    Removed cross-ref of Ident in LHS of pattern
+
+commit b99f575e0a3a21a443b44d16cec343b57c307fc7
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Tue Jun 5 18:03:17 2012 +0200
+
+    Added "optimize" as accepted flag
+
+commit 404613bc1b9141c263f0f8aeb90a06f013823074
+Author: miaaaooow <mateva@airene>
+Date:   Mon Jun 4 17:35:48 2012 +0300
+
+    add third page and cycle mechanism almost completed
+
+commit 97c63467ad37acf96dc76a9b752ed5acf3aa9f8b
+Merge: 40a3d1f 573a104
+Author: miaaaooow <mateva@airene>
+Date:   Mon Jun 4 12:44:17 2012 +0300
+
+    extended the abstract ClipboardPage class and updated its inheritants
+
+commit 573a104a9d0d97da200861de99a3c86f4a640c3c
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Sun Jun 3 15:28:15 2012 +0200
+
+    Removed .project files from source control
+
+commit 40a3d1f73aaf75c8c0627ccbb23425a4da8ea787
+Author: miaaaooow <mateva@airene>
+Date:   Fri Jun 1 21:00:34 2012 +0300
+
+    clipboard added to store intermidiately chosen templates, the UI for the first two pages was extended
+
+commit 79b32e862155ca4484670dd38e0c5188d2265db2
+Merge: 7a4dd40 459a0c6
+Author: miaaaooow <mateva@airene>
+Date:   Fri Jun 1 18:01:15 2012 +0300
+
+    the inital page's UI is completed, not the actions' functionallity, though
+
+commit 459a0c6f101707d85fbfb2f867eb6d22a4a0ff39
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Jun 1 16:21:06 2012 +0200
+
+    Changed examples url
+
+commit cfb4fc5ce5c8622307f3d8f5015de17e82fdd6fe
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Jun 1 16:20:56 2012 +0200
+
+    More general catch blocks
+
+commit 6d7d68edb862198acc0b651beba0dd4031b0a0fe
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Jun 1 14:59:24 2012 +0200
+
+    Updates to demo Foods project
+
+commit 4b42e5ff5f5a2ae263993932071bc381b6f802c4
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Jun 1 14:53:09 2012 +0200
+
+    lock fields are now ommitted from type signatures
+
+commit aa95d2c0d210d0f4eac63c57ceb71635f611083e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Jun 1 14:43:01 2012 +0200
+
+    Updated readme. Added note about new libraries view features.
+
+commit 0d6513ec28ff9df10b5b56f2044fc749ba5d252e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Jun 1 13:49:08 2012 +0200
+
+    Common issues section
+    In particular, information about paths
+
+commit f4b59dd2585c6f4cfbcdc68f92e6882ba50f5504
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Jun 1 11:39:24 2012 +0200
+
+    Some refactoring
+
+commit ee01cf5e30cc17ae1e56cda63fc129d59e95255f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Jun 1 11:38:58 2012 +0200
+
+    Made default path ".:present:alltenses:prelude"
+
+commit 6091ad30218d65d1e550150134e1b86d0b125daa
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Jun 1 11:38:12 2012 +0200
+
+    Changed text label
+
+commit 7a4dd409e4edbde6143ad83334cf18886295323b
+Author: miaaaooow <mateva@airene>
+Date:   Thu May 31 17:57:27 2012 +0300
+
+    added minimalistic log4j.properties
+
+commit 4301e9c1c6dceb1d673ed075687052aad6649a6d
+Author: miaaaooow <mateva@airene>
+Date:   Thu May 31 17:28:03 2012 +0300
+
+    Added all pages as per the initial design with correct names
+
+commit a0f848276d7a6c93a57f76d6e5fe3eeeac3cfeee
+Author: miaaaooow <mateva@airene>
+Date:   Thu May 31 16:08:31 2012 +0300
+
+    Added initial Wizard and Page for the GF Query Grammar from Semantic Repository Helper
+
+commit 9289bdf9017598f71c79eb4e215e614cd0bf1e22
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Apr 26 09:26:35 2012 +0200
+
+    Added note about build command
+
+commit e2c1711252d9d511bfad60836c84906cdedf5700
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 24 10:49:48 2012 +0200
+
+    blah
+
+commit bff883935267645e63c584e1683afe6887fad61b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 24 10:49:05 2012 +0200
+
+    Changed --gf-lib-path to --path
+
+commit bc0d6049579b63a725a846e3cb20cb239d12f6f2
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Apr 19 11:49:01 2012 +0200
+
+    Added braces in appendix table
+
+commit 39afa7418fbb95410537856c0a1821c095721d5b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Apr 19 11:43:31 2012 +0200
+
+    Updated for 1.5.0
+
+commit 9e5d104e641d0c11726d607a032edee89af76352
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Apr 19 11:42:49 2012 +0200
+
+    Cleanup
+
+commit e4c589b8d39d8d3b574cfee636ce8d895c4c591b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Apr 19 11:42:40 2012 +0200
+
+    Version 1.5.0
+
+commit d51c3e4b3b6b1fddbaa115436ba0af86ce560832
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Apr 19 09:51:57 2012 +0200
+
+    Removed a debug thing
+
+commit 154288972f265816a860edad923099d737341e0e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Apr 19 09:51:48 2012 +0200
+
+    Builder now managed by Nature. Xtext validation without Xtext nature.
+
+commit 5f6e66f76255735599d9d32909869e0f134b4fd6
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Apr 19 09:50:37 2012 +0200
+
+    Changes to demo projects
+
+commit fdedf9da642cb1ae2939afb62de101b743e351da
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Apr 18 16:43:26 2012 +0200
+
+    Hardcoded removal of .gfexternal, to handle merge with build folder
+
+commit 61d4ecb76ea228fb9bbdfb980a1e3d1b5216d179
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Apr 18 13:41:54 2012 +0200
+
+    Re-introduced Library Path preference
+
+commit 1b346b262918913913a4595b2608395be60d5f37
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 17:42:41 2012 +0200
+
+    Cleaned up the scoping logic, much less hacky now.
+
+commit 485defbb06ee817f040777293bc2e31c47f144c1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 17:41:50 2012 +0200
+
+    More demo changes
+
+commit a9eda58173bfd62b82135c15ca3b935e1dd3dfb5
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 17:22:17 2012 +0200
+
+    Stupid bug
+
+commit 533282639b6d64020c9d2cecbaa2773891f296ba
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 17:22:09 2012 +0200
+
+    Added case and regex options for search
+
+commit 761372f02fbd8af6a832998ddf06078a2cd84b07
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 15:39:10 2012 +0200
+
+    Improvements with external library viewer. Open file, search.
+
+commit 2fe265815b95204158055296f21a190ab8d1fc2c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 13:29:10 2012 +0200
+
+    Library view now uses file's scope. Preliminary search working.
+
+commit e65f3a5328f84fed78b0fefca5a8313a86e8c34d
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 13:28:47 2012 +0200
+
+    Changes with external files
+
+commit 5e42675cf4a57d41f4275ab844c0025719750289
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 10:40:54 2012 +0200
+
+    Changed external folder
+
+commit 280776e2e2c84116f0588eb535d97afbe0a4f64b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 10:39:33 2012 +0200
+
+    Typo
+
+commit 506dfe46a721dc3a026632f53c0302aebb0bd26e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 10:39:29 2012 +0200
+
+    External folder now same as build folder
+
+commit 9057592d46300842947b578cf4a05d3c1a7703dc
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 17 10:01:46 2012 +0200
+
+    Notes about metadata, some other amendments.
+
+commit 15eda76e39b47cd7ecd3386df13615f558090a91
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Apr 16 15:50:07 2012 +0200
+
+    Improved interface for new project wizard. Refactoring of italic font.
+
+commit edd637125f19919c6725efe7d2b7cbc73a29c5b9
+Merge: af33245 7c2a18e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Apr 16 15:16:12 2012 +0200
+
+    Merge branch 'master' of github.com:GrammaticalFramework/gf-eclipse-plugin
+
+commit af3324520c84a99ff469b4afa72fa086b5b35f02
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Apr 16 15:15:40 2012 +0200
+
+    Added "import folder" list on new project wizard
+
+commit 7c2a18e6c4b7e3798ea9621da2ddea9844aad201
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Wed Apr 11 15:00:13 2012 +0300
+
+    Another minor correction
+
+commit 14ca7dce12aeeba4f83f2e46ef5830d63a6de6b2
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Wed Apr 11 14:58:20 2012 +0300
+
+    A bunch of small corrections and clarifications.
+
+commit 71729a90f865a7f5a7103764cc1cb83848bf3243
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Apr 4 12:15:56 2012 +0200
+
+    Added some clarifications pointed out by Shafqat
+
+commit 8a42e0a9da392da01f3bfc9230fdc3005298535d
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Apr 4 10:37:42 2012 +0200
+
+    GF Perspective by default adds error log (not problem view)
+
+commit e470a2e68e47cf6b8f6b702c3bc8baeb3ab3c39e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Apr 4 09:49:49 2012 +0200
+
+    Minor updates to README
+
+commit 49db1b346569396e16fbe03221052d8a2facd263
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Apr 4 09:43:20 2012 +0200
+
+    Updated for 1.4.3. Changed "treebank" to "test"
+
+commit 86211f0a1ccb554b764aa6c74e704779f0380d26
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Apr 4 09:12:48 2012 +0200
+
+    Updated license info. GFEP is now explicitly GPL.
+
+commit 6a16184e6e1a98b94563106cf497db9dfdeed5a9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 3 16:40:59 2012 +0200
+
+    Small catch for a null
+
+commit a556fd78d70d314876c4e7d42971f8a12f3377eb
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 3 16:40:51 2012 +0200
+
+    Moved around demo projects
+
+commit 2d8d59a0a9eb4ca4a822003d45e972687baca520
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 3 15:36:09 2012 +0200
+
+    Release 1.4.3
+
+commit 6ec57c5b9e17ef2621ab39809dabb69d99faafa5
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 3 15:27:45 2012 +0200
+
+    Minor cleanup
+
+commit 123c2406bec2ef2cd89c9cbd353b09a40ea95881
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 3 15:08:48 2012 +0200
+
+    A whole bunch of renaming and refactoring to correct "treebank" terminology
+
+commit 1586742358e7e56696620f3dca762f5b8569547f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Apr 3 15:07:55 2012 +0200
+
+    Moved the EngSwe test files out of Hello
+
+commit 9a1fdceba4e416026757eaa085d4a787172e6c97
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Apr 2 16:55:47 2012 +0200
+
+    Added ProcessFactory but can't even get it to work...
+
+commit 08112ca5da326145739c327febb4d96f1273a87f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Apr 2 14:45:39 2012 +0200
+
+    Added TODO
+
+commit f381344eb6c5d410ac1ffa7aac9425f8d7056e43
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Apr 2 14:37:44 2012 +0200
+
+    Minor updates
+
+commit 7c3b1ba13b0a7b9488a676ac744f5de42652c32e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Apr 2 14:37:04 2012 +0200
+
+    Added support for arbitrary commands in launch
+
+commit e1fea8b205d686418bb1228fab9f38dea417c656
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Apr 2 10:33:31 2012 +0200
+
+    Made all the getters use `trim()`
+
+commit 2ad8469d166f664afa403809eaf2d0c8f1777575
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 28 16:43:30 2012 +0200
+
+    Added link for web IDE
+
+commit 0df65a212068e4552832fe732970b348082a14e9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 27 11:22:08 2012 +0200
+
+    Some typos
+
+commit 447c464127198f9d1c02d7c45cea3680304b6325
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 23 12:36:39 2012 +0100
+
+    Removed some unused imports and @Overrides
+
+commit 4a13d9068e7b0f4d6c5bd741790485ac6bc1985f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 23 12:10:33 2012 +0100
+
+    A whole bunch of javadoc'ing (phew)
+
+commit 89e8869f0404f98fcfb18e63c41186c12f15aaff
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 23 10:29:17 2012 +0100
+
+    Treebank manager now plays nicely with parsing too.
+
+commit ffe30c847d6585f0cf312ad5637cf2eb53a7cb9d
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 23 10:05:14 2012 +0100
+
+    Changed list to combo, more obvious
+
+commit 7d06d00e88b0963ed62da8a4b7897447618b1b32
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 22 16:37:32 2012 +0100
+
+    Added new Treebank wizard, with all that entails.
+
+commit 074dfe6afdb635ec523b0eae227e5f6a6d790ac1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 22 09:39:09 2012 +0100
+
+    Added note about treebank features to release history.
+
+commit 859f29ca63ff78155c2322f8c941372264b1d75d
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 22 09:38:53 2012 +0100
+
+    Removed TODO comment
+
+commit 86ebd372004e197d04e866e8fc1615ce77f515dd
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 22 09:33:49 2012 +0100
+
+    Action buttons now toggle. Added "hide successful" action.
+
+commit e9b91ab1dd41f2668dc87c064feffc78b53590f3
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 16:07:43 2012 +0100
+
+    Added toggle column actions
+
+commit 610588edf615db97e24f4e7f6c3356569e6566d1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 15:26:24 2012 +0100
+
+    Multiple columns in treebank viewer, other general treebank improvements
+
+commit 081030daf2752353fd72d230b97485aae89cbb89
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 15:25:48 2012 +0100
+
+    yawn
+
+commit 51f7339194974d6c4b90a5d523685125e96827fc
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 15:25:37 2012 +0100
+
+    Added mention of nature/builder toggle
+
+commit 74cfe25c4e2ddd2f87c062e42d2cd5f207fa86a1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 15:25:24 2012 +0100
+
+    Added new Java project
+
+commit a8bdf79bbc6b1aec447497a02c1e7f3dc1d8384e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 12:01:12 2012 +0100
+
+    Started parsing of output lines.
+
+commit e0fde8498b637a37e0e0fb487a2a084d8d3ab5c9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 10:44:09 2012 +0100
+
+    Bumped to 1.4.2 and updated readme.
+
+commit 586f89b7e71151d2bc78020ba1c1425aa12f4d39
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 10:38:44 2012 +0100
+
+    Added icon for CFG wizard
+
+commit 302425272f0101891eabc6a83ab86ba8e02987cb
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 10:35:10 2012 +0100
+
+    Finished CFG wizard
+
+commit f12c45a64a116f6c28effaffe3920f697daa8258
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 09:53:43 2012 +0100
+
+    Cleaned up te regex validations (a bit)
+
+commit ec895db4ac7d8d1b61b82f59696a022170dd6a8f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 09:38:42 2012 +0100
+
+    Added CFG wizard. A bunch of refactoring in wizards.
+
+commit 5c7820e4c73b67b53345e3f6b182b83ada85a6f1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 09:37:34 2012 +0100
+
+    Added check for treebank file in LCD. Removed old GS file option code.
+
+commit 70b056c2470ceedbacbd0746a22b9fd5eb9c4ebb
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 21 08:24:03 2012 +0100
+
+    Creating single listener to be shared
+
+commit 05ca334aaa471f0f79762d3bca5e266271aec18b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 20 16:56:49 2012 +0100
+
+    Removed unused imports
+
+commit 51b4c26e0b6c35e76b33e7743ad78bb666e2a61f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 20 16:44:44 2012 +0100
+
+    TreebankResultItem now handles a single line, not a group
+
+commit 0b9a707b0029cf1a0a8ca4b1f3b2542c43569384
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 20 16:02:29 2012 +0100
+
+    Some refactoring in the treebank hierarchy
+
+commit fa514c36cf9e599590faaaa0500747a1e2b81d51
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 20 12:55:37 2012 +0100
+
+    Processing of treebank results is now completely OO
+
+commit 34345cd11d96a4b63b77f7aca21f3968c6aface8
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 20 10:12:04 2012 +0100
+
+    Making of gold standard is now only explicit via makeGoldStandardAction.
+
+commit cd074f4713a05caf1e8fe3c56a50970eb42ee44a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 20 10:03:02 2012 +0100
+
+    Cannot run launch unless it is valid.
+
+commit 545d8c1bbc38211cf473d138b5809b26b5982b90
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 17:07:20 2012 +0100
+
+    Working on the treebank processing system
+
+commit 10d7aae27adb8a6f1f71d0c09f3dad8afcbd942a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 17:07:00 2012 +0100
+
+    Added bit about toggling nature/builder
+
+commit ae2c986bc5148a76e1810568b8075100e60a3f57
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 16:04:01 2012 +0100
+
+    Toggle nature now also toggles the builder.
+
+commit 84554cbbaa1f36959eff818dee0667e90c0b3250
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 14:55:27 2012 +0100
+
+    Added icons in appendix
+
+commit b1097d1a9da7faaf1267ef16b637dbcdb3615baa
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 13:47:11 2012 +0100
+
+    Fixed URLs
+
+commit b096ac83e1cb396bdf01a142b3a28c0b1cc0e219
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 13:39:35 2012 +0100
+
+    Added video note
+
+commit 3b0fcd0611bd1b3a991674333a8f73e14af48faf
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 13:27:41 2012 +0100
+
+    Added video.
+
+commit 9118293578614a60f195f1f97b5a30eb6defd7b2
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 13:18:01 2012 +0100
+
+    Changed readme extension to .md
+
+commit bed6737724e6a04413e50b029174a91787bda1ed
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 12:51:05 2012 +0100
+
+    Removed unused imports.
+
+commit f03100f99f5161c4414e7b6f97f1cd3a86c8be6c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 10:20:02 2012 +0100
+
+    Clean now also removes external links
+
+commit 8e54a8b3f374f3b8709ae8fd9040ce3ca6b49f53
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 19 09:13:05 2012 +0100
+
+    Added support for "langauge" flag
+
+commit f796860f6aefdc1eaab5c72b8078917a8781f145
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 14 16:28:30 2012 +0100
+
+    Bumped version number to 1.4.1
+
+commit a18ead07aa426c1e9dc3b3016a3fb291ea483f6c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Mar 14 16:28:18 2012 +0100
+
+    Created new package for treebank processing, and refactored accordingly
+
+commit 51d1913a8d2bdac3101055e6fe3156251ef9bf68
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 14:38:03 2012 +0100
+
+    Treebank mgr now displays folders, ignoring BUILD and EXTERNAL
+
+commit 7bd865de6bd82157477e8d4a6b91b870fdf9b81b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 14:31:10 2012 +0100
+
+    Javadoc
+
+commit 79c5572b08c8c27327d931213e1b1eb5c62776fa
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 14:29:31 2012 +0100
+
+    Setting default values for safety.
+
+commit 7de3b463d019d0adf2c6d5c7efd1e2d490562dcd
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 14:29:08 2012 +0100
+
+    Improved the way exceptions are handled in parsing of tags
+
+commit fa8a2ef152ad023f9943aa83e1ca232600a9257d
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 14:12:14 2012 +0100
+
+    Library view now respects new EXTERNAL_FOLDERs
+
+commit 812feb42a4ddb1acacede9e1cabcfcdde3ac040f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 14:11:41 2012 +0100
+
+    Reintroduced space in project name
+
+commit b1b3db94b95e1e4264e99b0fe6767d8933f80c3a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 14:03:27 2012 +0100
+
+    Revmoed unnecessary annotation
+
+commit 9a0870481ca4d85af974fae7e4a5345cb8fd8dba
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 14:02:04 2012 +0100
+
+    Removed old library table view
+
+commit 869563143a2a60df2c7831542a41ed04f111a994
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 14:01:50 2012 +0100
+
+    Updated external links
+
+commit a279700c0c5c0ac2fa7c817c4ab91ee9cd463fe8
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 13:59:35 2012 +0100
+
+    Included option for using global EXTERNAL_FOLDER
+
+commit 004af81017b3ba0241aa4b8af98b43ba5172cd33
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 13:45:45 2012 +0100
+
+    Removed unused imports
+
+commit 37ef63864d244d564f6cbffd130b857e6d06b0cb
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 13:15:36 2012 +0100
+
+    Changes to project file
+
+commit 838a216da732cb8d34817c655986098fc17d926c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 13:14:56 2012 +0100
+
+    Only one debug message for all non-found eObjects
+
+commit d53b3b0fa8e580768b53ef6cdf6ea0d2a22bd87a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 13:14:30 2012 +0100
+
+    Removed reference to GFBuilder.BUILD_FOLDER
+
+commit be6f8529a2181367c4e7cdc69a7f7319c88758a4
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 13:00:42 2012 +0100
+
+    Added some javadoc
+
+commit 31758d9da49e9afb2f3440599599b6c1bcd27c75
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 13:00:17 2012 +0100
+
+    Full exception is now logged, not just msg
+
+commit dba440faf22a10f974b9d98929103c4a3d2779af
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 12:59:49 2012 +0100
+
+    Improved condition checking in shouldBuild()
+
+commit f72bb431c3a7886f6c601ea4eb8b12bfb9f7e3b1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 12:59:28 2012 +0100
+
+    Typo in javadoc
+
+commit f86873554687c58bd26e899f4186a86d82264be0
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 12:59:10 2012 +0100
+
+    Fixed bug in toString()
+
+commit c0c07e242f1f1a118b852c048598304d208b5a1f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 12:58:58 2012 +0100
+
+    Added toString()
+
+commit b89138f6d84026be571fba2814720864d77a2c5b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 12:58:41 2012 +0100
+
+    Removed space from project name, just for testing
+
+commit a9a91046edda36496f21341cbc722b1cb107951a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 11:37:18 2012 +0100
+
+    More general exception handling
+
+commit 56d5cc02247b4e4b8a99c750d09453dd90c24d2b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 13 11:37:02 2012 +0100
+
+    Some refactoring in scoping system
+
+commit e077483fd07d09ae36e85c45ccc44f0483b01711
+Merge: 615af12 3a24ac1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 17:04:03 2012 +0100
+
+    Merge branch 'master' of github.com:GrammaticalFramework/gf-eclipse-plugin
+
+commit 615af1218c7ede77f0b51152c7451bd600ff0182
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 17:03:24 2012 +0100
+
+    More efficient way of finding a tag file's project
+
+commit 2da2ebda2110337e05939639549f2b0f47105e88
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 17:02:46 2012 +0100
+
+    Added separate Foods project for testing
+
+commit fa69a00a160f1229f2b7a99e22ef4a9f45df430f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 15:54:58 2012 +0100
+
+    Removed some more old code
+
+commit 0932595d9a293250b5b2a79fcca84316178873bf
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 15:53:54 2012 +0100
+
+    Updated to match changes in GFLibraryHelper#getTagsFile
+
+commit 9e8bc7b807601aada05a5c8d1cc8a383f137a566
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 15:53:21 2012 +0100
+
+    removed a bunch of unused methods
+
+commit 912ae4e98d31a2022040a8ddf1bd5268929a035c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 15:53:07 2012 +0100
+
+    New method for getting tagsfile as URI (corrects slash bug)
+
+commit 9328aef5922bbbb995b1c71d2ae09811823a825c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 15:09:59 2012 +0100
+
+    Removed "Alphabetical Sort" button from outline view
+
+commit 38ba2410ae6f82a3f0d253fe490fc8bf1c84063e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 15:09:36 2012 +0100
+
+    Typo in javadoc
+
+commit ebd9bb071e15e44447effa5c467f4716e6718d73
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 14:55:04 2012 +0100
+
+    Expand all now expands all outline trees (not ideal but an improvement)
+
+commit 6be4e89f4d15de9dbe50fb2cb26b4801d6a13528
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 12 14:54:37 2012 +0100
+
+    Changed the projects to have one with subfolders
+
+commit 3a24ac191584b918af6f9d38192a29129af67c03
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Thu Mar 8 11:46:57 2012 +0100
+
+    Added note about clean project
+
+commit e7f2e0839c01ec964df0342367521cd90f43b5b5
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Thu Mar 8 11:41:50 2012 +0100
+
+    Added section about Eclipse workspace and projects
+
+commit 9972a3caa411ec7e00535d34fa0330acc91849de
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Thu Mar 8 11:06:19 2012 +0100
+
+    Included info about GF binary path
+
+commit 35416437f4a7228b2b68f8a8dbdaf5e36e57dd04
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 14:27:50 2012 +0100
+
+    Minor changes
+
+commit 5c0ee39e6c05eaaefa5298a0837d75318fccfaad
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 11:47:31 2012 +0100
+
+    Added treebank files for Hello project
+
+commit 68b47ecb7806b4fe810457107e55da068a4ff6f2
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 11:47:08 2012 +0100
+
+    Treebank mgr now clears when switching projects
+
+commit e0a4852c4bf390ad926da8bb3f430988369f333b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 11:29:15 2012 +0100
+
+    Fixed has children issue
+
+commit ae499e1759b423af16fe9aeff64624952b8670b2
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 11:25:20 2012 +0100
+
+    Catch a NPE
+
+commit 821e6ae00792f75538cd469e12652c27471b9d32
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 11:22:35 2012 +0100
+
+    Added entry for treebank output file
+
+commit 5e6c8c5dc4195b01b0ab7bc26a369e2c6ff933ec
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 11:13:38 2012 +0100
+
+    Added treebank filenames convention
+
+commit 40db6715cb1a972913365577473cf40810fc01ec
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 11:13:06 2012 +0100
+
+    Catch some nulls
+
+commit 0765bca44d3bb33a10c62a180e3c49adf189dbb3
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 11:12:53 2012 +0100
+
+    Correction when making GS
+
+commit ad6082e7e5cf50fdf0fbce6b0deef979bc7d38ab
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 11:07:58 2012 +0100
+
+    Creation of GS now generally works
+
+commit 0269446175efe51c6599c7b0305cc92020f4d663
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 10:56:34 2012 +0100
+
+    Added hidden opt formaking GS file
+
+commit 42015b3ca58d6cd1f99b6aca993572916b540981
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 10:56:18 2012 +0100
+
+    Added moved treebank helper
+
+commit ceb4dfbad190b3fb8c32c2167e8f4c7414eeabf4
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 10:17:46 2012 +0100
+
+    Refactored GFTreebankHelper, moved to runtime plugin
+
+commit a002ff74038e401c69d543681fe570340cae4880
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 10:02:42 2012 +0100
+
+    Javadoc
+
+commit fc875c615afc3d7b75b5832aab51154dba7e7310
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 10:02:16 2012 +0100
+
+    If no GS, don't fail but create the GS
+
+commit 84d39d1bc339f98452365cf19b5fdf30016de57c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 10:01:46 2012 +0100
+
+    Make GS action just launches shortcut without check
+
+commit 8da837e9443e410e7483c7ca3af93551eada614d
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 10:01:27 2012 +0100
+
+    .gold is now appended, ie nouns.trees.gold
+
+commit 30b65d694069a3e429c97bc184230bd1c41b4e6e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 10:01:02 2012 +0100
+
+    Updated versions to 1.4.0
+
+commit c3e950f6f40b5541e121ad92998c9fa37938f292
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 09:09:20 2012 +0100
+
+    remvoed override notation
+
+commit cee96c480f044d8e5b935d73e3a3d9934acfb59e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 09:06:26 2012 +0100
+
+    Removed unused import
+
+commit c1582e5db0d019d208751b413510a7ab44134475
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 09:03:14 2012 +0100
+
+    Removed unused imports
+
+commit 0835afda150586a755ebd985546e2a250effe4f2
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Mar 6 09:03:05 2012 +0100
+
+    Added stuff to shut up warning
+
+commit 509ba23412f56fe727c0c1d0ae90fa84cb5bfbb5
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 16:15:29 2012 +0100
+
+    Updates to readme
+
+commit 2113de527f8884b940011fbd6d8a1612def44311
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 16:14:45 2012 +0100
+
+    Listener setup, but only works when running treebank from view?
+
+commit 4be2e77a6fc117ca4569c027bbf5453c3445a958
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 15:42:07 2012 +0100
+
+    Redrawing of status labels in treebank mgr. Output table table has lines.
+
+commit 14065301205285417ab0792f09abb8a5456ecb65
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 14:43:25 2012 +0100
+
+    Changed layout of treebank mgr. Status bar redraws properly.
+
+commit ccc031a3b1d824edbc42f032c9d05e2186d74085
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 13:58:51 2012 +0100
+
+    Read files even if they are out of sync with workspace
+
+commit f42956108d304165e9f68d0b55b62b4da43afe4a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 13:58:33 2012 +0100
+
+    Unused class & unnice programming approach
+
+commit 75334d9f75380278d8d6f511179d3f33d88dd579
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 13:58:01 2012 +0100
+
+    Project now refreshed after treebank is run
+
+commit 7917ded43af0976c431466a48e779bb9df946ba8
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 13:57:44 2012 +0100
+
+    Cleaned treebank, gs files
+
+commit 16488d9d3296eb82bc913984c7586e17fa028caa
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 12:51:03 2012 +0100
+
+    More work on walkthrough
+
+commit 3f132d953ddf983472664523644018f715321477
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 12:45:05 2012 +0100
+
+    Fixes, improvements to Clone wizard
+
+commit 8b61f99f961e7b755b18830070dbacd776956864
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 11:38:51 2012 +0100
+
+    Updating walkthrough section
+
+commit 98e614862ac73c9c873452e56f10c351a94a4996
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 11:14:24 2012 +0100
+
+    Catch NullPointerException
+
+commit a603190a93056aabe59d994b4e2a7f936fd001e8
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 10:56:28 2012 +0100
+
+    Removed "GF" from view names. Commented out RGL browser view,
+
+commit 536d232a06686e369469a29347c6963bf6c67c84
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 10:41:22 2012 +0100
+
+    Removed unused imports
+
+commit d64a5087856ad18fbd3c34fed62afa526dd51b5b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 10:37:45 2012 +0100
+
+    Launch shortcut for GF files now tries to find matching launch
+
+commit 788d07f0ebb29daad0feb0074c92f3480894550b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 10:12:21 2012 +0100
+
+    Bumped version to 1.4.0
+
+commit d33793e2288d13aeed351d81e5d20119b39e0559
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Mar 5 10:12:13 2012 +0100
+
+    Updated readme for 1.4.0.
+
+commit cdc7c1d330eaf9d97af977e9bebce33f8664172e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 2 12:52:28 2012 +0100
+
+    Rudimentary gold standard comparison and output in view
+
+commit 3fd371107dcd18aa65eef695910d05f9b55ae955
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 2 11:32:07 2012 +0100
+
+    Implementing compare method (first as an action, listener will come later)
+
+commit 140254ffa63beaae74161d986a00a1965e94fc63
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 2 11:29:26 2012 +0100
+
+    Forgot @Override annotation
+
+commit 6d57f9a0b731cce93f9b01999aebbfc82b5b3f68
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 2 10:25:46 2012 +0100
+
+    Contextual menu options, cleaned up UI
+
+commit 64f8570463e769de9d92b740cccf7526986603cb
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 2 10:25:29 2012 +0100
+
+    Added isGoldStandard() method
+
+commit 996232713724fcd588f62cdd70d329132da44337
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 2 10:25:08 2012 +0100
+
+    No need for an individual class for this
+
+commit 198bcda844d17140fd96aafb0359e537186b1cbb
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Mar 2 10:24:51 2012 +0100
+
+    Renamed this thing which isn't actaully used...
+
+commit e1ebc322f9f7bb3eeee041cf6d6aab93575354cb
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 1 16:47:43 2012 +0100
+
+    Launch shortcuts (almost) complete
+
+commit c7112d10712f7e396393480d9bbcd9810c7734bf
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 1 13:06:33 2012 +0100
+
+    Building up treebank launch shortcut
+
+commit 7d8aaa96a019c1c41867fb1d4945fafef2767baf
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 1 11:57:06 2012 +0100
+
+    Check viewer selection when action is run
+
+commit b743dec90142142009a950f0f302b1e2481e9698
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 1 11:56:33 2012 +0100
+
+    Minor refactoring
+
+commit a8e6c1c5e8dc2ffc877cca78c23b83030ef819b1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 1 11:56:16 2012 +0100
+
+    Added new Treebank launch shorcut
+
+commit 84bebb211a556839746caf9fd4c4415e606872cf
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 1 11:25:51 2012 +0100
+
+    Custom icons & editors for treebank, gold standard files
+
+commit d218466e2222c009944762ae973fa6005980328f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 1 10:33:37 2012 +0100
+
+    Commented out some useless code re: the streams
+
+commit 57e1c7e218b047660c1df86763c547a180ed29c8
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 1 10:32:52 2012 +0100
+
+    Open treebank mgr by default in GF perspective
+
+commit 8956666ddef58111b580e9990a5a141585bb6d34
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 1 10:32:15 2012 +0100
+
+    Launch shortcut now works
+
+commit 05e981329fb0ce82bc350cce7ab489497bb9dcce
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Mar 1 10:31:33 2012 +0100
+
+    Gold file actually makes sense now
+
+commit 4425408addcfa975056e93d547f1ce31077e68ee
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 29 17:07:35 2012 +0100
+
+    Working on running of treebank action
+
+commit cdde78f3513a4a1f645fde7642a064588f984789
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 29 14:50:56 2012 +0100
+
+    Options and defaults for treebank stuff in launch config tab
+
+commit c1524a12036b69b3f6e4a8451221f256a07f0416
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 29 14:49:29 2012 +0100
+
+    Only look for files in open GF projects
+
+commit d7233aaa7fb2ca6adb2501984bb199a32618b325
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 29 14:11:14 2012 +0100
+
+    Cleanup
+
+commit 85769c50331f73a9353b5afdd53e907fa2b86156
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Feb 28 16:22:56 2012 +0100
+
+    Work on launch config tab to handle treebanks.
+
+commit 12938c7f2657f6639bc49221fd4324fb363ec0ca
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Feb 28 13:45:03 2012 +0100
+
+    Clone wizard only applies to .gf files
+
+commit 49bf88654d7059accdb757c92885adb433ff954b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Feb 28 11:49:48 2012 +0100
+
+    Some cleanup and refactoring for treebank mgr
+
+commit 93566bde42cf897aa47ea95cb7f8428065ae7328
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Feb 28 10:49:24 2012 +0100
+
+    Treebank view now shows project as root node
+
+commit 75d04e393b0f870db982f5a05cd54dda03b0d77f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Feb 27 16:35:59 2012 +0100
+
+    Treebank file viewer now uses WorkbenchContent viewer
+
+commit bb689f9c341e2b3a1e76afb2006b23c9cc781e92
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Feb 27 10:18:52 2012 +0100
+
+    Updated readme
+
+commit 90d599d592b2693d57f8e23025be080e005c2371
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 24 17:18:04 2012 +0100
+
+    Refining layout of treebank mgr. Need to work on action logic.
+
+commit 502368209d116dbf9e0ce7b9a9838b4ce37e1b48
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 24 12:32:01 2012 +0100
+
+    Removed some of the extra testing stuff
+
+commit d826a3ed156a72cadd1f800511965a5fa41fd91f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 24 12:31:36 2012 +0100
+
+    Extracted abstract classes for custom views. Advances with treebank mgr.
+
+commit 9a89f8786a39723dec4958925fe452f8641f2e9f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 24 10:14:58 2012 +0100
+
+    Injection of GFimages now working in treebank manager
+
+commit 0cef0e49ba6cd2c925c5530ea48fa4185dae007c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 24 10:04:08 2012 +0100
+
+    Sorting out the layout of treebank manger
+
+commit 849f4bdd7d7ac17c54f664af60486251806ab01b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 23 17:16:59 2012 +0100
+
+    Working on treebank manager view.
+
+commit 71395daeb50bef386b7b24bb48b53ada2f6d7c57
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 23 16:01:12 2012 +0100
+
+    Added new treebank view, changed library browser icons
+
+commit e3211058bea9134421ba726fb89a4304b48391b9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 23 15:30:57 2012 +0100
+
+    Added button to expand the Outline view
+
+commit a90698f4b4b06f35dc14ed9e6119315c1c64eab9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 22 12:36:14 2012 +0100
+
+    Removed unused imports
+
+commit 14b993a8337fd60a304b25d657a37521ebb44cdd
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 22 12:09:11 2012 +0100
+
+    Resolution/Linking of qualified names now works. Projections properly handled.
+
+commit 33965f8f498a89b1ee33b22115fecede0abd36d2
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Feb 21 16:40:23 2012 +0100
+
+    Working on condition which determines between qualification/projection
+
+commit 4ec9f7a790bf056ec9f3a2eb8503c28b29c34bed
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Feb 21 15:36:44 2012 +0100
+
+    Cleaning of dummy resource/eobjects
+
+commit 187f060a323f8268a8ed7aae112a573e06019b5b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Feb 21 14:41:19 2012 +0100
+
+    Projection labels are now handled by dummy eobject in linker.
+
+commit 3334a9cbb9ae11ae3d72470536173e5d958787a0
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Feb 20 16:55:10 2012 +0100
+
+    Working on resolution of qualified names.
+
+commit 3a2b139615ef21b7ce54c162e8d39c27f08cd789
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Feb 20 12:37:21 2012 +0100
+
+    Removed some old code.
+
+commit 535881774c61750f4e81f5c66a0b16307a4668a2
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Feb 20 12:34:48 2012 +0100
+
+    Documentation provider now finds comments for overloaded opers too.
+
+commit c768b4c7cc57f9ddf895cb16c1e3a12228a6bf9b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Feb 20 12:15:42 2012 +0100
+
+    Support for multi-line comments
+
+commit da657ab499a9b3d6327bb967c5fb16466a55fae1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 17 16:31:54 2012 +0100
+
+    Looking for inline comments more or less done. Consider block comments!
+
+commit 1744ba8af0236d47ab7ff3f3b403dfbf95f10fda
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 17 12:14:20 2012 +0100
+
+    Cleaned up documentation formatting. Still must fine-tine findComment()
+
+commit 9e76921304eaa9284d11de2039a837d10577f6f3
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 16 13:59:56 2012 +0100
+
+    Just changes in comments
+
+commit 808b6d90aab4b9c68abc33a4e427921da750f88c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 15 16:59:54 2012 +0100
+
+    Standard documentaion complete, need to work on parsing source comments.
+
+commit 3f16b5d54a61ad1afcc79c6b06bcf8af9c1b00b1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 15 15:17:59 2012 +0100
+
+    Added check for flag name
+
+commit d155744918568699a3d53ee66269aa1a7c3d7f81
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 15 13:11:28 2012 +0100
+
+    More updates to documentation
+
+commit 4289dadc08d87a44faa7a6d47f51ab2b47c29d15
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 15 12:11:31 2012 +0100
+
+    Progress on labelling and documentation providers.
+
+commit 8fa2d3314543ee078c65e423e35223fdcf24d17c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 15 10:25:34 2012 +0100
+
+    Extracted some static methods into GFScopingHelper
+
+commit ee27ea6204fee7255b4ab2fdfe830bb2141da89a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 10 16:10:28 2012 +0100
+
+    nothing major
+
+commit 1c64f7525b12a6a837d5d6d6d5d7e4ea2e3cbbab
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 10 15:38:57 2012 +0100
+
+    Correctly using NodeUtils instead of Serializer
+
+commit ccd135a27231b869899c8984cf1edd0add31716e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 10 12:29:17 2012 +0100
+
+    Started work on contextual popup documentaion
+
+commit cc220f542effaa56820da0ac89dd641e4cd0177c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 10 11:28:21 2012 +0100
+
+    Much improved Outline view
+
+commit 9942e2fa0372d99dfd6c8a2ab76c33a5043a3bce
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 9 16:45:52 2012 +0100
+
+    Some more icon updates
+
+commit e645c9af5ad452d66a09e7eca8f7821210ea0012
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 8 17:44:56 2012 +0100
+
+    Bug fix
+
+commit e9b2b5102dced7cbc0a2ed73908e0aefca1d043b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 8 14:27:07 2012 +0100
+
+    Updated more icons
+
+commit 4492f94a2addc6759e68fdbf77a4b4b8f306064c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Feb 7 17:05:59 2012 +0100
+
+    Updated and added some more UI icons
+
+commit 523a53bdf11a8ff68856eabc92ed61dee8cb22e7
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Feb 7 14:19:55 2012 +0100
+
+    Updated readme. Added some new/replaced icons.
+
+commit 5e4e39169249ca8c5474d217dd92a07bb47c293a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Feb 7 11:11:06 2012 +0100
+
+    Fixed grammar and scoping issues. Release 1.3.0
+
+commit b9dd77178f24dbd31d3bd17c8cc5ce856d6d23df
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Feb 6 16:21:44 2012 +0100
+
+    Fixed errors when opening file with cross-refs. Fixed overload syntax.
+
+commit 6352cf2b9cb7ed2752cb58208615fb03620171cc
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Feb 6 13:50:20 2012 +0100
+
+    Before re-generating xtext artifacts
+
+commit 8553792b6c6640712169cf73a277f6fd653ddb8e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Feb 6 13:21:49 2012 +0100
+
+    Rewritten grammar, testing knock-on effects
+
+commit 77901cc3b7b68959275271111f78e278a7be4616
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 3 17:23:42 2012 +0100
+
+    First compilable rewrite of grammar. Still need to validate, then reflect changes in model
+
+commit ba25a62f8fc8796dc5b66d4ec2e41f1b28e789d1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 3 14:27:47 2012 +0100
+
+    First successful compile, need to validate and clean up
+
+commit 452cc76464c843b78be902eaf63c8fd3d7a6d1c5
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 3 14:13:07 2012 +0100
+
+    Almost done with refactoring grammar for Exp
+
+commit 1ff1a18bd5a9fe8ee7fb9a44c2ed7165703c82eb
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 3 13:13:10 2012 +0100
+
+    Think i have sorted the Patt issues, onto Exp
+
+commit e0d0e42be243b82a3f01f80cf8bfa57949bb6146
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Feb 3 10:34:52 2012 +0100
+
+    First complete iteration of rewritten grammar (doesn't compile)
+
+commit 6f0048a21e4e452b3d74284279c50fe2cb0ec4d6
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 2 17:11:04 2012 +0100
+
+    Updating GF grammar to match Parser.y - still not functional.
+
+commit e67480bfa115f7a8318c96aced55ee527cef60af
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 2 17:09:55 2012 +0100
+
+    Updated unit test
+
+commit 98dd011db11078728e636b2180691ad98dba6d65
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 2 13:46:02 2012 +0100
+
+    Added GF-doc as a hidden rule
+
+commit b9f8029784ab408f9612d5da18b5b1e8f06ba73a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 2 09:54:21 2012 +0100
+
+    Fixed bug when running a launch without flags
+
+commit 4dfbeac0cf8d2f0d12b2bf3579fceb5085f0fbf2
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 2 09:33:46 2012 +0100
+
+    Updated readme
+
+commit 31dc6e0a911ac6f81a735717e12e036fdee57660
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Feb 2 09:23:30 2012 +0100
+
+    Removed library path pref. GF runtime now more intelligently found. Launches no longer logged.
+
+commit 024bb36521ccf87c36c74dc287c2facc216ee985
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 1 16:26:29 2012 +0100
+
+    Fixed overload support. Wrote RGL unit tests, not complete. Some syntax features appear not to work, in particular around pattern-matching constructs.
+
+commit 66f29d35da92f77910362f5a6c83915120e48451
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 1 13:20:11 2012 +0100
+
+    Moved folder for model files
+
+commit 1336d2fbfc81b92fcb9d1d228a5aac7c3df69e0b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 1 13:16:46 2012 +0100
+
+    Renamed folder for model files
+
+commit fbf8b9660299beb3e34659779256f4985b2a49cd
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 1 13:06:20 2012 +0100
+
+    Started adding unit tests. Formatter now enforces 2-space indentation
+
+commit ff5f55df76a921ce198ae2d89bdfea96de532b6e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Feb 1 10:18:07 2012 +0100
+
+    Removed unused scrape.sh
+
+commit a16961da41355124e4c5d1d28ca7bb05147f87be
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jan 31 15:08:01 2012 +0100
+
+    Fully fixed scoping caching
+
+commit 2d17ca8c7bb9b51e6fb15f7b77bb140964bce040
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jan 31 11:16:30 2012 +0100
+
+    All scoping is now cached, but where/how to invalidate local scope cache?
+
+commit 366f04c6b173cf8be01038de439b386de41e71f9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jan 30 16:10:23 2012 +0100
+
+    Clone wizard now working. Updated JavaDoc header in all files.
+
+commit ff4d6485b0cbee2a72c090a9e845a17a6e6698c3
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Jan 26 17:02:23 2012 +0100
+
+    Working on clone module wizard
+
+commit 17b709d1fe83c560a014649e4d5f53050dfc2c00
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Jan 26 14:35:16 2012 +0100
+
+    Before adding popupmenu extension
+
+commit 128272e658d560b9c73d984aef325173602d1f93
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Jan 26 13:54:19 2012 +0100
+
+    Gotten as far as I can with the formatting, for now
+
+commit dba27f943b1589b1aabe59f10747cd1d73582b8f
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Jan 26 09:48:36 2012 +0100
+
+    Added built-in category 'Ints'
+
+commit 882ed811583e0d2ae9e0b43175991f37465ce8b0
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 25 15:34:55 2012 +0100
+
+    Refactored LibraryTreeView. Working on formatter again.
+
+commit 7905806e3d570be132a6b5a6ac52c2d1d85e34af
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 25 11:23:12 2012 +0100
+
+    Builder now tries to build inferred dependents
+
+commit a45fd507e52a6a43f1fed79bb478c092b7918251
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jan 24 16:49:11 2012 +0100
+
+    First implementation but but need to check closely
+
+commit 7fb1a86ecb5ae19a30fbee5b4276b49ff2f24b4e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jan 24 15:32:38 2012 +0100
+
+    Scoping cache now relies on IResource session properties
+
+commit 1f1a3d867ada4dcd47569c0b5925eb04faa912cf
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jan 24 14:33:15 2012 +0100
+
+    Removed unused scopers. Optimising builder.
+
+commit 10df1a5584a687808b9824de155706f72ac7c35b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jan 24 13:54:24 2012 +0100
+
+    Working on optimising building. Before removing old scopers.
+
+commit 958f85628ea0df2ba525b883bc69d366db9eb545
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jan 23 16:38:49 2012 +0100
+
+    Small bug fixes. Started to look at optimizing builder.
+
+commit 100f69c01e5cd995a5a91190f8831395e0660824
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jan 23 12:26:24 2012 +0100
+
+    Bumped to version 1.2.4
+
+commit 166204755fb8076f796e7b9731cec9c9a0346243
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jan 23 12:21:59 2012 +0100
+
+    We now write to Eclipse platform log. gfep.log is no longer used.
+
+commit 512a93bf647e57207b168e875a727bae386652be
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jan 23 10:02:58 2012 +0100
+
+    Updated license agreement (Finally it it properly)
+
+commit 075e33d5e3444f21a58b61f54ff9f375858365bc
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Jan 23 09:52:58 2012 +0100
+
+    Updated installation instructions
+
+commit 2173f6b2b8ce0ca06cb230cbe675f91f2fd33382
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Jan 20 16:34:34 2012 +0100
+
+    Updated readme, trying to relax deps for installing on Eclipse 3.6.2
+
+commit 8e91175a3edcc67b8ae01dc503b2b9070933b886
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Jan 19 16:37:54 2012 +0100
+
+    Improved New Module wizard
+
+commit 552a0809fd89397faca310d084bfe681416e194a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Jan 19 13:36:28 2012 +0100
+
+    No longer turn on the auto-builder when creating a pnew project
+
+commit 6901cbd556a196ab0f18de461a30021c34e51e37
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 18 17:02:37 2012 +0100
+
+    Updated new GF Module wizard page
+
+commit 51a99551ae751cc9a0710324e434e9d2682ba62c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 18 17:01:52 2012 +0100
+
+    Updated readme
+
+commit a1524ae8a5c277110e77a9c60dc4c1a1fa6b2508
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 18 17:01:38 2012 +0100
+
+    Remvoed class files
+
+commit de5bee058674f27d13537cededba3fc5456fd35b
+Merge: 29c24c1 b02da23
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 18 14:43:31 2012 +0100
+
+    Merge branch 'master' of github.com:GrammaticalFramework/gf-eclipse-plugin
+
+commit 29c24c10101bbc280458380a291e921c68b6cbdf
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 18 14:42:59 2012 +0100
+
+    Updated readme
+
+commit b02da234d9e11f222769bb8d6434f132a50ef5fb
+Author: John J. Camilleri <john@johnjcamilleri.com>
+Date:   Fri Jan 13 15:34:56 2012 +0100
+
+    Catch NullPointerException when file has no extension
+
+commit fb94dbf03431ac9a76ab2586d771425ee373f81e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 11 13:52:51 2012 +0100
+
+    re-exported 1.2.3 release
+
+commit 8c883cd44f22b8edee3e75e003d258e1178d3bcf
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 11 13:41:28 2012 +0100
+
+    Fixed some minors and exported release 1.2.3
+
+commit 2009a90cf493f355888f75309fd5cea0b1156813
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 11 13:35:34 2012 +0100
+
+    Library viewer now links to external files. External links now in .gfexternal. Bumped to 1.2.3
+
+commit 86781f777b7d522991475d0b5f9c33267ed1a0b6
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 11 10:17:36 2012 +0100
+
+    Updated license. Added Xtext updatesite URL.
+
+commit e9bce372defe867b8c00f7e6b861058f17b42d9b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 11 10:12:28 2012 +0100
+
+    Just cleaning up
+
+commit 3629e876da1a86caa6988f3772dc9a980a457ce9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 11 10:04:30 2012 +0100
+
+    Added view classes (beta)
+
+commit cd1d3539ed71150880f49e26c62ca39025d17e42
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Jan 11 09:01:04 2012 +0100
+
+    Updated readme
+
+commit 93abba6c685fc38680bf981999cecec137521b4b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jan 10 17:19:11 2012 +0100
+
+    Clean before messing with dependencies again
+
+commit a7631d3d61241803c5ef2cb3541f01fa20f4ada0
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jan 10 17:18:11 2012 +0100
+
+    Clean before messing with dependencies again
+
+commit 8ff3377cc878292458340dec13dfe0e3104fe679
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jan 10 13:55:56 2012 +0100
+
+    Updated formatting again
+
+commit ccca9fd96db1e0958ce3bb8d1cf8bed24d897327
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Jan 10 13:54:54 2012 +0100
+
+    Updated formatting to use 2 spaces
+
+commit 76b360813578085f526296f255fbac33bdc23bd0
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Dec 5 13:35:40 2011 +0100
+
+    Should be properly switched to Xtext 2.1.0. GFEP Release 1.2.2
+
+commit 748b4575b61851d246ae7d61da781308c4ef80ef
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Dec 5 12:02:58 2011 +0100
+
+    Updated MANIFESTs to match fresh Xtext project but no luck
+
+commit 65feabc1137f6a9659f6361281e78ad8ba43aef8
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Nov 29 16:02:11 2011 +0100
+
+    Switch to Xtext 2.1.0, but getting dependancy errors on client install.
+
+commit a2ff6baa8eaada15736a0d8ae7ca8fdb08f9a18c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Nov 29 10:03:54 2011 +0100
+
+    Minor readme changes
+
+commit e4a2fc8dd8972032819de6537096ea4b025ceaa1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Nov 29 09:58:23 2011 +0100
+
+    Updated readme.
+
+commit babe032d7c50e682354bd6d79c9a51caffb1c6b7
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Nov 29 09:49:45 2011 +0100
+
+    New release.
+
+commit 46c4b72c0f019a29b0c514d48ef5e475224ffe89
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Nov 29 09:44:13 2011 +0100
+
+    Fixed the Xtext nature issue?
+
+commit f9304eaa11f2500d91330d7508e4d62d9ce6e0dd
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Nov 28 10:09:41 2011 +0100
+
+    Added some new syntax colouring rules.
+
+commit 7fa96118ffe3b0ab689a1be686d6f427afa1e676
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Nov 25 15:58:03 2011 +0100
+
+    Removed CL project
+
+commit d56e685ee8c38b12b04b89302145a8d34b09e210
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Nov 25 13:38:15 2011 +0100
+
+    Re-released with the correct category thing.
+
+commit 7990c33eec6aad16920061388c154f5be80ffbd5
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Nov 25 11:52:21 2011 +0100
+
+    Convert back to Xtext 2.0.1, re-release
+
+commit 2ae527c93907ce0e519061ab1cfd38377180ab96
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Nov 25 11:34:23 2011 +0100
+
+    Cleaned up releases. Re-released 1.2.0
+
+commit 86a58e4e36f34027e32d0b47fa54c1f75f309499
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 24 15:02:23 2011 +0100
+
+    Updated readme.
+
+commit 388e248d15d99a8c39539d73a8d3feed777b920a
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 24 14:46:00 2011 +0100
+
+    Updated readme.
+
+commit c76b6817d885d3dadd1b036982676c5af972c798
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 24 14:37:07 2011 +0100
+
+    Libraries now open read-only. New release.
+
+commit 53a32b38457cb0da442ea003516665fe6a44c1e9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 24 13:05:38 2011 +0100
+
+    Almost working, but getting exceptions in the backend now.
+
+commit e53c9c9c30dd974cb9fa4264726bc09d4beb639b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 24 09:43:54 2011 +0100
+
+    External folder is separate, no longer hidden
+
+commit 52cbdc0f5a25929655f115b600c91bde76ff270c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 24 09:36:12 2011 +0100
+
+    Updated for new Xtext 2.1.0
+
+commit a696aae4cc92a0b3f03c060f7b9b0df77567a0d6
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 23 17:15:55 2011 +0100
+
+    Still stuck on addmarkers exception
+
+commit 1556454ee94bef68a08401eac114a454851d46b1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 23 16:09:53 2011 +0100
+
+    Almost done, but NullPException when opening external file.
+
+commit 4b8163a90a6b854d5d2e45d527fea1a237a80426
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 23 12:59:14 2011 +0100
+
+    First success with external links. Need to clean up implementation.
+
+commit 6218031224b82713f0fb6ec6eb687b60ee881fa1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 23 12:17:02 2011 +0100
+
+    Removed SS-based building code.
+
+commit 82bbddd90e08be1ffbc46df4c249f07958dea800
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 23 11:17:52 2011 +0100
+
+    Before attempting linked resource approach
+
+commit b564fe24a15fc9175848bef5541ff69607758ef9
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 23 11:14:30 2011 +0100
+
+    Removed all .metadata folders from repo
+
+commit e916c3c1d08f337fee3d90beaf0edeeef9316eeb
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Nov 22 17:23:34 2011 +0100
+
+    Working on open declaration, almost there.
+
+commit a8cb02e97d3cc9cc0571e9126460258d7fcca422
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Nov 21 17:13:58 2011 +0100
+
+    Some refactoring. Working on YES_SCOPE for when compile errors exist.
+
+commit f019847ab83b76cbd41c62e106a9675fdffec038
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Nov 18 16:28:17 2011 +0100
+
+    Updated readme.
+
+commit 91be692d4abbcf5521e4bceae270b696b0baaa2d
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Nov 18 16:11:46 2011 +0100
+
+    New release.
+
+commit d4f4dbf89d9c187ffdc64a99efba8f06936221fc
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Fri Nov 18 16:10:48 2011 +0100
+
+    Now fully works with CL grammar. Ready for release.
+
+commit a687c28e4e13f7aed99137debdaed225629efd90
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 17 16:23:56 2011 +0100
+
+    Daily snapshot.
+
+commit 92df19838407e8bb44a37d1b100cb5881e295974
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 17 15:14:51 2011 +0100
+
+    Interactive console. New release. Updated readme.
+
+commit 0853cd19bada3e5fc4f2c3b1ac40208c5b151f6c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 16 17:10:18 2011 +0100
+
+    Support for open'd qualifiers and aliases. Need to look at interactive console.
+
+commit 698ffb9ff4bb8685ade2db09be19cb87106be48e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 16 12:44:37 2011 +0100
+
+    Added version 1.1 release
+
+commit ffd17bbb326c0d2a519ab6e5bfb27cc28e798f9e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 16 12:36:22 2011 +0100
+
+    Fixed overload issue. Added back dependencies for main plugin.
+
+commit 067a58492f0dfabd7bc28f92e1ce59f0b9566f4b
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 16 12:17:14 2011 +0100
+
+    Optimisations made. Need to fix support for overloads and qualified names
+
+commit c5b348a117ee31a09d97859d9eac42eacdf9fdc1
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Nov 15 17:01:14 2011 +0100
+
+    Need to optimise.
+
+commit 6f7908f60e6a883efba76c2d15fb446728773786
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Nov 15 11:49:17 2011 +0100
+
+    Updated for new tags system, working decently. Must check aliased names.
+
+commit b92292cb6598aca163c2b46e4dfc1bd48c123177
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Nov 14 16:53:02 2011 +0100
+
+    Yet more progress on tag-based scoping.
+
+commit 4ff393d6d3da7d9727055575dd5a2285ffe00983
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Nov 14 12:22:49 2011 +0100
+
+    Updates to README
+
+commit 769de712e62ada4bf88a644fb367d43460ece52e
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Nov 14 11:45:55 2011 +0100
+
+    Minor typo.
+
+commit 6e7044c1589f304446e88372e78377c2758331cf
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Nov 14 11:31:44 2011 +0100
+
+    Updated readme.
+
+commit a272df37e3cd9eb3dd20fe555f723eccf5ee567c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Mon Nov 14 10:57:35 2011 +0100
+
+    Getting close to properly functioning tags-based scoping. Reworking readme.
+
+commit 36a32d53cc6f0919d6ce016fb9a68ed5811d740c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 10 16:33:14 2011 +0100
+
+    Some problems with markers.. do they have namespaces? Phantom xtext markers...
+
+commit 76b10698fedf377db1775faead9c6f1e3fff004c
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 10 14:20:45 2011 +0100
+
+    Re-worked tag build folder. Initial success with markers.
+
+commit 183804c4f86f3df51b9b04fa030469bb5cc6ea67
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Thu Nov 10 10:47:12 2011 +0100
+
+    Commit before re-arranging tag build folders, possibly removing scraping.
+
+commit 44343fce67bb25baebb4d9a14a542f8c5ff16322
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 9 16:35:30 2011 +0100
+
+    Initial working version of tag-based scoping.
+
+commit 78ecf08652b2c94790f5b6f682215c4e3e7a29fc
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Wed Nov 9 11:14:09 2011 +0100
+
+    Tags-based scoping now working (initially)
+
+commit cb76f95a67a65afbd050d8760c6d439525313cda
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Nov 8 17:13:44 2011 +0100
+
+    Trying to implement scraping, not working yet though
+
+commit a638853a740877891a8388463022635c152e9ae0
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Tue Nov 8 10:04:35 2011 +0100
+
+    Cleaned up GF console output & implementation.
+
+commit e238356f7571a35cf2fd0bd03badac6eb12b4f8d
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Tue Nov 8 09:51:03 2011 +0100
+
+    Separated example projects
+
+commit 1b91f70e20a45e4aaeb566d938fe64c19bceb65d
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Mon Nov 7 17:20:39 2011 +0100
+
+    Working on tag based scoping, but having problems when there's compilation errors
+
+commit 85fe879b87e2e98dc73beeba59b6ba1ab1a61e22
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Fri Nov 4 16:52:28 2011 +0100
+
+    In the process of implementing tag-based scoping
+
+commit 37798563eb666fd97b1a143e008bd5160dbe42ed
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Fri Nov 4 11:37:05 2011 +0100
+
+    Some script changes
+
+commit 65956dcce1c0011d85426e366807e019020a1372
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Fri Nov 4 11:33:02 2011 +0100
+
+    Added new release
+
+commit 8dd3dde770a59b75fe64b91dadef86fe4895f13f
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Fri Nov 4 11:25:51 2011 +0100
+
+    Cleaned up unused dependencies. Prefs now working properly (again)
+
+commit 818368dbe51c5288b09c15b4b6a0b70c86efcb9a
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Fri Nov 4 11:14:20 2011 +0100
+
+    Before cleaning up, accelerator config which is deprecated
+
+commit 7988fa7d237a241c8e6dcf88862de17424afe564
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Thu Nov 3 17:03:54 2011 +0100
+
+    Added javadocs everywhere. Trying to include path in builder, but more prefernce problems...
+
+commit 9d0f5c03a8d3c43342e379895b9342b73696e916
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Wed Nov 2 17:34:35 2011 +0100
+
+    Fixed prefs issue. Logging no implemented.
+
+commit 6b4f47f27fd24b31e2057ba44fb1c060c5b1857c
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Tue Nov 1 17:28:34 2011 +0100
+
+    Trying to fix preferences problem, but no joy so far
+
+commit 28c2115a2b20fb745c66cfd63cbaed86c006c2f6
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Tue Nov 1 17:28:18 2011 +0100
+
+    Trying to fix preferences problem, but no joy so far
+
+commit cd0b81bb8dc4d03b2cf1eca28e46dfbb05e3edea
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Mon Oct 31 15:45:33 2011 +0100
+
+    Fixed judgments/module types validation. Improved new module wizard.
+
+commit 869fa1e69528bad054e43b54cd698c77e0f69f88
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Mon Oct 31 13:15:47 2011 +0100
+
+    Publish release script. Fixed bug about lindef in concrete
+
+commit f220b128fe15fae5a940403250ab7fbb8ce35bd7
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Fri Oct 28 13:11:10 2011 +0200
+
+    Added readme
+
+commit 6a63c9887a100dd55e5910d5af9ea171efab3f54
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Fri Oct 28 13:10:57 2011 +0200
+
+    Added readme
+
+commit f00ecf6fc3ca44b817ec98d63010357324e0c4e5
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Fri Oct 28 13:09:10 2011 +0200
+
+    Added readme
+
+commit e94604b5ecb61361bb13ea99598b445f3eaac3b0
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Fri Oct 28 13:03:28 2011 +0200
+
+    Scoping fixed but validation is slow when using RGL. Expecting change to GF-compiler scoping next.
+
+commit 63a50592b09b239210427dd98b347ddb7ab85beb
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Thu Oct 27 17:21:50 2011 +0200
+
+    Problems with the scoping takign forever :(
+
+commit ea24dedf7c9fbae95f5800ff0e81a655d39035d5
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Thu Oct 27 16:47:03 2011 +0200
+
+    First commit to github
+
+commit 8af9c5ca63c2e63e5cd853fd1b29908900f3ee88
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Thu Oct 27 10:02:41 2011 +0200
+
+    Some basic cleanup
+
+commit d522fb1b14535ba764066c9fa00fca99943771cf
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Wed Oct 26 14:46:34 2011 +0200
+
+    Minor bug in GF Builder
+
+commit 241a5be492d611452fc373f91e9d9315499e3d27
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Wed Oct 26 13:53:39 2011 +0200
+
+    Added new release
+
+commit 72708dbca516c0ed43c48f2ecabbd18cc627f63d
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Wed Oct 26 13:07:26 2011 +0200
+
+    Scoping now appears to work.
+
+commit f3f74c13b453dccd85cb3047456813be7d7e9fe5
+Author: John J. Camilleri <john.j.camilleri@chalmers.se>
+Date:   Tue Oct 25 17:11:38 2011 +0200
+
+    Still working on scoping with GFH files...
+
+commit f2bdafe71dcf043686726e91e08d901ef493e6d7
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Oct 25 17:10:28 2011 +0200
+
+    Still working on scoping with GFH files...
+
+commit 4ff9eb05d41630a6693c3190c08db4a31b8a1371
+Author: John J. Camilleri <john@Prinjolata.(none)>
+Date:   Tue Oct 25 16:08:19 2011 +0200
+
+    Initial commit
