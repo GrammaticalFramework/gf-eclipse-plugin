@@ -9,7 +9,7 @@ import org.eclipse.ui.IWorkbench;
 import com.ontotext.molto.repositoryHelper.RepositoryUtils;
 
 /**
- * A Wizard to assist a user to create a sparql query grammar 
+ * A Wizard to assist a user to create an ontology grammar 
  * from natural language template patterns.
  * Note: the pages are added dynamically one by one.
  * 
@@ -97,7 +97,7 @@ public class GFOntologyGrammarWizard extends Wizard implements INewWizard {
 	
 	@Override
 	public boolean performFinish() {
-		return false;
+		return canFinish;
 	}
 	
 	/**

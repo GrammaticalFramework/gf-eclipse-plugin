@@ -82,7 +82,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	
 	public static String getPageDescription() {
 		return "Select  a binding for a template.\n " +
-				"That can be a class or an instance of a class.";
+				"It can be a class or an instance of a class.";
 	}
 	
 	protected GFOntologyGrammarSelectFromRepositoryPage(GFTemplate template) {
@@ -166,7 +166,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		currentTemplateBox.setText(template.getTextPattern());
 		
 		Button addButton = new Button(container, SWT.PUSH);
-		addButton.setText("Add this template!");
+		addButton.setText("Add this template");
 		addButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 2));
 		addButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
@@ -210,7 +210,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		});
 		continueRadios[0].setEnabled(false);
 		continueRadios[1] = new Button(container, SWT.RADIO);
-		continueRadios[1].setText("Export Grammar");
+		continueRadios[1].setText("Export grammar");
 		continueRadios[1].setLayoutData(new GridData(SWT.LEFT, SWT.BOTTOM, false, false, 3, 1));	
 		continueRadios[1].addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent arg0) {
@@ -324,7 +324,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 			!query.contains(CLASS_INSTANCE)) {
 			
 			// add the query to the clipboard
-			getClipboard().addQuery(query);
+			getClipboard().addFilledTemplateDisplay(query);
 			GFFilledTemplate filled = new GFFilledTemplate(template, currentTemplateLabels, currentTemplateURIs);
 			getClipboard().addFilledTemplate(filled);
 			

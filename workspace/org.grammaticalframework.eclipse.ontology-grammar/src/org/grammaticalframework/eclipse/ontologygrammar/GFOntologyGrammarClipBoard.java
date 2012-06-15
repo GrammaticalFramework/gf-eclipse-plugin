@@ -41,14 +41,14 @@ public class GFOntologyGrammarClipBoard {
 		}
 	}
 	
-	/* QUERIES */
-	public void addQuery(String query) {
+	/* Filled Templates */
+	public void addFilledTemplateDisplay(String query) {
 		if (query != null) {
 			selectedTemplates.add(query);
 		}
 	}
 	
-	public List<String> getSelectedQueries() {
+	public List<String> getFilledTemplatesDisplays() {
 		return selectedTemplates;
 	}
 

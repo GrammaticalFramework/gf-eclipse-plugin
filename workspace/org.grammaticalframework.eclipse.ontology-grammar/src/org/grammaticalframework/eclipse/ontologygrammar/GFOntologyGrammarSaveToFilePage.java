@@ -56,11 +56,11 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 	private String grammarName;
 	
 	public static String getPageName() {
-		return "Save the new query grammar";
+		return "Save the new ontology grammar";
 	}
 	
 	public static String getPageDescription() {
-		return "Save the new query grammar to a file ";
+		return "Save the new ontology grammar to a file ";
 	}
 	
 	protected GFOntologyGrammarSaveToFilePage() {
@@ -111,6 +111,7 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		saveButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
 				saveTheGrammar(destinationFolder, grammarName);
+				((GFOntologyGrammarWizard)getWizard()).performFinish();
 			}
 		});
 		saveButton.setEnabled(false);
@@ -133,7 +134,7 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 	private void handleBrowse() {
 		Shell shell = getShell();
 		FileDialog dialog = new FileDialog(shell,  SWT.SAVE);
-		dialog.setFilterNames(new String[] {"Grammars", "All Files (*.*)"});
+		dialog.setFilterNames(new String[] {"GF Grammars", "All Files (*.*)"});
 		dialog.setFilterExtensions(new String[] {"*.gf", "*.*"});                        
 		dialog.setFilterPath("");
 		dialog.setText("Choose destination");
@@ -158,6 +159,9 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		} catch (RepositoryUtilsConnectionException e) {
 			e.printStackTrace();
 		}
+		((GFOntologyGrammarWizard)getWizard()).setFinished();
+		((GFOntologyGrammarWizard)getWizard()).performFinish();
+		
 		String concreteGrammarName = "Concrete" + filename;
 		String abstractGrammarName = "Abstract" + filename;
 		String sparqlGrammarName = filename + "SPARQL";
@@ -166,8 +170,6 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		grammarGenerator.writeConcreteSparqlGrammarToFile(folder, sparqlGrammarName, abstractGrammarName);
 		
 		grammarStored.setVisible(true);
-		
-		((GFOntologyGrammarWizard)getWizard()).setFinished();
 	}
 	
 	/**

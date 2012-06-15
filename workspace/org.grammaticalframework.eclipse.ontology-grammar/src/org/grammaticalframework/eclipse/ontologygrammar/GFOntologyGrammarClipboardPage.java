@@ -120,7 +120,7 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	 * @return
 	 */
 	protected List createSelectedTemplatesList(Composite parent, int horizontalCellsSpan) {
-		java.util.List<String> currentlyChosen = getClipboard().getSelectedQueries();	
+		java.util.List<String> currentlyChosen = getClipboard().getFilledTemplatesDisplays();	
 		return addLabelsOfAList(parent, horizontalCellsSpan, currentlyChosen);
 	}	
 	
