@@ -21,10 +21,10 @@ import com.ontotext.molto.repositoryHelper.RepositoryUtilsConnectionException;
 import com.ontotext.molto.repositoryHelper.TemplateFileReader;
 
 /**
- * This is the first page of the GFQueryGrammaWizard, 
+ * This is the first page of the GFOntologyGrammarWizard, 
  * for selection of a SPARQL endpoint URL and a templates file for the grammar
  * 
- * @see GFQueryGrammarWizard
+ * @see GFOntologyGrammarWizard
  * @author Maria Mateva, Ontotext AD
  */
 public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipboardPage {

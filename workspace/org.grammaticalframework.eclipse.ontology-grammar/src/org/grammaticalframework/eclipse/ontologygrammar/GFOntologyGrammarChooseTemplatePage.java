@@ -11,10 +11,10 @@ import org.eclipse.swt.widgets.List;
 import com.ontotext.molto.repositoryHelper.GFTemplate;
 
 /**
- * This is the second page of the GFQueryGrammarWizard, 
+ * This is the second page of the GFOntologyGrammarWizard, 
  * for selection of a template for the grammar
  * 
- * @see GFQueryGrammarWizard
+ * @see GFOntologyGrammarWizard
  * @author Maria Mateva, Ontotext AD
  */
 public class GFOntologyGrammarChooseTemplatePage extends GFOntologyGrammarClipboardPage {

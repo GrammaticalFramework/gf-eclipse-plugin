@@ -21,10 +21,10 @@ import com.ontotext.molto.repositoryHelper.GFGenerator;
 import com.ontotext.molto.repositoryHelper.RepositoryUtilsConnectionException;
 
 /**
- * This is the last page of the GFQueryGrammarWizard, 
+ * This is the last page of the GFOntologyGrammarWizard, 
  * used for saving the new query grammar into a file
  * 
- * @see GFQueryGrammarFromSemanticRepositoryWizard
+ * @see GFOntologyGrammarWizard
  * @author Maria Mateva, Ontotext AD
  * 
  */
