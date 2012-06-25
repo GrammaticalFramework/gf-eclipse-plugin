@@ -283,7 +283,6 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	 * @param className
 	 */
 	private void populateCorrespondingInstances(String className) {
-		displayFieldValidOrNot(instancesLabel, "Instances of classes: LOADING...", true);
 		try {
 			instancesList.removeAll();
 			instancesList.add("LOADING...");
@@ -295,7 +294,6 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		} catch (RepositoryUtilsConnectionException ex) {
 			ex.printStackTrace();
 		}
-		displayFieldValidOrNot(instancesLabel, "Instances of classes", true);
 	}
 	
 	/**
