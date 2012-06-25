@@ -200,13 +200,14 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		String url = urlPath.getText();
 		String password = passwordBox.getText();
 		String username = usernameBox.getText();
+		String validation = "Connecting...";
+		displayFieldValidOrNot(urlValidationLabel, validation, true);
+		
 		if (url.length() < 5 || password.length() == 0 || username.length() == 0) {
 			sparqlEndpointOK = false;
 			displayFieldValidOrNot(urlValidationLabel, GFOntologyGrammarMsg.FIELD_INCOMPLETE, false);
 		}
 		RepositoryUtils repository;
-		String validation = "Connecting...";
-		displayFieldValidOrNot(urlValidationLabel, validation, true);
 		
 		sparqlEndpointOK = false;
 		try {
@@ -267,15 +268,6 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 			templateOK = false;
 			return false;
 		}
-	}
-	
-	
-	/**
-	 * Display if the SPARQL endpoint or template was not valid
-	 */
-	private void displayFieldValidOrNot(Label label, String message, boolean valid) {
-		label.setText(message);
-		label.setVisible(true);
 	}
 	
 }

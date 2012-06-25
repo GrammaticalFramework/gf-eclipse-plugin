@@ -247,10 +247,8 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 			currentTemplateBox.setText(
 				substituteBindingWith(classNameRepr, classNameLabel));
 		}
-		instancesLabel.setText("Instances of classes: LOADING...");
-		populateCorrespondingInstances(classNameUri);
-		instancesLabel.setText("Instances of classes");
 		
+		populateCorrespondingInstances(classNameUri);
 		// populateCorrespondingPredicates(classNameUri);
 	}
 	
@@ -285,13 +283,16 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	 * @param className
 	 */
 	private void populateCorrespondingInstances(String className) {
+		displayFieldValidOrNot(instancesLabel, "Instances of classes: LOADING...", true);
 		try {
+			instancesList.removeAll();
 			java.util.List<String> instances 
 				= ((GFOntologyGrammarWizard) getWizard()).getRepository().getAllInstances(className);
 			addSelectablesToListWidget(instances, instancesList);
 		} catch (RepositoryUtilsConnectionException ex) {
 			ex.printStackTrace();
 		}
+		displayFieldValidOrNot(instancesLabel, "Instances of classes", true);
 	}
 	
 	/**

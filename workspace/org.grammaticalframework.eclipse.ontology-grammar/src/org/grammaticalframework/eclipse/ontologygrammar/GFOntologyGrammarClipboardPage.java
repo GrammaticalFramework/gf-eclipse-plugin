@@ -187,5 +187,17 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 		ImageRegistry registry = new ImageRegistry(display);
 		registry.put("folder", ImageDescriptor.createFromFile(GFOntologyGrammarClipboardPage.class, "icons/sample.gif"));
 	}
+	
+	/**
+	 *  Display if the SPARQL endpoint or template was not valid
+	 * @param label - the label
+	 * @param message - message of the label
+	 * @param valid - shows if the message of the label should be a informative(valid circumstances) or
+	 * 		not - not valid circumstances(valid is <code>false</code>)  
+	 */
+	protected void displayFieldValidOrNot(Label label, String message, boolean valid) {
+		label.setText(message);
+		label.setVisible(true);
+	}
  
 }
