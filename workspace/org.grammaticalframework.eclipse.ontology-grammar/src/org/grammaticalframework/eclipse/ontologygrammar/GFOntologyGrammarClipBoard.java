@@ -37,7 +37,6 @@ public class GFOntologyGrammarClipBoard {
 					loadedTemplatesMap.put(template.getTextPattern(), template);
 				}
 			}
-			System.out.println(templates.size() + " templates were added");
 		}
 	}
 	

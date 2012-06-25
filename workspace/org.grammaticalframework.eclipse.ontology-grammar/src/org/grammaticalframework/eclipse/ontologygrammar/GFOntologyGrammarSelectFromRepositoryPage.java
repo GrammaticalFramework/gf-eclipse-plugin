@@ -77,11 +77,11 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	private boolean nextPageEnabled;
 	
 	public static String getPageName() {
-		return "Select a binding for a template";
+		return "Select bindings for the template";
 	}
 	
 	public static String getPageDescription() {
-		return "Select  a binding for a template.\n " +
+		return "Select bindings for the template. " +
 				"It can be a class or an instance of a class.";
 	}
 	
@@ -139,7 +139,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		classesList.setLayoutData(gd1);
 		classesList.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				classNameSelected();
+				classNameSelected(CLASS_NAME_BR);
 			}
 		});
 		populateExistingClasses();
@@ -153,7 +153,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		instancesList.setLayoutData(gd2);		
 		instancesList.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				instenceSelected();
+				instenceSelected(CLASS_INSTANCE_BR);
 			}
 		});
 		
@@ -233,18 +233,18 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	/**
 	 * A class name was selected
 	 */
-	private void classNameSelected() {
+	private void classNameSelected(String classNameRepr) {
 		// prepare to add new filled template
 		String classNameWhole = classesList.getSelection()[0];
 		String [] classNameParts = classNameWhole.split("\\|\\|");
 		String classNameUri = classNameParts[0].trim();
-		if (template.getTextPattern().contains(CLASS_NAME_BR)) {
+		if (template.getTextPattern().contains(classNameRepr)) {
 			String classNameLabel = classNameParts[1].trim();
-			currentTemplateLabels.put(CLASS_NAME_BR, classNameLabel);
-			currentTemplateURIs.put(CLASS_NAME_BR, classNameUri);
+			currentTemplateLabels.put(classNameRepr, classNameLabel);
+			currentTemplateURIs.put(classNameRepr, classNameUri);
 			// reset the template box
 			currentTemplateBox.setText(
-				substituteBindingWith(CLASS_NAME_BR, classNameLabel));
+				substituteBindingWith(classNameRepr, classNameLabel));
 		}
 		populateCorrespondingInstances(classNameUri);
 		// populateCorrespondingPredicates(classNameUri);
@@ -253,18 +253,18 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	/**
 	 * A class instance was selected
 	 */
-	private void instenceSelected() {
+	private void instenceSelected(String classInstanceRepr) {
 		// prepare to add new filled template
-		if (template.getTextPattern().contains(CLASS_INSTANCE_BR)) {
+		if (template.getTextPattern().contains(classInstanceRepr)) {
 			String instanceNameWhole = instancesList.getSelection()[0];
 			String [] instanceNameParts = instanceNameWhole.split("\\|\\|");
 			String instanceNameUri = instanceNameParts[0].trim();
 			String instanceNameLabel = instanceNameParts[1].trim();
-			currentTemplateLabels.put(CLASS_INSTANCE_BR, instanceNameLabel);
-			currentTemplateURIs.put(CLASS_INSTANCE_BR, instanceNameUri);
+			currentTemplateLabels.put(classInstanceRepr, instanceNameLabel);
+			currentTemplateURIs.put(classInstanceRepr, instanceNameUri);
 			// reset the template box
 			currentTemplateBox.setText(
-				substituteBindingWith(CLASS_INSTANCE_BR, instanceNameLabel));
+				substituteBindingWith(classInstanceRepr, instanceNameLabel));
 		}
 	}
 	

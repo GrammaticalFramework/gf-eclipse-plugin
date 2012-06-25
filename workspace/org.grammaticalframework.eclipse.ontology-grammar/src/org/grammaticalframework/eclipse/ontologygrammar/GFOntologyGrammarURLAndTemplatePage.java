@@ -205,7 +205,9 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 			displayFieldValidOrNot(urlValidationLabel, GFOntologyGrammarMsg.FIELD_INCOMPLETE, false);
 		}
 		RepositoryUtils repository;
-		String validation = "";
+		String validation = "Connecting...";
+		displayFieldValidOrNot(urlValidationLabel, validation, true);
+		
 		sparqlEndpointOK = false;
 		try {
 			repository = new RepositoryUtils(url, username, password);
