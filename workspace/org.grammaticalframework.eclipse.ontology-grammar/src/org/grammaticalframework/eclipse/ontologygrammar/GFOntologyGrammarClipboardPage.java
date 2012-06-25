@@ -196,6 +196,7 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 	 * 		not - not valid circumstances(valid is <code>false</code>)  
 	 */
 	protected void displayFieldValidOrNot(Label label, String message, boolean valid) {
+		label.setVisible(false);
 		label.setText(message);
 		label.setVisible(true);
 	}
