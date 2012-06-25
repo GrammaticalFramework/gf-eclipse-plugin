@@ -61,6 +61,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	private List instancesList;
 	private List predicateList;
 	private Text currentTemplateBox;
+	private Label instancesLabel;
 	private Button [] continueRadios;
 	private Composite selectedTemplatesComposite;
 	
@@ -121,7 +122,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		classesLabel.setText("Classes");
 		classesLabel.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 3, 1));
 				
-		Label instancesLabel = new Label(container, SWT.NULL);
+		instancesLabel = new Label(container, SWT.NULL);
 		instancesLabel.setText("Instances of classes");
 		instancesLabel.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 3, 1));
 		
@@ -246,7 +247,10 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 			currentTemplateBox.setText(
 				substituteBindingWith(classNameRepr, classNameLabel));
 		}
+		instancesLabel.setText("Instances of classes: LOADING...");
 		populateCorrespondingInstances(classNameUri);
+		instancesLabel.setText("Instances of classes");
+		
 		// populateCorrespondingPredicates(classNameUri);
 	}
 	
@@ -372,5 +376,6 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		nextPageEnabled = true;
 		setPageComplete(currentTemplateWasAdded);
 	}
+	
 
 }

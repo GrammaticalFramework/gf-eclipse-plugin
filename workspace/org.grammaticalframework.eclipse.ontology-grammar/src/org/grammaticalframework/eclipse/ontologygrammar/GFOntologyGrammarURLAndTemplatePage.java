@@ -104,7 +104,7 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		usernameBox = new Text(container, SWT.BORDER | SWT.SINGLE);
 		usernameBox.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 2, 1));
 		usernameBox.addModifyListener(defaultModifyListener);
-		usernameBox.setText("onto");
+		//usernameBox.setText("onto");
 		
 		Label passwordLabel = new Label(container, SWT.NULL);
 		passwordLabel.setText("Password:");
