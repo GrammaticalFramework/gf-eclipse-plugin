@@ -159,8 +159,6 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		} catch (RepositoryUtilsConnectionException e) {
 			e.printStackTrace();
 		}
-		((GFOntologyGrammarWizard)getWizard()).setFinished();
-		((GFOntologyGrammarWizard)getWizard()).performFinish();
 		
 		String concreteGrammarName = "Concrete" + filename;
 		String abstractGrammarName = "Abstract" + filename;
@@ -170,6 +168,11 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		grammarGenerator.writeConcreteSparqlGrammarToFile(folder, sparqlGrammarName, abstractGrammarName);
 		
 		grammarStored.setVisible(true);
+		//this.setPageComplete(true);
+		((GFOntologyGrammarWizard)getWizard()).setFinished();
+		((GFOntologyGrammarWizard)getWizard()).getContainer().updateButtons();
+		//((GFOntologyGrammarWizard)getWizard()).setFinished();
+		
 	}
 	
 	/**

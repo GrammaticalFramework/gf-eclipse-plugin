@@ -238,12 +238,14 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		String classNameWhole = classesList.getSelection()[0];
 		String [] classNameParts = classNameWhole.split("\\|\\|");
 		String classNameUri = classNameParts[0].trim();
-		String classNameLabel = classNameParts[1].trim();
-		currentTemplateLabels.put(CLASS_NAME_BR, classNameLabel);
-		currentTemplateURIs.put(CLASS_NAME_BR, classNameUri);
-		// reset the template box
-		currentTemplateBox.setText(
+		if (template.getTextPattern().contains(CLASS_NAME_BR)) {
+			String classNameLabel = classNameParts[1].trim();
+			currentTemplateLabels.put(CLASS_NAME_BR, classNameLabel);
+			currentTemplateURIs.put(CLASS_NAME_BR, classNameUri);
+			// reset the template box
+			currentTemplateBox.setText(
 				substituteBindingWith(CLASS_NAME_BR, classNameLabel));
+		}
 		populateCorrespondingInstances(classNameUri);
 		// populateCorrespondingPredicates(classNameUri);
 	}
@@ -253,15 +255,17 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	 */
 	private void instenceSelected() {
 		// prepare to add new filled template
-		String instanceNameWhole = instancesList.getSelection()[0];
-		String [] instanceNameParts = instanceNameWhole.split("\\|\\|");
-		String instanceNameUri = instanceNameParts[0].trim();
-		String instanceNameLabel = instanceNameParts[1].trim();
-		currentTemplateLabels.put(CLASS_INSTANCE_BR, instanceNameLabel);
-		currentTemplateURIs.put(CLASS_INSTANCE_BR, instanceNameUri);
-		// reset the template box
-		currentTemplateBox.setText(
+		if (template.getTextPattern().contains(CLASS_INSTANCE_BR)) {
+			String instanceNameWhole = instancesList.getSelection()[0];
+			String [] instanceNameParts = instanceNameWhole.split("\\|\\|");
+			String instanceNameUri = instanceNameParts[0].trim();
+			String instanceNameLabel = instanceNameParts[1].trim();
+			currentTemplateLabels.put(CLASS_INSTANCE_BR, instanceNameLabel);
+			currentTemplateURIs.put(CLASS_INSTANCE_BR, instanceNameUri);
+			// reset the template box
+			currentTemplateBox.setText(
 				substituteBindingWith(CLASS_INSTANCE_BR, instanceNameLabel));
+		}
 	}
 	
 	/**

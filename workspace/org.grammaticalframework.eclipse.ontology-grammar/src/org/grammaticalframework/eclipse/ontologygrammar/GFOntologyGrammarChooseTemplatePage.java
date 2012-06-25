@@ -75,7 +75,6 @@ public class GFOntologyGrammarChooseTemplatePage extends GFOntologyGrammarClipbo
 	@Override
 	public void handleEvent(Event arg0) {
 		String [] selected = listOfTemplates.getSelection();
-		System.out.println("Selected: " + selected[0]);
 		chosenTemplate = getClipboard().getTemplateByTextPattern(selected[0]);
 		if (repositoryPage == null) {
 			repositoryPage = new GFOntologyGrammarSelectFromRepositoryPage(chosenTemplate);
