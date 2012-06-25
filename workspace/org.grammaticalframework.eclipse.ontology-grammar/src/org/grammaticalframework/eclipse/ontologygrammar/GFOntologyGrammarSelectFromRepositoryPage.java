@@ -287,6 +287,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		try {
 			instancesList.removeAll();
 			instancesList.add("LOADING...");
+			instancesList.update();
 			getShell().layout();
 			java.util.List<String> instances 
 				= ((GFOntologyGrammarWizard) getWizard()).getRepository().getAllInstances(className);
