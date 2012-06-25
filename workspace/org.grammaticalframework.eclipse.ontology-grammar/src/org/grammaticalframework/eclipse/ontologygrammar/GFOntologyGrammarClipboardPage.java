@@ -157,6 +157,9 @@ public abstract class GFOntologyGrammarClipboardPage extends WizardPage implemen
 		listWidget.removeAll();
 		if (selectables != null) {
 			Iterator<String> iter = selectables.iterator();
+			if (!iter.hasNext()) {
+				listWidget.add("[EMPTY LIST]");
+			}
 			while (iter.hasNext()) {
 				listWidget.add(iter.next());
 			}
