@@ -287,7 +287,6 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 			instancesList.removeAll();
 			instancesList.add("LOADING...");
 			instancesList.update();
-			getShell().layout();
 			java.util.List<String> instances 
 				= ((GFOntologyGrammarWizard) getWizard()).getRepository().getAllInstances(className);
 			addSelectablesToListWidget(instances, instancesList);
