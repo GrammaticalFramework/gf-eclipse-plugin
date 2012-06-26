@@ -259,14 +259,16 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 		// prepare to add new filled template
 		if (template.getTextPattern().contains(classInstanceRepr)) {
 			String instanceNameWhole = instancesList.getSelection()[0];
-			String [] instanceNameParts = instanceNameWhole.split("\\|\\|");
-			String instanceNameUri = instanceNameParts[0].trim();
-			String instanceNameLabel = instanceNameParts[1].trim();
-			currentTemplateLabels.put(classInstanceRepr, instanceNameLabel);
-			currentTemplateURIs.put(classInstanceRepr, instanceNameUri);
-			// reset the template box
-			currentTemplateBox.setText(
-				substituteBindingWith(classInstanceRepr, instanceNameLabel));
+			if (!instanceNameWhole.equals(GFOntologyGrammarMsg.EMPTY_LIST)) {
+				String [] instanceNameParts = instanceNameWhole.split("\\|\\|");
+				String instanceNameUri = instanceNameParts[0].trim();
+				String instanceNameLabel = instanceNameParts[1].trim();
+				currentTemplateLabels.put(classInstanceRepr, instanceNameLabel);
+				currentTemplateURIs.put(classInstanceRepr, instanceNameUri);
+				// reset the template box
+				currentTemplateBox.setText(
+					substituteBindingWith(classInstanceRepr, instanceNameLabel));
+			}
 		}
 	}
 	
@@ -285,7 +287,7 @@ public class GFOntologyGrammarSelectFromRepositoryPage extends GFOntologyGrammar
 	private void populateCorrespondingInstances(String className) {
 		try {
 			instancesList.removeAll();
-			instancesList.add("LOADING...");
+			instancesList.add(GFOntologyGrammarMsg.LOADING);
 			instancesList.update();
 			java.util.List<String> instances 
 				= ((GFOntologyGrammarWizard) getWizard()).getRepository().getAllInstances(className);
