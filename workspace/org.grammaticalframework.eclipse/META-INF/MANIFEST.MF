@@ -40,5 +40,4 @@ Export-Package: org.grammaticalframework.eclipse,
  org.grammaticalframework.eclipse.services,
  org.grammaticalframework.eclipse.treebank,
  org.grammaticalframework.eclipse.validation
-Bundle-ClassPath: .
 
