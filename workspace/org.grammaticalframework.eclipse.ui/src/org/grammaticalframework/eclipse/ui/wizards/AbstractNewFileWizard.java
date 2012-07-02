@@ -72,7 +72,7 @@ public abstract class AbstractNewFileWizard extends Wizard implements INewWizard
 	}
 	
 	/**
-	 * Perform finisd with a runnable operation
+	 * Perform finish with a runnable operation
 	 * @param op
 	 * @return
 	 */

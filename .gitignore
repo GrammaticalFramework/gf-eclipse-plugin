@@ -6,14 +6,15 @@ releases/
 *.gfo
 
 *.class
-*.jar
+#*.jar
 *.war
 *.ear
+target/
 
-## From https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
+## Entries below are from https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
 
 *.pydevproject
-.project
+#.project
 .metadata
 bin/**
 tmp/**

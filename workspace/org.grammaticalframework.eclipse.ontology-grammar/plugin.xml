@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+        point="org.eclipse.ui.newWizards">
+     <category
+           id="org.grammaticalframework.eclipse.ui.category.wizards"
+           name="Grammatical Framework">
+     </category>
+      <wizard
+           category="org.grammaticalframework.eclipse.ui.category.wizards"
+           class="org.grammaticalframework.eclipse.ontologygrammar.GFOntologyGrammarWizard"
+           hasPages="true"
+           icon="icons/ontology-wizard.png"
+           id="org.grammaticalframework.eclipse.ontologygrammar.GFOntologyGrammarWizard"
+           name="GF Ontology Grammar Wizard"
+           project="true">
+     </wizard>
+  </extension>
+
+</plugin>
