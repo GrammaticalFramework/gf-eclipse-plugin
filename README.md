@@ -398,7 +398,17 @@ In order to build/run the GFEP from source, you need to have the Xtext libraries
 1. Download a release of Eclipse packaged together with Xtext from <http://xtext.itemis.com/xtext/language=en/36553/downloads>
 
 In both cases make sure you get the correct version of Xtext (see below).
-Once you have Xtext set up, you can clone the repository locally with `git clone git://github.com/GrammaticalFramework/gf-eclipse-plugin.git` and then add the projects under the `workspace` directory to your Eclipse workspace. 
+Once you have Xtext set up, you can clone the repository locally with the following command:
+
+    git clone git://github.com/GrammaticalFramework/gf-eclipse-plugin.git
+    
+You can then add the projects under the `workspace` directory to your Eclipse workspace, by using the **File &rarr; Import...** wizard.
+
+#### Extra dependencies for unit testing project
+
+The unit testing project (`org.grammaticalframework.eclipse.tests`) has an extra requirement for the library `org.eclipselabs.xtext.utils.unittesting`, which you will probably get complaints about when importing your projects into Eclipse.
+You only need to worry about this if you want to run the unit tests; otherwise you can ignore these errors.
+You can get more information about this library [here](http://code.google.com/a/eclipselabs.org/p/xtext-utils/wiki/Unit_Testing), or just install it in Eclipse directly using the following update site URL: <http://xtext-utils.eclipselabs.org.codespot.com/git.distribution/releases/unittesting-0.9.x/>
 
 #### Xtext version
 
