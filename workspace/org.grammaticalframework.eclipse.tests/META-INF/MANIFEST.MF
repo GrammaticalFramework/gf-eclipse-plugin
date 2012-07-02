@@ -15,7 +15,7 @@ Require-Bundle: org.grammaticalframework.eclipse,
  org.eclipse.ui.workbench;resolution:=optional,
  org.eclipse.xtext.xtend2.lib,
  org.eclipse.xtext.xbase.lib,
- org.eclipselabs.xtext.utils.unittesting;resolution:=optional,
+ org.eclipselabs.xtext.utils.unittesting,
  com.google.inject
 Import-Package: org.apache.commons.logging,
  org.apache.log4j
