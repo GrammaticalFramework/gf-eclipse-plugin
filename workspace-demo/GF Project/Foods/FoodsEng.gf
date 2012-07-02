@@ -1,12 +1,5 @@
 -- Functor Instantiation
 --# -path=present
-concrete FoodsEng of Foods = FoodsI - [Pizza] with
+concrete FoodsEng of Foods = FoodsI with
   (Syntax = SyntaxEng),
-  (LexFoods = LexFoodsEng) **
-  open SyntaxEng, ParadigmsEng in {
-
-  lin
-    Pizza = mkCN (ParadigmsEng.mkA "Italian") (mkN "pies") ;
-    Cheese = mkCN (mkN "cheese");
-    Muffins = mkN "muffin" ;
-} ;
+  (LexFoods = LexFoodsEng) ;
