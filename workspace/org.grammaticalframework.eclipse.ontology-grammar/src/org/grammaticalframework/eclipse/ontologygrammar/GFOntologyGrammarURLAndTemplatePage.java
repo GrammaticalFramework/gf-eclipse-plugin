@@ -200,10 +200,16 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		String url = urlPath.getText();
 		String password = passwordBox.getText();
 		String username = usernameBox.getText();
+		if (password.length() == 0) {
+			password = null;
+		}
+		if (username.length() == 0) {
+			username = null;
+		}
 		String validation = "Connecting...";
 		displayFieldValidOrNot(urlValidationLabel, validation, true);
 		
-		if (url.length() < 5 || password.length() == 0 || username.length() == 0) {
+		if (url.length() < 5) {
 			sparqlEndpointOK = false;
 			displayFieldValidOrNot(urlValidationLabel, GFOntologyGrammarMsg.FIELD_INCOMPLETE, false);
 		}
