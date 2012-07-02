@@ -12,7 +12,7 @@
            category="org.grammaticalframework.eclipse.ui.category.wizards"
            class="org.grammaticalframework.eclipse.ontologygrammar.GFOntologyGrammarWizard"
            hasPages="true"
-           icon="icons/sample.gif"
+           icon="icons/ontology-wizard.png"
            id="org.grammaticalframework.eclipse.ontologygrammar.GFOntologyGrammarWizard"
            name="GF Ontology Grammar Wizard"
            project="true">

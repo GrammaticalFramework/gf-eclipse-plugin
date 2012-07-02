@@ -27,4 +27,3 @@ Export-Package: org.grammaticalframework.eclipse.ui.contentassist.antlr,
  org.grammaticalframework.eclipse.ui.internal,
  org.grammaticalframework.eclipse.ui.contentassist
 Bundle-Activator: org.grammaticalframework.eclipse.ui.internal.GFActivator
-Bundle-ClassPath: .

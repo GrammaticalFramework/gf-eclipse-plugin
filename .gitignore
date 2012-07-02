@@ -10,7 +10,8 @@ releases/
 *.war
 *.ear
 target/
-## From https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
+
+## Entries below are from https://github.com/github/gitignore/blob/master/Global/Eclipse.gitignore
 
 *.pydevproject
 #.project
@@ -23,7 +24,7 @@ tmp/**/*
 *.swp
 *~.nib
 local.properties
-#.classpath
+.classpath
 .settings/
 .loadpath
 
