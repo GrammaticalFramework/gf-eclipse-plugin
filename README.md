@@ -424,7 +424,6 @@ The individual projects are:
 : _Unused_
 
 
-
 #### Extra dependencies for unit testing project
 
 The unit testing project (`org.grammaticalframework.eclipse.tests`) has an extra requirement for the library `org.eclipselabs.xtext.utils.unittesting`, which you will probably get complaints about when importing your projects into Eclipse.
