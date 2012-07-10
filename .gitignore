@@ -1,5 +1,6 @@
 archive-and-commit.sh
 publish-readme.sh
+workspace/org.grammaticalframework.updatesite/*.jar
 workspace/org.grammaticalframework.updatesite/*/*.jar
 .gfbuild/
 *.gfo
