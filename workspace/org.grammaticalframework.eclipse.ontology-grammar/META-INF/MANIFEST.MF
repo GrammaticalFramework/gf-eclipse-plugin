@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Ontology-grammar-wizard
-Bundle-SymbolicName: org.grammaticalframework.eclipse.ontology-grammar-wizard;singleton:=true
+Bundle-Name: org.grammaticalframework.eclipse.ontology-grammar
+Bundle-SymbolicName: org.grammaticalframework.eclipse.ontology-grammar;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: Ontotext AD
 Require-Bundle: org.eclipse.ui

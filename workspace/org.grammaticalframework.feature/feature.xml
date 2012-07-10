@@ -5,15 +5,16 @@
       version="1.5.1.qualifier"
       provider-name="MOLTO Project">
 
-   <description url="http://www.grammaticalframework.org/">
-      Eclipse integration for developing grammars using the Grammatical Framework (GF).
+   <description url="http://www.grammaticalframework.org/eclipse/">
+      The GF Eclipse Plugin provides IDE integration for developing grammars using the Grammatical
+Framework (GF).
    </description>
 
-   <copyright url="http://www.grammaticalframework.org/">
+   <copyright url="http://www.molto-project.eu/">
       The research leading to these results has received funding from
 the European Union&apos;s Seventh Framework Programme (FP7/2007-2013)
 under grant agreement no FP7-ICT-247914.
-Copyright MOLTO Project, 2011.
+Copyright MOLTO Project, 2012.
    </copyright>
 
    <license url="http://www.gnu.org/licenses/gpl-3.0.txt">

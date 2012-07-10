@@ -388,6 +388,12 @@ If problems persist, please contact me or better yet file an issue on the GitHub
 
 <!----------------------------------------------------------------------------->
 
+## Ontology Grammar plugin
+
+For information about the Ontology Grammar plugin developed by Ontotext AD, please refer [here](https://github.com/GrammaticalFramework/gf-eclipse-plugin/blob/master/README_ontology-grammar.md).
+
+<!----------------------------------------------------------------------------->
+
 ## For developers
 
 ### Project setup
@@ -415,13 +421,16 @@ The individual projects are:
 : Contains unit tests for the plugin. Not required for running the plugin.
 
 **`org.grammaticalframework.eclipse.ontology-grammar`**
-: GF Ontology Grammar Plugin for Eclipse, developed separately by Ontotext AB.
+: GF Ontology Grammar Plugin for Eclipse, developed separately by Ontotext AD.
 
 **`org.grammaticalframework.feature`**
-: Exports all projects packaged as the GF Eclipse Plugin.
+: Feature project for the GF Eclipse Plugin. Exports `org.grammaticalframework.eclipse` and `org.grammaticalframework.eclipse.ui`.
+
+**`org.grammaticalframework.feature.ontology-grammar`**
+: Feature project for the GF Ontology Grammar Plugin. Exports `org.grammaticalframework.eclipse.ontology-grammar`.
 
 **`org.grammaticalframework.updatesite`**
-: _Unused_
+: Update site project which exports both feature projects under the same category.
 
 
 #### Extra dependencies for unit testing project
@@ -443,20 +452,16 @@ Note that this means you will be running _two_ instances of Eclipse simultaneous
 
 To package the GFEP sources as `.jar` files and install/update the GFEP in a separate Eclipse installation, do the following:
 
-1. Right-click on the project `org.grammaticalframework.feature` and choose **Export...**
-2. Select **Plug-in Development &rarr; Deployable features**
-3. Use the following options:
-  - Available features: **org.grammaticalframework.feature (x.y.z.qualifier)**
-  - Destination
-      - Directory: **&lt;local directory&gt;**
-  - Options
-      - Package as individual JAR archives
-          - Generate metadata repository
-          - Categorize repository: **&lt;workspace&gt;/org.grammaticalframework.feature/category.xml**
-      - Allow for binary cycles in target platform
-4. Click **Finish** and wait for the plugin to build. You may get some errors, in which case look through the generated `log.zip` and fix them, then repeat the process.
+1. Open `site.xml` in the `org.grammaticalframework.updatesite` project with Eclipse's Site Manifest Editor (default).
+2. **Synchronize** the feature versions with the update site project.
+3. Click **Build All** and the necessary `.jar` files should be created/updated in the project's folder. These can then be copied, along with `site.xml` to any local or web directory, which becomes the "update site".
 
-### Other notes
+#### `artifacts.jar` and `contents.jar`
+
+These are two meta-data files created by the update site project. However there are known issues with categories sporadically not working in update sites, and it seems that if you delete these 2 files then the problems are solved.
+More about this can be found [here](http://ekkescorner.wordpress.com/2010/04/18/who-eats-the-categories-from-update-sites/).
+
+#### Other notes
 
 Some have mentioned than when opening the GFEP sources, under Linux, they needed to install the following:
 

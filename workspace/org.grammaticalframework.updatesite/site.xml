@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.grammaticalframework.feature_1.2.2.qualifier.jar" id="org.grammaticalframework.feature" version="1.2.2.qualifier"/>
+   <description name="GF Eclipse Update Site" url="http://www.grammaticalframework.org/eclipse/release/">
+      Update site for Eclipse plugins related to grammar development using the Grammatical Framework.
+   </description>
+   <feature url="features/org.grammaticalframework.feature_1.5.1.201207101612.jar" id="org.grammaticalframework.feature" version="1.5.1.201207101612">
+      <category name="org.grammaticalframework.updatesite.category.gf"/>
+   </feature>
+   <feature url="features/org.grammaticalframework.feature.ontologygrammar_1.0.0.201207101612.jar" id="org.grammaticalframework.feature.ontologygrammar" version="1.0.0.201207101612">
+      <category name="org.grammaticalframework.updatesite.category.gf"/>
+   </feature>
+   <category-def name="org.grammaticalframework.updatesite.category.gf" label="Grammatical Framework">
+      <description>
+         Tools for aiding grammar development under the Grammatical Framework.
+      </description>
+   </category-def>
 </site>

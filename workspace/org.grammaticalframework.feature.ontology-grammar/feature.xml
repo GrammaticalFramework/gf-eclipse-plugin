@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.grammaticalframework.feature.ontologygrammar"
+      label="GF Ontology Grammar Plugin"
+      version="1.0.0.qualifier"
+      provider-name="Ontotext AD">
+
+   <description url="http://www.grammaticalframework.org/eclipse/">
+      The GF Ontology Grammar Plugin for Eclipse provides a GUI for calls to the MOLTO Repository Helper project.
+It is under the form of a wizard that leads a user to create
+abstract, concrete and SPARQL GF grammars, based on user-friendly
+templates that are filled in with repository entities by the
+user.
+   </description>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+   </requires>
+
+   <plugin
+         id="org.grammaticalframework.eclipse.ontology-grammar"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
