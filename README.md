@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
-John  J. Camilleri  
-Updated: 12 June 2012
+John J. Camilleri  
+Updated: 10 July 2012
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -403,6 +403,27 @@ Once you have Xtext set up, you can clone the repository locally with the follow
     git clone git://github.com/GrammaticalFramework/gf-eclipse-plugin.git
     
 You can then add the projects under the `workspace` directory to your Eclipse workspace, by using the **File &rarr; Import...** wizard.
+The individual projects are:
+
+**`org.grammaticalframework.eclipse`**
+: Main plugin which covers all parsing and linking behaviour.
+
+**`org.grammaticalframework.eclipse.ui`**
+: Covers all UI aspects of the plugin. Depends on `org.grammaticalframework.eclipse` (but the opposite is not true).
+
+**`org.grammaticalframework.eclipse.tests`**
+: Contains unit tests for the plugin. Not required for running the plugin.
+
+**`org.grammaticalframework.eclipse.ontology-grammar`**
+: GF Ontology Grammar Plugin for Eclipse, developed separately by Ontotext AB.
+
+**`org.grammaticalframework.feature`**
+: Exports all projects packaged as the GF Eclipse Plugin.
+
+**`org.grammaticalframework.updatesite`**
+: _Unused_
+
+
 
 #### Extra dependencies for unit testing project
 
