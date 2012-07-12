@@ -94,7 +94,7 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		
 		saveToField = new Text(container, SWT.BORDER | SWT.SINGLE | SWT.READ_ONLY);
 		saveToField.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
-		saveToField.addModifyListener (defaultModifyListener);
+		saveToField.addModifyListener(defaultModifyListener);
 		
 		Button browseButton = new Button(container, SWT.PUSH);
 		browseButton.setText("Browse...");
@@ -117,7 +117,7 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 		saveButton.setEnabled(false);
 		
 		grammarStored = new Label(container, SWT.NULL);
-		grammarStored.setText("The grammars was exported.");	
+		grammarStored.setText("The grammars were exported.");	
 		grammarStored.setVisible(false);
 		grammarStored.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 4, 1));
 				
