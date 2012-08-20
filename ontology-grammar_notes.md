@@ -4,15 +4,16 @@ John J. Camilleri
 
 ## Documentation
 
-The template file format needs some sort of documentation
+The template file format needs some sort of proper specification.
+The example available at `resources/template.xml` is OK, but it needs some instructions to accompany it.
 
-## Testing various SPARQL EndPoint URLS
+## Testing various SPARQL EndPoint URLs
 
 So far I have not been able to get the SPARQL endpoint running locally on my machine.
-So I have tested the plugin with publicly available endpoints found here: http://labs.mondeca.com/sparqlEndpointsStatus/
+So, I have tested the plugin with publicly available endpoints found here: <http://labs.mondeca.com/sparqlEndpointsStatus/>.
 I selected various endpoint URLs at random and tested them with the Ontology Grammar Wizard. The results are below.
 
-### Default
+### (Default)
 http://localhost:8080/repositories/molto-repository
 (no local server running): Connection refused
 
