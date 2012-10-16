@@ -160,8 +160,8 @@ public class GFOntologyGrammarSaveToFilePage extends GFOntologyGrammarClipboardP
 			e.printStackTrace();
 		}
 		
-		String concreteGrammarName = "Eng" + filename;
-		String abstractGrammarName = "Abstract" + filename;
+		String concreteGrammarName = filename + "Eng";
+		String abstractGrammarName = filename + "Abstract";
 		String sparqlGrammarName = filename + "SPARQL";
 		grammarGenerator.writeAbstractGrammarToFile(folder, abstractGrammarName);
 		grammarGenerator.writeConcreteGrammarToFile(folder, concreteGrammarName, abstractGrammarName);
