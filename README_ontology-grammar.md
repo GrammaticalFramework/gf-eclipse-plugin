@@ -71,8 +71,8 @@ Select "GF Ontology Grammar Wizard".
 
 #### 2. Connect to endpoint
 Provide a SPARQL endpoint to be connected to(ontology repository).  
-**Note:** do not forget to explicitly add the port number in the address.  
 After the username and password are populated, use the "Connect" button to verify the connection is successful.
+*Note:* username and password can be omitted; example Repository URL = http://molto.ontotext.com/sparql
 
 ![Connect to endpoint](http://www.grammaticalframework.org/eclipse/images/ontology-connect.png)
 
