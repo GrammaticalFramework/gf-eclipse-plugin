@@ -90,7 +90,7 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		// Open SPARQL endpoint URL 
 		Label urlLabel = new Label(container, SWT.NULL);
 		urlLabel.setText("Repository URL:");
-		urlLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		urlLabel.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
 		
 		urlPath = new Text(container, SWT.BORDER | SWT.SINGLE);
 		urlPath.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
@@ -99,7 +99,7 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		
 		Label userNameLabel = new Label(container, SWT.NULL);
 		userNameLabel.setText("Username:");
-		userNameLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		userNameLabel.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
 		
 		usernameBox = new Text(container, SWT.BORDER | SWT.SINGLE);
 		usernameBox.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 2, 1));
@@ -108,7 +108,7 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		
 		Label passwordLabel = new Label(container, SWT.NULL);
 		passwordLabel.setText("Password:");
-		passwordLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		passwordLabel.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
 		
 		passwordBox = new Text(container, SWT.BORDER | SWT.PASSWORD);
 		passwordBox.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false, 2, 1));
@@ -116,7 +116,7 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		
 		validateURLButton = new Button(container, SWT.PUSH);
 		validateURLButton.setText("Connect");
-		validateURLButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 3, 1));
+		validateURLButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
 		validateURLButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
 				validateURLField();
@@ -124,13 +124,13 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		});
 		
 		urlValidationLabel = new Label(container, SWT.NULL);
-		urlValidationLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
+		urlValidationLabel.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
 		urlValidationLabel.setVisible(false);
 		
 		// Open template path
 		Label templateLabel = new Label(container, SWT.NULL);
 		templateLabel.setText("Templates file:");
-		templateLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, false, false, 1, 1));
+		templateLabel.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, false, false, 1, 1));
 		
 		templatePathField = new Text(container, SWT.BORDER | SWT.SINGLE);
 		templatePathField.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 1, 1));
@@ -146,7 +146,7 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		
 		validateTemplateButton = new Button(container, SWT.PUSH);
 		validateTemplateButton.setText("Validate Template");
-		validateTemplateButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 3, 1));
+		validateTemplateButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1));
 		validateTemplateButton.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
 				validateAndLoadTemplate();
@@ -154,7 +154,7 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		});
 		
 		templateValidationLabel = new Label(container, SWT.NULL);
-		templateValidationLabel.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 3, 1));
+		templateValidationLabel.setLayoutData(new GridData(SWT.FILL, SWT.CENTER, true, false, 2, 1));
 		templateValidationLabel.setVisible(false);
 		
 		initialize(container);
@@ -206,6 +206,7 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		if (username.length() == 0) {
 			username = null;
 		}
+		urlValidationLabel.setText("");
 		String validation = "Connecting...";
 		displayFieldValidOrNot(urlValidationLabel, validation, true);
 		
