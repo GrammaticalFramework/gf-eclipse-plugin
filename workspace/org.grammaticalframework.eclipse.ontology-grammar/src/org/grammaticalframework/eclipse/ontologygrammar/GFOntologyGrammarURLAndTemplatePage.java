@@ -58,6 +58,9 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 	private boolean sparqlEndpointOK;
 	private GFOntologyGrammarChooseTemplatePage templatesPage;
 	
+	private static String defaultURL = "http://molto.ontotext.com/sparql";
+//	private static String defaultURL = "http://localhost:8080/repositories/molto-repository";
+	
 	public static String getPageName() {
 		return "Welcome!";
 	}
@@ -95,7 +98,7 @@ public class GFOntologyGrammarURLAndTemplatePage extends GFOntologyGrammarClipbo
 		urlPath = new Text(container, SWT.BORDER | SWT.SINGLE);
 		urlPath.setLayoutData(new GridData(SWT.FILL, SWT.TOP, true, false, 2, 1));
 		urlPath.addModifyListener(defaultModifyListener);
-		urlPath.setText("http://localhost:8080/repositories/molto-repository");
+		urlPath.setText(defaultURL);
 		
 		Label userNameLabel = new Label(container, SWT.NULL);
 		userNameLabel.setText("Username:");
