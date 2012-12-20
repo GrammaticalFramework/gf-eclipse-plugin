@@ -239,6 +239,9 @@ public class GFImages extends PluginImageHelper {
 	public Image forLanguageToggle() {
 		return getImage("language-toggle.png");
 	}
+	public Image forSourceFile() {
+		return getImage("gf-module.png");
+	}
 
 	
 }
