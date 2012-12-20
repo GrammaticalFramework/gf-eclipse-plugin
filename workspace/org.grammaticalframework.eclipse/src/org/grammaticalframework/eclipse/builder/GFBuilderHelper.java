@@ -10,6 +10,7 @@
 package org.grammaticalframework.eclipse.builder;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -69,20 +70,20 @@ public class GFBuilderHelper {
 				+ getTagsFileNameRelative(file.getName());
 	}
 	
-//	/**
-//	 * Gets the modification time of the file's tags file, or 0 if not found
-//	 * @param file
-//	 * @return
-//	 */
-//	public static Long getTagsFileMTime(IFile file) {
-//		String tagsFileName = getTagsFileNameRelative(file.getName());
-//		try {
-//			IFile tagsFile = (IFile)file.getParent().findMember(tagsFileName);
-//			return tagsFile.getLocalTimeStamp();
-//		} catch (Exception e) {
-//			return (long) IResource.NULL_STAMP;
-//		}
-//	}
+	/**
+	 * Gets the modification time of the file's tags file, or 0 if not found
+	 * @param file
+	 * @return
+	 */
+	public static Long getTagsFileMTime(IFile file) {
+		String tagsFileName = getTagsFileFullPath(file);
+		try {
+			File tagsFile = new File(tagsFileName);
+			return tagsFile.lastModified();
+		} catch (Exception e) {
+			return (long) IResource.NULL_STAMP;
+		}
+	}
 	
 	/**
 	 * Read tags file for a source module and return a list of the modules it imports/opens

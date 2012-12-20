@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -81,10 +82,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	private String gfLibPath;
 	private Boolean buildDependents;
 	
-//	/**
-//	 * For avoiding duplicate work
-//	 */
-//	private Long buildStartTime;
+	/**
+	 * For avoiding duplicate work
+	 */
+	private Long buildStartTime;
 
 	/**
 	 * Logger
@@ -105,8 +106,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		gfLibPath = GFPreferences.getLibraryPath();
 		buildDependents = GFPreferences.getBuildDependents();
 		
-//		// Record start time
-//		buildStartTime = new Date().getTime();
+		// Record start time
+		buildStartTime = new Date().getTime();
 		
 		try {
 			switch (kind) {
@@ -345,6 +346,13 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @return
 	 */
 	private void buildFile(IFile file) {
+		// See if it's already been computed in this cycle
+		long mtime = GFBuilderHelper.getTagsFileMTime(file);
+		if (mtime > this.buildStartTime) {
+			log.info("Skipping: " + file.getFullPath());
+			return;
+		}
+		
 		// Clean up first
 		if (CLEAN_BEFORE_BUILD)
 			cleanFile(file);
