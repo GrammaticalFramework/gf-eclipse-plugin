@@ -111,14 +111,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		// Record start time
 		buildStartTime = new Date().getTime();
 		
-
 		try {
-			// If we have build files, always do a full build
-			if (buildFiles.length > 0) {
-				fullBuild(monitor);
-			}
-			// Else look at the build kind 
-			else switch (kind) {
+			switch (kind) {
 			case IncrementalProjectBuilder.FULL_BUILD:
 				fullBuild(monitor);
 				break;
@@ -127,6 +121,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				IResourceDelta delta = getDelta(getProject());
 				if (delta == null) {
 					fullBuild(monitor);
+				} else if (buildFiles.length > 0) {
+					intelliBuild(delta, monitor);
 				} else {
 					incrementalBuild(delta, monitor);
 				}
@@ -143,88 +139,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		
 		// build has no dependencies on other projects
 		return null;
-	}
-
-	/**
-	 * Incremental build.
-	 *
-	 * @param delta the delta
-	 * @param monitor the monitor
-	 * @throws CoreException 
-	 */
-	private void incrementalBuild(final IResourceDelta projectDelta, final IProgressMonitor monitor) throws OperationCanceledException, CoreException {
-		log.info("Incremental build on: " + projectDelta.getResource().getName());
-		
-		// First pass: rebuild changed files and remember them
-		final Set<String> changedFiles = new HashSet<String>();
-		projectDelta.accept(new IResourceDeltaVisitor() {
-			public boolean visit(IResourceDelta delta) {
-				
-				// Check for cancellation
-				if (monitor.isCanceled()) {
-					throw new OperationCanceledException();
-				}
-				
-				// Do we want to bother further? 
-				if (!isBuildable(delta.getResource())) {
-					return true;
-				}
-				IFile file = (IFile)delta.getResource(); 
-				
-				int kind = delta.getKind();
-				int flags = delta.getFlags();
-				int mask_new = IResourceDelta.COPIED_FROM | IResourceDelta.MOVED_FROM;
-				int mask_change = IResourceDelta.CONTENT;
-				
-				// Only build if new or changed
-				boolean isAddOrEdit = false;
-				if (kind == IResourceDelta.ADDED || (flags & mask_new) == mask_new) {
-					isAddOrEdit = true;
-				}
-				else if (kind == IResourceDelta.CHANGED && (flags & mask_change) == mask_change) {
-					isAddOrEdit = true;
-				}
-				if (isAddOrEdit) {
-					buildFile(file);
-					String moduleName = file.getName().substring(0, file.getName().length()-file.getFileExtension().length()-1);
-					changedFiles.add(moduleName);
-				}
-				
-				// Visit children too
-				return true;
-			}
-		});
-/*
-		// Second pass: go through ALL project source files, and if their tags refer to anything in
-		// the first pass, then build them too
-		if (!buildDependents) return;
-		log.info("Inferred build on dependents of changed files");
-		getProject().accept(new IResourceVisitor() {
-			public boolean visit(IResource resource) {
-				// Check for cancellation
-				if (monitor.isCanceled()) {
-					throw new OperationCanceledException();
-				}
-				// Build
-				if (isBuildable(resource)) {
-					IFile file = (IFile) resource;
-					Set<String> imports = GFBuilderHelper.getFileImports(file);
-					if (imports == null) {
-						buildFile((IFile) resource);
-						return true;
-					}
-					for (String s : changedFiles) {
-						if (imports.contains(s)) {
-							buildFile((IFile) resource);
-							break;
-						}
-					}
-				}
-				// Visit children too
-				return true;
-			}
-		});
-*/
 	}
 
 	/**
@@ -265,6 +179,144 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			});
 		}
 		
+	}
+
+	/**
+	 * Incremental build when build files are specified
+	 * For each build file, see if any of the files in the delta are in the build files imports
+	 * If so then build the build file (never attempt to build a file not in the build files!)
+	 *
+	 * @param delta the delta
+	 * @param monitor the monitor
+	 * @throws CoreException 
+	 */
+	private void intelliBuild(final IResourceDelta projectDelta, final IProgressMonitor monitor) throws OperationCanceledException, CoreException {
+		log.info("Intelligent build on: " + projectDelta.getResource().getName());
+		
+		// Iterate over build files
+		for (int i = 0; i < buildFiles.length; i++) {
+			IFile buildFile = buildFiles[i];			                       
+
+			// Check for cancellation
+			if (monitor.isCanceled()) {
+				throw new OperationCanceledException();
+			}
+
+			// Get imports of build file
+			Set<String> imports = GFBuilderHelper.getFileImports(buildFile);
+
+			// Iterate over delta files
+			IResourceDelta[] deltas = projectDelta.getAffectedChildren(IResourceDelta.ADDED | IResourceDelta.CHANGED, IResource.FILE);
+			for (int j = 0; j < deltas.length; j++) {
+				IResource res = deltas[j].getResource();			                       			                       
+				if (!isBuildable(res)) {
+					continue;
+				}
+				IFile deltaFile = (IFile)res;
+				if (imports.contains(deltaFile.getName())) { // TODO very artificial test! DEBUG THIS JOHN
+					buildFile(buildFile);
+					break;
+				}
+			}
+		}
+
+	}
+
+	/**
+	 * Incremental build (when no build files are specified)
+	 * Just attempt to build everything
+	 *
+	 * @param delta the delta
+	 * @param monitor the monitor
+	 * @throws CoreException 
+	 */
+	private void incrementalBuild(final IResourceDelta projectDelta, final IProgressMonitor monitor) throws OperationCanceledException, CoreException {
+		log.info("Incremental build on: " + projectDelta.getResource().getName());
+		
+		// First pass: rebuild changed files and remember them
+		final Set<String> changedFiles = new HashSet<String>();
+		projectDelta.accept(new IResourceDeltaVisitor() {
+			public boolean visit(IResourceDelta delta) {
+				
+				// Check for cancellation
+				if (monitor.isCanceled()) {
+					throw new OperationCanceledException();
+				}
+				
+				// Do we want to bother further? 
+				if (!isBuildable(delta.getResource())) {
+					return true;
+				}
+				IFile file = (IFile)delta.getResource(); 
+				
+				int kind = delta.getKind();
+				int flags = delta.getFlags();
+				int mask_new = IResourceDelta.COPIED_FROM | IResourceDelta.MOVED_FROM;
+				int mask_change = IResourceDelta.CONTENT;
+				
+				// Only build if new or changed
+				boolean isAddOrEdit = false;
+				if (kind == IResourceDelta.ADDED || (flags & mask_new) == mask_new) {
+					isAddOrEdit = true;
+				}
+				else if (kind == IResourceDelta.CHANGED && (flags & mask_change) == mask_change) {
+					isAddOrEdit = true;
+				}
+
+				// If we have some build files selected, use those (only compiling those actually changed)
+				boolean isInBuildFiles = false;
+				if (buildFiles.length > 0) {
+					for (int i = 0; i < buildFiles.length; i++) {
+						if (file.equals(buildFiles[i])) {
+							isInBuildFiles = true;
+							break;
+						}
+					}
+				} else {
+					isInBuildFiles = true;
+				}
+				
+				if (isAddOrEdit && isInBuildFiles) {
+					buildFile(file);
+					String moduleName = file.getName().substring(0, file.getName().length()-file.getFileExtension().length()-1);
+					changedFiles.add(moduleName);
+				}
+				
+				// Visit children too
+				return true;
+			}
+		});
+/*
+		// Second pass: go through ALL project source files, and if their tags refer to anything in
+		// the first pass, then build them too
+		if (!buildDependents) return;
+		log.info("Inferred build on dependents of changed files");
+		getProject().accept(new IResourceVisitor() {
+			public boolean visit(IResource resource) {
+				// Check for cancellation
+				if (monitor.isCanceled()) {
+					throw new OperationCanceledException();
+				}
+				// Build
+				if (isBuildable(resource)) {
+					IFile file = (IFile) resource;
+					Set<String> imports = GFBuilderHelper.getFileImports(file);
+					if (imports == null) {
+						buildFile((IFile) resource);
+						return true;
+					}
+					for (String s : changedFiles) {
+						if (imports.contains(s)) {
+							buildFile((IFile) resource);
+							break;
+						}
+					}
+				}
+				// Visit children too
+				return true;
+			}
+		});
+*/
 	}
 	
 	/**

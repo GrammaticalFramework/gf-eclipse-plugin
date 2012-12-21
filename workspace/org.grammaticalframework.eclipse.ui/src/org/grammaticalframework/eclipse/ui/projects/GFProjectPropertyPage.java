@@ -4,6 +4,8 @@ import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.IncrementalProjectBuilder;
+import org.eclipse.core.runtime.CoreException;
 import org.eclipse.jface.viewers.CheckboxTreeViewer;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.Viewer;
@@ -30,6 +32,8 @@ public class GFProjectPropertyPage extends PropertyPage {
 
 	private static final String FILES_TITLE = "Select top-level modules for compilation:";
 
+	private IProject project;
+
 	private CheckboxTreeViewer fileViewer;
 
 	@Inject
@@ -47,6 +51,8 @@ public class GFProjectPropertyPage extends PropertyPage {
 	 * @see PreferencePage#createContents(Composite)
 	 */
 	protected Control createContents(Composite parent) {
+		project = (IProject)getElement();
+
 		Composite container = new Composite(parent, SWT.NULL);
 		GridLayout layout = new GridLayout();
 		container.setLayout(layout);
@@ -116,7 +122,7 @@ public class GFProjectPropertyPage extends PropertyPage {
         fileViewer.setInput(this.getElement());
         
         // Set persisted options
-        IFile[] sel = GFBuilderHelper.getBuildFiles((IProject)getElement());
+        IFile[] sel = GFBuilderHelper.getBuildFiles(project);
         fileViewer.setCheckedElements(sel);
         
         expandButton = new Button(c, SWT.PUSH);
@@ -139,9 +145,21 @@ public class GFProjectPropertyPage extends PropertyPage {
 		super.performDefaults();
 		fileViewer.setCheckedElements(new Object[0]);
 	}
+	
+	private void invokeBuild() {
+		getShell().getDisplay().asyncExec(new Runnable() {
+			public void run() {
+				try {
+					project.build(IncrementalProjectBuilder.FULL_BUILD, null);
+				} catch (CoreException e) {
+				}
+			}
+		});
+	}
 
 	public boolean performOk() {
-		GFBuilderHelper.setBuildFiles((IProject)getElement(), fileViewer.getCheckedElements());
+		GFBuilderHelper.setBuildFiles(project, fileViewer.getCheckedElements());
+		invokeBuild();
 		return true;
 	}
 
