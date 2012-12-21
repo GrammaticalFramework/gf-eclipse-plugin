@@ -14,13 +14,16 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.QualifiedName;
 import org.eclipse.emf.common.util.URI;
 import org.grammaticalframework.eclipse.scoping.GFTagsFileException;
@@ -157,12 +160,14 @@ public class GFBuilderHelper {
 		}
 	}
 	
+	// General qualifier for stuff we do here
+	private static String qual = "org.grammaticalframework.eclipse";
 	
 	/**
 	 * To aid the build process, we save a list of all modulenames a file imports using
 	 * the Eclipse IResource properties. These methods are all concerned with this.
 	 */
-	private static QualifiedName importsPropertyKey = new QualifiedName("org.grammaticalframework.eclipse", "imports");
+	private static QualifiedName importsPropertyKey = new QualifiedName(qual, "imports");
 	public static Set<String> getFileImports(IResource file) {
 		try {
 			@SuppressWarnings("unchecked")
@@ -188,6 +193,65 @@ public class GFBuilderHelper {
 		} catch (CoreException e) {
 			
 		}		
+	}
+
+	// Prefix for storing names of build files (as specified from UI)
+	private static final String BUILD_FILES_PROPERTY_PREFIX = "BUILD-FILE_";
+	
+	/**
+	 * Get list of selected files from persistent storage
+	 * @return
+	 */
+	public static IFile[] getBuildFiles(IProject project) {
+		ArrayList<IFile> elems = new ArrayList<IFile>(); 
+		try {
+			int i = 0;
+			while(true) {
+				String key = BUILD_FILES_PROPERTY_PREFIX + i;
+				QualifiedName qname = new QualifiedName(qual, key);
+				String s = project.getPersistentProperty(qname);
+				if (s == null) break;
+				elems.add(project.getFile(Path.fromPortableString(s)));
+				i++;
+			}
+		} catch (CoreException e) {
+		}
+		return elems.toArray(new IFile[elems.size()]);
+	}
+	
+	/**
+	 * Persist chosen files from tree
+	 * @param elems
+	 */
+	public static void setBuildFiles(IProject project, Object[] elems) {
+		clearBuildFiles(project);
+		try {
+			for (int i = 0; i < elems.length; i++) {
+				IFile file = (IFile) elems[i];
+				String key = BUILD_FILES_PROPERTY_PREFIX + i;
+				QualifiedName qname = new QualifiedName(qual, key);
+				project.setPersistentProperty(qname, file.getProjectRelativePath().toPortableString());
+			}
+		} catch (CoreException e) {
+		}
+	}
+
+	/**
+	 * Clear all saved files
+	 */
+	private static void clearBuildFiles(IProject project) {
+		try {
+			int i = 0;
+			while(true) {
+				String key = BUILD_FILES_PROPERTY_PREFIX + i;
+				QualifiedName qname = new QualifiedName(qual, key);
+				if (null==project.getPersistentProperty(qname))
+					break;
+				project.setPersistentProperty(qname, null);
+				i++;
+			}
+		} catch (CoreException e) {
+		}
 	}
 	
 }

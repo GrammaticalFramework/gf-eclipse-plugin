@@ -1,14 +1,9 @@
 package org.grammaticalframework.eclipse.ui.projects;
 
-import java.util.ArrayList;
-
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.core.runtime.QualifiedName;
 import org.eclipse.jface.viewers.CheckboxTreeViewer;
 import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.Viewer;
@@ -26,6 +21,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.dialogs.PropertyPage;
 import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
+import org.grammaticalframework.eclipse.builder.GFBuilderHelper;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 
 import com.google.inject.Inject;
@@ -33,7 +29,6 @@ import com.google.inject.Inject;
 public class GFProjectPropertyPage extends PropertyPage {
 
 	private static final String FILES_TITLE = "Select top-level modules for compilation:";
-	private static final String FILES_PROPERTY_PREFIX = "FILE_";
 
 	private CheckboxTreeViewer fileViewer;
 
@@ -121,7 +116,7 @@ public class GFProjectPropertyPage extends PropertyPage {
         fileViewer.setInput(this.getElement());
         
         // Set persisted options
-        IFile[] sel = getFiles();
+        IFile[] sel = GFBuilderHelper.getBuildFiles((IProject)getElement());
         fileViewer.setCheckedElements(sel);
         
         expandButton = new Button(c, SWT.PUSH);
@@ -139,53 +134,6 @@ public class GFProjectPropertyPage extends PropertyPage {
 		});
 	}
 
-	// Persist chosen files from tree
-	private void setFiles(Object[] elems) {
-		IProject project = (IProject) getElement();
-		try {
-			for (int i = 0; i < elems.length; i++) {
-				IFile file = (IFile) elems[i];
-				String key = FILES_PROPERTY_PREFIX + i;
-				project.setPersistentProperty(new QualifiedName("", key), file.getProjectRelativePath().toPortableString());
-			}
-		} catch (CoreException e) {
-		}
-	}
-
-	// Clear all saved files
-	private void clearFiles() {
-		IProject project = (IProject) getElement();
-		try {
-			int i = 0;
-			while(true) {
-				String key = FILES_PROPERTY_PREFIX + i;
-				if (null==project.getPersistentProperty(new QualifiedName("", key)))
-					break;
-				project.setPersistentProperty(new QualifiedName("", key), null);
-				i++;
-			}
-		} catch (CoreException e) {
-		}
-	}
-
-	// Get list of selected files from persistent storage
-	public IFile[] getFiles() {
-		IProject project = (IProject) getElement();
-		ArrayList<IFile> elems = new ArrayList<IFile>(); 
-		try {
-			int i = 0;
-			while(true) {
-				String key = FILES_PROPERTY_PREFIX + i;
-				String s = project.getPersistentProperty(new QualifiedName("", key));
-				if (s == null) break;
-				elems.add(project.getFile(Path.fromPortableString(s)));
-				i++;
-			}
-		} catch (CoreException e) {
-		}
-		return elems.toArray(new IFile[elems.size()]);
-	}
-
 	// Uncheck elements (but only saved if we click OK)
 	protected void performDefaults() {
 		super.performDefaults();
@@ -193,8 +141,7 @@ public class GFProjectPropertyPage extends PropertyPage {
 	}
 
 	public boolean performOk() {
-		clearFiles();
-		setFiles(fileViewer.getCheckedElements());
+		GFBuilderHelper.setBuildFiles((IProject)getElement(), fileViewer.getCheckedElements());
 		return true;
 	}
 
