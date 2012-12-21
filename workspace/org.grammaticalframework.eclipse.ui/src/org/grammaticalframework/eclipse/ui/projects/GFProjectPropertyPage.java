@@ -1,41 +1,45 @@
 package org.grammaticalframework.eclipse.ui.projects;
 
+import java.util.ArrayList;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.runtime.CoreException;
+import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.QualifiedName;
+import org.eclipse.jface.viewers.CheckboxTreeViewer;
 import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.jface.viewers.TreeViewer;
 import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.custom.ScrolledComposite;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Text;
 import org.eclipse.ui.dialogs.PropertyPage;
 import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
-import org.grammaticalframework.eclipse.treebank.GFTestHelper;
 import org.grammaticalframework.eclipse.ui.labeling.GFImages;
 
 import com.google.inject.Inject;
 
 public class GFProjectPropertyPage extends PropertyPage {
 
-	private static final String FILES_TITLE = "Select top-level modules:";
-	private static final String FILES_PROPERTY = "FILES";
+	private static final String FILES_TITLE = "Select top-level modules for compilation:";
+	private static final String FILES_PROPERTY_PREFIX = "FILE_";
 
-	private TreeViewer fileViewer;
+	private CheckboxTreeViewer fileViewer;
 
 	@Inject
 	private GFImages images;
+	private Button expandButton;
 
 	/**
 	 * Constructor for GFProjectPropertyPage
@@ -44,13 +48,20 @@ public class GFProjectPropertyPage extends PropertyPage {
 		super();
 	}
 
-//	private void addSeparator(Composite parent) {
-//		Label separator = new Label(parent, SWT.SEPARATOR | SWT.HORIZONTAL);
-//		GridData gridData = new GridData();
-//		gridData.horizontalAlignment = GridData.FILL;
-//		gridData.grabExcessHorizontalSpace = true;
-//		separator.setLayoutData(gridData);
-//	}
+	/**
+	 * @see PreferencePage#createContents(Composite)
+	 */
+	protected Control createContents(Composite parent) {
+		Composite container = new Composite(parent, SWT.NULL);
+		GridLayout layout = new GridLayout();
+		container.setLayout(layout);
+		layout.numColumns = 1;
+
+		new Label(container, SWT.NULL).setText(FILES_TITLE);
+		configureFilesViewer(container);
+
+		return container;
+	}
 
 	/**
 	 * Setup the input file viewer
@@ -78,7 +89,6 @@ public class GFProjectPropertyPage extends PropertyPage {
 				return false;
 			}
 		};
-		
 		LabelProvider labelProvider = new LabelProvider() {
 			@Override
 			public Image getImage(Object element) {
@@ -97,60 +107,94 @@ public class GFProjectPropertyPage extends PropertyPage {
 			}
 		};
 		
-        fileViewer = new TreeViewer(parent, SWT.MULTI | SWT.CHECK | SWT.NO_SCROLL);
+		Composite c = new Composite(parent, SWT.NULL);
+		c.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+		GridLayout layout = new GridLayout();
+		c.setLayout(layout);
+		layout.numColumns = 2;
+		
+        fileViewer = new CheckboxTreeViewer(c, SWT.MULTI | SWT.FULL_SELECTION | SWT.BORDER );
         fileViewer.setContentProvider(contentProvider);
         fileViewer.setFilters(new ViewerFilter[]{filter});
-        fileViewer.setAutoExpandLevel(TreeViewer.ALL_LEVELS);
         fileViewer.setLabelProvider(labelProvider);
-//        fileViewer.getTree().setLayoutData(new GridData(200,200));
-        
-        // Set input
+        fileViewer.getTree().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
         fileViewer.setInput(this.getElement());
+        
+        // Set persisted options
+        IFile[] sel = getFiles();
+        fileViewer.setCheckedElements(sel);
+        
+        expandButton = new Button(c, SWT.PUSH);
+        expandButton.setImage(images.forExpandAll());
+        expandButton.setToolTipText("Expand all");
+        expandButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false));
+        expandButton.addSelectionListener(new SelectionListener() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				fileViewer.expandAll();
+			}
+			@Override
+			public void widgetDefaultSelected(SelectionEvent e) {
+			}
+		});
 	}
 
-	public String getFiles() {
+	// Persist chosen files from tree
+	private void setFiles(Object[] elems) {
+		IProject project = (IProject) getElement();
 		try {
-			String s =
-				((IResource) getElement()).getPersistentProperty(
-					new QualifiedName("", FILES_PROPERTY));
-			return s;
+			for (int i = 0; i < elems.length; i++) {
+				IFile file = (IFile) elems[i];
+				String key = FILES_PROPERTY_PREFIX + i;
+				project.setPersistentProperty(new QualifiedName("", key), file.getProjectRelativePath().toPortableString());
+			}
 		} catch (CoreException e) {
-			return "";
 		}
 	}
 
-	/**
-	 * @see PreferencePage#createContents(Composite)
-	 */
-	protected Control createContents(Composite parent) {
-		Composite container = new Composite(parent, SWT.NULL);
-		GridLayout layout = new GridLayout();
-		container.setLayout(layout);
-		layout.numColumns = 1;
-
-		new Label(container, SWT.NULL).setText(FILES_TITLE);
-		
-		Composite sc1 = new Composite(container, SWT.H_SCROLL | SWT.V_SCROLL | SWT.BORDER);
-		sc1.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-		configureFilesViewer(sc1);
-//		configureFilesViewer(container);
-
-		return container;
+	// Clear all saved files
+	private void clearFiles() {
+		IProject project = (IProject) getElement();
+		try {
+			int i = 0;
+			while(true) {
+				String key = FILES_PROPERTY_PREFIX + i;
+				if (null==project.getPersistentProperty(new QualifiedName("", key)))
+					break;
+				project.setPersistentProperty(new QualifiedName("", key), null);
+				i++;
+			}
+		} catch (CoreException e) {
+		}
 	}
 
+	// Get list of selected files from persistent storage
+	public IFile[] getFiles() {
+		IProject project = (IProject) getElement();
+		ArrayList<IFile> elems = new ArrayList<IFile>(); 
+		try {
+			int i = 0;
+			while(true) {
+				String key = FILES_PROPERTY_PREFIX + i;
+				String s = project.getPersistentProperty(new QualifiedName("", key));
+				if (s == null) break;
+				elems.add(project.getFile(Path.fromPortableString(s)));
+				i++;
+			}
+		} catch (CoreException e) {
+		}
+		return elems.toArray(new IFile[elems.size()]);
+	}
+
+	// Uncheck elements (but only saved if we click OK)
 	protected void performDefaults() {
 		super.performDefaults();
+		fileViewer.setCheckedElements(new Object[0]);
 	}
-	
+
 	public boolean performOk() {
-		// store the value in the owner text field
-//		try {
-//			((IResource) getElement()).setPersistentProperty(
-//				new QualifiedName("", FILES_PROPERTY),
-//				filesText.getText());
-//		} catch (CoreException e) {
-//			return false;
-//		}
+		clearFiles();
+		setFiles(fileViewer.getCheckedElements());
 		return true;
 	}
 
