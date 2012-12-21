@@ -76,11 +76,12 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	private static final Boolean CLEAN_BEFORE_BUILD = false;
 
 	/**
-	 * The GF paths.
+	 * Settings for during the build process
 	 */
 	private String gfPath;
 	private String gfLibPath;
 	private Boolean buildDependents;
+	private IFile[] buildFiles;
 	
 	/**
 	 * For avoiding duplicate work
@@ -105,12 +106,19 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 		gfLibPath = GFPreferences.getLibraryPath();
 		buildDependents = GFPreferences.getBuildDependents();
+		buildFiles = GFBuilderHelper.getBuildFiles(getProject());
 		
 		// Record start time
 		buildStartTime = new Date().getTime();
 		
+
 		try {
-			switch (kind) {
+			// If we have build files, always do a full build
+			if (buildFiles.length > 0) {
+				fullBuild(monitor);
+			}
+			// Else look at the build kind 
+			else switch (kind) {
 			case IncrementalProjectBuilder.FULL_BUILD:
 				fullBuild(monitor);
 				break;
@@ -168,14 +176,15 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				int mask_new = IResourceDelta.COPIED_FROM | IResourceDelta.MOVED_FROM;
 				int mask_change = IResourceDelta.CONTENT;
 				
-				boolean build = false;
+				// Only build if new or changed
+				boolean isAddOrEdit = false;
 				if (kind == IResourceDelta.ADDED || (flags & mask_new) == mask_new) {
-					build = true;
+					isAddOrEdit = true;
 				}
 				else if (kind == IResourceDelta.CHANGED && (flags & mask_change) == mask_change) {
-					build = true;
+					isAddOrEdit = true;
 				}
-				if (build) {
+				if (isAddOrEdit) {
 					buildFile(file);
 					String moduleName = file.getName().substring(0, file.getName().length()-file.getFileExtension().length()-1);
 					changedFiles.add(moduleName);
@@ -185,8 +194,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				return true;
 			}
 		});
-		
-		// Second pass: go through ALL project source files, and if their tags refer to anything in 
+/*
+		// Second pass: go through ALL project source files, and if their tags refer to anything in
+		// the first pass, then build them too
 		if (!buildDependents) return;
 		log.info("Inferred build on dependents of changed files");
 		getProject().accept(new IResourceVisitor() {
@@ -214,8 +224,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				return true;
 			}
 		});
+*/
 	}
-
 
 	/**
 	 * Full build.
@@ -225,20 +235,36 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private void fullBuild(final IProgressMonitor monitor) throws OperationCanceledException, CoreException {
 		log.info("Full build on: " + getProject().getName());
-		getProject().accept(new IResourceVisitor() {
-			public boolean visit(IResource resource) {
+		
+		// If we have some build files selected, use those
+		if (buildFiles.length > 0) {
+			for (int i = 0; i < buildFiles.length; i++) {
 				// Check for cancellation
 				if (monitor.isCanceled()) {
 					throw new OperationCanceledException();
 				}
 				// Build
-				if (isBuildable(resource)) {
-					buildFile((IFile) resource);
-				}
-				// Visit children too
-				return true;
+				buildFile(buildFiles[i]);
 			}
-		});
+		}
+		// Otherwise visit every file in project
+		else {
+			getProject().accept(new IResourceVisitor() {
+				public boolean visit(IResource resource) {
+					// Check for cancellation
+					if (monitor.isCanceled()) {
+						throw new OperationCanceledException();
+					}
+					// Build
+					if (isBuildable(resource)) {
+						buildFile((IFile) resource);
+					}
+					// Visit children too
+					return true;
+				}
+			});
+		}
+		
 	}
 	
 	/**
