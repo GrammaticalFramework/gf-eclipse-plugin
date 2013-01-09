@@ -101,12 +101,18 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		// Get some prefs
 		gfPath = GFPreferences.getRuntimePath();
 		if (gfPath == null || gfPath.trim().isEmpty()) {
-			log.error("GF path not specified");
+			log.error("GF path not specified. Please check your preferences.");
 			return null;
 		}
 		gfLibPath = GFPreferences.getLibraryPath();
 		buildDependents = GFPreferences.getBuildDependents();
 		buildFiles = GFBuilderHelper.getBuildFiles(getProject());
+		
+		// Test GF path
+		if (!checkGFPath()) {
+			log.error("GF path '"+gfPath+"' is not valid/executable. Please check your preferences.");
+			return null;
+		}
 		
 		// Record start time
 		buildStartTime = new Date().getTime();
@@ -122,7 +128,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				if (delta == null) {
 					fullBuild(monitor);
 				} else if (buildFiles.length > 0) {
-					intelliBuild(delta, monitor);
+					guidedBuild(delta, monitor);
 				} else {
 					incrementalBuild(delta, monitor);
 				}
@@ -190,34 +196,42 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param monitor the monitor
 	 * @throws CoreException 
 	 */
-	private void intelliBuild(final IResourceDelta projectDelta, final IProgressMonitor monitor) throws OperationCanceledException, CoreException {
-		log.info("Intelligent build on: " + projectDelta.getResource().getName());
+	private void guidedBuild(final IResourceDelta projectDelta, final IProgressMonitor monitor) throws OperationCanceledException, CoreException {
+		log.info("Guided build on: " + projectDelta.getResource().getName());
 		
 		// Iterate over build files
 		for (int i = 0; i < buildFiles.length; i++) {
-			IFile buildFile = buildFiles[i];			                       
+			final IFile buildFile = buildFiles[i];			                       
 
 			// Check for cancellation
 			if (monitor.isCanceled()) {
 				throw new OperationCanceledException();
 			}
 
-			// Get imports of build file
-			Set<String> imports = GFBuilderHelper.getFileImports(buildFile);
-
-			// Iterate over delta files
-			IResourceDelta[] deltas = projectDelta.getAffectedChildren(IResourceDelta.ADDED | IResourceDelta.CHANGED, IResource.FILE);
-			for (int j = 0; j < deltas.length; j++) {
-				IResource res = deltas[j].getResource();			                       			                       
-				if (!isBuildable(res)) {
-					continue;
-				}
-				IFile deltaFile = (IFile)res;
-				if (imports.contains(deltaFile.getName())) { // TODO very artificial test! DEBUG THIS JOHN
-					buildFile(buildFile);
-					break;
-				}
+			// Get dependencies of build file - if null then always build
+//			Set<String> imports = GFBuilderHelper.getFileImports(buildFile);
+			final Set<String> dependencies = GFBuilderHelper.getDependenciesFromTagsFile(buildFile);
+			if (dependencies == null) {
+				buildFile(buildFile);
+				continue;
 			}
+
+			// Visit all affected files
+			projectDelta.accept(new IResourceDeltaVisitor() {
+				public boolean visit(IResourceDelta delta) {
+					IResource res = delta.getResource();			                       			                       
+					if (isBuildable(res)) {
+						IFile deltaFile = (IFile)res;
+						// This check is weak, but quick and in the worst case just results in
+						// slightly over-zealous building.
+						if (dependencies.contains(GFBuilderHelper.getModuleNameFromFile(deltaFile))) {
+							buildFile(buildFile);
+							return false; // stop visitor
+						}
+					}
+					return true; // Visit children too
+				}
+			});
 		}
 
 	}
@@ -417,6 +431,48 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			return false;
 		}
 	}
+
+	/**
+	 * Test if path to GF executable is correct and runnable
+	 *
+	 * @return true, if GF can be run OK
+	 */
+	private boolean checkGFPath() {
+		try {
+			// Put together call
+			ArrayList<String> command = new ArrayList<String>();
+			command.add(gfPath);
+			command.add("--version");
+
+			// Execute command
+			ProcessBuilder pbTags = new ProcessBuilder(command);
+			pbTags.redirectErrorStream(false);
+			Process procTags = pbTags.start();
+			
+			// Consume & log all output
+			BufferedReader processOutput = new BufferedReader(new InputStreamReader(procTags.getInputStream()));
+			String out_str;
+			StringBuilder out = new StringBuilder();
+			while ((out_str = processOutput.readLine()) != null) {
+				out.append(out_str);
+			}
+			
+			// If compile failed, parse error messages and add markers
+			if (procTags.waitFor() == 0) {
+				return true;
+			} else {
+				return false;
+			}
+
+		} catch (IOException e) {
+//			log.error("GF test failed");
+			return false;
+		} catch (InterruptedException e) {
+			log.error("GF test interrupted");
+			return false;
+		}
+
+	}
 	
 	/**
 	 * Build an individual file, including pre & post tasks
@@ -444,7 +500,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		buildFileTags(file);
 		
 		// Process tags file and save imports
-		Set<String> imports = GFBuilderHelper.getImportsFromTagsFile(file);
+		Set<String> imports = GFBuilderHelper.getDependenciesFromTagsFile(file);
 		GFBuilderHelper.saveFileImports(file, imports);
 	}
 	

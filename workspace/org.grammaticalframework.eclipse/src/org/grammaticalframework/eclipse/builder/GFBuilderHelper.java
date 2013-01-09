@@ -89,11 +89,27 @@ public class GFBuilderHelper {
 	}
 	
 	/**
-	 * Read tags file for a source module and return a list of the modules it imports/opens
+	 * Get module name from file name (just removes it's extension)
 	 * @param file
 	 * @return
 	 */
-	public static Set<String> getImportsFromTagsFile(IFile file) {
+	public static String getModuleNameFromFile(IFile file) {
+		String f = file.getName();
+		String e = file.getFileExtension();
+		if (e != null)
+			return f.replace("."+e, "");
+		else
+			return f;
+	}
+	
+	/**
+	 * Read tags file for a source module and return a list of the modules it depends upon.
+	 * Since we are using the tags file, the dependencies are infinitely deep.
+	 * 
+	 * @param file
+	 * @return
+	 */
+	public static Set<String> getDependenciesFromTagsFile(IFile file) {
 		boolean includeSelf = false;
 		String tagsFileName = getTagsFileNameRelative(file.getName());
 		try {
