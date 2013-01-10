@@ -494,15 +494,45 @@ For all bug reports and feature requests, please use the [GitHub Issue Tracker](
 
 Description of the GF module types and their icons within the GF Eclipse Plugin.
 
-| Icon | Description | Notes |
-|:----:|:------------|:------|
-|![](http://www.grammaticalframework.org/eclipse/images/module-abstract.png)  | Abstract module |`abstract Foods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-concrete.png)  | Concrete module |`concrete FoodsEng of Foods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-resource.png)  | Resource module |`resource ResFoods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-interface.png)  | Interface |`interface LexFoods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-instance.png)  | Instance |`instance LexFoodsEng of LexFoods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-functor.png)  | Functor |`incomplete concrete FoodsI of Foods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-functor-instantiation.png)  | Functor instantiation |`concrete FoodsEng of Foods = FoodsI with (...) {...}`|
++----------------------------------------------------------------------------------------+-------------+-----------+
+|Icon                                                                                    |Description  |Notes      |
++========================================================================================+=============+===========+
+|![](http://www.grammaticalframework.org/eclipse/images/module-abstract.png)             |Abstract     |`abstract  |
+|                                                                                        |module       |Foods =    |
+|                                                                                        |             |{...}`     |
++----------------------------------------------------------------------------------------+-------------+-----------+
+|![](http://www.grammaticalframework.org/eclipse/images/module-concrete.png)             |Concrete     |`concrete  |
+|                                                                                        |module       |FoodsEng   |
+|                                                                                        |             |of Foods = |
+|                                                                                        |             |{...}`     |
++----------------------------------------------------------------------------------------+-------------+-----------+
+|![](http://www.grammaticalframework.org/eclipse/images/module-resource.png)             |Resource     |`resource  |
+|                                                                                        |module       |ResFoods = |
+|                                                                                        |             |{...}`     |
++----------------------------------------------------------------------------------------+-------------+-----------+
+|![](http://www.grammaticalframework.org/eclipse/images/module-interface.png)            |Interface    |`interface |
+|                                                                                        |             |LexFoods = |
+|                                                                                        |             |{...}`     |
++----------------------------------------------------------------------------------------+-------------+-----------+
+|![](http://www.grammaticalframework.org/eclipse/images/module-instance.png)             |Instance     |`instance  |
+|                                                                                        |             |LexFoodsEng|
+|                                                                                        |             |of LexFoods|
+|                                                                                        |             |= {...}`   |
++----------------------------------------------------------------------------------------+-------------+-----------+
+|![](http://www.grammaticalframework.org/eclipse/images/module-functor.png)              |Functor      |`incomplete|
+|                                                                                        |             |concrete   |
+|                                                                                        |             |FoodsI of  |
+|                                                                                        |             |Foods =    |
+|                                                                                        |             |{...}`     |
++----------------------------------------------------------------------------------------+-------------+-----------+
+|![](http://www.grammaticalframework.org/eclipse/images/module-functor-instantiation.png)|Functor      |`concrete  |
+|                                                                                        |instantiation|FoodsEng of|
+|                                                                                        |             |Foods =    |
+|                                                                                        |             |FoodsI with|
+|                                                                                        |             |(...)      |
+|                                                                                        |             |{...}`     |
++----------------------------------------------------------------------------------------+-------------+-----------+
+
 
 ### Build command
 
