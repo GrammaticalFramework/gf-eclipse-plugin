@@ -146,7 +146,7 @@ The path should include the name of the GF binary itself, e.g. `/home/john/.caba
 You should enter an absolute system path, up to and including the `src` folder, e.g. `/home/john/GF/lib/src/` or `C:\Users\John\GF\lib\src\`.
 1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
 
-![Plugin preferences window](http://www.grammaticalframework.org/eclipse/images/eclipse-preferences.png)
+![Plugin preferences window](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-preferences.png)
 
 ### Updating the plugin
 
@@ -190,7 +190,7 @@ Your `.project` file should include the GF Builder as follows:
 
 As of GFEP &ge; 1.5.2, you are now able to explicitly which modules in your GF project should be built by the builder. This would normally contain your "top-level" modules. This can be done right-clicking on your project in the Project Explorer and choosing **Properties &rarr; GF Build Settings**. From here you simply tick which modules in your project the GF builder should compile:
 
-![Project-specific build settings](http://www.grammaticalframework.org/eclipse/images/eclipse-project-build-settings.png)
+![Project-specific build settings](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-project-build-settings.png)
 
 <!----------------------------------------------------------------------------->
 
@@ -246,29 +246,29 @@ You will probably want to ignore these directories in your version control syste
 ### Create a new GF Project
 If you have a folder in your workspace which you want to convert into a GF Project, then you can select it from the drop-down. This folder will then appear as an Eclipse project in your workspace.
 
-![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-1.png)
-![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-2.png)
+![New project wizard](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-projectwizard-1.png)
+![New project wizard](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-projectwizard-2.png)
 
 ### New module wizard
 Use the **GF Module** wizard from **File &rarr; New &rarr; Other &rarr; GF Module**:
 
-![New module wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-modulewizard-1.png)
+![New module wizard](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-modulewizard-1.png)
 
 You can find some small examples [here](https://github.com/GrammaticalFramework/gf-eclipse-plugin/tree/master/workspace-demo/GF%20Project). Download the files and manually add them to your Eclipse workspace to experiment with some of the plugin features.
 
 ### Clone module wizard
 If you want to clone an existing module into a new language, you can now do so via the **Clone GF Module** wizard. This is also available as a context menu option in the **Project Explorer**, via **&lt;Right click&gt; &rarr; Grammatical Framework &rarr; Compile for new language**:
 
-![Clone GF module to new language wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-clonewizard.png)
+![Clone GF module to new language wizard](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-clonewizard.png)
 
 This will create and open a new module with the relevant replacements made. Note how in this case string constants are replaced by the empty string `""`. This wizard currently only works on `concrete` and `instance` modules.
 
-![Newly cloned file](http://www.grammaticalframework.org/eclipse/images/eclipse-clonewizard-newfile.png)
+![Newly cloned file](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-clonewizard-newfile.png)
 
 ### Workbench editor layout
 Use Eclipse' own features to drag and drop your editor tabs to suit your needs.
 
-![The editor and outline view](http://www.grammaticalframework.org/eclipse/images/eclipse-editor-general.png)
+![The editor and outline view](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-editor-general.png)
 
 ### Outline view
 The **Outline** view in the bottom-left offers a quite overview of your module structure. Clicking any of the terms will make your cursor jump to that point in the file.
@@ -276,7 +276,7 @@ The **Outline** view in the bottom-left offers a quite overview of your module s
 ### Cross-referencing errors and warnings
 Notice how changing a `cat` definition for example will produce warnings and/or errors in other the modules.
 
-![Warnings and errors in the editor](http://www.grammaticalframework.org/eclipse/images/eclipse-editor-cat.png)
+![Warnings and errors in the editor](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-editor-cat.png)
 
 ### Validation
 The in-editor validation sometimes needs to be triggered/updated by a keystroke. If you can still see errors which you believe should be correct, try adding a space character to ensure the validation is re-triggered.
@@ -290,21 +290,21 @@ Each time you save a file (or some other change occurs in your project), the bui
 ### Code formatting
 Use the built-in code formatter to tidy your code automatically. Right-click in the editor and choose **Format** or use the keyboard shortcut **Ctrl+Shift+F**.
 
-![Before auto-formatting](http://www.grammaticalframework.org/eclipse/images/eclipse-before-format.png) ![After auto-formatting](http://www.grammaticalframework.org/eclipse/images/eclipse-after-format.png)
+![Before auto-formatting](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-before-format.png) ![After auto-formatting](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-after-format.png)
 
 ### Syntax highlighting
 You can change your syntax colouring styles as you wish from **Preferences &rarr; Grammatical Framework &rarr; Syntax Coloring**
 
-![Syntax highlighting styles](http://www.grammaticalframework.org/eclipse/images/eclipse-syntaxcoloring.png)
+![Syntax highlighting styles](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-syntaxcoloring.png)
 
 ### Launch configurations
 Set up a launch configuration from **Run &rarr; Run Configurations... &rarr; Grammatical Framework**. You will see the dialog below with some fields automatically filled in for you. 
 
-![Launch configuration dialog](http://www.grammaticalframework.org/eclipse/images/eclipse-launchconfig.png)
+![Launch configuration dialog](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-launchconfig.png)
 
 Run the launch config and you will see the output from the GF compiler in the console view within Eclipse.
 
-![Output from the GF compiler](http://www.grammaticalframework.org/eclipse/images/eclipse-compileroutput.png)
+![Output from the GF compiler](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-compileroutput.png)
 
 #### Run As... launch shortcut
 Using the **Run &rarr; Run As &rarr; Compile with GF** shortcut will take the current selection or active editor and do one of two things:
@@ -319,11 +319,11 @@ Additionally, every time a grammar is **Run** a _new_ console is opened to displ
 
 Eclipse does not make it obvious when multiple console windows open; click on the **Display Selected Console** button to switch between open consoles:
 
-![Display Selected Console icon](http://www.grammaticalframework.org/eclipse/images/eclipse-console-icon.png)
+![Display Selected Console icon](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-console-icon.png)
 
 If the process associated with a console window has terminated, it will be indicated in the upper-left corner as below. Such console windows can then be closed using the grey cross button:
 
-![Close terminated console icon](http://www.grammaticalframework.org/eclipse/images/eclipse-console-terminated.png)
+![Close terminated console icon](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-console-terminated.png)
 
 _The Eclipse console implementation does not support command history (up arrow) or auto-completion (tab)._
 
@@ -332,7 +332,7 @@ This view is automatically populated with a list of all the external modules ref
 
 This view also provides a text box for searching within the current module's scope, as shown in the image below. Clicking the small arrow on the right-hand side of the view provides options for case sensitive and/or regular-expression based search.
 
-![External libraries view](http://www.grammaticalframework.org/eclipse/images/eclipse-external-libraries.png)
+![External libraries view](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-external-libraries.png)
 
 ### _Test Manager_ view
 This feature works together with the launch configurations to make the process of running regression tests on your grammars quick and easy. As described in the [GF Book](http://www.grammaticalframework.org/gf-book/) (Section 10.5), the general development-test cycle (independent of GFEP) is as follows:
@@ -344,7 +344,7 @@ This feature works together with the launch configurations to make the process o
 
 The **Test Manager** view follows this same pattern but provides a convenient graphical interface for running your test cases and also for looking at the output, just using a few clicks:
 
-![Test Manager view](http://www.grammaticalframework.org/eclipse/images/eclipse-test-manager.png)
+![Test Manager view](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-test-manager.png)
 
 Note that GFEP assumes the following convention:
 
@@ -504,13 +504,13 @@ Description of the GF module types and their icons within the GF Eclipse Plugin.
 
 | Icon | Description | Notes |
 |:----|:------------|:------|
-|![](http://www.grammaticalframework.org/eclipse/images/module-abstract.png)| Abstract module |`abstract Foods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-concrete.png)| Concrete module |`concrete FoodsEng of Foods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-resource.png)| Resource module |`resource ResFoods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-interface.png)| Interface |`interface LexFoods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-instance.png)| Instance |`instance LexFoodsEng of LexFoods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-functor.png)| Functor |`incomplete concrete FoodsI of Foods = {...}`|
-|![](http://www.grammaticalframework.org/eclipse/images/module-functor-instantiation.png)| Functor instantiation |`concrete FoodsEng of Foods = FoodsI with (...) {...}`|
+|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-abstract.png)| Abstract module |`abstract Foods = {...}`|
+|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-concrete.png)| Concrete module |`concrete FoodsEng of Foods = {...}`|
+|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-resource.png)| Resource module |`resource ResFoods = {...}`|
+|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-interface.png)| Interface |`interface LexFoods = {...}`|
+|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-instance.png)| Instance |`instance LexFoodsEng of LexFoods = {...}`|
+|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-functor.png)| Functor |`incomplete concrete FoodsI of Foods = {...}`|
+|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-functor-instantiation.png)| Functor instantiation |`concrete FoodsEng of Foods = FoodsI with (...) {...}`|
 
 ### Build command
 
