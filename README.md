@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John J. Camilleri  
-Updated: 10 July 2012
+Updated: 10 January 2013
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -20,7 +20,7 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 ### Links
 
 - This document shall contain all collected information about the plugin. The most up-to-date version of this file can always be found [here](https://github.com/GrammaticalFramework/gf-eclipse-plugin/blob/master/README.md)
-- This documentation is also available at the [MOLTO Project Wiki](http://www.molto-project.eu/node/1395).
+- This documentation is also available at the [GF website](http://www.grammaticalframework.org/eclipse/) and the [MOLTO Project Wiki](http://www.molto-project.eu/node/1395).
 - Source code repository is at [github.com/GrammaticalFramework/gf-eclipse-plugin](https://github.com/GrammaticalFramework/gf-eclipse-plugin)
 - For reporting bugs and requesting features, please use the [GitHub Issue Tracker](https://github.com/GrammaticalFramework/gf-eclipse-plugin/issues)
 - Here are some [example GF projects](https://github.com/GrammaticalFramework/gf-eclipse-plugin/tree/master/workspace-demo/GF%20Project) for testing out the plugin features.
@@ -49,6 +49,9 @@ _Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL
 - External library browser
 
 ## Release history
+
+**10/01/13**
+: (1.5.2.x) New option for specifying build files.
 
 **12/06/12**
 : (1.5.1.x) Support for scoping when library sources not available. Performance and implementational improvements to External Library View.
@@ -132,7 +135,7 @@ How to find the **Eclipse preferences** window depends on your Eclipse version a
 1. Accept the prompt warning that the software is unsigned.
 1. Restart Eclipse when prompted.
 
-#### Settings
+#### Settings &amp; preferences
 
 1. Add the GF perspective by clicking **Window &rarr; Open Perspective &rarr; Other** and choosing **GF**.
 1. Open the plugin settings by going to **Preferences &rarr; Grammatical Framework** (image below).
@@ -152,7 +155,7 @@ You should enter an absolute system path, up to and including the `src` folder, 
 
 _Note:_ You will probably want to uncheck the **Contact all update sites during install to find required software** option, which is not usually needed when simply updating the plugin (it makes things go a lot slower).
 
-#### Deprecated stuff
+#### Deprecations
 
 - Any folders `.gfexternal` can safely deleted as of GFEP &ge; 1.5. Using Eclipse's **Clean** function from the **Run** menu will do this for you automatically.
 - If your project has a folder named `(External)` you can safely delete this **via the Eclipse Project Explorer**. It is no longer used in GFEP &ge; 1.2.3
@@ -183,6 +186,11 @@ Your `.project` file should include the GF Builder as follows:
       </buildCommand>
     </buildSpec>
 
+#### Specifying build files (guided build)
+
+As of GFEP &ge; 1.5.2, you are now able to explicitly which modules in your GF project should be built by the builder. This would normally contain your "top-level" modules. This can be done right-clicking on your project in the Project Explorer and choosing **Properties &rarr; GF Build Settings**. From here you simply tick which modules in your project the GF builder should compile:
+
+![Project-specific build settings](http://www.grammaticalframework.org/eclipse/images/eclipse-project-build-settings.png)
 
 <!----------------------------------------------------------------------------->
 
@@ -494,45 +502,15 @@ For all bug reports and feature requests, please use the [GitHub Issue Tracker](
 
 Description of the GF module types and their icons within the GF Eclipse Plugin.
 
-+----------------------------------------------------------------------------------------+-------------+-----------+
-|Icon                                                                                    |Description  |Notes      |
-+========================================================================================+=============+===========+
-|![](http://www.grammaticalframework.org/eclipse/images/module-abstract.png)             |Abstract     |`abstract  |
-|                                                                                        |module       |Foods =    |
-|                                                                                        |             |{...}`     |
-+----------------------------------------------------------------------------------------+-------------+-----------+
-|![](http://www.grammaticalframework.org/eclipse/images/module-concrete.png)             |Concrete     |`concrete  |
-|                                                                                        |module       |FoodsEng   |
-|                                                                                        |             |of Foods = |
-|                                                                                        |             |{...}`     |
-+----------------------------------------------------------------------------------------+-------------+-----------+
-|![](http://www.grammaticalframework.org/eclipse/images/module-resource.png)             |Resource     |`resource  |
-|                                                                                        |module       |ResFoods = |
-|                                                                                        |             |{...}`     |
-+----------------------------------------------------------------------------------------+-------------+-----------+
-|![](http://www.grammaticalframework.org/eclipse/images/module-interface.png)            |Interface    |`interface |
-|                                                                                        |             |LexFoods = |
-|                                                                                        |             |{...}`     |
-+----------------------------------------------------------------------------------------+-------------+-----------+
-|![](http://www.grammaticalframework.org/eclipse/images/module-instance.png)             |Instance     |`instance  |
-|                                                                                        |             |LexFoodsEng|
-|                                                                                        |             |of LexFoods|
-|                                                                                        |             |= {...}`   |
-+----------------------------------------------------------------------------------------+-------------+-----------+
-|![](http://www.grammaticalframework.org/eclipse/images/module-functor.png)              |Functor      |`incomplete|
-|                                                                                        |             |concrete   |
-|                                                                                        |             |FoodsI of  |
-|                                                                                        |             |Foods =    |
-|                                                                                        |             |{...}`     |
-+----------------------------------------------------------------------------------------+-------------+-----------+
-|![](http://www.grammaticalframework.org/eclipse/images/module-functor-instantiation.png)|Functor      |`concrete  |
-|                                                                                        |instantiation|FoodsEng of|
-|                                                                                        |             |Foods =    |
-|                                                                                        |             |FoodsI with|
-|                                                                                        |             |(...)      |
-|                                                                                        |             |{...}`     |
-+----------------------------------------------------------------------------------------+-------------+-----------+
-
+| Icon | Description | Notes |
+|:----|:------------|:------|
+|![](http://www.grammaticalframework.org/eclipse/images/module-abstract.png)  | Abstract module |`abstract Foods = {...}`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-concrete.png)  | Concrete module |`concrete FoodsEng of Foods = {...}`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-resource.png)  | Resource module |`resource ResFoods = {...}`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-interface.png)  | Interface |`interface LexFoods = {...}`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-instance.png)  | Instance |`instance LexFoodsEng of LexFoods = {...}`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-functor.png)  | Functor |`incomplete concrete FoodsI of Foods = {...}`|
+|![](http://www.grammaticalframework.org/eclipse/images/module-functor-instantiation.png)  | Functor instantiation |`concrete FoodsEng of Foods = FoodsI with (...) {...}`|
 
 ### Build command
 
