@@ -1,3 +1,12 @@
+<html>
+<head>
+<title>GF Eclipse Plugin</title>
+<link rel="stylesheet" type="text/css" href="http://www.grammaticalframework.org/css/style.css" />
+<meta name="viewport" content="width=device-width" />
+</head>
+<body>
+
+
 # The GF Eclipse Plugin
 
 John J. Camilleri  
@@ -503,3 +512,6 @@ This is the GF command run by the builder:
 
     gf --v=0 --tags --output-dir=.gfbuild [--path=PATH] FILE
 
+
+</body>
+</html>
