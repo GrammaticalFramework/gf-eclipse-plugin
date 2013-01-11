@@ -427,27 +427,14 @@ Once you have Xtext set up, you can clone the repository locally with the follow
 You can then add the projects under the `workspace` directory to your Eclipse workspace, by using the **File &rarr; Import...** wizard.
 The individual projects are:
 
-**`org.grammaticalframework.eclipse`**
-: Main plugin which covers all parsing and linking behaviour.
-
-**`org.grammaticalframework.eclipse.ui`**
-: Covers all UI aspects of the plugin. Depends on `org.grammaticalframework.eclipse` (but the opposite is not true).
-
-**`org.grammaticalframework.eclipse.tests`**
-: Contains unit tests for the plugin. Not required for running the plugin.
-
-**`org.grammaticalframework.eclipse.ontology-grammar`**
-: GF Ontology Grammar Plugin for Eclipse, developed separately by Ontotext AD.
-
-**`org.grammaticalframework.feature`**
-: Feature project for the GF Eclipse Plugin. Exports `org.grammaticalframework.eclipse` and `org.grammaticalframework.eclipse.ui`.
-
-**`org.grammaticalframework.feature.ontology-grammar`**
-: Feature project for the GF Ontology Grammar Plugin. Exports `org.grammaticalframework.eclipse.ontology-grammar`.
-
-**`org.grammaticalframework.updatesite`**
-: Update site project which exports both feature projects under the same category.
-
+|Namespace|Description|
+|:--------|:----------|
+|`org.grammaticalframework.eclipse.ui`|Covers all UI aspects of the plugin. Depends on `org.grammaticalframework.eclipse` (but the opposite is not true).|
+|`org.grammaticalframework.eclipse.tests`|Contains unit tests for the plugin. Not required for running the plugin.|
+|`org.grammaticalframework.eclipse.ontology-grammar`|GF Ontology Grammar Plugin for Eclipse, developed separately by Ontotext AD.|
+|`org.grammaticalframework.feature`|Feature project for the GF Eclipse Plugin. Exports `org.grammaticalframework.eclipse` and `org.grammaticalframework.eclipse.ui`.|
+|`org.grammaticalframework.feature.ontology-grammar`|Feature project for the GF Ontology Grammar Plugin. Exports `org.grammaticalframework.eclipse.ontology-grammar`.|
+|`org.grammaticalframework.updatesite`|Update site project which exports both feature projects under the same category.|
 
 #### Extra dependencies for unit testing project
 
