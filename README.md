@@ -50,7 +50,7 @@ _Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://
 
 ## Release history
 
-**10/01/13**
+**11/01/13**
 : (1.5.2.x) New option for specifying build files.
 
 **12/06/12**
@@ -192,6 +192,8 @@ As of GFEP &ge; 1.5.2, you are now able to explicitly which modules in your GF p
 
 ![Project-specific build settings](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-project-build-settings.png)
 
+When doing this, GFEP will never attempt to compile any other files in the project. Whenever you add a new top-level module or change your module hierarchy, be sure to check these build settings again.
+
 <!----------------------------------------------------------------------------->
 
 ## Getting started
@@ -293,7 +295,7 @@ Use the built-in code formatter to tidy your code automatically. Right-click in 
 ![Before auto-formatting](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-before-format.png) ![After auto-formatting](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-after-format.png)
 
 ### Syntax highlighting
-You can change your syntax colouring styles as you wish from **Preferences &rarr; Grammatical Framework &rarr; Syntax Coloring**
+You can change your syntax colouring styles as you wish from **Preferences &rarr; Grammatical Framework &rarr; Syntax Colouring**
 
 ![Syntax highlighting styles](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-syntaxcoloring.png)
 
