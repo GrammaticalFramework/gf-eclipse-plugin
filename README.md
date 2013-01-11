@@ -247,11 +247,7 @@ You will probably want to ignore these directories in your version control syste
 If you have a folder in your workspace which you want to convert into a GF Project, then you can select it from the drop-down. This folder will then appear as an Eclipse project in your workspace.
 
 ![New project wizard](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-projectwizard-1.png)
-<<<<<<< HEAD
 ![New project wizard](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-projectwizard-2.png)
-=======
-![New project wizard](http://www.grammaticalframework.org/eclipse/images/eclipse-projectwizard-2.png)
->>>>>>> c755ed11c5802412c4264086d08cd9a39c91e88f
 
 ### New module wizard
 Use the **GF Module** wizard from **File &rarr; New &rarr; Other &rarr; GF Module**:
@@ -294,11 +290,7 @@ Each time you save a file (or some other change occurs in your project), the bui
 ### Code formatting
 Use the built-in code formatter to tidy your code automatically. Right-click in the editor and choose **Format** or use the keyboard shortcut **Ctrl+Shift+F**.
 
-<<<<<<< HEAD
 ![Before auto-formatting](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-before-format.png) ![After auto-formatting](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-after-format.png)
-=======
-![Before auto-formatting](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-before-format.png) ![After auto-formatting](http://www.grammaticalframework.org/eclipse/images/eclipse-after-format.png)
->>>>>>> c755ed11c5802412c4264086d08cd9a39c91e88f
 
 ### Syntax highlighting
 You can change your syntax colouring styles as you wish from **Preferences &rarr; Grammatical Framework &rarr; Syntax Coloring**
