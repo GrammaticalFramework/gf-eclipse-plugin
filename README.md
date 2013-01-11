@@ -1,7 +1,7 @@
 # The GF Eclipse Plugin
 
 John J. Camilleri  
-Updated: 10 January 2013
+Updated: 11 January 2013
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -14,8 +14,8 @@ The choice was made to develop this desktop IDE as a plugin for the Eclipse Plat
 ### License
 
 The GF Eclipse Plugin is open-source under the **[GNU General Public License (GPL)](http://www.gnu.org/licenses/gpl-3.0.txt)**.  
-_The licenses that cover the rest of GF are listed [here](http://www.grammaticalframework.org/LICENSE)._  
-_Note that Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://www.eclipse.org/legal/epl-v10.html)._
+_The licenses that cover the rest of GF are listed [here](http://www.grammaticalframework.org/LICENSE)._
+_Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://www.eclipse.org/legal/epl-v10.html)._
 
 ### Links
 
@@ -348,15 +348,11 @@ The **Test Manager** view follows this same pattern but provides a convenient gr
 
 Note that GFEP assumes the following convention:
 
-`*.trees` or `*.sentences`
-: Test input files: trees file (for testing linearisation) and sentences file (for testing parsing)
-
-`*.trees.out` or `*.sentences.out`
-: Corresponding output files (generated each time a test is run)
-
-`*.trees.gold` or `*.sentences.gold`
-: Corresponding gold standard files (manually corrected from an output file)
-
+| Extension                            | Description                                                                                       |
+|--------------------------------------+---------------------------------------------------------------------------------------------------|
+| `*.trees` or `*.sentences`           | Test input files: trees file (for testing linearisation) and sentences file (for testing parsing) |
+| `*.trees.out` or `*.sentences.out`   | Corresponding output files (generated each time a test is run)                                    |
+| `*.trees.gold` or `*.sentences.gold` | Corresponding gold standard files (manually corrected from an output file)                        |
 
 ### Logs
 The GFEP writes to the Eclipse platform log. This can be accessed in two ways:
@@ -419,14 +415,14 @@ Once you have Xtext set up, you can clone the repository locally with the follow
 You can then add the projects under the `workspace` directory to your Eclipse workspace, by using the **File &rarr; Import...** wizard.
 The individual projects are:
 
-|Namespace|Description|
-|:--------|:----------|
-|`org.grammaticalframework.eclipse.ui`|Covers all UI aspects of the plugin. Depends on `org.grammaticalframework.eclipse` (but the opposite is not true).|
-|`org.grammaticalframework.eclipse.tests`|Contains unit tests for the plugin. Not required for running the plugin.|
-|`org.grammaticalframework.eclipse.ontology-grammar`|GF Ontology Grammar Plugin for Eclipse, developed separately by Ontotext AD.|
-|`org.grammaticalframework.feature`|Feature project for the GF Eclipse Plugin. Exports `org.grammaticalframework.eclipse` and `org.grammaticalframework.eclipse.ui`.|
-|`org.grammaticalframework.feature.ontology-grammar`|Feature project for the GF Ontology Grammar Plugin. Exports `org.grammaticalframework.eclipse.ontology-grammar`.|
-|`org.grammaticalframework.updatesite`|Update site project which exports both feature projects under the same category.|
+| Namespace                                           | Description                                                                                                                      |
+|-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+| `org.grammaticalframework.eclipse.ui`               | Covers all UI aspects of the plugin. Depends on `org.grammaticalframework.eclipse` (but the opposite is not true).               |
+| `org.grammaticalframework.eclipse.tests`            | Contains unit tests for the plugin. Not required for running the plugin.                                                         |
+| `org.grammaticalframework.eclipse.ontology-grammar` | GF Ontology Grammar Plugin for Eclipse, developed separately by Ontotext AD.                                                     |
+| `org.grammaticalframework.feature`                  | Feature project for the GF Eclipse Plugin. Exports `org.grammaticalframework.eclipse` and `org.grammaticalframework.eclipse.ui`. |
+| `org.grammaticalframework.feature.ontology-grammar` | Feature project for the GF Ontology Grammar Plugin. Exports `org.grammaticalframework.eclipse.ontology-grammar`.                 |
+| `org.grammaticalframework.updatesite`               | Update site project which exports both feature projects under the same category.                                                 |
 
 #### Extra dependencies for unit testing project
 
@@ -489,15 +485,15 @@ For all bug reports and feature requests, please use the [GitHub Issue Tracker](
 
 Description of the GF module types and their icons within the GF Eclipse Plugin.
 
-| Icon | Description | Notes |
-|:----|:------------|:------|
-|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-abstract.png)| Abstract module |`abstract Foods = {...}`|
-|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-concrete.png)| Concrete module |`concrete FoodsEng of Foods = {...}`|
-|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-resource.png)| Resource module |`resource ResFoods = {...}`|
-|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-interface.png)| Interface |`interface LexFoods = {...}`|
-|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-instance.png)| Instance |`instance LexFoodsEng of LexFoods = {...}`|
-|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-functor.png)| Functor |`incomplete concrete FoodsI of Foods = {...}`|
-|![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-functor-instantiation.png)| Functor instantiation |`concrete FoodsEng of Foods = FoodsI with (...) {...}`|
+| Icon                                                                                                                  | Description           | Notes                                                  |
+|-----------------------------------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------|
+| ![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-abstract.png)              | Abstract module       | `abstract Foods = {...}`                               |
+| ![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-concrete.png)              | Concrete module       | `concrete FoodsEng of Foods = {...}`                   |
+| ![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-resource.png)              | Resource module       | `resource ResFoods = {...}`                            |
+| ![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-interface.png)             | Interface             | `interface LexFoods = {...}`                           |
+| ![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-instance.png)              | Instance              | `instance LexFoodsEng of LexFoods = {...}`             |
+| ![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-functor.png)               | Functor               | `incomplete concrete FoodsI of Foods = {...}`          |
+| ![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-functor-instantiation.png) | Functor instantiation | `concrete FoodsEng of Foods = FoodsI with (...) {...}` |
 
 ### Build command
 
