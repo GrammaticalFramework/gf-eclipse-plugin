@@ -351,7 +351,7 @@ The **Test Manager** view follows this same pattern but provides a convenient gr
 Note that GFEP assumes the following convention:
 
 | Extension                            | Description                                                                                       |
-|--------------------------------------+---------------------------------------------------------------------------------------------------|
+|--------------------------------------|---------------------------------------------------------------------------------------------------|
 | `*.trees` or `*.sentences`           | Test input files: trees file (for testing linearisation) and sentences file (for testing parsing) |
 | `*.trees.out` or `*.sentences.out`   | Corresponding output files (generated each time a test is run)                                    |
 | `*.trees.gold` or `*.sentences.gold` | Corresponding gold standard files (manually corrected from an output file)                        |
@@ -418,7 +418,7 @@ You can then add the projects under the `workspace` directory to your Eclipse wo
 The individual projects are:
 
 | Namespace                                           | Description                                                                                                                      |
-|-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------|
+|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | `org.grammaticalframework.eclipse.ui`               | Covers all UI aspects of the plugin. Depends on `org.grammaticalframework.eclipse` (but the opposite is not true).               |
 | `org.grammaticalframework.eclipse.tests`            | Contains unit tests for the plugin. Not required for running the plugin.                                                         |
 | `org.grammaticalframework.eclipse.ontology-grammar` | GF Ontology Grammar Plugin for Eclipse, developed separately by Ontotext AD.                                                     |
@@ -488,7 +488,7 @@ For all bug reports and feature requests, please use the [GitHub Issue Tracker](
 Description of the GF module types and their icons within the GF Eclipse Plugin.
 
 | Icon                                                                                                                  | Description           | Notes                                                  |
-|-----------------------------------------------------------------------------------------------------------------------+-----------------------+--------------------------------------------------------|
+|-----------------------------------------------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------|
 | ![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-abstract.png)              | Abstract module       | `abstract Foods = {...}`                               |
 | ![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-concrete.png)              | Concrete module       | `concrete FoodsEng of Foods = {...}`                   |
 | ![](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/module-resource.png)              | Resource module       | `resource ResFoods = {...}`                            |
