@@ -16,6 +16,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -82,6 +83,8 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	private String gfLibPath;
 	private Boolean buildDependents;
 	private IFile[] buildFiles;
+	private HashSet<IFile> buildFilesSet;
+	private Boolean buildFilesInclusiveMode;
 	
 	/**
 	 * For avoiding duplicate work
@@ -107,6 +110,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		gfLibPath = GFPreferences.getLibraryPath();
 		buildDependents = GFPreferences.getBuildDependents();
 		buildFiles = GFBuilderHelper.getBuildFiles(getProject());
+		buildFilesSet = new HashSet<IFile>(buildFiles.length);
+		for (int i = 0; i < buildFiles.length; i++) {
+			buildFilesSet.add(buildFiles[i]);
+		}
+		buildFilesInclusiveMode = GFBuilderHelper.getBuildFileInclusiveMode(getProject());
 		
 		// Test GF path
 		if (!checkGFPath()) {
@@ -127,7 +135,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				IResourceDelta delta = getDelta(getProject());
 				if (delta == null) {
 					fullBuild(monitor);
-				} else if (buildFiles.length > 0) {
+				} else if (buildFilesInclusiveMode && buildFiles.length > 0) {
 					guidedBuild(delta, monitor);
 				} else {
 					incrementalBuild(delta, monitor);
@@ -157,14 +165,16 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		log.info("Full build on: " + getProject().getName());
 		
 		// If we have some build files selected, use those
-		if (buildFiles.length > 0) {
+		if (buildFilesInclusiveMode && buildFiles.length > 0) {
 			for (int i = 0; i < buildFiles.length; i++) {
 				// Check for cancellation
 				if (monitor.isCanceled()) {
 					throw new OperationCanceledException();
 				}
 				// Build
-				buildFile(buildFiles[i]);
+				if (isBuildable(buildFiles[i])) {
+					buildFile(buildFiles[i]);
+				}
 			}
 		}
 		// Otherwise visit every file in project
@@ -188,7 +198,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	}
 
 	/**
-	 * Incremental build when build files are specified
+	 * Incremental build when (inclusive) build files are specified
 	 * For each build file, see if any of the files in the delta are in the build files imports
 	 * If so then build the build file (never attempt to build a file not in the build files!)
 	 *
@@ -277,20 +287,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					isAddOrEdit = true;
 				}
 
-				// If we have some build files selected, use those (only compiling those actually changed)
-				boolean isInBuildFiles = false;
-				if (buildFiles.length > 0) {
-					for (int i = 0; i < buildFiles.length; i++) {
-						if (file.equals(buildFiles[i])) {
-							isInBuildFiles = true;
-							break;
-						}
-					}
-				} else {
-					isInBuildFiles = true;
-				}
-				
-				if (isAddOrEdit && isInBuildFiles) {
+				if (isAddOrEdit && !isExcluded(file)) {
 					buildFile(file);
 					String moduleName = file.getName().substring(0, file.getName().length()-file.getFileExtension().length()-1);
 					changedFiles.add(moduleName);
@@ -418,7 +415,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * Determine if a resource should be built, based on its properties.
 	 *
 	 * @param resource the resource
-	 * @return true, if this is a source fiel which should be built
+	 * @return true, if this is a source file which should be built
 	 */
 	private boolean isBuildable(IResource resource) {
 		try {
@@ -426,9 +423,29 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			boolean isGF = resource.getFileExtension().equals("gf");
 			boolean notInBuildFolder = !resource.getParent().getName().equals(GFBuilder.BUILD_FOLDER);
 			boolean notInExternalFolder = !resource.getParent().getName().equals(GFBuilder.EXTERNAL_FOLDER);
-			return isFile && isGF && notInBuildFolder && notInExternalFolder;
-		} catch (NullPointerException _) {
+			if (isFile && isGF && notInBuildFolder && notInExternalFolder) {
+				IFile file = (IFile)resource;
+				if (isExcluded(file)) {
+					log.info("Skipping: " + file.getFullPath());
+					return false;
+				}
+				else { return true; }
+			}
+		} catch (NullPointerException _) { }
+		return false;
+	}
+
+	/**
+	 * Determine if a resource is in an exclusion list
+	 *
+	 * @param resource the resource
+	 * @return true, if this is a source file which should be excluded
+	 */
+	private boolean isExcluded(IFile file) {
+		if (buildFilesInclusiveMode || buildFiles.length == 0) {
 			return false;
+		} else {
+			return buildFilesSet.contains(file);
 		}
 	}
 

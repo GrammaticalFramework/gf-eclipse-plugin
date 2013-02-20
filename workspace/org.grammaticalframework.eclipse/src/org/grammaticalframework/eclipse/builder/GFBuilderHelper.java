@@ -22,12 +22,15 @@ import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
+import org.eclipse.core.resources.ProjectScope;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.Path;
 import org.eclipse.core.runtime.QualifiedName;
+import org.eclipse.core.runtime.preferences.IEclipsePreferences;
 import org.eclipse.emf.common.util.URI;
 import org.grammaticalframework.eclipse.scoping.GFTagsFileException;
 import org.grammaticalframework.eclipse.scoping.TagEntry;
+import org.osgi.service.prefs.BackingStoreException;
 
 public class GFBuilderHelper {
 
@@ -211,26 +214,29 @@ public class GFBuilderHelper {
 		}		
 	}
 
+	/**
+	 * Plugin ID
+	 */
+	public static final String PLUGIN_ID = "org.grammaticalframework.eclipse"; //$NON-NLS-1$
+
 	// Prefix for storing names of build files (as specified from UI)
-	private static final String BUILD_FILES_PROPERTY_PREFIX = "BUILD-FILE_";
+	private static final String BUILD_FILES_PROPERTY_PREFIX = "build.file_";
 	
 	/**
 	 * Get list of selected files from persistent storage
 	 * @return
 	 */
 	public static IFile[] getBuildFiles(IProject project) {
+		ProjectScope ps = new ProjectScope(project);
+		IEclipsePreferences prefs = ps.getNode(PLUGIN_ID);
 		ArrayList<IFile> elems = new ArrayList<IFile>(); 
-		try {
-			int i = 0;
-			while(true) {
-				String key = BUILD_FILES_PROPERTY_PREFIX + i;
-				QualifiedName qname = new QualifiedName(qual, key);
-				String s = project.getPersistentProperty(qname);
-				if (s == null) break;
-				elems.add(project.getFile(Path.fromPortableString(s)));
-				i++;
-			}
-		} catch (CoreException e) {
+		int i = 0;
+		while(true) {
+			String key = BUILD_FILES_PROPERTY_PREFIX + i;
+			String s = prefs.get(key, null);
+			if (s == null) break;
+			elems.add(project.getFile(Path.fromPortableString(s)));
+			i++;
 		}
 		return elems.toArray(new IFile[elems.size()]);
 	}
@@ -241,14 +247,18 @@ public class GFBuilderHelper {
 	 */
 	public static void setBuildFiles(IProject project, Object[] elems) {
 		clearBuildFiles(project);
+		ProjectScope ps = new ProjectScope(project);
+		IEclipsePreferences prefs = ps.getNode(PLUGIN_ID);
+		for (int i = 0; i < elems.length; i++) {
+			if (!(elems[i] instanceof IFile)) continue;
+			IFile file = (IFile) elems[i];
+			String key = BUILD_FILES_PROPERTY_PREFIX + i;
+			prefs.put(key, file.getProjectRelativePath().toPortableString());
+		}
 		try {
-			for (int i = 0; i < elems.length; i++) {
-				IFile file = (IFile) elems[i];
-				String key = BUILD_FILES_PROPERTY_PREFIX + i;
-				QualifiedName qname = new QualifiedName(qual, key);
-				project.setPersistentProperty(qname, file.getProjectRelativePath().toPortableString());
-			}
-		} catch (CoreException e) {
+			prefs.flush();
+		} catch (BackingStoreException e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -256,17 +266,52 @@ public class GFBuilderHelper {
 	 * Clear all saved files
 	 */
 	private static void clearBuildFiles(IProject project) {
+		ProjectScope ps = new ProjectScope(project);
+		IEclipsePreferences prefs = ps.getNode(PLUGIN_ID);
+		int i = 0;
+		while(true) {
+			String key = BUILD_FILES_PROPERTY_PREFIX + i;
+			if (null==prefs.get(key, null))
+				break;
+			prefs.remove(key);
+			i++;
+		}
 		try {
-			int i = 0;
-			while(true) {
-				String key = BUILD_FILES_PROPERTY_PREFIX + i;
-				QualifiedName qname = new QualifiedName(qual, key);
-				if (null==project.getPersistentProperty(qname))
-					break;
-				project.setPersistentProperty(qname, null);
-				i++;
-			}
-		} catch (CoreException e) {
+			prefs.flush();
+		} catch (BackingStoreException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Build file mode setting name
+	 */
+	private static final String BUILD_FILE_MODE_PROPERTY = "build.mode.inclusive";
+	
+	/**
+	 * Return true if build mode is set inclusive
+	 * @param project
+	 * @param inclusive Set true for inclusive, false otherwise
+	 */
+	public static Boolean getBuildFileInclusiveMode(IProject project) {
+		ProjectScope ps = new ProjectScope(project);
+		IEclipsePreferences prefs = ps.getNode(PLUGIN_ID);
+		return prefs.getBoolean(BUILD_FILE_MODE_PROPERTY, false);
+	}
+	
+	/**
+	 * Set build file mode to inclusive
+	 * @param project
+	 * @param inclusive Set true for inclusive, false otherwise
+	 */
+	public static void setBuildFileInclusiveMode(IProject project, Boolean inclusive) {
+		try {
+			ProjectScope ps = new ProjectScope(project);
+			IEclipsePreferences prefs = ps.getNode(PLUGIN_ID);
+			prefs.putBoolean(BUILD_FILE_MODE_PROPERTY, inclusive);
+			prefs.flush();
+		} catch (BackingStoreException e) {
+			e.printStackTrace();
 		}
 	}
 	

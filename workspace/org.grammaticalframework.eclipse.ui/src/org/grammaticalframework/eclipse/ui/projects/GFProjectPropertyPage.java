@@ -14,6 +14,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -31,6 +32,8 @@ import com.google.inject.Inject;
 public class GFProjectPropertyPage extends PropertyPage {
 
 	private static final String FILES_TITLE = "Select top-level modules for compilation:";
+	private static final String INCLUDE_TEXT = "Build only selected top-level modules" ;
+	private static final String EXCLUDE_TEXT = "Don't build selected files" ;
 
 	private IProject project;
 
@@ -39,6 +42,11 @@ public class GFProjectPropertyPage extends PropertyPage {
 	@Inject
 	private GFImages images;
 	private Button expandButton;
+	private Button selectAllButton;
+	private Button deselectAllButton;
+	
+	private Button includeButton;
+	private Button excludeButton;
 
 	/**
 	 * Constructor for GFProjectPropertyPage
@@ -58,7 +66,18 @@ public class GFProjectPropertyPage extends PropertyPage {
 		container.setLayout(layout);
 		layout.numColumns = 1;
 
-		new Label(container, SWT.NULL).setText(FILES_TITLE);
+//		new Label(container, SWT.NULL).setText(FILES_TITLE);
+		
+		includeButton = new Button(container, SWT.RADIO);
+		includeButton.setText(INCLUDE_TEXT);
+		excludeButton = new Button(container, SWT.RADIO);
+		excludeButton.setText(EXCLUDE_TEXT);
+		if (GFBuilderHelper.getBuildFileInclusiveMode(project)) {
+			includeButton.setSelection(true);
+		} else {
+			excludeButton.setSelection(true);
+		}
+		
 		configureFilesViewer(container);
 
 		return container;
@@ -69,7 +88,7 @@ public class GFProjectPropertyPage extends PropertyPage {
 	 * @param parent
 	 */
 	private void configureFilesViewer(Composite parent) {
-        WorkbenchContentProvider contentProvider = new WorkbenchContentProvider();
+        final WorkbenchContentProvider contentProvider = new WorkbenchContentProvider();
         ViewerFilter filter = new ViewerFilter() {
 			@Override
 			public boolean select(Viewer viewer, Object parentElement, Object element) {
@@ -110,9 +129,7 @@ public class GFProjectPropertyPage extends PropertyPage {
 		
 		Composite c = new Composite(parent, SWT.NULL);
 		c.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-		GridLayout layout = new GridLayout();
-		c.setLayout(layout);
-		layout.numColumns = 2;
+		c.setLayout(new GridLayout(2, false));
 		
         fileViewer = new CheckboxTreeViewer(c, SWT.MULTI | SWT.FULL_SELECTION | SWT.BORDER );
         fileViewer.setContentProvider(contentProvider);
@@ -125,14 +142,48 @@ public class GFProjectPropertyPage extends PropertyPage {
         IFile[] sel = GFBuilderHelper.getBuildFiles(project);
         fileViewer.setCheckedElements(sel);
         
-        expandButton = new Button(c, SWT.PUSH);
+        // Side buttons
+		Composite right = new Composite(c, SWT.NULL);
+		right.setLayout(new FillLayout(SWT.VERTICAL));
+        
+        expandButton = new Button(right, SWT.PUSH);
         expandButton.setImage(images.forExpandAll());
+        expandButton.setText("Expand all");
         expandButton.setToolTipText("Expand all");
-        expandButton.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false));
         expandButton.addSelectionListener(new SelectionListener() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				fileViewer.expandAll();
+			}
+			@Override
+			public void widgetDefaultSelected(SelectionEvent e) {
+			}
+		});
+        
+        selectAllButton = new Button(right, SWT.PUSH);
+        selectAllButton.setText("Select all");
+        selectAllButton.addSelectionListener(new SelectionListener() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				fileViewer.expandAll();
+				fileViewer.setAllChecked(true); // f you, that's why
+//				TreeItem[] treeItems = fileViewer.getTree().getItems();
+//				for (int i = 0; i < treeItems.length; i++) {
+//					fileViewer.setSubtreeChecked(treeItems[i], true);
+//				}
+			}
+			@Override
+			public void widgetDefaultSelected(SelectionEvent e) {
+			}
+		});
+        
+        deselectAllButton = new Button(right, SWT.PUSH);
+        deselectAllButton.setText("Deselect all");
+        deselectAllButton.addSelectionListener(new SelectionListener() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				fileViewer.expandAll();
+				fileViewer.setCheckedElements(new Object[0]);
 			}
 			@Override
 			public void widgetDefaultSelected(SelectionEvent e) {
@@ -146,6 +197,7 @@ public class GFProjectPropertyPage extends PropertyPage {
 		fileViewer.setCheckedElements(new Object[0]);
 	}
 	
+	@SuppressWarnings("unused")
 	private void invokeBuild() {
 		getShell().getDisplay().asyncExec(new Runnable() {
 			public void run() {
@@ -156,10 +208,15 @@ public class GFProjectPropertyPage extends PropertyPage {
 			}
 		});
 	}
+	
+	public void performApply() {
+		GFBuilderHelper.setBuildFiles(project, fileViewer.getCheckedElements());
+		GFBuilderHelper.setBuildFileInclusiveMode(project, includeButton.getSelection());
+	}
 
 	public boolean performOk() {
-		GFBuilderHelper.setBuildFiles(project, fileViewer.getCheckedElements());
-		invokeBuild();
+		performApply();
+//		invokeBuild();
 		return true;
 	}
 
