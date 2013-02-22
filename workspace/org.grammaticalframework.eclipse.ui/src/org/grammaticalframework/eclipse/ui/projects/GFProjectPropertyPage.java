@@ -1,6 +1,5 @@
 package org.grammaticalframework.eclipse.ui.projects;
 
-import org.apache.commons.logging.Log;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -135,7 +134,6 @@ public class GFProjectPropertyPage extends PropertyPage {
 			}
 		};
 		SelectionListener selectionListener = new SelectionListener() {
-			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if (e.item.getData() instanceof IFolder) {
 					try {
@@ -147,7 +145,6 @@ public class GFProjectPropertyPage extends PropertyPage {
 					} catch (CoreException e1) { }
 				}
 			}
-			@Override
 			public void widgetDefaultSelected(SelectionEvent e) {
 			}
 		};
@@ -177,7 +174,6 @@ public class GFProjectPropertyPage extends PropertyPage {
         expandButton.setImage(images.forExpandAll());
         expandButton.setText("Expand");
         expandButton.addSelectionListener(new SelectionListener() {
-			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if (expandButton.getSelection()) {
 					fileViewer.expandAll();
@@ -189,7 +185,6 @@ public class GFProjectPropertyPage extends PropertyPage {
 			        expandButton.setText("Expand");
 				}
 			}
-			@Override
 			public void widgetDefaultSelected(SelectionEvent e) {
 			}
 		});
@@ -198,7 +193,6 @@ public class GFProjectPropertyPage extends PropertyPage {
         selectAllButton.setText("Select all");
         selectAllButton.addSelectionListener(new SelectionListener() {
 			@SuppressWarnings("deprecation")
-			@Override
 			public void widgetSelected(SelectionEvent e) {
 				fileViewer.expandAll();
 				fileViewer.setAllChecked(true); // f you, that's why
@@ -207,7 +201,6 @@ public class GFProjectPropertyPage extends PropertyPage {
 //					fileViewer.setSubtreeChecked(treeItems[i], true);
 //				}
 			}
-			@Override
 			public void widgetDefaultSelected(SelectionEvent e) {
 			}
 		});
@@ -215,12 +208,10 @@ public class GFProjectPropertyPage extends PropertyPage {
         deselectAllButton = new Button(right, SWT.PUSH);
         deselectAllButton.setText("Deselect all");
         deselectAllButton.addSelectionListener(new SelectionListener() {
-			@Override
 			public void widgetSelected(SelectionEvent e) {
 				fileViewer.expandAll();
 				fileViewer.setCheckedElements(new Object[0]);
 			}
-			@Override
 			public void widgetDefaultSelected(SelectionEvent e) {
 			}
 		});
