@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -567,20 +568,16 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			pbTags.redirectErrorStream(false);
 			Process procTags = pbTags.start();
 			
-			// Consume & log all output
-			BufferedReader processOutput = new BufferedReader(new InputStreamReader(procTags.getInputStream()));
-			String out_str;
-			StringBuilder out = new StringBuilder();
-			while ((out_str = processOutput.readLine()) != null) {
-				out.append(out_str);
-			}
-			// TODO: What about GF warnings?
+            // Gobble out/err streams in new threads
+            StreamReader errorGobbler = new StreamReader(procTags.getErrorStream(), "ERROR");            
+            StreamReader outputGobbler = new StreamReader(procTags.getInputStream(), "OUTPUT");
+            errorGobbler.start();
+			outputGobbler.start();
 			
 			// If compile failed, parse error messages and add markers
 			if (procTags.waitFor() != 0) {
-				String message = parseGFErrorStream(file, procTags.getErrorStream());
-//				log.warn("Build failed on: "+file.getRawLocation(), new GFException(message.toString()));
-				log.warn(String.format("Build failed on: %s\n%s", file.getFullPath(), message.toString()));
+				String message = parseGFErrorStream(file, errorGobbler);
+				log.warn(String.format("Build failed on: %s\n&%s", file.getFullPath(), message));
 			} else {
 				log.info("Built: "+ file.getFullPath());
 			}
@@ -600,20 +597,10 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @param file
 	 * @param errStream
 	 */
-	private String parseGFErrorStream(IFile file, InputStream errStream) {
-		BufferedReader processError = new BufferedReader(new InputStreamReader(errStream));
-		StringBuilder errorString = new StringBuilder();
-		ArrayList<String> errorLines = new ArrayList<String>();
+	private String parseGFErrorStream(IFile file, StreamReader errorGobbler) {
+		List<String> errorLines = errorGobbler.getLines();
+		String errorString = errorGobbler.getContents();
 		try {
-			// Stick all the error message lines into an array list
-			String err_str = null;
-			while ((err_str = processError.readLine()) != null) {
-				if (!err_str.isEmpty()) {
-					errorLines.add(err_str.trim());
-					errorString.append(err_str).append("\n");
-				}
-			}
-			
 			//	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5:17:
 			//	   syntax error
 			if (errorLines.get(0).matches(".+\\.gf:(\\d+):(\\d+):.*")) {
@@ -670,8 +657,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			log.info("Unrecognized error format when building: " + file.getFullPath(), e);
 		} catch (CoreException e) {
 			log.warn("Error creating marker on: " + file.getFullPath(), e);
-		} catch (IOException e) {
-			log.warn("Error parsing error stream for: " + file.getFullPath(), e);
 		}		
 		return errorString.toString();
 	}
