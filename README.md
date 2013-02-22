@@ -10,7 +10,7 @@
 # The GF Eclipse Plugin
 
 John J. Camilleri  
-Updated: 11 January 2013
+Updated: 22 February 2013
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -59,8 +59,8 @@ _Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://
 
 ## Release history
 
-**11/01/13**
-: (1.5.2.x) New option for specifying build files.
+**22/02/13**
+: (1.5.2.x) New option for specifying include/exclude build files. Progress indicators during build.
 
 **12/06/12**
 : (1.5.1.x) Support for scoping when library sources not available. Performance and implementational improvements to External Library View.
@@ -195,9 +195,11 @@ Your `.project` file should include the GF Builder as follows:
       </buildCommand>
     </buildSpec>
 
-#### Specifying build files (guided build)
+#### Specifying build files
 
-As of GFEP &ge; 1.5.2, you are now able to explicitly which modules in your GF project should be built by the builder. This would normally contain your "top-level" modules. This can be done right-clicking on your project in the Project Explorer and choosing **Properties &rarr; GF Build Settings**. From here you simply tick which modules in your project the GF builder should compile:
+As of GFEP &ge; 1.5.2, you are now able to explicitly a set of modules in your GF project which should be either included or excluded
+from the build process.
+In the inclusive case, this would normally contain your "top-level" modules. This can be done right-clicking on your project in the Project Explorer and choosing **Properties &rarr; GF Build Settings**. From here you simply tick which modules in your project the GF builder should compile:
 
 ![Project-specific build settings](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-project-build-settings.png)
 
