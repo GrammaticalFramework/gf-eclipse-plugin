@@ -246,14 +246,16 @@ public class GFBuilderHelper {
 	 * @param elems
 	 */
 	public static void setBuildFiles(IProject project, Object[] elems) {
-		clearBuildFiles(project);
 		ProjectScope ps = new ProjectScope(project);
 		IEclipsePreferences prefs = ps.getNode(PLUGIN_ID);
+		clearBuildFiles(prefs);
+		int j = 0;
 		for (int i = 0; i < elems.length; i++) {
 			if (!(elems[i] instanceof IFile)) continue;
 			IFile file = (IFile) elems[i];
-			String key = BUILD_FILES_PROPERTY_PREFIX + i;
+			String key = BUILD_FILES_PROPERTY_PREFIX + j;
 			prefs.put(key, file.getProjectRelativePath().toPortableString());
+			j++;
 		}
 		try {
 			prefs.flush();
@@ -263,11 +265,9 @@ public class GFBuilderHelper {
 	}
 
 	/**
-	 * Clear all saved files
+	 * Clear all saved files (does not persist changes to prefs!)
 	 */
-	private static void clearBuildFiles(IProject project) {
-		ProjectScope ps = new ProjectScope(project);
-		IEclipsePreferences prefs = ps.getNode(PLUGIN_ID);
+	private static void clearBuildFiles(IEclipsePreferences prefs) {
 		int i = 0;
 		while(true) {
 			String key = BUILD_FILES_PROPERTY_PREFIX + i;
@@ -275,11 +275,6 @@ public class GFBuilderHelper {
 				break;
 			prefs.remove(key);
 			i++;
-		}
-		try {
-			prefs.flush();
-		} catch (BackingStoreException e) {
-			e.printStackTrace();
 		}
 	}
 	

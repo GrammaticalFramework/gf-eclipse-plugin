@@ -1,5 +1,6 @@
 package org.grammaticalframework.eclipse.ui.projects;
 
+import org.apache.commons.logging.Log;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -20,7 +21,6 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.ui.dialogs.PropertyPage;
 import org.eclipse.ui.model.WorkbenchContentProvider;
 import org.grammaticalframework.eclipse.builder.GFBuilder;
@@ -31,7 +31,6 @@ import com.google.inject.Inject;
 
 public class GFProjectPropertyPage extends PropertyPage {
 
-	private static final String FILES_TITLE = "Select top-level modules for compilation:";
 	private static final String INCLUDE_TEXT = "Build only selected top-level modules" ;
 	private static final String EXCLUDE_TEXT = "Don't build selected files" ;
 
@@ -92,15 +91,24 @@ public class GFProjectPropertyPage extends PropertyPage {
         ViewerFilter filter = new ViewerFilter() {
 			@Override
 			public boolean select(Viewer viewer, Object parentElement, Object element) {
-				if (element instanceof IProject) {
-					return true;//((IProject)element).equals(currentProject);
-				}
+//				if (element instanceof IProject) {
+//					return true;//((IProject)element).equals(currentProject);
+//				}
 				if (element instanceof IFolder) {
 					IFolder folder = (IFolder) element;
 					if (folder.getName().equals(GFBuilder.BUILD_FOLDER) || folder.getName().equals(GFBuilder.EXTERNAL_FOLDER))
 						return false;
-					else
-						return true;
+					else {
+						// Only select if it contains GF files (recurse)
+						try {
+							IResource[] members = folder.members();
+							for (int i = 0; i < members.length; i++) {
+								if (select(viewer, folder, members[i]))
+									return true;
+							}
+						} catch (CoreException e) {	}
+						return false;
+					}
 				}
 				if (element instanceof IFile) {
 					String ext = ((IFile)element).getFileExtension();
@@ -126,16 +134,35 @@ public class GFProjectPropertyPage extends PropertyPage {
 				return ((IResource)element).getName();
 			}
 		};
+		SelectionListener selectionListener = new SelectionListener() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if (e.item.getData() instanceof IFolder) {
+					try {
+						IResource[] kids = ((IFolder)e.item.getData()).members();
+						for (int i = 0; i < kids.length; i++) {
+							if (kids[i] instanceof IFile)
+								fileViewer.setChecked(kids[i], true);
+						}
+					} catch (CoreException e1) { }
+				}
+			}
+			@Override
+			public void widgetDefaultSelected(SelectionEvent e) {
+			}
+		};
 		
 		Composite c = new Composite(parent, SWT.NULL);
 		c.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-		c.setLayout(new GridLayout(2, false));
+		c.setLayout(new GridLayout(1, false));
 		
         fileViewer = new CheckboxTreeViewer(c, SWT.MULTI | SWT.FULL_SELECTION | SWT.BORDER );
         fileViewer.setContentProvider(contentProvider);
         fileViewer.setFilters(new ViewerFilter[]{filter});
         fileViewer.setLabelProvider(labelProvider);
+        fileViewer.getTree().addSelectionListener(selectionListener);
         fileViewer.getTree().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
+//        fileViewer.setUseHashlookup(true);
         fileViewer.setInput(this.getElement());
         
         // Set persisted options
@@ -144,16 +171,23 @@ public class GFProjectPropertyPage extends PropertyPage {
         
         // Side buttons
 		Composite right = new Composite(c, SWT.NULL);
-		right.setLayout(new FillLayout(SWT.VERTICAL));
+		right.setLayout(new FillLayout(SWT.HORIZONTAL));
         
-        expandButton = new Button(right, SWT.PUSH);
+        expandButton = new Button(right, SWT.TOGGLE);
         expandButton.setImage(images.forExpandAll());
-        expandButton.setText("Expand all");
-        expandButton.setToolTipText("Expand all");
+        expandButton.setText("Expand");
         expandButton.addSelectionListener(new SelectionListener() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				fileViewer.expandAll();
+				if (expandButton.getSelection()) {
+					fileViewer.expandAll();
+			        expandButton.setImage(images.forCollapseAll());
+			        expandButton.setText("Collapse");
+				} else {
+					fileViewer.collapseAll();
+			        expandButton.setImage(images.forExpandAll());
+			        expandButton.setText("Expand");
+				}
 			}
 			@Override
 			public void widgetDefaultSelected(SelectionEvent e) {
@@ -163,6 +197,7 @@ public class GFProjectPropertyPage extends PropertyPage {
         selectAllButton = new Button(right, SWT.PUSH);
         selectAllButton.setText("Select all");
         selectAllButton.addSelectionListener(new SelectionListener() {
+			@SuppressWarnings("deprecation")
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				fileViewer.expandAll();

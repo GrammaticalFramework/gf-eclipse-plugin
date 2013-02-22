@@ -426,7 +426,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			if (isFile && isGF && notInBuildFolder && notInExternalFolder) {
 				IFile file = (IFile)resource;
 				if (isExcluded(file)) {
-					log.info("Skipping: " + file.getFullPath());
+					log.info("Skipping excluded file: " + file.getFullPath());
 					return false;
 				}
 				else { return true; }
