@@ -12,11 +12,9 @@ package org.grammaticalframework.eclipse.builder;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -73,16 +71,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	public static final Boolean USE_GLOBAL_EXTERNAL_FOLDER = false;
 
 	/**
-	 * Clean old tags file before rebuilding?
-	 */
-	private static final Boolean CLEAN_BEFORE_BUILD = false;
-
-	/**
 	 * Settings for during the build process
 	 */
 	private String gfPath;
 	private String gfLibPath;
-	private Boolean buildDependents;
+//	private Boolean buildDependents;
 	private IFile[] buildFiles;
 	private HashSet<IFile> buildFilesSet;
 	private Boolean buildFilesInclusiveMode;
@@ -96,7 +89,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * Logger
 	 */
 	private static final Logger log = Logger.getLogger(GFBuilder.class);
-	
+
 	/**
 	 * Main build method
 	 */
@@ -109,7 +102,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			return null;
 		}
 		gfLibPath = GFPreferences.getLibraryPath();
-		buildDependents = GFPreferences.getBuildDependents();
+//		buildDependents = GFPreferences.getBuildDependents();
 		buildFiles = GFBuilderHelper.getBuildFiles(getProject());
 		buildFilesSet = new HashSet<IFile>(buildFiles.length);
 		for (int i = 0; i < buildFiles.length; i++) {
@@ -167,6 +160,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		
 		// If we have some build files selected, use those
 		if (buildFilesInclusiveMode && buildFiles.length > 0) {
+			monitor.beginTask("Building " + getProject().getName(), buildFiles.length);
 			for (int i = 0; i < buildFiles.length; i++) {
 				// Check for cancellation
 				if (monitor.isCanceled()) {
@@ -174,12 +168,17 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				}
 				// Build
 				if (isBuildable(buildFiles[i])) {
+					monitor.subTask("Building "+buildFiles[i].getName());
 					buildFile(buildFiles[i]);
+					monitor.worked(1);
 				}
 			}
+			monitor.done();
 		}
 		// Otherwise visit every file in project
 		else {
+			int total_work = GFBuilderHelper.estimateProjectSize(getProject());
+			monitor.beginTask("Building " + getProject().getName(), total_work);
 			getProject().accept(new IResourceVisitor() {
 				public boolean visit(IResource resource) {
 					// Check for cancellation
@@ -188,12 +187,16 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					}
 					// Build
 					if (isBuildable(resource)) {
+						monitor.subTask("Building "+resource.getName());
 						buildFile((IFile) resource);
+						monitor.worked(1);
 					}
+					
 					// Visit children too
 					return true;
 				}
 			});
+			monitor.done();
 		}
 		
 	}
@@ -209,6 +212,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private void guidedBuild(final IResourceDelta projectDelta, final IProgressMonitor monitor) throws OperationCanceledException, CoreException {
 		log.info("Guided build on: " + projectDelta.getResource().getName());
+		monitor.beginTask("Building " + getProject().getName(), buildFiles.length);
 		
 		// Iterate over build files
 		for (int i = 0; i < buildFiles.length; i++) {
@@ -223,7 +227,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 //			Set<String> imports = GFBuilderHelper.getFileImports(buildFile);
 			final Set<String> dependencies = GFBuilderHelper.getDependenciesFromTagsFile(buildFile);
 			if (dependencies == null) {
+				monitor.subTask("Building "+buildFile.getName());
 				buildFile(buildFile);
+				monitor.worked(1);
 				continue;
 			}
 
@@ -243,8 +249,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 					return true; // Visit children too
 				}
 			});
+			monitor.worked(1);
 		}
-
+		monitor.done();
 	}
 
 	/**
@@ -257,9 +264,12 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 */
 	private void incrementalBuild(final IResourceDelta projectDelta, final IProgressMonitor monitor) throws OperationCanceledException, CoreException {
 		log.info("Incremental build on: " + projectDelta.getResource().getName());
+
+		// For being able to measure the work completed
+		int total_work = 5; // avg size of incremental build? no way to know beforehand
+		monitor.beginTask("Building " + getProject().getName(), total_work);
 		
-		// First pass: rebuild changed files and remember them
-		final Set<String> changedFiles = new HashSet<String>();
+		// Rebuild changed files
 		projectDelta.accept(new IResourceDeltaVisitor() {
 			public boolean visit(IResourceDelta delta) {
 				
@@ -270,6 +280,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				
 				// Do we want to bother further? 
 				if (!isBuildable(delta.getResource())) {
+					monitor.worked(1);
 					return true;
 				}
 				IFile file = (IFile)delta.getResource(); 
@@ -287,48 +298,17 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				else if (kind == IResourceDelta.CHANGED && (flags & mask_change) == mask_change) {
 					isAddOrEdit = true;
 				}
-
 				if (isAddOrEdit && !isExcluded(file)) {
+					monitor.subTask("Building "+file.getName());
 					buildFile(file);
-					String moduleName = file.getName().substring(0, file.getName().length()-file.getFileExtension().length()-1);
-					changedFiles.add(moduleName);
 				}
 				
 				// Visit children too
+				monitor.worked(1);
 				return true;
 			}
 		});
-/*
-		// Second pass: go through ALL project source files, and if their tags refer to anything in
-		// the first pass, then build them too
-		if (!buildDependents) return;
-		log.info("Inferred build on dependents of changed files");
-		getProject().accept(new IResourceVisitor() {
-			public boolean visit(IResource resource) {
-				// Check for cancellation
-				if (monitor.isCanceled()) {
-					throw new OperationCanceledException();
-				}
-				// Build
-				if (isBuildable(resource)) {
-					IFile file = (IFile) resource;
-					Set<String> imports = GFBuilderHelper.getFileImports(file);
-					if (imports == null) {
-						buildFile((IFile) resource);
-						return true;
-					}
-					for (String s : changedFiles) {
-						if (imports.contains(s)) {
-							buildFile((IFile) resource);
-							break;
-						}
-					}
-				}
-				// Visit children too
-				return true;
-			}
-		});
-*/
+		monitor.done();
 	}
 	
 	/**
@@ -337,6 +317,9 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	@Override
 	protected void clean(final IProgressMonitor monitor) throws CoreException {
 		log.info("Clean on: " + getProject().getName());
+		
+		int total_work = GFBuilderHelper.estimateProjectSize(getProject());
+		monitor.beginTask("Cleaning " + getProject().getName(), total_work);
 		
 		// Delete all markers
 		getProject().deleteMarkers(null, true, IResource.DEPTH_INFINITE);
@@ -352,6 +335,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				// If it's a buildable file, then clear its 'imports' data!
 				if (isBuildable(resource)) {
 					GFBuilderHelper.clearFileImports(resource);
+					monitor.worked(1);
 					return true;
 				}
 				
@@ -389,27 +373,11 @@ public class GFBuilder extends IncrementalProjectBuilder {
 				}
 
 				// Only visit children of something not deleted
+				monitor.worked(1);
 				return !delete;
 			}
 		});		
-	}
-	
-	/**
-	 * Clean all the files in the build directory related to the given file.
-	 *
-	 * @param file the file
-	 */
-	private void cleanFile(IFile file) {
-		File tagsFile = new File( GFBuilderHelper.getTagsFileFullPath(file) );
-		if (tagsFile.exists()) {
-			try {
-				tagsFile.delete();
-				GFBuilderHelper.clearFileImports(file);
-			} catch (Exception _) {
-				
-			}
-		}
-		
+		monitor.done();
 	}
 	
 	/**
@@ -506,8 +474,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		}
 		
 		// Clean up first
-		if (CLEAN_BEFORE_BUILD)
-			cleanFile(file);
 		try {
 			file.deleteMarkers(null, true, IResource.DEPTH_ZERO);
 		} catch(CoreException e) {
@@ -577,7 +543,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			// If compile failed, parse error messages and add markers
 			if (procTags.waitFor() != 0) {
 				String message = parseGFErrorStream(file, errorGobbler);
-				log.warn(String.format("Build failed on: %s\n&%s", file.getFullPath(), message));
+				log.warn(String.format("Build failed on: %s\n%s", file.getFullPath(), message));
 			} else {
 				log.info("Built: "+ file.getFullPath());
 			}
@@ -592,8 +558,6 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	/**
 	 * Separate method for parsing the GF error stream and adding markers as necessary
 	 * 
-	 * TODO Track indentation in errors, there might be multiple separate errors!
-	 * 
 	 * @param file
 	 * @param errStream
 	 */
@@ -601,25 +565,22 @@ public class GFBuilder extends IncrementalProjectBuilder {
 		List<String> errorLines = errorGobbler.getLines();
 		String errorString = errorGobbler.getContents();
 		try {
+			// ===== First just the types of errors than only occur once =====
+
+			// module name Wkbx differs from file name Wkb
+			if (errorLines.get(0).matches("^module name (.+) differs from file name (.+)$")) {
+				setMarker(file, errorLines.get(0));
+				return errorLines.get(0);
+			}
+			
 			//	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/ResEng.gf:5:17:
 			//	   syntax error
-			if (errorLines.get(0).matches(".+\\.gf:(\\d+):(\\d+):.*")) {
+//			if (errorLines.get(0).matches(".+\\.gf:(\\d+):(\\d+):.*")) {
+			if (errorLines.size() > 1 && errorLines.get(1).equals("   syntax error")) {
 				// Don't worry about syntax errors, xtext will mark them for us
-				return errorString.toString();
+				return errorLines.get(1);
 			}
 
-			// Using XText marker type so that we get the tooltip on hover! Refer to: org.eclipse.xtext.ui.MarkerTypes
-			IMarker marker = file.createMarker("org.eclipse.xtext.ui.check.normal"); // Instead of IMarker.PROBLEM
-			marker.setAttribute(IMarker.USER_EDITABLE, false);
-			marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
-			marker.setAttribute(IMarker.LOCATION, file.getFullPath().toString());
-			
-			// Some errors are just a single error beginning with "gf:"
-			if (errorLines.get(0).matches("^gf: (.+)$")) {
-				marker.setAttribute(IMarker.MESSAGE, errorLines.get(0).substring(4));
-				return errorString.toString();
-			}
-			
 			//	File ParadXXigmsEng.gf does not exist.
 			//	searched in: ./
             //				/home/john/repositories/gf-eclipse-plugin/workspace-demo/Functors
@@ -627,39 +588,74 @@ public class GFBuilder extends IncrementalProjectBuilder {
             //				/home/john/.cabal/share/gf-3.3/lib/present
             //				/home/john/.cabal/share/gf-3.3/lib/prelude
 			if (errorLines.get(0).matches("^File (.+) does not exist.$")) {
-				marker.setAttribute(IMarker.MESSAGE, errorLines.get(0));
+				setMarker(file, errorLines.get(0));
 				return errorString.toString();
 			}
+			
+			// ===== Now the warnings than can occur more than once =====
 			
 			//	/home/john/repositories/gf-eclipse-plugin/workspace-demo/Hello/HelloEng.gf:9:
 			//	Happened in the renaming of Recipient
 			//	   constant not found: Gender
 			//	   given ResEng, HelloEng
+			int i = 0;
 			Pattern pattern = Pattern.compile("([^/\\\\]+\\.gf):(\\d+)(-(\\d+))?:$");
-			Matcher matcher = pattern.matcher(errorLines.get(0));
-			if (matcher.find()) {
-				Integer lineNo = Integer.parseInt(matcher.group(2));
-//				Integer lineTo = Integer.parseInt(matcher.group(4));
-				marker.setAttribute(IMarker.LINE_NUMBER, lineNo);
+			Matcher matcher;
+			while (i < errorLines.size()) {
+				matcher = pattern.matcher(errorLines.get(i++));
+				if (matcher.find()) {
+					Integer lineNo = Integer.parseInt(matcher.group(2));
+//					Integer lineTo = Integer.parseInt(matcher.group(4));
 
-				// Set message, skipping first line
-				StringBuilder sb = new StringBuilder();
-				for (String s : errorLines.subList(1, errorLines.size())) {
-					if (sb.length() > 0) sb.append("\n");
-					sb.append(s);
+					// Cosume message until end of indentation
+					StringBuilder sb = new StringBuilder();
+					sb.append(errorLines.get(i++));
+					while (true) {
+						if (i >= errorLines.size() || !errorLines.get(i).startsWith("   "))
+							break;
+						sb.append("\n").append(errorLines.get(i++));
+					}
+					setMarker(file, sb.toString(), lineNo);
 				}
-				marker.setAttribute(IMarker.MESSAGE, sb.toString());
 			}
-			
 		} catch (IndexOutOfBoundsException e) {
 			log.info("Unrecognized error format when building: " + file.getFullPath(), e);
 		} catch (NullPointerException e) {
 			log.info("Unrecognized error format when building: " + file.getFullPath(), e);
-		} catch (CoreException e) {
-			log.warn("Error creating marker on: " + file.getFullPath(), e);
 		}		
 		return errorString.toString();
 	}
 
+	/**
+	 * Add a marker to a file
+	 * @param file
+	 * @param message
+	 */
+	private void setMarker(IFile file, String message) {
+		setMarker(file, message, null);
+	}
+
+	/**
+	 * Add a marker to a file, including line number
+	 * @param file
+	 * @param message
+	 * @param lineNo
+	 */
+	private void setMarker(IFile file, String message, Integer lineNo) {
+		IMarker marker;
+		try {
+			marker = file.createMarker("org.eclipse.xtext.ui.check.normal"); // Instead of IMarker.PROBLEM
+			marker.setAttribute(IMarker.USER_EDITABLE, false);
+			marker.setAttribute(IMarker.SEVERITY, IMarker.SEVERITY_ERROR);
+			marker.setAttribute(IMarker.LOCATION, file.getFullPath().toString());
+			if (message != null)
+				marker.setAttribute(IMarker.MESSAGE, message);
+			if (lineNo != null)
+				marker.setAttribute(IMarker.LINE_NUMBER, lineNo);
+		} catch (CoreException e) {
+			log.warn("Error creating marker on: " + file.getFullPath(), e);
+		}
+
+	}
 	
 }

@@ -20,6 +20,7 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.eclipse.core.resources.IFile;
+import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
 import org.eclipse.core.resources.ProjectScope;
@@ -308,6 +309,27 @@ public class GFBuilderHelper {
 		} catch (BackingStoreException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public static int estimateProjectSize(IProject project) throws CoreException {
+		return countFilesRecursively(project.members());
+	}
+	private static int countFilesRecursively(IResource[] rs) {
+		int i = 0;
+		for (int j = 0; j < rs.length; j++) {
+			if (rs[j] instanceof IFolder) {
+				try {
+					i += countFilesRecursively( ((IFolder)rs[j]).members() );
+				} catch (CoreException e) {	}
+			}
+			else if (rs[j] instanceof IFile) {
+				IFile file = (IFile) rs[j];
+				String ext = file.getFileExtension();
+				if (ext!=null && ext.equalsIgnoreCase("gf"))
+					i++;
+			}
+		}
+		return i; 
 	}
 	
 }
