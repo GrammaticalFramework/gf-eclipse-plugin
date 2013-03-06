@@ -67,20 +67,20 @@ Navigate to **File &rarr; New &rarr; Other...** (or use Ctrl+N) from the Eclipse
 Write "gf" in the search box, or scroll down to the "Grammatical Framework" category.
 Select "GF Ontology Grammar Wizard".
 
-![New project wizard](http://www.grammaticalframework.org/eclipse/images/ontology-new-wizard.png)
+![New project wizard](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/ontology-new-wizard.png)
 
 #### 2. Connect to endpoint
 Provide a SPARQL endpoint to be connected to(ontology repository).  
 After the username and password are populated, use the "Connect" button to verify the connection is successful.
 *Note:* username and password can be omitted; example Repository URL = http://molto.ontotext.com/sparql
 
-![Connect to endpoint](http://www.grammaticalframework.org/eclipse/images/ontology-connect.png)
+![Connect to endpoint](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/ontology-connect.png)
 
 #### 3. Provide a templates file
 Select a templates from the file system.
 An example for such a file is provided in the resources folder of the plugin.
 
-![Connected to endpoint](http://www.grammaticalframework.org/eclipse/images/ontology-connect-success.png)
+![Connected to endpoint](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/ontology-connect-success.png)
 
 It is automatically validated, but you can still use the "Validate template" button to check if it is valid.
 Then you can proceed to the next page via the "Next" button.
@@ -89,7 +89,7 @@ Then you can proceed to the next page via the "Next" button.
 Select a single template from the list - as on the screenshot.
 The binding in square brackets, e.g. [CLASS\_INSTANCE], [CLASS\_NAME], will be populated on the next page.
 
-![Select template](http://www.grammaticalframework.org/eclipse/images/ontology-template-select.png)
+![Select template](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/ontology-template-select.png)
 
 #### 5. Fill the templates
 On the page for entities selection, currently one has "Classes" and "Instances".
@@ -97,14 +97,14 @@ The instances on the left are the corresponding ones to the classes on the right
 If a class has no instances, then an [EMPTY LIST] note is shown.
 The template is automatically populated with a matching binding when one is selected(see the screenshot below).
 
-![Fill in template](http://www.grammaticalframework.org/eclipse/images/ontology-template-fill.png)
+![Fill in template](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/ontology-template-fill.png)
 
 _If you constantly get the "LOADING" sign in the Instances box, you might need to consider a better connection speed to your SPARQL endpoint._
 
 #### 6. Add templates
 Use the "Add Template" button to add new templates.
 
-![Add template](http://www.grammaticalframework.org/eclipse/images/ontology-template-add.png)
+![Add template](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/ontology-template-add.png)
 
 Also, you can "Reset" the template, to see the binding type that is populated.
 
@@ -115,7 +115,7 @@ The first option actually brings to 4.
 The grammar exportpage simply gives you the opportunity to choose where to store the ontology grammar files.
 After selecting the destination, you need to press the "Export Grammar" button.
 
-![Export grammar](http://www.grammaticalframework.org/eclipse/images/ontology-export-grammar.png)
+![Export grammar](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/ontology-export-grammar.png)
 
 This will create the following three grammar files in the destination folder:
 
