@@ -5118,7 +5118,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                             lv_size_7_0=(Token)match(input,RULE_INTEGER,FOLLOW_RULE_INTEGER_in_ruleCatDef3538); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
-                              			newLeafNode(lv_size_7_0, grammarAccess.getCatDefAccess().getSizeIntegerTerminalRuleCall_1_4_1_0()); 
+                              			newLeafNode(lv_size_7_0, grammarAccess.getCatDefAccess().getSizeINTEGERTerminalRuleCall_1_4_1_0()); 
                               		
                             }
                             if ( state.backtracking==0 ) {
@@ -5130,7 +5130,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                                      			current, 
                                      			"size",
                                       		lv_size_7_0, 
-                                      		"Integer");
+                                      		"INTEGER");
                               	    
                             }
 
@@ -9073,7 +9073,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_strValue_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFlagDef6091); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_strValue_3_0, grammarAccess.getFlagDefAccess().getStrValueStringTerminalRuleCall_2_1_0()); 
+                      			newLeafNode(lv_strValue_3_0, grammarAccess.getFlagDefAccess().getStrValueSTRINGTerminalRuleCall_2_1_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -9085,7 +9085,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"strValue",
                               		lv_strValue_3_0, 
-                              		"String");
+                              		"STRING");
                       	    
                     }
 
@@ -10937,7 +10937,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_str_28_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleExp7434); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_str_28_0, grammarAccess.getExpAccess().getStrStringTerminalRuleCall_6_2_0()); 
+                      			newLeafNode(lv_str_28_0, grammarAccess.getExpAccess().getStrSTRINGTerminalRuleCall_6_2_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -10949,7 +10949,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"str",
                               		lv_str_28_0, 
-                              		"String");
+                              		"STRING");
                       	    
                     }
 
@@ -13359,7 +13359,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_str_16_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleExp4LF9164); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_str_16_0, grammarAccess.getExp4LFAccess().getStrStringTerminalRuleCall_3_2_0()); 
+                      			newLeafNode(lv_str_16_0, grammarAccess.getExp4LFAccess().getStrSTRINGTerminalRuleCall_3_2_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -13371,7 +13371,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"str",
                               		lv_str_16_0, 
-                              		"String");
+                              		"STRING");
                       	    
                     }
 
@@ -14437,7 +14437,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_string_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleExp610007); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_string_2_0, grammarAccess.getExp6Access().getStringStringTerminalRuleCall_2_0()); 
+                      			newLeafNode(lv_string_2_0, grammarAccess.getExp6Access().getStringSTRINGTerminalRuleCall_2_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -14449,7 +14449,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"string",
                               		true, 
-                              		"String");
+                              		"STRING");
                       	    
                     }
 
@@ -14473,7 +14473,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_integer_3_0=(Token)match(input,RULE_INTEGER,FOLLOW_RULE_INTEGER_in_ruleExp610035); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_integer_3_0, grammarAccess.getExp6Access().getIntegerIntegerTerminalRuleCall_3_0()); 
+                      			newLeafNode(lv_integer_3_0, grammarAccess.getExp6Access().getIntegerINTEGERTerminalRuleCall_3_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -14485,7 +14485,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"integer",
                               		true, 
-                              		"Integer");
+                              		"INTEGER");
                       	    
                     }
 
@@ -14509,7 +14509,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_double_4_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_ruleExp610063); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_double_4_0, grammarAccess.getExp6Access().getDoubleDoubleTerminalRuleCall_4_0()); 
+                      			newLeafNode(lv_double_4_0, grammarAccess.getExp6Access().getDoubleDOUBLETerminalRuleCall_4_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -14521,7 +14521,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"double",
                               		true, 
-                              		"Double");
+                              		"DOUBLE");
                       	    
                     }
 
@@ -14754,7 +14754,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_str_13_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleExp610303); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_str_13_0, grammarAccess.getExp6Access().getStrStringTerminalRuleCall_8_1_0()); 
+                      			newLeafNode(lv_str_13_0, grammarAccess.getExp6Access().getStrSTRINGTerminalRuleCall_8_1_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -14766,7 +14766,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"str",
                               		lv_str_13_0, 
-                              		"String");
+                              		"STRING");
                       	    
                     }
 
@@ -16997,7 +16997,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_str_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePatt311840); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_str_2_0, grammarAccess.getPatt3Access().getStrStringTerminalRuleCall_1_1_0()); 
+                      			newLeafNode(lv_str_2_0, grammarAccess.getPatt3Access().getStrSTRINGTerminalRuleCall_1_1_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -17009,7 +17009,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"str",
                               		lv_str_2_0, 
-                              		"String");
+                              		"STRING");
                       	    
                     }
 
@@ -17290,7 +17290,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_integer_12_0=(Token)match(input,RULE_INTEGER,FOLLOW_RULE_INTEGER_in_rulePatt312060); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_integer_12_0, grammarAccess.getPatt3Access().getIntegerIntegerTerminalRuleCall_5_0()); 
+                      			newLeafNode(lv_integer_12_0, grammarAccess.getPatt3Access().getIntegerINTEGERTerminalRuleCall_5_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -17302,7 +17302,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"integer",
                               		true, 
-                              		"Integer");
+                              		"INTEGER");
                       	    
                     }
 
@@ -17326,7 +17326,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_double_13_0=(Token)match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_rulePatt312088); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_double_13_0, grammarAccess.getPatt3Access().getDoubleDoubleTerminalRuleCall_6_0()); 
+                      			newLeafNode(lv_double_13_0, grammarAccess.getPatt3Access().getDoubleDOUBLETerminalRuleCall_6_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -17338,7 +17338,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"double",
                               		true, 
-                              		"Double");
+                              		"DOUBLE");
                       	    
                     }
 
@@ -17362,7 +17362,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_string_14_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulePatt312116); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_string_14_0, grammarAccess.getPatt3Access().getStringStringTerminalRuleCall_7_0()); 
+                      			newLeafNode(lv_string_14_0, grammarAccess.getPatt3Access().getStringSTRINGTerminalRuleCall_7_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -17374,7 +17374,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"string",
                               		true, 
-                              		"String");
+                              		"STRING");
                       	    
                     }
 
@@ -17879,7 +17879,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                     lv_index_2_0=(Token)match(input,RULE_INTEGER,FOLLOW_RULE_INTEGER_in_ruleLabel12568); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      			newLeafNode(lv_index_2_0, grammarAccess.getLabelAccess().getIndexIntegerTerminalRuleCall_1_1_0()); 
+                      			newLeafNode(lv_index_2_0, grammarAccess.getLabelAccess().getIndexINTEGERTerminalRuleCall_1_1_0()); 
                       		
                     }
                     if ( state.backtracking==0 ) {
@@ -17891,7 +17891,7 @@ public class InternalGFParser extends AbstractInternalAntlrParser {
                              			current, 
                              			"index",
                               		lv_index_2_0, 
-                              		"Integer");
+                              		"INTEGER");
                       	    
                     }
 

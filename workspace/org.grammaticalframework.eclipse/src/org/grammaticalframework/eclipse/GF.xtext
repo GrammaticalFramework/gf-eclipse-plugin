@@ -122,7 +122,7 @@ TopDef
 
 CatDef 
 	:     		name=Ident context+=DDecl*
-	| list?='[' name=Ident context+=DDecl* ']' ('{' size=Integer '}')?
+	| list?='[' name=Ident context+=DDecl* ']' ('{' size=INTEGER '}')?
 ;
 
 FunDef 
@@ -178,7 +178,7 @@ TermDef
 ;
 
 FlagDef 
-	: name=Ident '=' (value=Ident | strValue=String)
+	: name=Ident '=' (value=Ident | strValue=STRING)
 ;
 
 ParConstr
@@ -221,7 +221,7 @@ Exp
 //	| Exp3 {Exp.left=current} right=ExpLF
 	| 'let' '{' defList=ListLocDef '}' 'in' right=Exp
 	| 'let'     defList=ListLocDef     'in' right=Exp
-	| 'in' left=Exp5 str=String // rule by example
+	| 'in' left=Exp5 str=STRING // rule by example
 ;
 
 ExpLF_Exp1or3 returns Exp
@@ -287,7 +287,7 @@ Exp4LF returns Exp
 	: case?='case' caseOf=Exp 'of' '{' caseList=ListCase '}'
 	| variants?='variants' '{' expList=ListExp '}'
 	| pre?='pre' '{' caseList=ListCase '}'
-	| pre?='pre' '{' str=String  ';' alts+=Altern (';' alts+=Altern)* '}'
+	| pre?='pre' '{' str=STRING  ';' alts+=Altern (';' alts+=Altern)* '}'
 	| pre?='pre' '{' ident=Ident ';' alts+=Altern (';' alts+=Altern)* '}'
 	| 'strs' '{' expList=ListExp '}'
 	| '#' pattern=Patt3
@@ -321,13 +321,13 @@ Exp6
 Exp6 returns Exp 
 	: ref=[Ident|ID]			// constant or variable
 	| sort?=Sort				// type of types/param types/strings/token lists
-	| string?=String			// string literal
-	| integer?=Integer			// integer literal
-	| double?=Double			// floating point literal
+	| string?=STRING			// string literal
+	| integer?=INTEGER			// integer literal
+	| double?=DOUBLE			// floating point literal
 	| meta?='?' 				// metavariable
 	| emptyString?='[' ']'		// empty token list
 	| listCat?='[' category=[Ident|ID] context=Exps ']'	// list category
-	| tokenList?='[' str=String ']'						// token list
+	| tokenList?='[' str=STRING ']'						// token list
 	| record?='{' defList=ListLocDef '}'				// record / record type
 	| '<' (=> (tupleList=ListTupleComp) | (expression=Exp ':' type=Exp)) '>'		// tuple | type-annotated expression
 	| identity?='(' inner=Exp ')'
@@ -368,14 +368,14 @@ Patt2LF returns Patt
 
 Patt3 returns Patt 
 	: meta?='?'
-	| tokenList?='[' str=String ']'
+	| tokenList?='[' str=STRING ']'
 	| '#' patternName=Ident ('.' label=Ident)?
 //	| ref=[Ident|ID] ('.' label=Ident)?
 	| ref=Ident ('.' label=Ident)?
 	| wildcard?='_'
-	| integer?=Integer
-	| double?=Double
-	| string?=String
+	| integer?=INTEGER
+	| double?=DOUBLE
+	| string?=STRING
 	| '{' ListPattAss '}'
 	| '<' ListPattTupleComp '>'
 	| '(' Patt ')'
@@ -387,7 +387,7 @@ PattAss
 
 Label 
 	: name=[Ident|ID]
-	| '$' index=Integer
+	| '$' index=INTEGER
 ;
 
 Sort 
@@ -476,13 +476,13 @@ terminal ID :
 	('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'\'')*
 //	('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'\'')*('.'('a'..'z'|'A'..'Z'|'_')('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'\'')*)?
 ;
-terminal String : 
+terminal STRING : 
 	  '"' ( '\\'('"'|'\\') | !('\\'|'"') )* '"'
 ; 
-terminal Integer returns ecore::EInt: 
+terminal INTEGER returns ecore::EInt: 
 	('0'..'9')+
 ;
-terminal Double returns ecore::EDouble :
+terminal DOUBLE returns ecore::EDouble :
 	('0'..'9')+'.'('0'..'9')+('e''-'?('0'..'9')+)?
 ;
 terminal COMPILER_PRAGMA :

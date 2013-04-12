@@ -8,6 +8,8 @@ import org.osgi.framework.Bundle;
 
 import com.google.inject.Injector;
 
+import org.grammaticalframework.eclipse.ui.internal.GFActivator;
+
 /**
  * This class was generated. Customizations should only happen in a newly
  * introduced subclass. 
@@ -16,12 +18,12 @@ public class GFExecutableExtensionFactory extends AbstractGuiceAwareExecutableEx
 
 	@Override
 	protected Bundle getBundle() {
-		return org.grammaticalframework.eclipse.ui.internal.GFActivator.getInstance().getBundle();
+		return GFActivator.getInstance().getBundle();
 	}
 	
 	@Override
 	protected Injector getInjector() {
-		return org.grammaticalframework.eclipse.ui.internal.GFActivator.getInstance().getInjector("org.grammaticalframework.eclipse.GF");
+		return GFActivator.getInstance().getInjector(GFActivator.ORG_GRAMMATICALFRAMEWORK_ECLIPSE_GF);
 	}
 	
 }

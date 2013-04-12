@@ -7,6 +7,8 @@ package org.grammaticalframework.eclipse.services;
 import com.google.inject.Singleton;
 import com.google.inject.Inject;
 
+import java.util.List;
+
 import org.eclipse.xtext.*;
 import org.eclipse.xtext.service.GrammarProvider;
 import org.eclipse.xtext.service.AbstractElementFinder.*;
@@ -1138,14 +1140,14 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_4 = (Group)cGroup_1.eContents().get(4);
 		private final Keyword cLeftCurlyBracketKeyword_1_4_0 = (Keyword)cGroup_1_4.eContents().get(0);
 		private final Assignment cSizeAssignment_1_4_1 = (Assignment)cGroup_1_4.eContents().get(1);
-		private final RuleCall cSizeIntegerTerminalRuleCall_1_4_1_0 = (RuleCall)cSizeAssignment_1_4_1.eContents().get(0);
+		private final RuleCall cSizeINTEGERTerminalRuleCall_1_4_1_0 = (RuleCall)cSizeAssignment_1_4_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_1_4_2 = (Keyword)cGroup_1_4.eContents().get(2);
 		
 		//CatDef:
-		//	name=Ident context+=DDecl* | list?="[" name=Ident context+=DDecl* "]" ("{" size=Integer "}")?;
+		//	name=Ident context+=DDecl* | list?="[" name=Ident context+=DDecl* "]" ("{" size=INTEGER "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//name=Ident context+=DDecl* | list?="[" name=Ident context+=DDecl* "]" ("{" size=Integer "}")?
+		//name=Ident context+=DDecl* | list?="[" name=Ident context+=DDecl* "]" ("{" size=INTEGER "}")?
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//name=Ident context+=DDecl*
@@ -1163,7 +1165,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//DDecl
 		public RuleCall getContextDDeclParserRuleCall_0_1_0() { return cContextDDeclParserRuleCall_0_1_0; }
 
-		//list?="[" name=Ident context+=DDecl* "]" ("{" size=Integer "}")?
+		//list?="[" name=Ident context+=DDecl* "]" ("{" size=INTEGER "}")?
 		public Group getGroup_1() { return cGroup_1; }
 
 		//list?="["
@@ -1187,17 +1189,17 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"]"
 		public Keyword getRightSquareBracketKeyword_1_3() { return cRightSquareBracketKeyword_1_3; }
 
-		//("{" size=Integer "}")?
+		//("{" size=INTEGER "}")?
 		public Group getGroup_1_4() { return cGroup_1_4; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1_4_0() { return cLeftCurlyBracketKeyword_1_4_0; }
 
-		//size=Integer
+		//size=INTEGER
 		public Assignment getSizeAssignment_1_4_1() { return cSizeAssignment_1_4_1; }
 
-		//Integer
-		public RuleCall getSizeIntegerTerminalRuleCall_1_4_1_0() { return cSizeIntegerTerminalRuleCall_1_4_1_0; }
+		//INTEGER
+		public RuleCall getSizeINTEGERTerminalRuleCall_1_4_1_0() { return cSizeINTEGERTerminalRuleCall_1_4_1_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_1_4_2() { return cRightCurlyBracketKeyword_1_4_2; }
@@ -2039,13 +2041,13 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValueAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
 		private final RuleCall cValueIdentParserRuleCall_2_0_0 = (RuleCall)cValueAssignment_2_0.eContents().get(0);
 		private final Assignment cStrValueAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cStrValueStringTerminalRuleCall_2_1_0 = (RuleCall)cStrValueAssignment_2_1.eContents().get(0);
+		private final RuleCall cStrValueSTRINGTerminalRuleCall_2_1_0 = (RuleCall)cStrValueAssignment_2_1.eContents().get(0);
 		
 		//FlagDef:
-		//	name=Ident "=" (value=Ident | strValue=String);
+		//	name=Ident "=" (value=Ident | strValue=STRING);
 		public ParserRule getRule() { return rule; }
 
-		//name=Ident "=" (value=Ident | strValue=String)
+		//name=Ident "=" (value=Ident | strValue=STRING)
 		public Group getGroup() { return cGroup; }
 
 		//name=Ident
@@ -2057,7 +2059,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 
-		//value=Ident | strValue=String
+		//value=Ident | strValue=STRING
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
 		//value=Ident
@@ -2066,11 +2068,11 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//Ident
 		public RuleCall getValueIdentParserRuleCall_2_0_0() { return cValueIdentParserRuleCall_2_0_0; }
 
-		//strValue=String
+		//strValue=STRING
 		public Assignment getStrValueAssignment_2_1() { return cStrValueAssignment_2_1; }
 
-		//String
-		public RuleCall getStrValueStringTerminalRuleCall_2_1_0() { return cStrValueStringTerminalRuleCall_2_1_0; }
+		//STRING
+		public RuleCall getStrValueSTRINGTerminalRuleCall_2_1_0() { return cStrValueSTRINGTerminalRuleCall_2_1_0; }
 	}
 
 	public class ParConstrElements extends AbstractParserRuleElementFinder {
@@ -2349,7 +2351,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cLeftAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
 		private final RuleCall cLeftExp5ParserRuleCall_6_1_0 = (RuleCall)cLeftAssignment_6_1.eContents().get(0);
 		private final Assignment cStrAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final RuleCall cStrStringTerminalRuleCall_6_2_0 = (RuleCall)cStrAssignment_6_2.eContents().get(0);
+		private final RuleCall cStrSTRINGTerminalRuleCall_6_2_0 = (RuleCall)cStrAssignment_6_2.eContents().get(0);
 		
 		/// *
 		//Exp
@@ -2370,7 +2372,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//	Exp | tableAbstracttion?="\\\\" bindList=ListBind "=>" right= // table abstraction
 		//	Exp | "(" bindList=ListBind ":" decl=Exp ")" "->" right= // Decl, part 1
 		//	Exp | "let" "{" defList=ListLocDef "}" "in" right=Exp | "let" defList=ListLocDef "in" right=Exp | "in" left=Exp5 str= // rule by example
-		//	String;
+		//	STRING;
 		public ParserRule getRule() { return rule; }
 
 		//ExpLF_Exp1or3 //	  Exp1 ({Exp.left=current} '|' right=Exp)?
@@ -2379,7 +2381,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//Exp | tableAbstracttion?="\\\\" bindList=ListBind "=>" right= // table abstraction
 		//Exp | "(" bindList=ListBind ":" decl=Exp ")" "->" right= // Decl, part 1
 		//Exp | "let" "{" defList=ListLocDef "}" "in" right=Exp | "let" defList=ListLocDef "in" right=Exp | "in" left=Exp5 str= // rule by example
-		//String
+		//STRING
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ExpLF_Exp1or3
@@ -2524,7 +2526,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getRightExpParserRuleCall_5_3_0() { return cRightExpParserRuleCall_5_3_0; }
 
 		//"in" left=Exp5 str= // rule by example
-		//String
+		//STRING
 		public Group getGroup_6() { return cGroup_6; }
 
 		//"in"
@@ -2537,12 +2539,12 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getLeftExp5ParserRuleCall_6_1_0() { return cLeftExp5ParserRuleCall_6_1_0; }
 
 		//str= // rule by example
-		//String
+		//STRING
 		public Assignment getStrAssignment_6_2() { return cStrAssignment_6_2; }
 
 		//// rule by example
-		//String
-		public RuleCall getStrStringTerminalRuleCall_6_2_0() { return cStrStringTerminalRuleCall_6_2_0; }
+		//STRING
+		public RuleCall getStrSTRINGTerminalRuleCall_6_2_0() { return cStrSTRINGTerminalRuleCall_6_2_0; }
 	}
 
 	public class ExpLF_Exp1or3Elements extends AbstractParserRuleElementFinder {
@@ -3058,7 +3060,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPrePreKeyword_3_0_0 = (Keyword)cPreAssignment_3_0.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
 		private final Assignment cStrAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cStrStringTerminalRuleCall_3_2_0 = (RuleCall)cStrAssignment_3_2.eContents().get(0);
+		private final RuleCall cStrSTRINGTerminalRuleCall_3_2_0 = (RuleCall)cStrAssignment_3_2.eContents().get(0);
 		private final Keyword cSemicolonKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
 		private final Assignment cAltsAssignment_3_4 = (Assignment)cGroup_3.eContents().get(4);
 		private final RuleCall cAltsAlternParserRuleCall_3_4_0 = (RuleCall)cAltsAssignment_3_4.eContents().get(0);
@@ -3115,13 +3117,13 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Exp4LF returns Exp:
 		//	case?="case" caseOf=Exp "of" "{" caseList=ListCase "}" | variants?="variants" "{" expList=ListExp "}" | pre?="pre" "{"
-		//	caseList=ListCase "}" | pre?="pre" "{" str=String ";" alts+=Altern (";" alts+=Altern)* "}" | pre?="pre" "{"
+		//	caseList=ListCase "}" | pre?="pre" "{" str=STRING ";" alts+=Altern (";" alts+=Altern)* "}" | pre?="pre" "{"
 		//	ident=Ident ";" alts+=Altern (";" alts+=Altern)* "}" | "strs" "{" expList=ListExp "}" | "#" pattern=Patt3 | "pattern"
 		//	pattern=Exp5 | linwrap?="lincat" linName=[Ident] inner=Exp5 | linwrap?="lin" linName=[Ident] inner=Exp5 | Exp5;
 		public ParserRule getRule() { return rule; }
 
 		//case?="case" caseOf=Exp "of" "{" caseList=ListCase "}" | variants?="variants" "{" expList=ListExp "}" | pre?="pre" "{"
-		//caseList=ListCase "}" | pre?="pre" "{" str=String ";" alts+=Altern (";" alts+=Altern)* "}" | pre?="pre" "{" ident=Ident
+		//caseList=ListCase "}" | pre?="pre" "{" str=STRING ";" alts+=Altern (";" alts+=Altern)* "}" | pre?="pre" "{" ident=Ident
 		//";" alts+=Altern (";" alts+=Altern)* "}" | "strs" "{" expList=ListExp "}" | "#" pattern=Patt3 | "pattern" pattern=Exp5
 		//| linwrap?="lincat" linName=[Ident] inner=Exp5 | linwrap?="lin" linName=[Ident] inner=Exp5 | Exp5
 		public Alternatives getAlternatives() { return cAlternatives; }
@@ -3198,7 +3200,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_2_3() { return cRightCurlyBracketKeyword_2_3; }
 
-		//pre?="pre" "{" str=String ";" alts+=Altern (";" alts+=Altern)* "}"
+		//pre?="pre" "{" str=STRING ";" alts+=Altern (";" alts+=Altern)* "}"
 		public Group getGroup_3() { return cGroup_3; }
 
 		//pre?="pre"
@@ -3210,11 +3212,11 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
 
-		//str=String
+		//str=STRING
 		public Assignment getStrAssignment_3_2() { return cStrAssignment_3_2; }
 
-		//String
-		public RuleCall getStrStringTerminalRuleCall_3_2_0() { return cStrStringTerminalRuleCall_3_2_0; }
+		//STRING
+		public RuleCall getStrSTRINGTerminalRuleCall_3_2_0() { return cStrSTRINGTerminalRuleCall_3_2_0; }
 
 		//";"
 		public Keyword getSemicolonKeyword_3_3() { return cSemicolonKeyword_3_3; }
@@ -3418,11 +3420,11 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cSortAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
 		private final RuleCall cSortSortParserRuleCall_1_0 = (RuleCall)cSortAssignment_1.eContents().get(0);
 		private final Assignment cStringAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
-		private final RuleCall cStringStringTerminalRuleCall_2_0 = (RuleCall)cStringAssignment_2.eContents().get(0);
+		private final RuleCall cStringSTRINGTerminalRuleCall_2_0 = (RuleCall)cStringAssignment_2.eContents().get(0);
 		private final Assignment cIntegerAssignment_3 = (Assignment)cAlternatives.eContents().get(3);
-		private final RuleCall cIntegerIntegerTerminalRuleCall_3_0 = (RuleCall)cIntegerAssignment_3.eContents().get(0);
+		private final RuleCall cIntegerINTEGERTerminalRuleCall_3_0 = (RuleCall)cIntegerAssignment_3.eContents().get(0);
 		private final Assignment cDoubleAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
-		private final RuleCall cDoubleDoubleTerminalRuleCall_4_0 = (RuleCall)cDoubleAssignment_4.eContents().get(0);
+		private final RuleCall cDoubleDOUBLETerminalRuleCall_4_0 = (RuleCall)cDoubleAssignment_4.eContents().get(0);
 		private final Assignment cMetaAssignment_5 = (Assignment)cAlternatives.eContents().get(5);
 		private final Keyword cMetaQuestionMarkKeyword_5_0 = (Keyword)cMetaAssignment_5.eContents().get(0);
 		private final Group cGroup_6 = (Group)cAlternatives.eContents().get(6);
@@ -3442,7 +3444,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTokenListAssignment_8_0 = (Assignment)cGroup_8.eContents().get(0);
 		private final Keyword cTokenListLeftSquareBracketKeyword_8_0_0 = (Keyword)cTokenListAssignment_8_0.eContents().get(0);
 		private final Assignment cStrAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cStrStringTerminalRuleCall_8_1_0 = (RuleCall)cStrAssignment_8_1.eContents().get(0);
+		private final RuleCall cStrSTRINGTerminalRuleCall_8_1_0 = (RuleCall)cStrAssignment_8_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_8_2 = (Keyword)cGroup_8.eContents().get(2);
 		private final Group cGroup_9 = (Group)cAlternatives.eContents().get(9);
 		private final Assignment cRecordAssignment_9_0 = (Assignment)cGroup_9.eContents().get(0);
@@ -3490,12 +3492,12 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//	ref= // constant or variable
 		//	[Ident] | sort?= // type of types/param types/strings/token lists
 		//	Sort | string?= // string literal
-		//	String | integer?= // integer literal
-		//	Integer | double?= // floating point literal
-		//	Double | meta?= // metavariable
+		//	STRING | integer?= // integer literal
+		//	INTEGER | double?= // floating point literal
+		//	DOUBLE | meta?= // metavariable
 		//	"?" | emptyString?="[" // empty token list
 		//	"]" | listCat?="[" category=[Ident] context=Exps // list category
-		//	"]" | tokenList?="[" str=String // token list
+		//	"]" | tokenList?="[" str=STRING // token list
 		//	"]" | record?="{" defList=ListLocDef // record / record type
 		//	"}" | "<" (=> (tupleList=ListTupleComp) | expression=Exp ":" type=Exp) // tuple | type-annotated expression
 		//	">" | identity?="(" inner=Exp ")";
@@ -3504,12 +3506,12 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//ref= // constant or variable
 		//[Ident] | sort?= // type of types/param types/strings/token lists
 		//Sort | string?= // string literal
-		//String | integer?= // integer literal
-		//Integer | double?= // floating point literal
-		//Double | meta?= // metavariable
+		//STRING | integer?= // integer literal
+		//INTEGER | double?= // floating point literal
+		//DOUBLE | meta?= // metavariable
 		//"?" | emptyString?="[" // empty token list
 		//"]" | listCat?="[" category=[Ident] context=Exps // list category
-		//"]" | tokenList?="[" str=String // token list
+		//"]" | tokenList?="[" str=STRING // token list
 		//"]" | record?="{" defList=ListLocDef // record / record type
 		//"}" | "<" (=> (tupleList=ListTupleComp) | expression=Exp ":" type=Exp) // tuple | type-annotated expression
 		//">" | identity?="(" inner=Exp ")"
@@ -3535,28 +3537,28 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getSortSortParserRuleCall_1_0() { return cSortSortParserRuleCall_1_0; }
 
 		//string?= // string literal
-		//String
+		//STRING
 		public Assignment getStringAssignment_2() { return cStringAssignment_2; }
 
 		//// string literal
-		//String
-		public RuleCall getStringStringTerminalRuleCall_2_0() { return cStringStringTerminalRuleCall_2_0; }
+		//STRING
+		public RuleCall getStringSTRINGTerminalRuleCall_2_0() { return cStringSTRINGTerminalRuleCall_2_0; }
 
 		//integer?= // integer literal
-		//Integer
+		//INTEGER
 		public Assignment getIntegerAssignment_3() { return cIntegerAssignment_3; }
 
 		//// integer literal
-		//Integer
-		public RuleCall getIntegerIntegerTerminalRuleCall_3_0() { return cIntegerIntegerTerminalRuleCall_3_0; }
+		//INTEGER
+		public RuleCall getIntegerINTEGERTerminalRuleCall_3_0() { return cIntegerINTEGERTerminalRuleCall_3_0; }
 
 		//double?= // floating point literal
-		//Double
+		//DOUBLE
 		public Assignment getDoubleAssignment_4() { return cDoubleAssignment_4; }
 
 		//// floating point literal
-		//Double
-		public RuleCall getDoubleDoubleTerminalRuleCall_4_0() { return cDoubleDoubleTerminalRuleCall_4_0; }
+		//DOUBLE
+		public RuleCall getDoubleDOUBLETerminalRuleCall_4_0() { return cDoubleDOUBLETerminalRuleCall_4_0; }
 
 		//meta?= // metavariable
 		//"?"
@@ -3609,7 +3611,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"]"
 		public Keyword getRightSquareBracketKeyword_7_3() { return cRightSquareBracketKeyword_7_3; }
 
-		//tokenList?="[" str=String // token list
+		//tokenList?="[" str=STRING // token list
 		//"]"
 		public Group getGroup_8() { return cGroup_8; }
 
@@ -3619,11 +3621,11 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"["
 		public Keyword getTokenListLeftSquareBracketKeyword_8_0_0() { return cTokenListLeftSquareBracketKeyword_8_0_0; }
 
-		//str=String
+		//str=STRING
 		public Assignment getStrAssignment_8_1() { return cStrAssignment_8_1; }
 
-		//String
-		public RuleCall getStrStringTerminalRuleCall_8_1_0() { return cStrStringTerminalRuleCall_8_1_0; }
+		//STRING
+		public RuleCall getStrSTRINGTerminalRuleCall_8_1_0() { return cStrSTRINGTerminalRuleCall_8_1_0; }
 
 		//// token list
 		//"]"
@@ -4021,7 +4023,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTokenListAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
 		private final Keyword cTokenListLeftSquareBracketKeyword_1_0_0 = (Keyword)cTokenListAssignment_1_0.eContents().get(0);
 		private final Assignment cStrAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cStrStringTerminalRuleCall_1_1_0 = (RuleCall)cStrAssignment_1_1.eContents().get(0);
+		private final RuleCall cStrSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cStrAssignment_1_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Keyword cNumberSignKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
@@ -4041,11 +4043,11 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cWildcardAssignment_4 = (Assignment)cAlternatives.eContents().get(4);
 		private final Keyword cWildcard_Keyword_4_0 = (Keyword)cWildcardAssignment_4.eContents().get(0);
 		private final Assignment cIntegerAssignment_5 = (Assignment)cAlternatives.eContents().get(5);
-		private final RuleCall cIntegerIntegerTerminalRuleCall_5_0 = (RuleCall)cIntegerAssignment_5.eContents().get(0);
+		private final RuleCall cIntegerINTEGERTerminalRuleCall_5_0 = (RuleCall)cIntegerAssignment_5.eContents().get(0);
 		private final Assignment cDoubleAssignment_6 = (Assignment)cAlternatives.eContents().get(6);
-		private final RuleCall cDoubleDoubleTerminalRuleCall_6_0 = (RuleCall)cDoubleAssignment_6.eContents().get(0);
+		private final RuleCall cDoubleDOUBLETerminalRuleCall_6_0 = (RuleCall)cDoubleAssignment_6.eContents().get(0);
 		private final Assignment cStringAssignment_7 = (Assignment)cAlternatives.eContents().get(7);
-		private final RuleCall cStringStringTerminalRuleCall_7_0 = (RuleCall)cStringAssignment_7.eContents().get(0);
+		private final RuleCall cStringSTRINGTerminalRuleCall_7_0 = (RuleCall)cStringAssignment_7.eContents().get(0);
 		private final Group cGroup_8 = (Group)cAlternatives.eContents().get(8);
 		private final Keyword cLeftCurlyBracketKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final RuleCall cListPattAssParserRuleCall_8_1 = (RuleCall)cGroup_8.eContents().get(1);
@@ -4061,14 +4063,14 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Patt3 returns Patt:
 		//	meta?="?" //	| ref=[Ident|ID] ('.' label=Ident)?
-		//	| tokenList?="[" str=String "]" | "#" patternName=Ident ("." label=Ident)? | ref=Ident ("." label=Ident)? |
-		//	wildcard?="_" | integer?=Integer | double?=Double | string?=String | "{" ListPattAss "}" | "<" ListPattTupleComp ">" |
+		//	| tokenList?="[" str=STRING "]" | "#" patternName=Ident ("." label=Ident)? | ref=Ident ("." label=Ident)? |
+		//	wildcard?="_" | integer?=INTEGER | double?=DOUBLE | string?=STRING | "{" ListPattAss "}" | "<" ListPattTupleComp ">" |
 		//	"(" Patt ")";
 		public ParserRule getRule() { return rule; }
 
 		//meta?="?" //	| ref=[Ident|ID] ('.' label=Ident)?
-		//| tokenList?="[" str=String "]" | "#" patternName=Ident ("." label=Ident)? | ref=Ident ("." label=Ident)? |
-		//wildcard?="_" | integer?=Integer | double?=Double | string?=String | "{" ListPattAss "}" | "<" ListPattTupleComp ">" |
+		//| tokenList?="[" str=STRING "]" | "#" patternName=Ident ("." label=Ident)? | ref=Ident ("." label=Ident)? |
+		//wildcard?="_" | integer?=INTEGER | double?=DOUBLE | string?=STRING | "{" ListPattAss "}" | "<" ListPattTupleComp ">" |
 		//"(" Patt ")"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
@@ -4078,7 +4080,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"?"
 		public Keyword getMetaQuestionMarkKeyword_0_0() { return cMetaQuestionMarkKeyword_0_0; }
 
-		//tokenList?="[" str=String "]"
+		//tokenList?="[" str=STRING "]"
 		public Group getGroup_1() { return cGroup_1; }
 
 		//tokenList?="["
@@ -4087,11 +4089,11 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"["
 		public Keyword getTokenListLeftSquareBracketKeyword_1_0_0() { return cTokenListLeftSquareBracketKeyword_1_0_0; }
 
-		//str=String
+		//str=STRING
 		public Assignment getStrAssignment_1_1() { return cStrAssignment_1_1; }
 
-		//String
-		public RuleCall getStrStringTerminalRuleCall_1_1_0() { return cStrStringTerminalRuleCall_1_1_0; }
+		//STRING
+		public RuleCall getStrSTRINGTerminalRuleCall_1_1_0() { return cStrSTRINGTerminalRuleCall_1_1_0; }
 
 		//"]"
 		public Keyword getRightSquareBracketKeyword_1_2() { return cRightSquareBracketKeyword_1_2; }
@@ -4147,23 +4149,23 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//"_"
 		public Keyword getWildcard_Keyword_4_0() { return cWildcard_Keyword_4_0; }
 
-		//integer?=Integer
+		//integer?=INTEGER
 		public Assignment getIntegerAssignment_5() { return cIntegerAssignment_5; }
 
-		//Integer
-		public RuleCall getIntegerIntegerTerminalRuleCall_5_0() { return cIntegerIntegerTerminalRuleCall_5_0; }
+		//INTEGER
+		public RuleCall getIntegerINTEGERTerminalRuleCall_5_0() { return cIntegerINTEGERTerminalRuleCall_5_0; }
 
-		//double?=Double
+		//double?=DOUBLE
 		public Assignment getDoubleAssignment_6() { return cDoubleAssignment_6; }
 
-		//Double
-		public RuleCall getDoubleDoubleTerminalRuleCall_6_0() { return cDoubleDoubleTerminalRuleCall_6_0; }
+		//DOUBLE
+		public RuleCall getDoubleDOUBLETerminalRuleCall_6_0() { return cDoubleDOUBLETerminalRuleCall_6_0; }
 
-		//string?=String
+		//string?=STRING
 		public Assignment getStringAssignment_7() { return cStringAssignment_7; }
 
-		//String
-		public RuleCall getStringStringTerminalRuleCall_7_0() { return cStringStringTerminalRuleCall_7_0; }
+		//STRING
+		public RuleCall getStringSTRINGTerminalRuleCall_7_0() { return cStringSTRINGTerminalRuleCall_7_0; }
 
 		//"{" ListPattAss "}"
 		public Group getGroup_8() { return cGroup_8; }
@@ -4259,13 +4261,13 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Keyword cDollarSignKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
 		private final Assignment cIndexAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cIndexIntegerTerminalRuleCall_1_1_0 = (RuleCall)cIndexAssignment_1_1.eContents().get(0);
+		private final RuleCall cIndexINTEGERTerminalRuleCall_1_1_0 = (RuleCall)cIndexAssignment_1_1.eContents().get(0);
 		
 		//Label:
-		//	name=[Ident] | "$" index=Integer;
+		//	name=[Ident] | "$" index=INTEGER;
 		public ParserRule getRule() { return rule; }
 
-		//name=[Ident] | "$" index=Integer
+		//name=[Ident] | "$" index=INTEGER
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//name=[Ident]
@@ -4277,17 +4279,17 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIdentIDTerminalRuleCall_0_0_1() { return cNameIdentIDTerminalRuleCall_0_0_1; }
 
-		//"$" index=Integer
+		//"$" index=INTEGER
 		public Group getGroup_1() { return cGroup_1; }
 
 		//"$"
 		public Keyword getDollarSignKeyword_1_0() { return cDollarSignKeyword_1_0; }
 
-		//index=Integer
+		//index=INTEGER
 		public Assignment getIndexAssignment_1_1() { return cIndexAssignment_1_1; }
 
-		//Integer
-		public RuleCall getIndexIntegerTerminalRuleCall_1_1_0() { return cIndexIntegerTerminalRuleCall_1_1_0; }
+		//INTEGER
+		public RuleCall getIndexINTEGERTerminalRuleCall_1_1_0() { return cIndexINTEGERTerminalRuleCall_1_1_0; }
 	}
 
 	public class SortElements extends AbstractParserRuleElementFinder {
@@ -4911,9 +4913,9 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	private DDeclElements pDDecl;
 	private IdentElements pIdent;
 	private TerminalRule tID;
-	private TerminalRule tString;
-	private TerminalRule tInteger;
-	private TerminalRule tDouble;
+	private TerminalRule tSTRING;
+	private TerminalRule tINTEGER;
+	private TerminalRule tDOUBLE;
 	private TerminalRule tCOMPILER_PRAGMA;
 	private TerminalRule tGF_DOC;
 	private TerminalRule tML_COMMENT;
@@ -4921,15 +4923,32 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	private TerminalRule tWS;
 	private TerminalRule tANY_OTHER;
 	
-	private final GrammarProvider grammarProvider;
+	private final Grammar grammar;
 
 	@Inject
 	public GFGrammarAccess(GrammarProvider grammarProvider) {
-		this.grammarProvider = grammarProvider;
+		this.grammar = internalFindGrammar(grammarProvider);
 	}
 	
-	public Grammar getGrammar() {	
-		return grammarProvider.getGrammar(this);
+	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
+		Grammar grammar = grammarProvider.getGrammar(this);
+		while (grammar != null) {
+			if ("org.grammaticalframework.eclipse.GF".equals(grammar.getName())) {
+				return grammar;
+			}
+			List<Grammar> grammars = grammar.getUsedGrammars();
+			if (!grammars.isEmpty()) {
+				grammar = grammars.iterator().next();
+			} else {
+				return null;
+			}
+		}
+		return grammar;
+	}
+	
+	
+	public Grammar getGrammar() {
+		return grammar;
 	}
 	
 
@@ -5078,7 +5097,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CatDef:
-	//	name=Ident context+=DDecl* | list?="[" name=Ident context+=DDecl* "]" ("{" size=Integer "}")?;
+	//	name=Ident context+=DDecl* | list?="[" name=Ident context+=DDecl* "]" ("{" size=INTEGER "}")?;
 	public CatDefElements getCatDefAccess() {
 		return (pCatDef != null) ? pCatDef : (pCatDef = new CatDefElements());
 	}
@@ -5191,7 +5210,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//FlagDef:
-	//	name=Ident "=" (value=Ident | strValue=String);
+	//	name=Ident "=" (value=Ident | strValue=STRING);
 	public FlagDefElements getFlagDefAccess() {
 		return (pFlagDef != null) ? pFlagDef : (pFlagDef = new FlagDefElements());
 	}
@@ -5259,7 +5278,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	//	Exp | tableAbstracttion?="\\\\" bindList=ListBind "=>" right= // table abstraction
 	//	Exp | "(" bindList=ListBind ":" decl=Exp ")" "->" right= // Decl, part 1
 	//	Exp | "let" "{" defList=ListLocDef "}" "in" right=Exp | "let" defList=ListLocDef "in" right=Exp | "in" left=Exp5 str= // rule by example
-	//	String;
+	//	STRING;
 	public ExpElements getExpAccess() {
 		return (pExp != null) ? pExp : (pExp = new ExpElements());
 	}
@@ -5367,7 +5386,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Exp4LF returns Exp:
 	//	case?="case" caseOf=Exp "of" "{" caseList=ListCase "}" | variants?="variants" "{" expList=ListExp "}" | pre?="pre" "{"
-	//	caseList=ListCase "}" | pre?="pre" "{" str=String ";" alts+=Altern (";" alts+=Altern)* "}" | pre?="pre" "{"
+	//	caseList=ListCase "}" | pre?="pre" "{" str=STRING ";" alts+=Altern (";" alts+=Altern)* "}" | pre?="pre" "{"
 	//	ident=Ident ";" alts+=Altern (";" alts+=Altern)* "}" | "strs" "{" expList=ListExp "}" | "#" pattern=Patt3 | "pattern"
 	//	pattern=Exp5 | linwrap?="lincat" linName=[Ident] inner=Exp5 | linwrap?="lin" linName=[Ident] inner=Exp5 | Exp5;
 	public Exp4LFElements getExp4LFAccess() {
@@ -5409,12 +5428,12 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	//	ref= // constant or variable
 	//	[Ident] | sort?= // type of types/param types/strings/token lists
 	//	Sort | string?= // string literal
-	//	String | integer?= // integer literal
-	//	Integer | double?= // floating point literal
-	//	Double | meta?= // metavariable
+	//	STRING | integer?= // integer literal
+	//	INTEGER | double?= // floating point literal
+	//	DOUBLE | meta?= // metavariable
 	//	"?" | emptyString?="[" // empty token list
 	//	"]" | listCat?="[" category=[Ident] context=Exps // list category
-	//	"]" | tokenList?="[" str=String // token list
+	//	"]" | tokenList?="[" str=STRING // token list
 	//	"]" | record?="{" defList=ListLocDef // record / record type
 	//	"}" | "<" (=> (tupleList=ListTupleComp) | expression=Exp ":" type=Exp) // tuple | type-annotated expression
 	//	">" | identity?="(" inner=Exp ")";
@@ -5491,8 +5510,8 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 
 	//Patt3 returns Patt:
 	//	meta?="?" //	| ref=[Ident|ID] ('.' label=Ident)?
-	//	| tokenList?="[" str=String "]" | "#" patternName=Ident ("." label=Ident)? | ref=Ident ("." label=Ident)? |
-	//	wildcard?="_" | integer?=Integer | double?=Double | string?=String | "{" ListPattAss "}" | "<" ListPattTupleComp ">" |
+	//	| tokenList?="[" str=STRING "]" | "#" patternName=Ident ("." label=Ident)? | ref=Ident ("." label=Ident)? |
+	//	wildcard?="_" | integer?=INTEGER | double?=DOUBLE | string?=STRING | "{" ListPattAss "}" | "<" ListPattTupleComp ">" |
 	//	"(" Patt ")";
 	public Patt3Elements getPatt3Access() {
 		return (pPatt3 != null) ? pPatt3 : (pPatt3 = new Patt3Elements());
@@ -5513,7 +5532,7 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Label:
-	//	name=[Ident] | "$" index=Integer;
+	//	name=[Ident] | "$" index=INTEGER;
 	public LabelElements getLabelAccess() {
 		return (pLabel != null) ? pLabel : (pLabel = new LabelElements());
 	}
@@ -5686,22 +5705,22 @@ public class GFGrammarAccess extends AbstractGrammarElementFinder {
 		return (tID != null) ? tID : (tID = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ID"));
 	} 
 
-	//terminal String:
+	//terminal STRING:
 	//	"\"" ("\\" ("\"" | "\\") | !("\\" | "\""))* "\"";
-	public TerminalRule getStringRule() {
-		return (tString != null) ? tString : (tString = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "String"));
+	public TerminalRule getSTRINGRule() {
+		return (tSTRING != null) ? tSTRING : (tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "STRING"));
 	} 
 
-	//terminal Integer returns ecore::EInt:
+	//terminal INTEGER returns ecore::EInt:
 	//	"0".."9"+;
-	public TerminalRule getIntegerRule() {
-		return (tInteger != null) ? tInteger : (tInteger = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "Integer"));
+	public TerminalRule getINTEGERRule() {
+		return (tINTEGER != null) ? tINTEGER : (tINTEGER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INTEGER"));
 	} 
 
-	//terminal Double returns ecore::EDouble:
+	//terminal DOUBLE returns ecore::EDouble:
 	//	"0".."9"+ "." "0".."9"+ ("e" "-"? "0".."9"+)?;
-	public TerminalRule getDoubleRule() {
-		return (tDouble != null) ? tDouble : (tDouble = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "Double"));
+	public TerminalRule getDOUBLERule() {
+		return (tDOUBLE != null) ? tDOUBLE : (tDOUBLE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "DOUBLE"));
 	} 
 
 	//terminal COMPILER_PRAGMA:

@@ -191,6 +191,27 @@
 				</reference>
 			</activeWhen>
 		</handler>
+  <handler
+        class="org.grammaticalframework.eclipse.ui.commands.ToggleGFNatureHandler"
+        commandId="org.grammaticalframework.eclipse.ui.commands.ToggleGFNature">
+  </handler>
+  <handler
+        class="org.grammaticalframework.eclipse.ui.commands.CloneHandler"
+        commandId="org.grammaticalframework.eclipse.ui.commands.Clone">
+     <enabledWhen>
+        <with
+              variable="activeMenuSelection">
+           <iterate
+                 ifEmpty="false"
+                 operator="and">
+              <test
+                    property="org.eclipse.core.resources.extension"
+                    value="gf">
+              </test>
+           </iterate>
+        </with>
+     </enabledWhen>
+  </handler>
 	</extension>
 	<extension
 		point="org.eclipse.ui.commands">
@@ -199,6 +220,16 @@
 			id="org.eclipse.xtext.ui.editor.outline.QuickOutline"
 			name="Quick Outline">
 		</command>
+  <command
+        defaultHandler="org.grammaticalframework.eclipse.ui.commands.ToggleGFNatureHandler"
+        id="org.grammaticalframework.eclipse.ui.commands.ToggleGFNature"
+        name="Toggle GF Nature">
+  </command>
+  <command
+        defaultHandler="org.grammaticalframework.eclipse.ui.commands.CloneHandler"
+        id="org.grammaticalframework.eclipse.ui.commands.Clone"
+        name="Clone">
+  </command>
 	</extension>
 	<extension point="org.eclipse.ui.menus">
 		<menuContribution
@@ -211,6 +242,48 @@
 				</visibleWhen>
 			</command>
 		</menuContribution>
+  <menuContribution
+        allPopups="false"
+        locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+     <menu
+           label="Grammatical Framework">
+        <command
+              commandId="org.grammaticalframework.eclipse.ui.commands.ToggleGFNature"
+              label="Add/Remove GF Nature"
+              style="push">
+           <visibleWhen
+                 checkEnabled="false">
+              <with
+                    variable="activeMenuSelection">
+                 <iterate
+                       operator="and">
+                    <adapt
+                          type="org.eclipse.core.resources.IProject">
+                    </adapt>
+                 </iterate>
+              </with>
+           </visibleWhen>
+        </command>
+        <command
+              commandId="org.grammaticalframework.eclipse.ui.commands.Clone"
+              label="Clone for new language"
+              style="push">
+           <visibleWhen
+                 checkEnabled="false">
+              <with
+                    variable="activeMenuSelection">
+                 <iterate
+                       ifEmpty="false"
+                       operator="and">
+                    <adapt
+                          type="org.eclipse.core.resources.IFile">
+                    </adapt>
+                 </iterate>
+              </with>
+           </visibleWhen>
+        </command>
+     </menu>
+  </menuContribution>
 	</extension>
    <!-- quickfix marker resolution generator -->
    <extension
@@ -485,40 +558,6 @@
                  value="GF Builder">
            </parameter>
         </run></builder>
-  </extension>
-  <extension
-        point="org.eclipse.ui.popupMenus">
-     <objectContribution
-           adaptable="false"
-           id="toggleNatureAndBuilderObjectContributionID"
-           objectClass="org.eclipse.core.resources.IProject">
-        <action
-              class="org.grammaticalframework.eclipse.ui.natures.GFToggleNatureAndBuilderAction"
-              id="toggleNatureAndBuilderActionID"
-              label="Add/Remove GF Nature"
-              menubarPath="additions">
-        </action>
-     </objectContribution>
-     <objectContribution
-           id="org.grammaticalframework.eclipse.ui.contribution1"
-           nameFilter="*.gf"
-           objectClass="org.eclipse.core.resources.IFile">
-        <menu
-              id="org.grammaticalframework.eclipse.ui.menu1"
-              label="Grammatical Framework"
-              path="additions">
-           <separator
-                 name="group1">
-           </separator>
-        </menu>
-        <action
-              class="org.grammaticalframework.eclipse.ui.popup.actions.CloneForNewLanguage"
-              enablesFor="1"
-              id="org.grammaticalframework.eclipse.ui.newAction"
-              label="Clone for new language"
-              menubarPath="org.grammaticalframework.eclipse.ui.menu1/group1">
-        </action>
-     </objectContribution>
   </extension>
   <extension
         point="org.eclipse.core.runtime.preferences">

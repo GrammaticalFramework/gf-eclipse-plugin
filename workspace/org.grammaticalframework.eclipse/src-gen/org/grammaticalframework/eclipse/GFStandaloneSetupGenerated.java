@@ -49,6 +49,5 @@ public class GFStandaloneSetupGenerated implements ISetup {
 
 
 
-
 	}
 }

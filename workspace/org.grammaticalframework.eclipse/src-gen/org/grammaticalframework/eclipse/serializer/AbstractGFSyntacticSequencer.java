@@ -15,8 +15,8 @@ import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISyn
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 import org.grammaticalframework.eclipse.services.GFGrammarAccess;
 
-@SuppressWarnings("restriction")
-public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
+@SuppressWarnings("all")
+public abstract class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected GFGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_Exp3_AsteriskAsteriskKeyword_1_1_2_or_AsteriskKeyword_1_1_1_or_ExclamationMarkKeyword_1_1_0;
@@ -40,28 +40,83 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (GFGrammarAccess) access;
 		match_Exp3_AsteriskAsteriskKeyword_1_1_2_or_AsteriskKeyword_1_1_1_or_ExclamationMarkKeyword_1_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getExp3Access().getAsteriskAsteriskKeyword_1_1_2()), new TokenAlias(false, false, grammarAccess.getExp3Access().getAsteriskKeyword_1_1_1()), new TokenAlias(false, false, grammarAccess.getExp3Access().getExclamationMarkKeyword_1_1_0()));
-		match_ListExp_SemicolonKeyword_1_2_q = new TokenAlias(true, false, grammarAccess.getListExpAccess().getSemicolonKeyword_1_2());
-		match_ListLocDef_SemicolonKeyword_1_2_q = new TokenAlias(true, false, grammarAccess.getListLocDefAccess().getSemicolonKeyword_1_2());
-		match_ListPattAss_SemicolonKeyword_1_2_q = new TokenAlias(true, false, grammarAccess.getListPattAssAccess().getSemicolonKeyword_1_2());
-		match_ListPattTupleComp_CommaKeyword_1_2_q = new TokenAlias(true, false, grammarAccess.getListPattTupleCompAccess().getCommaKeyword_1_2());
-		match_ListTupleComp_CommaKeyword_1_2_q = new TokenAlias(true, false, grammarAccess.getListTupleCompAccess().getCommaKeyword_1_2());
-		match_ModContent___InKeyword_1_2_0_LeftCurlyBracketKeyword_1_2_1_RightCurlyBracketKeyword_1_2_3__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getModContentAccess().getInKeyword_1_2_0()), new TokenAlias(false, false, grammarAccess.getModContentAccess().getLeftCurlyBracketKeyword_1_2_1()), new TokenAlias(false, false, grammarAccess.getModContentAccess().getRightCurlyBracketKeyword_1_2_3()));
-		match_ModContent___LeftCurlyBracketKeyword_0_1_0_RightCurlyBracketKeyword_0_1_2__q = new GroupAlias(true, false, new TokenAlias(false, false, grammarAccess.getModContentAccess().getLeftCurlyBracketKeyword_0_1_0()), new TokenAlias(false, false, grammarAccess.getModContentAccess().getRightCurlyBracketKeyword_0_1_2()));
+		match_ListExp_SemicolonKeyword_1_2_q = new TokenAlias(false, true, grammarAccess.getListExpAccess().getSemicolonKeyword_1_2());
+		match_ListLocDef_SemicolonKeyword_1_2_q = new TokenAlias(false, true, grammarAccess.getListLocDefAccess().getSemicolonKeyword_1_2());
+		match_ListPattAss_SemicolonKeyword_1_2_q = new TokenAlias(false, true, grammarAccess.getListPattAssAccess().getSemicolonKeyword_1_2());
+		match_ListPattTupleComp_CommaKeyword_1_2_q = new TokenAlias(false, true, grammarAccess.getListPattTupleCompAccess().getCommaKeyword_1_2());
+		match_ListTupleComp_CommaKeyword_1_2_q = new TokenAlias(false, true, grammarAccess.getListTupleCompAccess().getCommaKeyword_1_2());
+		match_ModContent___InKeyword_1_2_0_LeftCurlyBracketKeyword_1_2_1_RightCurlyBracketKeyword_1_2_3__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getModContentAccess().getInKeyword_1_2_0()), new TokenAlias(false, false, grammarAccess.getModContentAccess().getLeftCurlyBracketKeyword_1_2_1()), new TokenAlias(false, false, grammarAccess.getModContentAccess().getRightCurlyBracketKeyword_1_2_3()));
+		match_ModContent___LeftCurlyBracketKeyword_0_1_0_RightCurlyBracketKeyword_0_1_2__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getModContentAccess().getLeftCurlyBracketKeyword_0_1_0()), new TokenAlias(false, false, grammarAccess.getModContentAccess().getRightCurlyBracketKeyword_0_1_2()));
 		match_ModDef_SemicolonKeyword_4_a = new TokenAlias(true, true, grammarAccess.getModDefAccess().getSemicolonKeyword_4());
-		match_OperDef_SemicolonKeyword_3_7_q = new TokenAlias(true, false, grammarAccess.getOperDefAccess().getSemicolonKeyword_3_7());
-		match_OperDef_SemicolonKeyword_4_7_q = new TokenAlias(true, false, grammarAccess.getOperDefAccess().getSemicolonKeyword_4_7());
-		match_Patt1_AsteriskKeyword_2_1_q = new TokenAlias(true, false, grammarAccess.getPatt1Access().getAsteriskKeyword_2_1());
+		match_OperDef_SemicolonKeyword_3_7_q = new TokenAlias(false, true, grammarAccess.getOperDefAccess().getSemicolonKeyword_3_7());
+		match_OperDef_SemicolonKeyword_4_7_q = new TokenAlias(false, true, grammarAccess.getOperDefAccess().getSemicolonKeyword_4_7());
+		match_Patt1_AsteriskKeyword_2_1_q = new TokenAlias(false, true, grammarAccess.getPatt1Access().getAsteriskKeyword_2_1());
 		match_Patt3_LeftParenthesisKeyword_10_0_a = new TokenAlias(true, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0());
-		match_Patt3_LeftParenthesisKeyword_10_0_p = new TokenAlias(false, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0());
+		match_Patt3_LeftParenthesisKeyword_10_0_p = new TokenAlias(true, false, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0());
 		match_Patt3_PattArg_LeftParenthesisKeyword_10_0_a_or___LeftCurlyBracketKeyword_1_0_LeftParenthesisKeyword_10_0_a__ = new AlternativeAlias(false, false, new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getPattArgAccess().getLeftCurlyBracketKeyword_1_0()), new TokenAlias(true, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0())), new TokenAlias(true, true, grammarAccess.getPatt3Access().getLeftParenthesisKeyword_10_0()));
-		match_PattArg_LeftCurlyBracketKeyword_1_0_q = new TokenAlias(true, false, grammarAccess.getPattArgAccess().getLeftCurlyBracketKeyword_1_0());
+		match_PattArg_LeftCurlyBracketKeyword_1_0_q = new TokenAlias(false, true, grammarAccess.getPattArgAccess().getLeftCurlyBracketKeyword_1_0());
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if(ruleCall.getRule() == grammarAccess.getDOUBLERule())
+			return getDOUBLEToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getINTEGERRule())
+			return getINTEGERToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getSTRINGRule())
+			return getSTRINGToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getSortRule())
+			return getSortToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * terminal DOUBLE returns ecore::EDouble :
+	 * 	('0'..'9')+'.'('0'..'9')+('e''-'?('0'..'9')+)?
+	 * ;
+	 */
+	protected String getDOUBLEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return ".";
+	}
+	
+	/**
+	 * terminal INTEGER returns ecore::EInt: 
+	 * 	('0'..'9')+
+	 * ;
+	 */
+	protected String getINTEGERToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "";
+	}
+	
+	/**
+	 * terminal STRING : 
+	 * 	  '"' ( '\\'('"'|'\\') | !('\\'|'"') )* '"'
+	 * ;
+	 */
+	protected String getSTRINGToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "\"\"";
+	}
+	
+	/**
+	 * Sort 
+	 * 	: 'Type'
+	 * 	| 'PType'
+	 * 	| 'Tok'
+	 * 	| 'Str'
+	 * 	| 'Strs'
+	 * ;
+	 */
+	protected String getSortToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "Type";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -107,7 +162,7 @@ public class AbstractGFSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Syntax:
-	 *     '!' | '**' | '*'
+	 *     '*' | '!' | '**'
 	 */
 	protected void emit_Exp3_AsteriskAsteriskKeyword_1_1_2_or_AsteriskKeyword_1_1_1_or_ExclamationMarkKeyword_1_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

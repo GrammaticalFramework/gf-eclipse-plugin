@@ -1,43 +1,27 @@
-/**
- * GF Eclipse Plugin
- * http://www.grammaticalframework.org/eclipse/
- * John J. Camilleri, 2012
- * 
- * The research leading to these results has received funding from the
- * European Union's Seventh Framework Programme (FP7/2007-2013) under
- * grant agreement no. FP7-ICT-247914.
- */
-package org.grammaticalframework.eclipse.ui.natures;
+package org.grammaticalframework.eclipse.ui.commands;
 
 import java.util.Iterator;
 
+import org.eclipse.core.commands.AbstractHandler;
+import org.eclipse.core.commands.ExecutionEvent;
+import org.eclipse.core.commands.ExecutionException;
+import org.eclipse.core.commands.IHandler;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IAdaptable;
-import org.eclipse.jface.action.IAction;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
-import org.eclipse.ui.IObjectActionDelegate;
-import org.eclipse.ui.IWorkbenchPart;
+import org.eclipse.ui.handlers.HandlerUtil;
+import org.grammaticalframework.eclipse.ui.natures.GFProjectNature;
 
-/**
- * This code copied from the Eclipse extension wizard "Project Builder and Nature".
- */
-public class GFToggleNatureAndBuilderAction implements IObjectActionDelegate {
+public class ToggleGFNatureHandler extends AbstractHandler implements IHandler {
 
-	/**
-	 * The selected item
-	 */
-	private ISelection selection;
-
-	/**
-	 * Run the action, toggles the nature & builder for each valid project in the selection.
-	 */
-	@SuppressWarnings("rawtypes")
-	public void run(IAction action) {
-		if (selection instanceof IStructuredSelection) {
-			Iterator it = ((IStructuredSelection) selection).iterator();
+	@Override
+	public Object execute(ExecutionEvent event) throws ExecutionException {
+		ISelection selection = HandlerUtil.getActiveWorkbenchWindow(event).getActivePage().getSelection();
+		if (selection != null && selection instanceof IStructuredSelection) {
+			Iterator<?> it = ((IStructuredSelection) selection).iterator();
 			while (it.hasNext()) {
 				Object element = it.next();
 				if (element instanceof IProject) {
@@ -47,28 +31,10 @@ public class GFToggleNatureAndBuilderAction implements IObjectActionDelegate {
 					toggleNature(project);
 				}
 			}
-		}
+		}		
+		return null;
 	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.eclipse.ui.IActionDelegate#selectionChanged(org.eclipse.jface.action.IAction,
-	 *      org.eclipse.jface.viewers.ISelection)
-	 */
-	public void selectionChanged(IAction action, ISelection selection) {
-		this.selection = selection;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.eclipse.ui.IObjectActionDelegate#setActivePart(org.eclipse.jface.action.IAction,
-	 *      org.eclipse.ui.IWorkbenchPart)
-	 */
-	public void setActivePart(IAction action, IWorkbenchPart targetPart) {
-	}
-
+	
 	/**
 	 * Toggles sample nature on a project.
 	 *
@@ -143,5 +109,5 @@ public class GFToggleNatureAndBuilderAction implements IObjectActionDelegate {
 		} catch (CoreException e) {
 		}
 	}
-
+	
 }

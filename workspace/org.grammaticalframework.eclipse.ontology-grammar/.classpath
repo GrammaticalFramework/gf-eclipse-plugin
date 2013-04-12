@@ -6,6 +6,6 @@
 	<classpathentry kind="lib" path="libs/sesame-onejar-2.6.2.jar"/>
 	<classpathentry kind="lib" path="libs/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="libs/slf4j-log4j12-1.6.1.jar"/>
-	<classpathentry kind="lib" path="/home/john/repositories/gf-eclipse-plugin/workspace/org.grammaticalframework.eclipse.ontology-grammar/libs/molto-repository-helper-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="libs/molto-repository-helper-1.0-SNAPSHOT.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
