@@ -15,6 +15,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EAttribute;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.naming.IQualifiedNameConverter;
 import org.eclipse.xtext.naming.QualifiedName;
 import org.eclipse.xtext.scoping.IScope;
@@ -289,32 +290,28 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 	public void checkQualifiedNames(Label label) {
 		
 		// Try get first bit of qualified name, i.e. "ResEng". Labels do no necessarily follow Idents, but ANY type of Exp6.
-		try {
-			Ident qualifier = ((Exp)label.eContainer()).getRef();
-			QualifiedName unQualifiedName = getConverter().toQualifiedName(label.getName().getS());
-			QualifiedName fullyQualifiedName = getConverter().toQualifiedName(qualifier.getS() + "." + label.getName().getS());
-			
-			// See if the qualifier is a valid MODULE name
-			TopDef topDef = GFScopingHelper.getTopDef(label);
-			String moduleName = ((SourceModule)topDef.eContainer().eContainer()).getType().getName().getS();
-			IScope scope = getScopeProvider().getScope(topDef, GFPackage.Literals.TOP_DEF__DEFINITIONS);
-			if (scope.getSingleElement(qualifier) != null) {
-				
-				QualifiedName searchFor = qualifier.getS().equals(moduleName)
+		if (!(label.eContainer() instanceof Exp)) return;
+		Ident qualifier = ((Exp)label.eContainer()).getRef();
+		QualifiedName unQualifiedName = getConverter().toQualifiedName(label.getName().getS());
+		QualifiedName fullyQualifiedName = getConverter().toQualifiedName(qualifier.getS() + "." + label.getName().getS());
+
+		// See if the qualifier is a valid MODULE name
+		TopDef topDef = GFScopingHelper.getTopDef(label);
+		EObject greatGrandParent = topDef.eContainer().eContainer().eContainer();
+		if (!(greatGrandParent instanceof SourceModule)) return;
+		String moduleName = ((SourceModule)greatGrandParent).getType().getName().getS();
+		IScope scope = getScopeProvider().getScope(topDef, GFPackage.Literals.TOP_DEF__DEFINITIONS);
+		if (scope.getSingleElement(qualifier) != null) {
+			QualifiedName searchFor = qualifier.getS().equals(moduleName)
 					? unQualifiedName
-					: fullyQualifiedName;
-				
-				boolean found = (scope.getSingleElement(searchFor) != null);
-				
-				// We now we are dealing with a Qualified name, now see if the full thing is valid:
-				if (!found) {
-					String msg = String.format("Cannot resolve qualified name \"%1$s\"", fullyQualifiedName.toString());
-					error(msg, GFPackage.Literals.LABEL__NAME);
-				}
+							: fullyQualifiedName;
+			boolean found = (scope.getSingleElement(searchFor) != null);
+
+			// We now we are dealing with a Qualified name, now see if the full thing is valid:
+			if (!found) {
+				String msg = String.format("Cannot resolve qualified name \"%1$s\"", fullyQualifiedName.toString());
+				error(msg, GFPackage.Literals.LABEL__NAME);
 			}
-			
-		} catch (Exception _) {
-			// relax, it just means the first part wasn't an Ident
 		}
 	}
 	

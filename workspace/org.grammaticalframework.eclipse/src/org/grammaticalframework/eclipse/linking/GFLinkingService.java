@@ -6,7 +6,6 @@ import java.util.List;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
-import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.CrossReference;
 import org.eclipse.xtext.linking.impl.DefaultLinkingService;
 import org.eclipse.xtext.linking.impl.IllegalNodeException;
@@ -45,8 +44,8 @@ public class GFLinkingService extends DefaultLinkingService {
 			newIdent.setS(node.getText());
 			
 			// add to resource
-			Resource r = context.eResource().getResourceSet().createResource(DUMMY_RESOURCE_URI);
-			r.getContents().add(newIdent);
+//			Resource r = context.eResource().getResourceSet().createResource(DUMMY_RESOURCE_URI);
+//			r.getContents().add(newIdent);
 			
 			// link to it
 			return Collections.singletonList((EObject)newIdent);
@@ -83,19 +82,14 @@ public class GFLinkingService extends DefaultLinkingService {
 				}
 
 				// See if previous ident is a link to a module/alias
-				try {
-					Ident prevIdent = ((Exp)abstractNode.getSemanticElement()).getRef();
-					List<EObject> prevLinks = super.getLinkedObjects(prevIdent, GFPackage.Literals.EXP__REF, abstractNode);
-					for (EObject eobj : prevLinks) {
-						EObject parent = eobj.eContainer();
-						if (parent instanceof ModType || parent instanceof Open || parent instanceof Included || parent instanceof Inst) {
-							return false;
-						}
+				Ident prevIdent = ((Exp)abstractNode.getSemanticElement()).getRef();
+				if (prevIdent == null) return true; // Treat as a projection
+				List<EObject> prevLinks = super.getLinkedObjects(prevIdent, GFPackage.Literals.EXP__REF, abstractNode);
+				for (EObject eobj : prevLinks) {
+					EObject parent = eobj.eContainer();
+					if (parent instanceof ModType || parent instanceof Open || parent instanceof Included || parent instanceof Inst) {
+						return false;
 					}
-				} catch (NullPointerException e) {
-					// Not very elegant, but this essentially happens when prevIdent is not resolved.
-					// Thus treat is a projection
-					return true;
 				}
 			}
 		}

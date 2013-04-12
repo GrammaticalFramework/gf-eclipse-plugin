@@ -24,9 +24,7 @@ public class GFLinker extends LazyLinker {
 		super.beforeModelLinked(model, diagnosticsConsumer);
 		Resource res = model.eResource().getResourceSet().getResource(GFLinkingService.DUMMY_RESOURCE_URI, false);
 		try {
-			res.delete(null);
-		} catch (NullPointerException e) {
-			//
+			if (res != null) res.delete(null);
 		} catch (IOException e) {
 			log.info("Couldn't delete dummy resource " + res.getURI().toString(), e);
 		}

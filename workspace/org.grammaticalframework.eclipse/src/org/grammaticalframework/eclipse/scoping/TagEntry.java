@@ -135,13 +135,12 @@ public class TagEntry {
 		int ix = s.lastIndexOf(':');
 		this.file = (ix > 0) ? s.substring(0, ix) : s;
 		
-		try {
-			int ixModName1 = this.file.lastIndexOf(java.io.File.separatorChar);
-			int ixModName2 = this.file.lastIndexOf('.');
-			this.moduleName = this.file.substring(ixModName1+1, ixModName2);
-		} catch (Exception _) {
+		int ixModName1 = this.file.lastIndexOf(java.io.File.separatorChar);
+		int ixModName2 = this.file.lastIndexOf('.');
+		if (ixModName2 == -1)
 			this.moduleName = "";
-		}
+		else
+			this.moduleName = this.file.substring(ixModName1 + 1, ixModName2);
 		
 		String lineStr = s.substring(ix+1);
 		int rangeIx = lineStr.indexOf('-');

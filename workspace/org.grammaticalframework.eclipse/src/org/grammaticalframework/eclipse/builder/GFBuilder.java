@@ -22,6 +22,7 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IMarker;
@@ -387,20 +388,23 @@ public class GFBuilder extends IncrementalProjectBuilder {
 	 * @return true, if this is a source file which should be built
 	 */
 	private boolean isBuildable(IResource resource) {
-		try {
-			boolean isFile = resource.getType() == IResource.FILE;
-			boolean isGF = resource.getFileExtension().equals("gf");
-			boolean notInBuildFolder = !resource.getParent().getName().equals(GFBuilder.BUILD_FOLDER);
-			boolean notInExternalFolder = !resource.getParent().getName().equals(GFBuilder.EXTERNAL_FOLDER);
-			if (isFile && isGF && notInBuildFolder && notInExternalFolder) {
-				IFile file = (IFile)resource;
-				if (isExcluded(file)) {
-					log.info("Skipping excluded file: " + file.getFullPath());
-					return false;
-				}
-				else { return true; }
+		if (resource == null)
+			return false;
+		boolean isFile = resource.getType() == IResource.FILE;
+		String ext = resource.getFileExtension();
+		boolean isGF = ext != null && ext.equals("gf");
+		IContainer parent = resource.getParent();
+		boolean notInBuildFolder = !parent.getName().equals(GFBuilder.BUILD_FOLDER);
+		boolean notInExternalFolder = !parent.getName().equals(GFBuilder.EXTERNAL_FOLDER);
+		if (isFile && isGF && notInBuildFolder && notInExternalFolder) {
+			IFile file = (IFile) resource;
+			if (isExcluded(file)) {
+				log.info("Skipping excluded file: " + file.getFullPath());
+				return false;
+			} else {
+				return true;
 			}
-		} catch (NullPointerException _) { }
+		}
 		return false;
 	}
 

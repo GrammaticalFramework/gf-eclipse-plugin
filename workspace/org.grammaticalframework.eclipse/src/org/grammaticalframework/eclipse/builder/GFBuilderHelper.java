@@ -118,6 +118,7 @@ public class GFBuilderHelper {
 		String tagsFileName = getTagsFileNameRelative(file.getName());
 		try {
 			IFile tagsFile = (IFile)file.getParent().findMember(tagsFileName);
+			if (tagsFile == null) return null;
 			InputStream is = tagsFile.getContents(true);
 			BufferedReader reader = new BufferedReader(new InputStreamReader(is));
 			HashSet<String> importSet = new HashSet<String>();
@@ -143,8 +144,6 @@ public class GFBuilderHelper {
 			}
 				
 			return importSet;
-		} catch (NullPointerException e) {
-			// just means no file was present, don't worry
 		} catch (IOException e) {
 			log.warn("Error reading tags file "+tagsFileName, e);
 		} catch (CoreException e) {

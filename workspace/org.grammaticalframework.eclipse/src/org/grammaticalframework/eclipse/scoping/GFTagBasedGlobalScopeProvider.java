@@ -87,27 +87,23 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 				}
 				
 				// Build scope out of tag map
-				try {
-					GFTagBasedScope gfScope = null;
-					IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
-					for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
-						
-						URI uri = entry.getKey();
-						
-						// Get module name from URI
-						String lastSegment = uri.lastSegment();
-						int dotIx = lastSegment.lastIndexOf('.');
-						String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
-						
-						// Append new scope for the current module/uri
-						gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
-						gfScope.addTags(resourceDescriptions, uri, entry.getValue(), filter);
-					}
-					
-					return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
-				} catch (NullPointerException _) {
-					return IScope.NULLSCOPE;
-				}				
+				GFTagBasedScope gfScope = null;
+				IResourceDescriptions resourceDescriptions = getResourceDescriptions(resource, uriTagMap.keySet());
+				for (Map.Entry<URI, Collection<TagEntry>> entry : uriTagMap.entrySet()) {
+
+					URI uri = entry.getKey();
+
+					// Get module name from URI
+					String lastSegment = uri.lastSegment();
+					int dotIx = lastSegment.lastIndexOf('.');
+					String moduleName = (dotIx > 0)	? lastSegment.substring(0, dotIx) : lastSegment;
+
+					// Append new scope for the current module/uri
+					gfScope = new GFTagBasedScope(gfScope, moduleName, ignoreCase);
+					gfScope.addTags(resourceDescriptions, uri, entry.getValue(), filter);
+				}
+
+				return (gfScope == null) ? IScope.NULLSCOPE : gfScope;
 			}
 		});
 		

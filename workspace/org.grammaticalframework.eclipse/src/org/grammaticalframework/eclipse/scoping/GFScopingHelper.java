@@ -50,15 +50,11 @@ public class GFScopingHelper {
 	 */
 	public static SourceModule getSourceModule(EObject eObj) {
 		EObject temp = eObj;
-		try {
-			while (!(temp  instanceof SourceModule)) {
-				temp = temp.eContainer();
-			}
-			return ((SourceModule)temp);
+		while (!(temp instanceof SourceModule)) {
+			temp = temp.eContainer();
+			if (temp == null) return null;
 		}
-		catch (NullPointerException _) {
-			return null;
-		}
+		return ((SourceModule)temp);
 	}
 
 	/**
@@ -68,15 +64,11 @@ public class GFScopingHelper {
 	 */
 	public static TopDef getTopDef(EObject eObj) {
 		EObject temp = eObj;
-		try {
-			while (!(temp  instanceof TopDef)) {
-				temp = temp.eContainer();
-			}
-			return ((TopDef)temp);
+		while (!(temp  instanceof TopDef)) {
+			temp = temp.eContainer();
+			if (temp == null) return null;
 		}
-		catch (NullPointerException _) {
-			return null;
-		}
+		return ((TopDef)temp);
 	}
 
 	/**
