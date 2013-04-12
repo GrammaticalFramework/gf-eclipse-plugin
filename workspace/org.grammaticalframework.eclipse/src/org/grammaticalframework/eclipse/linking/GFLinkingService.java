@@ -3,6 +3,8 @@ package org.grammaticalframework.eclipse.linking;
 import java.util.Collections;
 import java.util.List;
 
+import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
@@ -29,8 +31,8 @@ public class GFLinkingService extends DefaultLinkingService {
 	public static URI DUMMY_RESOURCE_URI = URI.createURI("dummy.projectionsatisfier");
 
 	/**
-	 * Delegate to the parent method, but if not links are found and the context is determined
-	 * to be a projection label, then create an EObject to trivially satisfy the linking.
+	 * If the context is determined to be a projection label, then create an EObject to trivially satisfy the linking.
+	 * Otherwise delegate to parent method
 	 * 
 	 * Also see {@link GFLinker#beforeModelLinked(EObject, IDiagnosticConsumer)}
 	 */
@@ -44,8 +46,7 @@ public class GFLinkingService extends DefaultLinkingService {
 			newIdent.setS(node.getText());
 			
 			// add to resource
-//			Resource r = context.eResource().getResourceSet().createResource(DUMMY_RESOURCE_URI);
-//			r.getContents().add(newIdent);
+			getDummyResource(context).getContents().add(newIdent);
 			
 			// link to it
 			return Collections.singletonList((EObject)newIdent);
@@ -56,6 +57,19 @@ public class GFLinkingService extends DefaultLinkingService {
 			List<EObject> list = super.getLinkedObjects(context, ref, node);
 			return list;
 		}
+	}
+	
+	/**
+	 * Get existing or create new dummy resource
+	 * @param context
+	 * @return
+	 */
+	private Resource getDummyResource(EObject context) {
+		ResourceSet rs = context.eResource().getResourceSet();
+		Resource r = rs.getResource(DUMMY_RESOURCE_URI, false);
+		if (r == null)
+			r = rs.createResource(DUMMY_RESOURCE_URI);
+		return r;
 	}
 	
 	/**
