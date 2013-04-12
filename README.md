@@ -10,7 +10,7 @@
 # The GF Eclipse Plugin
 
 John J. Camilleri  
-Updated: 22 February 2013
+Updated: 12 April 2013
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -58,6 +58,9 @@ _Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://
 - External library browser
 
 ## Release history
+
+**12/04/13**
+: (1.5.3.x) Update for Xtext 2.3.1 / Eclipse 4.2 / JavaSE 1.6. Performance improvements with scoping.
 
 **22/02/13**
 : (1.5.2.x) New option for specifying include/exclude build files. Progress indicators during build.
@@ -445,7 +448,7 @@ You can get more information about this library [here](http://code.google.com/a/
 
 #### Xtext version
 
-GFEP currently uses **Xtext 2.1.0**.
+GFEP currently uses **Xtext 2.3.1**.
 
 ### Running from source
 
