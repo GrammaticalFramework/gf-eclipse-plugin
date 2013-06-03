@@ -7,7 +7,7 @@ import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
-import org.eclipse.xtext.serializer.sequencer.AbstractSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
 import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
@@ -63,31 +63,11 @@ import org.grammaticalframework.eclipse.gF.TermDef;
 import org.grammaticalframework.eclipse.gF.TopDef;
 import org.grammaticalframework.eclipse.services.GFGrammarAccess;
 
-@SuppressWarnings("restriction")
-public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
+@SuppressWarnings("all")
+public abstract class AbstractGFSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 
 	@Inject
-	protected GFGrammarAccess grammarAccess;
-	
-	@Inject
-	protected ISemanticSequencerDiagnosticProvider diagnosticProvider;
-	
-	@Inject
-	protected ITransientValueService transientValues;
-	
-	@Inject
-	@GenericSequencer
-	protected Provider<ISemanticSequencer> genericSequencerProvider;
-	
-	protected ISemanticSequencer genericSequencer;
-	
-	
-	@Override
-	public void init(ISemanticSequencer sequencer, ISemanticSequenceAcceptor sequenceAcceptor, Acceptor errorAcceptor) {
-		super.init(sequencer, sequenceAcceptor, errorAcceptor);
-		this.genericSequencer = genericSequencerProvider.get();
-		this.genericSequencer.init(sequencer, sequenceAcceptor, errorAcceptor);
-	}
+	private GFGrammarAccess grammarAccess;
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == GFPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
@@ -156,7 +136,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_0_0() ||
 				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_0_1_0() ||
 				   context == grammarAccess.getExpLF_Exp1or3Access().getExpLF13LeftAction_1_1_0()) {
-					sequence_Exp5(context, (Exp) semanticObject); 
+					sequence_Exp5_Exp6(context, (Exp) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getDDeclRule() ||
@@ -421,26 +401,26 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 				}
 				else break;
 			case GFPackage.PATT:
-				if(context == grammarAccess.getPatt1Rule()) {
-					sequence_Patt1(context, (Patt) semanticObject); 
+				if(context == grammarAccess.getPatt2LFRule()) {
+					sequence_Patt2LF(context, (Patt) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getPatt1Rule()) {
+					sequence_Patt_Patt1_Patt2LF(context, (Patt) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getPattRule() ||
 				   context == grammarAccess.getPattAccess().getPattLeftAction_1_0()) {
-					sequence_Patt1(context, (Patt) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getPatt3Rule()) {
-					sequence_Patt2LF(context, (Patt) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getPatt2LFRule()) {
-					sequence_Patt2LF(context, (Patt) semanticObject); 
+					sequence_Patt_Patt1_Patt2LF_Patt3(context, (Patt) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getPatt2Rule() ||
 				   context == grammarAccess.getPattArgRule()) {
-					sequence_Patt2(context, (Patt) semanticObject); 
+					sequence_Patt_Patt1_Patt2_Patt2LF(context, (Patt) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getPatt3Rule()) {
+					sequence_Patt_Patt2LF(context, (Patt) semanticObject); 
 					return; 
 				}
 				else break;
@@ -530,7 +510,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((name=Ident context+=DDecl*) | (list?='[' name=Ident context+=DDecl* size=Integer?))
+	 *     ((name=Ident context+=DDecl*) | (list?='[' name=Ident context+=DDecl* size=INTEGER?))
 	 */
 	protected void sequence_CatDef(EObject context, CatDef semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -616,13 +596,13 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         (
 	 *             ref=[Ident|ID] | 
 	 *             sort?=Sort | 
-	 *             string?=String | 
-	 *             integer?=Integer | 
-	 *             double?=Double | 
+	 *             string?=STRING | 
+	 *             integer?=INTEGER | 
+	 *             double?=DOUBLE | 
 	 *             meta?='?' | 
 	 *             emptyString?='[' | 
 	 *             (listCat?='[' category=[Ident|ID] context=Exps) | 
-	 *             (tokenList?='[' str=String) | 
+	 *             (tokenList?='[' str=STRING) | 
 	 *             (record?='{' defList=ListLocDef) | 
 	 *             tupleList=ListTupleComp | 
 	 *             (expression=Exp type=Exp) | 
@@ -631,7 +611,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         labels+=Label*
 	 *     )
 	 */
-	protected void sequence_Exp5(EObject context, Exp semanticObject) {
+	protected void sequence_Exp5_Exp6(EObject context, Exp semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -641,13 +621,13 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *     (
 	 *         ref=[Ident|ID] | 
 	 *         sort?=Sort | 
-	 *         string?=String | 
-	 *         integer?=Integer | 
-	 *         double?=Double | 
+	 *         string?=STRING | 
+	 *         integer?=INTEGER | 
+	 *         double?=DOUBLE | 
 	 *         meta?='?' | 
 	 *         emptyString?='[' | 
 	 *         (listCat?='[' category=[Ident|ID] context=Exps) | 
-	 *         (tokenList?='[' str=String) | 
+	 *         (tokenList?='[' str=STRING) | 
 	 *         (record?='{' defList=ListLocDef) | 
 	 *         tupleList=ListTupleComp | 
 	 *         (expression=Exp type=Exp) | 
@@ -701,7 +681,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=Ident (value=Ident | strValue=String))
+	 *     (name=Ident (value=Ident | strValue=STRING))
 	 */
 	protected void sequence_FlagDef(EObject context, FlagDef semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -763,7 +743,7 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=[Ident|ID] | index=Integer)
+	 *     (name=[Ident|ID] | index=INTEGER)
 	 */
 	protected void sequence_Label(EObject context, Label semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1004,31 +984,49 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         meta?='?' | 
-	 *         (tokenList?='[' str=String) | 
-	 *         (patternName=Ident label=Ident?) | 
-	 *         (ref=Ident label=Ident?) | 
-	 *         wildcard?='_' | 
-	 *         integer?=Integer | 
-	 *         double?=Double | 
-	 *         string?=String | 
-	 *         (bindTo=Ident value=Patt3) | 
-	 *         (negative?='-' value=Patt3) | 
-	 *         (inaccessible?='~' pattern=Exp6) | 
-	 *         (left=Patt_Patt_1_0 (or?='|' | and?='+') right=Patt1)
-	 *     )
+	 *     ((bindTo=Ident value=Patt3) | (negative?='-' value=Patt3) | (inaccessible?='~' pattern=Exp6))
 	 */
-	protected void sequence_Patt1(EObject context, Patt semanticObject) {
+	protected void sequence_Patt2LF(EObject context, Patt semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     ((bindTo=Ident value=Patt3) | (negative?='-' value=Patt3) | (inaccessible?='~' pattern=Exp6))
+	 *     (name+=Ident name+=Ident* value=Patt)
 	 */
-	protected void sequence_Patt2LF(EObject context, Patt semanticObject) {
+	protected void sequence_PattAss(EObject context, PattAss semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((left=Patt_Patt_1_0 (or?='|' | and?='+') right=Patt1) | (bindTo=Ident value=Patt3) | (negative?='-' value=Patt3) | (inaccessible?='~' pattern=Exp6))
+	 */
+	protected void sequence_Patt_Patt1_Patt2LF(EObject context, Patt semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         meta?='?' | 
+	 *         (tokenList?='[' str=STRING) | 
+	 *         (patternName=Ident label=Ident?) | 
+	 *         (ref=Ident label=Ident?) | 
+	 *         wildcard?='_' | 
+	 *         integer?=INTEGER | 
+	 *         double?=DOUBLE | 
+	 *         string?=STRING | 
+	 *         (bindTo=Ident value=Patt3) | 
+	 *         (negative?='-' value=Patt3) | 
+	 *         (inaccessible?='~' pattern=Exp6) | 
+	 *         (left=Patt_Patt_1_0 (or?='|' | and?='+') right=Patt1)
+	 *     )
+	 */
+	protected void sequence_Patt_Patt1_Patt2LF_Patt3(EObject context, Patt semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1044,16 +1042,16 @@ public class AbstractGFSemanticSequencer extends AbstractSemanticSequencer {
 	 *         (left=Patt_Patt_1_0 (or?='|' | and?='+') right=Patt1)
 	 *     )
 	 */
-	protected void sequence_Patt2(EObject context, Patt semanticObject) {
+	protected void sequence_Patt_Patt1_Patt2_Patt2LF(EObject context, Patt semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name+=Ident name+=Ident* value=Patt)
+	 *     ((bindTo=Ident value=Patt3) | (negative?='-' value=Patt3) | (inaccessible?='~' pattern=Exp6) | (left=Patt_Patt_1_0 (or?='|' | and?='+') right=Patt1))
 	 */
-	protected void sequence_PattAss(EObject context, PattAss semanticObject) {
+	protected void sequence_Patt_Patt2LF(EObject context, Patt semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -58,8 +58,8 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
     public static final int T__51=51;
     public static final int T__15=15;
     public static final int T__52=52;
-    public static final int T__18=18;
     public static final int T__53=53;
+    public static final int T__18=18;
     public static final int T__54=54;
     public static final int T__17=17;
     public static final int T__14=14;
@@ -61785,11 +61785,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:21408:1: RULE_INTEGER
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getCatDefAccess().getSizeIntegerTerminalRuleCall_1_4_1_0()); 
+               before(grammarAccess.getCatDefAccess().getSizeINTEGERTerminalRuleCall_1_4_1_0()); 
             }
             match(input,RULE_INTEGER,FOLLOW_RULE_INTEGER_in_rule__CatDef__SizeAssignment_1_4_143114); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getCatDefAccess().getSizeIntegerTerminalRuleCall_1_4_1_0()); 
+               after(grammarAccess.getCatDefAccess().getSizeINTEGERTerminalRuleCall_1_4_1_0()); 
             }
 
             }
@@ -64362,11 +64362,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:22279:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getFlagDefAccess().getStrValueStringTerminalRuleCall_2_1_0()); 
+               before(grammarAccess.getFlagDefAccess().getStrValueSTRINGTerminalRuleCall_2_1_0()); 
             }
             match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__FlagDef__StrValueAssignment_2_144907); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getFlagDefAccess().getStrValueStringTerminalRuleCall_2_1_0()); 
+               after(grammarAccess.getFlagDefAccess().getStrValueSTRINGTerminalRuleCall_2_1_0()); 
             }
 
             }
@@ -65634,11 +65634,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:22715:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExpAccess().getStrStringTerminalRuleCall_6_2_0()); 
+               before(grammarAccess.getExpAccess().getStrSTRINGTerminalRuleCall_6_2_0()); 
             }
             match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Exp__StrAssignment_6_245801); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExpAccess().getStrStringTerminalRuleCall_6_2_0()); 
+               after(grammarAccess.getExpAccess().getStrSTRINGTerminalRuleCall_6_2_0()); 
             }
 
             }
@@ -66856,11 +66856,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:23163:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExp4LFAccess().getStrStringTerminalRuleCall_3_2_0()); 
+               before(grammarAccess.getExp4LFAccess().getStrSTRINGTerminalRuleCall_3_2_0()); 
             }
             match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Exp4LF__StrAssignment_3_246700); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExp4LFAccess().getStrStringTerminalRuleCall_3_2_0()); 
+               after(grammarAccess.getExp4LFAccess().getStrSTRINGTerminalRuleCall_3_2_0()); 
             }
 
             }
@@ -67755,11 +67755,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:23484:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExp6Access().getStringStringTerminalRuleCall_2_0()); 
+               before(grammarAccess.getExp6Access().getStringSTRINGTerminalRuleCall_2_0()); 
             }
             match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Exp6__StringAssignment_247352); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExp6Access().getStringStringTerminalRuleCall_2_0()); 
+               after(grammarAccess.getExp6Access().getStringSTRINGTerminalRuleCall_2_0()); 
             }
 
             }
@@ -67796,11 +67796,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:23499:1: RULE_INTEGER
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExp6Access().getIntegerIntegerTerminalRuleCall_3_0()); 
+               before(grammarAccess.getExp6Access().getIntegerINTEGERTerminalRuleCall_3_0()); 
             }
             match(input,RULE_INTEGER,FOLLOW_RULE_INTEGER_in_rule__Exp6__IntegerAssignment_347383); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExp6Access().getIntegerIntegerTerminalRuleCall_3_0()); 
+               after(grammarAccess.getExp6Access().getIntegerINTEGERTerminalRuleCall_3_0()); 
             }
 
             }
@@ -67837,11 +67837,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:23514:1: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExp6Access().getDoubleDoubleTerminalRuleCall_4_0()); 
+               before(grammarAccess.getExp6Access().getDoubleDOUBLETerminalRuleCall_4_0()); 
             }
             match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_rule__Exp6__DoubleAssignment_447414); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExp6Access().getDoubleDoubleTerminalRuleCall_4_0()); 
+               after(grammarAccess.getExp6Access().getDoubleDOUBLETerminalRuleCall_4_0()); 
             }
 
             }
@@ -68188,11 +68188,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:23655:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getExp6Access().getStrStringTerminalRuleCall_8_1_0()); 
+               before(grammarAccess.getExp6Access().getStrSTRINGTerminalRuleCall_8_1_0()); 
             }
             match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Exp6__StrAssignment_8_147691); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getExp6Access().getStrStringTerminalRuleCall_8_1_0()); 
+               after(grammarAccess.getExp6Access().getStrSTRINGTerminalRuleCall_8_1_0()); 
             }
 
             }
@@ -69463,11 +69463,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24124:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getPatt3Access().getStrStringTerminalRuleCall_1_1_0()); 
+               before(grammarAccess.getPatt3Access().getStrSTRINGTerminalRuleCall_1_1_0()); 
             }
             match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Patt3__StrAssignment_1_148632); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getPatt3Access().getStrStringTerminalRuleCall_1_1_0()); 
+               after(grammarAccess.getPatt3Access().getStrSTRINGTerminalRuleCall_1_1_0()); 
             }
 
             }
@@ -69737,11 +69737,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24222:1: RULE_INTEGER
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getPatt3Access().getIntegerIntegerTerminalRuleCall_5_0()); 
+               before(grammarAccess.getPatt3Access().getIntegerINTEGERTerminalRuleCall_5_0()); 
             }
             match(input,RULE_INTEGER,FOLLOW_RULE_INTEGER_in_rule__Patt3__IntegerAssignment_548831); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getPatt3Access().getIntegerIntegerTerminalRuleCall_5_0()); 
+               after(grammarAccess.getPatt3Access().getIntegerINTEGERTerminalRuleCall_5_0()); 
             }
 
             }
@@ -69778,11 +69778,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24237:1: RULE_DOUBLE
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getPatt3Access().getDoubleDoubleTerminalRuleCall_6_0()); 
+               before(grammarAccess.getPatt3Access().getDoubleDOUBLETerminalRuleCall_6_0()); 
             }
             match(input,RULE_DOUBLE,FOLLOW_RULE_DOUBLE_in_rule__Patt3__DoubleAssignment_648862); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getPatt3Access().getDoubleDoubleTerminalRuleCall_6_0()); 
+               after(grammarAccess.getPatt3Access().getDoubleDOUBLETerminalRuleCall_6_0()); 
             }
 
             }
@@ -69819,11 +69819,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24252:1: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getPatt3Access().getStringStringTerminalRuleCall_7_0()); 
+               before(grammarAccess.getPatt3Access().getStringSTRINGTerminalRuleCall_7_0()); 
             }
             match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Patt3__StringAssignment_748893); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getPatt3Access().getStringStringTerminalRuleCall_7_0()); 
+               after(grammarAccess.getPatt3Access().getStringSTRINGTerminalRuleCall_7_0()); 
             }
 
             }
@@ -70048,11 +70048,11 @@ public class InternalGFParser extends AbstractInternalContentAssistParser {
             // ../org.grammaticalframework.eclipse.ui/src-gen/org/grammaticalframework/eclipse/ui/contentassist/antlr/internal/InternalGF.g:24331:1: RULE_INTEGER
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getLabelAccess().getIndexIntegerTerminalRuleCall_1_1_0()); 
+               before(grammarAccess.getLabelAccess().getIndexINTEGERTerminalRuleCall_1_1_0()); 
             }
             match(input,RULE_INTEGER,FOLLOW_RULE_INTEGER_in_rule__Label__IndexAssignment_1_149056); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getLabelAccess().getIndexIntegerTerminalRuleCall_1_1_0()); 
+               after(grammarAccess.getLabelAccess().getIndexINTEGERTerminalRuleCall_1_1_0()); 
             }
 
             }

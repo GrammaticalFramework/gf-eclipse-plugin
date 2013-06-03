@@ -1829,7 +1829,7 @@ ruleCatDef returns [EObject current=null]
 (
 		lv_size_7_0=RULE_INTEGER
 		{
-			newLeafNode(lv_size_7_0, grammarAccess.getCatDefAccess().getSizeIntegerTerminalRuleCall_1_4_1_0()); 
+			newLeafNode(lv_size_7_0, grammarAccess.getCatDefAccess().getSizeINTEGERTerminalRuleCall_1_4_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1839,7 +1839,7 @@ ruleCatDef returns [EObject current=null]
        			$current, 
        			"size",
         		lv_size_7_0, 
-        		"Integer");
+        		"INTEGER");
 	    }
 
 )
@@ -3231,7 +3231,7 @@ ruleFlagDef returns [EObject current=null]
 (
 		lv_strValue_3_0=RULE_STRING
 		{
-			newLeafNode(lv_strValue_3_0, grammarAccess.getFlagDefAccess().getStrValueStringTerminalRuleCall_2_1_0()); 
+			newLeafNode(lv_strValue_3_0, grammarAccess.getFlagDefAccess().getStrValueSTRINGTerminalRuleCall_2_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -3241,7 +3241,7 @@ ruleFlagDef returns [EObject current=null]
        			$current, 
        			"strValue",
         		lv_strValue_3_0, 
-        		"String");
+        		"STRING");
 	    }
 
 )
@@ -3945,7 +3945,7 @@ ruleExp returns [EObject current=null]
 (
 		lv_str_28_0=RULE_STRING
 		{
-			newLeafNode(lv_str_28_0, grammarAccess.getExpAccess().getStrStringTerminalRuleCall_6_2_0()); 
+			newLeafNode(lv_str_28_0, grammarAccess.getExpAccess().getStrSTRINGTerminalRuleCall_6_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -3955,7 +3955,7 @@ ruleExp returns [EObject current=null]
        			$current, 
        			"str",
         		lv_str_28_0, 
-        		"String");
+        		"STRING");
 	    }
 
 )
@@ -4743,7 +4743,7 @@ ruleExp4LF returns [EObject current=null]
 (
 		lv_str_16_0=RULE_STRING
 		{
-			newLeafNode(lv_str_16_0, grammarAccess.getExp4LFAccess().getStrStringTerminalRuleCall_3_2_0()); 
+			newLeafNode(lv_str_16_0, grammarAccess.getExp4LFAccess().getStrSTRINGTerminalRuleCall_3_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -4753,7 +4753,7 @@ ruleExp4LF returns [EObject current=null]
        			$current, 
        			"str",
         		lv_str_16_0, 
-        		"String");
+        		"STRING");
 	    }
 
 )
@@ -5182,7 +5182,7 @@ ruleExp6 returns [EObject current=null]
 (
 		lv_string_2_0=RULE_STRING
 		{
-			newLeafNode(lv_string_2_0, grammarAccess.getExp6Access().getStringStringTerminalRuleCall_2_0()); 
+			newLeafNode(lv_string_2_0, grammarAccess.getExp6Access().getStringSTRINGTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -5192,7 +5192,7 @@ ruleExp6 returns [EObject current=null]
        			$current, 
        			"string",
         		true, 
-        		"String");
+        		"STRING");
 	    }
 
 )
@@ -5201,7 +5201,7 @@ ruleExp6 returns [EObject current=null]
 (
 		lv_integer_3_0=RULE_INTEGER
 		{
-			newLeafNode(lv_integer_3_0, grammarAccess.getExp6Access().getIntegerIntegerTerminalRuleCall_3_0()); 
+			newLeafNode(lv_integer_3_0, grammarAccess.getExp6Access().getIntegerINTEGERTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -5211,7 +5211,7 @@ ruleExp6 returns [EObject current=null]
        			$current, 
        			"integer",
         		true, 
-        		"Integer");
+        		"INTEGER");
 	    }
 
 )
@@ -5220,7 +5220,7 @@ ruleExp6 returns [EObject current=null]
 (
 		lv_double_4_0=RULE_DOUBLE
 		{
-			newLeafNode(lv_double_4_0, grammarAccess.getExp6Access().getDoubleDoubleTerminalRuleCall_4_0()); 
+			newLeafNode(lv_double_4_0, grammarAccess.getExp6Access().getDoubleDOUBLETerminalRuleCall_4_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -5230,7 +5230,7 @@ ruleExp6 returns [EObject current=null]
        			$current, 
        			"double",
         		true, 
-        		"Double");
+        		"DOUBLE");
 	    }
 
 )
@@ -5341,7 +5341,7 @@ ruleExp6 returns [EObject current=null]
 (
 		lv_str_13_0=RULE_STRING
 		{
-			newLeafNode(lv_str_13_0, grammarAccess.getExp6Access().getStrStringTerminalRuleCall_8_1_0()); 
+			newLeafNode(lv_str_13_0, grammarAccess.getExp6Access().getStrSTRINGTerminalRuleCall_8_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -5351,7 +5351,7 @@ ruleExp6 returns [EObject current=null]
        			$current, 
        			"str",
         		lv_str_13_0, 
-        		"String");
+        		"STRING");
 	    }
 
 )
@@ -6073,7 +6073,7 @@ rulePatt3 returns [EObject current=null]
 (
 		lv_str_2_0=RULE_STRING
 		{
-			newLeafNode(lv_str_2_0, grammarAccess.getPatt3Access().getStrStringTerminalRuleCall_1_1_0()); 
+			newLeafNode(lv_str_2_0, grammarAccess.getPatt3Access().getStrSTRINGTerminalRuleCall_1_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -6083,7 +6083,7 @@ rulePatt3 returns [EObject current=null]
        			$current, 
        			"str",
         		lv_str_2_0, 
-        		"String");
+        		"STRING");
 	    }
 
 )
@@ -6198,7 +6198,7 @@ rulePatt3 returns [EObject current=null]
 (
 		lv_integer_12_0=RULE_INTEGER
 		{
-			newLeafNode(lv_integer_12_0, grammarAccess.getPatt3Access().getIntegerIntegerTerminalRuleCall_5_0()); 
+			newLeafNode(lv_integer_12_0, grammarAccess.getPatt3Access().getIntegerINTEGERTerminalRuleCall_5_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -6208,7 +6208,7 @@ rulePatt3 returns [EObject current=null]
        			$current, 
        			"integer",
         		true, 
-        		"Integer");
+        		"INTEGER");
 	    }
 
 )
@@ -6217,7 +6217,7 @@ rulePatt3 returns [EObject current=null]
 (
 		lv_double_13_0=RULE_DOUBLE
 		{
-			newLeafNode(lv_double_13_0, grammarAccess.getPatt3Access().getDoubleDoubleTerminalRuleCall_6_0()); 
+			newLeafNode(lv_double_13_0, grammarAccess.getPatt3Access().getDoubleDOUBLETerminalRuleCall_6_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -6227,7 +6227,7 @@ rulePatt3 returns [EObject current=null]
        			$current, 
        			"double",
         		true, 
-        		"Double");
+        		"DOUBLE");
 	    }
 
 )
@@ -6236,7 +6236,7 @@ rulePatt3 returns [EObject current=null]
 (
 		lv_string_14_0=RULE_STRING
 		{
-			newLeafNode(lv_string_14_0, grammarAccess.getPatt3Access().getStringStringTerminalRuleCall_7_0()); 
+			newLeafNode(lv_string_14_0, grammarAccess.getPatt3Access().getStringSTRINGTerminalRuleCall_7_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -6246,7 +6246,7 @@ rulePatt3 returns [EObject current=null]
        			$current, 
        			"string",
         		true, 
-        		"String");
+        		"STRING");
 	    }
 
 )
@@ -6430,7 +6430,7 @@ ruleLabel returns [EObject current=null]
 (
 		lv_index_2_0=RULE_INTEGER
 		{
-			newLeafNode(lv_index_2_0, grammarAccess.getLabelAccess().getIndexIntegerTerminalRuleCall_1_1_0()); 
+			newLeafNode(lv_index_2_0, grammarAccess.getLabelAccess().getIndexINTEGERTerminalRuleCall_1_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -6440,7 +6440,7 @@ ruleLabel returns [EObject current=null]
        			$current, 
        			"index",
         		lv_index_2_0, 
-        		"Integer");
+        		"INTEGER");
 	    }
 
 )

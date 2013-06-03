@@ -1961,7 +1961,7 @@
       </elements>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:TerminalRule" name="String">
+  <rules xsi:type="xtext:TerminalRule" name="STRING">
     <type metamodel="//@metamodelDeclarations.0">
       <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </type>
@@ -1985,7 +1985,7 @@
       <elements xsi:type="xtext:Keyword" value="&quot;"/>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:TerminalRule" name="Integer">
+  <rules xsi:type="xtext:TerminalRule" name="INTEGER">
     <type metamodel="//@metamodelDeclarations.0">
       <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     </type>
@@ -1994,7 +1994,7 @@
       <right value="9"/>
     </alternatives>
   </rules>
-  <rules xsi:type="xtext:TerminalRule" name="Double">
+  <rules xsi:type="xtext:TerminalRule" name="DOUBLE">
     <type metamodel="//@metamodelDeclarations.0">
       <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     </type>
