@@ -171,17 +171,17 @@ public class GFProjectPropertyPage extends PropertyPage {
 		right.setLayout(new FillLayout(SWT.HORIZONTAL));
         
         expandButton = new Button(right, SWT.TOGGLE);
-        expandButton.setImage(images.forExpandAll());
+//        expandButton.setImage(images.forExpandAll());
         expandButton.setText("Expand");
         expandButton.addSelectionListener(new SelectionListener() {
 			public void widgetSelected(SelectionEvent e) {
 				if (expandButton.getSelection()) {
 					fileViewer.expandAll();
-			        expandButton.setImage(images.forCollapseAll());
+//			        expandButton.setImage(images.forCollapseAll());
 			        expandButton.setText("Collapse");
 				} else {
 					fileViewer.collapseAll();
-			        expandButton.setImage(images.forExpandAll());
+//			        expandButton.setImage(images.forExpandAll());
 			        expandButton.setText("Expand");
 				}
 			}
@@ -192,14 +192,12 @@ public class GFProjectPropertyPage extends PropertyPage {
         selectAllButton = new Button(right, SWT.PUSH);
         selectAllButton.setText("Select all");
         selectAllButton.addSelectionListener(new SelectionListener() {
-			@SuppressWarnings("deprecation")
 			public void widgetSelected(SelectionEvent e) {
 				fileViewer.expandAll();
-				fileViewer.setAllChecked(true); // f you, that's why
-//				TreeItem[] treeItems = fileViewer.getTree().getItems();
-//				for (int i = 0; i < treeItems.length; i++) {
-//					fileViewer.setSubtreeChecked(treeItems[i], true);
-//				}
+				Object[] elems = fileViewer.getVisibleExpandedElements();
+				for (int i = 0; i < elems.length; i++) {
+					fileViewer.setSubtreeChecked(elems[i], true);
+				}
 			}
 			public void widgetDefaultSelected(SelectionEvent e) {
 			}

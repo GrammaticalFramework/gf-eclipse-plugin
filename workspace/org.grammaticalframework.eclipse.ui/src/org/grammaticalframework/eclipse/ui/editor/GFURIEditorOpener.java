@@ -105,7 +105,7 @@ public class GFURIEditorOpener extends LanguageSpecificURIEditorOpener {
 				return IDE.openEditor(activePage, netURI, IEditorRegistry.SYSTEM_EXTERNAL_EDITOR_ID, true);
 			} catch (URISyntaxException e) {
 				log.error("Error converting URI '" + uri + "': ", e); 
-			} catch (PartInitException e) {
+			} catch (Exception e) {
 				log.error("Error opening editor for '" + uri + "': ", e); 
 			}
 		}

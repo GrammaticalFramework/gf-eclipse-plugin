@@ -70,13 +70,13 @@ public class GFPreferenceInitializer extends AbstractPreferenceInitializer {
 			log.warn("Cannot determine path to GF runtime", e);
 		}
 		
-		try {
-			String defaultPath = ".:alltenses:prelude";
-			//String defaultPath = System.getenv("GF_LIB_PATH");
-			store.setDefault(GFPreferences.GF_LIB_PATH, defaultPath);
-		} catch (SecurityException _) {	}
+//		try {
+//			String defaultPath = ".:alltenses:prelude";
+//			//String defaultPath = System.getenv("GF_LIB_PATH");
+//			store.setDefault(GFPreferences.GF_LIB_PATH, defaultPath);
+//		} catch (SecurityException _) {	}
 		
-		store.setDefault(GFPreferences.LOG_LEVEL, "INFO");
+		store.setDefault(GFPreferences.LOG_LEVEL, "DEBUG");
 		
 		// Listener for changing logging  level as needed
 		store.addPropertyChangeListener(new IPropertyChangeListener() {

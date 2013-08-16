@@ -24,7 +24,7 @@ import org.grammaticalframework.eclipse.gF.Open;
 import org.grammaticalframework.eclipse.gF.impl.GFFactoryImpl;
 
 public class GFLinkingService extends DefaultLinkingService {
-	
+
 	/**
 	 * URI to dummy resource, which is populated with EObjects to satisfy projections
 	 */
@@ -98,10 +98,14 @@ public class GFLinkingService extends DefaultLinkingService {
 				// See if previous ident is a link to a module/alias
 				Ident prevIdent = ((Exp)abstractNode.getSemanticElement()).getRef();
 				if (prevIdent == null) return true; // Treat as a projection
-				List<EObject> prevLinks = super.getLinkedObjects(prevIdent, GFPackage.Literals.EXP__REF, abstractNode);
+				if (prevIdent.getS() == null) return false;
+				List<EObject> prevLinks = super.getLinkedObjects(prevIdent,	GFPackage.Literals.EXP__REF, abstractNode);
 				for (EObject eobj : prevLinks) {
 					EObject parent = eobj.eContainer();
-					if (parent instanceof ModType || parent instanceof Open || parent instanceof Included || parent instanceof Inst) {
+					if (parent instanceof ModType
+							|| parent instanceof Open
+							|| parent instanceof Included
+							|| parent instanceof Inst) {
 						return false;
 					}
 				}

@@ -14,4 +14,21 @@
 	<natures>
 		<nature>org.grammaticalframework.eclipse.ui.natures.projectNatureID</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Hello/.gfbuild/CatEng.gf</name>
+			<type>1</type>
+			<location>/Users/john/repositories/GF/lib/src/english/CatEng.gf</location>
+		</link>
+		<link>
+			<name>Hello/.gfbuild/CommonX.gf</name>
+			<type>1</type>
+			<location>/Users/john/repositories/GF/lib/src/common/CommonX.gf</location>
+		</link>
+		<link>
+			<name>Hello/.gfbuild/DictEng.gf</name>
+			<type>1</type>
+			<location>/Users/john/repositories/GF/lib/src/english/DictEng.gf</location>
+		</link>
+	</linkedResources>
 </projectDescription>

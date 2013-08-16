@@ -54,12 +54,16 @@ import org.eclipse.swt.custom.StyleRange;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.FontMetrics;
+import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
 import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Menu;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.TableColumn;
@@ -338,6 +342,13 @@ public class GFTreebankManagerView extends ViewPart {
         resultsViewer.getControl().setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
         resultsViewer.getTable().setLinesVisible(true);
         resultsViewer.getTable().setHeaderVisible(true);
+        resultsViewer.getTable().addListener(SWT.MeasureItem, new Listener() {
+			@Override
+			public void handleEvent(Event event) {
+				FontMetrics fm = new GC(Display.getCurrent()).getFontMetrics();
+				event.height = fm.getHeight() * 3;
+			}
+        });
         resultsViewer.setContentProvider(new ArrayContentProvider(){
 			@Override
 			public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {

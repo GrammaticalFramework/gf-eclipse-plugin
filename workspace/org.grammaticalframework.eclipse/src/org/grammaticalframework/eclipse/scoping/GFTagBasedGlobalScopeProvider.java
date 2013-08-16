@@ -262,7 +262,7 @@ public class GFTagBasedGlobalScopeProvider extends AbstractGlobalScopeProvider {
 		try {
 			externalFolder = GFScopingHelper.getExternalFolder(tagFileURI);
 		} catch (Exception e) {
-			log.error("Couldn't get external folder for "+tagFileURI.toPlatformString(true));
+			log.debug("Couldn't get external folder for "+tagFileURI.toPlatformString(true));
 			return uriTagMap;
 		}
 		

@@ -172,11 +172,11 @@ public abstract class AbstractNewFileWizard extends Wizard implements INewWizard
 					editor = IDE.openEditor(page, file, true);
 					
 					// format it
-					if (isGF) {
-						XtextEditor xed = (XtextEditor)editor;
-						SourceViewer sv = (SourceViewer)xed.getInternalSourceViewer();
-						sv.doOperation(ISourceViewer.FORMAT);
-					}
+//					if (isGF) {
+//						XtextEditor xed = (XtextEditor)editor;
+//						SourceViewer sv = (SourceViewer)xed.getInternalSourceViewer();
+//						sv.doOperation(ISourceViewer.FORMAT);
+//					}
 					
 					// save it
 					editor.doSave(null);

@@ -63,6 +63,7 @@ public class GFLanguageRootPreferencePage extends LanguageRootPreferencePage {
 			// Refer: http://logging.apache.org/log4j/1.2/manual.html
 			{"All", "DEBUG"},
 			{"Info", "INFO"},
+			{"Warnings", "WARN"},
 			{"None", "OFF"},
 		};
 		addField(new ComboFieldEditor(GFPreferences.LOG_LEVEL, "Log Le&vel:", entryNamesAndValues, parent));

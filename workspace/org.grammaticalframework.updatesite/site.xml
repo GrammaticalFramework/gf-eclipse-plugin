@@ -3,10 +3,10 @@
    <description name="GF Eclipse Update Site" url="http://www.grammaticalframework.org/eclipse/release/">
       Update site for Eclipse plugins related to grammar development using the Grammatical Framework.
    </description>
-   <feature url="features/org.grammaticalframework.feature_1.5.3.qualifier.jar" id="org.grammaticalframework.feature" version="1.5.3.qualifier">
+   <feature url="features/org.grammaticalframework.feature_1.5.3.201308161325.jar" id="org.grammaticalframework.feature" version="1.5.3.201308161325">
       <category name="org.grammaticalframework.updatesite.category.gf"/>
    </feature>
-   <feature url="features/org.grammaticalframework.feature.ontologygrammar_1.0.0.qualifier.jar" id="org.grammaticalframework.feature.ontologygrammar" version="1.0.0.qualifier">
+   <feature url="features/org.grammaticalframework.feature.ontologygrammar_1.0.0.201308161325.jar" id="org.grammaticalframework.feature.ontologygrammar" version="1.0.0.201308161325">
       <category name="org.grammaticalframework.updatesite.category.gf"/>
    </feature>
    <category-def name="org.grammaticalframework.updatesite.category.gf" label="Grammatical Framework">

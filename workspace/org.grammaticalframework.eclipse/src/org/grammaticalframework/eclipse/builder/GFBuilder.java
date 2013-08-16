@@ -242,7 +242,7 @@ public class GFBuilder extends IncrementalProjectBuilder {
 						IFile deltaFile = (IFile)res;
 						// This check is weak, but quick and in the worst case just results in
 						// slightly over-zealous building.
-						if (dependencies.contains(GFBuilderHelper.getModuleNameFromFile(deltaFile))) {
+						if (deltaFile.equals(buildFile) || dependencies.contains(GFBuilderHelper.getModuleNameFromFile(deltaFile))) {
 							buildFile(buildFile);
 							return false; // stop visitor
 						}
@@ -581,8 +581,12 @@ public class GFBuilder extends IncrementalProjectBuilder {
 			//	   syntax error
 //			if (errorLines.get(0).matches(".+\\.gf:(\\d+):(\\d+):.*")) {
 			if (errorLines.size() > 1 && errorLines.get(1).equals("   syntax error")) {
-				// Don't worry about syntax errors, xtext will mark them for us
-				return errorLines.get(1);
+				StringBuilder sb = new StringBuilder();
+				for (String s : errorLines) {
+				    sb.append(s);
+				    sb.append("\n");
+				}
+				return sb.toString();
 			}
 
 			//	File ParadXXigmsEng.gf does not exist.

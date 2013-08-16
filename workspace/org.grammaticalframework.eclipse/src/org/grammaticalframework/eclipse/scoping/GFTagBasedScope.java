@@ -120,6 +120,7 @@ public class GFTagBasedScope extends AbstractScope {
 				} else {
 					// Try to find by using trueQualifiedName
 					IResourceDescription resourceDesc = resourceDescriptions.getResourceDescription(uri);
+					if (resourceDesc == null) continue;
 					Iterable<IEObjectDescription> matchingEObjects1 = resourceDesc.getExportedObjects(GFPackage.Literals.IDENT, trueQualifiedName, false);
 					Iterator<IEObjectDescription> iter1 = matchingEObjects1.iterator();
 					if (iter1.hasNext()) {
@@ -164,11 +165,13 @@ public class GFTagBasedScope extends AbstractScope {
 			}
 		}
 			
-		if (notFound.size() > 0) {
-			StringBuilder sb = new StringBuilder(notFound.size()*8);
-			for (TagEntry t : notFound) sb.append(t.getTrueQualifiedName()).append(", ");
-			log.debug(String.format("No EObject found for %s items: %s", notFound.size(), sb.toString()));
-		}
+		// TODO: This should not happen at the scale at which it does
+		// I only commented out the warning because it was so annoying
+//		if (notFound.size() > 0) {
+//			StringBuilder sb = new StringBuilder(notFound.size()*8);
+//			for (TagEntry t : notFound) sb.append(t.getTrueQualifiedName()).append(", ");
+//			log.debug(String.format("No EObject found for %s items: %s", notFound.size(), sb.toString()));
+//		}
 	}
 	
 	private QualifiedName getUnQualifiedName(QualifiedName qn) {

@@ -291,6 +291,7 @@ public class GFJavaValidator extends AbstractGFJavaValidator {
 		
 		// Try get first bit of qualified name, i.e. "ResEng". Labels do no necessarily follow Idents, but ANY type of Exp6.
 		if (!(label.eContainer() instanceof Exp)) return;
+		if (label.getName().getS() == null) return;
 		Ident qualifier = ((Exp)label.eContainer()).getRef();
 		QualifiedName unQualifiedName = getConverter().toQualifiedName(label.getName().getS());
 		QualifiedName fullyQualifiedName = getConverter().toQualifiedName(qualifier.getS() + "." + label.getName().getS());

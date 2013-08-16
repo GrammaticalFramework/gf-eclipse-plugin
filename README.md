@@ -9,8 +9,8 @@
 
 # The GF Eclipse Plugin
 
-John J. Camilleri  
-Updated: 12 April 2013
+John J. Camilleri
+Updated: 16 August 2013
 
 _The research leading to these results has received funding from the European Union's Seventh Framework Programme (FP7/2007-2013) under grant agreement no. FP7-ICT-247914 (the [MOLTO Project](http://www.molto-project.eu/))._
 
@@ -22,7 +22,7 @@ The choice was made to develop this desktop IDE as a plugin for the Eclipse Plat
 
 ### License
 
-The GF Eclipse Plugin is open-source under the **[GNU General Public License (GPL)](http://www.gnu.org/licenses/gpl-3.0.txt)**.  
+The GF Eclipse Plugin is open-source under the **[GNU General Public License (GPL)](http://www.gnu.org/licenses/gpl-3.0.txt)**.
 _The licenses that cover the rest of GF are listed [here](http://www.grammaticalframework.org/LICENSE)._
 _Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://www.eclipse.org/legal/epl-v10.html)._
 
@@ -60,7 +60,7 @@ _Xtext and Eclipse are released under the [Eclipse Public License (EPL)](http://
 ## Release history
 
 **12/04/13**
-: (1.5.3.x) Update for Xtext 2.3.1 / Eclipse 4.2 / JavaSE 1.6. Performance improvements with scoping.
+: (1.5.3.x) Update for Xtext 2.3.1 / Eclipse 4.2 / JavaSE 1.6. Performance improvements with scoping. Better error handling.
 
 **22/02/13**
 : (1.5.2.x) New option for specifying include/exclude build files. Progress indicators during build.
@@ -151,10 +151,10 @@ How to find the **Eclipse preferences** window depends on your Eclipse version a
 
 1. Add the GF perspective by clicking **Window &rarr; Open Perspective &rarr; Other** and choosing **GF**.
 1. Open the plugin settings by going to **Preferences &rarr; Grammatical Framework** (image below).
-1. The plugin will try to determine the path to your GF executable automatically, but this may need to be corrected.  
+1. The plugin will try to determine the path to your GF executable automatically, but this may need to be corrected.
 The path should include the name of the GF binary itself, e.g. `/home/john/.cabal/bin/gf` or `C:\Users\John\GF\bin\gf.exe`.
 1. The _Additional path directive_ setting can be used if you want to avoid writing `--# -path=...` directives in your source files. By default it is set to `.:alltenses:prelude`, but can also be left blank. This is passed to GF using the `--path` flag.
-1. If you are using a pre-compiled version of the Resource Grammar Library (i.e. you didn't build it from source yourself) but you have the sources available on your system, then you can enter their path in the _Library source path_ setting. This is optional and is only used for jumping to source definitions.  
+1. If you are using a pre-compiled version of the Resource Grammar Library (i.e. you didn't build it from source yourself) but you have the sources available on your system, then you can enter their path in the _Library source path_ setting. This is optional and is only used for jumping to source definitions.
 You should enter an absolute system path, up to and including the `src` folder, e.g. `/home/john/GF/lib/src/` or `C:\Users\John\GF\lib\src\`.
 1. You can also adjust the verbosity level of the GFEP console log in the preferences window.
 
@@ -314,7 +314,7 @@ You can change your syntax colouring styles as you wish from **Preferences &rarr
 ![Syntax highlighting styles](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-syntaxcoloring.png)
 
 ### Launch configurations
-Set up a launch configuration from **Run &rarr; Run Configurations... &rarr; Grammatical Framework**. You will see the dialog below with some fields automatically filled in for you. 
+Set up a launch configuration from **Run &rarr; Run Configurations... &rarr; Grammatical Framework**. You will see the dialog below with some fields automatically filled in for you.
 
 ![Launch configuration dialog](https://raw.github.com/GrammaticalFramework/gf-eclipse-plugin/master/doc/images/eclipse-launchconfig.png)
 
@@ -427,7 +427,7 @@ In both cases make sure you get the correct version of Xtext (see below).
 Once you have Xtext set up, you can clone the repository locally with the following command:
 
     git clone git://github.com/GrammaticalFramework/gf-eclipse-plugin.git
-    
+
 You can then add the projects under the `workspace` directory to your Eclipse workspace, by using the **File &rarr; Import...** wizard.
 The individual projects are:
 
