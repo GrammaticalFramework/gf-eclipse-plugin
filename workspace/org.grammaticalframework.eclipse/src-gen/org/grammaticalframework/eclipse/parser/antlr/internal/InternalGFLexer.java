@@ -14,8 +14,8 @@ import java.util.ArrayList;
 public class InternalGFLexer extends Lexer {
     public static final int T__68=68;
     public static final int T__69=69;
-    public static final int RULE_ID=6;
     public static final int T__66=66;
+    public static final int RULE_ID=6;
     public static final int T__67=67;
     public static final int T__29=29;
     public static final int T__64=64;
@@ -45,8 +45,8 @@ public class InternalGFLexer extends Lexer {
     public static final int T__51=51;
     public static final int T__15=15;
     public static final int T__52=52;
-    public static final int T__18=18;
     public static final int T__53=53;
+    public static final int T__18=18;
     public static final int T__54=54;
     public static final int T__17=17;
     public static final int T__14=14;
